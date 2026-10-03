@@ -116,10 +116,10 @@ const toolList: Tool[] = [
 
 const categories = ['All', 'Writing', 'Text Cleaning', 'Text Formatting', 'Text Analysis'] as const
 const categoryColors: Record<Category, string> = {
-  Writing: 'bg-violet-50 text-violet-700',
-  'Text Cleaning': 'bg-emerald-50 text-emerald-700',
-  'Text Formatting': 'bg-blue-50 text-blue-700',
-  'Text Analysis': 'bg-amber-50 text-amber-700',
+  Writing: 'bg-[#f0e9ff] text-[#7251ad]',
+  'Text Cleaning': 'bg-[#e3f3e9] text-[#408454]',
+  'Text Formatting': 'bg-[#e5efff] text-[#4776b5]',
+  'Text Analysis': 'bg-slate-100 text-slate-700',
 }
 
 const sampleText = `The best tools are the ones that remove friction from everyday work. With TextTools, you can clean, sort, transform, and analyze text without leaving your browser. Whether you are writing a blog post, preparing social content, or refining a draft, the fastest way to work is with clear, simple tools built for focus.`
@@ -554,8 +554,8 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white">
+    <div className="min-h-screen bg-[#f7f6fa] text-slate-900">
+      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-sm font-semibold text-white">
@@ -564,23 +564,28 @@ function App() {
             <p className="text-lg font-semibold tracking-[-0.05em] text-slate-900">TextTools</p>
           </div>
 
-          <a href="#tools" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-            All tools
-          </a>
+          <div className="flex items-center gap-4 text-sm font-medium text-slate-600 sm:gap-6">
+            <a href="#tools" className="hover:text-slate-900">Tools</a>
+            <a href="#categories" className="hidden hover:text-slate-900 sm:inline">Categories</a>
+            <a href="#search-tools" className="hidden hover:text-slate-900 sm:inline">Search</a>
+          </div>
         </nav>
       </header>
 
       <main className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        <section className="pb-7 pt-3 text-center">
+        <section className="rounded-2xl bg-[#f0eef8] px-5 py-9 text-center sm:px-8 sm:py-12">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+            TextTools
+          </p>
           <h1 className="text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
-            Every text tool you need in one place
+            The text tools you need, all in one place
           </h1>
           <p className="mx-auto mt-2 max-w-2xl text-base text-slate-600">
-            Count, clean, format, and analyze text with free tools that work right in your browser.
+            Count, clean, format, and analyze text with free tools that work in your browser.
           </p>
         </section>
 
-        <section id="tools" className="py-8">
+        <section id="tools" className="scroll-mt-20 py-7">
           <div className="mb-5 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div id="categories" className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -588,17 +593,18 @@ function App() {
                   key={category}
                   type="button"
                   onClick={() => setSelectedCategory(category)}
+                  aria-pressed={selectedCategory === category}
                   className={`rounded-full border px-3 py-1.5 text-sm transition ${
                     selectedCategory === category
-                      ? 'border-slate-800 bg-slate-800 text-white'
-                      : 'border-slate-200 bg-white text-slate-600 hover:border-slate-400 hover:text-slate-900'
+                      ? 'border-slate-900 bg-slate-900 text-white'
+                      : 'border-slate-200 bg-white text-slate-600 hover:border-slate-500 hover:text-slate-900'
                   }`}
                 >
                   {category}
                 </button>
               ))}
             </div>
-            <label className="flex w-full items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-500 sm:max-w-xs">
+            <label id="search-tools" className="flex w-full items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-500 sm:max-w-xs">
               <Search className="h-4 w-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">Search tools</span>
               <input
@@ -610,7 +616,7 @@ function App() {
             </label>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {filteredTools.map((tool) => {
               const Icon = tool.icon
 
@@ -622,15 +628,15 @@ function App() {
                     setActiveTool(tool.id)
                     document.getElementById('toolbox')?.scrollIntoView({ behavior: 'smooth' })
                   }}
-                  className="group min-h-40 rounded-lg border border-slate-200 bg-white p-4 text-left transition hover:border-slate-300 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
+                  className="group min-h-36 rounded-lg border border-slate-200 bg-white p-3.5 text-left transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_5px_16px_rgba(30,41,59,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 sm:min-h-40 sm:p-4"
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <span className={`flex h-10 w-10 items-center justify-center rounded-md ${categoryColors[tool.category]}`}>
-                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    <span className={`flex h-9 w-9 items-center justify-center rounded-md sm:h-10 sm:w-10 ${categoryColors[tool.category]}`}>
+                      <Icon className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                     </span>
-                    <ArrowRight className="mt-1 h-4 w-4 text-slate-400 opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
+                    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-slate-900 opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
                   </div>
-                  <h2 className="mt-4 text-sm font-semibold text-slate-900">{tool.name}</h2>
+                  <h2 className="mt-3 text-sm font-semibold leading-5 text-slate-900 sm:mt-4">{tool.name}</h2>
                   <p className="mt-1 text-xs leading-5 text-slate-600">{tool.description}</p>
                 </button>
               )
