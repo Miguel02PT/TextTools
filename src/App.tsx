@@ -39,7 +39,7 @@ type Tool = {
 }
 
 type CaseFormat = 'upper' | 'lower' | 'title' | 'sentence' | 'camel' | 'snake'
-type SortMode = 'alphabetical' | 'reverse'
+type SortMode = 'az' | 'za' | 'reverse'
 
 const toolList: Tool[] = [
   {
@@ -306,10 +306,22 @@ function toSnakeCase(text: string) {
     .join('\n')
 }
 
-function sortLines(text: string, mode: SortMode) {
-  const lines = normalizeText(text).split('\n')
-  const sorted = [...lines].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
-  return mode === 'alphabetical' ? sorted.join('\n') : sorted.reverse().join('\n')
+function sortLines(text: string, mode: SortMode, naturalNumberOrder: boolean, removeEmptyLines: boolean) {
+  if (!text) return ''
+
+  let lines = normalizeText(text).split('\n')
+  if (removeEmptyLines) {
+    lines = lines.filter((line) => line.trim().length > 0)
+  }
+  if (mode === 'reverse') {
+    return lines.reverse().join('\n')
+  }
+
+  const sorted = [...lines].sort((a, b) =>
+    a.localeCompare(b, undefined, { sensitivity: 'base', numeric: naturalNumberOrder }),
+  )
+  if (mode === 'za') sorted.reverse()
+  return sorted.join('\n')
 }
 
 function getKeywordData(text: string) {
@@ -348,7 +360,9 @@ function App() {
   const [matchCase, setMatchCase] = useState(false)
   const [wholeWord, setWholeWord] = useState(false)
   const [caseFormat, setCaseFormat] = useState<CaseFormat>('upper')
-  const [sortMode, setSortMode] = useState<SortMode>('alphabetical')
+  const [sortMode, setSortMode] = useState<SortMode>('az')
+  const [naturalNumberOrder, setNaturalNumberOrder] = useState(true)
+  const [removeSorterEmptyLines, setRemoveSorterEmptyLines] = useState(false)
   const [paragraphCount, setParagraphCount] = useState(3)
   const [sentenceCount, setSentenceCount] = useState(5)
   const [startWithLorem, setStartWithLorem] = useState(true)
@@ -438,7 +452,7 @@ function App() {
       }
 
       case 'text-sorter':
-        return sortLines(text, sortMode)
+        return sortLines(text, sortMode, naturalNumberOrder, removeSorterEmptyLines)
 
       case 'find-replace':
         return findReplaceResult.text
@@ -460,10 +474,12 @@ function App() {
     caseFormat,
     collapseCleanerSpaces,
     findReplaceResult,
+    naturalNumberOrder,
     paragraphCount,
     removeExtraBlankLines,
     sentenceCount,
     sortMode,
+    removeSorterEmptyLines,
     startWithLorem,
     text,
     trimCleanerLines,
@@ -621,21 +637,47 @@ function App() {
 
       case 'text-sorter':
         return (
-          <div className="flex flex-wrap gap-2">
-            {(['alphabetical', 'reverse'] as SortMode[]).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                onClick={() => setSortMode(mode)}
-                className={`rounded-full border px-3 py-2 text-sm font-medium transition ${
-                  sortMode === mode
-                    ? 'border-slate-900 bg-slate-900 text-white'
-                    : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
-                }`}
-              >
-                {mode === 'alphabetical' ? 'Alphabetical' : 'Reverse'}
-              </button>
-            ))}
+          <div className="space-y-3">
+            <div className="flex flex-wrap gap-2">
+              {([
+                ['az', 'A-Z'],
+                ['za', 'Z-A'],
+                ['reverse', 'Reverse order'],
+              ] as const).map(([mode, label]) => (
+                <button
+                  key={mode}
+                  type="button"
+                  onClick={() => setSortMode(mode)}
+                  className={`rounded-full border px-3 py-2 text-sm font-medium transition ${
+                    sortMode === mode
+                      ? 'border-slate-900 bg-slate-900 text-white'
+                      : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-x-5 gap-y-2">
+              <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={naturalNumberOrder}
+                  onChange={(event) => setNaturalNumberOrder(event.target.checked)}
+                  className="h-4 w-4 rounded border-slate-300 accent-slate-900"
+                />
+                Natural number order
+              </label>
+              <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={removeSorterEmptyLines}
+                  onChange={(event) => setRemoveSorterEmptyLines(event.target.checked)}
+                  className="h-4 w-4 rounded border-slate-300 accent-slate-900"
+                />
+                Remove empty lines
+              </label>
+            </div>
           </div>
         )
 
@@ -886,7 +928,8 @@ function App() {
                       {activeTool === 'text-cleaner' ||
                       activeTool === 'case-converter' ||
                       activeTool === 'lorem-ipsum' ||
-                      activeTool === 'find-replace'
+                      activeTool === 'find-replace' ||
+                      activeTool === 'text-sorter'
                         ? transformedText
                         : outputContent || 'Your transformed text will appear here.'}
                     </pre>
