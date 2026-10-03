@@ -190,41 +190,49 @@ function normalizeText(text: string) {
 function toTitleCase(text: string) {
   return text
     .toLowerCase()
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
+    .replace(/[\p{L}\p{N}][\p{L}\p{N}'’]*/gu, (word) => {
+      const [first, ...rest] = Array.from(word)
+      return `${first.toUpperCase()}${rest.join('')}`
+    })
 }
 
 function toSentenceCase(text: string) {
   return text
     .toLowerCase()
-    .replace(/(^\s*\w|[.!?]\s+\w)/g, (match) => match.toUpperCase())
+    .replace(/(^[\s\S]*?[\p{L}\p{N}]|[.!?]\s+[\p{L}\p{N}])/gu, (match) => {
+      const chars = Array.from(match)
+      chars[chars.length - 1] = chars[chars.length - 1].toUpperCase()
+      return chars.join('')
+    })
 }
 
 function toCamelCase(text: string) {
-  const words = text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, ' ')
-    .trim()
-    .split(/\s+|-/)
-    .filter(Boolean)
-
-  if (!words.length) return ''
-
-  return words
-    .map((word, index) =>
-      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
-    )
-    .join('')
+  return normalizeText(text)
+    .split('\n')
+    .map((line) => {
+      const words = line.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean)
+      return words
+        .map((word, index) => {
+          if (index === 0) return word
+          const [first, ...rest] = Array.from(word)
+          return `${first.toUpperCase()}${rest.join('')}`
+        })
+        .join('')
+    })
+    .join('\n')
 }
 
 function toSnakeCase(text: string) {
-  return text
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '_')
-    .replace(/^_+|_+$/g, '')
+  return normalizeText(text)
+    .split('\n')
+    .map((line) =>
+      line
+        .toLowerCase()
+        .split(/[^\p{L}\p{N}]+/u)
+        .filter(Boolean)
+        .join('_'),
+    )
+    .join('\n')
 }
 
 function sortLines(text: string, mode: SortMode) {
@@ -464,7 +472,15 @@ function App() {
 
   const renderControls = () => {
     switch (activeTool) {
-      case 'case-converter':
+      case 'case-converter': {
+        const labels: Record<CaseFormat, string> = {
+          upper: 'UPPERCASE',
+          lower: 'lowercase',
+          title: 'Title Case',
+          sentence: 'Sentence case',
+          camel: 'camelCase',
+          snake: 'snake_case',
+        }
         return (
           <div className="flex flex-wrap gap-2">
             {(['upper', 'lower', 'title', 'sentence', 'camel', 'snake'] as CaseFormat[]).map((format) => (
@@ -478,11 +494,12 @@ function App() {
                     : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
-                {format}
+                {labels[format]}
               </button>
             ))}
           </div>
         )
+      }
 
       case 'find-replace':
         return (
@@ -693,8 +710,8 @@ function App() {
                     </span>
                     <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-slate-900 opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
                   </div>
-                  <h2 className="mt-3 text-sm font-semibold leading-5 text-slate-900 sm:mt-4">{tool.name}</h2>
-                  <p className="mt-1 text-xs leading-5 text-slate-600">{tool.description}</p>
+                  <h2 className="mt-3 text-base font-semibold leading-6 text-slate-900 sm:mt-4">{tool.name}</h2>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{tool.description}</p>
                 </button>
               )
             })}
@@ -759,7 +776,7 @@ function App() {
                   <span>Output</span>
                   <div className="min-h-[288px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
                     <pre className="h-full min-h-[252px] whitespace-pre-wrap break-words font-sans">
-                      {activeTool === 'text-cleaner'
+                      {activeTool === 'text-cleaner' || activeTool === 'case-converter'
                         ? transformedText
                         : outputContent || 'Your transformed text will appear here.'}
                     </pre>
