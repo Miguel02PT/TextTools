@@ -177,6 +177,12 @@ function countWords(text: string) {
   return text.trim().split(/\s+/).filter(Boolean).length
 }
 
+function formatReadingTime(words: number, seconds: number) {
+  if (words === 0) return '0 min 0 sec'
+  if (seconds < 60) return 'less than 1 min'
+  return `${Math.floor(seconds / 60)} min ${seconds % 60} sec`
+}
+
 function normalizeText(text: string) {
   return text.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
 }
@@ -228,21 +234,29 @@ function sortLines(text: string, mode: SortMode) {
 }
 
 function getKeywordData(text: string) {
-  const tokens = normalizeText(text)
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, ' ')
-    .split(/\s+/)
-    .filter((token) => token.length > 1 && !stopWords.has(token))
+  const tokens = Array.from(
+    normalizeText(text).toLowerCase().matchAll(/[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu),
+    ([token]) => token,
+  )
 
   const counts = new Map<string, number>()
 
   for (const token of tokens) {
+    if (token.length <= 1 || stopWords.has(token)) continue
     counts.set(token, (counts.get(token) ?? 0) + 1)
   }
 
-  return [...counts.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .slice(0, 10)
+  return {
+    totalWords: tokens.length,
+    entries: [...counts.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 10)
+      .map(([word, count]) => ({
+        word,
+        count,
+        percentage: tokens.length === 0 ? 0 : (count / tokens.length) * 100,
+      })),
+  }
 }
 
 function App() {
@@ -282,7 +296,8 @@ function App() {
     const paragraphs = normalized
       .split(/\n\s*\n/)
       .filter((segment) => segment.trim().length > 0).length
-    const readingMinutes = words === 0 ? 0 : Math.max(1, Math.ceil(words / readingSpeed))
+    const lines = normalized.length === 0 ? 0 : normalized.split('\n').length
+    const readingSeconds = words === 0 ? 0 : Math.ceil((words / readingSpeed) * 60)
 
     return {
       words,
@@ -290,7 +305,8 @@ function App() {
       charactersNoSpaces,
       sentences,
       paragraphs: paragraphs || (normalized.trim() ? 1 : 0),
-      readingMinutes,
+      lines,
+      readingSeconds,
       keywordData: getKeywordData(normalized),
     }
   }, [readingSpeed, text])
@@ -356,8 +372,49 @@ function App() {
     }
   }, [activeTool, caseFormat, findText, paragraphCount, replaceText, sentenceCount, sortMode, text])
 
+  const outputContent = useMemo(() => {
+    switch (activeTool) {
+      case 'word-counter':
+        return [
+          `Words: ${metrics.words}`,
+          `Characters: ${metrics.characters}`,
+          `Characters without spaces: ${metrics.charactersNoSpaces}`,
+          `Sentences: ${metrics.sentences}`,
+          `Paragraphs: ${metrics.paragraphs}`,
+        ].join('\n')
+      case 'character-counter':
+        return [
+          `Characters: ${metrics.characters}`,
+          `Characters without spaces: ${metrics.charactersNoSpaces}`,
+          `Lines: ${metrics.lines}`,
+          `Words: ${metrics.words}`,
+        ].join('\n')
+      case 'reading-time': {
+        const time = formatReadingTime(metrics.words, metrics.readingSeconds)
+        return [
+          `Words: ${metrics.words}`,
+          `Reading speed: ${readingSpeed} wpm`,
+          `Estimated reading time: ${time}`,
+        ].join('\n')
+      }
+      case 'keyword-density':
+        return [
+          `Total words: ${metrics.keywordData.totalWords}`,
+          'Top keywords (count and percentage of total words):',
+          ...(metrics.keywordData.entries.length
+            ? metrics.keywordData.entries.map(
+                ({ word, count, percentage }, index) =>
+                  `${index + 1}. ${word}: ${count} (${percentage.toFixed(1)}%)`,
+              )
+            : ['No keywords found.']),
+        ].join('\n')
+      default:
+        return transformedText || text
+    }
+  }, [activeTool, metrics, readingSpeed, text, transformedText])
+
   const copyText = async () => {
-    const contentToCopy = transformedText || text
+    const contentToCopy = outputContent
     try {
       await navigator.clipboard.writeText(contentToCopy)
     } catch {
@@ -371,7 +428,7 @@ function App() {
   }
 
   const downloadText = () => {
-    const content = transformedText || text
+    const content = outputContent
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const anchor = document.createElement('a')
@@ -604,6 +661,7 @@ function App() {
                 <button
                   type="button"
                   onClick={copyText}
+                  title="Copy the output content"
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
                 >
                   <Copy className="h-4 w-4" />
@@ -612,6 +670,7 @@ function App() {
                 <button
                   type="button"
                   onClick={downloadText}
+                  title="Download the output content"
                   className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
                 >
                   <Download className="h-4 w-4" />
@@ -637,13 +696,7 @@ function App() {
                   <span>Output</span>
                   <div className="min-h-[288px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
                     <pre className="h-full min-h-[252px] whitespace-pre-wrap break-words font-sans">
-                      {activeTool === 'keyword-density'
-                        ? metrics.keywordData.length
-                          ? metrics.keywordData
-                              .map(([word, count], index) => `${index + 1}. ${word}: ${count}`)
-                              .join('\n')
-                          : 'No keywords to display yet.'
-                        : transformedText || 'Your transformed text will appear here.'}
+                      {outputContent || 'Your transformed text will appear here.'}
                     </pre>
                   </div>
                 </div>
@@ -651,7 +704,7 @@ function App() {
 
               {renderControls()}
 
-              {activeTool === 'word-counter' || activeTool === 'character-counter' ? (
+              {activeTool === 'word-counter' ? (
                 <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                   <div className="rounded-2xl bg-slate-50 p-4">
                     <p className="text-sm text-slate-500">Words</p>
@@ -666,9 +719,46 @@ function App() {
                     <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.charactersNoSpaces}</p>
                   </div>
                   <div className="rounded-2xl bg-slate-50 p-4">
-                    <p className="text-sm text-slate-500">Reading time</p>
-                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.readingMinutes} min</p>
+                    <p className="text-sm text-slate-500">Sentences</p>
+                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.sentences}</p>
                   </div>
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm text-slate-500">Paragraphs</p>
+                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.paragraphs}</p>
+                  </div>
+                </div>
+              ) : null}
+
+              {activeTool === 'character-counter' ? (
+                <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm text-slate-500">Characters</p>
+                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.characters}</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm text-slate-500">No spaces</p>
+                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.charactersNoSpaces}</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm text-slate-500">Lines</p>
+                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.lines}</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm text-slate-500">Words</p>
+                    <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{metrics.words}</p>
+                  </div>
+                </div>
+              ) : null}
+
+              {activeTool === 'reading-time' ? (
+                <div className="rounded-2xl bg-slate-50 p-4">
+                  <p className="text-sm text-slate-500">Estimated reading time</p>
+                  <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">
+                    {formatReadingTime(metrics.words, metrics.readingSeconds)}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-500">
+                    {metrics.words} words at {readingSpeed} words per minute
+                  </p>
                 </div>
               ) : null}
 
@@ -680,21 +770,23 @@ function App() {
                         <th className="px-4 py-3 font-semibold text-slate-700">Rank</th>
                         <th className="px-4 py-3 font-semibold text-slate-700">Keyword</th>
                         <th className="px-4 py-3 font-semibold text-slate-700">Count</th>
+                        <th className="px-4 py-3 font-semibold text-slate-700">Density</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-200 bg-white">
-                      {metrics.keywordData.length ? (
-                        metrics.keywordData.map(([keyword, count], index) => (
-                          <tr key={keyword}>
+                      {metrics.keywordData.entries.length ? (
+                        metrics.keywordData.entries.map(({ word, count, percentage }, index) => (
+                          <tr key={word}>
                             <td className="px-4 py-3 text-slate-600">{index + 1}</td>
-                            <td className="px-4 py-3 font-medium text-slate-900">{keyword}</td>
+                            <td className="px-4 py-3 font-medium text-slate-900">{word}</td>
                             <td className="px-4 py-3 text-slate-600">{count}</td>
+                            <td className="px-4 py-3 text-slate-600">{percentage.toFixed(1)}%</td>
                           </tr>
                         ))
                       ) : (
                         <tr>
-                          <td className="px-4 py-3 text-slate-500" colSpan={3}>
-                            Add some text to calculate keyword density.
+                          <td className="px-4 py-3 text-slate-500" colSpan={4}>
+                            No keywords found. Add text to calculate keyword density.
                           </td>
                         </tr>
                       )}
