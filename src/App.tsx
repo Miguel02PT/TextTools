@@ -115,6 +115,12 @@ const toolList: Tool[] = [
 ]
 
 const categories = ['All', 'Writing', 'Text Cleaning', 'Text Formatting', 'Text Analysis'] as const
+const categoryColors: Record<Category, string> = {
+  Writing: 'bg-violet-50 text-violet-700',
+  'Text Cleaning': 'bg-emerald-50 text-emerald-700',
+  'Text Formatting': 'bg-blue-50 text-blue-700',
+  'Text Analysis': 'bg-amber-50 text-amber-700',
+}
 
 const sampleText = `The best tools are the ones that remove friction from everyday work. With TextTools, you can clean, sort, transform, and analyze text without leaving your browser. Whether you are writing a blog post, preparing social content, or refining a draft, the fastest way to work is with clear, simple tools built for focus.`
 
@@ -492,50 +498,48 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur-sm">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-8">
+      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-sm font-semibold text-white">
               T
             </div>
-            <div>
-              <p className="text-xl font-medium tracking-[-0.05em] text-slate-900">TextTools</p>
-            </div>
+            <p className="text-lg font-semibold tracking-[-0.05em] text-slate-900">TextTools</p>
           </div>
 
-          <div className="hidden items-center gap-7 text-sm text-slate-600 md:flex">
-            <a href="#tools" className="transition hover:text-slate-900">Tools</a>
-            <a href="#categories" className="transition hover:text-slate-900">Categories</a>
-            <a href="#toolbox" className="transition hover:text-slate-900">Search</a>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => document.getElementById('toolbox')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
-          >
-            Open toolbox
-            <ArrowRight className="h-4 w-4" />
-          </button>
+          <a href="#tools" className="text-sm font-medium text-slate-600 hover:text-slate-900">
+            All tools
+          </a>
         </nav>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        <section className="border-b border-slate-200 pb-6 pt-2">
-          <p className="mb-2 text-sm text-slate-500">Free online text utilities</p>
-          <h1 className="text-3xl font-medium tracking-[-0.05em] text-slate-900 sm:text-4xl">
-            Text tools
+      <main className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
+        <section className="pb-7 pt-3 text-center">
+          <h1 className="text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
+            Every text tool you need in one place
           </h1>
-          <p className="mt-2 text-base text-slate-600">
-            Quick tools to count, clean, format, and analyze text.
+          <p className="mx-auto mt-2 max-w-2xl text-base text-slate-600">
+            Count, clean, format, and analyze text with free tools that work right in your browser.
           </p>
         </section>
 
         <section id="tools" className="py-8">
-          <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="text-xl font-medium tracking-tight text-slate-900">All tools</h2>
-              <p className="mt-1 text-sm text-slate-500">Choose a tool to get started.</p>
+          <div className="mb-5 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div id="categories" className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  type="button"
+                  onClick={() => setSelectedCategory(category)}
+                  className={`rounded-full border px-3 py-1.5 text-sm transition ${
+                    selectedCategory === category
+                      ? 'border-slate-800 bg-slate-800 text-white'
+                      : 'border-slate-200 bg-white text-slate-600 hover:border-slate-400 hover:text-slate-900'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
             <label className="flex w-full items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-500 sm:max-w-xs">
               <Search className="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -549,47 +553,28 @@ function App() {
             </label>
           </div>
 
-          <div id="categories" className="mb-5 flex flex-wrap gap-1 border-b border-slate-200">
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                onClick={() => setSelectedCategory(category)}
-                className={`border-b-2 px-3 py-2 text-sm transition ${
-                  selectedCategory === category
-                    ? 'border-slate-900 font-medium text-slate-900'
-                    : 'border-transparent text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid gap-x-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
             {filteredTools.map((tool) => {
               const Icon = tool.icon
-              const isActive = activeTool === tool.id
 
               return (
                 <button
                   key={tool.id}
                   type="button"
-                  onClick={() => setActiveTool(tool.id)}
-                  className={`group flex items-start gap-3 border-b border-slate-200 py-4 text-left transition ${
-                    isActive
-                      ? 'text-slate-900'
-                      : 'text-slate-700 hover:text-slate-900'
-                  }`}
+                  onClick={() => {
+                    setActiveTool(tool.id)
+                    document.getElementById('toolbox')?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="group min-h-40 rounded-lg border border-slate-200 bg-white p-4 text-left transition hover:border-slate-300 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
                 >
-                  <Icon className="mt-0.5 h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center justify-between gap-3">
-                      <h3 className="text-sm font-medium">{tool.name}</h3>
-                      <ArrowRight className="h-4 w-4 shrink-0 text-slate-400 opacity-0 transition group-hover:opacity-100" aria-hidden="true" />
-                    </div>
-                    <p className="mt-1 text-sm leading-5 text-slate-500">{tool.description}</p>
+                  <div className="flex items-start justify-between gap-3">
+                    <span className={`flex h-10 w-10 items-center justify-center rounded-md ${categoryColors[tool.category]}`}>
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <ArrowRight className="mt-1 h-4 w-4 text-slate-400 opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true" />
                   </div>
+                  <h2 className="mt-4 text-sm font-semibold text-slate-900">{tool.name}</h2>
+                  <p className="mt-1 text-xs leading-5 text-slate-600">{tool.description}</p>
                 </button>
               )
             })}
@@ -601,7 +586,7 @@ function App() {
           ) : null}
         </section>
 
-        <section id="toolbox" className="py-8">
+        <section id="toolbox" className="scroll-mt-24 py-8">
           <div className="mb-5 flex items-center justify-between gap-3">
             <div>
               <p className="text-sm text-slate-500">{activeToolInfo.category}</p>
