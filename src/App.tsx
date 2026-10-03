@@ -162,11 +162,64 @@ const stopWords = new Set([
   'your',
 ])
 
-const dummyParagraphs = [
-  'Clean writing is clear thinking made visible. It helps readers move quickly through ideas without friction.',
-  'Good text tools support focus instead of distraction. They make small improvements feel effortless and consistent.',
-  'A polished workflow saves time and reduces errors. The right utility can turn raw notes into useful final content.',
+const loremWords = [
+  'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
+  'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore',
+  'magna', 'aliqua', 'enim', 'ad', 'minim', 'veniam', 'quis', 'nostrud',
+  'exercitation', 'ullamco', 'laboris', 'nisi', 'aliquip', 'ex', 'ea', 'commodo',
+  'consequat', 'duis', 'aute', 'irure', 'in', 'reprehenderit', 'voluptate', 'velit',
+  'esse', 'cillum', 'fugiat', 'nulla', 'pariatur', 'excepteur', 'sint', 'occaecat',
+  'cupidatat', 'non', 'proident', 'sunt', 'culpa', 'qui', 'officia', 'deserunt',
+  'mollit', 'anim', 'id', 'est', 'laborum',
 ]
+
+function clampGeneratorCount(value: string) {
+  const parsed = Number(value)
+  if (!Number.isFinite(parsed)) return 1
+  return Math.min(10, Math.max(1, Math.trunc(parsed)))
+}
+
+function createSeededRandom(seed: number) {
+  let state = seed >>> 0
+  return () => {
+    state = (Math.imul(state, 1664525) + 1013904223) >>> 0
+    return state / 0x100000000
+  }
+}
+
+function generateLoremSentence(paragraphIndex: number, sentenceIndex: number) {
+  const seed =
+    Math.imul(paragraphIndex + 1, 0x85ebca6b) ^
+    Math.imul(sentenceIndex + 1, 0xc2b2ae35)
+  const random = createSeededRandom(seed)
+  const wordCount = 8 + Math.floor(random() * 9)
+  const words = Array.from({ length: wordCount }, (_, index) => {
+    if (index === 0) {
+      return loremWords[(paragraphIndex * 11 + sentenceIndex * 7) % loremWords.length]
+    }
+    return loremWords[Math.floor(random() * loremWords.length)]
+  })
+
+  if (wordCount >= 10 && random() < 0.35) {
+    const commaIndex = 4 + Math.floor(random() * (wordCount - 5))
+    words[commaIndex] += ','
+  }
+
+  const [first, ...rest] = words
+  return `${first.charAt(0).toUpperCase()}${first.slice(1)} ${rest.join(' ')}.`
+}
+
+function generateLoremText(paragraphCount: number, sentenceCount: number, startWithLorem: boolean) {
+  return Array.from({ length: paragraphCount }, (_, paragraphIndex) => {
+    const sentences = Array.from({ length: sentenceCount }, (_, sentenceIndex) => {
+      if (startWithLorem && paragraphIndex === 0 && sentenceIndex === 0) {
+        return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      }
+      return generateLoremSentence(paragraphIndex, sentenceIndex)
+    })
+    return sentences.join(' ')
+  }).join('\n\n')
+}
 
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -278,6 +331,7 @@ function App() {
   const [sortMode, setSortMode] = useState<SortMode>('alphabetical')
   const [paragraphCount, setParagraphCount] = useState(3)
   const [sentenceCount, setSentenceCount] = useState(5)
+  const [startWithLorem, setStartWithLorem] = useState(true)
   const [readingSpeed, setReadingSpeed] = useState(200)
   const [trimCleanerLines, setTrimCleanerLines] = useState(true)
   const [collapseCleanerSpaces, setCollapseCleanerSpaces] = useState(true)
@@ -366,20 +420,8 @@ function App() {
         return text.replace(new RegExp(escapeRegExp(findText), 'gi'), replaceText)
       }
 
-      case 'lorem-ipsum': {
-        const generated: string[] = []
-
-        for (let index = 0; index < paragraphCount; index += 1) {
-          const words = Array.from({ length: sentenceCount }, (_, sentenceIndex) => {
-            const base = dummyParagraphs[sentenceIndex % dummyParagraphs.length]
-            return base
-          })
-
-          generated.push(words.join(' '))
-        }
-
-        return generated.join('\n\n')
-      }
+      case 'lorem-ipsum':
+        return generateLoremText(paragraphCount, sentenceCount, startWithLorem)
 
       case 'reading-time':
         return text
@@ -400,6 +442,7 @@ function App() {
     replaceText,
     sentenceCount,
     sortMode,
+    startWithLorem,
     text,
     trimCleanerLines,
   ])
@@ -440,6 +483,8 @@ function App() {
               )
             : ['No keywords found.']),
         ].join('\n')
+      case 'lorem-ipsum':
+        return transformedText
       default:
         return transformedText || text
     }
@@ -547,28 +592,39 @@ function App() {
 
       case 'lorem-ipsum':
         return (
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="space-y-2 text-sm font-medium text-slate-700">
-              Paragraphs
+          <div className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="space-y-2 text-sm font-medium text-slate-700">
+                Paragraphs
+                <input
+                  type="number"
+                  min={1}
+                  max={10}
+                  value={paragraphCount}
+                  onChange={(event) => setParagraphCount(clampGeneratorCount(event.target.value))}
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                />
+              </label>
+              <label className="space-y-2 text-sm font-medium text-slate-700">
+                Sentences per paragraph
+                <input
+                  type="number"
+                  min={1}
+                  max={10}
+                  value={sentenceCount}
+                  onChange={(event) => setSentenceCount(clampGeneratorCount(event.target.value))}
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                />
+              </label>
+            </div>
+            <label className="inline-flex items-center gap-2 text-sm text-slate-700">
               <input
-                type="number"
-                min={1}
-                max={12}
-                value={paragraphCount}
-                onChange={(event) => setParagraphCount(Number(event.target.value) || 1)}
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                type="checkbox"
+                checked={startWithLorem}
+                onChange={(event) => setStartWithLorem(event.target.checked)}
+                className="h-4 w-4 rounded border-slate-300 accent-slate-900"
               />
-            </label>
-            <label className="space-y-2 text-sm font-medium text-slate-700">
-              Sentences per paragraph
-              <input
-                type="number"
-                min={1}
-                max={10}
-                value={sentenceCount}
-                onChange={(event) => setSentenceCount(Number(event.target.value) || 1)}
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
-              />
+              Start with Lorem ipsum
             </label>
           </div>
         )
@@ -760,23 +816,25 @@ function App() {
             </div>
 
             <div className="space-y-5">
-              <div className="grid gap-4 lg:grid-cols-2">
-                <label className="space-y-2 text-sm font-medium text-slate-700">
-                  Input text
-                  <textarea
-                    value={text}
-                    onChange={(event) => setText(event.target.value)}
-                    rows={12}
-                    placeholder="Paste or type your text here..."
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-base text-slate-900 outline-none transition focus:border-slate-400"
-                  />
-                </label>
+              <div className={`grid gap-4 ${activeTool === 'lorem-ipsum' ? 'grid-cols-1' : 'lg:grid-cols-2'}`}>
+                {activeTool !== 'lorem-ipsum' ? (
+                  <label className="space-y-2 text-sm font-medium text-slate-700">
+                    Input text
+                    <textarea
+                      value={text}
+                      onChange={(event) => setText(event.target.value)}
+                      rows={12}
+                      placeholder="Paste or type your text here..."
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-base text-slate-900 outline-none transition focus:border-slate-400"
+                    />
+                  </label>
+                ) : null}
 
                 <div className="space-y-2 text-sm font-medium text-slate-700">
                   <span>Output</span>
                   <div className="min-h-[288px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
                     <pre className="h-full min-h-[252px] whitespace-pre-wrap break-words font-sans">
-                      {activeTool === 'text-cleaner' || activeTool === 'case-converter'
+                      {activeTool === 'text-cleaner' || activeTool === 'case-converter' || activeTool === 'lorem-ipsum'
                         ? transformedText
                         : outputContent || 'Your transformed text will appear here.'}
                     </pre>
