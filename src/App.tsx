@@ -221,6 +221,24 @@ function generateLoremText(paragraphCount: number, sentenceCount: number, startW
   }).join('\n\n')
 }
 
+function replaceMatches(
+  text: string,
+  findText: string,
+  replaceText: string,
+  matchCase: boolean,
+  wholeWord: boolean,
+) {
+  if (!findText) return { text, count: 0 }
+
+  const term = escapeRegExp(findText)
+  const pattern = wholeWord ? `(?<![\\p{L}\\p{N}_])${term}(?![\\p{L}\\p{N}_])` : term
+  const flags = `${matchCase ? '' : 'i'}gu`
+  const count = text.match(new RegExp(pattern, flags))?.length ?? 0
+  const replacedText = text.replace(new RegExp(pattern, flags), () => replaceText)
+
+  return { text: replacedText, count }
+}
+
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
@@ -327,6 +345,8 @@ function App() {
   const [text, setText] = useState(sampleText)
   const [findText, setFindText] = useState('text')
   const [replaceText, setReplaceText] = useState('content')
+  const [matchCase, setMatchCase] = useState(false)
+  const [wholeWord, setWholeWord] = useState(false)
   const [caseFormat, setCaseFormat] = useState<CaseFormat>('upper')
   const [sortMode, setSortMode] = useState<SortMode>('alphabetical')
   const [paragraphCount, setParagraphCount] = useState(3)
@@ -376,6 +396,11 @@ function App() {
     }
   }, [readingSpeed, text])
 
+  const findReplaceResult = useMemo(
+    () => replaceMatches(text, findText, replaceText, matchCase, wholeWord),
+    [findText, matchCase, replaceText, text, wholeWord],
+  )
+
   const transformedText = useMemo(() => {
     switch (activeTool) {
       case 'case-converter':
@@ -415,10 +440,8 @@ function App() {
       case 'text-sorter':
         return sortLines(text, sortMode)
 
-      case 'find-replace': {
-        if (!findText) return text
-        return text.replace(new RegExp(escapeRegExp(findText), 'gi'), replaceText)
-      }
+      case 'find-replace':
+        return findReplaceResult.text
 
       case 'lorem-ipsum':
         return generateLoremText(paragraphCount, sentenceCount, startWithLorem)
@@ -436,10 +459,9 @@ function App() {
     activeTool,
     caseFormat,
     collapseCleanerSpaces,
-    findText,
+    findReplaceResult,
     paragraphCount,
     removeExtraBlankLines,
-    replaceText,
     sentenceCount,
     sortMode,
     startWithLorem,
@@ -483,6 +505,8 @@ function App() {
               )
             : ['No keywords found.']),
         ].join('\n')
+      case 'find-replace':
+        return transformedText
       case 'lorem-ipsum':
         return transformedText
       default:
@@ -548,25 +572,50 @@ function App() {
 
       case 'find-replace':
         return (
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="space-y-2 text-sm font-medium text-slate-700">
-              Find
-              <input
-                value={findText}
-                onChange={(event) => setFindText(event.target.value)}
-                placeholder="Find text"
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
-              />
-            </label>
-            <label className="space-y-2 text-sm font-medium text-slate-700">
-              Replace with
-              <input
-                value={replaceText}
-                onChange={(event) => setReplaceText(event.target.value)}
-                placeholder="Replace with"
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
-              />
-            </label>
+          <div className="space-y-3">
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="space-y-2 text-sm font-medium text-slate-700">
+                Find
+                <input
+                  value={findText}
+                  onChange={(event) => setFindText(event.target.value)}
+                  placeholder="Find text"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                />
+              </label>
+              <label className="space-y-2 text-sm font-medium text-slate-700">
+                Replace with
+                <input
+                  value={replaceText}
+                  onChange={(event) => setReplaceText(event.target.value)}
+                  placeholder="Replace with"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                />
+              </label>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={matchCase}
+                  onChange={(event) => setMatchCase(event.target.checked)}
+                  className="h-4 w-4 rounded border-slate-300 accent-slate-900"
+                />
+                Match case
+              </label>
+              <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={wholeWord}
+                  onChange={(event) => setWholeWord(event.target.checked)}
+                  className="h-4 w-4 rounded border-slate-300 accent-slate-900"
+                />
+                Whole word
+              </label>
+            </div>
+            <p className="text-xs text-slate-500">
+              {findReplaceResult.count} {findReplaceResult.count === 1 ? 'replacement' : 'replacements'}
+            </p>
           </div>
         )
 
@@ -834,7 +883,10 @@ function App() {
                   <span>Output</span>
                   <div className="min-h-[288px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
                     <pre className="h-full min-h-[252px] whitespace-pre-wrap break-words font-sans">
-                      {activeTool === 'text-cleaner' || activeTool === 'case-converter' || activeTool === 'lorem-ipsum'
+                      {activeTool === 'text-cleaner' ||
+                      activeTool === 'case-converter' ||
+                      activeTool === 'lorem-ipsum' ||
+                      activeTool === 'find-replace'
                         ? transformedText
                         : outputContent || 'Your transformed text will appear here.'}
                     </pre>
