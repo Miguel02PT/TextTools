@@ -271,6 +271,9 @@ function App() {
   const [paragraphCount, setParagraphCount] = useState(3)
   const [sentenceCount, setSentenceCount] = useState(5)
   const [readingSpeed, setReadingSpeed] = useState(200)
+  const [trimCleanerLines, setTrimCleanerLines] = useState(true)
+  const [collapseCleanerSpaces, setCollapseCleanerSpaces] = useState(true)
+  const [removeExtraBlankLines, setRemoveExtraBlankLines] = useState(true)
 
   const filteredTools = useMemo(() => {
     return toolList.filter((tool) => {
@@ -324,12 +327,21 @@ function App() {
         return text
 
       case 'text-cleaner': {
-        const cleaned = normalizeText(text)
-          .replace(/\s+/g, ' ')
-          .replace(/\n\s+/g, '\n')
-          .replace(/\n{3,}/g, '\n\n')
-          .trim()
-        return cleaned
+        if (!text) return ''
+
+        let lines = normalizeText(text).split('\n')
+        if (trimCleanerLines) {
+          lines = lines.map((line) => line.replace(/^[ \t]+|[ \t]+$/g, ''))
+        }
+        if (collapseCleanerSpaces) {
+          lines = lines.map((line) => line.replace(/[ \t]{2,}/g, ' '))
+        }
+
+        let cleaned = lines.join('\n')
+        if (removeExtraBlankLines) {
+          cleaned = cleaned.replace(/\n{3,}/g, '\n\n')
+        }
+        return cleaned.trim()
       }
 
       case 'duplicate-lines': {
@@ -370,7 +382,19 @@ function App() {
       default:
         return text
     }
-  }, [activeTool, caseFormat, findText, paragraphCount, replaceText, sentenceCount, sortMode, text])
+  }, [
+    activeTool,
+    caseFormat,
+    collapseCleanerSpaces,
+    findText,
+    paragraphCount,
+    removeExtraBlankLines,
+    replaceText,
+    sentenceCount,
+    sortMode,
+    text,
+    trimCleanerLines,
+  ])
 
   const outputContent = useMemo(() => {
     switch (activeTool) {
@@ -548,6 +572,39 @@ function App() {
           </label>
         )
 
+      case 'text-cleaner':
+        return (
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
+            {[
+              {
+                label: 'Trim lines',
+                checked: trimCleanerLines,
+                onChange: setTrimCleanerLines,
+              },
+              {
+                label: 'Collapse extra spaces',
+                checked: collapseCleanerSpaces,
+                onChange: setCollapseCleanerSpaces,
+              },
+              {
+                label: 'Remove extra blank lines',
+                checked: removeExtraBlankLines,
+                onChange: setRemoveExtraBlankLines,
+              },
+            ].map(({ label, checked, onChange }) => (
+              <label key={label} className="inline-flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={(event) => onChange(event.target.checked)}
+                  className="h-4 w-4 rounded border-slate-300 accent-slate-900"
+                />
+                {label}
+              </label>
+            ))}
+          </div>
+        )
+
       default:
         return null
     }
@@ -702,7 +759,9 @@ function App() {
                   <span>Output</span>
                   <div className="min-h-[288px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
                     <pre className="h-full min-h-[252px] whitespace-pre-wrap break-words font-sans">
-                      {outputContent || 'Your transformed text will appear here.'}
+                      {activeTool === 'text-cleaner'
+                        ? transformedText
+                        : outputContent || 'Your transformed text will appear here.'}
                     </pre>
                   </div>
                 </div>
