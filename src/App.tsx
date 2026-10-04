@@ -1708,7 +1708,17 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyStorageHeading : 'Local storage and analytics'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not currently save tool input in local storage or require an account. Any future analytics, cookies, or third-party services should be disclosed here before they are enabled.'}
+                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. Text entered into the tools remains in your browser and is not sent to the analytics service.'}
+                </p>
+                <p>
+                  <a
+                    href="https://developers.cloudflare.com/web-analytics/about/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
+                  >
+                    {isChineseLocale ? '了解 Cloudflare Web Analytics 如何处理数据。' : 'Learn how Cloudflare Web Analytics handles data.'}
+                  </a>
                 </p>
               </article>
             ) : null}

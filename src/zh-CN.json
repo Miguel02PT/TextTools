@@ -115,7 +115,7 @@
     "privacyFormsHeading": "联系表单",
     "privacyForms": "联系和问题反馈表单尚未连接邮件服务。服务启用前，填写的信息不会提交或由 TextTools 保存。启用表单服务后，我们会更新本政策，说明服务商接收和处理的信息。",
     "privacyStorageHeading": "本地存储与分析",
-    "privacyStorage": "TextTools 目前不会将工具输入保存到本地存储，也不要求注册账号。启用分析、Cookie 或第三方服务前，我们会在此说明相关情况。",
+    "privacyStorage": "TextTools 不会将工具输入保存到本地存储，也不要求注册账号。我们使用 Cloudflare Web Analytics 衡量汇总的页面浏览量、访问量和页面性能（包括 Core Web Vitals）。Cloudflare 表示，该服务不会跨客户网站跟踪单个终端用户，也不会收集或使用访问者的个人数据。工具中输入的文本仍保留在你的浏览器内，不会发送给分析服务。",
     "termsUsageHeading": "使用工具",
     "termsUsage": "TextTools 提供用于一般信息和效率场景的浏览器工具。请自行检查结果并判断是否符合需求；不要将工具结果作为专业建议或目标平台规则的替代。",
     "termsAvailabilityHeading": "服务可用性与变更",
