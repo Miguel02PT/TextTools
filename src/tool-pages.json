@@ -1,0 +1,487 @@
+[
+  {
+    "id": "word-counter",
+    "title": "Free Word Counter Online | TextTools",
+    "description": "Count words, characters, sentences, and paragraphs with a free browser-based word counter.",
+    "heading": "Free online word counter",
+    "intro": "Check a draft against a word limit without counting by hand. TextTools updates the word, character, sentence, and paragraph totals as you type.",
+    "sections": [
+      {
+        "heading": "How the word count works",
+        "paragraphs": [
+          "The counter treats each group of non-whitespace characters as one word. That means punctuation attached to a word stays with it, and a hyphenated term without spaces counts as one word. A line break or any other whitespace separates words.",
+          "For example, “A quick, well-made draft.” contains four words with this counting method: A, quick,, well-made, and draft. Different apps may count hyphenated terms differently, so use the same counter as your target when checking a strict limit."
+        ]
+      },
+      {
+        "heading": "What the other numbers mean",
+        "paragraphs": [
+          "Characters includes spaces and punctuation. Characters without whitespace excludes spaces, tabs, and line breaks. Sentences are non-empty text segments separated by periods, exclamation marks, or question marks. Paragraphs are separated by blank lines; a non-empty passage without a blank line counts as one paragraph.",
+          "To estimate reading time and adjust the reading speed, use the separate Reading Time Calculator."
+        ]
+      },
+      {
+        "heading": "Check a draft against a limit",
+        "paragraphs": [
+          "Paste the complete text, including its headings and notes if those count toward your assignment or publishing limit. Compare the live total with the limit from your brief, then edit and recheck. The counter updates immediately; Copy and Download export the statistics summary rather than a copy of the passage."
+        ],
+        "bullets": [
+          "For an essay, check whether the brief includes footnotes, references, or headings.",
+          "For a social post, check the platform’s current limit separately; limits can change.",
+          "For a speech, use the Reading Time Calculator as a starting point and rehearse aloud."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the word counter send my text to a server?",
+        "answer": "No. The count is calculated in your browser. The text you enter is not uploaded for processing."
+      },
+      {
+        "question": "Why can another app show a different word count?",
+        "answer": "Word-count conventions differ, especially for hyphenated terms, symbols, and punctuation. TextTools counts groups separated by whitespace, so a hyphenated term with no spaces is one word."
+      },
+      {
+        "question": "Does Copy copy my original text?",
+        "answer": "For Word Counter, Copy and Download export the statistics summary: words, characters, characters without whitespace, sentences, and paragraphs."
+      }
+    ]
+  },
+  {
+    "id": "character-counter",
+    "title": "Free Character Counter Online | TextTools",
+    "description": "Count characters, including whitespace, lines, and words with this free browser-based character counter.",
+    "heading": "Free online character counter",
+    "intro": "Check the length of a title, caption, message, or form response. The character counter shows total characters, characters without whitespace, lines, and words while you type.",
+    "sections": [
+      {
+        "heading": "What is included in the character count?",
+        "paragraphs": [
+          "The total includes every character in the text, including spaces, punctuation, tabs, and line breaks. “Characters without whitespace” removes all whitespace, not just the ordinary space between words. This makes it useful when a service excludes whitespace from its limit.",
+          "The count follows JavaScript string length. Most letters count as one; some emoji and combined Unicode symbols can count as more than one code unit, so a platform with its own counter may show a different total."
+        ]
+      },
+      {
+        "heading": "Lines and words",
+        "paragraphs": [
+          "Each line break separates lines, and an empty line between paragraphs is still a line. An empty input has zero lines; a trailing line break creates a final empty line. Words are groups of characters separated by whitespace."
+        ],
+        "example": {
+          "input": "Hi!\nThere",
+          "output": "9 characters · 8 without whitespace · 2 lines · 2 words"
+        }
+      },
+      {
+        "heading": "Use it with a character limit",
+        "paragraphs": [
+          "Paste the exact text you plan to submit. Include spaces, punctuation, and line breaks if the destination counts them. Keep a small margin below the published limit when possible, because some platforms count links, emoji, or formatted text differently."
+        ],
+        "bullets": [
+          "Check the destination platform’s current rules before trimming a post.",
+          "For a form field, paste only the content that will go into that field.",
+          "Use Characters without whitespace only when the stated limit excludes whitespace."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are spaces and punctuation counted?",
+        "answer": "Yes. The total character count includes spaces, punctuation, tabs, and line breaks."
+      },
+      {
+        "question": "Does “without whitespace” remove line breaks too?",
+        "answer": "Yes. It removes all whitespace, including spaces, tabs, and line breaks."
+      },
+      {
+        "question": "Why might an emoji count as two characters?",
+        "answer": "Some emoji are represented by multiple UTF-16 code units. TextTools uses JavaScript string length, while other services may count Unicode symbols differently."
+      }
+    ]
+  },
+  {
+    "id": "case-converter",
+    "title": "Free Case Converter: Uppercase, Lowercase & More | TextTools",
+    "description": "Convert text to uppercase, lowercase, title case, sentence case, camelCase, or snake_case in your browser.",
+    "heading": "Free text case converter",
+    "intro": "Change capitalization without retyping a passage. Choose uppercase, lowercase, title case, sentence case, camelCase, or snake_case and preview the converted text.",
+    "sections": [
+      {
+        "heading": "Choose the format you need",
+        "paragraphs": [
+          "UPPERCASE changes letters to capitals; lowercase changes them to small letters. Title Case capitalizes the first letter of each word while preserving the original whitespace. Sentence case lowercases the text, then capitalizes its first letter and letters after sentence punctuation followed by whitespace.",
+          "camelCase and snake_case are useful for identifiers. They split each line at characters that are not letters or numbers, then join the words without separators or with underscores. Accented letters are retained, and empty lines remain empty."
+        ],
+        "bullets": [
+          "Title Case: “a quiet morning” → “A Quiet Morning”",
+          "camelCase: “ação rápida” → “açãoRápida”",
+          "snake_case: “ação rápida” → “ação_rápida”"
+        ]
+      },
+      {
+        "heading": "Preserving line breaks",
+        "paragraphs": [
+          "Title Case and Sentence case keep the text’s original spaces and line breaks. camelCase and snake_case process each line independently, so a list of labels remains a list rather than becoming one long identifier."
+        ]
+      },
+      {
+        "heading": "Review before replacing your original",
+        "paragraphs": [
+          "Check the preview before copying, especially for names, acronyms, and writing systems with special capitalization rules. Case conversion changes letter casing; it does not translate words or determine which words should stay lowercase in a headline style guide."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Title Case preserve multiple spaces and new lines?",
+        "answer": "Yes. It changes letter casing while preserving the original whitespace and line breaks."
+      },
+      {
+        "question": "Are accented letters supported?",
+        "answer": "Yes. The converter recognizes Unicode letters and retains accents when creating camelCase and snake_case."
+      },
+      {
+        "question": "Does Sentence case capitalize after every punctuation mark?",
+        "answer": "It capitalizes after a period, exclamation mark, or question mark when followed by whitespace. It does not infer sentence boundaries in every language or abbreviation."
+      }
+    ]
+  },
+  {
+    "id": "text-cleaner",
+    "title": "Free Text Cleaner: Remove Extra Spaces & Blank Lines | TextTools",
+    "description": "Clean messy text by trimming lines, collapsing repeated spaces, and removing extra blank lines in your browser.",
+    "heading": "Free online text cleaner",
+    "intro": "Tidy pasted text while keeping its line structure. Choose which cleanup options to apply and see a live preview before copying or downloading the result.",
+    "sections": [
+      {
+        "heading": "What each cleanup option does",
+        "paragraphs": [
+          "Trim lines removes spaces and tabs from the beginning and end of each line. Collapse extra spaces reduces runs of repeated spaces or tabs within a line to one ordinary space. Remove extra blank lines reduces three or more consecutive line breaks to two, leaving at most one blank line between paragraphs.",
+          "Line endings are normalized to standard newlines. The result is also trimmed at the very beginning and end of the complete text."
+        ],
+        "bullets": [
+          "Use Trim lines for text copied with uneven indentation.",
+          "Use Collapse extra spaces to fix accidental spacing inside lines.",
+          "Use Remove extra blank lines to reduce large gaps without joining paragraphs."
+        ]
+      },
+      {
+        "heading": "Example",
+        "paragraphs": [
+          "With all three options enabled, the sample below keeps its two lines but removes the uneven whitespace and extra blank lines."
+        ],
+        "example": {
+          "input": "  First   line  \n\n\n  Second\t line  ",
+          "output": "First line\n\nSecond line"
+        }
+      },
+      {
+        "heading": "Clean carefully",
+        "paragraphs": [
+          "Whitespace can be meaningful in code, poetry, tables, and preformatted data. Review the output before using it in those contexts. Turn off the relevant checkbox when you need to preserve repeated spaces, indentation, or blank lines."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Will the cleaner merge separate lines?",
+        "answer": "No. It normalizes line endings and preserves line breaks. It does not join separate non-empty lines."
+      },
+      {
+        "question": "What is the maximum blank space between paragraphs?",
+        "answer": "When Remove extra blank lines is enabled, runs of three or more line breaks become two line breaks, leaving one empty line between paragraphs."
+      },
+      {
+        "question": "Is text sent to a server for cleaning?",
+        "answer": "No. The cleanup happens in your browser, and the text is not uploaded for processing."
+      }
+    ]
+  },
+  {
+    "id": "duplicate-lines",
+    "title": "Free Remove Duplicate Lines Tool | TextTools",
+    "description": "Remove repeated lines from a text list while preserving the first occurrence and original order.",
+    "heading": "Remove duplicate lines from text",
+    "intro": "Turn a line-based list into a list of unique entries. The tool keeps the first occurrence of each exact line and preserves the order of the remaining text.",
+    "sections": [
+      {
+        "heading": "How duplicate lines are identified",
+        "paragraphs": [
+          "Two lines are duplicates only when their contents match exactly, including capitalization and spaces. For example, “Apple” and “apple” are different lines, as are “name” and “name ” with a trailing space. The tool does not trim or normalize line contents before comparing them.",
+          "When a duplicate is found, the first matching line stays in place and later identical lines are removed. The remaining lines keep their original order."
+        ],
+        "example": {
+          "input": "pear\napple\npear\nApple",
+          "output": "pear\napple\nApple"
+        }
+      },
+      {
+        "heading": "Prepare a clean list",
+        "paragraphs": [
+          "Paste one item per line. If entries that differ only by capitalization or surrounding spaces should count as the same, clean or normalize those differences first with the Text Cleaner or your editor, then remove duplicates."
+        ],
+        "bullets": [
+          "Useful for repeated names, URLs, keywords, IDs, or spreadsheet values.",
+          "Blank lines are treated as exact lines too, so repeated blank lines collapse to one.",
+          "Copy or download the unique list when the result looks right."
+        ]
+      },
+      {
+        "heading": "Check before using the result",
+        "paragraphs": [
+          "Deduplication removes later exact matches; it does not merge near-matches, correct spelling, or sort the list. If order matters, the first occurrence determines where each unique value remains."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does it ignore uppercase and lowercase differences?",
+        "answer": "No. Matching is exact, so “Apple” and “apple” are kept as separate lines."
+      },
+      {
+        "question": "Does it remove spaces at the ends of lines?",
+        "answer": "No. Spaces are part of the line. Lines with different leading or trailing spaces are treated as different; use the Text Cleaner first if you want to trim them."
+      },
+      {
+        "question": "Will the output be alphabetically sorted?",
+        "answer": "No. It preserves the original order of the first occurrence of every unique line."
+      }
+    ]
+  },
+  {
+    "id": "text-sorter",
+    "title": "Free Text Sorter: Sort Lines A–Z or Reverse | TextTools",
+    "description": "Sort text lines A–Z or Z–A, reverse their original order, and optionally use natural number sorting.",
+    "heading": "Free text line sorter",
+    "intro": "Reorder a line-based list alphabetically, in reverse alphabetical order, or by reversing the order in which the lines were entered.",
+    "sections": [
+      {
+        "heading": "Three ways to reorder lines",
+        "paragraphs": [
+          "A–Z sorts lines alphabetically without distinguishing uppercase from lowercase or accented from unaccented letters. Z–A is the exact reverse of that sorted result. Reverse order does not sort: it flips the lines exactly as entered."
+        ],
+        "bullets": [
+          "A–Z: arrange names, titles, or labels in ascending order.",
+          "Z–A: reverse the sorted A–Z result.",
+          "Reverse order: put the last entered line first, regardless of its text."
+        ]
+      },
+      {
+        "heading": "Natural number order",
+        "paragraphs": [
+          "Natural number order is enabled by default. It compares digits as numbers within the line, so “item 2” comes before “item 10”. Turn it off for standard character-by-character alphabetical sorting."
+        ],
+        "example": {
+          "input": "item 10\nitem 2\nitem 1",
+          "output": "item 1\nitem 2\nitem 10"
+        }
+      },
+      {
+        "heading": "Blank lines and line breaks",
+        "paragraphs": [
+          "Line endings are normalized before sorting. By default, empty lines are kept and sorted with the other lines; enable Remove empty lines to discard blank or whitespace-only lines. The output is joined without adding a trailing newline."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Reverse order mean Z–A?",
+        "answer": "No. Reverse order flips the original line sequence without sorting. Choose Z–A for reverse alphabetical order."
+      },
+      {
+        "question": "Why does item 2 come before item 10?",
+        "answer": "Natural number order is enabled by default, so numeric portions are compared as numbers. Turn it off to sort character by character."
+      },
+      {
+        "question": "Can I keep blank lines?",
+        "answer": "Yes. Remove empty lines is unchecked by default, so blank lines are kept. Enable it to remove empty and whitespace-only lines."
+      }
+    ]
+  },
+  {
+    "id": "find-replace",
+    "title": "Free Find and Replace Text Tool | TextTools",
+    "description": "Find and replace text with optional case matching and whole-word matching, including accented words.",
+    "heading": "Find and replace text online",
+    "intro": "Replace matching text in a passage, see the live replacement count, and control whether capitalization or whole-word boundaries matter.",
+    "sections": [
+      {
+        "heading": "Match case and whole word",
+        "paragraphs": [
+          "Match case is off by default, so a search for “draft” also matches “Draft”. Turn it on when capitalization matters. Whole word is also off by default; turn it on to prevent a short term from matching inside a longer word.",
+          "Whole-word boundaries recognize Unicode letters and numbers, so searching for “ação” does not match inside “reação”. Underscores also count as part of a word."
+        ],
+        "example": {
+          "input": "Ação e reação. ação!",
+          "output": "With Whole word on and Match case off, “ação” matches “Ação” and the final “ação”, but not the letters inside “reação”."
+        }
+      },
+      {
+        "heading": "Replacement text is inserted literally",
+        "paragraphs": [
+          "The Find field is treated as plain text, not as a regular expression. Replacement markers such as $&, $1, and $$ are also inserted literally; they do not refer to a matched string or capture group."
+        ]
+      },
+      {
+        "heading": "Review the count and result",
+        "paragraphs": [
+          "The number below the checkboxes updates as you change the input, search term, replacement, or options. An empty Find field makes no changes and reports zero replacements. Copy and Download use the replaced text shown in Output."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Whole word support accented words?",
+        "answer": "Yes. It uses Unicode-aware letter and number boundaries, so “ação” does not match inside “reação”."
+      },
+      {
+        "question": "What happens if Find is empty?",
+        "answer": "The input is left unchanged and the replacement count is zero."
+      },
+      {
+        "question": "Are $&, $1, or $$ interpreted specially in Replace?",
+        "answer": "No. The replacement is inserted as literal text, including dollar signs."
+      }
+    ]
+  },
+  {
+    "id": "lorem-ipsum",
+    "title": "Free Lorem Ipsum Generator | TextTools",
+    "description": "Generate Lorem Ipsum placeholder text with adjustable paragraph and sentence counts in your browser.",
+    "heading": "Free Lorem Ipsum text generator",
+    "intro": "Create placeholder copy for a mockup, prototype, or layout. Choose the number of paragraphs and sentences, then copy or download the generated text.",
+    "sections": [
+      {
+        "heading": "Set the amount of placeholder copy",
+        "paragraphs": [
+          "Choose from 1 to 10 paragraphs and 1 to 10 sentences per paragraph. The controls are clamped to that range, and paragraphs are separated by a blank line so you can preview realistic text blocks."
+        ]
+      },
+      {
+        "heading": "Start with the classic opening",
+        "paragraphs": [
+          "Start with Lorem ipsum is checked by default. When enabled, the first sentence begins “Lorem ipsum dolor sit amet, consectetur adipiscing elit”. Turn it off to generate the first sentence from the word pool like the other generated sentences.",
+          "The generator uses a fixed seed rather than fresh randomness. Re-rendering the page therefore does not make the text flicker or change unexpectedly."
+        ]
+      },
+      {
+        "heading": "Use placeholder text for layout, not final copy",
+        "paragraphs": [
+          "Lorem Ipsum is useful for checking line length, typography, and spacing before approved copy is available. It is not meaningful product content and should be replaced before publishing a finished page or interface."
+        ],
+        "bullets": [
+          "Choose a paragraph and sentence count that resembles the expected content length.",
+          "Copy the generated text into a design or prototype.",
+          "Use real, reviewed copy for usability and accessibility checks."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the Lorem Ipsum generator need input text?",
+        "answer": "No. It generates placeholder text from its built-in Lorem Ipsum word pool."
+      },
+      {
+        "question": "Why does the same setting produce the same text?",
+        "answer": "The generator is deterministic and uses a fixed seed, so its output stays stable between renders."
+      },
+      {
+        "question": "How many paragraphs and sentences can I generate?",
+        "answer": "You can choose 1–10 paragraphs and 1–10 sentences per paragraph."
+      }
+    ]
+  },
+  {
+    "id": "reading-time",
+    "title": "Free Reading Time Calculator | TextTools",
+    "description": "Estimate reading time from a text's word count and adjust the reading speed from 100 to 500 words per minute.",
+    "heading": "Free reading time calculator",
+    "intro": "Estimate how long a passage may take to read. TextTools counts whitespace-separated words and converts the result to minutes and seconds using an adjustable reading speed.",
+    "sections": [
+      {
+        "heading": "How the estimate is calculated",
+        "paragraphs": [
+          "The calculator divides the word count by the selected words-per-minute speed, then rounds the result up to the next second. At the default 200 words per minute, a 500-word passage is estimated at 2 minutes 30 seconds.",
+          "For a non-empty text that takes less than a minute, the result says “less than 1 min”. Empty text returns 0 min 0 sec."
+        ]
+      },
+      {
+        "heading": "Choose a reading speed",
+        "paragraphs": [
+          "The default is 200 words per minute, and the slider ranges from 100 to 500. Reading speed varies with familiarity, language, text difficulty, accessibility needs, and whether someone is reading silently or aloud. Treat this as a planning estimate, not a promise."
+        ],
+        "bullets": [
+          "Use a slower setting for dense or technical material.",
+          "For a speech or presentation, read the passage aloud and time a rehearsal.",
+          "Adjust the speed to better reflect the audience and reading context."
+        ]
+      },
+      {
+        "heading": "Check the exact passage",
+        "paragraphs": [
+          "Paste the content you plan to use, including headings if they will be read. The word count treats groups separated by whitespace as words. Copy and Download export the word count, selected speed, and estimated time."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the default reading speed?",
+        "answer": "The default is 200 words per minute. You can move the slider from 100 to 500 words per minute."
+      },
+      {
+        "question": "Is this estimate accurate for every reader?",
+        "answer": "No. It is a simple estimate based on word count and the selected speed. Individual pace and text difficulty vary; rehearse aloud for a speech."
+      },
+      {
+        "question": "What does the calculator show for a very short passage?",
+        "answer": "A non-empty passage under one minute is shown as “less than 1 min”. Empty input shows 0 min 0 sec."
+      }
+    ]
+  },
+  {
+    "id": "keyword-density",
+    "title": "Free Keyword Density Checker | TextTools",
+    "description": "Find the most frequent words in a passage with counts and percentages of total words using this browser-based keyword checker.",
+    "heading": "Free keyword density checker",
+    "intro": "Review which words appear most often in a passage. The checker ranks up to ten frequent terms with counts and their share of the total word count.",
+    "sections": [
+      {
+        "heading": "How keyword frequency is calculated",
+        "paragraphs": [
+          "The checker matches words without regard to capitalization and supports Unicode letters and numbers, including accented words. It excludes common English stop words from the ranked list, such as “the” and “and”.",
+          "Each percentage is the keyword count divided by the total number of words in the input, including stop words, then rounded to one decimal place. Because stop words are omitted from the table but remain in the denominator, the listed percentages will not necessarily add up to 100%."
+        ]
+      },
+      {
+        "heading": "Use the results as an editing signal",
+        "paragraphs": [
+          "A frequent word is not automatically a problem. Names, technical terms, and the subject of a page naturally repeat. Read the passage and decide whether repetition sounds useful to people; this checker does not determine search rankings or recommend a target keyword percentage."
+        ],
+        "bullets": [
+          "Review the top terms to spot accidental repetition.",
+          "Check that frequent terms fit the page’s actual topic.",
+          "Edit for clarity and usefulness rather than chasing a fixed density."
+        ]
+      },
+      {
+        "heading": "Know the language limitation",
+        "paragraphs": [
+          "The current stop-word list is English. For text in other languages, common words may appear in the ranked results because they are not in that list. The frequency analysis itself runs in your browser."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why don't keyword percentages add up to 100%?",
+        "answer": "Common English stop words are omitted from the ranked list but still included in the total-word denominator, so the displayed keyword percentages may sum to less than 100%."
+      },
+      {
+        "question": "Does a high keyword percentage improve Google rankings?",
+        "answer": "This tool only reports frequency; it does not predict rankings. There is no universal target percentage. Write clearly for readers and use terms where they naturally belong."
+      },
+      {
+        "question": "Does the checker support Portuguese?",
+        "answer": "It recognizes accented Unicode letters, but its stop-word list is English. Common Portuguese words may therefore appear in the results."
+      }
+    ]
+  }
+]

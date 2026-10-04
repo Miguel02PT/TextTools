@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "how-word-counters-count-hyphenated-words",
+    "published": "2026-10-03",
+    "title": "How word counters count hyphenated words",
+    "description": "Learn why word counters disagree about hyphenated terms, punctuation, and whitespace, and how to check a strict word limit.",
+    "summary": "A practical guide to word-count rules, including hyphenated terms, punctuation, and checking a draft against a limit.",
+    "sections": [
+      {
+        "heading": "Why two word counters can disagree",
+        "paragraphs": [
+          "A word count sounds objective, but software has to decide what separates one word from another. Some counters split at spaces only; others treat punctuation, dashes, or symbols as separators. A hyphenated term such as “well-known” may therefore count as one word in one tool and two in another.",
+          "TextTools counts each group of non-whitespace characters as one word. Under that rule, punctuation attached to a word stays with it, and a hyphenated term without spaces counts as one."
+        ]
+      },
+      {
+        "heading": "What to include in a word limit",
+        "paragraphs": [
+          "The counting rule is only part of the problem. Assignment briefs and publishing platforms may include or exclude titles, headings, footnotes, captions, references, or links. Check the instructions first and paste exactly the material covered by the limit.",
+          "For a strict submission, leave a small margin below the maximum and use the destination’s own counter for the final check. Different platforms can apply different rules."
+        ]
+      },
+      {
+        "heading": "A quick way to check a draft",
+        "paragraphs": [
+          "Paste the complete draft into the Word Counter and compare the live total with the limit. If the count is over, revise for clarity rather than deleting words at random; then recheck the exact version you plan to submit.",
+          "For speeches or presentations, word count is only a starting point. Reading pace, pauses, and slide transitions affect delivery time, so rehearse the text aloud."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "how-to-count-characters-including-spaces",
+    "published": "2026-10-03",
+    "title": "How to count characters, including spaces",
+    "description": "Understand what character counters include—spaces, punctuation, line breaks, and emoji—and check text against a character limit.",
+    "summary": "A clear checklist for counting every character in a caption, title, form response, or short message.",
+    "sections": [
+      {
+        "heading": "What counts as a character?",
+        "paragraphs": [
+          "A character count commonly includes letters, numbers, punctuation, spaces, tabs, and line breaks. If a service says its limit includes spaces, keep whitespace in the text you check rather than removing it first.",
+          "Emoji and combined symbols can be counted differently by different systems. Some programming environments count UTF-16 code units, while others count Unicode code points or visible grapheme clusters. That is why a social platform may report a different total from a general-purpose counter."
+        ]
+      },
+      {
+        "heading": "Check the exact text you will submit",
+        "paragraphs": [
+          "Paste the final wording, including punctuation and line breaks, into the Character Counter. Check both the total and the count without whitespace, and use whichever definition the destination specifies.",
+          "Leave a little room below the published limit when possible. Links, formatting, and emoji may receive special treatment on individual platforms."
+        ]
+      },
+      {
+        "heading": "A note about emoji and Unicode",
+        "paragraphs": [
+          "A visible symbol is not always stored as one unit. Skin-tone modifiers, joined emoji, and combining accents can consist of multiple code points or code units. A character counter should explain which convention it uses so the result is easier to interpret.",
+          "TextTools uses JavaScript string length for the total. Use the destination’s own counter as the final authority when the limit is strict."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "clean-pasted-text-without-losing-formatting",
+    "published": "2026-10-03",
+    "title": "How to clean pasted text without losing its structure",
+    "description": "Remove unwanted spaces and blank lines from copied text while preserving the line breaks and paragraphs you need.",
+    "summary": "A safe, step-by-step method for tidying copied text without accidentally flattening lists or paragraphs.",
+    "sections": [
+      {
+        "heading": "Start with a copy",
+        "paragraphs": [
+          "When text comes from a PDF, web page, or document, it can contain extra spaces, uneven indentation, or too many blank lines. Keep the original source available before applying cleanup so you can compare and restore anything important.",
+          "Paste the text into the Text Cleaner and review the preview. Its options trim spaces at the start and end of lines, collapse repeated horizontal spaces, and reduce long runs of blank lines."
+        ]
+      },
+      {
+        "heading": "Preserve meaningful breaks",
+        "paragraphs": [
+          "Line breaks can carry meaning: they separate list items, addresses, headings, and paragraphs. Avoid turning every line break into a space unless you specifically want one continuous paragraph.",
+          "Change one cleanup option at a time and inspect the result. If the source used blank lines to distinguish sections, keep those breaks rather than removing all empty lines."
+        ]
+      },
+      {
+        "heading": "Review before using the cleaned text",
+        "paragraphs": [
+          "Compare the cleaned output with the source, especially around numbered lists, code, tables, and poetry. Automatic whitespace cleanup cannot know which spacing was intentional.",
+          "The Text Cleaner runs in your browser. Copy the result when it looks right, and keep your original if the exact formatting matters."
+        ]
+      }
+    ]
+  }
+]
