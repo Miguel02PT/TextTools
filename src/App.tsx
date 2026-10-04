@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import {
   ArrowRight,
@@ -78,6 +78,98 @@ type BlogPost = {
   description: string
   summary: string
   sections: BlogSection[]
+}
+
+const GA_MEASUREMENT_ID = 'G-CDBK2W6TB0'
+const ANALYTICS_CONSENT_STORAGE_KEY = 'texttools-ga4-consent'
+const GOOGLE_ANALYTICS_SCRIPT_ID = 'google-analytics-script'
+const ANALYTICS_CONSENT_CHANGE_EVENT = 'texttools-analytics-consent-change'
+
+type AnalyticsConsent = 'accepted' | 'rejected' | null
+let analyticsConsentMemoryFallback: AnalyticsConsent = null
+let analyticsConsentStorageUnavailable = false
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[]
+    gtag?: (...args: unknown[]) => void
+    [key: `ga-disable-${string}`]: boolean | undefined
+  }
+}
+
+function getAnalyticsConsentSnapshot(): AnalyticsConsent {
+  if (analyticsConsentStorageUnavailable) return analyticsConsentMemoryFallback
+
+  try {
+    const storedConsent = window.localStorage.getItem(ANALYTICS_CONSENT_STORAGE_KEY)
+    return storedConsent === 'accepted' || storedConsent === 'rejected'
+      ? storedConsent
+      : null
+  } catch (error) {
+    analyticsConsentStorageUnavailable = true
+    console.error('Unable to read the Google Analytics consent preference.', error)
+    return analyticsConsentMemoryFallback
+  }
+}
+
+function getServerAnalyticsConsentSnapshot(): AnalyticsConsent {
+  return null
+}
+
+function subscribeToAnalyticsConsent(onChange: () => void) {
+  window.addEventListener('storage', onChange)
+  window.addEventListener(ANALYTICS_CONSENT_CHANGE_EVENT, onChange)
+  return () => {
+    window.removeEventListener('storage', onChange)
+    window.removeEventListener(ANALYTICS_CONSENT_CHANGE_EVENT, onChange)
+  }
+}
+
+function saveAnalyticsConsent(consent: Exclude<AnalyticsConsent, null>) {
+  analyticsConsentMemoryFallback = consent
+
+  if (!analyticsConsentStorageUnavailable) {
+    try {
+      window.localStorage.setItem(ANALYTICS_CONSENT_STORAGE_KEY, consent)
+    } catch (error) {
+      analyticsConsentStorageUnavailable = true
+      console.error('Unable to save the Google Analytics consent preference.', error)
+    }
+  }
+
+  window.dispatchEvent(new Event(ANALYTICS_CONSENT_CHANGE_EVENT))
+}
+
+function clearGoogleAnalyticsCookies() {
+  const cookieNames = document.cookie
+    .split(';')
+    .map((cookie) => cookie.split('=')[0].trim())
+    .filter((name) => name === '_ga' || name.startsWith('_ga_'))
+
+  for (const cookieName of cookieNames) {
+    const domains = [undefined, window.location.hostname, `.${window.location.hostname}`]
+    for (const domain of domains) {
+      const domainAttribute = domain ? `; domain=${domain}` : ''
+      document.cookie = `${cookieName}=; max-age=0; path=/${domainAttribute}; SameSite=Lax`
+    }
+  }
+}
+
+function loadGoogleAnalytics() {
+  if (document.getElementById(GOOGLE_ANALYTICS_SCRIPT_ID)) return
+
+  const dataLayer = window.dataLayer ?? []
+  window.dataLayer = dataLayer
+  const gtag = (...args: unknown[]) => dataLayer.push(args)
+  window.gtag = gtag
+  gtag('js', new Date())
+  gtag('config', GA_MEASUREMENT_ID)
+
+  const script = document.createElement('script')
+  script.id = GOOGLE_ANALYTICS_SCRIPT_ID
+  script.async = true
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
+  document.head.appendChild(script)
 }
 
 const toolList: Tool[] = [
@@ -605,6 +697,39 @@ function App() {
   const [trimCleanerLines, setTrimCleanerLines] = useState(true)
   const [collapseCleanerSpaces, setCollapseCleanerSpaces] = useState(true)
   const [removeExtraBlankLines, setRemoveExtraBlankLines] = useState(true)
+  const analyticsConsent = useSyncExternalStore(
+    subscribeToAnalyticsConsent,
+    getAnalyticsConsentSnapshot,
+    getServerAnalyticsConsentSnapshot,
+  )
+  const [isConsentSettingsOpen, setIsConsentSettingsOpen] = useState(false)
+
+  useEffect(() => {
+    if (analyticsConsent === 'rejected') {
+      window[`ga-disable-${GA_MEASUREMENT_ID}`] = true
+    } else if (analyticsConsent === 'accepted') {
+      window[`ga-disable-${GA_MEASUREMENT_ID}`] = false
+      loadGoogleAnalytics()
+    }
+  }, [analyticsConsent])
+
+  function chooseAnalyticsConsent(consent: Exclude<AnalyticsConsent, null>) {
+    if (consent === 'rejected') {
+      window[`ga-disable-${GA_MEASUREMENT_ID}`] = true
+      clearGoogleAnalyticsCookies()
+    } else {
+      window[`ga-disable-${GA_MEASUREMENT_ID}`] = false
+      if (
+        analyticsConsent !== 'accepted' &&
+        document.getElementById(GOOGLE_ANALYTICS_SCRIPT_ID)
+      ) {
+        window.gtag?.('event', 'page_view')
+      }
+    }
+
+    saveAnalyticsConsent(consent)
+    setIsConsentSettingsOpen(false)
+  }
 
   useEffect(() => {
     if (!isToolMenuOpen) return
@@ -1708,7 +1833,7 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyStorageHeading : 'Local storage and analytics'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. Text entered into the tools remains in your browser and is not sent to the analytics service.'}
+                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage, including page views, only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. When enabled, GA4 receives standard website usage and technical information, but no text entered into tools, search terms, replacement values, or generated output. Text entered into the tools remains in your browser and is not sent to either analytics service.'}
                 </p>
                 <p>
                   <a
@@ -1718,6 +1843,15 @@ function App() {
                     className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                   >
                     {isChineseLocale ? '了解 Cloudflare Web Analytics 如何处理数据。' : 'Learn how Cloudflare Web Analytics handles data.'}
+                  </a>
+                  {' · '}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
+                  >
+                    {isChineseLocale ? '了解 Google 如何处理数据。' : 'Learn how Google handles data.'}
                   </a>
                 </p>
               </article>
@@ -1942,6 +2076,13 @@ function App() {
               <a href={localizedHref('terms/')} className="text-slate-500 hover:text-slate-900">
                 {localeText?.terms ?? 'Terms and conditions'}
               </a>
+              <button
+                type="button"
+                onClick={() => setIsConsentSettingsOpen(true)}
+                className="w-fit text-left text-slate-500 hover:text-slate-900"
+              >
+                {localeText?.privacySettings ?? 'Privacy settings'}
+              </button>
             </nav>
           </div>
 
@@ -1985,6 +2126,57 @@ function App() {
           </div>
         </div>
       </footer>
+      {analyticsConsent === null || isConsentSettingsOpen ? (
+        <section
+          aria-labelledby="analytics-consent-title"
+          className="fixed inset-x-3 bottom-3 z-50 mx-auto max-h-[calc(100vh-1.5rem)] max-w-4xl overflow-y-auto rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:inset-x-6 sm:p-5"
+        >
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div className="max-w-2xl">
+              <h2 id="analytics-consent-title" className="font-semibold text-slate-900">
+                {isChineseLocale ? 'Google Analytics 选择' : 'Google Analytics choice'}
+              </h2>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                {isChineseLocale
+                  ? 'Cloudflare Web Analytics 仍会用于汇总流量和性能统计。Google Analytics 4 仅在你明确同意后加载；拒绝或不作选择时，不会向 Google 发送 GA4 请求。你的选择保存在此浏览器中，可随时通过“隐私设置”更改。我们不会向分析服务发送你在工具中输入的文本。'
+                  : 'Cloudflare Web Analytics remains active for aggregate traffic and performance measurement. Google Analytics 4 loads only if you explicitly accept; if you reject or make no choice, no GA4 requests are sent to Google. Your choice is saved in this browser and can be changed at any time in Privacy settings. Text entered into the tools is never sent to analytics.'}
+                {' '}
+                <a
+                  href={localizedHref('privacy/')}
+                  className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
+                >
+                  {isChineseLocale ? '隐私政策' : 'Privacy policy'}
+                </a>
+              </p>
+            </div>
+            <div className="flex shrink-0 flex-col gap-2 sm:min-w-40">
+              <button
+                type="button"
+                onClick={() => chooseAnalyticsConsent('rejected')}
+                className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
+              >
+                {isChineseLocale ? '拒绝 Google Analytics' : 'Reject Google Analytics'}
+              </button>
+              <button
+                type="button"
+                onClick={() => chooseAnalyticsConsent('accepted')}
+                className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
+              >
+                {isChineseLocale ? '接受 Google Analytics' : 'Accept Google Analytics'}
+              </button>
+              {analyticsConsent !== null ? (
+                <button
+                  type="button"
+                  onClick={() => setIsConsentSettingsOpen(false)}
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
+                >
+                  {isChineseLocale ? '关闭' : 'Close'}
+                </button>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </div>
   )
 }
