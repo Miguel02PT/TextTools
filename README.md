@@ -1,4 +1,4 @@
-# TextTools
+# TextToools
 
 Simple tools for working with text. Count, clean, format, and analyze text directly in your browser.
 

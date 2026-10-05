@@ -1,10 +1,10 @@
 [
   {
     "id": "word-counter",
-    "title": "Free Word Counter Online | TextTools",
+    "title": "Free Word Counter Online | TextToools",
     "description": "Count words, characters, sentences, and paragraphs with a free browser-based word counter.",
     "heading": "Free online word counter",
-    "intro": "Check a draft against a word limit without counting by hand. TextTools updates the word, character, sentence, and paragraph totals as you type.",
+    "intro": "Check a draft against a word limit without counting by hand. TextToools updates the word, character, sentence, and paragraph totals as you type.",
     "sections": [
       {
         "heading": "How the word count works",
@@ -39,7 +39,7 @@
       },
       {
         "question": "Why can another app show a different word count?",
-        "answer": "Word-count conventions differ, especially for hyphenated terms, symbols, and punctuation. TextTools counts groups separated by whitespace, so a hyphenated term with no spaces is one word."
+        "answer": "Word-count conventions differ, especially for hyphenated terms, symbols, and punctuation. TextToools counts groups separated by whitespace, so a hyphenated term with no spaces is one word."
       },
       {
         "question": "Does Copy copy my original text?",
@@ -49,7 +49,7 @@
   },
   {
     "id": "character-counter",
-    "title": "Free Character Counter Online | TextTools",
+    "title": "Free Character Counter Online | TextToools",
     "description": "Count characters, including whitespace, lines, and words with this free browser-based character counter.",
     "heading": "Free online character counter",
     "intro": "Check the length of a title, caption, message, or form response. The character counter shows total characters, characters without whitespace, lines, and words while you type.",
@@ -94,13 +94,13 @@
       },
       {
         "question": "Why might an emoji count as two characters?",
-        "answer": "Some emoji are represented by multiple UTF-16 code units. TextTools uses JavaScript string length, while other services may count Unicode symbols differently."
+        "answer": "Some emoji are represented by multiple UTF-16 code units. TextToools uses JavaScript string length, while other services may count Unicode symbols differently."
       }
     ]
   },
   {
     "id": "case-converter",
-    "title": "Free Case Converter: Uppercase, Lowercase & More | TextTools",
+    "title": "Free Case Converter: Uppercase, Lowercase & More | TextToools",
     "description": "Convert text to uppercase, lowercase, title case, sentence case, camelCase, or snake_case in your browser.",
     "heading": "Free text case converter",
     "intro": "Change capitalization without retyping a passage. Choose uppercase, lowercase, title case, sentence case, camelCase, or snake_case and preview the converted text.",
@@ -147,7 +147,7 @@
   },
   {
     "id": "text-cleaner",
-    "title": "Free Text Cleaner: Remove Extra Spaces & Blank Lines | TextTools",
+    "title": "Free Text Cleaner: Remove Extra Spaces & Blank Lines | TextToools",
     "description": "Clean messy text by trimming lines, collapsing repeated spaces, and removing extra blank lines in your browser.",
     "heading": "Free online text cleaner",
     "intro": "Tidy pasted text while keeping its line structure. Choose which cleanup options to apply and see a live preview before copying or downloading the result.",
@@ -198,7 +198,7 @@
   },
   {
     "id": "duplicate-lines",
-    "title": "Free Remove Duplicate Lines Tool | TextTools",
+    "title": "Free Remove Duplicate Lines Tool | TextToools",
     "description": "Remove repeated lines from a text list while preserving the first occurrence and original order.",
     "heading": "Remove duplicate lines from text",
     "intro": "Turn a line-based list into a list of unique entries. The tool keeps the first occurrence of each exact line and preserves the order of the remaining text.",
@@ -249,7 +249,7 @@
   },
   {
     "id": "text-sorter",
-    "title": "Free Text Sorter: Sort Lines A–Z or Reverse | TextTools",
+    "title": "Free Text Sorter: Sort Lines A–Z or Reverse | TextToools",
     "description": "Sort text lines A–Z or Z–A, reverse their original order, and optionally use natural number sorting.",
     "heading": "Free text line sorter",
     "intro": "Reorder a line-based list alphabetically, in reverse alphabetical order, or by reversing the order in which the lines were entered.",
@@ -299,7 +299,7 @@
   },
   {
     "id": "find-replace",
-    "title": "Free Find and Replace Text Tool | TextTools",
+    "title": "Free Find and Replace Text Tool | TextToools",
     "description": "Find and replace text with optional case matching and whole-word matching, including accented words.",
     "heading": "Find and replace text online",
     "intro": "Replace matching text in a passage, see the live replacement count, and control whether capitalization or whole-word boundaries matter.",
@@ -345,7 +345,7 @@
   },
   {
     "id": "lorem-ipsum",
-    "title": "Free Lorem Ipsum Generator | TextTools",
+    "title": "Free Lorem Ipsum Generator | TextToools",
     "description": "Generate Lorem Ipsum placeholder text with adjustable paragraph and sentence counts in your browser.",
     "heading": "Free Lorem Ipsum text generator",
     "intro": "Create placeholder copy for a mockup, prototype, or layout. Choose the number of paragraphs and sentences, then copy or download the generated text.",
@@ -392,10 +392,10 @@
   },
   {
     "id": "reading-time",
-    "title": "Free Reading Time Calculator | TextTools",
+    "title": "Free Reading Time Calculator | TextToools",
     "description": "Estimate reading time from a text's word count and adjust the reading speed from 100 to 500 words per minute.",
     "heading": "Free reading time calculator",
-    "intro": "Estimate how long a passage may take to read. TextTools counts whitespace-separated words and converts the result to minutes and seconds using an adjustable reading speed.",
+    "intro": "Estimate how long a passage may take to read. TextToools counts whitespace-separated words and converts the result to minutes and seconds using an adjustable reading speed.",
     "sections": [
       {
         "heading": "How the estimate is calculated",
@@ -439,7 +439,7 @@
   },
   {
     "id": "keyword-density",
-    "title": "Free Keyword Density Checker | TextTools",
+    "title": "Free Keyword Density Checker | TextToools",
     "description": "Find the most frequent words in a passage with counts and percentages of total words using this browser-based keyword checker.",
     "heading": "Free keyword density checker",
     "intro": "Review which words appear most often in a passage. The checker ranks up to ten frequent terms with counts and their share of the total word count.",

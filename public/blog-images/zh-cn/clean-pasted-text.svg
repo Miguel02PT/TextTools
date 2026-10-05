@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">整理粘贴文本并保留段落换行</title>
+  <desc id="desc">清理多余空格和空行，同时保留两个段落之间的间隔。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1100" cy="556" r="160" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" letter-spacing="2">TEXTTOOOLS  /  文本清理</text>
+  <text x="80" y="153" fill="#172033" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="700">整理空白，保留文本结构</text>
+  <rect x="80" y="206" width="435" height="330" rx="24" fill="#FFFFFF"/>
+  <rect x="685" y="206" width="435" height="330" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="259" fill="#647084" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700">清理前</text>
+  <text x="721" y="259" fill="#647084" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700">清理后</text>
+  <rect x="116" y="288" width="363" height="196" rx="16" fill="#F7F5FA"/>
+  <rect x="721" y="288" width="363" height="196" rx="16" fill="#F2F6F3"/>
+  <text x="145" y="340" fill="#8B789E" font-family="Microsoft YaHei, sans-serif" font-size="23">  苹果   和梨</text>
+  <text x="145" y="392" fill="#8B789E" font-family="Microsoft YaHei, sans-serif" font-size="23">  橙子</text>
+  <text x="145" y="457" fill="#8B789E" font-family="Microsoft YaHei, sans-serif" font-size="23">  新鲜水果</text>
+  <text x="750" y="340" fill="#315E4B" font-family="Microsoft YaHei, sans-serif" font-size="23">苹果 和梨</text>
+  <text x="750" y="392" fill="#315E4B" font-family="Microsoft YaHei, sans-serif" font-size="23">橙子</text>
+  <text x="750" y="457" fill="#315E4B" font-family="Microsoft YaHei, sans-serif" font-size="23">新鲜水果</text>
+  <path d="M544 371H642" stroke="#69558E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M620 349L644 371L620 393" stroke="#69558E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="583" fill="#647084" font-family="Microsoft YaHei, sans-serif" font-size="18">清除多余空白，不要抹掉有意义的换行。</text>
+</svg>

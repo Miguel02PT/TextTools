@@ -10,6 +10,20 @@ const chinesePosts = JSON.parse(
   readFileSync(new URL('../src/zh-CN.json', import.meta.url), 'utf8'),
 ).blog.posts
 
+test('brand correction changes only the site name, not the canonical URL', () => {
+  const html = createSeoMetadata({
+    title: 'Word Counter | TextToools',
+    description: 'Count words online',
+    canonicalUrl: 'https://texttoools.com/tools/word-counter/',
+    structuredData: {},
+    alternates: [{ language: 'en', url: 'https://texttoools.com/tools/word-counter/' }],
+  })
+
+  assert.match(html, /property="og:site_name" content="TextToools"/)
+  assert.match(html, /property="og:title" content="Word Counter \| TextToools"/)
+  assert.match(html, /rel="canonical" href="https:\/\/texttoools\.com\/tools\/word-counter\/"/)
+})
+
 test('blog metadata generates escaped Open Graph and X image cards', () => {
   const html = createSeoMetadata({
     title: 'A guide',
@@ -45,4 +59,19 @@ test('each localized article image is a local 1200x630 PNG', () => {
       assert.equal(png.readUInt32BE(20), 630)
     }
   }
+})
+
+test('Instagram avatar is a square 1080px PNG using the corrected brand name', () => {
+  const avatar = readFileSync(
+    new URL('../public/brand/texttoools-instagram-avatar.png', import.meta.url),
+  )
+  const avatarSvg = readFileSync(
+    new URL('../public/brand/texttoools-instagram-avatar.svg', import.meta.url),
+    'utf8',
+  )
+
+  assert.equal(avatar.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
+  assert.equal(avatar.readUInt32BE(16), 1080)
+  assert.equal(avatar.readUInt32BE(20), 1080)
+  assert.match(avatarSvg, /<title>TextToools logo avatar<\/title>/)
 })

@@ -26,33 +26,33 @@ const blogPosts = JSON.parse(
 const informationPages = [
   {
     slug: 'faq',
-    title: 'FAQ | TextTools',
-    description: 'Answers to common questions about using TextTools and its browser-based text tools.',
+    title: 'FAQ | TextToools',
+    description: 'Answers to common questions about using TextToools and its browser-based text tools.',
   },
   {
     slug: 'about',
-    title: 'About TextTools',
-    description: 'Learn about TextTools, a collection of simple browser-based text utilities.',
+    title: 'About TextToools',
+    description: 'Learn about TextToools, a collection of simple browser-based text utilities.',
   },
   {
     slug: 'privacy',
-    title: 'Privacy | TextTools',
-    description: 'Read how TextTools handles text entered into its browser-based tools.',
+    title: 'Privacy | TextToools',
+    description: 'Read how TextToools handles text entered into its browser-based tools.',
   },
   {
     slug: 'terms',
-    title: 'Terms and Conditions | TextTools',
-    description: 'Terms for using the TextTools browser-based text utilities.',
+    title: 'Terms and Conditions | TextToools',
+    description: 'Terms for using the TextToools browser-based text utilities.',
   },
   {
     slug: 'contact',
-    title: 'Contact TextTools',
-    description: 'Contact TextTools with a question, suggestion, or feedback.',
+    title: 'Contact TextToools',
+    description: 'Contact TextToools with a question, suggestion, or feedback.',
   },
   {
     slug: 'report-bug',
-    title: 'Report a Bug | TextTools',
-    description: 'Report a problem with a TextTools browser-based text utility.',
+    title: 'Report a Bug | TextToools',
+    description: 'Report a problem with a TextToools browser-based text utility.',
   },
 ]
 const homepagePath = path.join(outputRoot, 'index.html')
@@ -119,14 +119,14 @@ function createPageHtml({
 const homepageStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'TextTools',
+  name: 'TextToools',
   url: homepageUrl,
   description: homepageDescription,
 }
 await writeFile(
   homepagePath,
   createPageHtml({
-    title: 'TextTools | Simple tools for working with text.',
+    title: 'TextToools | Simple tools for working with text.',
     description: homepageDescription,
     canonicalUrl: homepageUrl,
     structuredData: homepageStructuredData,
@@ -146,13 +146,13 @@ await mkdir(path.dirname(chineseHomepageDestination), { recursive: true })
 await writeFile(
   chineseHomepageDestination,
   createPageHtml({
-    title: `${chinese.site.homeHeading} | TextTools`,
+    title: `${chinese.site.homeHeading} | TextToools`,
     description: chineseHomepageDescription,
     canonicalUrl: chineseHomepageUrl,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'TextTools',
+      name: 'TextToools',
       url: chineseHomepageUrl,
       description: chineseHomepageDescription,
       inLanguage: 'zh-CN',
@@ -179,7 +179,7 @@ for (const tool of toolPages) {
     url: canonicalUrl,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'TextTools',
+      name: 'TextToools',
       url: siteBase,
     },
   }
@@ -210,7 +210,7 @@ for (const tool of toolPages) {
     inLanguage: 'zh-CN',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'TextTools',
+      name: 'TextToools',
       url: siteBase,
     },
   }
@@ -245,7 +245,7 @@ for (const page of informationPages) {
     url: canonicalUrl,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'TextTools',
+      name: 'TextToools',
       url: siteBase,
     },
   }
@@ -269,7 +269,7 @@ for (const page of informationPages) {
 
   const chineseTitle =
     chinese.site[page.slug === 'report-bug' ? 'reportBug' : page.slug]
-  const chineseDescription = `${chineseTitle} | TextTools 提供的免费在线文本工具和相关信息。`
+  const chineseDescription = `${chineseTitle} | TextToools 提供的免费在线文本工具和相关信息。`
   const chineseStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -279,7 +279,7 @@ for (const page of informationPages) {
     inLanguage: 'zh-CN',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'TextTools',
+      name: 'TextToools',
       url: siteBase,
     },
   }
@@ -309,7 +309,7 @@ const blogIndexUrls = {
 }
 for (const locale of ['en', 'zh-CN']) {
   const canonicalUrl = locale === 'en' ? blogIndexUrls.en : blogIndexUrls.zh
-  const title = locale === 'en' ? 'TextTools Blog' : chinese.blog.title
+  const title = locale === 'en' ? 'TextToools Blog' : chinese.blog.title
   const description =
     locale === 'en'
       ? 'Practical, clear guides to counting, cleaning, and working with text.'
@@ -363,7 +363,7 @@ for (const post of blogPosts) {
       dateModified: post.published,
       inLanguage: locale,
       mainEntityOfPage: canonicalUrl,
-      publisher: { '@type': 'Organization', name: 'TextTools' },
+      publisher: { '@type': 'Organization', name: 'TextToools' },
     }
     const destination = path.join(
       outputRoot,
@@ -423,7 +423,7 @@ await writeFile(
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex,follow" />
-    <title>Page not found | TextTools</title>
+    <title>Page not found | TextToools</title>
     <style>
       :root { color-scheme: light; font-family: Inter, "Segoe UI", sans-serif; color: #0f172a; background: #f5f3ef; }
       * { box-sizing: border-box; }
@@ -439,7 +439,7 @@ await writeFile(
   </head>
   <body>
     <main>
-      <p>TextTools · 404</p>
+      <p>TextToools · 404</p>
       <h1>Page not found</h1>
       <p>This address does not exist or may have moved.</p>
       <nav aria-label="Page recovery">

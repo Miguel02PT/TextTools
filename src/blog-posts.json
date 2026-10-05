@@ -12,7 +12,7 @@
         "heading": "Why two word counters can disagree",
         "paragraphs": [
           "A word count sounds objective, but software has to decide what separates one word from another. Some counters split at spaces only; others treat punctuation, dashes, or symbols as separators. A hyphenated term such as “well-known” may therefore count as one word in one tool and two in another.",
-          "TextTools counts each group of non-whitespace characters as one word. Under that rule, punctuation attached to a word stays with it, and a hyphenated term without spaces counts as one."
+          "TextToools counts each group of non-whitespace characters as one word. Under that rule, punctuation attached to a word stays with it, and a hyphenated term without spaces counts as one."
         ]
       },
       {
@@ -58,7 +58,7 @@
         "heading": "A note about emoji and Unicode",
         "paragraphs": [
           "A visible symbol is not always stored as one unit. Skin-tone modifiers, joined emoji, and combining accents can consist of multiple code points or code units. A character counter should explain which convention it uses so the result is easier to interpret.",
-          "TextTools uses JavaScript string length for the total. Use the destination’s own counter as the final authority when the limit is strict."
+          "TextToools uses JavaScript string length for the total. Use the destination’s own counter as the final authority when the limit is strict."
         ]
       }
     ]

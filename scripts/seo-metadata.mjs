@@ -36,7 +36,7 @@ export function createSeoMetadata({
 
   return `    <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="TextTools" />
+    <meta property="og:site_name" content="TextToools" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
 ${socialImageMetadata}    <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />

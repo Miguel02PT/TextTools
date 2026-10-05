@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">按可见字素簇统计字符</title>
+  <desc id="desc">组合重音符号与字母组成一个可见字符，连接表情符号序列也作为一个字素簇统计。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1050" cy="90" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="588" r="140" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" letter-spacing="2">TEXTTOOOLS  /  字符统计</text>
+  <text x="80" y="153" fill="#172033" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="700">统计你实际看到的字符</text>
+  <rect x="80" y="202" width="500" height="322" rx="24" fill="#FFFFFF"/>
+  <rect x="620" y="202" width="500" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="256" fill="#647084" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700">带组合重音的字母</text>
+  <text x="656" y="256" fill="#647084" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700">连接的表情符号序列</text>
+  <circle cx="328" cy="365" r="78" fill="#F1EDF7"/>
+  <text x="298" y="391" fill="#69558E" font-family="Arial, sans-serif" font-size="78" font-weight="700">e</text>
+  <path d="M337 315C344 307 350 303 360 299" stroke="#BA5948" stroke-width="10" stroke-linecap="round"/>
+  <rect x="226" y="457" width="204" height="42" rx="21" fill="#E9E3F2"/>
+  <text x="267" y="485" fill="#493867" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700">1 个字素簇</text>
+  <circle cx="870" cy="365" r="78" fill="#FBE9E4"/>
+  <circle cx="840" cy="352" r="28" fill="#D88B64"/>
+  <circle cx="899" cy="352" r="28" fill="#69558E"/>
+  <path d="M822 398C832 378 848 378 858 398M881 398C891 378 907 378 917 398" stroke="#493867" stroke-width="12" stroke-linecap="round"/>
+  <path d="M870 318V412" stroke="#BA5948" stroke-width="5" stroke-dasharray="7 9"/>
+  <rect x="766" y="457" width="208" height="42" rx="21" fill="#FBE9E4"/>
+  <text x="789" y="485" fill="#8B4538" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700">1 个字素簇</text>
+  <text x="80" y="583" fill="#647084" font-family="Microsoft YaHei, sans-serif" font-size="18">一个可见字符可能由多个 Unicode 码点组成。</text>
+</svg>

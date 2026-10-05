@@ -266,7 +266,7 @@ const chinese = importedChinese as {
 const blogPosts: BlogPost[] = importedBlogPosts
 const informationPages = [
   { slug: 'faq', title: 'Frequently asked questions', label: 'FAQ' },
-  { slug: 'about', title: 'About TextTools', label: 'About us' },
+  { slug: 'about', title: 'About TextToools', label: 'About us' },
   { slug: 'privacy', title: 'Privacy', label: 'Privacy' },
   { slug: 'terms', title: 'Terms and conditions', label: 'Terms' },
   { slug: 'contact', title: 'Contact us', label: 'Contact us' },
@@ -274,13 +274,13 @@ const informationPages = [
 ] as const
 const commonFaqs = [
   {
-    question: 'Is TextTools free to use?',
+    question: 'Is TextToools free to use?',
     answer: 'Yes. The text tools are available to use in your browser without an account.',
   },
   {
     question: 'Is my text uploaded?',
     answer:
-      'The text transformations and calculations run in your browser. Text entered into a tool is not sent to a TextTools server for processing.',
+      'The text transformations and calculations run in your browser. Text entered into a tool is not sent to a TextToools server for processing.',
   },
   {
     question: 'How do I use a tool?',
@@ -1236,14 +1236,14 @@ function App() {
         >
           <a
             href={localizedHref()}
-            aria-label={isChineseLocale ? 'TextTools 首页' : 'TextTools home'}
+            aria-label={isChineseLocale ? 'TextToools 首页' : 'TextToools home'}
             className="flex shrink-0 items-center gap-3"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-sm font-semibold text-white">
               T
             </span>
             <span className="text-lg font-semibold tracking-[-0.05em] text-slate-900">
-              TextTools
+              TextToools
             </span>
           </a>
 
@@ -1388,7 +1388,7 @@ function App() {
           <>
             <section className="rounded-2xl bg-[#f0eef8] px-5 py-9 text-center sm:px-8 sm:py-12">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-            TextTools
+            TextToools
           </p>
           <h1 className="text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
           {localeText?.homeHeading ?? 'The text tools you need, all in one place'}
@@ -1794,7 +1794,7 @@ function App() {
         {activeInformationPage ? (
           <section className="mx-auto max-w-4xl space-y-6">
             <div className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
-              <p className="text-sm font-medium text-slate-500">TextTools</p>
+              <p className="text-sm font-medium text-slate-500">TextToools</p>
               <h1 className="mt-1 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
                 {isChineseLocale
                   ? chinese.site[activeInformationPage.slug === 'report-bug' ? 'reportBug' : activeInformationPage.slug]
@@ -1830,14 +1830,14 @@ function App() {
                 <p>
                   {isChineseLocale
                     ? chinese.site.aboutText
-                    : <>TextTools is a collection of focused utilities for counting, cleaning,
+                    : <>TextToools is a collection of focused utilities for counting, cleaning,
                         formatting, and understanding text. The home page helps you choose a task;
                         each tool then opens on its own page with its controls and a practical guide.</>}
                 </p>
                 <p>
                   {isChineseLocale
                     ? chinese.site.aboutPrivacy
-                    : 'Text processing happens in your browser. The text you enter into a tool is not uploaded to TextTools for processing, and no account is required.'}
+                    : 'Text processing happens in your browser. The text you enter into a tool is not uploaded to TextToools for processing, and no account is required.'}
                 </p>
                 <p>
                   {isChineseLocale
@@ -1852,15 +1852,15 @@ function App() {
                 <p className="font-medium text-slate-800">{isChineseLocale ? chinese.site.lastUpdated : 'Last updated:'} {currentYear}</p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyInputHeading : 'Text entered into tools'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyInput : 'Text transformations and calculations run in your browser. Text entered into the tools is not sent to a TextTools server for processing. Clearing or closing the page removes the current in-memory tool input.'}
+                  {isChineseLocale ? chinese.site.privacyInput : 'Text transformations and calculations run in your browser. Text entered into the tools is not sent to a TextToools server for processing. Clearing or closing the page removes the current in-memory tool input.'}
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyFormsHeading : 'Contact forms'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyForms : 'Contact and bug-report forms are not connected to a delivery service yet. While disabled, the information entered in those forms is not submitted or stored by TextTools. This policy must be updated when a form provider is chosen and enabled, to explain what information that provider receives and how it is handled.'}
+                  {isChineseLocale ? chinese.site.privacyForms : 'Contact and bug-report forms are not connected to a delivery service yet. While disabled, the information entered in those forms is not submitted or stored by TextToools. This policy must be updated when a form provider is chosen and enabled, to explain what information that provider receives and how it is handled.'}
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyStorageHeading : 'Local storage and analytics'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you use, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
+                  {isChineseLocale ? chinese.site.privacyStorage : 'TextToools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you use, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
                 </p>
                 <p>
                   <a
@@ -1889,7 +1889,7 @@ function App() {
                 <p className="font-medium text-slate-800">{isChineseLocale ? chinese.site.lastUpdated : 'Last updated:'} {currentYear}</p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.termsUsageHeading : 'Using the tools'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.termsUsage : 'TextTools provides browser-based utilities for general informational and productivity use. You are responsible for reviewing the results and deciding whether they meet your needs. Do not rely on a tool as a substitute for professional advice or for a destination platform’s own limits and rules.'}
+                  {isChineseLocale ? chinese.site.termsUsage : 'TextToools provides browser-based utilities for general informational and productivity use. You are responsible for reviewing the results and deciding whether they meet your needs. Do not rely on a tool as a substitute for professional advice or for a destination platform’s own limits and rules.'}
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.termsAvailabilityHeading : 'Availability and changes'}</h2>
                 <p>
@@ -1923,9 +1923,9 @@ function App() {
         {isBlogIndex ? (
           <section className="mx-auto max-w-5xl space-y-6">
             <div className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
-              <p className="text-sm font-medium text-slate-500">TextTools</p>
+              <p className="text-sm font-medium text-slate-500">TextToools</p>
               <h1 className="mt-1 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
-                {isChineseLocale ? chinese.blog.title : 'TextTools Blog'}
+                {isChineseLocale ? chinese.blog.title : 'TextToools Blog'}
               </h1>
               <p className="mt-2 max-w-3xl text-base leading-7 text-slate-600">
                 {isChineseLocale
@@ -2049,7 +2049,7 @@ function App() {
           <div className="grid grid-cols-1 gap-8 border-b border-slate-200 pb-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,minmax(0,1fr))]">
             <div className="space-y-2">
               <a href={localizedHref()} className="font-semibold text-slate-900">
-                TextTools
+                TextToools
               </a>
               <p className="max-w-sm text-sm leading-6 text-slate-500">
                 {localeText?.footerDescription ?? 'Free text tools that run in your browser. Text you enter is not sent to a server for processing.'}
@@ -2114,7 +2114,7 @@ function App() {
           </div>
 
           <div className="flex flex-col gap-3 pt-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {currentYear} TextTools</p>
+            <p>© {currentYear} TextToools</p>
             <p>{localeText?.footerTagline ?? 'Simple text tools. Private by design.'}</p>
             <details className="group relative">
               <summary
