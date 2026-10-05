@@ -433,6 +433,44 @@ await writeFile(
   `User-agent: *\nAllow: /\n\nSitemap: ${siteBase}sitemap.xml\n`,
   'utf8',
 )
+await writeFile(
+  path.join(outputRoot, '404.html'),
+  `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Page not found | TextTools</title>
+    <style>
+      :root { color-scheme: light; font-family: Inter, "Segoe UI", sans-serif; color: #0f172a; background: #f5f3ef; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+      main { width: min(100%, 640px); padding: 40px 24px; border: 1px solid #e2e8f0; border-radius: 20px; background: #fff; text-align: center; }
+      h1 { margin: 8px 0 12px; font-size: clamp(2rem, 6vw, 2.5rem); letter-spacing: -.04em; }
+      p { color: #475569; line-height: 1.6; }
+      nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+      a { border-radius: 8px; padding: 10px 16px; color: #fff; background: #0f172a; font-size: .9rem; font-weight: 600; text-decoration: none; }
+      a + a { border: 1px solid #cbd5e1; color: #334155; background: #fff; }
+      a:focus-visible { outline: 2px solid #0f172a; outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>TextTools · 404</p>
+      <h1>Page not found</h1>
+      <p>This address does not exist or may have moved.</p>
+      <nav aria-label="Page recovery">
+        <a href="${escapeHtml(siteBase)}">Go to homepage</a>
+        <a href="${escapeHtml(siteBase)}#tools">Browse tools</a>
+        <a href="${escapeHtml(siteBase)}zh-cn/">简体中文</a>
+      </nav>
+    </main>
+  </body>
+</html>
+`,
+  'utf8',
+)
 
 await vite.close()
 
