@@ -43,8 +43,9 @@ npm run build
 ```
 
 For Cloudflare Pages, use `npm run build` as the build command and `dist` as the build
-output directory. The project requires Node.js 20.19+ or 22.12+. After the site is
-publicly accessible, submit its `sitemap.xml` URL to Google Search Console.
+output directory. The build also includes Cloudflare Pages response headers and a custom
+404 page. The project requires Node.js 20.19+ or 22.12+. After the site is publicly
+accessible, submit its `sitemap.xml` URL to Google Search Console.
 
 ## Contact form configuration
 
