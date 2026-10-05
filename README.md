@@ -19,6 +19,7 @@ Vite prints the local URL when the development server starts.
 - `npm run build` — run TypeScript checks and create a production build
 - `npm run preview` — preview the production build locally
 - `npm run lint` — run Oxlint
+- `npm test` — run the test suite
 
 ## Privacy
 

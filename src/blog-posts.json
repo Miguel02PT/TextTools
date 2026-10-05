@@ -2,31 +2,76 @@
   {
     "slug": "how-word-counters-count-hyphenated-words",
     "published": "2026-10-03",
-    "image": "blog-images/hyphenated-words.png",
+    "modified": "2026-10-05",
+    "title": "Do Hyphenated Words Count as One or Two? | TextToools",
+    "description": "See exactly how TextToools counts hyphenated words, with tested examples for spaces, dashes, punctuation, and line breaks.",
+    "summary": "The answer depends on the counter. See TextToools’ exact whitespace rule, check real examples, and know when to follow a submission’s own instructions.",
+    "image": "blog-images/hyphenated-words.svg",
     "imageAlt": "Visual comparison showing “well-known” counted as one group and “well — known” counted as three whitespace-separated groups.",
-    "title": "How word counters count hyphenated words",
-    "description": "Learn why word counters disagree about hyphenated terms, punctuation, and whitespace, and how to check a strict word limit.",
-    "summary": "A practical guide to word-count rules, including hyphenated terms, punctuation, and checking a draft against a limit.",
     "sections": [
       {
-        "heading": "Why two word counters can disagree",
+        "heading": "The short answer for TextToools",
         "paragraphs": [
-          "A word count sounds objective, but software has to decide what separates one word from another. Some counters split at spaces only; others treat punctuation, dashes, or symbols as separators. A hyphenated term such as “well-known” may therefore count as one word in one tool and two in another.",
-          "TextToools counts each group of non-whitespace characters as one word. Under that rule, punctuation attached to a word stays with it, and a hyphenated term without spaces counts as one."
+          "In the English Word Counter, a hyphenated expression such as “well-known” counts as one word when there is no whitespace inside it. TextToools separates words at whitespace, not at hyphens.",
+          "That is TextToools’ counting rule, not a universal rule for every school, publisher, or app. If an assignment or submission platform gives its own instructions, follow those instructions and use its counter for the final check."
         ]
       },
       {
-        "heading": "What to include in a word limit",
+        "heading": "Examples: spaces, dashes, and punctuation",
         "paragraphs": [
-          "The counting rule is only part of the problem. Assignment briefs and publishing platforms may include or exclude titles, headings, footnotes, captions, references, or links. Check the instructions first and paste exactly the material covered by the limit.",
-          "For a strict submission, leave a small margin below the maximum and use the destination’s own counter for the final check. Different platforms can apply different rules."
+          "These examples use the English-mode rule: each uninterrupted group of non-whitespace characters is one counted word. The results below match the TextToools Word Counter."
+        ],
+        "examples": [
+          {
+            "text": "well-known",
+            "count": 1,
+            "explanation": "There is no space inside the hyphenated expression, so it is one group."
+          },
+          {
+            "text": "state-of-the-art",
+            "count": 1,
+            "explanation": "Several hyphens do not create extra words unless whitespace separates the parts."
+          },
+          {
+            "text": "well-known writer",
+            "count": 2,
+            "explanation": "The space separates “well-known” from “writer”."
+          },
+          {
+            "text": "well — known",
+            "count": 3,
+            "explanation": "The spaces create three groups: “well”, the dash, and “known”."
+          },
+          {
+            "text": "well-known\nwriter",
+            "count": 2,
+            "explanation": "A line break is whitespace too, so “writer” starts a second group."
+          },
+          {
+            "text": "well–known",
+            "count": 1,
+            "explanation": "An en dash without surrounding spaces stays inside the same group."
+          }
         ]
       },
       {
-        "heading": "A quick way to check a draft",
+        "heading": "Why another word counter may show a different result",
         "paragraphs": [
-          "Paste the complete draft into the Word Counter and compare the live total with the limit. If the count is over, revise for clarity rather than deleting words at random; then recheck the exact version you plan to submit.",
-          "For speeches or presentations, word count is only a starting point. Reading pace, pauses, and slide transitions affect delivery time, so rehearse the text aloud."
+          "Word counters do not all have to split text in the same way. A whitespace-based counter keeps punctuation and hyphens attached to their group; a language-aware tokenizer may apply different boundaries. A hyphenated term can therefore receive different counts in different tools.",
+          "TextToools’ simple rule also means that a standalone number, URL, or emoji surrounded by spaces is counted as a group. It is a transparent way to estimate words, but it cannot decide whether every group is a meaningful word in a linguistic or academic sense."
+        ]
+      },
+      {
+        "heading": "How to check a draft against a word limit",
+        "paragraphs": [
+          "First check what the brief includes: some limits cover only the main text, while others may also include headings, notes, captions, or references. Do not assume the same scope for every assignment.",
+          "Then check the exact final text with the counter required by your school, publisher, or submission form. If no counter is specified, use one method consistently and leave a little room below a strict maximum. Paste a draft into the TextToools Word Counter to see its whitespace-based result update as you type."
+        ]
+      },
+      {
+        "heading": "A note about Chinese text",
+        "paragraphs": [
+          "This guide describes the English Word Counter. In Chinese mode, TextToools uses the browser’s Chinese word-segmentation rules instead of splitting only at whitespace, so the English examples above do not define Chinese counts."
         ]
       }
     ]
@@ -34,11 +79,12 @@
   {
     "slug": "how-to-count-characters-including-spaces",
     "published": "2026-10-03",
-    "image": "blog-images/character-count.png",
-    "imageAlt": "A visible letter with a combining accent and a joined emoji sequence, each shown as one grapheme cluster.",
+    "modified": "2026-10-04",
     "title": "How to count characters, including spaces",
     "description": "Understand what character counters include—spaces, punctuation, line breaks, and emoji—and check text against a character limit.",
     "summary": "A clear checklist for counting every character in a caption, title, form response, or short message.",
+    "image": "blog-images/character-count.svg",
+    "imageAlt": "A visible letter with a combining accent and a joined emoji sequence, each shown as one grapheme cluster.",
     "sections": [
       {
         "heading": "What counts as a character?",
@@ -58,7 +104,7 @@
         "heading": "A note about emoji and Unicode",
         "paragraphs": [
           "A visible symbol is not always stored as one unit. Skin-tone modifiers, joined emoji, and combining accents can consist of multiple code points or code units. A character counter should explain which convention it uses so the result is easier to interpret.",
-          "TextToools uses JavaScript string length for the total. Use the destination’s own counter as the final authority when the limit is strict."
+          "TextToools counts Unicode grapheme clusters for its total: a visible letter with combining marks or a joined emoji sequence counts as one character. Use the destination’s own counter as the final authority when the limit is strict."
         ]
       }
     ]
@@ -66,11 +112,11 @@
   {
     "slug": "clean-pasted-text-without-losing-formatting",
     "published": "2026-10-03",
-    "image": "blog-images/clean-pasted-text.png",
-    "imageAlt": "Before-and-after view of extra spaces and blank lines being cleaned while paragraph breaks remain.",
     "title": "How to clean pasted text without losing its structure",
     "description": "Remove unwanted spaces and blank lines from copied text while preserving the line breaks and paragraphs you need.",
     "summary": "A safe, step-by-step method for tidying copied text without accidentally flattening lists or paragraphs.",
+    "image": "blog-images/clean-pasted-text.svg",
+    "imageAlt": "Before-and-after view of extra spaces and blank lines being cleaned while paragraph breaks remain.",
     "sections": [
       {
         "heading": "Start with a copy",

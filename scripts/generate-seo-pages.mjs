@@ -352,7 +352,10 @@ for (const post of blogPosts) {
   for (const locale of ['en', 'zh-CN']) {
     const localizedPost = locale === 'en' ? post : chinese.blog.posts[post.slug]
     const canonicalUrl = locale === 'en' ? englishCanonicalUrl : chineseCanonicalUrl
-    const socialImageUrl = new URL(localizedPost.image, siteBase).href
+    const socialImageUrl = new URL(
+      localizedPost.image.replace(/\.svg$/i, '.png'),
+      siteBase,
+    ).href
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -360,7 +363,7 @@ for (const post of blogPosts) {
       description: localizedPost.description,
       image: socialImageUrl,
       datePublished: post.published,
-      dateModified: post.published,
+      dateModified: localizedPost.modified ?? post.published,
       inLanguage: locale,
       mainEntityOfPage: canonicalUrl,
       publisher: { '@type': 'Organization', name: 'TextToools' },
@@ -427,7 +430,7 @@ await writeFile(
     <style>
       :root { color-scheme: light; font-family: Inter, "Segoe UI", sans-serif; color: #0f172a; background: #f5f3ef; }
       * { box-sizing: border-box; }
-      body { margin: 0; min-width: 320px; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
       main { width: min(100%, 640px); padding: 40px 24px; border: 1px solid #e2e8f0; border-radius: 20px; background: #fff; text-align: center; }
       h1 { margin: 8px 0 12px; font-size: clamp(2rem, 6vw, 2.5rem); letter-spacing: -.04em; }
       p { color: #475569; line-height: 1.6; }

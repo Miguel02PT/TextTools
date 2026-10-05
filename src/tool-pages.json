@@ -16,7 +16,7 @@
       {
         "heading": "What the other numbers mean",
         "paragraphs": [
-          "Characters includes spaces and punctuation. Characters without whitespace excludes spaces, tabs, and line breaks. Sentences are non-empty text segments separated by periods, exclamation marks, or question marks. Paragraphs are separated by blank lines; a non-empty passage without a blank line counts as one paragraph.",
+          "Characters includes spaces and punctuation. Characters without whitespace excludes spaces, tabs, and line breaks. Sentence totals use the browser's sentence-boundary rules and ignore fragments without letters or numbers, such as a trailing emoji. Paragraphs are separated by blank lines; a non-empty passage without a blank line counts as one paragraph.",
           "To estimate reading time and adjust the reading speed, use the separate Reading Time Calculator."
         ]
       },
@@ -58,7 +58,7 @@
         "heading": "What is included in the character count?",
         "paragraphs": [
           "The total includes every character in the text, including spaces, punctuation, tabs, and line breaks. “Characters without whitespace” removes all whitespace, not just the ordinary space between words. This makes it useful when a service excludes whitespace from its limit.",
-          "The count follows JavaScript string length. Most letters count as one; some emoji and combined Unicode symbols can count as more than one code unit, so a platform with its own counter may show a different total."
+          "TextToools counts Unicode grapheme clusters: a visible letter, combined accent, or joined emoji sequence counts as one character. Spaces, punctuation, tabs, and line breaks are included. Characters without whitespace applies the same rule after removing whitespace. Other services may use different counting rules."
         ]
       },
       {
@@ -93,8 +93,8 @@
         "answer": "Yes. It removes all whitespace, including spaces, tabs, and line breaks."
       },
       {
-        "question": "Why might an emoji count as two characters?",
-        "answer": "Some emoji are represented by multiple UTF-16 code units. TextToools uses JavaScript string length, while other services may count Unicode symbols differently."
+        "question": "How are emoji counted?",
+        "answer": "A visible emoji sequence, including a joined or skin-tone emoji, counts as one grapheme cluster in TextToools. Other services may use different character-counting rules."
       }
     ]
   },

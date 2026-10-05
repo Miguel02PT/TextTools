@@ -27,19 +27,23 @@ import {
   sendToolAnalyticsEvent,
   type ToolAnalyticsEvent,
 } from './analytics'
+import {
+  cleanText,
+  computeMetrics,
+  convertCase,
+  formatReadingTime,
+  generateLoremText,
+  getToolOutputContent,
+  removeDuplicateLines,
+  replaceMatches,
+  resolveRouteKind,
+  sortLines,
+  type CaseFormat,
+  type SortMode,
+  type ToolId,
+} from './tool-logic'
 
 type Category = 'Writing' | 'Text Cleaning' | 'Text Formatting' | 'Text Analysis'
-type ToolId =
-  | 'word-counter'
-  | 'character-counter'
-  | 'case-converter'
-  | 'text-cleaner'
-  | 'duplicate-lines'
-  | 'text-sorter'
-  | 'find-replace'
-  | 'lorem-ipsum'
-  | 'reading-time'
-  | 'keyword-density'
 
 type Tool = {
   id: ToolId
@@ -49,8 +53,6 @@ type Tool = {
   icon: LucideIcon
 }
 
-type CaseFormat = 'upper' | 'lower' | 'title' | 'sentence' | 'camel' | 'snake'
-type SortMode = 'az' | 'za' | 'reverse'
 type ToolGuide = {
   id: string
   heading: string
@@ -75,13 +77,20 @@ type LocalizedToolGuide = Omit<ToolGuide, 'id'> & {
   title: string
   meta: string
 }
-type BlogSection = { heading: string; paragraphs: string[] }
+type BlogSection = {
+  heading: string
+  paragraphs: string[]
+  examples?: { text: string; count: number; explanation: string }[]
+}
 type BlogPost = {
   slug: string
   published: string
+  modified?: string
   title: string
   description: string
   summary: string
+  image: string
+  imageAlt: string
   sections: BlogSection[]
 }
 
@@ -300,252 +309,10 @@ const categoryColors: Record<Category, string> = {
   'Text Analysis': 'bg-slate-100 text-slate-700',
 }
 
-const stopWords = new Set([
-  'a',
-  'an',
-  'and',
-  'are',
-  'as',
-  'at',
-  'be',
-  'but',
-  'by',
-  'for',
-  'from',
-  'has',
-  'have',
-  'he',
-  'her',
-  'his',
-  'in',
-  'is',
-  'it',
-  'its',
-  'of',
-  'on',
-  'or',
-  'that',
-  'the',
-  'their',
-  'there',
-  'they',
-  'this',
-  'to',
-  'was',
-  'we',
-  'with',
-  'you',
-  'your',
-])
-const chineseStopWords = new Set([
-  '我们', '你们', '他们', '这个', '那个', '一个', '一些', '以及', '因为', '所以',
-  '但是', '如果', '可以', '进行', '使用', '通过', '对于', '已经', '没有', '不是',
-  '什么', '如何', '和', '与', '在', '是', '有', '了', '的', '地', '得', '而',
-  '或', '及', '把', '被', '为', '从', '到', '对', '中', '上', '下',
-])
-const chineseWordSegmenter = new Intl.Segmenter('zh-CN', { granularity: 'word' })
-
-const loremWords = [
-  'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
-  'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore',
-  'magna', 'aliqua', 'enim', 'ad', 'minim', 'veniam', 'quis', 'nostrud',
-  'exercitation', 'ullamco', 'laboris', 'nisi', 'aliquip', 'ex', 'ea', 'commodo',
-  'consequat', 'duis', 'aute', 'irure', 'in', 'reprehenderit', 'voluptate', 'velit',
-  'esse', 'cillum', 'fugiat', 'nulla', 'pariatur', 'excepteur', 'sint', 'occaecat',
-  'cupidatat', 'non', 'proident', 'sunt', 'culpa', 'qui', 'officia', 'deserunt',
-  'mollit', 'anim', 'id', 'est', 'laborum',
-]
-
 function clampGeneratorCount(value: string) {
   const parsed = Number(value)
   if (!Number.isFinite(parsed)) return 1
   return Math.min(10, Math.max(1, Math.trunc(parsed)))
-}
-
-function createSeededRandom(seed: number) {
-  let state = seed >>> 0
-  return () => {
-    state = (Math.imul(state, 1664525) + 1013904223) >>> 0
-    return state / 0x100000000
-  }
-}
-
-function generateLoremSentence(paragraphIndex: number, sentenceIndex: number) {
-  const seed =
-    Math.imul(paragraphIndex + 1, 0x85ebca6b) ^
-    Math.imul(sentenceIndex + 1, 0xc2b2ae35)
-  const random = createSeededRandom(seed)
-  const wordCount = 8 + Math.floor(random() * 9)
-  const words = Array.from({ length: wordCount }, (_, index) => {
-    if (index === 0) {
-      return loremWords[(paragraphIndex * 11 + sentenceIndex * 7) % loremWords.length]
-    }
-    return loremWords[Math.floor(random() * loremWords.length)]
-  })
-
-  if (wordCount >= 10 && random() < 0.35) {
-    const commaIndex = 4 + Math.floor(random() * (wordCount - 5))
-    words[commaIndex] += ','
-  }
-
-  const [first, ...rest] = words
-  return `${first.charAt(0).toUpperCase()}${first.slice(1)} ${rest.join(' ')}.`
-}
-
-function generateLoremText(paragraphCount: number, sentenceCount: number, startWithLorem: boolean) {
-  return Array.from({ length: paragraphCount }, (_, paragraphIndex) => {
-    const sentences = Array.from({ length: sentenceCount }, (_, sentenceIndex) => {
-      if (startWithLorem && paragraphIndex === 0 && sentenceIndex === 0) {
-        return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-      }
-      return generateLoremSentence(paragraphIndex, sentenceIndex)
-    })
-    return sentences.join(' ')
-  }).join('\n\n')
-}
-
-function replaceMatches(
-  text: string,
-  findText: string,
-  replaceText: string,
-  matchCase: boolean,
-  wholeWord: boolean,
-) {
-  if (!findText) return { text, count: 0 }
-
-  const term = escapeRegExp(findText)
-  const pattern = wholeWord ? `(?<![\\p{L}\\p{N}_])${term}(?![\\p{L}\\p{N}_])` : term
-  const flags = `${matchCase ? '' : 'i'}gu`
-  const count = text.match(new RegExp(pattern, flags))?.length ?? 0
-  const replacedText = text.replace(new RegExp(pattern, flags), () => replaceText)
-
-  return { text: replacedText, count }
-}
-
-function escapeRegExp(value: string) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-}
-
-function countWords(text: string, locale: 'en' | 'zh-CN' = 'en') {
-  if (!text.trim()) return 0
-  if (locale === 'zh-CN') {
-    return [...chineseWordSegmenter.segment(text)].filter((segment) => segment.isWordLike).length
-  }
-  return text.trim().split(/\s+/).filter(Boolean).length
-}
-
-function formatReadingTime(words: number, seconds: number) {
-  if (words === 0) return '0 min 0 sec'
-  if (seconds < 60) return 'less than 1 min'
-  return `${Math.floor(seconds / 60)} min ${seconds % 60} sec`
-}
-
-function normalizeText(text: string) {
-  return text.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
-}
-
-function toTitleCase(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/[\p{L}\p{N}][\p{L}\p{N}'’]*/gu, (word) => {
-      const [first, ...rest] = Array.from(word)
-      return `${first.toUpperCase()}${rest.join('')}`
-    })
-}
-
-function toSentenceCase(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/(^[\s\S]*?[\p{L}\p{N}]|[.!?]\s+[\p{L}\p{N}])/gu, (match) => {
-      const chars = Array.from(match)
-      chars[chars.length - 1] = chars[chars.length - 1].toUpperCase()
-      return chars.join('')
-    })
-}
-
-function toCamelCase(text: string) {
-  return normalizeText(text)
-    .split('\n')
-    .map((line) => {
-      const words = line.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean)
-      return words
-        .map((word, index) => {
-          if (index === 0) return word
-          const [first, ...rest] = Array.from(word)
-          return `${first.toUpperCase()}${rest.join('')}`
-        })
-        .join('')
-    })
-    .join('\n')
-}
-
-function toSnakeCase(text: string) {
-  return normalizeText(text)
-    .split('\n')
-    .map((line) =>
-      line
-        .toLowerCase()
-        .split(/[^\p{L}\p{N}]+/u)
-        .filter(Boolean)
-        .join('_'),
-    )
-    .join('\n')
-}
-
-function sortLines(
-  text: string,
-  mode: SortMode,
-  naturalNumberOrder: boolean,
-  removeEmptyLines: boolean,
-  locale: 'en' | 'zh-CN',
-) {
-  if (!text) return ''
-
-  let lines = normalizeText(text).split('\n')
-  if (removeEmptyLines) {
-    lines = lines.filter((line) => line.trim().length > 0)
-  }
-  if (mode === 'reverse') {
-    return lines.reverse().join('\n')
-  }
-
-  const sorted = [...lines].sort((a, b) =>
-    a.localeCompare(b, locale, { sensitivity: 'base', numeric: naturalNumberOrder }),
-  )
-  if (mode === 'za') sorted.reverse()
-  return sorted.join('\n')
-}
-
-function getKeywordData(text: string, locale: 'en' | 'zh-CN') {
-  const normalized = normalizeText(text).toLowerCase()
-  const tokens =
-    locale === 'zh-CN'
-      ? [...chineseWordSegmenter.segment(normalized)]
-          .filter((segment) => segment.isWordLike)
-          .map((segment) => segment.segment)
-      : Array.from(normalized.matchAll(/[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu), ([token]) => token)
-
-  const counts = new Map<string, number>()
-
-  for (const token of tokens) {
-    if (
-      (locale === 'en' && token.length <= 1) ||
-      (locale === 'en' ? stopWords.has(token) : chineseStopWords.has(token))
-    ) continue
-    counts.set(token, (counts.get(token) ?? 0) + 1)
-  }
-
-  return {
-    totalWords: tokens.length,
-    entries: [...counts.entries()]
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .slice(0, 10)
-      .map(([word, count]) => ({
-        word,
-        count,
-        percentage: tokens.length === 0 ? 0 : (count / tokens.length) * 100,
-      })),
-  }
 }
 
 function FeedbackForm({ kind, isChineseLocale }: { kind: 'contact' | 'bug'; isChineseLocale: boolean }) {
@@ -680,7 +447,18 @@ function App() {
     isChineseLocale && activeBlogPost
       ? { ...activeBlogPost, ...chinese.blog.posts[activeBlogPost.slug] }
       : activeBlogPost
+  const localizedBlogPosts = blogPosts.map((post) => ({
+    ...post,
+    ...(isChineseLocale ? chinese.blog.posts[post.slug] : undefined),
+  }))
+  const [featuredBlogPost, ...otherBlogPosts] = localizedBlogPosts
   const [activeTool] = useState<ToolId>(routeTool?.id ?? 'word-counter')
+  const routeKind = resolveRouteKind(
+    relativePath,
+    toolList.map((tool) => tool.id),
+    informationPages.map((page) => page.slug),
+    blogPosts.map((post) => post.slug),
+  )
   const [isToolMenuOpen, setIsToolMenuOpen] = useState(false)
   const toolMenuRef = useRef<HTMLDivElement>(null)
   const [selectedCategory, setSelectedCategory] = useState<(typeof categories)[number]>('All')
@@ -802,35 +580,10 @@ function App() {
   }
   const activeToolName = getToolName(activeToolInfo)
 
-  const metrics = useMemo(() => {
-    const normalized = normalizeText(text)
-    const words = countWords(normalized, locale)
-    const characters = normalized.length
-    const charactersNoSpaces = normalized.replace(/\s/g, '').length
-    const sentences = normalized
-      .split(/[.!?。！？]+/)
-      .filter((segment) => segment.trim().length > 0).length
-    const paragraphs = normalized
-      .split(/\n\s*\n/)
-      .filter((segment) => segment.trim().length > 0).length
-    const lines = normalized.length === 0 ? 0 : normalized.split('\n').length
-    const readingUnits = locale === 'zh-CN'
-      ? Array.from(normalized.replace(/[\s\p{P}\p{S}]/gu, '')).length
-      : words
-    const readingSeconds =
-      readingUnits === 0 ? 0 : Math.ceil((readingUnits / readingSpeed) * 60)
-
-    return {
-      words,
-      characters,
-      charactersNoSpaces,
-      sentences,
-      paragraphs: paragraphs || (normalized.trim() ? 1 : 0),
-      lines,
-      readingSeconds,
-      keywordData: getKeywordData(normalized, locale),
-    }
-  }, [locale, readingSpeed, text])
+  const metrics = useMemo(
+    () => computeMetrics(text, locale, readingSpeed),
+    [locale, readingSpeed, text],
+  )
 
   const findReplaceResult = useMemo(
     () => replaceMatches(text, findText, replaceText, matchCase, wholeWord),
@@ -840,38 +593,14 @@ function App() {
   const transformedText = useMemo(() => {
     switch (activeTool) {
       case 'case-converter':
-        if (!text) return ''
-        if (caseFormat === 'upper') return text.toUpperCase()
-        if (caseFormat === 'lower') return text.toLowerCase()
-        if (caseFormat === 'title') return toTitleCase(text)
-        if (caseFormat === 'sentence') return toSentenceCase(text)
-        if (caseFormat === 'camel') return toCamelCase(text)
-        if (caseFormat === 'snake') return toSnakeCase(text)
-        return text
+        return convertCase(text, caseFormat)
 
       case 'text-cleaner': {
-        if (!text) return ''
-
-        let lines = normalizeText(text).split('\n')
-        if (trimCleanerLines) {
-          lines = lines.map((line) => line.replace(/^[ \t]+|[ \t]+$/g, ''))
-        }
-        if (collapseCleanerSpaces) {
-          lines = lines.map((line) => line.replace(/[ \t]{2,}/g, ' '))
-        }
-
-        let cleaned = lines.join('\n')
-        if (removeExtraBlankLines) {
-          cleaned = cleaned.replace(/\n{3,}/g, '\n\n')
-        }
-        return cleaned.trim()
+        return cleanText(text, trimCleanerLines, collapseCleanerSpaces, removeExtraBlankLines)
       }
 
-      case 'duplicate-lines': {
-        const lines = normalizeText(text).split('\n')
-        const uniqueLines = Array.from(new Set(lines))
-        return uniqueLines.join('\n')
-      }
+      case 'duplicate-lines':
+        return removeDuplicateLines(text)
 
       case 'text-sorter':
         return sortLines(text, sortMode, naturalNumberOrder, removeSorterEmptyLines, locale)
@@ -908,51 +637,18 @@ function App() {
     locale,
   ])
 
-  const outputContent = useMemo(() => {
-    const outputLabels = locale === 'zh-CN' ? chinese.site : undefined
-    switch (activeTool) {
-      case 'word-counter':
-        return [
-          `${outputLabels?.wordCount ?? 'Words'}: ${metrics.words}`,
-          `${outputLabels?.characters ?? 'Characters'}: ${metrics.characters}`,
-          `${outputLabels?.withoutWhitespace ?? 'Characters without whitespace'}: ${metrics.charactersNoSpaces}`,
-          `${outputLabels?.sentences ?? 'Sentences'}: ${metrics.sentences}`,
-          `${outputLabels?.paragraphs ?? 'Paragraphs'}: ${metrics.paragraphs}`,
-        ].join('\n')
-      case 'character-counter':
-        return [
-          `${outputLabels?.characters ?? 'Characters'}: ${metrics.characters}`,
-          `${outputLabels?.withoutWhitespace ?? 'Characters without whitespace'}: ${metrics.charactersNoSpaces}`,
-          `${outputLabels?.lines ?? 'Lines'}: ${metrics.lines}`,
-          `${outputLabels?.wordCount ?? 'Words'}: ${metrics.words}`,
-        ].join('\n')
-      case 'reading-time': {
-        const time = formatReadingTime(metrics.words, metrics.readingSeconds)
-        return [
-          `${outputLabels?.wordCount ?? 'Words'}: ${metrics.words}`,
-          `${outputLabels?.readingSpeed ?? 'Reading speed'}: ${readingSpeed} ${locale === 'zh-CN' ? '字/分钟' : 'wpm'}`,
-          `${locale === 'zh-CN' ? '预计阅读时间' : 'Estimated reading time'}: ${time}`,
-        ].join('\n')
-      }
-      case 'keyword-density':
-        return [
-          `${outputLabels?.totalWords ?? 'Total words'}: ${metrics.keywordData.totalWords}`,
-          outputLabels?.topKeywords ?? 'Top keywords (count and percentage of total words):',
-          ...(metrics.keywordData.entries.length
-            ? metrics.keywordData.entries.map(
-                ({ word, count, percentage }, index) =>
-                  `${index + 1}. ${word}: ${count} (${percentage.toFixed(1)}%)`,
-              )
-            : [outputLabels?.noKeywords ?? 'No keywords found.']),
-        ].join('\n')
-      case 'find-replace':
-        return transformedText
-      case 'lorem-ipsum':
-        return transformedText
-      default:
-        return transformedText || text
-    }
-  }, [activeTool, locale, metrics, readingSpeed, text, transformedText])
+  const outputContent = useMemo(
+    () =>
+      getToolOutputContent(
+        activeTool,
+        transformedText,
+        metrics,
+        readingSpeed,
+        locale,
+        locale === 'zh-CN' ? chinese.site : undefined,
+      ),
+    [activeTool, locale, metrics, readingSpeed, transformedText],
+  )
 
   const copyText = async () => {
     const contentToCopy = outputContent
@@ -1384,7 +1080,35 @@ function App() {
       </header>
 
       <main className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        {!activeToolGuide && !activeInformationPage && !isBlogIndex && !activeBlogPost ? (
+        {routeKind === 'not-found' ? (
+          <section className="mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 text-center sm:p-10">
+            <p className="text-sm font-medium text-slate-500">404</p>
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">
+              {isChineseLocale ? '找不到此页面' : 'Page not found'}
+            </h1>
+            <p className="mt-3 text-slate-600">
+              {isChineseLocale
+                ? '此地址不存在或已移动。'
+                : 'This address does not exist or may have moved.'}
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <a
+                href={localizedHref()}
+                className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+              >
+                {isChineseLocale ? '返回首页' : 'Go to homepage'}
+              </a>
+              <a
+                href={localizedHref('#tools')}
+                className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+              >
+                {isChineseLocale ? '浏览工具' : 'Browse tools'}
+              </a>
+            </div>
+          </section>
+        ) : null}
+
+        {routeKind === 'home' ? (
           <>
             <section className="rounded-2xl bg-[#f0eef8] px-5 py-9 text-center sm:px-8 sm:py-12">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
@@ -1695,9 +1419,9 @@ function App() {
                   key={section.heading}
                   className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6"
                 >
-                  <h3 className="text-lg font-semibold tracking-tight text-slate-900">
+                  <h2 className="text-lg font-semibold tracking-tight text-slate-900">
                     {section.heading}
-                  </h3>
+                  </h2>
                   <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
@@ -1735,9 +1459,9 @@ function App() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-lg font-semibold tracking-tight text-slate-900">
+              <h2 className="text-lg font-semibold tracking-tight text-slate-900">
                 {localeText?.frequentlyAsked ?? 'Frequently asked questions'}
-              </h3>
+              </h2>
               {activeToolGuide.faqs.map((faq) => (
                 <details
                   key={faq.question}
@@ -1860,7 +1584,7 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyStorageHeading : 'Local storage and analytics'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyStorage : 'TextToools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you use, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
+                  {isChineseLocale ? chinese.site.privacyStorage : 'TextToools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
                 </p>
                 <p>
                   <a
@@ -1933,42 +1657,101 @@ function App() {
                   : 'Practical, clear guides to counting, cleaning, and working with text.'}
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {blogPosts.map((post) => {
-                const localizedPost =
-                  isChineseLocale && chinese.blog.posts[post.slug]
-                    ? { ...post, ...chinese.blog.posts[post.slug] }
-                    : post
-                return (
-                  <article
-                    key={post.slug}
-                    className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 sm:p-6"
+            {featuredBlogPost ? (
+              <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white md:grid md:grid-cols-2">
+                <a
+                  href={localizedHref(`blog/${featuredBlogPost.slug}/`)}
+                  aria-label={featuredBlogPost.title}
+                  className="block overflow-hidden bg-[#f0eef8] focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-slate-900"
+                >
+                  <img
+                    src={`${basePath}${featuredBlogPost.image}`}
+                    alt=""
+                    width="1200"
+                    height="630"
+                    fetchPriority="high"
+                    decoding="async"
+                    className="h-full min-h-56 w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </a>
+                <div className="flex flex-col justify-center p-5 sm:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-violet-700">
+                    {isChineseLocale ? '精选指南' : 'Featured guide'}
+                  </p>
+                  <p className="mt-3 text-xs font-medium text-slate-500">
+                    {featuredBlogPost.modified
+                      ? `${isChineseLocale ? '更新于' : 'Updated:'} ${featuredBlogPost.modified}`
+                      : `${localeText?.articleDate ?? 'Published:'} ${featuredBlogPost.published}`}
+                  </p>
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+                    <a href={localizedHref(`blog/${featuredBlogPost.slug}/`)} className="hover:underline">
+                      {featuredBlogPost.title}
+                    </a>
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    {featuredBlogPost.summary}
+                  </p>
+                  <a
+                    href={localizedHref(`blog/${featuredBlogPost.slug}/`)}
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 hover:text-slate-950"
                   >
-                    <p className="text-xs font-medium text-slate-500">
-                      {localeText?.articleDate ?? 'Published:'} {post.published}
-                    </p>
-                    <h2 className="mt-2 text-xl font-semibold tracking-tight text-slate-900">
+                    {isChineseLocale ? '阅读指南' : 'Read guide'}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </article>
+            ) : null}
+            {otherBlogPosts.length > 0 ? (
+              <section aria-labelledby="more-guides-heading">
+                <h2 id="more-guides-heading" className="mb-4 text-xl font-semibold tracking-tight text-slate-900">
+                  {isChineseLocale ? '更多实用指南' : 'More practical guides'}
+                </h2>
+                <div className="grid gap-5 md:grid-cols-2">
+                  {otherBlogPosts.map((post) => (
+                    <article
+                      key={post.slug}
+                      className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white"
+                    >
                       <a
                         href={localizedHref(`blog/${post.slug}/`)}
-                        className="hover:underline"
+                        aria-label={post.title}
+                        className="block overflow-hidden bg-[#f0eef8] focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-slate-900"
                       >
-                        {localizedPost.title}
+                        <img
+                          src={`${basePath}${post.image}`}
+                          alt=""
+                          width="1200"
+                          height="630"
+                          loading="lazy"
+                          decoding="async"
+                          className="aspect-[16/9] w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+                        />
                       </a>
-                    </h2>
-                    <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">
-                      {localizedPost.summary}
-                    </p>
-                    <a
-                      href={localizedHref(`blog/${post.slug}/`)}
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-800 hover:text-slate-950"
-                    >
-                      {isChineseLocale ? '阅读指南' : 'Read guide'}
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </a>
-                  </article>
-                )
-              })}
-            </div>
+                      <div className="flex flex-1 flex-col p-5 sm:p-6">
+                        <p className="text-xs font-medium text-slate-500">
+                          {localeText?.articleDate ?? 'Published:'} {post.published}
+                        </p>
+                        <h3 className="mt-2 text-xl font-semibold tracking-tight text-slate-900">
+                          <a href={localizedHref(`blog/${post.slug}/`)} className="hover:underline">
+                            {post.title}
+                          </a>
+                        </h3>
+                        <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">
+                          {post.summary}
+                        </p>
+                        <a
+                          href={localizedHref(`blog/${post.slug}/`)}
+                          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-800 hover:text-slate-950"
+                        >
+                          {isChineseLocale ? '阅读指南' : 'Read guide'}
+                          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ) : null}
           </section>
         ) : null}
 
@@ -1987,7 +1770,17 @@ function App() {
             </nav>
             <header className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
               <p className="text-sm font-medium text-slate-500">
-                {localeText?.articleDate ?? 'Published:'} {activeBlogPost.published}
+                <time dateTime={activeBlogPost.published}>
+                  {localeText?.articleDate ?? 'Published:'} {activeBlogPost.published}
+                </time>
+                {activeBlogPost.modified ? (
+                  <>
+                    {' · '}
+                    <time dateTime={activeBlogPost.modified}>
+                      {localeText?.lastUpdated ?? 'Updated:'} {activeBlogPost.modified}
+                    </time>
+                  </>
+                ) : null}
               </p>
               <h1 className="mt-2 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
                 {localizedBlogPost.title}
@@ -1996,6 +1789,17 @@ function App() {
                 {localizedBlogPost.summary}
               </p>
             </header>
+            <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-[#f0eef8]">
+              <img
+                src={`${basePath}${localizedBlogPost.image}`}
+                alt={localizedBlogPost.imageAlt}
+                width="1200"
+                height="630"
+                fetchPriority="high"
+                decoding="async"
+                className="aspect-[1200/630] w-full object-cover"
+              />
+            </figure>
             <div className="space-y-4">
               {localizedBlogPost.sections.map((section) => (
                 <section
@@ -2008,6 +1812,27 @@ function App() {
                   <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600">
                     {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                   </div>
+                  {section.examples ? (
+                    <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                      {section.examples.map((example) => (
+                        <li
+                          key={example.text}
+                          className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <code className="break-all font-medium text-slate-900">{example.text}</code>
+                            <span className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
+                              {example.count}{' '}
+                              {isChineseLocale ? '个词' : example.count === 1 ? 'word' : 'words'}
+                            </span>
+                          </div>
+                          <p className="mt-2 text-sm leading-6 text-slate-600">
+                            {example.explanation}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </section>
               ))}
             </div>
@@ -2165,8 +1990,8 @@ function App() {
               </h2>
               <p className="mt-1 text-sm leading-6 text-slate-600">
                 {isChineseLocale
-                  ? 'Cloudflare Web Analytics 仍会用于汇总流量和性能统计。Google Analytics 4 仅在你明确同意后加载；拒绝或不作选择时，不会向 Google 发送 GA4 请求。你的选择保存在此浏览器中，可随时通过“隐私设置”更改。我们不会向分析服务发送你在工具中输入的文本。'
-                  : 'Cloudflare Web Analytics remains active for aggregate traffic and performance measurement. Google Analytics 4 loads only if you explicitly accept; if you reject or make no choice, no GA4 requests are sent to Google. Your choice is saved in this browser and can be changed at any time in Privacy settings. Text entered into the tools is never sent to analytics.'}
+                  ? 'Cloudflare Web Analytics 仍会用于汇总流量和性能统计。Google Analytics 4 仅在你明确同意后加载；拒绝或不作选择时，不会向 Google 发送 GA4 请求。接受后，GA4 会记录页面浏览、开始使用的工具以及复制和下载操作，但不会收集你输入的文本。你的选择保存在此浏览器中，可随时通过“隐私设置”更改。'
+                  : 'Cloudflare Web Analytics remains active for aggregate traffic and performance measurement. Google Analytics 4 loads only if you explicitly accept; if you reject or make no choice, no GA4 requests are sent to Google. After acceptance, GA4 records page views, which tool you start using, and copy or download actions, but never the text you enter. Your choice is saved in this browser and can be changed at any time in Privacy settings.'}
                 {' '}
                 <a
                   href={localizedHref('privacy/')}
