@@ -22,6 +22,7 @@ import {
 import importedToolGuides from './tool-pages.json'
 import importedChinese from './zh-CN.json'
 import importedBlogPosts from './blog-posts.json'
+import { createGoogleAnalyticsCommand } from './google-analytics'
 
 type Category = 'Writing' | 'Text Cleaning' | 'Text Formatting' | 'Text Analysis'
 type ToolId =
@@ -160,7 +161,7 @@ function loadGoogleAnalytics() {
 
   const dataLayer = window.dataLayer ?? []
   window.dataLayer = dataLayer
-  const gtag = (...args: unknown[]) => dataLayer.push(args)
+  const gtag = createGoogleAnalyticsCommand(dataLayer)
   window.gtag = gtag
   gtag('js', new Date())
   gtag('config', GA_MEASUREMENT_ID)
