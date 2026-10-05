@@ -23,6 +23,10 @@ import importedToolGuides from './tool-pages.json'
 import importedChinese from './zh-CN.json'
 import importedBlogPosts from './blog-posts.json'
 import { createGoogleAnalyticsCommand } from './google-analytics'
+import {
+  sendToolAnalyticsEvent,
+  type ToolAnalyticsEvent,
+} from './analytics'
 
 type Category = 'Writing' | 'Text Cleaning' | 'Text Formatting' | 'Text Analysis'
 type ToolId =
@@ -704,6 +708,7 @@ function App() {
     getServerAnalyticsConsentSnapshot,
   )
   const [isConsentSettingsOpen, setIsConsentSettingsOpen] = useState(false)
+  const hasTrackedToolStart = useRef(false)
 
   useEffect(() => {
     if (analyticsConsent === 'rejected') {
@@ -713,6 +718,17 @@ function App() {
       loadGoogleAnalytics()
     }
   }, [analyticsConsent])
+
+  function trackToolEvent(eventName: ToolAnalyticsEvent) {
+    if (analyticsConsent !== 'accepted') return false
+    if (!window.gtag) loadGoogleAnalytics()
+    return sendToolAnalyticsEvent(analyticsConsent, window.gtag, eventName, activeTool)
+  }
+
+  function trackToolStart() {
+    if (hasTrackedToolStart.current) return
+    hasTrackedToolStart.current = trackToolEvent('tool_start')
+  }
 
   function chooseAnalyticsConsent(consent: Exclude<AnalyticsConsent, null>) {
     if (consent === 'rejected') {
@@ -944,6 +960,7 @@ function App() {
     try {
       await navigator.clipboard.writeText(contentToCopy)
       setActionMessage(localeText?.copied ?? 'Copied to clipboard.')
+      trackToolEvent('copy_result')
     } catch (clipboardError) {
       const textarea = document.createElement('textarea')
       textarea.value = contentToCopy
@@ -956,6 +973,7 @@ function App() {
           throw clipboardError
         }
         setActionMessage(localeText?.copied ?? 'Copied to clipboard.')
+        trackToolEvent('copy_result')
       } catch (fallbackError) {
         console.error('Unable to copy tool output.', fallbackError)
         setActionMessage(localeText?.copyFailed ?? 'Copy failed. Select and copy the output manually.')
@@ -978,6 +996,7 @@ function App() {
       anchor.remove()
       window.setTimeout(() => URL.revokeObjectURL(url), 1000)
       setActionMessage(localeText?.downloadStarted ?? 'Download started.')
+      trackToolEvent('download_result')
     } catch (error) {
       console.error('Unable to download tool output.', error)
       setActionMessage(localeText?.downloadFailed ?? 'Download failed. Please try again.')
@@ -1470,7 +1489,14 @@ function App() {
         ) : null}
 
         {activeToolGuide ? (
-        <section id="toolbox" aria-label={`${activeToolName} tool`} className="scroll-mt-24 py-3">
+        <section
+          id="toolbox"
+          aria-label={`${activeToolName} tool`}
+          className="scroll-mt-24 py-3"
+          onChange={trackToolStart}
+          onClick={trackToolStart}
+          onInput={trackToolStart}
+        >
           <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6">
             <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
@@ -1834,7 +1860,7 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyStorageHeading : 'Local storage and analytics'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage, including page views, only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. When enabled, GA4 receives standard website usage and technical information, but no text entered into tools, search terms, replacement values, or generated output. Text entered into the tools remains in your browser and is not sent to either analytics service.'}
+                  {isChineseLocale ? chinese.site.privacyStorage : 'TextTools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you use, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
                 </p>
                 <p>
                   <a
