@@ -2,6 +2,8 @@
   {
     "slug": "how-word-counters-count-hyphenated-words",
     "published": "2026-10-03",
+    "image": "blog-images/hyphenated-words.png",
+    "imageAlt": "Visual comparison showing “well-known” counted as one group and “well — known” counted as three whitespace-separated groups.",
     "title": "How word counters count hyphenated words",
     "description": "Learn why word counters disagree about hyphenated terms, punctuation, and whitespace, and how to check a strict word limit.",
     "summary": "A practical guide to word-count rules, including hyphenated terms, punctuation, and checking a draft against a limit.",
@@ -32,6 +34,8 @@
   {
     "slug": "how-to-count-characters-including-spaces",
     "published": "2026-10-03",
+    "image": "blog-images/character-count.png",
+    "imageAlt": "A visible letter with a combining accent and a joined emoji sequence, each shown as one grapheme cluster.",
     "title": "How to count characters, including spaces",
     "description": "Understand what character counters include—spaces, punctuation, line breaks, and emoji—and check text against a character limit.",
     "summary": "A clear checklist for counting every character in a caption, title, form response, or short message.",
@@ -62,6 +66,8 @@
   {
     "slug": "clean-pasted-text-without-losing-formatting",
     "published": "2026-10-03",
+    "image": "blog-images/clean-pasted-text.png",
+    "imageAlt": "Before-and-after view of extra spaces and blank lines being cleaned while paragraph breaks remain.",
     "title": "How to clean pasted text without losing its structure",
     "description": "Remove unwanted spaces and blank lines from copied text while preserving the line breaks and paragraphs you need.",
     "summary": "A safe, step-by-step method for tidying copied text without accidentally flattening lists or paragraphs.",

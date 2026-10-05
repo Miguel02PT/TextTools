@@ -32,10 +32,10 @@ The production build pre-renders English and Chinese pages for the home page, ea
 the FAQ, About, Privacy, Terms, Contact, Report a bug, and the blog. Blog articles are
 also pre-rendered in both languages. It generates `sitemap.xml` and `robots.txt`.
 
-The default canonical URL is the GitHub Pages project URL. When deploying to a custom
-domain, set `SITE_URL` to the public site root before building. Its URL path also
-configures Vite's production asset base, so GitHub Pages project paths and custom domains
-are supported:
+The default canonical URL, sitemap, robots.txt, and production asset base target the live
+custom domain, `https://texttoools.com/`. When deploying to another host or path, set
+`SITE_URL` to the public site root before building. Its URL path also configures Vite's
+production asset base:
 
 ```powershell
 $env:SITE_URL = "https://texttoools.com/"

@@ -4,10 +4,11 @@ import { fileURLToPath } from 'node:url'
 import { createElement } from 'react'
 import { renderToString } from 'react-dom/server'
 import { createServer } from 'vite'
+import { createSeoMetadata, escapeHtml } from './seo-metadata.mjs'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outputRoot = path.join(projectRoot, 'dist')
-const defaultSiteUrl = 'https://miguel02pt.github.io/TextTools/'
+const defaultSiteUrl = 'https://texttoools.com/'
 const siteUrl = (process.env.SITE_URL ?? defaultSiteUrl).replace(/\/+$/, '')
 const siteBase = `${siteUrl}/`
 const homepageUrl = siteBase
@@ -64,38 +65,13 @@ const vite = await createServer({
 })
 const { default: App } = await vite.ssrLoadModule('/src/App.tsx')
 
-function escapeHtml(value) {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;')
-}
-
-function createSeoMetadata({ title, description, canonicalUrl, structuredData, alternates }) {
-  const alternateLinks = alternates
-    .map(
-      ({ language, url }) =>
-        `    <link rel="alternate" hreflang="${language}" href="${escapeHtml(url)}" />\n`,
-    )
-    .join('')
-  return `    <meta name="robots" content="index,follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="TextTools" />
-    <meta property="og:title" content="${escapeHtml(title)}" />
-    <meta property="og:description" content="${escapeHtml(description)}" />
-    <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
-${alternateLinks}    <link rel="alternate" hreflang="x-default" href="${escapeHtml(alternates[0].url)}" />
-    <script type="application/ld+json">${JSON.stringify(structuredData).replaceAll('<', '\\u003c')}</script>
-`
-}
-
 function createPageHtml({
   title,
   description,
   canonicalUrl,
   structuredData,
+  image,
+  imageAlt,
   routePath,
   locale = 'en',
   alternates,
@@ -105,6 +81,8 @@ function createPageHtml({
     description,
     canonicalUrl,
     structuredData,
+    image,
+    imageAlt,
     alternates,
   })
   const previousWindow = globalThis.window
@@ -374,11 +352,13 @@ for (const post of blogPosts) {
   for (const locale of ['en', 'zh-CN']) {
     const localizedPost = locale === 'en' ? post : chinese.blog.posts[post.slug]
     const canonicalUrl = locale === 'en' ? englishCanonicalUrl : chineseCanonicalUrl
+    const socialImageUrl = new URL(localizedPost.image, siteBase).href
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: localizedPost.title,
       description: localizedPost.description,
+      image: socialImageUrl,
       datePublished: post.published,
       dateModified: post.published,
       inLanguage: locale,
@@ -400,6 +380,8 @@ for (const post of blogPosts) {
         description: localizedPost.description,
         canonicalUrl,
         structuredData,
+        image: socialImageUrl,
+        imageAlt: localizedPost.imageAlt,
         routePath: new URL(canonicalUrl).pathname,
         locale,
         alternates: [
