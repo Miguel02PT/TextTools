@@ -21,7 +21,9 @@ import {
 } from 'lucide-react'
 import importedToolGuides from './tool-pages.json'
 import importedChinese from './zh-CN.json'
+import importedSpanish from './es.json'
 import importedBlogPosts from './blog-posts.json'
+import { getBrowserLocaleSuggestion } from './browser-language'
 import { createGoogleAnalyticsCommand } from './google-analytics'
 import {
   sendToolAnalyticsEvent,
@@ -39,6 +41,7 @@ import {
   resolveRouteKind,
   sortLines,
   type CaseFormat,
+  type Locale,
   type SortMode,
   type ToolId,
 } from './tool-logic'
@@ -272,6 +275,17 @@ const chinese = importedChinese as {
     posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
   }
 }
+const spanish = importedSpanish as {
+  site: Record<string, string>
+  inline: Record<string, string>
+  tools: Record<ToolId, LocalizedToolGuide>
+  blog: {
+    title: string
+    description: string
+    intro: string
+    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
+  }
+}
 const blogPosts: BlogPost[] = importedBlogPosts
 const informationPages = [
   { slug: 'faq', title: 'Frequently asked questions', label: 'FAQ' },
@@ -315,10 +329,42 @@ function clampGeneratorCount(value: string) {
   return Math.min(10, Math.max(1, Math.trunc(parsed)))
 }
 
-function FeedbackForm({ kind, isChineseLocale }: { kind: 'contact' | 'bug'; isChineseLocale: boolean }) {
+function getLocaleSite(locale: Locale) {
+  if (locale === 'zh-CN') return chinese.site
+  if (locale === 'es') return spanish.site
+  return undefined
+}
+
+function getLocaleOutputLabels(locale: Locale) {
+  const site = getLocaleSite(locale)
+  if (!site) return undefined
+
+  const labels: Record<string, string> = {}
+  for (const [key, value] of Object.entries(site)) {
+    if (typeof value === 'string') labels[key] = value
+  }
+  return labels
+}
+
+function localizedCopy(locale: Locale, english: string, chineseText: string) {
+  if (locale === 'zh-CN') return chineseText
+  if (locale === 'es') return spanish.inline[english] ?? english
+  return english
+}
+
+function subscribeToBrowserLocale() {
+  return () => {}
+}
+
+function getBrowserLocaleSnapshot(): Locale | null {
+  const preferredLanguages = navigator.languages.length ? navigator.languages : [navigator.language]
+  return getBrowserLocaleSuggestion(preferredLanguages) ?? null
+}
+
+function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Locale }) {
   const [submissionMessage, setSubmissionMessage] = useState('')
   const formEndpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT
-  const text = isChineseLocale ? chinese.site : undefined
+  const text = getLocaleSite(locale)
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -381,7 +427,7 @@ function FeedbackForm({ kind, isChineseLocale }: { kind: 'contact' | 'bug'; isCh
           name="subject"
           type="text"
           required
-          defaultValue={kind === 'bug' ? (isChineseLocale ? '问题反馈' : 'Bug report') : ''}
+          defaultValue={kind === 'bug' ? localizedCopy(locale, 'Bug report', '问题反馈') : ''}
           className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:border-slate-500"
         />
       </label>
@@ -420,22 +466,36 @@ function App() {
   const pathWithinBase = window.location.pathname.startsWith(basePath)
     ? window.location.pathname.slice(basePath.length)
     : window.location.pathname.replace(/^\/+/, '')
-  const [locale] = useState<'en' | 'zh-CN'>(() =>
-    pathWithinBase.startsWith('zh-cn/') ? 'zh-CN' : 'en',
-  )
+  const [locale] = useState<Locale>(() => {
+    if (pathWithinBase === 'zh-cn' || pathWithinBase.startsWith('zh-cn/')) return 'zh-CN'
+    if (pathWithinBase === 'es' || pathWithinBase.startsWith('es/')) return 'es'
+    return 'en'
+  })
   const isChineseLocale = locale === 'zh-CN'
-  const relativePath = isChineseLocale ? pathWithinBase.slice('zh-cn/'.length) : pathWithinBase
+  const isSpanishLocale = locale === 'es'
+  const localePrefix = isChineseLocale ? 'zh-cn/' : isSpanishLocale ? 'es/' : ''
+  const relativePath = localePrefix
+    ? pathWithinBase.slice(localePrefix.slice(0, -1).length).replace(/^\/+/, '')
+    : pathWithinBase
   const isHomePage = relativePath === '' || relativePath === '/'
-  const localeText = isChineseLocale ? chinese.site : undefined
-  const localizedHref = (path = '') => `${basePath}${isChineseLocale ? 'zh-cn/' : ''}${path}`
+  const localeText = getLocaleSite(locale)
+  const localizedHref = (path = '') => `${basePath}${localePrefix}${path}`
   const englishLanguageHref = `${basePath}${relativePath}`
   const chineseLanguageHref = `${basePath}zh-cn/${relativePath}`
+  const spanishLanguageHref = `${basePath}es/${relativePath}`
+  const languageOptions: { locale: Locale; href: string; label: string }[] = [
+    { locale: 'en', href: englishLanguageHref, label: 'English' },
+    { locale: 'zh-CN', href: chineseLanguageHref, label: '简体中文' },
+    { locale: 'es', href: spanishLanguageHref, label: 'Español' },
+  ]
   const routeToolId = relativePath.match(/^tools\/([^/]+)\/?$/)?.[1]
   const routeTool = toolList.find((tool) => tool.id === routeToolId)
   const activeToolGuide = routeTool
     ? isChineseLocale
       ? chinese.tools[routeTool.id]
-      : toolGuides.find((guide) => guide.id === routeTool.id)
+      : isSpanishLocale
+        ? spanish.tools[routeTool.id]
+        : toolGuides.find((guide) => guide.id === routeTool.id)
     : undefined
   const routePageSlug = relativePath.match(/^(faq|about|privacy|terms|contact|report-bug)\/?$/)?.[1]
   const activeInformationPage = informationPages.find((page) => page.slug === routePageSlug)
@@ -445,12 +505,21 @@ function App() {
     : undefined
   const isBlogIndex = relativePath === 'blog' || relativePath === 'blog/'
   const localizedBlogPost =
-    isChineseLocale && activeBlogPost
-      ? { ...activeBlogPost, ...chinese.blog.posts[activeBlogPost.slug] }
+    locale !== 'en' && activeBlogPost
+      ? {
+          ...activeBlogPost,
+          ...(isChineseLocale
+            ? chinese.blog.posts[activeBlogPost.slug]
+            : spanish.blog.posts[activeBlogPost.slug]),
+        }
       : activeBlogPost
   const localizedBlogPosts = blogPosts.map((post) => ({
     ...post,
-    ...(isChineseLocale ? chinese.blog.posts[post.slug] : undefined),
+    ...(isChineseLocale
+      ? chinese.blog.posts[post.slug]
+      : isSpanishLocale
+        ? spanish.blog.posts[post.slug]
+        : undefined),
   }))
   const [featuredBlogPost, ...otherBlogPosts] = localizedBlogPosts
   const [activeTool] = useState<ToolId>(routeTool?.id ?? 'word-counter')
@@ -461,6 +530,7 @@ function App() {
     blogPosts.map((post) => post.slug),
   )
   const [isToolMenuOpen, setIsToolMenuOpen] = useState(false)
+  const [isLanguageSuggestionDismissed, setIsLanguageSuggestionDismissed] = useState(false)
   const toolMenuRef = useRef<HTMLDivElement>(null)
   const [selectedCategory, setSelectedCategory] = useState<(typeof categories)[number]>('All')
   const [search, setSearch] = useState('')
@@ -488,6 +558,18 @@ function App() {
   )
   const [isConsentSettingsOpen, setIsConsentSettingsOpen] = useState(false)
   const hasTrackedToolStart = useRef(false)
+  const browserLocale = useSyncExternalStore(
+    subscribeToBrowserLocale,
+    getBrowserLocaleSnapshot,
+    () => null,
+  )
+  const suggestedLocale =
+    isHomePage &&
+    locale === 'en' &&
+    !isLanguageSuggestionDismissed &&
+    browserLocale !== 'en'
+      ? browserLocale
+      : null
 
   useEffect(() => {
     if (analyticsConsent === 'rejected') {
@@ -555,8 +637,12 @@ function App() {
         search.trim().length === 0 ||
         tool.name.toLowerCase().includes(search.toLowerCase()) ||
         tool.description.toLowerCase().includes(search.toLowerCase()) ||
-        (locale === 'zh-CN' &&
-          `${chinese.tools[tool.id].name} ${chinese.tools[tool.id].description}`.includes(search.trim()))
+        (locale !== 'en' &&
+          `${locale === 'zh-CN' ? chinese.tools[tool.id].name : spanish.tools[tool.id].name} ${
+            locale === 'zh-CN'
+              ? chinese.tools[tool.id].description
+              : spanish.tools[tool.id].description
+          }`.toLowerCase().includes(search.trim().toLowerCase()))
 
       return matchesCategory && matchesSearch
     })
@@ -565,11 +651,11 @@ function App() {
   const activeToolInfo =
     toolList.find((tool) => tool.id === activeTool) ?? toolList[0]
   const getToolName = (tool: Tool) =>
-    isChineseLocale ? chinese.tools[tool.id].name : tool.name
+    isChineseLocale ? chinese.tools[tool.id].name : isSpanishLocale ? spanish.tools[tool.id].name : tool.name
   const getToolDescription = (tool: Tool) =>
-    isChineseLocale ? chinese.tools[tool.id].description : tool.description
+    isChineseLocale ? chinese.tools[tool.id].description : isSpanishLocale ? spanish.tools[tool.id].description : tool.description
   const categoryLabel = (category: (typeof categories)[number]) => {
-    if (!isChineseLocale) return category
+    if (!localeText) return category
     const categoryKeys: Record<(typeof categories)[number], string> = {
       All: 'allTools',
       Writing: 'categoryWriting',
@@ -577,7 +663,7 @@ function App() {
       'Text Formatting': 'categoryTextFormatting',
       'Text Analysis': 'categoryTextAnalysis',
     }
-    return chinese.site[categoryKeys[category]]
+    return localeText[categoryKeys[category]]
   }
   const activeToolName = getToolName(activeToolInfo)
 
@@ -646,7 +732,7 @@ function App() {
         metrics,
         readingSpeed,
         locale,
-        locale === 'zh-CN' ? chinese.site : undefined,
+        getLocaleOutputLabels(locale),
       ),
     [activeTool, locale, metrics, readingSpeed, transformedText],
   )
@@ -872,7 +958,7 @@ function App() {
       case 'reading-time':
         return (
           <label className="space-y-3 text-sm font-medium text-slate-700">
-            {localeText?.readingSpeed ?? 'Reading speed'}: {readingSpeed} {isChineseLocale ? '字/分钟' : 'wpm'}
+            {localeText?.readingSpeed ?? 'Reading speed'}: {readingSpeed} {isChineseLocale ? '字/分钟' : localeText?.wordsPerMinute ?? 'wpm'}
             <input
               type="range"
               min={isChineseLocale ? 100 : 100}
@@ -927,13 +1013,13 @@ function App() {
     <div className="min-h-screen bg-[#f7f6fa] text-slate-900">
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
         <nav
-          aria-label={isChineseLocale ? '主导航' : 'Main navigation'}
+          aria-label={localizedCopy(locale, 'Main navigation', '主导航')}
           onMouseLeave={() => setIsToolMenuOpen(false)}
           className="flex w-full items-center gap-4 px-4 py-3 sm:px-6 lg:px-8"
         >
           <a
             href={localizedHref()}
-            aria-label={isChineseLocale ? 'TextToools 首页' : 'TextToools home'}
+            aria-label={localizedCopy(locale, 'TextToools home', 'TextToools 首页')}
             className="flex shrink-0 items-center gap-3"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-sm font-semibold text-white">
@@ -1019,7 +1105,7 @@ function App() {
 
                 <div className="grid grid-cols-1 gap-x-5 gap-y-5 sm:grid-cols-2">
                   {categories.slice(1).map((category) => (
-                    <section key={category} aria-label={category}>
+                    <section key={category} aria-label={categoryLabel(category)}>
                       <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                         {categoryLabel(category)}
                       </h3>
@@ -1080,6 +1166,35 @@ function App() {
         </nav>
       </header>
 
+      {suggestedLocale ? (
+        <aside
+          role="status"
+          aria-live="polite"
+          className="mx-4 mt-3 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm sm:mx-6 lg:mx-8"
+        >
+          <p>
+            {suggestedLocale === 'es'
+              ? '¿Prefieres ver TextToools en español?'
+              : '您更喜欢使用简体中文浏览 TextToools 吗？'}
+          </p>
+          <div className="flex items-center gap-3">
+            <a
+              href={`${basePath}${suggestedLocale === 'es' ? 'es/' : 'zh-cn/'}`}
+              className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4"
+            >
+              {suggestedLocale === 'es' ? 'Ver en español' : '切换到简体中文'}
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsLanguageSuggestionDismissed(true)}
+              className="text-slate-500 hover:text-slate-900"
+            >
+              {suggestedLocale === 'es' ? 'Seguir en inglés' : '继续使用英文'}
+            </button>
+          </div>
+        </aside>
+      ) : null}
+
       <main
         className={`mx-auto ${isHomePage ? 'max-w-[1760px]' : 'max-w-7xl'} px-4 pb-20 pt-8 sm:px-6 lg:px-8`}
       >
@@ -1087,25 +1202,23 @@ function App() {
           <section className="mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 text-center sm:p-10">
             <p className="text-sm font-medium text-slate-500">404</p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">
-              {isChineseLocale ? '找不到此页面' : 'Page not found'}
+              {localizedCopy(locale, 'Page not found', '找不到此页面')}
             </h1>
             <p className="mt-3 text-slate-600">
-              {isChineseLocale
-                ? '此地址不存在或已移动。'
-                : 'This address does not exist or may have moved.'}
+              {localizedCopy(locale, 'This address does not exist or may have moved.', '此地址不存在或已移动。')}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <a
                 href={localizedHref()}
                 className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
               >
-                {isChineseLocale ? '返回首页' : 'Go to homepage'}
+                {localizedCopy(locale, 'Go to homepage', '返回首页')}
               </a>
               <a
                 href={localizedHref('#tools')}
                 className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
               >
-                {isChineseLocale ? '浏览工具' : 'Browse tools'}
+                {localizedCopy(locale, 'Browse tools', '浏览工具')}
               </a>
             </div>
           </section>
@@ -1218,7 +1331,7 @@ function App() {
         {activeToolGuide ? (
         <section
           id="toolbox"
-          aria-label={`${activeToolName} tool`}
+          aria-label={`${activeToolName} ${localizedCopy(locale, 'tool', '工具')}`}
           className="scroll-mt-24 py-3"
           onChange={trackToolStart}
           onClick={trackToolStart}
@@ -1233,7 +1346,7 @@ function App() {
                 <button
                   type="button"
                   onClick={copyText}
-                  title={isChineseLocale ? '复制结果' : 'Copy the output content'}
+                  title={localizedCopy(locale, 'Copy the output content', '复制结果')}
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
                 >
                   <Copy className="h-4 w-4" />
@@ -1242,7 +1355,7 @@ function App() {
                 <button
                   type="button"
                   onClick={downloadText}
-                  title={isChineseLocale ? '下载结果' : 'Download the output content'}
+                  title={localizedCopy(locale, 'Download the output content', '下载结果')}
                   className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
                 >
                   <Download className="h-4 w-4" />
@@ -1365,14 +1478,16 @@ function App() {
 
               {activeTool === 'reading-time' ? (
                 <div className="rounded-2xl bg-slate-50 p-4">
-                  <p className="text-sm text-slate-500">{isChineseLocale ? '预计阅读时间' : 'Estimated reading time'}</p>
+                  <p className="text-sm text-slate-500">{isChineseLocale ? '预计阅读时间' : localeText?.estimatedReadingTime ?? 'Estimated reading time'}</p>
                   <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">
-                    {formatReadingTime(metrics.words, metrics.readingSeconds)}
+                    {formatReadingTime(metrics.words, metrics.readingSeconds, locale)}
                   </p>
                   <p className="mt-1 text-sm text-slate-500">
                     {isChineseLocale
                       ? `${metrics.words} 个词，阅读速度 ${readingSpeed} 字/分钟`
-                      : `${metrics.words} words at ${readingSpeed} words per minute`}
+                      : isSpanishLocale
+                        ? `${metrics.words} ${metrics.words === 1 ? 'palabra' : 'palabras'} a ${readingSpeed} ${localeText?.wordsPerMinute ?? 'palabras por minuto'}`
+                        : `${metrics.words} words at ${readingSpeed} words per minute`}
                   </p>
                 </div>
               ) : null}
@@ -1415,7 +1530,7 @@ function App() {
         ) : null}
 
         {activeToolGuide ? (
-          <section aria-label={`${activeToolName} guide`} className="space-y-6 py-8">
+          <section aria-label={`${activeToolName} ${localizedCopy(locale, 'guide', '指南')}`} className="space-y-6 py-8">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               {activeToolGuide.sections.map((section) => (
                 <article
@@ -1523,20 +1638,20 @@ function App() {
             <div className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
               <p className="text-sm font-medium text-slate-500">TextToools</p>
               <h1 className="mt-1 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
-                {isChineseLocale
-                  ? chinese.site[activeInformationPage.slug === 'report-bug' ? 'reportBug' : activeInformationPage.slug]
+                {localeText
+                  ? localeText[activeInformationPage.slug === 'report-bug' ? 'reportBug' : activeInformationPage.slug]
                   : activeInformationPage.title}
               </h1>
             </div>
 
             {activeInformationPage.slug === 'faq' ? (
               <div className="space-y-3">
-                {(isChineseLocale
+                {(localeText
                   ? [
-                      { question: chinese.site.isFree, answer: chinese.site.yesFree },
-                      { question: chinese.site.privacyFaq, answer: chinese.site.noUpload },
-                      { question: chinese.site.howToUse, answer: chinese.site.chooseToolAnswer },
-                      { question: chinese.site.feedbackFaq, answer: chinese.site.feedbackAnswer },
+                      { question: localeText.isFree, answer: localeText.yesFree },
+                      { question: localeText.privacyFaq, answer: localeText.noUpload },
+                      { question: localeText.howToUse, answer: localeText.chooseToolAnswer },
+                      { question: localeText.feedbackFaq, answer: localeText.feedbackAnswer },
                     ]
                   : commonFaqs).map((faq) => (
                   <details
@@ -1555,20 +1670,20 @@ function App() {
             {activeInformationPage.slug === 'about' ? (
               <article className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-600 sm:p-6">
                 <p>
-                  {isChineseLocale
-                    ? chinese.site.aboutText
+                  {localeText
+                    ? localeText.aboutText
                     : <>TextToools is a collection of focused utilities for counting, cleaning,
                         formatting, and understanding text. The home page helps you choose a task;
                         each tool then opens on its own page with its controls and a practical guide.</>}
                 </p>
                 <p>
-                  {isChineseLocale
-                    ? chinese.site.aboutPrivacy
+                  {localeText
+                    ? localeText.aboutPrivacy
                     : 'Text processing happens in your browser. The text you enter into a tool is not uploaded to TextToools for processing, and no account is required.'}
                 </p>
                 <p>
-                  {isChineseLocale
-                    ? chinese.site.aboutGoal
+                  {localeText
+                    ? localeText.aboutGoal
                     : 'The goal is to keep everyday text tasks clear and uncomplicated. Use the Contact us form to send a suggestion once message delivery is enabled.'}
                 </p>
               </article>
@@ -1576,18 +1691,18 @@ function App() {
 
             {activeInformationPage.slug === 'privacy' ? (
               <article className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-600 sm:p-6">
-                <p className="font-medium text-slate-800">{isChineseLocale ? chinese.site.lastUpdated : 'Last updated:'} {currentYear}</p>
-                <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyInputHeading : 'Text entered into tools'}</h2>
+                <p className="font-medium text-slate-800">{localeText?.lastUpdated ?? 'Last updated:'} {currentYear}</p>
+                <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyInputHeading ?? 'Text entered into tools'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyInput : 'Text transformations and calculations run in your browser. Text entered into the tools is not sent to a TextToools server for processing. Clearing or closing the page removes the current in-memory tool input.'}
+                  {localeText?.privacyInput ?? 'Text transformations and calculations run in your browser. Text entered into the tools is not sent to a TextToools server for processing. Clearing or closing the page removes the current in-memory tool input.'}
                 </p>
-                <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyFormsHeading : 'Contact forms'}</h2>
+                <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyFormsHeading ?? 'Contact forms'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyForms : 'Contact and bug-report forms are not connected to a delivery service yet. While disabled, the information entered in those forms is not submitted or stored by TextToools. This policy must be updated when a form provider is chosen and enabled, to explain what information that provider receives and how it is handled.'}
+                  {localeText?.privacyForms ?? 'Contact and bug-report forms are not connected to a delivery service yet. While disabled, the information entered in those forms is not submitted or stored by TextToools. This policy must be updated when a form provider is chosen and enabled, to explain what information that provider receives and how it is handled.'}
                 </p>
-                <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.privacyStorageHeading : 'Local storage and analytics'}</h2>
+                <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyStorageHeading ?? 'Local storage and analytics'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.privacyStorage : 'TextToools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
+                  {localeText?.privacyStorage ?? 'TextToools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
                 </p>
                 <p>
                   <a
@@ -1596,7 +1711,7 @@ function App() {
                     rel="noreferrer"
                     className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                   >
-                    {isChineseLocale ? '了解 Cloudflare Web Analytics 如何处理数据。' : 'Learn how Cloudflare Web Analytics handles data.'}
+                    {localizedCopy(locale, 'Learn how Cloudflare Web Analytics handles data.', '了解 Cloudflare Web Analytics 如何处理数据。')}
                   </a>
                   {' · '}
                   <a
@@ -1605,7 +1720,7 @@ function App() {
                     rel="noreferrer"
                     className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                   >
-                    {isChineseLocale ? '了解 Google 如何处理数据。' : 'Learn how Google handles data.'}
+                    {localizedCopy(locale, 'Learn how Google handles data.', '了解 Google 如何处理数据。')}
                   </a>
                 </p>
               </article>
@@ -1613,18 +1728,18 @@ function App() {
 
             {activeInformationPage.slug === 'terms' ? (
               <article className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-600 sm:p-6">
-                <p className="font-medium text-slate-800">{isChineseLocale ? chinese.site.lastUpdated : 'Last updated:'} {currentYear}</p>
-                <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.termsUsageHeading : 'Using the tools'}</h2>
+                <p className="font-medium text-slate-800">{localeText?.lastUpdated ?? 'Last updated:'} {currentYear}</p>
+                <h2 className="text-lg font-semibold text-slate-900">{localeText?.termsUsageHeading ?? 'Using the tools'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.termsUsage : 'TextToools provides browser-based utilities for general informational and productivity use. You are responsible for reviewing the results and deciding whether they meet your needs. Do not rely on a tool as a substitute for professional advice or for a destination platform’s own limits and rules.'}
+                  {localeText?.termsUsage ?? 'TextToools provides browser-based utilities for general informational and productivity use. You are responsible for reviewing the results and deciding whether they meet your needs. Do not rely on a tool as a substitute for professional advice or for a destination platform’s own limits and rules.'}
                 </p>
-                <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.termsAvailabilityHeading : 'Availability and changes'}</h2>
+                <h2 className="text-lg font-semibold text-slate-900">{localeText?.termsAvailabilityHeading ?? 'Availability and changes'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.termsAvailability : 'Features may change as the site is improved. The service is provided without a guarantee that it will always be available, error-free, or suitable for a particular purpose. Keep your own copy of important text and review downloads before using them.'}
+                  {localeText?.termsAvailability ?? 'Features may change as the site is improved. The service is provided without a guarantee that it will always be available, error-free, or suitable for a particular purpose. Keep your own copy of important text and review downloads before using them.'}
                 </p>
-                <h2 className="text-lg font-semibold text-slate-900">{isChineseLocale ? chinese.site.termsContactHeading : 'Contact'}</h2>
+                <h2 className="text-lg font-semibold text-slate-900">{localeText?.termsContactHeading ?? 'Contact'}</h2>
                 <p>
-                  {isChineseLocale ? chinese.site.termsContact : 'If you have a question about these terms, use the Contact us page. These plain-language terms should be reviewed for the applicable business and jurisdiction before the site is launched publicly.'}
+                  {localeText?.termsContact ?? 'If you have a question about these terms, use the Contact us page. These plain-language terms should be reviewed for the applicable business and jurisdiction before the site is launched publicly.'}
                 </p>
               </article>
             ) : null}
@@ -1640,7 +1755,7 @@ function App() {
                 <FeedbackForm
                   key={activeInformationPage.slug}
                   kind={activeInformationPage.slug === 'report-bug' ? 'bug' : 'contact'}
-                  isChineseLocale={isChineseLocale}
+                  locale={locale}
                 />
               </div>
             ) : null}
@@ -1652,11 +1767,11 @@ function App() {
             <div className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
               <p className="text-sm font-medium text-slate-500">TextToools</p>
               <h1 className="mt-1 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
-                {isChineseLocale ? chinese.blog.title : 'TextToools Blog'}
+                {isChineseLocale ? chinese.blog.title : isSpanishLocale ? spanish.blog.title : 'TextToools Blog'}
               </h1>
               <p className="mt-2 max-w-3xl text-base leading-7 text-slate-600">
-                {isChineseLocale
-                  ? chinese.blog.intro
+                {locale !== 'en'
+                  ? isChineseLocale ? chinese.blog.intro : spanish.blog.intro
                   : 'Practical, clear guides to counting, cleaning, and working with text.'}
               </p>
             </div>
@@ -1679,11 +1794,11 @@ function App() {
                 </a>
                 <div className="flex flex-col justify-center p-5 sm:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-violet-700">
-                    {isChineseLocale ? '精选指南' : 'Featured guide'}
+                    {localizedCopy(locale, 'Featured guide', '精选指南')}
                   </p>
                   <p className="mt-3 text-xs font-medium text-slate-500">
                     {featuredBlogPost.modified
-                      ? `${isChineseLocale ? '更新于' : 'Updated:'} ${featuredBlogPost.modified}`
+                      ? `${localizedCopy(locale, 'Updated:', '更新于')} ${featuredBlogPost.modified}`
                       : `${localeText?.articleDate ?? 'Published:'} ${featuredBlogPost.published}`}
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -1698,7 +1813,7 @@ function App() {
                     href={localizedHref(`blog/${featuredBlogPost.slug}/`)}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 hover:text-slate-950"
                   >
-                    {isChineseLocale ? '阅读指南' : 'Read guide'}
+                    {localizedCopy(locale, 'Read guide', '阅读指南')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </div>
@@ -1707,7 +1822,7 @@ function App() {
             {otherBlogPosts.length > 0 ? (
               <section aria-labelledby="more-guides-heading">
                 <h2 id="more-guides-heading" className="mb-4 text-xl font-semibold tracking-tight text-slate-900">
-                  {isChineseLocale ? '更多实用指南' : 'More practical guides'}
+                  {localizedCopy(locale, 'More practical guides', '更多实用指南')}
                 </h2>
                 <div className="grid gap-5 md:grid-cols-2">
                   {otherBlogPosts.map((post) => (
@@ -1746,7 +1861,7 @@ function App() {
                           href={localizedHref(`blog/${post.slug}/`)}
                           className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-800 hover:text-slate-950"
                         >
-                          {isChineseLocale ? '阅读指南' : 'Read guide'}
+                          {localizedCopy(locale, 'Read guide', '阅读指南')}
                           <ArrowRight className="h-4 w-4" aria-hidden="true" />
                         </a>
                       </div>
@@ -1760,7 +1875,7 @@ function App() {
 
         {activeBlogPost && localizedBlogPost ? (
           <article className="mx-auto max-w-4xl space-y-6">
-            <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+            <nav aria-label={localizedCopy(locale, 'Breadcrumb', '面包屑导航')} className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
               <a href={localizedHref()} className="hover:text-slate-900">
                 {localeText?.home ?? 'Home'}
               </a>
@@ -1826,7 +1941,11 @@ function App() {
                             <code className="break-all font-medium text-slate-900">{example.text}</code>
                             <span className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
                               {example.count}{' '}
-                              {isChineseLocale ? '个词' : example.count === 1 ? 'word' : 'words'}
+                              {isChineseLocale
+                                ? '个词'
+                                : isSpanishLocale
+                                  ? example.count === 1 ? 'palabra' : 'palabras'
+                                  : example.count === 1 ? 'word' : 'words'}
                             </span>
                           </div>
                           <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -1839,9 +1958,9 @@ function App() {
                 </section>
               ))}
             </div>
-            <nav aria-label={isChineseLocale ? '相关工具' : 'Related tools'} className="rounded-2xl border border-slate-200 bg-white p-5">
+            <nav aria-label={localizedCopy(locale, 'Related tools', '相关工具')} className="rounded-2xl border border-slate-200 bg-white p-5">
               <h2 className="font-semibold text-slate-900">
-                {isChineseLocale ? '继续使用文本工具' : 'Use a related text tool'}
+                {localizedCopy(locale, 'Use a related text tool', '继续使用文本工具')}
               </h2>
               <div className="mt-3 flex flex-wrap gap-3">
                 {(
@@ -1863,7 +1982,7 @@ function App() {
                   href={localizedHref('blog/')}
                   className="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-slate-400"
                 >
-                  {isChineseLocale ? '所有指南' : 'All guides'}
+                  {localizedCopy(locale, 'All guides', '所有指南')}
                 </a>
               </div>
             </nav>
@@ -1948,36 +2067,28 @@ function App() {
             <p>{localeText?.footerTagline ?? 'Simple text tools. Private by design.'}</p>
             <details className="group relative">
               <summary
-                aria-label={`${localeText?.language ?? 'Language'}: ${
-                  isChineseLocale ? '简体中文' : 'English'
-                }`}
+                aria-label={`${localeText?.switchLanguage ?? 'Language'}: ${localeText?.language ?? 'English'}`}
                 className="flex w-fit cursor-pointer list-none items-center gap-2 rounded-md px-2 py-1 text-slate-600 transition hover:bg-slate-50 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 [&::-webkit-details-marker]:hidden"
               >
-                <span>{isChineseLocale ? '简体中文' : 'English'}</span>
+                <span>{localeText?.language ?? 'English'}</span>
                 <ChevronDown
                   className="h-4 w-4 transition-transform group-open:rotate-180"
                   aria-hidden="true"
                 />
               </summary>
               <div className="absolute bottom-full right-0 z-30 mb-2 min-w-44 rounded-xl border border-slate-200 bg-white p-1.5 shadow-lg">
-                <a
-                  href={englishLanguageHref}
-                  aria-current={!isChineseLocale ? 'page' : undefined}
-                  className={`block rounded-lg px-3 py-2 transition hover:bg-slate-50 ${
-                    !isChineseLocale ? 'font-medium text-slate-900' : 'text-slate-600'
-                  }`}
-                >
-                  English
-                </a>
-                <a
-                  href={chineseLanguageHref}
-                  aria-current={isChineseLocale ? 'page' : undefined}
-                  className={`block rounded-lg px-3 py-2 transition hover:bg-slate-50 ${
-                    isChineseLocale ? 'font-medium text-slate-900' : 'text-slate-600'
-                  }`}
-                >
-                  简体中文
-                </a>
+                {languageOptions.map((option) => (
+                  <a
+                    key={option.locale}
+                    href={option.href}
+                    aria-current={locale === option.locale ? 'page' : undefined}
+                    className={`block rounded-lg px-3 py-2 transition hover:bg-slate-50 ${
+                      locale === option.locale ? 'font-medium text-slate-900' : 'text-slate-600'
+                    }`}
+                  >
+                    {option.label}
+                  </a>
+                ))}
               </div>
             </details>
           </div>
@@ -1991,18 +2102,16 @@ function App() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-2xl">
               <h2 id="analytics-consent-title" className="font-semibold text-slate-900">
-                {isChineseLocale ? 'Google Analytics 选择' : 'Google Analytics choice'}
+                {localizedCopy(locale, 'Google Analytics choice', 'Google Analytics 选择')}
               </h2>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                {isChineseLocale
-                  ? 'Cloudflare Web Analytics 仍会用于汇总流量和性能统计。Google Analytics 4 仅在你明确同意后加载；拒绝或不作选择时，不会向 Google 发送 GA4 请求。接受后，GA4 会记录页面浏览、开始使用的工具以及复制和下载操作，但不会收集你输入的文本。你的选择保存在此浏览器中，可随时通过“隐私设置”更改。'
-                  : 'Cloudflare Web Analytics remains active for aggregate traffic and performance measurement. Google Analytics 4 loads only if you explicitly accept; if you reject or make no choice, no GA4 requests are sent to Google. After acceptance, GA4 records page views, which tool you start using, and copy or download actions, but never the text you enter. Your choice is saved in this browser and can be changed at any time in Privacy settings.'}
+                {localeText?.analyticsConsentBody ?? 'Cloudflare Web Analytics remains active for aggregate traffic and performance measurement. Google Analytics 4 loads only if you explicitly accept; if you reject or make no choice, no GA4 requests are sent to Google. After acceptance, GA4 records page views, which tool you start using, and copy or download actions, but never the text you enter. Your choice is saved in this browser and can be changed at any time in Privacy settings.'}
                 {' '}
                 <a
                   href={localizedHref('privacy/')}
                   className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                 >
-                  {isChineseLocale ? '隐私政策' : 'Privacy policy'}
+                  {localizedCopy(locale, 'Privacy policy', '隐私政策')}
                 </a>
               </p>
             </div>
@@ -2012,14 +2121,14 @@ function App() {
                 onClick={() => chooseAnalyticsConsent('rejected')}
                 className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
               >
-                {isChineseLocale ? '拒绝 Google Analytics' : 'Reject Google Analytics'}
+                {localizedCopy(locale, 'Reject Google Analytics', '拒绝 Google Analytics')}
               </button>
               <button
                 type="button"
                 onClick={() => chooseAnalyticsConsent('accepted')}
                 className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
               >
-                {isChineseLocale ? '接受 Google Analytics' : 'Accept Google Analytics'}
+                {localizedCopy(locale, 'Accept Google Analytics', '接受 Google Analytics')}
               </button>
               {analyticsConsent !== null ? (
                 <button
@@ -2027,7 +2136,7 @@ function App() {
                   onClick={() => setIsConsentSettingsOpen(false)}
                   className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
                 >
-                  {isChineseLocale ? '关闭' : 'Close'}
+                  {localizedCopy(locale, 'Close', '关闭')}
                 </button>
               ) : null}
             </div>

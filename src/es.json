@@ -1,0 +1,424 @@
+{
+  "site": {
+    "language": "Español",
+    "switchLanguage": "Cambiar idioma",
+    "switchToEnglish": "Cambiar a inglés",
+    "switchToChinese": "Cambiar a chino simplificado",
+    "switchToSpanish": "Cambiar a español",
+    "english": "English",
+    "allTools": "Todas las herramientas",
+    "allTextTools": "Todas las herramientas de texto",
+    "chooseTool": "Elige una herramienta para abrir su página.",
+    "browseAll": "Ver todas",
+    "writing": "Escritura",
+    "textCleaning": "Limpieza de texto",
+    "textFormatting": "Formato de texto",
+    "textAnalysis": "Análisis de texto",
+    "home": "Inicio",
+    "faq": "Preguntas frecuentes",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos y condiciones",
+    "contact": "Contacto",
+    "reportBug": "Informar de un problema",
+    "blog": "Blog",
+    "product": "Producto",
+    "popularTools": "Herramientas populares",
+    "resources": "Recursos",
+    "legal": "Información legal",
+    "footerDescription": "Herramientas de texto gratuitas que funcionan en tu navegador. El texto que escribes no se envía a nuestros servidores para procesarlo.",
+    "footerTagline": "Herramientas de texto sencillas. Privacidad ante todo.",
+    "allToolsHeading": "Todas las herramientas",
+    "openToolsMenu": "Abrir el menú de herramientas",
+    "closeToolsMenu": "Cerrar el menú de herramientas",
+    "searchTools": "Buscar herramientas",
+    "homeHeading": "Herramientas de texto sencillas y prácticas",
+    "homeIntro": "Cuenta, limpia, da formato y analiza texto gratis desde tu navegador.",
+    "noToolsFound": "No encontramos herramientas. Prueba con otra búsqueda.",
+    "homeBreadcrumb": "Inicio",
+    "toolBreadcrumb": "Todas las herramientas",
+    "toolInput": "Introduce el texto",
+    "inputPlaceholder": "Pega o escribe el texto aquí…",
+    "clearInput": "Borrar texto",
+    "output": "Resultado",
+    "copy": "Copiar",
+    "download": "Descargar",
+    "copied": "Copiado al portapapeles.",
+    "copyFailed": "No se pudo copiar. Selecciona y copia el resultado manualmente.",
+    "downloadStarted": "La descarga ha comenzado.",
+    "downloadFailed": "No se pudo descargar. Inténtalo de nuevo.",
+    "emptyOutput": "El resultado aparecerá aquí cuando introduzcas texto.",
+    "emptyResult": "El resultado procesado está vacío.",
+    "transformedOutput": "El texto procesado aparecerá aquí.",
+    "exampleInput": "Texto de ejemplo",
+    "result": "Resultado",
+    "frequentlyAsked": "Preguntas frecuentes",
+    "exploreTools": "Explora otras herramientas de texto",
+    "exploreToolsIntro": "Cada herramienta tiene su propia página para que puedas cambiar de tarea fácilmente.",
+    "searchNoResults": "No encontramos palabras clave. Añade texto para analizar su frecuencia.",
+    "categoryWriting": "Escritura",
+    "categoryTextCleaning": "Limpieza de texto",
+    "categoryTextFormatting": "Formato de texto",
+    "categoryTextAnalysis": "Análisis de texto",
+    "wordCount": "Palabras",
+    "characters": "Caracteres",
+    "withoutWhitespace": "Caracteres sin espacios en blanco",
+    "sentences": "Oraciones",
+    "paragraphs": "Párrafos",
+    "lines": "Líneas",
+    "totalWords": "Total de palabras",
+    "topKeywords": "Palabras más frecuentes (cantidad y porcentaje del total):",
+    "rank": "Posición",
+    "keyword": "Palabra clave",
+    "count": "Cantidad",
+    "density": "Porcentaje",
+    "noKeywords": "No se encontraron palabras clave.",
+    "find": "Buscar",
+    "replaceWith": "Reemplazar por",
+    "findPlaceholder": "Texto que quieres buscar",
+    "replacePlaceholder": "Texto de reemplazo",
+    "matchCase": "Distinguir mayúsculas y minúsculas",
+    "wholeWord": "Palabra completa",
+    "replacement": "reemplazo",
+    "replacements": "reemplazos",
+    "paragraphCount": "Párrafos",
+    "sentencesPerParagraph": "Oraciones por párrafo",
+    "startWithLorem": "Empezar con Lorem ipsum",
+    "readingSpeed": "Velocidad de lectura",
+    "wordsPerMinute": "palabras por minuto",
+    "estimatedReadingTime": "Tiempo de lectura estimado",
+    "naturalNumberOrder": "Orden numérico natural",
+    "removeEmptyLines": "Eliminar líneas vacías",
+    "trimLines": "Quitar espacios al inicio y al final de las líneas",
+    "collapseSpaces": "Reducir espacios repetidos",
+    "removeBlankLines": "Eliminar líneas vacías adicionales",
+    "upper": "MAYÚSCULAS",
+    "lower": "minúsculas",
+    "titleCase": "Mayúscula Inicial En Cada Palabra",
+    "sentenceCase": "Mayúscula inicial",
+    "camelCase": "camelCase",
+    "snakeCase": "snake_case",
+    "az": "A-Z",
+    "za": "Z-A",
+    "reverseOrder": "Invertir el orden",
+    "welcome": "Te damos la bienvenida",
+    "isFree": "¿TextToools es gratis?",
+    "privacyFaq": "¿Se envía mi texto a un servidor?",
+    "howToUse": "¿Cómo se usan las herramientas?",
+    "feedbackFaq": "¿Cómo puedo sugerir una herramienta o informar de un problema?",
+    "yesFree": "Sí. Todas las herramientas de texto se pueden usar gratis desde el navegador, sin crear una cuenta.",
+    "noUpload": "No. El texto se cuenta y se transforma en tu navegador; no se envía a los servidores de TextToools para procesarlo.",
+    "chooseToolAnswer": "Elige una herramienta en la página de inicio. Cada página incluye los controles, una guía práctica, ejemplos y respuestas a preguntas frecuentes.",
+    "feedbackAnswer": "Puedes enviar comentarios desde las páginas de contacto o de informe de problemas. El servicio de correo todavía no está configurado, así que los formularios aún no envían mensajes.",
+    "aboutText": "TextToools reúne herramientas para contar, limpiar, dar formato y analizar texto. Cada herramienta tiene su propia página y una guía práctica para ayudarte con tareas habituales.",
+    "aboutPrivacy": "El texto se procesa en tu navegador, sin necesidad de una cuenta. El texto que introduces no se envía a los servidores de TextToools para procesarlo.",
+    "aboutGoal": "Queremos que las tareas cotidianas con texto sean sencillas, claras y fiables. Cuando se active el envío de mensajes, podrás compartir sugerencias desde la página de contacto.",
+    "privacyInputHeading": "Texto introducido en las herramientas",
+    "privacyInput": "Las transformaciones y los cálculos se realizan en tu navegador. El texto que introduces no se envía a los servidores de TextToools para procesarlo. Al borrar el texto o cerrar la página, se elimina la entrada que estaba en memoria.",
+    "privacyFormsHeading": "Formularios de contacto",
+    "privacyForms": "Los formularios de contacto e informe de problemas todavía no están conectados a un servicio de envío. Mientras estén desactivados, la información introducida no se envía ni se guarda en TextToools. Cuando se active un proveedor de formularios, actualizaremos esta política para explicar qué información recibe y cómo la trata.",
+    "privacyStorageHeading": "Almacenamiento local y analítica",
+    "privacyStorage": "TextToools no guarda el texto de las herramientas en el almacenamiento local ni requiere una cuenta. Usamos Cloudflare Web Analytics para medir visitas, páginas vistas y rendimiento de forma agregada, incluidas las Core Web Vitals. Cloudflare indica que Web Analytics no rastrea a usuarios individuales entre sitios de clientes ni recopila o usa sus datos personales. También usamos Google Analytics 4 (GA4) para entender el uso del sitio, pero solo después de que aceptes expresamente. Si rechazas o no eliges, la etiqueta de GA4 no se carga ni se envían solicitudes a Google. Con tu consentimiento, GA4 registra páginas vistas, el inicio de uso de herramientas y acciones de copia o descarga. Tu elección se guarda en el almacenamiento local de este navegador y puedes cambiarla en cualquier momento desde Ajustes de privacidad. GA4 nunca recibe el texto introducido en las herramientas, las búsquedas, los valores de reemplazo ni los resultados generados; todo el procesamiento de texto se realiza en tu navegador.",
+    "privacySettings": "Ajustes de privacidad",
+    "analyticsConsentBody": "Cloudflare Web Analytics seguirá activo para medir el tráfico y el rendimiento de forma agregada. Google Analytics 4 solo se carga si das tu consentimiento expreso; si rechazas o no eliges, no se envían solicitudes de GA4 a Google. Tras aceptar, GA4 registra páginas vistas, el inicio de uso de herramientas y acciones de copia o descarga, pero nunca el texto que introduces. Tu elección se guarda en este navegador y puedes cambiarla en cualquier momento desde Ajustes de privacidad.",
+    "termsUsageHeading": "Uso de las herramientas",
+    "termsUsage": "TextToools ofrece herramientas en el navegador para tareas generales de información y productividad. Te corresponde revisar los resultados y decidir si se ajustan a tus necesidades. No uses una herramienta como sustituto de asesoramiento profesional ni de las reglas y límites de la plataforma de destino.",
+    "termsAvailabilityHeading": "Disponibilidad y cambios",
+    "termsAvailability": "Las funciones pueden cambiar a medida que mejoremos el sitio. No garantizamos que el servicio esté siempre disponible, libre de errores o sea adecuado para un fin concreto. Guarda una copia de los textos importantes y revisa las descargas antes de usarlas.",
+    "termsContactHeading": "Contacto",
+    "termsContact": "Si tienes alguna pregunta sobre estas condiciones, utiliza la página de contacto. Antes de publicar el sitio, una persona familiarizada con la empresa y la legislación aplicable debería revisar estas condiciones en lenguaje sencillo.",
+    "contactIntro": "Envíanos preguntas, sugerencias o comentarios. Tu correo electrónico solo se usaría para responderte y no se mostraría públicamente.",
+    "bugIntro": "Cuéntanos qué ocurrió, qué esperabas y qué herramienta estabas usando. No incluyas información sensible de tus documentos.",
+    "name": "Nombre",
+    "optional": "Opcional",
+    "email": "Correo electrónico para responderte",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "sending": "Enviando…",
+    "sent": "Gracias. Tu mensaje se ha enviado.",
+    "sendFailed": "No se pudo enviar el mensaje. Inténtalo más tarde.",
+    "formNotConfigured": "El servicio de correo no está configurado. La información que escribas aquí no se enviará ni se guardará.",
+    "sendMessage": "Enviar mensaje",
+    "lastUpdated": "Última actualización:",
+    "articleDate": "Publicado:"
+  },
+  "inline": {
+      "Bug report": "Informar de un problema",
+      "wpm": "palabras por minuto",
+      "Main navigation": "Navegación principal",
+      "TextToools home": "Inicio de TextToools",
+      "Page not found": "No encontramos esta página",
+      "This address does not exist or may have moved.": "Esta dirección no existe o puede haberse movido.",
+      "Go to homepage": "Ir al inicio",
+      "Browse tools": "Ver herramientas",
+      "Copy the output content": "Copiar el resultado",
+      "Download the output content": "Descargar el resultado",
+      "Estimated reading time": "Tiempo de lectura estimado",
+      "Featured guide": "Guía destacada",
+      "Updated:": "Actualizado:",
+      "Read guide": "Leer la guía",
+      "More practical guides": "Más guías prácticas",
+      "guide": "guía",
+      "tool": "herramienta",
+      "Breadcrumb": "Ruta de navegación",
+      "word": "palabra",
+      "words": "palabras",
+      "Related tools": "Herramientas relacionadas",
+      "Use a related text tool": "Usa otra herramienta de texto",
+      "All guides": "Todas las guías",
+      "English": "English",
+      "简体中文": "简体中文",
+      "Español": "Español",
+      "Google Analytics choice": "Elección de Google Analytics",
+      "Privacy policy": "Política de privacidad",
+      "Reject Google Analytics": "Rechazar Google Analytics",
+      "Accept Google Analytics": "Aceptar Google Analytics",
+      "Close": "Cerrar",
+      "Learn how Cloudflare Web Analytics handles data.": "Consulta cómo trata los datos Cloudflare Web Analytics.",
+      "Learn how Google handles data.": "Consulta cómo trata los datos Google."
+  },
+  "tools": {
+    "word-counter": {
+      "name": "Contador de palabras",
+      "description": "Cuenta palabras, caracteres, oraciones y párrafos al instante.",
+      "title": "Contador de palabras online gratis | TextToools",
+      "meta": "Cuenta palabras, caracteres, oraciones y párrafos con este contador gratuito en el navegador. Tu texto permanece en tu dispositivo.",
+      "heading": "Contador de palabras online gratis",
+      "intro": "Comprueba si un texto cumple un límite sin contar a mano. El total de palabras, caracteres, oraciones y párrafos se actualiza mientras escribes.",
+      "sections": [
+        {"heading":"Cómo se cuentan las palabras","paragraphs":["Cada grupo de caracteres separado por espacios en blanco cuenta como una palabra. La puntuación junto a una palabra permanece en el mismo grupo, y las palabras con guion sin espacios cuentan como una sola. Un salto de línea u otro espacio en blanco separa los grupos.","Por ejemplo, «Un borrador breve y bien hecho.» contiene seis palabras según esta regla. Otras aplicaciones pueden tratar de otra manera las palabras con guion; si tienes un límite estricto, usa el contador indicado por la plataforma de entrega."]},
+        {"heading":"Qué significan las otras cifras","paragraphs":["El total de caracteres incluye espacios y puntuación. El recuento sin espacios en blanco excluye espacios, tabulaciones y saltos de línea. Las oraciones siguen las reglas de segmentación del navegador y los párrafos se separan con líneas vacías.","Para estimar el tiempo de lectura y ajustar la velocidad, usa la calculadora de tiempo de lectura."]},
+        {"heading":"Comprueba un límite de palabras","paragraphs":["Pega el texto completo e incluye títulos, notas o referencias si cuentan para tu límite. Compara el total actualizado con las instrucciones y vuelve a comprobarlo después de editar. Los botones Copiar y Descargar exportan el resumen de estadísticas, no el texto original."],"bullets":["Comprueba si las instrucciones incluyen notas al pie, referencias o títulos.","Los límites de las redes sociales pueden cambiar; consulta las reglas actuales de cada plataforma.","Para estimar la duración de un discurso, ensáyalo en voz alta además de usar el tiempo de lectura."]}
+      ],
+      "faqs": [
+        {"question":"¿El contador envía mi texto a un servidor?","answer":"No. El recuento se calcula en tu navegador y el texto no se sube para procesarlo."},
+        {"question":"¿Por qué otra aplicación muestra un total distinto?","answer":"Las reglas varían, sobre todo con palabras con guion, símbolos y puntuación. TextToools separa las palabras por espacios en blanco."},
+        {"question":"¿Copiar copia el texto original?","answer":"En el contador de palabras, Copiar y Descargar exportan el resumen de estadísticas, no el texto original."}
+      ]
+    },
+    "character-counter": {
+      "name": "Contador de caracteres",
+      "description": "Cuenta caracteres, espacios en blanco, líneas y palabras.",
+      "title": "Contador de caracteres online gratis | TextToools",
+      "meta": "Cuenta caracteres, espacios, puntuación, saltos de línea, líneas y palabras desde el navegador.",
+      "heading": "Contador de caracteres online gratis",
+      "intro": "Comprueba la longitud de un título, una descripción, un mensaje o una respuesta de formulario. El recuento se actualiza mientras escribes.",
+      "sections": [
+        {"heading":"Qué incluye el recuento","paragraphs":["El total incluye todos los caracteres: espacios, puntuación, tabulaciones y saltos de línea. El recuento sin espacios en blanco excluye todos esos espacios, no solo los que separan palabras.","TextToools cuenta grupos de grafemas Unicode: una letra visible, un acento combinado o una secuencia de emojis unidos cuenta como un carácter. Otros servicios pueden aplicar reglas distintas."]},
+        {"heading":"Líneas y palabras","paragraphs":["Cada salto de línea separa líneas; una línea vacía entre párrafos también cuenta. Una entrada vacía tiene cero líneas y un salto final crea una última línea vacía. Las palabras se separan por espacios en blanco."],"example":{"input":"¡Hola!\nTodo bien","output":"16 caracteres · 14 sin espacios · 2 líneas · 3 palabras"}},
+        {"heading":"Úsalo con un límite de caracteres","paragraphs":["Pega exactamente el texto que vas a enviar. Incluye espacios, puntuación y saltos de línea si el destino los cuenta. Si puedes, deja un pequeño margen porque algunas plataformas tratan los enlaces, los emojis o el formato de otra manera."],"bullets":["Consulta las reglas actuales de la plataforma antes de acortar una publicación.","En un formulario, pega solo el contenido que irá en ese campo.","Usa el recuento sin espacios únicamente si el límite excluye los espacios en blanco."]}
+      ],
+      "faqs": [
+        {"question":"¿Se cuentan los espacios y la puntuación?","answer":"Sí. El total incluye espacios, puntuación, tabulaciones y saltos de línea."},
+        {"question":"¿«Sin espacios en blanco» también elimina los saltos de línea?","answer":"Sí. Elimina todos los espacios en blanco, incluidos espacios, tabulaciones y saltos de línea."},
+        {"question":"¿Cómo se cuentan los emojis?","answer":"Una secuencia de emoji visible, incluso si está unida o incluye un tono de piel, cuenta como un grupo de grafemas. Otros servicios pueden aplicar reglas diferentes."}
+      ]
+    },
+    "case-converter": {
+      "name": "Conversor de mayúsculas y minúsculas",
+      "description": "Cambia el uso de mayúsculas sin volver a escribir el texto.",
+      "title": "Conversor de mayúsculas y minúsculas online | TextToools",
+      "meta": "Convierte texto a mayúsculas, minúsculas, formato de título, oración, camelCase o snake_case.",
+      "heading": "Conversor de mayúsculas y minúsculas",
+      "intro": "Cambia el uso de mayúsculas sin volver a escribir. Elige el formato que necesitas y comprueba el resultado al instante.",
+      "sections": [
+        {"heading":"Elige el formato","paragraphs":["MAYÚSCULAS convierte las letras a mayúsculas y minúsculas las convierte a minúsculas. El formato de título pone en mayúscula la primera letra de cada palabra, y el formato de oración pone en mayúscula el inicio del texto y las oraciones.","camelCase y snake_case sirven para identificadores. Separan cada línea en grupos de letras o números; camelCase los une y snake_case los separa con guiones bajos."] ,"bullets":["Título: «una mañana tranquila» → «Una Mañana Tranquila»","camelCase: «acción rápida» → «acciónRápida»","snake_case: «acción rápida» → «acción_rapida»"]},
+        {"heading":"Conserva el formato original cuando sea posible","paragraphs":["Las conversiones mantienen los espacios y los saltos de línea del texto. Los acentos se conservan. Las líneas vacías siguen vacías."]},
+        {"heading":"Revisa el resultado","paragraphs":["La conversión modifica las mayúsculas, pero no corrige ortografía ni gramática. Comprueba nombres propios, siglas y el uso de tildes antes de utilizar el texto."]}
+      ],
+      "faqs": [
+        {"question":"¿Puedo convertir varias líneas a la vez?","answer":"Sí. Pega el texto completo y la conversión se aplicará línea por línea."},
+        {"question":"¿Se conservan los acentos?","answer":"Sí. Se conservan las letras acentuadas y otros caracteres Unicode."},
+        {"question":"¿La conversión corrige la gramática?","answer":"No. Solo cambia el uso de mayúsculas; revisa el texto por separado."}
+      ]
+    },
+    "text-cleaner": {
+      "name": "Limpiador de texto",
+      "description": "Quita espacios repetidos y líneas vacías adicionales.",
+      "title": "Limpiador de texto online gratis | TextToools",
+      "meta": "Limpia texto pegado quitando espacios repetidos y líneas vacías, con una vista previa inmediata.",
+      "heading": "Limpiador de texto online gratis",
+      "intro": "Ordena el texto copiado sin volver a escribirlo. Elige qué espacios y líneas vacías quieres limpiar y revisa el resultado.",
+      "sections": [
+        {"heading":"Elige qué espacios limpiar","paragraphs":["Puedes quitar espacios al principio y al final de cada línea, reducir espacios repetidos y eliminar líneas vacías adicionales. Cada opción se puede activar por separado."]},
+        {"heading":"Conserva los saltos de línea importantes","paragraphs":["Los saltos de línea pueden separar títulos, listas, direcciones y párrafos. Revisa la vista previa para asegurarte de que el resultado conserva la estructura que necesitas."]},
+        {"heading":"Revisa antes de copiar","paragraphs":["La limpieza es automática y no puede saber qué espacios eran intencionales. Compara el resultado con el original, sobre todo si contiene listas numeradas, código o tablas. El procesamiento se realiza en tu navegador."]}
+      ],
+      "faqs": [
+        {"question":"¿Se cambia el significado del texto?","answer":"La herramienta cambia espacios en blanco, no palabras; aun así, revisa el resultado porque los saltos pueden tener significado."},
+        {"question":"¿Puedo mantener los saltos de línea?","answer":"Sí. Las opciones permiten limpiar espacios sin convertir todo el texto en un solo párrafo."},
+        {"question":"¿Se sube el texto?","answer":"No. La limpieza se realiza en tu navegador."}
+      ]
+    },
+    "duplicate-lines": {
+      "name": "Eliminar líneas duplicadas",
+      "description": "Quita las líneas repetidas y conserva el orden original.",
+      "title": "Eliminar líneas duplicadas online gratis | TextToools",
+      "meta": "Elimina líneas duplicadas de una lista y conserva el orden de la primera aparición.",
+      "heading": "Eliminar líneas duplicadas",
+      "intro": "Pega una lista para quitar las líneas idénticas. Se conserva el orden en el que apareció cada línea por primera vez.",
+      "sections": [
+        {"heading":"Cómo se detectan los duplicados","paragraphs":["Se consideran duplicadas las líneas cuyo contenido es exactamente igual. Las diferencias entre mayúsculas y minúsculas se mantienen, por lo que «Texto» y «texto» son líneas distintas."]},
+        {"heading":"Qué ocurre con las líneas vacías","paragraphs":["Si hay líneas vacías repetidas, se conserva una sola. Las líneas únicas permanecen en su posición original."]},
+        {"heading":"Comprueba el resultado","paragraphs":["La herramienta no ordena ni reescribe las líneas. Revisa los datos antes de sustituir la lista original, especialmente si los espacios al principio o al final son importantes."]}
+      ],
+      "faqs": [
+        {"question":"¿Se distingue entre mayúsculas y minúsculas?","answer":"Sí. Solo se eliminan las líneas exactamente iguales."},
+        {"question":"¿Se ordenan las líneas?","answer":"No. Se conserva el orden de la primera aparición."},
+        {"question":"¿Se eliminan las líneas vacías?","answer":"Se conserva una línea vacía como máximo."}
+      ]
+    },
+    "text-sorter": {
+      "name": "Ordenar texto",
+      "description": "Ordena las líneas alfabéticamente o invierte su orden.",
+      "title": "Ordenar texto online: A-Z o inverso | TextToools",
+      "meta": "Ordena líneas de texto de A a Z, de Z a A o invierte el orden original.",
+      "heading": "Ordenar texto online",
+      "intro": "Pega un texto organizado por líneas y elige orden alfabético, orden inverso o inversión del orden original.",
+      "sections": [
+        {"heading":"Elige cómo ordenar","paragraphs":["A-Z y Z-A ordenan alfabéticamente sin distinguir mayúsculas. Invertir el orden cambia directamente la posición de las líneas. Con el orden numérico natural, 2 aparece antes que 10."]},
+        {"heading":"Tratamiento de líneas vacías","paragraphs":["Por defecto, las líneas vacías se conservan durante la ordenación. Activa la opción para quitarlas del resultado."]},
+        {"heading":"Revisa el orden final","paragraphs":["La herramienta mueve líneas completas y no modifica su contenido. Comprueba el resultado si las líneas tienen números, sangría o pertenecen a grupos."]}
+      ],
+      "faqs": [
+        {"question":"¿La ordenación distingue mayúsculas?","answer":"No. El orden alfabético no distingue entre mayúsculas y minúsculas."},
+        {"question":"¿Qué hace el orden numérico natural?","answer":"Ordena los números por su valor: por ejemplo, 2 aparece antes que 10."},
+        {"question":"¿Puedo eliminar las líneas vacías?","answer":"Sí. Activa la opción para quitarlas del resultado."}
+      ]
+    },
+    "find-replace": {
+      "name": "Buscar y reemplazar",
+      "description": "Busca texto y reemplaza todas las coincidencias.",
+      "title": "Buscar y reemplazar texto online gratis | TextToools",
+      "meta": "Busca y reemplaza texto desde el navegador, con opciones para distinguir mayúsculas y buscar palabras completas.",
+      "heading": "Buscar y reemplazar texto",
+      "intro": "Actualiza texto repetido en un solo paso. Escribe lo que quieres buscar y el reemplazo para ver los cambios al instante.",
+      "sections": [
+        {"heading":"Configura la búsqueda","paragraphs":["De forma predeterminada, la búsqueda no distingue mayúsculas y reemplaza todas las coincidencias. Activa esa opción para exigir la misma combinación de mayúsculas, o busca la palabra completa para no cambiar partes de palabras más largas."]},
+        {"heading":"Previsualiza los reemplazos","paragraphs":["La cantidad de coincidencias se actualiza al escribir y el resultado aparece en la vista previa. Si el texto de búsqueda está vacío, no se realiza ningún reemplazo."]},
+        {"heading":"Revisa antes de aplicar el resultado","paragraphs":["Un reemplazo masivo puede cambiar nombres, enlaces o código. Comprueba el contexto antes de usar el resultado, sobre todo si buscas una palabra corta o frecuente."]}
+      ],
+      "faqs": [
+        {"question":"¿Se reemplazan todas las coincidencias?","answer":"Sí. El resultado incluye todas las coincidencias que cumplen las opciones elegidas."},
+        {"question":"¿Puedo distinguir entre mayúsculas y minúsculas?","answer":"Sí. Activa esa opción para que coincidan exactamente."},
+        {"question":"¿Qué ocurre si dejo vacía la búsqueda?","answer":"No se realiza ningún reemplazo."}
+      ]
+    },
+    "lorem-ipsum": {
+      "name": "Generador Lorem Ipsum",
+      "description": "Genera texto de relleno para diseños y prototipos.",
+      "title": "Generador Lorem Ipsum gratis | TextToools",
+      "meta": "Genera texto Lorem Ipsum de relleno y personaliza el número de párrafos y oraciones.",
+      "heading": "Generador Lorem Ipsum",
+      "intro": "Crea texto de relleno para prototipos, páginas y maquetaciones. Ajusta la cantidad de párrafos y oraciones.",
+      "sections": [
+        {"heading":"Personaliza la longitud","paragraphs":["Elige cuántos párrafos y oraciones quieres generar. Cada ajuste admite valores del 1 al 10."]},
+        {"heading":"Para qué sirve el texto Lorem Ipsum","paragraphs":["El texto de relleno ayuda a previsualizar la distribución y densidad del contenido durante el diseño. No representa contenido real: sustitúyelo por texto preciso y revisado antes de publicar."]},
+        {"heading":"Copia o descarga el resultado","paragraphs":["El texto se genera al instante. Usa los botones para copiarlo o descargarlo y comprueba los saltos de línea y el espaciado en tu diseño."]}
+      ],
+      "faqs": [
+        {"question":"¿Cuántos párrafos puedo generar?","answer":"Puedes elegir entre 1 y 10 párrafos y entre 1 y 10 oraciones por párrafo."},
+        {"question":"¿El texto generado es contenido real?","answer":"No. Es texto de relleno para previsualizar diseños, no para sustituir el contenido final."},
+        {"question":"¿Puedo copiar el texto generado?","answer":"Sí. Usa el botón Copiar que aparece sobre el resultado."}
+      ]
+    },
+    "reading-time": {
+      "name": "Calculadora de tiempo de lectura",
+      "description": "Calcula cuánto tiempo puede llevar leer un texto.",
+      "title": "Calculadora de tiempo de lectura gratis | TextToools",
+      "meta": "Calcula el tiempo de lectura aproximado según el número de palabras y una velocidad ajustable.",
+      "heading": "Calculadora de tiempo de lectura",
+      "intro": "Pega un texto y ajusta las palabras por minuto para calcular cuánto puede llevar leerlo.",
+      "sections": [
+        {"heading":"Cómo se calcula el tiempo","paragraphs":["El tiempo estimado se calcula dividiendo el número de palabras por la velocidad de lectura. La velocidad inicial es de 200 palabras por minuto y se puede ajustar entre 100 y 500."]},
+        {"heading":"Límites de la estimación","paragraphs":["La velocidad cambia según la persona, el idioma y la dificultad del texto. Las pausas, los gráficos y la lectura en voz alta también pueden aumentar el tiempo; el resultado es orientativo."]},
+        {"heading":"Planifica un texto o una presentación","paragraphs":["Pega el texto completo y elige una velocidad adecuada para tu audiencia. Para una presentación, ensaya en voz alta y cuenta las pausas en lugar de depender solo del cálculo."]}
+      ],
+      "faqs": [
+        {"question":"¿Puedo cambiar la velocidad de lectura?","answer":"Sí. El control permite elegir entre 100 y 500 palabras por minuto."},
+        {"question":"¿El resultado es exacto?","answer":"Es una estimación basada en el número de palabras y la velocidad elegida; el tiempo real varía."},
+        {"question":"¿Se envía el texto a un servidor?","answer":"No. El cálculo se realiza en tu navegador."}
+      ]
+    },
+    "keyword-density": {
+      "name": "Analizador de frecuencia de palabras",
+      "description": "Consulta qué palabras aparecen más veces en un texto.",
+      "title": "Analizador de frecuencia de palabras online | TextToools",
+      "meta": "Analiza las palabras más frecuentes de un texto, con su cantidad y porcentaje.",
+      "heading": "Analizador de frecuencia de palabras",
+      "intro": "Descubre qué palabras aparecen más veces. La herramienta muestra hasta diez palabras y su porcentaje.",
+      "sections": [
+        {"heading":"Cómo se calcula la frecuencia","paragraphs":["El análisis no distingue entre mayúsculas y minúsculas y reconoce letras y números Unicode. Se excluyen palabras comunes del español de la lista destacada, pero siguen incluidas en el total."]},
+        {"heading":"Usa el resultado como ayuda de edición","paragraphs":["Una palabra frecuente no siempre es un problema: los nombres propios y los términos centrales suelen repetirse. La herramienta no predice posiciones en buscadores ni recomienda una densidad fija de palabras clave."]},
+        {"heading":"Ten en cuenta el idioma","paragraphs":["La lista de palabras comunes está pensada para español e inglés. Al analizar otro idioma, algunas palabras habituales podrían aparecer entre los resultados. El análisis se realiza en tu navegador."]}
+      ],
+      "faqs": [
+        {"question":"¿Por qué los porcentajes no suman 100 %?","answer":"Las palabras comunes se ocultan de la lista, pero se incluyen en el total usado para calcular los porcentajes."},
+        {"question":"¿Una frecuencia mayor mejora el posicionamiento?","answer":"La herramienta no evalúa el posicionamiento en buscadores ni recomienda una densidad de palabras clave."},
+        {"question":"¿Puedo analizar otros idiomas?","answer":"Sí, aunque la lista de palabras comunes está preparada para español e inglés."}
+      ]
+    }
+  },
+  "blog": {
+    "title": "Guías prácticas sobre texto | Blog de TextToools",
+    "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
+    "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
+    "posts": {
+      "how-word-counters-count-hyphenated-words": {
+        "modified": "2026-10-05",
+        "image": "blog-images/es/hyphenated-words.svg",
+        "imageAlt": "Comparación visual: «bien-hecho» cuenta como un grupo y «bien — hecho» como tres grupos separados por espacios.",
+        "title": "¿Las palabras con guion cuentan como una o dos? | TextToools",
+        "description": "Descubre cómo cuenta TextToools las palabras con guion con ejemplos de espacios, rayas, puntuación y saltos de línea.",
+        "summary": "Cada contador puede aplicar reglas distintas. Consulta la regla de espacios de TextToools, revisa ejemplos y sigue las instrucciones de entrega cuando corresponda.",
+        "sections": [
+          {"heading":"La respuesta breve para TextToools","paragraphs":["En el contador de palabras de TextToools, una expresión como «well-known» cuenta como una palabra si no contiene espacios. TextToools separa las palabras por espacios en blanco, no por guiones.","Esta es la regla de TextToools, no una norma universal para escuelas, editoriales o aplicaciones. Si una tarea o plataforma indica su propio método, sigue esas instrucciones y comprueba el resultado con su contador."]},
+          {"heading":"Ejemplos: espacios, rayas y puntuación","paragraphs":["Estos ejemplos siguen la regla del modo inglés: cada grupo continuo sin espacios cuenta como una palabra. Los resultados coinciden con el contador de TextToools."],"examples":[{"text":"well-known","count":1,"explanation":"No hay espacios dentro de la expresión, así que forma un solo grupo."},{"text":"state-of-the-art","count":1,"explanation":"Los guiones no crean palabras adicionales; solo los espacios separan los grupos."},{"text":"well-known writer","count":2,"explanation":"El espacio separa «well-known» de «writer»."},{"text":"well — known","count":3,"explanation":"Los espacios forman tres grupos: «well», la raya y «known»."},{"text":"well-known\nwriter","count":2,"explanation":"El salto de línea también es un espacio en blanco, así que «writer» inicia otro grupo."},{"text":"well–known","count":1,"explanation":"La raya corta sin espacios permanece dentro del mismo grupo."}]},
+          {"heading":"Por qué otro contador puede mostrar un resultado distinto","paragraphs":["Los contadores no tienen que separar el texto de la misma manera. Un contador basado en espacios conserva la puntuación y los guiones dentro de cada grupo; un analizador lingüístico puede aplicar otros límites. Por eso, una palabra con guion puede obtener recuentos diferentes.","Con esta regla sencilla, un número, una URL o un emoji separado por espacios también cuenta como un grupo. Es un método transparente, pero no determina si cada grupo es una palabra con significado lingüístico o académico."]},
+          {"heading":"Cómo comprobar un límite de palabras","paragraphs":["Primero, confirma qué incluye el límite: puede contar solo el texto principal o incluir títulos, notas, pies de imagen y referencias. No des por sentado que todas las tareas usan el mismo alcance.","Después, usa el contador exigido por tu centro educativo, editorial o formulario. Si no se especifica ninguno, aplica siempre el mismo método y deja algo de margen. También puedes pegar el borrador en el contador de palabras de TextToools para ver el resultado basado en espacios."]},
+          {"heading":"Una nota sobre el texto en chino","paragraphs":["Esta guía explica el contador de palabras en inglés. En el modo chino, TextToools utiliza la segmentación de palabras del navegador en lugar de separar solo por espacios; por eso, los ejemplos en inglés no definen el recuento en chino."]}
+        ]
+      },
+      "how-to-count-characters-including-spaces": {
+        "modified": "2026-10-04",
+        "image": "blog-images/es/character-count.svg",
+        "imageAlt": "Una letra visible con acento combinado y una secuencia de emojis unidos, cada una contada como un grupo de grafemas.",
+        "title": "Cómo contar caracteres, incluidos los espacios",
+        "description": "Descubre qué incluye un contador de caracteres —espacios, puntuación, saltos de línea y emojis— y comprueba los límites.",
+        "summary": "Una lista práctica para contar los caracteres de una descripción, un título, un formulario o un mensaje breve.",
+        "sections": [
+          {"heading":"¿Qué cuenta como carácter?","paragraphs":["El recuento suele incluir letras, números, puntuación, espacios, tabulaciones y saltos de línea. Si el límite incluye espacios, conserva los espacios en el texto que compruebas.","Los emojis y símbolos combinados se cuentan de forma distinta según el sistema. Algunos entornos cuentan unidades UTF-16; otros, puntos de código Unicode o grupos de grafemas visibles. Por eso una red social puede mostrar un total diferente al de un contador general."]},
+          {"heading":"Comprueba el texto exacto que vas a enviar","paragraphs":["Pega el texto final, con puntuación y saltos de línea, en el contador de caracteres. Comprueba el total y el recuento sin espacios, y usa la definición que indique la plataforma de destino.","Si es posible, deja algo de margen por debajo del límite. Algunas plataformas tratan de forma especial los enlaces, el formato y los emojis."]},
+          {"heading":"Una nota sobre emojis y Unicode","paragraphs":["Un símbolo visible no siempre se almacena como una sola unidad. Los modificadores de tono de piel, los emojis unidos y los acentos combinados pueden componerse de varios puntos de código o unidades.","TextToools cuenta grupos de grafemas Unicode: una letra visible con marcas combinadas o una secuencia de emojis unidos cuenta como un carácter. Si el límite es estricto, usa el contador de la plataforma de destino como referencia final."]}
+        ]
+      },
+      "clean-pasted-text-without-losing-formatting": {
+        "image": "blog-images/es/clean-pasted-text.svg",
+        "imageAlt": "Comparación antes y después: se limpian los espacios y las líneas vacías adicionales sin quitar los saltos entre párrafos.",
+        "title": "Cómo limpiar texto pegado sin perder su estructura",
+        "description": "Quita espacios y líneas vacías no deseados del texto copiado sin perder los saltos de línea y párrafos necesarios.",
+        "summary": "Un método paso a paso para ordenar texto copiado sin aplanar listas ni párrafos por accidente.",
+        "sections": [
+          {"heading":"Empieza con una copia","paragraphs":["El texto copiado de un PDF, una página web o un documento puede incluir espacios de más, sangría irregular o demasiadas líneas vacías. Conserva el original para poder comparar y recuperar cualquier formato importante.","Pega el texto en el limpiador y revisa la vista previa. Puedes quitar espacios al principio y al final de las líneas, reducir espacios horizontales repetidos y limitar las líneas vacías seguidas."]},
+          {"heading":"Conserva los saltos que tienen sentido","paragraphs":["Los saltos pueden separar elementos de una lista, direcciones, títulos y párrafos. No conviertas todos los saltos en espacios salvo que quieras formar un único párrafo.","Cambia una opción cada vez y revisa el resultado. Si las líneas vacías separan secciones, consérvalas en lugar de eliminarlas todas."]},
+          {"heading":"Revisa el texto limpio antes de usarlo","paragraphs":["Compara el resultado con el original, especialmente si hay listas numeradas, código, tablas o poesía. La limpieza automática no puede saber qué espacios eran intencionales.","El limpiador funciona en tu navegador. Copia el resultado cuando esté correcto y conserva el original si el formato exacto es importante."]}
+        ]
+      },
+      "how-to-cut-word-count-without-losing-meaning": {
+        "modified": "2026-10-06",
+        "image": "blog-images/es/word-count-editing.svg",
+        "imageAlt": "Edición antes y después: una oración repetitiva de nueve palabras se reduce a seis sin perder su idea principal.",
+        "title": "Cómo reducir el número de palabras sin perder el sentido",
+        "description": "Reduce las palabras de un borrador con una revisión enfocada, sin perder el sentido, las pruebas ni los matices importantes.",
+        "summary": "Un orden práctico para detectar repeticiones, acortar frases y comprobar cada cambio frente al límite.",
+        "sections": [
+          {"heading":"Empieza por la idea, no por el contador","paragraphs":["Antes de recortar, anota qué debe comunicar el párrafo: la idea principal, las pruebas que la respaldan y el contexto que necesita quien lee. Guarda una copia del original para comparar el sentido después de cada revisión.","Comprueba también las instrucciones. El límite puede incluir títulos, citas, notas al pie o referencias, o excluir algunos elementos. Confirma el alcance y el método de recuento antes de decidir cuánto recortar."]},
+          {"heading":"Quita repeticiones antes que detalles útiles","paragraphs":["Busca ideas repetidas en una misma oración o en oraciones cercanas. Expresiones como «en este momento» pueden reducirse a «ahora»; palabras como «actualmente» quizá repitan la misma referencia temporal. Conserva el énfasis si es intencional, pero quítalo cuando no aporte información. "],"examples":[{"text":"At this point in time, the team is currently reviewing the draft.","count":12,"explanation":"12 palabras. «At this point in time» y «currently» expresan la misma referencia temporal."},{"text":"The team is reviewing the draft now.","count":7,"explanation":"7 palabras. La oración conserva una referencia temporal y la misma información principal."},{"text":"Each and every participant completed the task.","count":7,"explanation":"7 palabras. «Each and every» se puede acortar si el énfasis adicional no es intencional."},{"text":"Every participant completed the task.","count":5,"explanation":"5 palabras. La idea sigue clara sin la expresión duplicada."}]},
+          {"heading":"Usa palabras más breves solo si mantienen la precisión","paragraphs":["Sustituye expresiones largas por otras directas cuando signifiquen lo mismo en contexto. Prefiere un verbo concreto a una frase imprecisa y elimina introducciones vacías que retrasan la idea principal.","No cambies el grado de certeza ni el alcance para acortar una oración. Palabras como «puede», «algunos» y «en esta muestra» pueden indicar límites importantes. Conserva los términos técnicos si una alternativa reduce la precisión."]},
+          {"heading":"Protege las pruebas y el contexto","paragraphs":["Conserva los detalles que permiten entender o verificar la idea: nombres, fechas, unidades, fuentes, condiciones y transiciones necesarias. Una oración más breve no mejora si oculta quién hizo qué o elimina el motivo de una conclusión.","Después de acortar un párrafo, léelo sin mirar el original. Si la idea, las pruebas o la relación entre conceptos ya no se entienden, recupera el contexto necesario."]},
+          {"heading":"Vuelve a contar la versión que vas a entregar","paragraphs":["Haz una revisión cada vez y después comprueba el texto completo. Pega la versión final en el contador de palabras de TextToools y sigue el método indicado por tu tarea, editorial o formulario; los contadores pueden separar las palabras de manera distinta.","Por último, lee el texto en voz alta y comprueba que siga sonando natural y propio. El objetivo no es usar el menor número de palabras posible, sino expresar la idea con claridad y cumplir las instrucciones."]}
+        ]
+      }
+    }
+  }
+}

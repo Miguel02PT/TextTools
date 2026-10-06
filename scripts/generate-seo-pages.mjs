@@ -20,6 +20,9 @@ const toolPages = JSON.parse(
 const chinese = JSON.parse(
   await readFile(path.join(projectRoot, 'src', 'zh-CN.json'), 'utf8'),
 )
+const spanish = JSON.parse(
+  await readFile(path.join(projectRoot, 'src', 'es.json'), 'utf8'),
+)
 const blogPosts = JSON.parse(
   await readFile(path.join(projectRoot, 'src', 'blog-posts.json'), 'utf8'),
 )
@@ -64,6 +67,50 @@ const vite = await createServer({
   appType: 'custom',
 })
 const { default: App } = await vite.ssrLoadModule('/src/App.tsx')
+
+function localizedUrls(relativePath) {
+  return {
+    en: `${siteBase}${relativePath}`,
+    zh: `${siteBase}zh-cn/${relativePath}`,
+    es: `${siteBase}es/${relativePath}`,
+  }
+}
+
+function localizedAlternates(relativePath) {
+  const urls = localizedUrls(relativePath)
+  return [
+    { language: 'en', url: urls.en },
+    { language: 'zh-CN', url: urls.zh },
+    { language: 'es', url: urls.es },
+  ]
+}
+
+const spanishInformationPages = {
+  faq: {
+    title: 'Preguntas frecuentes | TextToools',
+    description: 'Respuestas a preguntas frecuentes sobre TextToools y sus herramientas de texto.',
+  },
+  about: {
+    title: 'Acerca de TextToools',
+    description: 'Conoce TextToools y sus sencillas herramientas de texto que funcionan en el navegador.',
+  },
+  privacy: {
+    title: 'Privacidad | TextToools',
+    description: 'Consulta cómo trata TextToools el texto introducido en sus herramientas del navegador.',
+  },
+  terms: {
+    title: 'Términos y condiciones | TextToools',
+    description: 'Condiciones de uso de las herramientas de texto de TextToools.',
+  },
+  contact: {
+    title: 'Contacto | TextToools',
+    description: 'Contacta con TextToools para enviar preguntas, sugerencias o comentarios.',
+  },
+  'report-bug': {
+    title: 'Informar de un problema | TextToools',
+    description: 'Informa de un problema con una de las herramientas de texto de TextToools.',
+  },
+}
 
 function createPageHtml({
   title,
@@ -131,10 +178,7 @@ await writeFile(
     canonicalUrl: homepageUrl,
     structuredData: homepageStructuredData,
     routePath: new URL(homepageUrl).pathname,
-    alternates: [
-      { language: 'en', url: homepageUrl },
-      { language: 'zh-CN', url: `${siteBase}zh-cn/` },
-    ],
+    alternates: localizedAlternates(''),
   }),
   'utf8',
 )
@@ -159,10 +203,31 @@ await writeFile(
     },
     routePath: new URL(chineseHomepageUrl).pathname,
     locale: 'zh-CN',
-    alternates: [
-      { language: 'en', url: homepageUrl },
-      { language: 'zh-CN', url: chineseHomepageUrl },
-    ],
+    alternates: localizedAlternates(''),
+  }),
+  'utf8',
+)
+
+const spanishHomepageUrl = `${siteBase}es/`
+const spanishHomepageDestination = path.join(outputRoot, 'es', 'index.html')
+await mkdir(path.dirname(spanishHomepageDestination), { recursive: true })
+await writeFile(
+  spanishHomepageDestination,
+  createPageHtml({
+    title: `${spanish.site.homeHeading} | TextToools`,
+    description: spanish.site.homeIntro,
+    canonicalUrl: spanishHomepageUrl,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'TextToools',
+      url: spanishHomepageUrl,
+      description: spanish.site.homeIntro,
+      inLanguage: 'es',
+    },
+    routePath: new URL(spanishHomepageUrl).pathname,
+    locale: 'es',
+    alternates: localizedAlternates(''),
   }),
   'utf8',
 )
@@ -170,7 +235,9 @@ await writeFile(
 for (const tool of toolPages) {
   const canonicalUrl = `${siteBase}tools/${tool.id}/`
   const chineseGuide = chinese.tools[tool.id]
+  const spanishGuide = spanish.tools[tool.id]
   const chineseCanonicalUrl = `${siteBase}zh-cn/tools/${tool.id}/`
+  const spanishCanonicalUrl = `${siteBase}es/tools/${tool.id}/`
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -193,10 +260,7 @@ for (const tool of toolPages) {
       canonicalUrl,
       structuredData,
       routePath: new URL(canonicalUrl).pathname,
-      alternates: [
-        { language: 'en', url: canonicalUrl },
-        { language: 'zh-CN', url: chineseCanonicalUrl },
-      ],
+      alternates: localizedAlternates(`tools/${tool.id}/`),
     }),
     'utf8',
   )
@@ -225,10 +289,31 @@ for (const tool of toolPages) {
       structuredData: chineseStructuredData,
       routePath: new URL(chineseCanonicalUrl).pathname,
       locale: 'zh-CN',
-      alternates: [
-        { language: 'en', url: canonicalUrl },
-        { language: 'zh-CN', url: chineseCanonicalUrl },
-      ],
+      alternates: localizedAlternates(`tools/${tool.id}/`),
+    }),
+    'utf8',
+  )
+
+  const spanishDestination = path.join(outputRoot, 'es', 'tools', tool.id, 'index.html')
+  await mkdir(path.dirname(spanishDestination), { recursive: true })
+  await writeFile(
+    spanishDestination,
+    createPageHtml({
+      title: spanishGuide.title,
+      description: spanishGuide.meta,
+      canonicalUrl: spanishCanonicalUrl,
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: spanishGuide.title,
+        description: spanishGuide.meta,
+        url: spanishCanonicalUrl,
+        inLanguage: 'es',
+        isPartOf: { '@type': 'WebSite', name: 'TextToools', url: siteBase },
+      },
+      routePath: new URL(spanishCanonicalUrl).pathname,
+      locale: 'es',
+      alternates: localizedAlternates(`tools/${tool.id}/`),
     }),
     'utf8',
   )
@@ -259,10 +344,7 @@ for (const page of informationPages) {
       canonicalUrl,
       structuredData,
       routePath: new URL(canonicalUrl).pathname,
-      alternates: [
-        { language: 'en', url: canonicalUrl },
-        { language: 'zh-CN', url: chineseCanonicalUrl },
-      ],
+      alternates: localizedAlternates(`${page.slug}/`),
     }),
     'utf8',
   )
@@ -294,10 +376,33 @@ for (const page of informationPages) {
       structuredData: chineseStructuredData,
       routePath: new URL(chineseCanonicalUrl).pathname,
       locale: 'zh-CN',
-      alternates: [
-        { language: 'en', url: canonicalUrl },
-        { language: 'zh-CN', url: chineseCanonicalUrl },
-      ],
+      alternates: localizedAlternates(`${page.slug}/`),
+    }),
+    'utf8',
+  )
+
+  const spanishCanonicalUrl = `${siteBase}es/${page.slug}/`
+  const spanishPage = spanishInformationPages[page.slug]
+  const spanishDestination = path.join(outputRoot, 'es', page.slug, 'index.html')
+  await mkdir(path.dirname(spanishDestination), { recursive: true })
+  await writeFile(
+    spanishDestination,
+    createPageHtml({
+      title: spanishPage.title,
+      description: spanishPage.description,
+      canonicalUrl: spanishCanonicalUrl,
+      structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: spanishPage.title,
+        description: spanishPage.description,
+        url: spanishCanonicalUrl,
+        inLanguage: 'es',
+        isPartOf: { '@type': 'WebSite', name: 'TextToools', url: siteBase },
+      },
+      routePath: new URL(spanishCanonicalUrl).pathname,
+      locale: 'es',
+      alternates: localizedAlternates(`${page.slug}/`),
     }),
     'utf8',
   )
@@ -306,14 +411,19 @@ for (const page of informationPages) {
 const blogIndexUrls = {
   en: `${siteBase}blog/`,
   zh: `${siteBase}zh-cn/blog/`,
+  es: `${siteBase}es/blog/`,
 }
-for (const locale of ['en', 'zh-CN']) {
-  const canonicalUrl = locale === 'en' ? blogIndexUrls.en : blogIndexUrls.zh
-  const title = locale === 'en' ? 'TextToools Blog' : chinese.blog.title
+for (const locale of ['en', 'zh-CN', 'es']) {
+  const canonicalUrl =
+    locale === 'en' ? blogIndexUrls.en : locale === 'zh-CN' ? blogIndexUrls.zh : blogIndexUrls.es
+  const title =
+    locale === 'en' ? 'TextToools Blog' : locale === 'zh-CN' ? chinese.blog.title : spanish.blog.title
   const description =
     locale === 'en'
       ? 'Practical, clear guides to counting, cleaning, and working with text.'
-      : chinese.blog.description
+      : locale === 'zh-CN'
+        ? chinese.blog.description
+        : spanish.blog.description
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
@@ -324,7 +434,7 @@ for (const locale of ['en', 'zh-CN']) {
   }
   const destination = path.join(
     outputRoot,
-    ...(locale === 'en' ? ['blog'] : ['zh-cn', 'blog']),
+    ...(locale === 'en' ? ['blog'] : [locale === 'zh-CN' ? 'zh-cn' : 'es', 'blog']),
     'index.html',
   )
   await mkdir(path.dirname(destination), { recursive: true })
@@ -337,21 +447,27 @@ for (const locale of ['en', 'zh-CN']) {
       structuredData,
       routePath: new URL(canonicalUrl).pathname,
       locale,
-      alternates: [
-        { language: 'en', url: blogIndexUrls.en },
-        { language: 'zh-CN', url: blogIndexUrls.zh },
-      ],
+      alternates: localizedAlternates('blog/'),
     }),
     'utf8',
   )
 }
 
 for (const post of blogPosts) {
-  const englishCanonicalUrl = `${siteBase}blog/${post.slug}/`
-  const chineseCanonicalUrl = `${siteBase}zh-cn/blog/${post.slug}/`
-  for (const locale of ['en', 'zh-CN']) {
-    const localizedPost = locale === 'en' ? post : chinese.blog.posts[post.slug]
-    const canonicalUrl = locale === 'en' ? englishCanonicalUrl : chineseCanonicalUrl
+  for (const locale of ['en', 'zh-CN', 'es']) {
+    const localizedPost =
+      locale === 'en'
+        ? post
+        : locale === 'zh-CN'
+          ? chinese.blog.posts[post.slug]
+          : spanish.blog.posts[post.slug]
+    const localizedPath = `blog/${post.slug}/`
+    const canonicalUrl =
+      locale === 'en'
+        ? localizedUrls(localizedPath).en
+        : locale === 'zh-CN'
+          ? localizedUrls(localizedPath).zh
+          : localizedUrls(localizedPath).es
     const socialImageUrl = new URL(
       localizedPost.image.replace(/\.svg$/i, '.png'),
       siteBase,
@@ -372,7 +488,7 @@ for (const post of blogPosts) {
       outputRoot,
       ...(locale === 'en'
         ? ['blog', post.slug]
-        : ['zh-cn', 'blog', post.slug]),
+        : [locale === 'zh-CN' ? 'zh-cn' : 'es', 'blog', post.slug]),
       'index.html',
     )
     await mkdir(path.dirname(destination), { recursive: true })
@@ -387,10 +503,7 @@ for (const post of blogPosts) {
         imageAlt: localizedPost.imageAlt,
         routePath: new URL(canonicalUrl).pathname,
         locale,
-        alternates: [
-          { language: 'en', url: englishCanonicalUrl },
-          { language: 'zh-CN', url: chineseCanonicalUrl },
-        ],
+        alternates: localizedAlternates(localizedPath),
       }),
       'utf8',
     )
@@ -400,15 +513,20 @@ for (const post of blogPosts) {
 const urls = [
   homepageUrl,
   `${siteBase}zh-cn/`,
+  `${siteBase}es/`,
   ...toolPages.map((tool) => `${siteBase}tools/${tool.id}/`),
   ...toolPages.map((tool) => `${siteBase}zh-cn/tools/${tool.id}/`),
+  ...toolPages.map((tool) => `${siteBase}es/tools/${tool.id}/`),
   ...informationPages.map((page) => `${siteBase}${page.slug}/`),
   ...informationPages.map((page) => `${siteBase}zh-cn/${page.slug}/`),
+  ...informationPages.map((page) => `${siteBase}es/${page.slug}/`),
   blogIndexUrls.en,
   blogIndexUrls.zh,
+  blogIndexUrls.es,
   ...blogPosts.flatMap((post) => [
     `${siteBase}blog/${post.slug}/`,
     `${siteBase}zh-cn/blog/${post.slug}/`,
+    `${siteBase}es/blog/${post.slug}/`,
   ]),
 ]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${escapeHtml(url)}</loc></url>`).join('\n')}\n</urlset>\n`
@@ -449,6 +567,7 @@ await writeFile(
         <a href="${escapeHtml(siteBase)}">Go to homepage</a>
         <a href="${escapeHtml(siteBase)}#tools">Browse tools</a>
         <a href="${escapeHtml(siteBase)}zh-cn/">简体中文</a>
+        <a href="${escapeHtml(siteBase)}es/">Español</a>
       </nav>
     </main>
   </body>
@@ -460,5 +579,5 @@ await writeFile(
 await vite.close()
 
 console.log(
-  `Pre-rendered English and Chinese home, tool, information, and blog pages (${urls.length} routes).`,
+  `Pre-rendered English, Simplified Chinese, and Spanish home, tool, information, and blog pages (${urls.length} routes).`,
 )

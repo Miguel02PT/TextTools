@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cómo afectan los espacios al recuento de palabras con guion</title>
+  <desc id="desc">«bien-hecho» cuenta como un grupo; «bien — hecho» cuenta como tres grupos separados por espacios.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1080" cy="84" r="120" fill="#E8E1F1"/>
+  <circle cx="94" cy="570" r="145" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CONTAR PALABRAS</text>
+  <text x="80" y="153" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Los espacios cambian el recuento</text>
+  <rect x="80" y="202" width="492" height="330" rx="24" fill="#FFFFFF"/>
+  <rect x="628" y="202" width="492" height="330" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="253" fill="#647084" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">GUION SIN ESPACIOS</text>
+  <text x="664" y="253" fill="#647084" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">RAYA CON ESPACIOS</text>
+  <rect x="116" y="292" width="420" height="113" rx="18" fill="#F1EDF7"/>
+  <text x="148" y="363" fill="#25203A" font-family="Arial, sans-serif" font-size="42" font-weight="700">bien-hecho</text>
+  <rect x="664" y="292" width="139" height="113" rx="18" fill="#F1EDF7"/>
+  <rect x="826" y="292" width="90" height="113" rx="18" fill="#FBE9E4"/>
+  <rect x="939" y="292" width="139" height="113" rx="18" fill="#F1EDF7"/>
+  <text x="686" y="363" fill="#25203A" font-family="Arial, sans-serif" font-size="29" font-weight="700">bien</text>
+  <text x="853" y="363" fill="#BA5948" font-family="Arial, sans-serif" font-size="32" font-weight="700">—</text>
+  <text x="959" y="363" fill="#25203A" font-family="Arial, sans-serif" font-size="29" font-weight="700">hecho</text>
+  <text x="116" y="459" fill="#647084" font-family="Arial, sans-serif" font-size="18">Un grupo sin interrupciones</text>
+  <text x="664" y="459" fill="#647084" font-family="Arial, sans-serif" font-size="18">Tres grupos separados por espacios</text>
+  <text x="116" y="505" fill="#69558E" font-family="Arial, sans-serif" font-size="30" font-weight="700">1 palabra</text>
+  <text x="664" y="505" fill="#BA5948" font-family="Arial, sans-serif" font-size="30" font-weight="700">3 palabras</text>
+  <text x="80" y="587" fill="#647084" font-family="Arial, sans-serif" font-size="17">El contador en español también separa las palabras por espacios.</text>
+</svg>

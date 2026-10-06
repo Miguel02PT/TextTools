@@ -1,11 +1,15 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import test from 'node:test'
-import { countGraphemes, countWords } from '../src/tool-logic'
+import { countGraphemes, countWords, getKeywordData } from '../src/tool-logic'
 import { createSeoMetadata } from '../scripts/seo-metadata.mjs'
 
 const englishBlogPosts = readFileSync(new URL('../src/blog-posts.json', import.meta.url), 'utf8')
 const chineseContent = readFileSync(new URL('../src/zh-CN.json', import.meta.url), 'utf8')
+const spanishContent = readFileSync(new URL('../src/es.json', import.meta.url), 'utf8')
+const englishToolGuides = JSON.parse(
+  readFileSync(new URL('../src/tool-pages.json', import.meta.url), 'utf8'),
+)
 const viteConfig = readFileSync(new URL('../vite.config.ts', import.meta.url), 'utf8')
 const seoGenerator = readFileSync(
   new URL('../scripts/generate-seo-pages.mjs', import.meta.url),
@@ -13,6 +17,7 @@ const seoGenerator = readFileSync(
 )
 const parsedEnglishBlogPosts = JSON.parse(englishBlogPosts)
 const parsedChineseContent = JSON.parse(chineseContent)
+const parsedSpanishContent = JSON.parse(spanishContent)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
@@ -23,6 +28,12 @@ const chineseHyphenatedWordsPost = parsedChineseContent.blog.posts[
   'how-word-counters-count-hyphenated-words'
 ]
 const chineseWordCountEditingPost = parsedChineseContent.blog.posts[
+  'how-to-cut-word-count-without-losing-meaning'
+]
+const spanishHyphenatedWordsPost = parsedSpanishContent.blog.posts[
+  'how-word-counters-count-hyphenated-words'
+]
+const spanishWordCountEditingPost = parsedSpanishContent.blog.posts[
   'how-to-cut-word-count-without-losing-meaning'
 ]
 
@@ -53,33 +64,41 @@ test('blog SEO metadata emits escaped Open Graph and Twitter image previews', ()
   assert.match(html, /name="twitter:image:alt" content="A &quot;useful&quot; &amp; &lt;clear&gt; example"/)
 })
 
-test('character-count guidance matches the Unicode grapheme counter in both locales', () => {
+test('character-count guidance matches the Unicode grapheme counter in all locales', () => {
   assert.match(englishBlogPosts, /TextToools counts Unicode grapheme clusters/)
   assert.doesNotMatch(englishBlogPosts, /JavaScript string length/)
   assert.match(chineseContent, /TextToools 按 Unicode 字素簇计数/)
+  assert.match(spanishContent, /TextToools cuenta grupos de grafemas Unicode/)
   assert.equal(countGraphemes('e\u0301👨‍👩‍👧‍👦'), 2)
 })
 
-test('hyphenated-word examples in both locales match the English word counter', () => {
+test('hyphenated-word examples in all locales match the English word counter', () => {
   const englishExamples = hyphenatedWordsPost.sections.flatMap(
     (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
   )
   const chineseExamples = chineseHyphenatedWordsPost.sections.flatMap(
     (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
   )
+  const spanishExamples = spanishHyphenatedWordsPost.sections.flatMap(
+    (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
+  )
 
   assert.ok(englishExamples.length >= 5)
   assert.equal(chineseExamples.length, englishExamples.length)
-  for (const example of [...englishExamples, ...chineseExamples]) {
+  assert.equal(spanishExamples.length, englishExamples.length)
+  for (const example of [...englishExamples, ...chineseExamples, ...spanishExamples]) {
     assert.equal(countWords(example.text, 'en'), example.count, example.text)
   }
 })
 
-test('word-count editing examples in both locales match the English word counter', () => {
+test('word-count editing examples in all locales match the English word counter', () => {
   const englishExamples = wordCountEditingPost.sections.flatMap(
     (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
   )
   const chineseExamples = chineseWordCountEditingPost.sections.flatMap(
+    (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
+  )
+  const spanishExamples = spanishWordCountEditingPost.sections.flatMap(
     (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
   )
 
@@ -88,21 +107,66 @@ test('word-count editing examples in both locales match the English word counter
     chineseExamples.map(({ text, count }: { text: string; count: number }) => ({ text, count })),
     englishExamples.map(({ text, count }: { text: string; count: number }) => ({ text, count })),
   )
-  for (const example of [...englishExamples, ...chineseExamples]) {
+  assert.deepEqual(
+    spanishExamples.map(({ text, count }: { text: string; count: number }) => ({ text, count })),
+    englishExamples.map(({ text, count }: { text: string; count: number }) => ({ text, count })),
+  )
+  for (const example of [...englishExamples, ...chineseExamples, ...spanishExamples]) {
     assert.equal(countWords(example.text, 'en'), example.count, example.text)
   }
 })
 
-test('every English and Chinese blog article has an original local illustration and alt text', () => {
+test('every translated tool guide has complete Spanish sections and FAQs', () => {
+  assert.deepEqual(
+    Object.keys(parsedSpanishContent.tools).sort(),
+    Object.keys(parsedChineseContent.tools).sort(),
+  )
+
+  for (const guide of englishToolGuides) {
+    const localizedGuide = parsedSpanishContent.tools[guide.id]
+    assert.ok(localizedGuide, `${guide.id} has Spanish content`)
+    assert.ok(localizedGuide.name && localizedGuide.title && localizedGuide.meta)
+    assert.equal(localizedGuide.sections.length, guide.sections.length, `${guide.id} sections`)
+    assert.equal(localizedGuide.faqs.length, guide.faqs.length, `${guide.id} FAQs`)
+    assert.ok(localizedGuide.sections.every(
+      (section: { heading: string; paragraphs: string[] }) =>
+        section.heading && section.paragraphs.length > 0 && section.paragraphs.every(Boolean),
+    ))
+  }
+})
+
+test('Spanish keyword analysis filters common Spanish words', () => {
+  const keywords = getKeywordData('Las herramientas de texto y privacidad', 'es')
+  assert.deepEqual(
+    keywords.entries.map(({ word }) => word).sort(),
+    ['herramientas', 'privacidad', 'texto'],
+  )
+})
+
+test('Spanish editing illustration uses correctly counted Spanish examples', () => {
+  const post = parsedSpanishContent.blog.posts['how-to-cut-word-count-without-losing-meaning']
+  const svg = readFileSync(new URL(`../public/${post.image}`, import.meta.url), 'utf8')
+  assert.match(svg, /9 PALABRAS/)
+  assert.match(svg, /6 PALABRAS/)
+  assert.equal(countWords('En este momento el equipo revisa el borrador actualmente.', 'es'), 9)
+  assert.equal(countWords('El equipo revisa el borrador ahora.', 'es'), 6)
+})
+
+test('every English article has localized Chinese and Spanish alt text and social images', () => {
   assert.ok(parsedEnglishBlogPosts.length > 0)
 
   for (const post of parsedEnglishBlogPosts) {
     const localizedPost = parsedChineseContent.blog.posts[post.slug]
+    const spanishPost = parsedSpanishContent.blog.posts[post.slug]
     assert.ok(localizedPost, `${post.slug} has Chinese content`)
+    assert.ok(spanishPost, `${post.slug} has Spanish content`)
+    assert.ok(spanishPost.image.startsWith('blog-images/es/'), `${post.slug} has a Spanish illustration`)
+    assert.notEqual(spanishPost.image, post.image, `${post.slug} uses a localized Spanish illustration`)
     const imagePath = new URL(`../public/${post.image}`, import.meta.url)
 
     assert.ok(post.imageAlt, `${post.slug} has English alt text`)
     assert.ok(localizedPost.imageAlt, `${post.slug} has Chinese alt text`)
+    assert.ok(spanishPost.imageAlt, `${post.slug} has Spanish alt text`)
     assert.ok(existsSync(imagePath), `${post.image} exists`)
     assert.match(readFileSync(imagePath, 'utf8'), /<svg\b/)
     assert.ok(existsSync(new URL(`../public/${localizedPost.image}`, import.meta.url)))
@@ -111,7 +175,7 @@ test('every English and Chinese blog article has an original local illustration 
       /<svg\b/,
     )
 
-    for (const localizedImage of [post.image, localizedPost.image]) {
+    for (const localizedImage of [post.image, localizedPost.image, spanishPost.image]) {
       const pngPath = new URL(
         `../public/${localizedImage.replace(/\.svg$/i, '.png')}`,
         import.meta.url,

@@ -104,6 +104,9 @@ test('reading time calculations and output cover empty and non-empty text', () =
   assert.equal(formatReadingTime(0, 0), '0 min 0 sec')
   assert.equal(formatReadingTime(1, 1), 'less than 1 min')
   assert.equal(formatReadingTime(200, 60), '1 min 0 sec')
+  assert.equal(formatReadingTime(0, 0, 'es'), '0 min 0 s')
+  assert.equal(formatReadingTime(1, 30, 'es'), 'menos de 1 min')
+  assert.equal(formatReadingTime(200, 60, 'es'), '1 min 0 s')
   assert.equal(computeMetrics('one two', 'en', 200).readingSeconds, 1)
 })
 

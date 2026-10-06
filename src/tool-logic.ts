@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'zh-CN'
+export type Locale = 'en' | 'zh-CN' | 'es'
 export type CaseFormat = 'upper' | 'lower' | 'title' | 'sentence' | 'camel' | 'snake'
 export type SortMode = 'az' | 'za' | 'reverse'
 export type ToolId =
@@ -46,11 +46,24 @@ const chineseStopWords = new Set([
   '什么', '如何', '和', '与', '在', '是', '有', '了', '的', '地', '得', '而',
   '或', '及', '把', '被', '为', '从', '到', '对', '中', '上', '下',
 ])
+const spanishStopWords = new Set([
+  'a', 'al', 'algo', 'algunas', 'algunos', 'ante', 'antes', 'como', 'con',
+  'contra', 'cual', 'cuando', 'de', 'del', 'desde', 'donde', 'durante', 'e',
+  'el', 'ella', 'ellas', 'ellos', 'en', 'entre', 'era', 'es', 'esa', 'esas',
+  'ese', 'eso', 'esos', 'esta', 'estaba', 'estaban', 'estado', 'estas', 'este',
+  'esto', 'estos', 'fue', 'ha', 'hace', 'han', 'hasta', 'hay', 'la', 'las',
+  'lo', 'los', 'más', 'me', 'mi', 'mis', 'mismo', 'mucho', 'muy', 'ni', 'no',
+  'nos', 'o', 'otra', 'otras', 'otro', 'otros', 'para', 'pero', 'poco', 'por',
+  'porque', 'que', 'qué', 'quien', 'quienes', 'se', 'sea', 'ser', 'si', 'sin',
+  'sobre', 'son', 'su', 'sus', 'también', 'te', 'tiene', 'todo', 'tu', 'tus',
+  'un', 'una', 'uno', 'unos', 'y', 'ya',
+])
 const chineseWordSegmenter = new Intl.Segmenter('zh-CN', { granularity: 'word' })
 const graphemeSegmenter = new Intl.Segmenter(undefined, { granularity: 'grapheme' })
 const sentenceSegmenters: Record<Locale, Intl.Segmenter> = {
   en: new Intl.Segmenter('en', { granularity: 'sentence' }),
   'zh-CN': new Intl.Segmenter('zh-CN', { granularity: 'sentence' }),
+  es: new Intl.Segmenter('es', { granularity: 'sentence' }),
 }
 
 const loremWords = [
@@ -94,9 +107,10 @@ export function countSentences(text: string, locale: Locale = 'en') {
   return count
 }
 
-export function formatReadingTime(words: number, seconds: number) {
-  if (words === 0) return '0 min 0 sec'
-  if (seconds < 60) return 'less than 1 min'
+export function formatReadingTime(words: number, seconds: number, locale: Locale = 'en') {
+  if (words === 0) return locale === 'es' ? '0 min 0 s' : '0 min 0 sec'
+  if (seconds < 60) return locale === 'es' ? 'menos de 1 min' : 'less than 1 min'
+  if (locale === 'es') return `${Math.floor(seconds / 60)} min ${seconds % 60} s`
   return `${Math.floor(seconds / 60)} min ${seconds % 60} sec`
 }
 
@@ -300,8 +314,12 @@ export function getKeywordData(text: string, locale: Locale): KeywordData {
   const counts = new Map<string, number>()
   for (const token of tokens) {
     if (
-      (locale === 'en' && token.length <= 1) ||
-      (locale === 'en' ? stopWords.has(token) : chineseStopWords.has(token))
+      (locale !== 'zh-CN' && token.length <= 1) ||
+      (locale === 'en'
+        ? stopWords.has(token)
+        : locale === 'es'
+          ? spanishStopWords.has(token)
+          : chineseStopWords.has(token))
     ) continue
     counts.set(token, (counts.get(token) ?? 0) + 1)
   }
@@ -373,11 +391,11 @@ export function getToolOutputContent(
         `${label('wordCount', 'Words')}: ${metrics.words}`,
       ].join('\n')
     case 'reading-time': {
-      const time = formatReadingTime(metrics.words, metrics.readingSeconds)
+      const time = formatReadingTime(metrics.words, metrics.readingSeconds, locale)
       return [
         `${label('wordCount', 'Words')}: ${metrics.words}`,
-        `${label('readingSpeed', 'Reading speed')}: ${readingSpeed} ${locale === 'zh-CN' ? '字/分钟' : 'wpm'}`,
-        `${locale === 'zh-CN' ? '预计阅读时间' : 'Estimated reading time'}: ${time}`,
+        `${label('readingSpeed', 'Reading speed')}: ${readingSpeed} ${locale === 'zh-CN' ? '字/分钟' : label('wordsPerMinute', 'wpm')}`,
+        `${locale === 'zh-CN' ? '预计阅读时间' : label('estimatedReadingTime', 'Estimated reading time')}: ${time}`,
       ].join('\n')
     }
     case 'keyword-density':
