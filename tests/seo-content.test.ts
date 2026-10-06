@@ -16,8 +16,14 @@ const parsedChineseContent = JSON.parse(chineseContent)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
+const wordCountEditingPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-cut-word-count-without-losing-meaning',
+)
 const chineseHyphenatedWordsPost = parsedChineseContent.blog.posts[
   'how-word-counters-count-hyphenated-words'
+]
+const chineseWordCountEditingPost = parsedChineseContent.blog.posts[
+  'how-to-cut-word-count-without-losing-meaning'
 ]
 
 test('default production URL uses the live custom domain for assets and SEO', () => {
@@ -64,6 +70,24 @@ test('hyphenated-word examples in both locales match the English word counter', 
 
   assert.ok(englishExamples.length >= 5)
   assert.equal(chineseExamples.length, englishExamples.length)
+  for (const example of [...englishExamples, ...chineseExamples]) {
+    assert.equal(countWords(example.text, 'en'), example.count, example.text)
+  }
+})
+
+test('word-count editing examples in both locales match the English word counter', () => {
+  const englishExamples = wordCountEditingPost.sections.flatMap(
+    (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
+  )
+  const chineseExamples = chineseWordCountEditingPost.sections.flatMap(
+    (section: { examples?: { text: string; count: number }[] }) => section.examples ?? [],
+  )
+
+  assert.equal(englishExamples.length, 4)
+  assert.deepEqual(
+    chineseExamples.map(({ text, count }: { text: string; count: number }) => ({ text, count })),
+    englishExamples.map(({ text, count }: { text: string; count: number }) => ({ text, count })),
+  )
   for (const example of [...englishExamples, ...chineseExamples]) {
     assert.equal(countWords(example.text, 'en'), example.count, example.text)
   }

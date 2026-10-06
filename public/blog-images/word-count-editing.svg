@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cut your word count without losing meaning</title>
+  <desc id="desc">A repetitive sentence is edited from twelve words to seven while keeping its main point.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  WRITING EDITING</text>
+  <text x="80" y="153" fill="#172033" font-family="Arial, sans-serif" font-size="42" font-weight="700">Cut words. Keep the meaning.</text>
+  <text x="80" y="190" fill="#647084" font-family="Arial, sans-serif" font-size="19">Remove repetition before cutting useful detail.</text>
+  <rect x="80" y="222" width="470" height="278" rx="24" fill="#FFFFFF"/>
+  <rect x="650" y="222" width="470" height="278" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="273" fill="#647084" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">BEFORE</text>
+  <text x="686" y="273" fill="#647084" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">AFTER</text>
+  <rect x="116" y="296" width="398" height="122" rx="16" fill="#F7F5FA"/>
+  <rect x="686" y="296" width="398" height="122" rx="16" fill="#F2F6F3"/>
+  <text x="140" y="339" fill="#756583" font-family="Arial, sans-serif" font-size="19">At this point in time, the team</text>
+  <text x="140" y="374" fill="#756583" font-family="Arial, sans-serif" font-size="19">is currently reviewing the draft.</text>
+  <text x="710" y="339" fill="#315E4B" font-family="Arial, sans-serif" font-size="19">The team is reviewing</text>
+  <text x="710" y="374" fill="#315E4B" font-family="Arial, sans-serif" font-size="19">the draft now.</text>
+  <path d="M566 357H628" stroke="#69558E" stroke-width="7" stroke-linecap="round"/>
+  <path d="M609 339L629 357L609 375" stroke="#69558E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="116" y="440" width="112" height="34" rx="17" fill="#EEE9F3"/>
+  <rect x="686" y="440" width="102" height="34" rx="17" fill="#E4F0E8"/>
+  <text x="135" y="463" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">12 WORDS</text>
+  <text x="705" y="463" fill="#315E4B" font-family="Arial, sans-serif" font-size="16" font-weight="700">7 WORDS</text>
+  <text x="80" y="565" fill="#647084" font-family="Arial, sans-serif" font-size="18">One clear time cue. The same main update.</text>
+</svg>

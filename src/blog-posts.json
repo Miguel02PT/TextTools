@@ -140,5 +140,72 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "how-to-cut-word-count-without-losing-meaning",
+    "published": "2026-10-06",
+    "title": "How to Cut Your Word Count Without Losing Meaning",
+    "description": "Reduce a draft's word count with a focused editing pass while keeping its meaning, evidence, and important qualifications intact.",
+    "summary": "A practical order for spotting repetition, tightening wordy phrases, and checking every edit against your word limit.",
+    "image": "blog-images/word-count-editing.svg",
+    "imageAlt": "Before-and-after edit: a repetitive 12-word sentence is tightened to seven words while keeping its main point.",
+    "sections": [
+      {
+        "heading": "Start with the point, not the word counter",
+        "paragraphs": [
+          "Before cutting, write down what the paragraph needs to say: its main claim, the evidence supporting it, and any context the reader needs. Keep a copy of the original so you can compare meaning after each editing pass.",
+          "Check the instructions too. A word limit may include headings, quotations, footnotes, or references—or exclude some of them. Confirm the required scope and counting method before deciding how much to cut."
+        ]
+      },
+      {
+        "heading": "Remove repetition before useful detail",
+        "paragraphs": [
+          "Look for ideas repeated in a sentence or nearby sentences. Phrases such as “at this point in time” can often become “now”; words such as “currently” may repeat the same time cue. Keep emphasis when it is deliberate, but remove it when it adds no new information."
+        ],
+        "examples": [
+          {
+            "text": "At this point in time, the team is currently reviewing the draft.",
+            "count": 12,
+            "explanation": "12 words. Both “at this point in time” and “currently” signal the same timing."
+          },
+          {
+            "text": "The team is reviewing the draft now.",
+            "count": 7,
+            "explanation": "7 words. The sentence keeps one time cue and the same main update."
+          },
+          {
+            "text": "Each and every participant completed the task.",
+            "count": 7,
+            "explanation": "7 words. “Each and every” may be shortened if the extra emphasis is not intentional."
+          },
+          {
+            "text": "Every participant completed the task.",
+            "count": 5,
+            "explanation": "5 words. The statement remains clear without the doubled expression."
+          }
+        ]
+      },
+      {
+        "heading": "Choose shorter wording only when it stays precise",
+        "paragraphs": [
+          "Replace padded expressions with direct wording when both mean the same thing in context. Prefer a specific verb over a vague phrase, and remove empty lead-ins that delay the main point.",
+          "Do not shorten a sentence by changing its certainty or scope. Words such as “may”, “some”, and “in this sample” can carry important limits. Keep technical terms when replacing them would make the meaning less exact."
+        ]
+      },
+      {
+        "heading": "Protect evidence and the reader's context",
+        "paragraphs": [
+          "Keep the details that let someone understand or verify the claim: necessary names, dates, units, sources, conditions, and transitions. A shorter sentence is not an improvement if it hides who did what or removes the reason a conclusion follows.",
+          "After tightening a paragraph, read it once without looking at the original. If the claim, evidence, or relationship between ideas is now unclear, restore the needed context."
+        ]
+      },
+      {
+        "heading": "Recount the exact version you will submit",
+        "paragraphs": [
+          "Make one editing pass at a time, then check the full text again. Paste the version you plan to submit into the TextToools Word Counter and use the method required by your assignment, publisher, or form; different counters can split words differently.",
+          "Finally, read the revised text aloud and check that it still sounds like you. The goal is not the fewest possible words. It is the clearest version that fits the brief."
+        ]
+      }
+    ]
   }
 ]
