@@ -425,6 +425,7 @@ function App() {
   )
   const isChineseLocale = locale === 'zh-CN'
   const relativePath = isChineseLocale ? pathWithinBase.slice('zh-cn/'.length) : pathWithinBase
+  const isHomePage = relativePath === '' || relativePath === '/'
   const localeText = isChineseLocale ? chinese.site : undefined
   const localizedHref = (path = '') => `${basePath}${isChineseLocale ? 'zh-cn/' : ''}${path}`
   const englishLanguageHref = `${basePath}${relativePath}`
@@ -928,7 +929,7 @@ function App() {
         <nav
           aria-label={isChineseLocale ? '主导航' : 'Main navigation'}
           onMouseLeave={() => setIsToolMenuOpen(false)}
-          className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8"
+          className="flex w-full items-center gap-4 px-4 py-3 sm:px-6 lg:px-8"
         >
           <a
             href={localizedHref()}
@@ -1079,7 +1080,9 @@ function App() {
         </nav>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
+      <main
+        className={`mx-auto ${isHomePage ? 'max-w-[1760px]' : 'max-w-7xl'} px-4 pb-20 pt-8 sm:px-6 lg:px-8`}
+      >
         {routeKind === 'not-found' ? (
           <section className="mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 text-center sm:p-10">
             <p className="text-sm font-medium text-slate-500">404</p>
@@ -1870,7 +1873,9 @@ function App() {
       </main>
 
       <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div
+          className={`mx-auto ${isHomePage ? 'max-w-[1760px]' : 'max-w-7xl'} px-4 py-10 sm:px-6 lg:px-8`}
+        >
           <div className="grid grid-cols-1 gap-8 border-b border-slate-200 pb-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,minmax(0,1fr))]">
             <div className="space-y-2">
               <a href={localizedHref()} className="font-semibold text-slate-900">
