@@ -53,8 +53,32 @@ accessible, submit its `sitemap.xml` URL to Google Search Console.
 
 ## Contact form configuration
 
-The Contact and Report a bug forms do not send or store user input by default. To enable
-them later, set `VITE_CONTACT_FORM_ENDPOINT` to a trusted endpoint that accepts a
-cross-origin JSON `POST` with `category`, `page`, `name`, `email`, `subject`, and `message`
-fields, and returns a successful HTTP status when delivery succeeds. Review and update the
-Privacy page to disclose the selected provider and its data handling before enabling it.
+The Contact and Report a bug forms stay disabled until the client and server are configured.
+The Cloudflare Pages Function at `functions/api/contact.ts` checks the request origin,
+validates and limits the submitted fields, verifies a Cloudflare Turnstile token, and sends
+the message through Resend. It does not store messages in a TextTools database.
+
+Set these build-time variables in Cloudflare Pages before building:
+
+- `VITE_CONTACT_FORM_ENDPOINT=/api/contact`
+- `VITE_TURNSTILE_SITE_KEY` to the public site key for the production Turnstile widget
+
+Set these variables for the Pages Function runtime. Store the two keys as secrets, not in
+the repository or in `VITE_*` variables:
+
+- `ALLOWED_ORIGIN` to the canonical site origin, such as `https://texttoools.com`
+- `CONTACT_FROM` to an address on the verified sending domain
+- `CONTACT_RECIPIENT` to the mailbox that should receive submissions
+- `TURNSTILE_SECRET_KEY` (secret)
+- `RESEND_API_KEY` (secret)
+
+Configure all runtime values before setting the build-time variables; the form UI is enabled
+by the latter, while the endpoint returns an error if any server setting is missing. Resend
+requires verifying a domain through DNS. Its free plan currently allows 3,000 emails per
+month, capped at 100 per day; Cloudflare Pages Functions share a free allowance of 100,000
+requests per day, and Turnstile is free. Provider limits and terms can change, so confirm
+them before setup. Do not upgrade or add billing details without explicit approval.
+
+Before enabling production delivery, ensure the Privacy page accurately describes the
+providers and data sent by the forms. That factual update is separate from the broader
+Privacy/Terms review.

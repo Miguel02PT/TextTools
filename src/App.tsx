@@ -48,6 +48,26 @@ import {
 
 type Category = 'Writing' | 'Text Cleaning' | 'Text Formatting' | 'Text Analysis'
 
+type TurnstileApi = {
+  render: (
+    container: HTMLElement,
+    options: {
+      sitekey: string
+      action: 'contact' | 'bug'
+      callback: (token: string) => void
+      'expired-callback': () => void
+      'error-callback': () => void
+    },
+  ) => string
+  remove: (widgetId: string) => void
+}
+
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi
+  }
+}
+
 type Tool = {
   id: ToolId
   name: string
@@ -313,7 +333,7 @@ const commonFaqs = [
   {
     question: 'Can I suggest a tool or report a problem?',
     answer:
-      'Yes. Use the Contact us or Report a bug form. Form delivery is not enabled yet, so submissions cannot be sent until a secure form service is configured.',
+      'Yes. Use the Contact us or Report a bug form. Messages are emailed to the project mailbox so we can respond.',
   },
 ]
 const categoryColors: Record<Category, string> = {
@@ -361,14 +381,106 @@ function getBrowserLocaleSnapshot(): Locale | null {
   return getBrowserLocaleSuggestion(preferredLanguages) ?? null
 }
 
+let turnstileScriptPromise: Promise<void> | null = null
+
+function loadTurnstileScript(): Promise<void> {
+  if (window.turnstile) return Promise.resolve()
+  if (turnstileScriptPromise) return turnstileScriptPromise
+
+  turnstileScriptPromise = new Promise<void>((resolve, reject) => {
+    const script = document.createElement('script')
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+    script.async = true
+    script.defer = true
+    script.onload = () => resolve()
+    script.onerror = () => {
+      turnstileScriptPromise = null
+      reject(new Error('Unable to load Cloudflare Turnstile.'))
+    }
+    document.head.appendChild(script)
+  })
+
+  return turnstileScriptPromise
+}
+
+function TurnstileWidget({
+  siteKey,
+  action,
+  onToken,
+  unavailableLabel,
+}: {
+  siteKey: string
+  action: 'contact' | 'bug'
+  onToken: (token: string) => void
+  unavailableLabel: string
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const onTokenRef = useRef(onToken)
+  const [isUnavailable, setIsUnavailable] = useState(false)
+
+  useEffect(() => {
+    onTokenRef.current = onToken
+  }, [onToken])
+
+  useEffect(() => {
+    let isMounted = true
+    let widgetId: string | null = null
+
+    loadTurnstileScript()
+      .then(() => {
+        if (!isMounted || !containerRef.current) return
+        if (!window.turnstile) {
+          setIsUnavailable(true)
+          return
+        }
+        widgetId = window.turnstile.render(containerRef.current, {
+          sitekey: siteKey,
+          action,
+          callback: (token) => onTokenRef.current(token),
+          'expired-callback': () => onTokenRef.current(''),
+          'error-callback': () => {
+            onTokenRef.current('')
+            setIsUnavailable(true)
+          },
+        })
+      })
+      .catch((error: unknown) => {
+        if (!isMounted) return
+        console.error('Unable to initialize the contact form challenge.', error)
+        setIsUnavailable(true)
+      })
+
+    return () => {
+      isMounted = false
+      onTokenRef.current('')
+      if (widgetId && window.turnstile) window.turnstile.remove(widgetId)
+    }
+  }, [action, siteKey])
+
+  return (
+    <div>
+      <div ref={containerRef} />
+      {isUnavailable ? (
+        <p role="alert" className="text-sm text-rose-700">
+          {unavailableLabel}
+        </p>
+      ) : null}
+    </div>
+  )
+}
+
 function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Locale }) {
   const [submissionMessage, setSubmissionMessage] = useState('')
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileWidgetVersion, setTurnstileWidgetVersion] = useState(0)
   const formEndpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT
+  const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY
+  const formEnabled = Boolean(formEndpoint && turnstileSiteKey)
   const text = getLocaleSite(locale)
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (!formEndpoint) return
+    if (!formEndpoint || !turnstileSiteKey || !turnstileToken) return
 
     const form = event.currentTarget
     setSubmissionMessage(text?.sending ?? 'Sending...')
@@ -382,15 +494,20 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
         },
         body: JSON.stringify({
           category: kind,
-          page: window.location.href,
+          page: window.location.pathname,
+          turnstileToken,
           ...Object.fromEntries(new FormData(form)),
         }),
       })
       if (!response.ok) throw new Error(`Form service returned ${response.status}`)
       form.reset()
+      setTurnstileToken('')
+      setTurnstileWidgetVersion((version) => version + 1)
       setSubmissionMessage(text?.sent ?? 'Thanks — your message has been sent.')
     } catch (error) {
       console.error('Unable to submit the contact form.', error)
+      setTurnstileToken('')
+      setTurnstileWidgetVersion((version) => version + 1)
       setSubmissionMessage(text?.sendFailed ?? 'We could not send your message. Please try again later.')
     }
   }
@@ -407,6 +524,7 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
             name="name"
             type="text"
             autoComplete="name"
+            maxLength={120}
             className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:border-slate-500"
           />
         </label>
@@ -417,6 +535,7 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
             type="email"
             autoComplete="email"
             required
+            maxLength={254}
             className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:border-slate-500"
           />
         </label>
@@ -427,6 +546,7 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
           name="subject"
           type="text"
           required
+          maxLength={200}
           defaultValue={kind === 'bug' ? localizedCopy(locale, 'Bug report', '问题反馈') : ''}
           className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:border-slate-500"
         />
@@ -437,17 +557,42 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
           name="message"
           required
           rows={6}
+          maxLength={6000}
           className="w-full resize-y rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:border-slate-500"
         />
       </label>
-      {!formEndpoint ? (
+      <label aria-hidden="true" className="hidden">
+        <span>Leave this field empty</span>
+        <input
+          aria-hidden="true"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </label>
+      {formEnabled ? (
+        <>
+          <TurnstileWidget
+            key={turnstileWidgetVersion}
+            siteKey={turnstileSiteKey}
+            action={kind}
+            onToken={setTurnstileToken}
+            unavailableLabel={text?.challengeUnavailable ?? 'The anti-spam check is unavailable. Please try again later.'}
+          />
+          <p className="text-sm leading-6 text-slate-500">
+            {text?.submissionNotice ??
+              'When sent, your name, reply email, and message will be sent to TextToools through an email provider so we can respond. Please do not include sensitive information.'}
+          </p>
+        </>
+      ) : (
         <p className="rounded-lg bg-amber-50 px-3 py-2 text-sm leading-6 text-amber-900">
           {text?.formNotConfigured ?? 'Message sending is not configured yet. Nothing entered here will be sent or stored.'}
         </p>
-      ) : null}
+      )}
       <button
         type="submit"
-        disabled={!formEndpoint}
+        disabled={!formEnabled || !turnstileToken}
         className="rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-300"
       >
         {text?.sendMessage ?? 'Send message'}
@@ -1684,7 +1829,7 @@ function App() {
                 <p>
                   {localeText
                     ? localeText.aboutGoal
-                    : 'The goal is to keep everyday text tasks clear and uncomplicated. Use the Contact us form to send a suggestion once message delivery is enabled.'}
+                    : 'The goal is to keep everyday text tasks clear and uncomplicated. Use the Contact us form to send a suggestion.'}
                 </p>
               </article>
             ) : null}
@@ -1698,7 +1843,7 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyFormsHeading ?? 'Contact forms'}</h2>
                 <p>
-                  {localeText?.privacyForms ?? 'Contact and bug-report forms are not connected to a delivery service yet. While disabled, the information entered in those forms is not submitted or stored by TextToools. This policy must be updated when a form provider is chosen and enabled, to explain what information that provider receives and how it is handled.'}
+                  {localeText?.privacyForms ?? 'Submitting a contact or bug report sends your name (if provided), reply email, subject, message, form type, and page path to TextToools. Cloudflare Turnstile checks the anti-spam token and receives your connection IP for verification. Resend delivers the message to the project mailbox. Delivered emails are retained there according to that mailbox’s settings. Resend states that its Free plan retains email event data for 30 days. Do not include passwords, payment details, or private document text.'}
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyStorageHeading ?? 'Local storage and analytics'}</h2>
                 <p>
