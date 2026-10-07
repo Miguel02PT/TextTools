@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { createElement } from 'react'
 import { renderToString } from 'react-dom/server'
 import { createServer } from 'vite'
-import { createSeoMetadata, escapeHtml } from './seo-metadata.mjs'
+import { createSeoMetadata, escapeHtml, injectPrerenderedApp } from './seo-metadata.mjs'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outputRoot = path.join(projectRoot, 'dist')
@@ -142,18 +142,15 @@ function createPageHtml({
 
   try {
     const appHtml = renderToString(createElement(App))
-    return homepageHtml
-      .replace(/<html\s+lang="[^"]*"/, `<html lang="${locale}"`)
+    const localizedHtml = homepageHtml
+      .replace(/<html\s+lang="[^"]*"/, () => `<html lang="${locale}"`)
       .replace(
         /<meta\s+name="description"[\s\S]*?\/>/,
-        `<meta name="description" content="${escapeHtml(description)}" />`,
+        () => `<meta name="description" content="${escapeHtml(description)}" />`,
       )
-      .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
-      .replace(
-        '<div id="root"></div>',
-        `<div id="root" data-prerendered="true">${appHtml}</div>`,
-      )
-      .replace('</head>', `${metadata}  </head>`)
+      .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escapeHtml(title)}</title>`)
+      .replace('</head>', () => `${metadata}  </head>`)
+    return injectPrerenderedApp(localizedHtml, appHtml)
   } finally {
     if (previousWindow === undefined) {
       delete globalThis.window

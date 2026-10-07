@@ -2,11 +2,12 @@ import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import test from 'node:test'
 import { countGraphemes, countWords, getKeywordData } from '../src/tool-logic'
-import { createSeoMetadata } from '../scripts/seo-metadata.mjs'
+import { createSeoMetadata, injectPrerenderedApp } from '../scripts/seo-metadata.mjs'
 
 const englishBlogPosts = readFileSync(new URL('../src/blog-posts.json', import.meta.url), 'utf8')
 const chineseContent = readFileSync(new URL('../src/zh-CN.json', import.meta.url), 'utf8')
 const spanishContent = readFileSync(new URL('../src/es.json', import.meta.url), 'utf8')
+const responseHeaders = readFileSync(new URL('../public/_headers', import.meta.url), 'utf8')
 const englishToolGuides = JSON.parse(
   readFileSync(new URL('../src/tool-pages.json', import.meta.url), 'utf8'),
 )
@@ -43,6 +44,11 @@ test('default production URL uses the live custom domain for assets and SEO', ()
   assert.ok(seoGenerator.includes(`const defaultSiteUrl = '${liveSiteUrl}'`))
 })
 
+test('content security policy permits Cloudflare Web Analytics', () => {
+  assert.match(responseHeaders, /script-src[^;\n]*https:\/\/static\.cloudflareinsights\.com/)
+  assert.match(responseHeaders, /connect-src[^;\n]*https:\/\/cloudflareinsights\.com/)
+})
+
 test('blog SEO metadata emits escaped Open Graph and Twitter image previews', () => {
   const html = createSeoMetadata({
     title: 'A guide',
@@ -62,6 +68,18 @@ test('blog SEO metadata emits escaped Open Graph and Twitter image previews', ()
   assert.match(html, /name="twitter:card" content="summary_large_image"/)
   assert.match(html, /name="twitter:image" content="https:\/\/texttoools\.com\/blog-images\/guide\.png"/)
   assert.match(html, /name="twitter:image:alt" content="A &quot;useful&quot; &amp; &lt;clear&gt; example"/)
+})
+
+test('pre-rendered app injection preserves literal replacement markers', () => {
+  const html = injectPrerenderedApp(
+    '<div id="root"></div>',
+    'Replacement markers $&, $1, and $$ stay literal.',
+  )
+
+  assert.equal(
+    html,
+    '<div id="root" data-prerendered="true">Replacement markers $&, $1, and $$ stay literal.</div>',
+  )
 })
 
 test('character-count guidance matches the Unicode grapheme counter in all locales', () => {

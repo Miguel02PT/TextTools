@@ -7,6 +7,13 @@ export function escapeHtml(value) {
     .replaceAll("'", '&#39;')
 }
 
+export function injectPrerenderedApp(html, appHtml) {
+  return html.replace(
+    '<div id="root"></div>',
+    () => `<div id="root" data-prerendered="true">${appHtml}</div>`,
+  )
+}
+
 export function createSeoMetadata({
   title,
   description,
