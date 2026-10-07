@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+/firewall-event*.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

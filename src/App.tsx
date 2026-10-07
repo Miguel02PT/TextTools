@@ -1257,7 +1257,7 @@ function App() {
                 </button>
               ))}
             </div>
-            <label id="search-tools" className="flex w-full items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-500 sm:max-w-xs">
+            <label id="search-tools" className="flex w-full items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-500 transition-colors focus-within:border-slate-900 focus-within:ring-2 focus-within:ring-slate-900 focus-within:ring-offset-2 sm:max-w-xs">
               <Search className="h-4 w-4 shrink-0" aria-hidden="true" />
               <span className="sr-only">{localeText?.searchTools ?? 'Search tools'}</span>
               <input
