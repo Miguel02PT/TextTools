@@ -115,6 +115,7 @@ type BlogPost = {
   image: string
   imageAlt: string
   sections: BlogSection[]
+  sources?: { title: string; publisher: string; url: string }[]
 }
 
 const GA_MEASUREMENT_ID = 'G-CDBK2W6TB0'
@@ -2103,6 +2104,28 @@ function App() {
                 </section>
               ))}
             </div>
+            {localizedBlogPost.sources?.length ? (
+              <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+                <h2 className="text-xl font-semibold tracking-tight text-slate-900">
+                  {localizedCopy(locale, 'Sources and further reading', '资料来源与延伸阅读')}
+                </h2>
+                <ul className="mt-3 list-inside list-disc space-y-2 text-sm leading-7 text-slate-600">
+                  {localizedBlogPost.sources.map((source) => (
+                    <li key={source.url}>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-700"
+                      >
+                        {source.title}
+                      </a>
+                      {' — '}{source.publisher}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
             <nav aria-label={localizedCopy(locale, 'Related tools', '相关工具')} className="rounded-2xl border border-slate-200 bg-white p-5">
               <h2 className="font-semibold text-slate-900">
                 {localizedCopy(locale, 'Use a related text tool', '继续使用文本工具')}
@@ -2113,7 +2136,9 @@ function App() {
                     ? toolList.filter((tool) => tool.id === 'text-cleaner')
                     : activeBlogPost.slug === 'how-to-count-characters-including-spaces'
                       ? toolList.filter((tool) => tool.id === 'character-counter')
-                      : toolList.filter((tool) => tool.id === 'word-counter')
+                      : activeBlogPost.slug === 'how-long-should-a-blog-post-be'
+                        ? toolList.filter((tool) => tool.id === 'word-counter' || tool.id === 'reading-time')
+                        : toolList.filter((tool) => tool.id === 'word-counter')
                 ).map((tool) => (
                   <a
                     key={tool.id}

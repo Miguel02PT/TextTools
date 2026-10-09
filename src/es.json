@@ -167,6 +167,7 @@
       "words": "palabras",
       "Related tools": "Herramientas relacionadas",
       "Use a related text tool": "Usa otra herramienta de texto",
+      "Sources and further reading": "Fuentes y lecturas recomendadas",
       "All guides": "Todas las guías",
       "English": "English",
       "简体中文": "简体中文",
@@ -419,6 +420,94 @@
           {"heading":"Usa palabras más breves solo si mantienen la precisión","paragraphs":["Sustituye expresiones largas por otras directas cuando signifiquen lo mismo en contexto. Prefiere un verbo concreto a una frase imprecisa y elimina introducciones vacías que retrasan la idea principal.","No cambies el grado de certeza ni el alcance para acortar una oración. Palabras como «puede», «algunos» y «en esta muestra» pueden indicar límites importantes. Conserva los términos técnicos si una alternativa reduce la precisión."]},
           {"heading":"Protege las pruebas y el contexto","paragraphs":["Conserva los detalles que permiten entender o verificar la idea: nombres, fechas, unidades, fuentes, condiciones y transiciones necesarias. Una oración más breve no mejora si oculta quién hizo qué o elimina el motivo de una conclusión.","Después de acortar un párrafo, léelo sin mirar el original. Si la idea, las pruebas o la relación entre conceptos ya no se entienden, recupera el contexto necesario."]},
           {"heading":"Vuelve a contar la versión que vas a entregar","paragraphs":["Haz una revisión cada vez y después comprueba el texto completo. Pega la versión final en el contador de palabras de TextToools y sigue el método indicado por tu tarea, editorial o formulario; los contadores pueden separar las palabras de manera distinta.","Por último, lee el texto en voz alta y comprueba que siga sonando natural y propio. El objetivo no es usar el menor número de palabras posible, sino expresar la idea con claridad y cumplir las instrucciones."]}
+        ]
+      },
+      "how-long-should-a-blog-post-be": {
+        "modified": "2026-10-09",
+        "image": "blog-images/es/blog-post-length.svg",
+        "imageAlt": "Un proceso de escritura en tres partes: entender la pregunta del lector, ofrecer una respuesta útil y revisar hasta completar la tarea.",
+        "title": "¿Cuántas palabras debe tener una entrada de blog? Guía práctica | TextToools",
+        "description": "Elige la extensión de una entrada según la intención del lector, la complejidad del tema y la revisión, no según una cifra fija para SEO.",
+        "summary": "No existe un número de palabras ideal para todos los artículos. Usa la tarea del lector, las pruebas disponibles y una revisión clara para decidir cuándo está completo.",
+        "sections": [
+          {
+            "heading": "Respuesta breve: termina cuando el lector tenga lo que necesita",
+            "paragraphs": [
+              "Una entrada debe tener la extensión necesaria para responder con claridad y responsabilidad a la pregunta real del lector, y no más. No hay un recuento único que sirva para todos los temas, públicos y formatos.",
+              "Empieza por la función del artículo. Una definición puede necesitar solo unos párrafos. Una guía práctica quizá requiera pasos, ejemplos y solución de problemas. Una guía de investigación puede necesitar métodos, pruebas, limitaciones y fuentes. La diferencia está en el trabajo que exige la respuesta, no en una cifra mágica.",
+              "Si necesitas una estimación para planificar, úsala para reservar tiempo u organizar el borrador. Después, deja que las necesidades del lector decidan qué contenido se queda."
+            ]
+          },
+          {
+            "heading": "Por qué no existe una extensión ideal universal",
+            "paragraphs": [
+              "La expresión «mejor extensión para una entrada de blog» puede hacer pensar que todos los artículos compiten en las mismas condiciones, pero no es así. Quien busca un dato rápido necesita algo distinto de quien debe seguir un proceso complejo o comparar varias opciones.",
+              "Fijar un objetivo antes de entender la pregunta puede producir dos problemas opuestos: un artículo superficial que omite contexto necesario o un texto inflado que repite la misma idea. Alcanzar una cifra concreta no vuelve útil a ninguno de los dos.",
+              "La guía de Google sobre contenido útil indica explícitamente que no existe un recuento de palabras preferido. Esto no significa que la extensión nunca afecte a la experiencia; significa que no conviene tratarla como una fórmula de posicionamiento. La prioridad es que la página sea útil, fiable y completa para su propósito."
+            ]
+          },
+          {
+            "heading": "Qué puede y qué no puede decir la encuesta más reciente",
+            "paragraphs": [
+              "La encuesta de blogs de Orbit Media de 2026, basada en respuestas de 1.042 profesionales del marketing de contenidos, sitúa la extensión media de los artículos en 1.312 palabras. Es una instantánea de lo que publican las personas encuestadas, no una recomendación para todos los artículos.",
+              "Una media general no indica cuántas palabras necesita una respuesta concreta ni demuestra que añadir palabras produzca mejores resultados. Las personas encuestadas trabajan con temas y públicos distintos, y sus resultados declarados no son una prueba controlada de una extensión específica. Usa la cifra como contexto, no como requisito."
+            ]
+          },
+          {
+            "heading": "Adapta la extensión a la tarea del lector",
+            "paragraphs": [
+              "Para una respuesta rápida, empieza con la respuesta, explica las salvedades importantes y ofrece un siguiente paso si resulta útil. Si el lector puede completar la tarea sin una introducción extensa, elimínala.",
+              "Para una guía paso a paso, incluye los requisitos previos, los pasos en el orden correcto, un ejemplo realista y los errores que podrían cambiar el resultado. Conserva los detalles que ayudan a completar o verificar la tarea; elimina lo que solo repite las instrucciones.",
+              "En una comparación, un resumen de investigación o una guía de referencia, explica cómo seleccionaste y comprobaste la información. Define los términos, muestra diferencias relevantes, cita fuentes originales e indica qué no permiten concluir las pruebas. Ese trabajo puede justificar un artículo más largo, pero la extensión debe responder a las pruebas, no sustituirlas."
+            ]
+          },
+          {
+            "heading": "Un método práctico para decidir la extensión",
+            "paragraphs": [
+              "1. Escribe en una frase la pregunta del lector. Especifica la persona, la situación y la decisión o tarea. «¿Cuántas palabras debe tener una entrada?» es amplio; «¿Cómo puede una pequeña empresa saber si su borrador responde a quien llega desde una búsqueda?» concreta mejor el encargo.",
+              "2. Decide qué debe incluir una respuesta satisfactoria. Anota los datos, pasos, ejemplos, salvedades y fuentes que alguien necesita para actuar con confianza. Separa la información imprescindible del contexto que solo resulta interesante.",
+              "3. Consulta los resultados actuales y las fuentes fiables para entender la intención, no para copiar una cifra. Observa si aparecen definiciones, instrucciones, comparaciones o investigaciones originales. Anota dudas que siguen sin respuesta y verifica las afirmaciones importantes en fuentes primarias.",
+              "4. Prepara un esquema breve a partir de esos requisitos. Asigna una función a cada sección y coloca pronto la respuesta más directa. Si dos apartados repiten la misma idea, combínalos antes de redactar.",
+              "5. Redacta la respuesta completa sin obligar a que todas las secciones tengan la misma extensión. Añade ejemplos cuando ayuden a aplicar una idea y pruebas cuando una afirmación necesite respaldo. No alargues una explicación sencilla para alcanzar una cifra arbitraria.",
+              "6. Revisa la utilidad y después comprueba el recuento final. Quita repeticiones, conserva los matices y las pruebas necesarias y confirma que el título, la introducción y el cierre coinciden con el contenido. Si la tarea o editorial exige un método de recuento concreto, síguelo."
+            ]
+          },
+          {
+            "heading": "Usa los resultados de búsqueda para entender, no para copiar",
+            "paragraphs": [
+              "Revisar las páginas que aparecen para una consulta puede revelar el formato y las preguntas secundarias que esperan los lectores. También permite detectar respuestas confusas, desactualizadas o carentes de detalles prácticos. Esa investigación es útil aunque las páginas tengan extensiones muy distintas.",
+              "No des por hecho que el resultado más largo es el mejor modelo ni que igualar su número de palabras hará que tu artículo compita mejor. Los resultados cambian y pueden posicionarse por motivos distintos de la extensión. Úsalos para entender la tarea y luego aporta información original y precisa que sirva a tu público."
+            ]
+          },
+          {
+            "heading": "El recuento y el tiempo de lectura son herramientas, no notas de calidad",
+            "paragraphs": [
+              "Un contador permite medir un borrador, comparar versiones y cumplir un límite explícito. No puede decirte si el razonamiento es claro, los datos son correctos o se respondió a la pregunta. Si una publicación define su método, utiliza esa definición; los contadores pueden tratar de forma distinta la puntuación, los guiones, los títulos y las referencias.",
+              "El tiempo de lectura también es una estimación. TextToools permite cambiar la velocidad de lectura supuesta, lo que ayuda a comparar borradores o informar al lector, pero cada persona lee a un ritmo distinto y puede saltarse o volver a leer secciones. Úsalo como orientación, no como promesa de que todas las visitas terminarán en ese tiempo."
+            ]
+          },
+          {
+            "heading": "¿Cuándo está terminado el borrador?",
+            "paragraphs": [
+              "El borrador está listo cuando responde pronto a la pregunta, respalda las afirmaciones importantes, incluye los detalles necesarios para aplicar la respuesta y explica sus límites. También debe ser fácil de recorrer: títulos descriptivos, párrafos centrados y ejemplos que aclaran en lugar de decorar.",
+              "Léelo desde el punto de vista del lector. ¿Encuentra la respuesta? ¿Hay secciones que repiten otras? ¿Conservaste la fuente, la fecha, la unidad o la excepción que cambia cómo se entiende una afirmación? Elimina lo que no ayuda y recupera cualquier dato cuya ausencia vuelva engañosa la respuesta.",
+              "El resultado final puede tener 500 palabras, 1.300 o más. Esas cifras son consecuencia del trabajo, no reglas que haya que cumplir. Un artículo útil se gana su extensión al ayudar a alguien a completar una tarea real."
+            ]
+          },
+          {
+            "heading": "¿Qué pasa si el encargo fija un rango de palabras?",
+            "paragraphs": [
+              "Algunas tareas, editoriales y clientes establecen un mínimo o un máximo. Trata ese rango como una condición práctica junto con las necesidades del lector, no como una prueba de que añadir palabras mejora el artículo. Confirma qué incluye el recuento: títulos, encabezados, pies de imagen, notas y referencias pueden contabilizarse de forma distinta.",
+              "Si hay un mínimo, cúmplelo con explicaciones, pruebas o ejemplos relevantes, no con relleno. Si hay un máximo, protege primero la respuesta y sus matices esenciales; después elimina repeticiones o contexto secundario. Si no cabe información importante, pregunta si se permite un anexo o una página relacionada en lugar de quitar el contexto que necesita quien lee."
+            ]
+          },
+          {
+            "heading": "Si el borrador parece demasiado corto o demasiado largo",
+            "paragraphs": [
+              "Un borrador corto no está necesariamente incompleto. Compáralo con el esquema: ¿define los términos menos conocidos, responde a todas las partes de la pregunta, respalda las afirmaciones necesarias y menciona excepciones que podrían cambiar el consejo? Añade solo lo que ayude al lector a actuar o comprender.",
+              "En un borrador largo, busca afirmaciones repetidas, introducciones genéricas, antecedentes irrelevantes y subtemas que merezcan una guía aparte. Conserva el contexto, los matices y los ejemplos que cambian o verifican la respuesta. Después de editar, vuelve a leer el inicio y los encabezados para confirmar que describen el artículo final."
+            ]
+          }
         ]
       }
     }

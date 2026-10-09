@@ -207,5 +207,107 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "how-long-should-a-blog-post-be",
+    "published": "2026-10-09",
+    "modified": "2026-10-09",
+    "title": "How Long Should a Blog Post Be? A Practical Guide | TextToools",
+    "description": "Choose a useful blog post length based on reader intent, topic complexity, and editing—not a fixed SEO word count.",
+    "summary": "There is no universal ideal word count. Use the reader's task, the evidence available, and a clear editing process to decide when a post is complete.",
+    "image": "blog-images/blog-post-length.svg",
+    "imageAlt": "A simple three-part writing process: understand the reader's question, provide a useful answer, and edit until the task is complete.",
+    "sections": [
+      {
+        "heading": "The short answer: stop when the reader has what they need",
+        "paragraphs": [
+          "A blog post should be long enough to answer its reader's real question clearly and responsibly—and no longer than it needs to be. There is no single word count that works for every topic, audience, or format.",
+          "Start with the job the article must do. A short definition may need only a few paragraphs. A practical tutorial may need steps, examples, and troubleshooting. A research guide may need methods, evidence, limitations, and sources. The difference is the work involved, not a magic number.",
+          "If you need a planning estimate, use one only to reserve time or organize a draft. Treat it as a working range, then let the reader's needs decide what stays."
+        ]
+      },
+      {
+        "heading": "Why there is no universal ideal word count",
+        "paragraphs": [
+          "The phrase “best blog post length” can make it sound as if every article competes under the same conditions. They do not. A reader looking for one quick fact has a different need from someone following a complicated process or comparing several options.",
+          "A word target chosen before you understand the question can lead to two opposite problems: a thin article that skips necessary context, or a padded article that repeats the same point. Neither becomes useful merely by reaching a particular total.",
+          "Google's people-first content guidance explicitly says it does not have a preferred word count. That is not a promise that all short and long pages perform equally; it is a reason not to treat length itself as a ranking recipe. Focus on whether the page is helpful, reliable, and complete for its purpose."
+        ]
+      },
+      {
+        "heading": "What the latest survey can—and cannot—tell you",
+        "paragraphs": [
+          "Orbit Media's 2026 blogger survey, based on responses from 1,042 content marketers, reports an average article length of 1,312 words. This is useful as a snapshot of what the survey respondents publish; it is not a recommended target for every article.",
+          "A broad survey average cannot tell you how long a specific answer should be, and it does not prove that adding words causes better results. The respondents work across different subjects and audiences, and reported outcomes are not a controlled test of one exact length. Use the figure as context, not as a brief."
+        ]
+      },
+      {
+        "heading": "Match the length to the reader's task",
+        "paragraphs": [
+          "For a quick answer, put the answer first, explain any important qualification, and point to a next step if one is useful. If the reader can finish the task without a long background section, leave that section out.",
+          "For a how-to guide, include the prerequisites, the steps in the order they are performed, a realistic example, and the mistakes that could change the result. Keep each detail that helps someone complete or verify the task; remove details that only repeat the instructions.",
+          "For a comparison, research summary, or reference guide, explain how you selected and checked the information. Define important terms, show meaningful differences, cite primary sources, and state what the evidence cannot establish. This work can justify a longer article, but the word count follows the evidence—it does not replace it."
+        ]
+      },
+      {
+        "heading": "A practical way to choose your target",
+        "paragraphs": [
+          "1. Write the reader's question as one sentence. Be specific about the person, situation, and decision or task. “How long should a blog post be?” is broad; “How can a small business decide whether a draft answers a searcher's question?” gives you a clearer assignment.",
+          "2. Decide what a satisfactory answer must contain. List the facts, steps, examples, caveats, and sources a reader would need to act confidently. Separate essential information from background that is merely interesting.",
+          "3. Check the current search results and trusted sources for intent, not for a number to copy. Notice whether readers are being shown definitions, instructions, comparisons, or original research. Record unanswered questions and verify important claims against primary sources.",
+          "4. Make a short outline from those requirements. Give each section one job and put the most direct answer early. If two sections make the same point, combine them before drafting.",
+          "5. Draft the complete answer without forcing every section to the same size. Add examples where they make an idea easier to apply; add evidence where a claim needs support. Do not stretch a simple explanation to reach an arbitrary target.",
+          "6. Edit for usefulness, then check the final count. Remove repetition, preserve necessary limits and evidence, and confirm that the title, introduction, and conclusion all match the article. If a strict assignment or publisher has its own counting rule, follow that rule."
+        ]
+      },
+      {
+        "heading": "Use search results to understand expectations, not to copy",
+        "paragraphs": [
+          "Looking at the pages currently shown for a query can reveal the format and subquestions readers may expect. It can also show where the available answers are unclear, out of date, or missing practical details. That is useful research even when the competing pages vary greatly in length.",
+          "Do not assume the longest result is the best model, or that matching its word count will make your article competitive. Search results change, and pages may rank for reasons beyond their length. Use them to understand the task, then add accurate, original value that your intended reader can use."
+        ]
+      },
+      {
+        "heading": "Word count and reading time are editing tools, not quality scores",
+        "paragraphs": [
+          "A word counter helps you measure a draft, compare versions, and meet an explicit limit. It cannot tell whether the argument is clear, the facts are right, or the reader's question has been answered. If a publication gives a counting method, use its definition; counters can treat punctuation, hyphens, headings, and references differently.",
+          "Reading time is also an estimate. TextToools lets you adjust the assumed reading speed, which is useful for comparing drafts or setting expectations, but people read at different speeds and may skip or revisit sections. Use the estimate as a convenience, not a claim that every visitor will finish in that time."
+        ]
+      },
+      {
+        "heading": "When is the draft complete?",
+        "paragraphs": [
+          "A draft is ready when it answers the question near the beginning, supports important claims, includes the detail needed to use the answer, and makes its limits clear. The article should also be easy to scan: descriptive headings, focused paragraphs, and examples that clarify rather than decorate.",
+          "Read it once from the reader's point of view. Can they find the answer? Is any section repeating another? Have you kept the source, date, unit, or exception that changes how a claim should be understood? Remove what does not help, and restore anything whose absence makes the answer misleading.",
+          "The final number may be 500 words, 1,300 words, or more. Those totals are outcomes of the work, not standards to satisfy. A useful article earns its length by helping someone finish a real task."
+        ]
+      },
+      {
+        "heading": "What if a brief requires a word-count range?",
+        "paragraphs": [
+          "Assignments, publishers, and clients sometimes set a minimum or maximum. Treat that range as a practical constraint alongside the reader's needs, not proof that extra words automatically improve an article. Check what the count includes: titles, headings, captions, notes, and references may be treated differently.",
+          "If there is a minimum, meet it with relevant explanations, evidence, or examples—not padding. If there is a maximum, protect the answer and its essential qualifications before cutting repetition or background. If important material will not fit, ask whether a linked companion page or appendix is acceptable instead of removing context that readers need."
+        ]
+      },
+      {
+        "heading": "If a draft feels too short or too long",
+        "paragraphs": [
+          "A short draft is not automatically incomplete. Compare it with your outline: does it define unfamiliar terms, answer every part of the question, support claims that need evidence, and mention exceptions that could change the advice? Add only the missing pieces that help the reader act or understand.",
+          "For a long draft, look for repeated claims, generic introductions, unrelated history, and subtopics that deserve a separate guide. Keep context, caveats, and examples that change or verify the answer. After either kind of edit, read the opening and headings again to make sure they still describe the finished article."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Creating helpful, reliable, people-first content",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "title": "2026 Blogging Statistics: What 1,042 Content Marketers Told Us About What Works",
+        "publisher": "Orbit Media Studios",
+        "url": "https://www.orbitmedia.com/blog/blogging-statistics/"
+      }
+    ]
   }
 ]

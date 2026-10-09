@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">为读者写作，而非追逐字数</title>
+  <desc id="desc">三步写作流程：理解读者的问题，提供有用的答案，并持续编辑到任务完成。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  写作指南</text>
+  <text x="80" y="158" fill="#172033" font-family="Arial, sans-serif" font-size="43" font-weight="700">为读者写作，而非追逐字数。</text>
+  <text x="80" y="199" fill="#647084" font-family="Arial, sans-serif" font-size="21">用实用的方法判断文章何时完成。</text>
+  <rect x="80" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="440" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="800" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <circle cx="122" cy="298" r="18" fill="#EEE9F3"/>
+  <circle cx="482" cy="298" r="18" fill="#EEE9F3"/>
+  <circle cx="842" cy="298" r="18" fill="#EEE9F3"/>
+  <text x="113" y="305" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">01</text>
+  <text x="473" y="305" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">02</text>
+  <text x="833" y="305" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">03</text>
+  <text x="116" y="351" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">明确读者问题</text>
+  <text x="476" y="351" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">给出有效答案</text>
+  <text x="836" y="351" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">有目的地编辑</text>
+  <text x="116" y="391" fill="#647084" font-family="Arial, sans-serif" font-size="17">明确读者要完成的任务。</text>
+  <text x="476" y="391" fill="#647084" font-family="Arial, sans-serif" font-size="17">补充有用细节和证据。</text>
+  <text x="836" y="391" fill="#647084" font-family="Arial, sans-serif" font-size="17">删除无助于读者的内容。</text>
+  <path d="M408 359H427" stroke="#69558E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M419 351L427 359L419 367" stroke="#69558E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M768 359H787" stroke="#69558E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M779 351L787 359L779 367" stroke="#69558E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="548" fill="#647084" font-family="Arial, sans-serif" font-size="19">没有适用于所有文章的理想字数。</text>
+</svg>
