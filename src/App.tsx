@@ -2136,9 +2136,11 @@ function App() {
                     ? toolList.filter((tool) => tool.id === 'text-cleaner')
                     : activeBlogPost.slug === 'how-to-count-characters-including-spaces'
                       ? toolList.filter((tool) => tool.id === 'character-counter')
-                      : activeBlogPost.slug === 'how-long-should-a-blog-post-be'
-                        ? toolList.filter((tool) => tool.id === 'word-counter' || tool.id === 'reading-time')
-                        : toolList.filter((tool) => tool.id === 'word-counter')
+                      : activeBlogPost.slug === 'how-long-to-read-1000-words'
+                        ? toolList.filter((tool) => tool.id === 'reading-time')
+                        : activeBlogPost.slug === 'how-long-should-a-blog-post-be'
+                          ? toolList.filter((tool) => tool.id === 'word-counter' || tool.id === 'reading-time')
+                          : toolList.filter((tool) => tool.id === 'word-counter')
                 ).map((tool) => (
                   <a
                     key={tool.id}

@@ -1,5 +1,85 @@
 [
   {
+    "slug": "how-long-to-read-1000-words",
+    "published": "2026-10-11",
+    "title": "How Long Does It Take to Read 1,000 Words? | TextToools",
+    "description": "Estimate how long 1,000 words takes to read, see the words-per-minute formula, and adjust for your pace, text, and reading context.",
+    "summary": "At 200 words per minute, 1,000 words takes about five minutes. Your actual time depends on the text, language, reading purpose, and personal pace.",
+    "image": "blog-images/reading-time-estimate.svg",
+    "imageAlt": "A three-step reading-time estimate: count 1,000 words, divide by 200 words per minute, and get about five minutes.",
+    "sections": [
+      {
+        "heading": "The quick answer: about five minutes at 200 words per minute",
+        "paragraphs": [
+          "If you read 1,000 words at 200 words per minute, the estimate is five minutes. At 238 words per minute, it is about four minutes and 13 seconds when rounded up to the next second. Reading the same passage aloud at 183 words per minute takes about five minutes and 28 seconds.",
+          "These are estimates, not promises. A familiar, straightforward passage may take less time; dense, unfamiliar material may take longer. Your own pace and whether you are reading silently or aloud matter too."
+        ]
+      },
+      {
+        "heading": "The reading-time formula",
+        "paragraphs": [
+          "For a word-based estimate, divide the number of words by the reading speed in words per minute. The result is time in minutes: reading time = word count ÷ words per minute.",
+          "For example, 1,000 ÷ 200 = 5 minutes. A 1,500-word article at the same speed takes 7.5 minutes, or 7 minutes and 30 seconds. If the calculator rounds to whole seconds, a fractional second is rounded up.",
+          "The formula is simple; choosing a realistic speed is the harder part. Use the same counting method throughout, and include headings or other text if readers are expected to read them."
+        ]
+      },
+      {
+        "heading": "How long does 1,000 words take at different speeds?",
+        "paragraphs": [
+          "At 150 words per minute, 1,000 words takes 6 minutes and 40 seconds. At 200 words per minute, it takes 5 minutes. At 238 words per minute, it takes about 4 minutes and 13 seconds. At 260 words per minute, it takes about 3 minutes and 51 seconds.",
+          "For reading aloud, 183 words per minute works out to about 5 minutes and 28 seconds. A speech or presentation can take longer once you add pauses, emphasis, audience reactions, or time to show slides. Rehearsing the actual script is more reliable than using a silent-reading rate."
+        ]
+      },
+      {
+        "heading": "What research says about average reading speed",
+        "paragraphs": [
+          "A 2019 review and meta-analysis by Marc Brysbaert combined results from 190 studies. It estimated average silent reading rates for adults reading English at 238 words per minute for non-fiction and 260 for fiction; the average rate for reading aloud was 183 words per minute.",
+          "Those figures are useful reference points, not targets that every reader should match. They describe averages across research samples, not a guarantee for an individual, a particular article, or every language. The study's English-language rates should not be applied directly to Chinese text, and they do not replace timing your own material."
+        ]
+      },
+      {
+        "heading": "Why your reading time may be different",
+        "paragraphs": [
+          "Familiarity changes how much effort a passage takes. You may move quickly through a topic you know and slow down to learn unfamiliar names, concepts, or instructions. Technical vocabulary, long sentences, complex arguments, and tables can all make an article take longer than its word count suggests.",
+          "Reading purpose matters too. Skimming for one fact is not the same as studying a chapter, checking a source, or reading carefully for accuracy. A person may pause, reread a sentence, take notes, or switch between text and a diagram. A word-per-minute formula cannot see those actions.",
+          "Language and writing system also matter. Word counts are not directly comparable across languages: some writing systems do not separate words with spaces in the same way as English. Use a method and speed that make sense for the actual text instead of carrying an English benchmark over unchanged."
+        ]
+      },
+      {
+        "heading": "How to measure your own reading speed",
+        "paragraphs": [
+          "1. Choose a representative passage in the language and format you usually read. Avoid a passage you already know by heart.",
+          "2. Count the words using one consistent method. Start a timer when you begin reading and stop when you reach the end, including natural pauses if you want a realistic estimate.",
+          "3. Divide the word count by the time in minutes. If you read 600 words in three minutes, your measured rate for that passage is 200 words per minute.",
+          "4. Repeat with two or three similar passages and use the rough average. One short sample can be affected by an interruption, unusually easy wording, or a difficult paragraph.",
+          "5. Keep comprehension in the test. If reading faster means missing key points, the faster number is not useful for planning careful reading."
+        ]
+      },
+      {
+        "heading": "Use reading-time estimates thoughtfully",
+        "paragraphs": [
+          "For an article or lesson, an approximate reading time can help someone decide whether to start now or save it for later. State that it is an estimate, and base it on a clear method rather than presenting it as the exact time every visitor will need.",
+          "For speeches, lessons, or timed assessments, use a rehearsal or timed practice with the actual material. Include pauses, transitions, questions, and any time needed to inspect images or examples. A silent-reading estimate does not account for those parts.",
+          "If accessibility settings, fatigue, translation, or a need to reread affect the reader, allow extra time. The estimate should set expectations, not pressure people to read at a particular speed."
+        ]
+      },
+      {
+        "heading": "Try the TextToools Reading Time Calculator",
+        "paragraphs": [
+          "Paste the passage you want to estimate into the TextToools Reading Time Calculator and adjust the speed to fit your use case. The English and Spanish versions estimate from word counts; the Chinese version uses non-space, non-punctuation, non-symbol characters per minute. The English research averages above are not a calibration for Chinese reading.",
+          "Use the result to compare drafts or plan a rough schedule, then time yourself when the estimate needs to be dependable. The number is a starting point—not a measure of comprehension or a deadline."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "How many words do we read per minute? A review and meta-analysis of reading rate",
+        "publisher": "Journal of Memory and Language",
+        "url": "https://doi.org/10.1016/j.jml.2019.104047"
+      }
+    ]
+  },
+  {
     "slug": "how-word-counters-count-hyphenated-words",
     "published": "2026-10-03",
     "modified": "2026-10-05",
