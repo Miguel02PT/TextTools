@@ -1437,7 +1437,7 @@ function App() {
         {routeKind === 'home' ? (
           <>
             <section className="rounded-2xl bg-[#f0eef8] px-5 py-9 text-center sm:px-8 sm:py-12">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
             TextToools
           </p>
           <h1 className="text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
@@ -1511,7 +1511,7 @@ function App() {
         ) : null}
 
         {activeToolGuide ? (
-          <div className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-500">
+          <div className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-600">
             <a href={localizedHref()} className="hover:text-slate-900">
               {localeText?.home ?? 'Home'}
             </a>
@@ -1526,7 +1526,7 @@ function App() {
 
         {activeToolGuide ? (
           <section className="mb-5 rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-600">
               {routeTool ? categoryLabel(routeTool.category) : ''}
             </p>
             <h1 className="mt-1 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
@@ -2097,7 +2097,7 @@ function App() {
 
         {activeBlogPost && localizedBlogPost ? (
           <article className="mx-auto max-w-4xl space-y-6">
-            <nav aria-label={localizedCopy(locale, 'Breadcrumb', '面包屑导航')} className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+            <nav aria-label={localizedCopy(locale, 'Breadcrumb', '面包屑导航')} className="flex flex-wrap items-center gap-2 text-sm text-slate-600">
               <a href={localizedHref()} className="hover:text-slate-900">
                 {localeText?.home ?? 'Home'}
               </a>
@@ -2109,7 +2109,7 @@ function App() {
               <span className="text-slate-700">{localizedBlogPost.title}</span>
             </nav>
             <header className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-sm font-medium text-slate-600">
                 <time dateTime={activeBlogPost.published}>
                   {localeText?.articleDate ?? 'Published:'} {activeBlogPost.published}
                 </time>
