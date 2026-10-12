@@ -29,12 +29,13 @@ delivery service is chosen and configured.
 
 ## Search pages
 
-The production build pre-renders English, Simplified Chinese, and Spanish pages for the
-home page, each tool, the FAQ, About, Privacy, Terms, Contact, Report a bug, and the blog.
-Blog articles are also pre-rendered in all three languages. Localized pages use `/zh-cn/`
-and `/es/` path prefixes, emit reciprocal `hreflang` links, and appear in `sitemap.xml`.
-The English home page remains the default; supported browser languages may receive a
-dismissible suggestion to switch languages, but the site never redirects automatically.
+The production build pre-renders English, Simplified Chinese, Spanish, and Brazilian
+Portuguese pages for the home page, each tool, the FAQ, About, Privacy, Terms, Contact,
+Report a bug, and the blog. Blog articles are also pre-rendered in all four languages.
+Localized pages use `/zh-cn/`, `/es/`, and `/pt-br/` path prefixes, emit reciprocal
+`hreflang` links, and appear in `sitemap.xml`. The English home page remains the default;
+supported browser languages may receive a dismissible suggestion to switch languages, but
+the site never redirects automatically.
 
 The default canonical URL, sitemap, robots.txt, and production asset base target the live
 custom domain, `https://texttoools.com/`. When deploying to another host or path, set
