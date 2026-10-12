@@ -443,6 +443,95 @@
           {"heading":"Vuelve a contar la versión que vas a entregar","paragraphs":["Haz una revisión cada vez y después comprueba el texto completo. Pega la versión final en el contador de palabras de TextToools y sigue el método indicado por tu tarea, editorial o formulario; los contadores pueden separar las palabras de manera distinta.","Por último, lee el texto en voz alta y comprueba que siga sonando natural y propio. El objetivo no es usar el menor número de palabras posible, sino expresar la idea con claridad y cumplir las instrucciones."]}
         ]
       },
+      "find-replace-text-safely": {
+        "modified": "2026-10-12",
+        "image": "blog-images/es/find-replace-safely.svg",
+        "imageAlt": "Un flujo de tres pasos para buscar y reemplazar: buscar una frase, sustituirla y revisar tres coincidencias.",
+        "title": "Cómo buscar y reemplazar texto de forma segura: guía práctica | TextToools",
+        "description": "Aprende a elegir coincidencias precisas, evitar sustituciones no deseadas, revisar el recuento y actualizar texto repetido con seguridad.",
+        "summary": "Un método práctico para buscar y reemplazar texto repetido sin cambiar más de lo previsto.",
+        "sections": [
+          {
+            "heading": "Respuesta breve: comprueba el alcance antes de reemplazar",
+            "paragraphs": [
+              "Buscar y reemplazar es más seguro si lo tratas como un pequeño proceso de edición, no como un botón que se pulsa y se olvida. Define exactamente qué debe cambiar, limita la coincidencia, comprueba cuántas apariciones se modificarán y revisa el texto editado en contexto.",
+              "Esto importa porque una sustitución puede actualizar muchas apariciones de una vez. Corregir el nombre de un proyecto puede ser sencillo; cambiar una palabra común, una fecha o una abreviatura puede alterar sin que lo notes ejemplos, enlaces, citas o el sentido."
+            ]
+          },
+          {
+            "heading": "Define el cambio exacto antes de buscar",
+            "paragraphs": [
+              "Anota el texto anterior y el nuevo antes de editar. Incluye puntuación, espacios, mayúsculas y cualquier versión o fecha pertinente. Si cambias el nombre de un producto, por ejemplo, decide si también debe cambiar en títulos, citas, URL, código y notas antiguas, o solo en el texto principal actual.",
+              "Después determina el alcance: un párrafo, todo un documento o varios archivos. Una sustitución segura en un anuncio breve puede ser arriesgada en un informe extenso. Si el editor actúa sobre todo el documento, limita primero la selección cuando sea posible o trabaja sobre una copia."
+            ]
+          },
+          {
+            "heading": "Elige las opciones de coincidencia con intención",
+            "paragraphs": [
+              "La distinción entre mayúsculas y minúsculas controla la capitalización. Desactivada, una búsqueda de «borrador» también puede encontrar «Borrador»; activada, son coincidencias distintas. Úsala para identificadores, siglas, nombres de archivo y etiquetas cuya capitalización tenga significado. Si quieres uniformarla, déjala desactivada solo después de revisar el alcance.",
+              "La opción de palabra completa ayuda a distinguir una palabra independiente de esas mismas letras dentro de otra más larga. Al buscar «sol» como palabra completa, no se cambia «consola». Sin embargo, no entiende la gramática: la puntuación, como un guion, puede marcar un límite; revisa los términos compuestos y con guion si son importantes.",
+              "Esta opción es útil con palabras comunes, pero no sustituye la revisión del recuento y del contexto. Conviene probar primero con un fragmento si buscas nombres, siglas, códigos de producto o texto con acentos."
+            ]
+          },
+          {
+            "heading": "Comprueba si la búsqueda es literal o usa patrones",
+            "paragraphs": [
+              "Una búsqueda literal busca exactamente los caracteres que escribes. En Buscar y reemplazar de TextToools, símbolos como «+», «.» y «(» se buscan como texto normal, no como operadores de expresiones regulares. Por ejemplo, buscar «a+b» encuentra esa secuencia exacta, no «una o más aes seguidas de b». El texto de sustitución se inserta tal como lo escribes; una sustitución vacía elimina deliberadamente la coincidencia y una búsqueda vacía no cambia el texto.",
+              "La búsqueda por patrones, a menudo llamada expresiones regulares, es otra función para encontrar reglas como varios formatos de fecha. No des por hecho que todos los editores interpretan igual los caracteres especiales. Google Docs ofrece una opción explícita para usar expresiones regulares; actívala intencionadamente y comprueba las coincidencias antes de reemplazar."
+            ]
+          },
+          {
+            "heading": "Un proceso cuidadoso para reemplazar varias coincidencias",
+            "paragraphs": [
+              "1. Guarda una copia o confirma que puedes deshacer el cambio y consultar el historial de versiones. Así tendrás una vía para recuperar el original si el resultado es más amplio de lo previsto.",
+              "2. Busca primero el texto anterior. Lee varias coincidencias con su contexto y decide cuáles deben cambiar. Si el recuento es inesperadamente alto, detente y concreta la frase o ajusta las opciones de mayúsculas y palabra completa.",
+              "3. Escribe exactamente cómo debe aparecer el texto nuevo. Comprueba mayúsculas, espacios, puntuación y que la nueva expresión encaje en todas las frases donde se insertará.",
+              "4. Aplica la sustitución y anota el recuento. TextToools reemplaza todas las coincidencias a la vez; el número es una comprobación útil, no una garantía de que cada cambio sea correcto.",
+              "5. Revisa ejemplos del principio, del medio y del final, además de títulos, listas, citas y cualquier sección importante. Lee la frase completa si el cambio de una palabra puede afectar al tono o a la gramática.",
+              "6. Vuelve a buscar la expresión anterior y revisa la nueva. Comprueba que no falte ninguna coincidencia prevista y que la sustitución no haya creado repeticiones extrañas ni cambiado texto ajeno."
+            ]
+          },
+          {
+            "heading": "Ejemplos en los que una sustitución rápida puede fallar",
+            "paragraphs": [
+              "Cambiar el apellido de una persona puede modificar por accidente otra palabra que contenga las mismas letras. Sustituir «May» puede afectar al mes de mayo, a un nombre propio o al verbo inglés «may»; las opciones de mayúsculas y palabra completa ayudan, pero el contexto sigue determinando si cada coincidencia es válida.",
+              "También puedes cambiar contenido que debería permanecer exacto: una cita, texto legal, un ejemplo de código, una URL, un correo electrónico o una etiqueta histórica. Si esas secciones tienen reglas distintas, edítalas por separado en vez de aplicar una sustitución amplia a todo.",
+              "Por último, reemplazar una frase corta por otra más larga puede crear espacios dobles, palabras repetidas o problemas gramaticales. El recuento indica cuántas sustituciones ocurrieron, no si las frases revisadas se leen bien."
+            ]
+          },
+          {
+            "heading": "Mantén el control del texto y del resultado final",
+            "paragraphs": [
+              "Antes de compartir o publicar un cambio importante, conserva el original y compara el resultado. Si el documento es colaborativo, avisa a quienes lo revisen qué expresión cambió y dónde conviene comprobarla. Para texto confidencial o sensible, usa un proceso y una herramienta aprobados para ese material.",
+              "Buscar y reemplazar de TextToools realiza la sustitución en el navegador y muestra el número de coincidencias, lo que permite revisar un bloque de texto sin subirlo a un servicio de procesamiento de texto. Sea cual sea la herramienta, revisa el documento final, no solo los resultados de búsqueda, y conserva una copia recuperable hasta quedar conforme."
+            ]
+          },
+          {
+            "heading": "Una reflexión del fundador",
+            "paragraphs": [
+              "Mientras trabajaba en Buscar y reemplazar de TextToools, algo quedó claro para mí: el número de coincidencias forma parte de la edición, no es un detalle menor. Verlo antes de confiar en un cambio masivo puede revelar que la búsqueda es más amplia de lo que pretendías. Por eso recomiendo usar ese número como punto de control y después leer el texto modificado en contexto."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Buscar y reemplazar palabras en un documento, hoja de cálculo o presentación",
+            "publisher": "Ayuda de los editores de Google Docs",
+            "url": "https://support.google.com/docs/answer/62754?hl=en"
+          },
+          {
+            "title": "Buscar y reemplazar texto en Word",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/find-and-replace-text-in-word"
+          }
+        ]
+      },
       "how-long-should-a-blog-post-be": {
         "modified": "2026-10-09",
         "image": "blog-images/es/blog-post-length.svg",

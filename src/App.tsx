@@ -2140,6 +2140,8 @@ function App() {
                         ? toolList.filter((tool) => tool.id === 'reading-time')
                         : activeBlogPost.slug === 'how-long-should-a-blog-post-be'
                           ? toolList.filter((tool) => tool.id === 'word-counter' || tool.id === 'reading-time')
+                          : activeBlogPost.slug === 'find-replace-text-safely'
+                            ? toolList.filter((tool) => tool.id === 'find-replace')
                           : toolList.filter((tool) => tool.id === 'word-counter')
                 ).map((tool) => (
                   <a

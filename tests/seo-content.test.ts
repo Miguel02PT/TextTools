@@ -206,3 +206,38 @@ test('every English article has localized Chinese and Spanish alt text and socia
     }
   }
 })
+
+test('find-and-replace guide is sourced and has localized author notes', () => {
+  const posts = [
+    {
+      post: parsedEnglishBlogPosts.find(
+        (article: { slug: string }) => article.slug === 'find-replace-text-safely',
+      ),
+      authorHeading: 'About the author',
+      authorText: 'Written by the founder of TextToools.',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['find-replace-text-safely'],
+      authorHeading: 'Sobre el autor',
+      authorText: 'Escrito por el fundador de TextToools.',
+    },
+    {
+      post: parsedChineseContent.blog.posts['find-replace-text-safely'],
+      authorHeading: '关于作者',
+      authorText: 'TextToools 创始人',
+    },
+  ]
+
+  for (const { post, authorHeading, authorText } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    assert.ok(post.sections.at(-1).paragraphs.join(' ').includes(authorText))
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      [
+        'https://support.google.com/docs/answer/62754?hl=en',
+        'https://support.microsoft.com/en-us/word/training/find-and-replace-text-in-word',
+      ].sort(),
+    )
+  }
+})
