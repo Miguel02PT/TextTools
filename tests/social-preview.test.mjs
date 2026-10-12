@@ -9,6 +9,9 @@ const englishPosts = JSON.parse(
 const chinesePosts = JSON.parse(
   readFileSync(new URL('../src/zh-CN.json', import.meta.url), 'utf8'),
 ).blog.posts
+const portuguesePosts = JSON.parse(
+  readFileSync(new URL('../src/pt-BR.json', import.meta.url), 'utf8'),
+).blog.posts
 
 test('brand correction changes only the site name, not the canonical URL', () => {
   const html = createSeoMetadata({
@@ -46,14 +49,24 @@ test('blog metadata generates escaped Open Graph and X image cards', () => {
 
 test('each localized article image is a local 1200x630 PNG', () => {
   for (const englishPost of englishPosts) {
-    const locales = [englishPost, chinesePosts[englishPost.slug]]
+    const locales = [
+      englishPost,
+      chinesePosts[englishPost.slug],
+      portuguesePosts[englishPost.slug],
+    ]
 
     for (const post of locales) {
       assert.ok(post.imageAlt, `${englishPost.slug} has localized alternative text`)
-      const imageUrl = new URL(`../public/${post.image}`, import.meta.url)
-      assert.ok(existsSync(imageUrl), `${post.image} exists`)
+      const svgUrl = new URL(`../public/${post.image}`, import.meta.url)
+      assert.ok(existsSync(svgUrl), `${post.image} exists`)
+      assert.match(readFileSync(svgUrl, 'utf8'), /<svg\b/)
 
-      const png = readFileSync(imageUrl)
+      const pngUrl = new URL(
+        `../public/${post.image.replace(/\.svg$/i, '.png')}`,
+        import.meta.url,
+      )
+      assert.ok(existsSync(pngUrl), `${post.image} has a social preview`)
+      const png = readFileSync(pngUrl)
       assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
       assert.equal(png.readUInt32BE(16), 1200)
       assert.equal(png.readUInt32BE(20), 630)

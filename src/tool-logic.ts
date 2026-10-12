@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'zh-CN' | 'es'
+export type Locale = 'en' | 'zh-CN' | 'es' | 'pt-BR'
 export type CaseFormat = 'upper' | 'lower' | 'title' | 'sentence' | 'camel' | 'snake'
 export type SortMode = 'az' | 'za' | 'reverse'
 export type ToolId =
@@ -58,12 +58,25 @@ const spanishStopWords = new Set([
   'sobre', 'son', 'su', 'sus', 'también', 'te', 'tiene', 'todo', 'tu', 'tus',
   'un', 'una', 'uno', 'unos', 'y', 'ya',
 ])
+const portugueseStopWords = new Set([
+  'a', 'à', 'agora', 'ainda', 'algumas', 'alguns', 'ao', 'aos', 'as', 'até',
+  'com', 'como', 'da', 'das', 'de', 'dela', 'delas', 'dele', 'deles', 'depois',
+  'do', 'dos', 'e', 'ela', 'elas', 'ele', 'eles', 'em', 'entre', 'era', 'essa',
+  'essas', 'esse', 'esses', 'esta', 'está', 'estão', 'estas', 'este', 'estes',
+  'eu', 'foi', 'for', 'há', 'isso', 'isto', 'já', 'lhe', 'lhes', 'mais', 'mas',
+  'me', 'mesmo', 'meu', 'meus', 'minha', 'minhas', 'muito', 'na', 'nas', 'nem',
+  'no', 'nos', 'nós', 'nossa', 'nossas', 'nosso', 'nossos', 'num', 'numa', 'o',
+  'os', 'ou', 'para', 'pela', 'pelas', 'pelo', 'pelos', 'por', 'porque', 'qual',
+  'quando', 'que', 'quem', 'se', 'sem', 'ser', 'seu', 'seus', 'só', 'sua',
+  'suas', 'também', 'te', 'tem', 'têm', 'um', 'uma', 'você', 'vocês',
+])
 const chineseWordSegmenter = new Intl.Segmenter('zh-CN', { granularity: 'word' })
 const graphemeSegmenter = new Intl.Segmenter(undefined, { granularity: 'grapheme' })
 const sentenceSegmenters: Record<Locale, Intl.Segmenter> = {
   en: new Intl.Segmenter('en', { granularity: 'sentence' }),
   'zh-CN': new Intl.Segmenter('zh-CN', { granularity: 'sentence' }),
   es: new Intl.Segmenter('es', { granularity: 'sentence' }),
+  'pt-BR': new Intl.Segmenter('pt-BR', { granularity: 'sentence' }),
 }
 
 const loremWords = [
@@ -108,6 +121,11 @@ export function countSentences(text: string, locale: Locale = 'en') {
 }
 
 export function formatReadingTime(words: number, seconds: number, locale: Locale = 'en') {
+  if (locale === 'pt-BR') {
+    if (words === 0) return '0 min 0 s'
+    if (seconds < 60) return 'menos de 1 min'
+    return `${Math.floor(seconds / 60)} min ${seconds % 60} s`
+  }
   if (words === 0) return locale === 'es' ? '0 min 0 s' : '0 min 0 sec'
   if (seconds < 60) return locale === 'es' ? 'menos de 1 min' : 'less than 1 min'
   if (locale === 'es') return `${Math.floor(seconds / 60)} min ${seconds % 60} s`
@@ -319,7 +337,9 @@ export function getKeywordData(text: string, locale: Locale): KeywordData {
         ? stopWords.has(token)
         : locale === 'es'
           ? spanishStopWords.has(token)
-          : chineseStopWords.has(token))
+          : locale === 'pt-BR'
+            ? portugueseStopWords.has(token)
+            : chineseStopWords.has(token))
     ) continue
     counts.set(token, (counts.get(token) ?? 0) + 1)
   }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Como limpar texto copiado sem perder a estrutura</title>
+  <desc id="desc">Uma comparação entre texto com espaços extras e uma versão limpa que preserva as quebras importantes.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  LIMPEZA DE TEXTO</text>
+  <text x="80" y="158" fill="#172033" font-family="Arial, sans-serif" font-size="43" font-weight="700">Limpe o texto sem perder a estrutura</text>
+  <text x="80" y="199" fill="#647084" font-family="Arial, sans-serif" font-size="21">Remova excessos e preserve quebras com significado.</text>
+  <rect x="80" y="252" width="500" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="620" y="252" width="500" height="214" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="310" fill="#A25F56" font-family="Arial, sans-serif" font-size="17" font-weight="700">ANTES</text>
+  <text x="116" y="366" fill="#172033" font-family="Arial, sans-serif" font-size="24">  Texto   copiado</text>
+  <text x="116" y="410" fill="#172033" font-family="Arial, sans-serif" font-size="24">  com linhas extras...</text>
+  <text x="656" y="310" fill="#408454" font-family="Arial, sans-serif" font-size="17" font-weight="700">DEPOIS</text>
+  <text x="656" y="366" fill="#172033" font-family="Arial, sans-serif" font-size="24">Texto copiado</text>
+  <text x="656" y="410" fill="#172033" font-family="Arial, sans-serif" font-size="24">com quebras preservadas</text>
+  <text x="80" y="548" fill="#647084" font-family="Arial, sans-serif" font-size="19">Guarde o original e revise listas, tabelas e parágrafos.</text>
+</svg>

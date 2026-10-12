@@ -21,6 +21,7 @@ test('word counter handles empty, whitespace, Unicode, and CJK input', () => {
   assert.equal(countWords(''), 0)
   assert.equal(countWords(' \n\t '), 0)
   assert.equal(countWords('Two words 🙂'), 3)
+  assert.equal(countWords('Olá!\nTudo bem', 'pt-BR'), 3)
   assert.equal(countWords('你好世界', 'zh-CN'), 2)
 })
 
@@ -32,6 +33,7 @@ test('sentence counter counts sentences rather than punctuation fragments', () =
   assert.equal(countSentences('Text without punctuation'), 1)
   assert.equal(countSentences('... 🙂'), 0)
   assert.equal(countSentences(' \n\t '), 0)
+  assert.equal(countSentences('Uma frase. Outra!', 'pt-BR'), 2)
   assert.equal(countSentences('第一句。第二句！', 'zh-CN'), 2)
 })
 
@@ -107,7 +109,15 @@ test('reading time calculations and output cover empty and non-empty text', () =
   assert.equal(formatReadingTime(0, 0, 'es'), '0 min 0 s')
   assert.equal(formatReadingTime(1, 30, 'es'), 'menos de 1 min')
   assert.equal(formatReadingTime(200, 60, 'es'), '1 min 0 s')
+  assert.equal(formatReadingTime(0, 0, 'pt-BR'), '0 min 0 s')
+  assert.equal(formatReadingTime(1, 30, 'pt-BR'), 'menos de 1 min')
+  assert.equal(formatReadingTime(200, 60, 'pt-BR'), '1 min 0 s')
   assert.equal(computeMetrics('one two', 'en', 200).readingSeconds, 1)
+  const portugueseMetrics = computeMetrics('Olá!\nTudo bem', 'pt-BR', 200)
+  assert.equal(portugueseMetrics.words, 3)
+  assert.equal(portugueseMetrics.characters, 13)
+  assert.equal(portugueseMetrics.charactersNoSpaces, 11)
+  assert.equal(portugueseMetrics.lines, 2)
 })
 
 test('keyword density excludes stop words and calculates frequency', () => {
@@ -119,6 +129,13 @@ test('keyword density excludes stop words and calculates frequency', () => {
     ],
   })
   assert.equal(getKeywordData('我们使用文本工具', 'zh-CN').totalWords, 4)
+  assert.deepEqual(getKeywordData('o texto texto e texto útil', 'pt-BR'), {
+    totalWords: 6,
+    entries: [
+      { word: 'texto', count: 3, percentage: 50 },
+      { word: 'útil', count: 1, percentage: (1 / 6) * 100 },
+    ],
+  })
 })
 
 test('copy/download source preserves an intentionally empty transformed result', () => {

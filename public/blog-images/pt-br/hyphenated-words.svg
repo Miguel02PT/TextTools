@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Palavras com hífen contam como uma ou duas?</title>
+  <desc id="desc">Comparação entre uma expressão com hífen, contada como um grupo, e um travessão separado por espaços, contado como três grupos.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1085" cy="540" r="170" fill="#E8E1F1"/>
+  <circle cx="84" cy="94" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CONTAGEM DE PALAVRAS</text>
+  <text x="80" y="158" fill="#172033" font-family="Arial, sans-serif" font-size="42" font-weight="700">Palavras com hífen contam como uma ou duas?</text>
+  <text x="80" y="199" fill="#647084" font-family="Arial, sans-serif" font-size="21">No TextToools, o espaço em branco separa os grupos.</text>
+  <rect x="80" y="252" width="500" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="620" y="252" width="500" height="214" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="310" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700">SEM ESPAÇO</text>
+  <text x="116" y="378" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">bem-conhecido</text>
+  <text x="116" y="422" fill="#647084" font-family="Arial, sans-serif" font-size="22">1 grupo</text>
+  <text x="656" y="310" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700">COM ESPAÇOS</text>
+  <text x="656" y="378" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">bem — conhecido</text>
+  <text x="656" y="422" fill="#647084" font-family="Arial, sans-serif" font-size="22">3 grupos</text>
+  <text x="80" y="548" fill="#647084" font-family="Arial, sans-serif" font-size="19">Outros contadores podem seguir regras diferentes.</text>
+</svg>
