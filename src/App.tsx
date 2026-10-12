@@ -2167,7 +2167,7 @@ function App() {
         <div
           className={`mx-auto ${isHomePage ? 'max-w-[1760px]' : 'max-w-7xl'} px-4 py-10 sm:px-6 lg:px-8`}
         >
-          <div className="grid grid-cols-1 gap-8 border-b border-slate-200 pb-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,minmax(0,1fr))]">
+          <div className="grid grid-cols-1 gap-8 border-b border-slate-200 pb-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(5,minmax(0,1fr))]">
             <div className="space-y-2">
               <a href={localizedHref()} className="font-semibold text-slate-900">
                 TextToools
@@ -2231,6 +2231,26 @@ function App() {
               >
                 {localeText?.privacySettings ?? 'Privacy settings'}
               </button>
+            </nav>
+
+            <nav aria-label={localeText?.socialLinks ?? 'Follow us'} className="grid content-start gap-2 text-sm">
+              <h2 className="mb-1 font-semibold text-slate-800">{localeText?.socialLinks ?? 'Follow us'}</h2>
+              <a
+                href="https://www.instagram.com/texttoools/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate-500 hover:text-slate-900"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.pinterest.com/texttoools/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate-500 hover:text-slate-900"
+              >
+                Pinterest
+              </a>
             </nav>
           </div>
 
