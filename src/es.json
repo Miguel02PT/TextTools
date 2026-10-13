@@ -443,6 +443,83 @@
           {"heading":"Vuelve a contar la versión que vas a entregar","paragraphs":["Haz una revisión cada vez y después comprueba el texto completo. Pega la versión final en el contador de palabras de TextToools y sigue el método indicado por tu tarea, editorial o formulario; los contadores pueden separar las palabras de manera distinta.","Por último, lee el texto en voz alta y comprueba que siga sonando natural y propio. El objetivo no es usar el menor número de palabras posible, sino expresar la idea con claridad y cumplir las instrucciones."]}
         ]
       },
+      "sort-list-alphabetically": {
+        "published": "2026-10-13",
+        "image": "blog-images/es/sort-list-alphabetically.svg",
+        "imageAlt": "Una lista ordenada alfabéticamente con orden numérico natural: apple, item 2, item 10.",
+        "title": "Cómo ordenar una lista alfabéticamente online (A–Z, Z–A y números) | TextToools",
+        "description": "Ordena una lista de texto, elige cómo ordenar los números, gestiona las líneas vacías y mantén juntas las filas de una hoja de cálculo.",
+        "summary": "Pon cada elemento en una línea, elige A–Z o Z–A y revisa las opciones para números y líneas vacías.",
+        "sections": [
+          {
+            "heading": "La forma rápida de ordenar una lista de texto",
+            "paragraphs": [
+              "Pon cada elemento en una línea, selecciona la lista completa y ordénala de la A a la Z. Para el orden alfabético inverso, elige de la Z a la A. Antes de usar el resultado, comprueba cómo se ordenan los números incluidos en las etiquetas y qué debe ocurrir con las líneas vacías.",
+              "Un ordenador de texto cambia el orden de las líneas; no sabe qué celdas pertenecen juntas en una hoja de cálculo, no elimina duplicados ni corrige la ortografía. Conserva una copia intacta si el orden original importa."
+            ]
+          },
+          {
+            "heading": "Prepara la lista antes de ordenarla",
+            "paragraphs": [
+              "Usa un elemento completo por línea. Comprueba que los nombres o frases no se hayan dividido en líneas distintas y quita títulos o notas que no pertenezcan a la lista. Si los datos vienen de una hoja de cálculo, no copies una sola columna cuando sus valores estén relacionados con otras columnas de la misma fila.",
+              "Decide qué hacer con las líneas vacías y los elementos repetidos. Ordenar no elimina duplicados: las entradas idénticas se conservan. Las líneas vacías pueden moverse al principio o al final; elimínalas solo si no tienen significado."
+            ]
+          },
+          {
+            "heading": "Elige A–Z, Z–A o invertir el orden",
+            "paragraphs": [
+              "A–Z ordena las líneas alfabéticamente de forma ascendente. Z–A las ordena alfabéticamente y después invierte el resultado. Invertir el orden es distinto: cambia la secuencia original sin ordenar, de modo que la última línea pasa a ser la primera.",
+              "Por ejemplo, si el orden original es pera, manzana, plátano, invertirlo produce plátano, manzana, pera. Z–A, en cambio, ordena esos nombres alfabéticamente desde el final del alfabeto."
+            ]
+          },
+          {
+            "heading": "Decide cómo ordenar los números",
+            "paragraphs": [
+              "Si los elementos incluyen números, el orden numérico natural suele coincidir con lo que esperamos al leer etiquetas: item 2 va antes de item 10. Una comparación carácter por carácter puede poner item 10 primero porque compara el dígito 1 antes que el 2.",
+              "En el ordenador de TextToools, el orden numérico natural está activado de forma predeterminada. Déjalo activo para capítulos, versiones o tareas numeradas; desactívalo si necesitas comparar carácter por carácter, por ejemplo cuando los dígitos son identificadores y no cantidades. Comprueba la opción: no todos los ordenadores tratan los números igual."
+            ]
+          },
+          {
+            "heading": "Revisa acentos, líneas vacías y duplicados",
+            "paragraphs": [
+              "Las reglas pueden cambiar según la herramienta y el idioma. En el ordenador de TextToools, A–Z no distingue entre mayúsculas y minúsculas ni entre letras acentuadas y no acentuadas. Si importa la posición exacta de nombres con acentos, revisa el resultado según las reglas que deba seguir tu lista.",
+              "El ordenador de TextToools conserva las líneas vacías de forma predeterminada y ofrece una opción para quitar las líneas vacías o que solo contienen espacios. También conserva los duplicados. Ordenar cambia el orden; no limpia ni valida la lista, así que revisa aparte la ortografía y las repeticiones."
+            ]
+          },
+          {
+            "heading": "Ordena datos de una hoja sin separar las filas",
+            "paragraphs": [
+              "En una hoja de cálculo, ordena todo el rango de columnas relacionadas, no solo una columna, para que los demás valores de cada persona sigan en la misma fila. Incluye los encabezados solo cuando las opciones de ordenación puedan tratarlos como tales. Google Sheets documenta cómo seleccionar un rango y elegir la columna y el sentido.",
+              "Para una lista sencilla con un elemento por línea, resulta más directo usar un ordenador de líneas. Para una tabla con nombres, fechas u otros campos relacionados, usa las opciones de rango de la hoja y revisa el resultado antes de guardarlo."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Al crear el ordenador de texto de TextToools, mantuve Z–A separado de invertir la lista. En un menú pueden parecer lo mismo, pero resuelven tareas diferentes: una opción ordena los valores; la otra conserva la secuencia original y simplemente la invierte."
+            ]
+          },
+          {
+            "heading": "Prueba el ordenador de texto de TextToools",
+            "paragraphs": [
+              "Pega una lista, con un elemento por línea, en el ordenador de texto de TextToools. Elige A–Z, Z–A o invertir el orden y decide si te convienen el orden numérico natural y la eliminación de líneas vacías. El proceso se realiza en tu navegador. Conserva el original y revisa el resultado antes de volver a pegarlo en un documento u hoja de cálculo."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Ordenar datos alfabética o numéricamente",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/3540681?hl=en"
+          }
+        ]
+      },
       "find-replace-text-safely": {
         "modified": "2026-10-12",
         "image": "blog-images/es/find-replace-safely.svg",

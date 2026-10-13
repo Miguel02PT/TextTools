@@ -2220,7 +2220,9 @@ function App() {
                           ? toolList.filter((tool) => tool.id === 'word-counter' || tool.id === 'reading-time')
                           : activeBlogPost.slug === 'find-replace-text-safely'
                             ? toolList.filter((tool) => tool.id === 'find-replace')
-                          : toolList.filter((tool) => tool.id === 'word-counter')
+                                : activeBlogPost.slug === 'sort-list-alphabetically'
+                                  ? toolList.filter((tool) => tool.id === 'text-sorter')
+                              : toolList.filter((tool) => tool.id === 'word-counter')
                 ).map((tool) => (
                   <a
                     key={tool.id}

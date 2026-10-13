@@ -927,6 +927,83 @@
           }
         ]
       },
+      "sort-list-alphabetically": {
+        "published": "2026-10-13",
+        "image": "blog-images/pt-br/sort-list-alphabetically.svg",
+        "imageAlt": "Uma lista ordenada alfabeticamente com ordem numérica natural: apple, item 2, item 10.",
+        "title": "Como ordenar alfabeticamente uma lista online (A–Z, Z–A e números) | TextToools",
+        "description": "Veja como ordenar uma lista de texto, escolher a ordem dos números, lidar com linhas vazias e manter juntas as linhas de uma planilha.",
+        "summary": "Coloque um item por linha, escolha A–Z ou Z–A e confira as opções de números e linhas vazias antes de usar o resultado.",
+        "sections": [
+          {
+            "heading": "O jeito rápido de ordenar uma lista de texto",
+            "paragraphs": [
+              "Coloque um item por linha, selecione a lista inteira e ordene de A a Z. Para a ordem alfabética inversa, escolha de Z a A. Antes de usar o resultado, confira como os números dentro dos rótulos serão comparados e o que deve acontecer com as linhas vazias.",
+              "Um ordenador de texto muda a ordem das linhas; ele não sabe quais células pertencem juntas em uma planilha, não remove duplicatas nem corrige a ortografia. Mantenha uma cópia intacta se a ordem original for importante."
+            ]
+          },
+          {
+            "heading": "Prepare a lista antes de ordenar",
+            "paragraphs": [
+              "Use um item completo por linha. Confira se nomes ou frases não foram quebrados em linhas diferentes e remova títulos ou observações que não façam parte da lista. Se os dados vierem de uma planilha, não copie somente uma coluna quando seus valores estiverem relacionados às outras colunas da mesma linha.",
+              "Decida o que fazer com linhas vazias e itens repetidos. A ordenação não elimina duplicatas, então as entradas iguais continuam na lista. Linhas vazias podem ir para o início ou para o fim; remova-as apenas se não tiverem significado."
+            ]
+          },
+          {
+            "heading": "Escolha A–Z, Z–A ou inverter a ordem",
+            "paragraphs": [
+              "A–Z ordena as linhas alfabeticamente em ordem crescente. Z–A ordena alfabeticamente e depois inverte o resultado. Inverter a ordem é diferente: a sequência original é virada sem classificação, e a última linha passa a ser a primeira.",
+              "Por exemplo, se a ordem original for pera, maçã, banana, inverter produz banana, maçã, pera. Z–A, por outro lado, organiza os nomes alfabeticamente a partir do fim do alfabeto."
+            ]
+          },
+          {
+            "heading": "Decida como ordenar os números",
+            "paragraphs": [
+              "Quando os itens contêm números, a ordem numérica natural costuma corresponder ao que esperamos ao ler rótulos: item 2 vem antes de item 10. Uma comparação caractere por caractere pode colocar item 10 primeiro porque compara o dígito 1 antes do 2.",
+              "No Text Sorter do TextToools, a ordem numérica natural vem ativada por padrão. Mantenha-a para capítulos, versões ou tarefas numeradas; desative-a quando precisar de uma ordem caractere por caractere, como quando os dígitos forem identificadores e não quantidades. Confira a opção: nem todo ordenador trata números da mesma forma."
+            ]
+          },
+          {
+            "heading": "Confira acentos, linhas vazias e duplicatas",
+            "paragraphs": [
+              "As regras de ordenação podem variar entre ferramentas e idiomas. No ordenador do TextToools, A–Z não diferencia maiúsculas de minúsculas nem letras acentuadas de não acentuadas. Se a posição exata de nomes com acentos for importante, confira o resultado conforme as regras que a sua lista precisa seguir.",
+              "O ordenador do TextToools mantém as linhas vazias por padrão e oferece uma opção para remover linhas vazias ou que contenham apenas espaços. Ele também preserva duplicatas. Ordenar muda a sequência, mas não limpa nem valida a lista; revise a ortografia e os itens repetidos separadamente."
+            ]
+          },
+          {
+            "heading": "Ordene dados de uma planilha sem separar as linhas",
+            "paragraphs": [
+              "Em uma planilha, ordene todo o intervalo de colunas relacionadas, não apenas uma coluna, para que os demais valores de cada pessoa continuem na mesma linha. Inclua o cabeçalho somente quando as opções de ordenação souberem identificá-lo. A documentação do Google Sheets explica como selecionar um intervalo e escolher a coluna e a direção.",
+              "Para uma lista simples com um item por linha, um ordenador de linhas é mais direto. Para uma tabela com nomes, datas ou outros campos relacionados, use os controles de ordenação de intervalo da planilha e confira o resultado antes de salvar."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar o Text Sorter do TextToools, quis manter a ordenação Z–A separada da opção de simplesmente inverter a lista. Elas parecem semelhantes em um menu, mas fazem coisas diferentes: uma ordena os valores; a outra preserva as posições originais entre os itens e apenas inverte a sequência."
+            ]
+          },
+          {
+            "heading": "Experimente o Text Sorter do TextToools",
+            "paragraphs": [
+              "Cole uma lista com um item por linha no Text Sorter do TextToools, escolha A–Z, Z–A ou inverter a ordem e decida se a ordem numérica natural e a remoção de linhas vazias fazem sentido para a tarefa. A ordenação acontece no navegador. Guarde uma cópia do original e confira o resultado antes de colá-lo de volta em um documento ou planilha."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que o teu texto não deve sair do teu browser."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Ordenar dados em ordem alfabética ou numérica",
+            "publisher": "Ajuda dos Editores de Documentos Google",
+            "url": "https://support.google.com/docs/answer/3540681?hl=en"
+          }
+        ]
+      },
       "find-replace-text-safely": {
         "modified": "2026-10-12",
         "image": "blog-images/pt-br/find-replace-safely.svg",

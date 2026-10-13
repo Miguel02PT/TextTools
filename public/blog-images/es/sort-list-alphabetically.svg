@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cómo ordenar una lista alfabéticamente</title>
+  <desc id="desc">Una lista ordenada de la A a la Z con números naturales: apple, item 2, item 10.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  GUÍA DE ORDENACIÓN</text>
+  <text x="80" y="165" fill="#172033" font-family="Arial, sans-serif" font-size="46" font-weight="700">Ordena una lista alfabéticamente</text>
+  <text x="80" y="207" fill="#647084" font-family="Arial, sans-serif" font-size="21">Elige A-Z y revisa cómo se ordenan los números y las líneas vacías.</text>
+  <rect x="80" y="260" width="470" height="250" rx="24" fill="#FFFFFF"/>
+  <rect x="650" y="260" width="470" height="250" rx="24" fill="#FFFFFF"/>
+  <text x="120" y="315" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">ANTES</text>
+  <text x="690" y="315" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">DESPUÉS · A-Z</text>
+  <text x="120" y="375" fill="#172033" font-family="Arial, sans-serif" font-size="28">item 10</text>
+  <text x="120" y="425" fill="#172033" font-family="Arial, sans-serif" font-size="28">apple</text>
+  <text x="120" y="475" fill="#172033" font-family="Arial, sans-serif" font-size="28">item 2</text>
+  <text x="690" y="375" fill="#172033" font-family="Arial, sans-serif" font-size="28">apple</text>
+  <text x="690" y="425" fill="#172033" font-family="Arial, sans-serif" font-size="28">item 2</text>
+  <text x="690" y="475" fill="#172033" font-family="Arial, sans-serif" font-size="28">item 10</text>
+  <path d="M565 385H625" stroke="#69558E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M612 372L625 385L612 398" stroke="#69558E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="570" fill="#647084" font-family="Arial, sans-serif" font-size="19">El orden numérico natural coloca item 2 antes de item 10.</text>
+</svg>

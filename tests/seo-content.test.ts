@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import test from 'node:test'
-import { countGraphemes, countWords, getKeywordData } from '../src/tool-logic'
+import { countGraphemes, countWords, getKeywordData, sortLines } from '../src/tool-logic'
 import { createSeoMetadata, injectPrerenderedApp } from '../scripts/seo-metadata.mjs'
 
 const englishBlogPosts = readFileSync(new URL('../src/blog-posts.json', import.meta.url), 'utf8')
@@ -330,4 +330,45 @@ test('find-and-replace guide is sourced and has localized author notes', () => {
       ].sort(),
     )
   }
+})
+
+test('alphabetical sorting guide matches the tool and is localized with a source', () => {
+  const posts = [
+    {
+      post: parsedEnglishBlogPosts.find(
+        (article: { slug: string }) => article.slug === 'sort-list-alphabetically',
+      ),
+      authorHeading: 'About the author',
+      authorText: 'Written by the founder of TextToools.',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['sort-list-alphabetically'],
+      authorHeading: 'Sobre el autor',
+      authorText: 'Escrito por el fundador de TextToools.',
+    },
+    {
+      post: parsedChineseContent.blog.posts['sort-list-alphabetically'],
+      authorHeading: '关于作者',
+      authorText: 'TextToools 创始人',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['sort-list-alphabetically'],
+      authorHeading: 'Sobre o autor',
+      authorText: 'Escrito pelo fundador do TextToools.',
+    },
+  ]
+
+  for (const { post, authorHeading, authorText } of posts) {
+    assert.ok(post)
+    assert.ok(post.sections.length >= 5)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    assert.ok(post.sections.at(-1).paragraphs.join(' ').includes(authorText))
+    assert.ok(post.sources.some(({ url }: { url: string }) => url ===
+      'https://support.google.com/docs/answer/3540681?hl=en'))
+  }
+
+  assert.equal(
+    sortLines('item 10\napple\nitem 2', 'az', true, false, 'en'),
+    'apple\nitem 2\nitem 10',
+  )
 })
