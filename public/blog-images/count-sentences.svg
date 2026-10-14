@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Count sentence boundaries</title>
+  <desc id="desc">Four cases that can affect a sentence count: abbreviations, decimals, line breaks, and missing final punctuation.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  SENTENCE COUNT</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Count sentence boundaries</text>
+  <rect x="80" y="190" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="190" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <rect x="80" y="375" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="375" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="230" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ABBREVIATIONS</text>
+  <text x="112" y="278" fill="#172033" font-family="Arial, sans-serif" font-size="26" font-weight="700">Dr. Lee arrived.</text>
+  <text x="112" y="319" fill="#8B4538" font-family="Arial, sans-serif" font-size="18" font-weight="600">Review the context</text>
+  <text x="652" y="230" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">DECIMALS</text>
+  <text x="652" y="278" fill="#172033" font-family="Arial, sans-serif" font-size="26" font-weight="700">The value is 3.5.</text>
+  <text x="652" y="319" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">Keep the number together</text>
+  <text x="112" y="415" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">LINE BREAKS</text>
+  <text x="112" y="463" fill="#172033" font-family="Arial, sans-serif" font-size="24" font-weight="700">One thought continues</text>
+  <text x="112" y="505" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">A new line is not always a new sentence</text>
+  <text x="652" y="415" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">NO FINAL PUNCTUATION</text>
+  <text x="652" y="463" fill="#172033" font-family="Arial, sans-serif" font-size="24" font-weight="700">The final note has no period</text>
+  <text x="652" y="505" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">It may still count as one sentence</text>
+</svg>

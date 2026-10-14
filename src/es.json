@@ -443,6 +443,108 @@
           {"heading":"Vuelve a contar la versión que vas a entregar","paragraphs":["Haz una revisión cada vez y después comprueba el texto completo. Pega la versión final en el contador de palabras de TextToools y sigue el método indicado por tu tarea, editorial o formulario; los contadores pueden separar las palabras de manera distinta.","Por último, lee el texto en voz alta y comprueba que siga sonando natural y propio. El objetivo no es usar el menor número de palabras posible, sino expresar la idea con claridad y cumplir las instrucciones."]}
         ]
       },
+      "how-to-count-sentences-in-a-paragraph": {
+        "published": "2026-10-14",
+        "image": "blog-images/es/count-sentences.svg",
+        "imageAlt": "Cuatro ejemplos muestran cómo las abreviaturas, los decimales, los saltos de línea y la falta de puntuación final afectan al recuento de oraciones.",
+        "title": "Cómo contar las oraciones de un párrafo: reglas y ejemplos | TextToools",
+        "description": "Aprende a contar oraciones en un párrafo y a revisar abreviaturas, números decimales, comillas, saltos de línea y texto sin punto final.",
+        "summary": "Cuenta los límites entre oraciones, no solo los puntos o las líneas, y revisa las abreviaturas, los decimales y los fragmentos sin terminar.",
+        "sections": [
+          {
+            "heading": "Respuesta rápida: cuenta oraciones, no líneas",
+            "paragraphs": [
+              "Para contar las oraciones de un párrafo, identifica cada unidad completa; no te limites a contar puntos o líneas. El punto, el signo de interrogación y el de exclamación suelen marcar un límite, pero las abreviaturas y los decimales pueden hacer que un punto resulte ambiguo.",
+              "Un contador automático puede incluir como oración un fragmento final sin puntuación. Para obtener un resultado coherente, usa el mismo método en todo el texto y comprueba a mano los casos dudosos."
+            ]
+          },
+          {
+            "heading": "Comprueba los casos que pueden cambiar el total",
+            "paragraphs": [
+              "Los programas aplican reglas para decidir dónde termina una oración y empieza otra. Estos ejemplos muestran por qué los signos de puntuación, los límites automáticos y el criterio gramatical no siempre coinciden."
+            ],
+            "examples": [
+              {
+                "text": "El Sr. Ruiz llegó. La reunión empieza ahora.",
+                "count": 3,
+                "unit": "sentence",
+                "explanation": "Un segmentador del navegador puede interpretar el punto de «Sr.» como un límite. TextToools cuenta tres segmentos; revisa las abreviaturas si necesitas un total exacto."
+              },
+              {
+                "text": "El valor es 3,5. Revísalo otra vez.",
+                "count": 2,
+                "unit": "sentence",
+                "explanation": "La coma decimal se mantiene dentro de 3,5; los dos puntos finales marcan dos oraciones."
+              },
+              {
+                "text": "Dijo: \"Espera.\" Luego se fue.",
+                "count": 2,
+                "unit": "sentence",
+                "explanation": "El punto dentro de las comillas cierra la primera oración; las comillas no crean otra."
+              },
+              {
+                "text": "Esta idea continúa\nen la línea siguiente.",
+                "count": 1,
+                "unit": "sentence",
+                "explanation": "Un salto de línea por sí solo no termina la idea ni empieza otra oración."
+              },
+              {
+                "text": "La última nota no tiene punto final",
+                "count": 1,
+                "unit": "sentence",
+                "explanation": "TextToools cuenta el segmento final si contiene letras o números, aunque no tenga puntuación de cierre."
+              }
+            ]
+          },
+          {
+            "heading": "Sigue un método sencillo",
+            "paragraphs": [
+              "1. Lee el párrafo completo y marca los posibles finales: puntos, signos de interrogación y signos de exclamación.",
+              "2. Comprueba los puntos que aparecen en abreviaturas, iniciales o números. No des por hecho que cierran una oración; lee las palabras de ambos lados.",
+              "3. Trata los saltos de línea como formato, salvo que el texto también tenga un límite entre oraciones. Una oración puede ocupar varias líneas y una línea puede contener varias oraciones.",
+              "4. Decide cómo contar un fragmento final sin puntuación. Algunas tareas exigen oraciones completas, aunque un contador lo incluya como unidad.",
+              "5. Si el recuento es para una entrega formal, sigue sus instrucciones y aplica un único método de forma coherente."
+            ]
+          },
+          {
+            "heading": "Por qué pueden variar los contadores",
+            "paragraphs": [
+              "Un punto puede cerrar una oración, formar parte de una abreviatura o separar los decimales. Las pautas de segmentación de Unicode reconocen que el texto por sí solo no siempre permite determinar el límite correcto. Por eso, los programas aplican reglas que pueden variar según la herramienta y el idioma.",
+              "El contador de palabras de TextToools usa la segmentación de oraciones del navegador según el idioma y cuenta un segmento final que contiene letras o números. Es una estimación coherente, no un corrector gramatical ni una definición universal. Si tienes un límite estricto, consulta sus reglas y revisa a mano las abreviaturas y los fragmentos."
+            ]
+          },
+          {
+            "heading": "Prueba el contador de palabras de TextToools",
+            "paragraphs": [
+              "Pega el texto completo en el contador de palabras de TextToools para ver el total de oraciones junto con las palabras, los caracteres y los párrafos. El cálculo se realiza en tu navegador. Si una abreviatura, la puntuación de una cita o una línea final incompleta cambia el resultado, comprueba si el recuento automático sigue la regla que necesitas."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Al añadir el recuento de oraciones al contador de palabras de TextToools, lo planteé como una estimación basada en los límites propios de cada idioma, no como un simple recuento de puntos. La diferencia se nota en textos reales: un salto de línea puede no cerrar una oración, mientras que una abreviatura puede parecer que sí."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Intl.Segmenter",
+            "publisher": "MDN Web Docs",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+          },
+          {
+            "title": "Segmentación de texto Unicode (UAX #29)",
+            "publisher": "The Unicode Consortium",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
       "sort-list-alphabetically": {
         "published": "2026-10-13",
         "image": "blog-images/es/sort-list-alphabetically.svg",

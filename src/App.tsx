@@ -104,7 +104,12 @@ type LocalizedToolGuide = Omit<ToolGuide, 'id'> & {
 type BlogSection = {
   heading: string
   paragraphs: string[]
-  examples?: { text: string; count: number; explanation: string }[]
+  examples?: {
+    text: string
+    count: number
+    explanation: string
+    unit?: string
+  }[]
 }
 type BlogPost = {
   slug: string
@@ -2160,16 +2165,26 @@ function App() {
                           className="rounded-xl border border-slate-200 bg-slate-50 p-4"
                         >
                           <div className="flex flex-wrap items-center justify-between gap-2">
-                            <code className="break-all font-medium text-slate-900">{example.text}</code>
+                            <code className="break-all whitespace-pre-wrap font-medium text-slate-900">
+                              {example.text}
+                            </code>
                             <span className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
                               {example.count}{' '}
-                              {isChineseLocale
-                                ? '个词'
-                                : isSpanishLocale
-                                  ? example.count === 1 ? 'palabra' : 'palabras'
-                                  : isPortugueseLocale
-                                    ? example.count === 1 ? 'palavra' : 'palavras'
-                                    : example.count === 1 ? 'word' : 'words'}
+                              {example.unit === 'sentence'
+                                ? isChineseLocale
+                                  ? '个句子'
+                                  : isSpanishLocale
+                                    ? example.count === 1 ? 'oración' : 'oraciones'
+                                    : isPortugueseLocale
+                                      ? example.count === 1 ? 'frase' : 'frases'
+                                      : example.count === 1 ? 'sentence' : 'sentences'
+                                : isChineseLocale
+                                  ? '个词'
+                                  : isSpanishLocale
+                                    ? example.count === 1 ? 'palabra' : 'palabras'
+                                    : isPortugueseLocale
+                                      ? example.count === 1 ? 'palavra' : 'palavras'
+                                      : example.count === 1 ? 'word' : 'words'}
                             </span>
                           </div>
                           <p className="mt-2 text-sm leading-6 text-slate-600">

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Conte os limites entre frases</title>
+  <desc id="desc">Quatro situações que podem afetar a contagem: abreviações, decimais, quebras de linha e falta de pontuação final.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CONTAGEM DE FRASES</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Conte os limites entre frases</text>
+  <rect x="80" y="190" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="190" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <rect x="80" y="375" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="375" width="500" height="165" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="230" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ABREVIAÇÕES</text>
+  <text x="112" y="278" fill="#172033" font-family="Arial, sans-serif" font-size="26" font-weight="700">A Sra. Lima chegou.</text>
+  <text x="112" y="319" fill="#8B4538" font-family="Arial, sans-serif" font-size="18" font-weight="600">Confira o contexto</text>
+  <text x="652" y="230" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">DECIMAIS</text>
+  <text x="652" y="278" fill="#172033" font-family="Arial, sans-serif" font-size="26" font-weight="700">O valor é 3,5.</text>
+  <text x="652" y="319" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">Mantenha o número unido</text>
+  <text x="112" y="415" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">QUEBRAS DE LINHA</text>
+  <text x="112" y="463" fill="#172033" font-family="Arial, sans-serif" font-size="24" font-weight="700">A mesma ideia continua</text>
+  <text x="112" y="505" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">Uma linha nova nem sempre inicia outra frase</text>
+  <text x="652" y="415" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">SEM PONTUAÇÃO FINAL</text>
+  <text x="652" y="463" fill="#172033" font-family="Arial, sans-serif" font-size="24" font-weight="700">A nota final não tem ponto</text>
+  <text x="652" y="505" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">Ainda pode contar como uma frase</text>
+</svg>

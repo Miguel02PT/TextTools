@@ -1,5 +1,108 @@
 [
   {
+    "slug": "how-to-count-sentences-in-a-paragraph",
+    "published": "2026-10-14",
+    "title": "How to Count Sentences in a Paragraph (With Examples) | TextToools",
+    "description": "Learn how to count sentences in a paragraph, including abbreviations, decimal numbers, quotation marks, line breaks, and unfinished text.",
+    "summary": "Count sentence boundaries rather than lines or periods alone, and review abbreviations, decimals, and unfinished text that can confuse automatic counters.",
+    "image": "blog-images/count-sentences.svg",
+    "imageAlt": "Four examples showing that abbreviations, decimals, line breaks, and missing final punctuation can affect a sentence count.",
+    "sections": [
+      {
+        "heading": "The quick answer: count sentence boundaries, not lines",
+        "paragraphs": [
+          "To count sentences in a paragraph, identify each complete sentence unit—not simply each period or line. A full stop, question mark, or exclamation mark often signals a boundary, but abbreviations and decimal numbers can make periods ambiguous.",
+          "A final fragment without punctuation may still count as one sentence in an automatic counter. For a consistent result, use the same counting method throughout and check any ambiguous case by hand."
+        ]
+      },
+      {
+        "heading": "Check the cases that can change the total",
+        "paragraphs": [
+          "Sentence-counting software uses rules to decide where one sentence ends and another begins. The examples below show why punctuation marks, sentence boundaries, and grammatical judgments do not always line up exactly."
+        ],
+        "examples": [
+          {
+            "text": "Dr. Lee arrived. The meeting starts now.",
+            "count": 3,
+            "unit": "sentence",
+            "explanation": "A browser segmenter may treat the period in “Dr.” as a boundary. TextToools counts three segments here, so review abbreviations when an exact total matters."
+          },
+          {
+            "text": "The value is 3.5. Check it again.",
+            "count": 2,
+            "unit": "sentence",
+            "explanation": "The decimal point stays within 3.5; the two sentence-ending periods mark two sentences."
+          },
+          {
+            "text": "She said, “Wait.” Then she left.",
+            "count": 2,
+            "unit": "sentence",
+            "explanation": "The period inside the closing quotation mark ends the first sentence. The quotation mark does not create another sentence."
+          },
+          {
+            "text": "This thought continues\non the next line.",
+            "count": 1,
+            "unit": "sentence",
+            "explanation": "A line break alone does not end the thought or start a new sentence."
+          },
+          {
+            "text": "The final note has no period",
+            "count": 1,
+            "unit": "sentence",
+            "explanation": "TextToools counts a final segment containing letters or numbers even when it has no ending punctuation."
+          }
+        ]
+      },
+      {
+        "heading": "Use a simple counting method",
+        "paragraphs": [
+          "1. Read the complete paragraph once and mark likely sentence endings: periods, question marks, and exclamation marks.",
+          "2. Check every period that appears inside an abbreviation, initial, or number. Do not assume it ends a sentence; read the words on both sides.",
+          "3. Treat line breaks as formatting unless the text also contains a sentence boundary. One sentence can wrap across several lines, and one line can contain several sentences.",
+          "4. Decide how to handle a final fragment with no punctuation. Some assignments require complete sentences; a counter may still count the fragment as a sentence unit.",
+          "5. If the count is for a formal assignment or submission, follow its instructions and use one counting method consistently."
+        ]
+      },
+      {
+        "heading": "Why sentence counters can disagree",
+        "paragraphs": [
+          "A period can mark the end of a sentence, an abbreviation, or a decimal number. Unicode's text-segmentation guidance notes that text alone can leave some boundaries ambiguous. Software therefore applies segmentation rules, and different tools or languages can produce different totals.",
+          "TextToools Word Counter uses the browser's locale-aware sentence segmentation and counts a final segment when it contains letters or numbers. It is a quick, consistent estimate—not a grammar checker or a universal definition of a sentence. For a strict limit, check the destination's rules and review abbreviations or fragments manually."
+        ]
+      },
+      {
+        "heading": "Try the TextToools Word Counter",
+        "paragraphs": [
+          "Paste the full passage into the TextToools Word Counter to see its sentence total alongside words, characters, and paragraphs. The calculation runs in your browser. If an abbreviation, quoted punctuation, or unfinished final line affects the result, use the examples above to decide whether the automatic count matches the rule you need."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "When I added sentence counts to the TextToools Word Counter, I treated sentence boundaries as a language-aware estimate rather than simply counting periods. That distinction matters in real text: a line break may not end a sentence, while an abbreviation can look like one."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Intl.Segmenter",
+        "publisher": "MDN Web Docs",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+      },
+      {
+        "title": "Unicode Text Segmentation (Unicode Standard Annex #29)",
+        "publisher": "The Unicode Consortium",
+        "url": "https://www.unicode.org/reports/tr29/"
+      }
+    ]
+  },
+  {
     "slug": "sort-list-alphabetically",
     "published": "2026-10-13",
     "title": "How to Sort a List Alphabetically Online (A–Z, Z–A, and Numbers) | TextToools",

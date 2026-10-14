@@ -927,6 +927,108 @@
           }
         ]
       },
+      "how-to-count-sentences-in-a-paragraph": {
+        "published": "2026-10-14",
+        "image": "blog-images/pt-br/count-sentences.svg",
+        "imageAlt": "Quatro exemplos mostram como abreviações, decimais, quebras de linha e a falta de pontuação final afetam a contagem de frases.",
+        "title": "Como contar frases em um parágrafo: regras e exemplos | TextToools",
+        "description": "Aprenda a contar frases em um parágrafo e confira abreviações, números decimais, aspas, quebras de linha e textos sem ponto final.",
+        "summary": "Conte os limites entre frases, não apenas pontos ou linhas, e confira abreviações, decimais e trechos sem pontuação final.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: conte frases, não linhas",
+            "paragraphs": [
+              "Para contar as frases de um parágrafo, identifique cada unidade completa — não conte apenas os pontos ou as linhas. O ponto-final, o ponto de interrogação e o de exclamação costumam indicar um limite, mas abreviações e números decimais podem tornar o ponto ambíguo.",
+              "Um contador automático pode incluir como frase um trecho final sem pontuação. Para manter o resultado consistente, use o mesmo método em todo o texto e confira manualmente os casos duvidosos."
+            ]
+          },
+          {
+            "heading": "Confira os casos que podem mudar o total",
+            "paragraphs": [
+              "Programas usam regras para decidir onde uma frase termina e outra começa. Os exemplos mostram por que os sinais de pontuação, os limites automáticos e a análise gramatical nem sempre coincidem."
+            ],
+            "examples": [
+              {
+                "text": "A Sra. Lima chegou. A reunião começa agora.",
+                "count": 3,
+                "unit": "sentence",
+                "explanation": "Um segmentador do navegador pode tratar o ponto de “Sra.” como um limite. O TextToools conta três segmentos; confira as abreviações quando a quantidade exata for importante."
+              },
+              {
+                "text": "O valor é 3,5. Confira novamente.",
+                "count": 2,
+                "unit": "sentence",
+                "explanation": "A vírgula decimal permanece dentro de 3,5; os dois pontos finais marcam duas frases."
+              },
+              {
+                "text": "Ela disse: “Espere.” Depois saiu.",
+                "count": 2,
+                "unit": "sentence",
+                "explanation": "O ponto dentro das aspas encerra a primeira frase; as aspas não criam uma frase adicional."
+              },
+              {
+                "text": "Esta ideia continua\nna linha seguinte.",
+                "count": 1,
+                "unit": "sentence",
+                "explanation": "Uma quebra de linha, por si só, não encerra a ideia nem inicia outra frase."
+              },
+              {
+                "text": "A observação final não tem ponto",
+                "count": 1,
+                "unit": "sentence",
+                "explanation": "O TextToools conta o trecho final se ele contiver letras ou números, mesmo sem pontuação de encerramento."
+              }
+            ]
+          },
+          {
+            "heading": "Siga um método simples",
+            "paragraphs": [
+              "1. Leia o parágrafo completo e marque os possíveis finais: pontos, pontos de interrogação e pontos de exclamação.",
+              "2. Confira cada ponto que aparece em abreviações, iniciais ou números. Não presuma que ele encerra uma frase; leia as palavras antes e depois.",
+              "3. Trate quebras de linha como formatação, a menos que o texto também tenha um limite entre frases. Uma frase pode ocupar várias linhas, e uma linha pode conter várias frases.",
+              "4. Decida como contar um trecho final sem pontuação. Alguns trabalhos exigem frases completas, mas um contador ainda pode incluir esse trecho como unidade.",
+              "5. Se a contagem for para uma atividade ou envio formal, siga as instruções e use um único método do início ao fim."
+            ]
+          },
+          {
+            "heading": "Por que os contadores podem divergir",
+            "paragraphs": [
+              "Um ponto pode encerrar uma frase, fazer parte de uma abreviação ou separar as casas decimais. As diretrizes de segmentação do Unicode reconhecem que nem sempre é possível identificar o limite correto apenas pelo texto. Por isso, programas aplicam regras que podem variar conforme a ferramenta e o idioma.",
+              "O contador de palavras do TextToools usa a segmentação de frases do navegador conforme o idioma e conta um trecho final que contenha letras ou números. É uma estimativa consistente, não um corretor gramatical nem uma definição universal. Para um limite rígido, siga as regras da atividade e confira abreviações ou trechos incompletos manualmente."
+            ]
+          },
+          {
+            "heading": "Experimente o contador de palavras do TextToools",
+            "paragraphs": [
+              "Cole o texto completo no contador de palavras do TextToools para ver a quantidade de frases, palavras, caracteres e parágrafos. O cálculo acontece no navegador. Se uma abreviação, a pontuação dentro de uma citação ou uma linha final incompleta alterar o resultado, confira se a contagem automática corresponde à regra que você precisa seguir."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao adicionar a contagem de frases ao contador de palavras do TextToools, percebi que o resultado precisava ser tratado como uma estimativa sensível ao idioma, não como uma simples contagem de pontos. Essa diferença aparece em textos reais: uma quebra de linha pode não encerrar uma frase, enquanto uma abreviação pode parecer que encerra."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas de texto que respeitam sua privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Intl.Segmenter",
+            "publisher": "MDN Web Docs",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+          },
+          {
+            "title": "Segmentação de texto Unicode (UAX #29)",
+            "publisher": "The Unicode Consortium",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
       "sort-list-alphabetically": {
         "published": "2026-10-13",
         "image": "blog-images/pt-br/sort-list-alphabetically.svg",

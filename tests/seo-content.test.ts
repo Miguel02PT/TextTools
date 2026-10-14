@@ -1,7 +1,13 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import test from 'node:test'
-import { countGraphemes, countWords, getKeywordData, sortLines } from '../src/tool-logic'
+import {
+  countGraphemes,
+  countSentences,
+  countWords,
+  getKeywordData,
+  sortLines,
+} from '../src/tool-logic'
 import { createSeoMetadata, injectPrerenderedApp } from '../scripts/seo-metadata.mjs'
 
 const englishBlogPosts = readFileSync(new URL('../src/blog-posts.json', import.meta.url), 'utf8')
@@ -371,4 +377,68 @@ test('alphabetical sorting guide matches the tool and is localized with a source
     sortLines('item 10\napple\nitem 2', 'az', true, false, 'en'),
     'apple\nitem 2\nitem 10',
   )
+})
+
+test('sentence-count guide examples match each locale and include localized author notes', () => {
+  const posts = [
+    {
+      post: parsedEnglishBlogPosts.find(
+        (article: { slug: string }) => article.slug === 'how-to-count-sentences-in-a-paragraph',
+      ),
+      locale: 'en' as const,
+      authorHeading: 'About the author',
+      authorText: 'Written by the founder of TextToools.',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['how-to-count-sentences-in-a-paragraph'],
+      locale: 'es' as const,
+      authorHeading: 'Sobre el autor',
+      authorText: 'Escrito por el fundador de TextToools.',
+    },
+    {
+      post: parsedChineseContent.blog.posts['how-to-count-sentences-in-a-paragraph'],
+      locale: 'zh-CN' as const,
+      authorHeading: '关于作者',
+      authorText: 'TextToools 创始人',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['how-to-count-sentences-in-a-paragraph'],
+      locale: 'pt-BR' as const,
+      authorHeading: 'Sobre o autor',
+      authorText: 'Escrito pelo fundador do TextToools.',
+    },
+  ]
+
+  for (const { post, locale, authorHeading, authorText } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    assert.ok(post.sections.at(-1).paragraphs.join(' ').includes(authorText))
+    assert.ok(post.sections.some((section: { heading: string }) =>
+      section.heading.toLowerCase().includes(
+        locale === 'en'
+          ? 'founder'
+          : locale === 'es'
+            ? 'fundador'
+            : locale === 'pt-BR'
+              ? 'fundador'
+              : '创始人',
+      ),
+    ))
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number; unit?: string }[] }) =>
+        section.examples ?? [],
+    )
+    assert.ok(examples.length >= 4)
+    for (const example of examples) {
+      assert.equal(example.unit, 'sentence')
+      assert.equal(countSentences(example.text, locale), example.count, example.text)
+    }
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      [
+        'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter',
+        'https://www.unicode.org/reports/tr29/',
+      ].sort(),
+    )
+  }
 })
