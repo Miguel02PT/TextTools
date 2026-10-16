@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">统计文本版和扫描版 PDF 的字数</title>
+  <desc id="desc">可选择的文本可以复制到字数统计工具；扫描版 PDF 需要先用 OCR 识别并检查文字。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1080" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="130" cy="600" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  PDF 字数统计</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">提取、检查，再统计</text>
+  <rect x="80" y="190" width="500" height="245" rx="24" fill="#FFFFFF"/>
+  <rect x="620" y="190" width="500" height="245" rx="24" fill="#FFFFFF"/>
+  <text x="112" y="235" fill="#647084" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">可选择的文本</text>
+  <rect x="112" y="260" width="118" height="154" rx="8" fill="#F4F1F8" stroke="#D9D2E5" stroke-width="2"/>
+  <rect x="202" y="260" width="28" height="30" fill="#E8E1F1"/>
+  <rect x="132" y="309" width="72" height="5" rx="2.5" fill="#69558E"/>
+  <rect x="132" y="331" width="78" height="5" rx="2.5" fill="#69558E"/>
+  <rect x="132" y="353" width="60" height="5" rx="2.5" fill="#69558E"/>
+  <rect x="132" y="375" width="72" height="5" rx="2.5" fill="#69558E"/>
+  <rect x="129" y="305" width="78" height="14" rx="3" fill="#DAD0EE" fill-opacity=".8"/>
+  <text x="260" y="306" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">选择并复制</text>
+  <text x="260" y="343" fill="#647084" font-family="Arial, sans-serif" font-size="18">粘贴文本进行统计</text>
+  <path d="M260 378h236" stroke="#E5E1EB" stroke-width="2"/>
+  <text x="260" y="415" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="700">检查分栏和页码</text>
+  <text x="652" y="235" fill="#647084" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">扫描页面</text>
+  <rect x="684" y="260" width="118" height="154" rx="8" fill="#F4F1F8" stroke="#D9D2E5" stroke-width="2"/>
+  <rect x="774" y="260" width="28" height="30" fill="#E8E1F1"/>
+  <rect x="704" y="309" width="72" height="5" rx="2.5" fill="#647084"/>
+  <rect x="704" y="331" width="78" height="5" rx="2.5" fill="#647084"/>
+  <rect x="704" y="353" width="60" height="5" rx="2.5" fill="#647084"/>
+  <rect x="704" y="375" width="72" height="5" rx="2.5" fill="#647084"/>
+  <circle cx="848" cy="337" r="29" fill="#E9E3F2"/>
+  <text x="829" y="343" fill="#493867" font-family="Arial, sans-serif" font-size="16" font-weight="700">OCR</text>
+  <text x="890" y="306" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">使用 OCR</text>
+  <text x="890" y="343" fill="#647084" font-family="Arial, sans-serif" font-size="18">识别图像中的文字</text>
+  <path d="M890 378h184" stroke="#E5E1EB" stroke-width="2"/>
+  <text x="890" y="415" fill="#8B4538" font-family="Arial, sans-serif" font-size="18" font-weight="700">统计前先校对</text>
+  <rect x="80" y="457" width="1040" height="63" rx="18" fill="#E9E3F2"/>
+  <text x="112" y="496" fill="#493867" font-family="Arial, sans-serif" font-size="19" font-weight="700">计数器需要文本，无法读取图片中未识别的文字。</text>
+</svg>

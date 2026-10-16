@@ -443,6 +443,91 @@
           {"heading":"Vuelve a contar la versión que vas a entregar","paragraphs":["Haz una revisión cada vez y después comprueba el texto completo. Pega la versión final en el contador de palabras de TextToools y sigue el método indicado por tu tarea, editorial o formulario; los contadores pueden separar las palabras de manera distinta.","Por último, lee el texto en voz alta y comprueba que siga sonando natural y propio. El objetivo no es usar el menor número de palabras posible, sino expresar la idea con claridad y cumplir las instrucciones."]}
         ]
       },
+      "how-to-count-words-in-a-pdf": {
+        "published": "2026-10-16",
+        "image": "blog-images/es/count-words-in-pdf.svg",
+        "imageAlt": "Un PDF con texto seleccionable y otro escaneado que necesita OCR antes de contar sus palabras.",
+        "title": "Cómo contar las palabras de un PDF: texto y documentos escaneados | TextToools",
+        "description": "Cuenta las palabras de un PDF comprobando si el texto se puede seleccionar, usando OCR para escaneos y revisando el contenido extraído.",
+        "summary": "Comprueba si el PDF contiene texto seleccionable. Copia el texto en un contador; si es un escaneo, usa OCR y revisa posibles errores.",
+        "sections": [
+          {
+            "heading": "Respuesta rápida: comprueba si puedes seleccionar el texto",
+            "paragraphs": [
+              "Un PDF no siempre contiene texto que un contador de palabras pueda leer. Prueba a seleccionar una frase con el cursor. Si puedes seleccionarla y copiarla, pega el texto en un contador. Si la página se comporta como una imagen y no puedes seleccionar las palabras, necesitas un programa de reconocimiento óptico de caracteres (OCR) para convertir la imagen en texto.",
+              "Ninguno de los dos métodos garantiza un total exacto. La extracción puede omitir o desordenar contenido, y el OCR puede confundir caracteres. Compara el texto extraído con el PDF antes de confiar en el recuento."
+            ]
+          },
+          {
+            "heading": "Cuenta las palabras de un PDF con texto",
+            "paragraphs": [
+              "1. Abre el PDF en un lector que permita seleccionar texto y copia el fragmento o las páginas que necesitas contar.",
+              "2. Pega el texto en una herramienta de recuento de palabras. TextToools cuenta el texto pegado en tu navegador; no abre ni procesa archivos PDF directamente.",
+              "3. Compara el texto pegado con el PDF, sobre todo si tiene columnas, barras laterales, tablas, encabezados, pies de página o números de página. Al copiar, las columnas pueden mezclarse y el contenido repetido de cada página puede incluirse sin querer.",
+              "4. Quita lo que las instrucciones de la tarea excluyan y vuelve a comprobar el total. Mantén abierto el PDF original para detectar párrafos que falten o líneas duplicadas."
+            ]
+          },
+          {
+            "heading": "Usa OCR con un PDF escaneado",
+            "paragraphs": [
+              "Un documento escaneado suele estar formado por imágenes de las páginas, no por texto seleccionable. Un programa de OCR reconoce las letras de esas imágenes y genera texto que después puedes revisar y contar. El escaneo debe ser claro y estar derecho; las imágenes borrosas o con poco contraste, la letra manuscrita y los textos poco habituales pueden reconocerse mal.",
+              "Después del OCR, corrige el resultado comparándolo con las imágenes de las páginas. Presta atención a nombres, números, puntuación, tildes, notas a pie de página y texto en columnas o tablas. Google Drive permite abrir archivos PDF e imágenes como texto en Google Docs, pero su ayuda advierte que las columnas y las tablas pueden no quedar alineadas correctamente.",
+              "El OCR convierte el contenido, pero no garantiza que se reconozcan todas las palabras visibles. Si el documento es largo o importante, revisa cada página y corrige el texto antes de contarlo."
+            ]
+          },
+          {
+            "heading": "Convierte el PDF si copiar no resulta práctico",
+            "paragraphs": [
+              "Si el PDF contiene texto, puedes abrir una copia en Microsoft Word y contar el documento convertido. Word transforma el PDF en un formato editable; Microsoft advierte que el resultado puede no conservar el diseño original, especialmente en archivos con tablas complejas, gráficos o columnas.",
+              "Considera el documento convertido otra forma de extraer texto, no una prueba de que nada haya cambiado. Compáralo con el PDF, elimina lo que quede fuera del recuento y sigue el método que indiquen las instrucciones de entrega."
+            ]
+          },
+          {
+            "heading": "Decide qué incluye el límite de palabras",
+            "paragraphs": [
+              "Un contador solo puede contar el texto que le das. Las instrucciones de la tarea o la editorial determinan si el total incluye el título, los encabezados, los pies de imagen, las citas, las referencias, las notas y los apéndices. Comprueba esas reglas antes de copiar el PDF para no incluir ni omitir secciones por accidente.",
+              "Si no hay una regla de recuento, define un alcance, aplícalo de forma coherente e indícalo cuando otras personas necesiten verificar el total. Los contadores también pueden tratar los guiones y otros signos de forma distinta; si existe un límite estricto, utiliza el método exigido."
+            ]
+          },
+          {
+            "heading": "Protege los documentos privados y verifica el recuento",
+            "paragraphs": [
+              "Un PDF puede contener información personal, médica, legal, financiera o laboral. Antes de usar un servicio de OCR o conversión, comprueba si se sube el archivo, cómo se gestiona y si tu organización lo permite. Si el documento es confidencial, utiliza una herramienta local aprobada en vez de enviarlo a una web no autorizada.",
+              "Cuando tengas el texto, compáralo página por página con el original, confirma que incluye las secciones necesarias y cuenta la versión corregida con un método uniforme. Guarda el texto extraído solo donde sea adecuado para el nivel de confidencialidad del documento."
+            ]
+          },
+          {
+            "heading": "Prueba el contador de palabras de TextToools",
+            "paragraphs": [
+              "Cuando hayas revisado el texto y confirmado que puedes procesarlo, pégalo en el contador de palabras de TextToools para ver las palabras, los caracteres, las oraciones y los párrafos. El recuento se realiza en tu navegador. El texto no se sube, pero la herramienta no abre archivos PDF: primero debes extraer o reconocer las palabras con un método adecuado."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Al crear el contador de palabras de TextToools, decidí que el recuento se hiciera en el navegador y no pedir a nadie que subiera sus documentos. Eso también significa que la herramienta cuenta texto pegado, no archivos PDF. Para contar un documento, recomiendo revisar primero la extracción para asegurarse de que el total incluye las palabras que realmente se quieren contar."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Convertir archivos PDF y de imagen en texto",
+            "publisher": "Ayuda de Google Drive",
+            "url": "https://support.google.com/drive/answer/176692?hl=en"
+          },
+          {
+            "title": "Abrir archivos PDF en Word",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/office/opening-pdfs-in-word-0b36fa53-00c1-404c-b3c3-dc26df397aee"
+          }
+        ]
+      },
       "how-to-count-sentences-in-a-paragraph": {
         "published": "2026-10-14",
         "image": "blog-images/es/count-sentences.svg",

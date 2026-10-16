@@ -442,3 +442,54 @@ test('sentence-count guide examples match each locale and include localized auth
     )
   }
 })
+
+test('PDF word-count guide is accurate, localized, and linked to its text counter', () => {
+  const posts = [
+    {
+      post: parsedEnglishBlogPosts.find(
+        (article: { slug: string }) => article.slug === 'how-to-count-words-in-a-pdf',
+      ),
+      authorHeading: 'About the author',
+      authorText: 'Written by the founder of TextToools.',
+      founderHeading: 'A note from the founder',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['how-to-count-words-in-a-pdf'],
+      authorHeading: 'Sobre el autor',
+      authorText: 'Escrito por el fundador de TextToools.',
+      founderHeading: 'Una nota del fundador',
+    },
+    {
+      post: parsedChineseContent.blog.posts['how-to-count-words-in-a-pdf'],
+      authorHeading: '关于作者',
+      authorText: 'TextToools 创始人',
+      founderHeading: '创始人的一点想法',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['how-to-count-words-in-a-pdf'],
+      authorHeading: 'Sobre o autor',
+      authorText: 'Escrito pelo fundador do TextToools.',
+      founderHeading: 'Uma observação do fundador',
+    },
+  ]
+
+  for (const { post, authorHeading, authorText, founderHeading } of posts) {
+    assert.ok(post)
+    assert.ok(post.sections.length >= 7)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    assert.ok(post.sections.at(-1).paragraphs.join(' ').includes(authorText))
+    assert.ok(post.sections.some((section: { heading: string }) => section.heading === founderHeading))
+    const articleText = post.sections.flatMap(
+      (section: { paragraphs: string[] }) => section.paragraphs,
+    ).join(' ')
+    assert.match(articleText, /OCR|reconocimiento óptico|reconhecimento óptico|光学字符识别/i)
+    assert.match(articleText, /PDF/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      [
+        'https://support.google.com/drive/answer/176692?hl=en',
+        'https://support.microsoft.com/en-us/office/opening-pdfs-in-word-0b36fa53-00c1-404c-b3c3-dc26df397aee',
+      ].sort(),
+    )
+  }
+})
