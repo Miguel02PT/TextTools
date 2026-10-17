@@ -543,6 +543,104 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "average-sentence-length": {
+        "image": "blog-images/pt-br/average-sentence-length.svg",
+        "imageAlt": "Uma amostra de duas frases e 22 palavras tem média de 11 palavras por frase.",
+        "title": "Comprimento médio das frases: como calcular e usar | TextToools",
+        "description": "Aprenda a calcular o comprimento médio das frases, interpretar o resultado e editar sem perseguir uma meta rígida.",
+        "summary": "Divida as palavras de um trecho pelo número de frases para encontrar o comprimento médio. Use o resultado como pista de edição, não como regra universal de legibilidade.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: divida as palavras pelo número de frases",
+            "paragraphs": [
+              "O comprimento médio das frases é a quantidade de palavras de um trecho dividida pelo número de frases. Se uma amostra tem 120 palavras distribuídas em 8 frases, a média é de 15 palavras por frase.",
+              "O número descreve o trecho; não significa que todas as frases tenham 15 palavras. Algumas podem ser curtas e diretas, enquanto outras trazem mais detalhes. Use a média para identificar um texto que merece revisão, não para dar uma nota à escrita."
+            ]
+          },
+          {
+            "heading": "Como calcular o comprimento médio das frases",
+            "paragraphs": [
+              "Escolha um trecho, conte as palavras e divida o total pelo número de frases: comprimento médio = total de palavras ÷ número de frases. Mantenha o mesmo recorte e método de contagem ao comparar textos.",
+              "Por exemplo, 120 palavras ÷ 8 frases = 15 palavras por frase. Se a divisão não for exata, mantenha uma casa decimal ou arredonde sempre do mesmo jeito; 22 palavras ÷ 2 frases = 11 palavras por frase.",
+              "Um contador que mostre palavras e frases fornece os dois números. Os limites podem ser ambíguos com abreviações, iniciais, números decimais ou texto incompleto. Confira o trecho se uma pequena diferença na contagem puder mudar sua conclusão."
+            ]
+          },
+          {
+            "heading": "Exemplo: calcule a média",
+            "paragraphs": [
+              "Este exemplo curto tem duas frases. Conte todas as palavras e divida por dois. O resultado descreve o trecho; não é uma meta que cada frase deva atingir."
+            ],
+            "examples": [
+              {
+                "text": "Frases curtas ajudam. Frases mais longas podem explicar uma ideia complexa, mas detalhes demais em uma só frase podem dificultar a leitura.",
+                "count": 22,
+                "explanation": "22 palavras ÷ 2 frases = 11 palavras por frase."
+              }
+            ]
+          },
+          {
+            "heading": "Qual é um bom comprimento médio para as frases?",
+            "paragraphs": [
+              "Não existe uma média única que deixe todo tipo de texto claro. A orientação de linguagem simples do Escritório de Gestão de Pessoas dos Estados Unidos sugere uma média de 15 a 20 palavras por frase naquele contexto. Use-a como incentivo prático para revisar, não como regra universal, nível de leitura ou garantia de compreensão.",
+              "Público, objetivo, assunto e idioma fazem diferença. Uma explicação técnica pode precisar de uma frase mais longa para mostrar como as ideias se conectam; um aviso ou instrução talvez fique mais fácil de seguir quando é breve. Não aplique uma faixa de contagem em inglês a idiomas cuja escrita e segmentação funcionam de outra maneira."
+            ]
+          },
+          {
+            "heading": "Por que a média pode esconder frases difíceis",
+            "paragraphs": [
+              "Uma média pode esconder extremos. Um parágrafo com uma frase de 35 palavras e outra de 5 tem média de 20, embora a frase longa ainda possa ser difícil de acompanhar. Por outro lado, várias frases curtas podem soar truncadas quando repetem a mesma ideia.",
+              "Observe as frases, não só o número: a ideia principal aparece com clareza? Orações subordinadas, repetições ou transições desnecessárias exigem esforço demais? Uma frase se liga naturalmente à seguinte? A média é um sinal para conferir, não substitui a leitura em voz alta nem a revisão do sentido."
+            ]
+          },
+          {
+            "heading": "Como encurtar uma frase sem perder o sentido",
+            "paragraphs": [
+              "Comece pelo ponto principal. Remova uma ideia repetida, troque uma expressão desnecessária por outra mais direta ou divida a frase quando o sujeito ou a ação mudar. Mantenha os detalhes de que a pessoa precisa: escrever menos nem sempre significa escrever com mais clareza.",
+              "Depois da edição, releia o parágrafo inteiro. Veja se os pronomes ainda têm referentes claros, se as relações de causa e efeito continuam corretas e se a passagem entre as novas frases soa natural. Se houver um limite rígido, siga também as regras de contagem do destino."
+            ]
+          },
+          {
+            "heading": "Um fluxo simples para editar",
+            "paragraphs": [
+              "1. Escolha um trecho representativo, não um parágrafo excepcionalmente curto.",
+              "2. Conte as palavras e as frases com a mesma ferramenta e calcule a média.",
+              "3. Leia o trecho e marque frases que pareçam sobrecarregadas, vagas, repetitivas ou abruptas.",
+              "4. Edite apenas o que puder melhorar a clareza; depois, releia o trecho completo e recalcule se a comparação for importante.",
+              "5. Compare textos semelhantes, com amostras de tamanho parecido e o mesmo método de contagem. Não edite apenas para diminuir o número."
+            ]
+          },
+          {
+            "heading": "Experimente o Contador de palavras do TextToools",
+            "paragraphs": [
+              "Cole um trecho no Contador de palavras do TextToools para ver os totais de palavras e frases; depois, divida as palavras pelas frases. Esse é um cálculo manual baseado nesses totais, não uma pontuação de legibilidade separada. Confira os limites das frases e o recorte usado antes de comparar versões."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "O Contador de palavras do TextToools mostra separadamente os totais de palavras e frases. Considero a proporção entre eles um ponto de partida para editar, não uma nota: o número pode indicar um trecho que merece revisão, mas só o próprio texto mostra se as ideias estão claras."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Plain Language",
+            "publisher": "U.S. Office of Personnel Management",
+            "url": "https://www.opm.gov/information-management/plain-language/"
+          },
+          {
+            "title": "Clear language",
+            "publisher": "GOV.UK Service Manual",
+            "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/"
+          }
+        ]
+      },
       "how-long-to-read-1000-words": {
         "modified": "2026-10-12",
         "image": "blog-images/pt-br/reading-time-estimate.svg",

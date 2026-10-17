@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">句子平均长度</title>
+  <desc id="desc">一段包含两句话的文本有 24 个词语。24 除以 2，平均每句 12 个词语。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  清晰表达</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">句子平均长度</text>
+  <rect x="80" y="190" width="1040" height="170" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="233" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">两句话的示例</text>
+  <text x="112" y="283" fill="#172033" font-family="Arial, sans-serif" font-size="25" font-weight="700">短句有帮助。</text>
+  <text x="112" y="323" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="600">较长的句子可以解释复杂的想法，但一句话包含太多细节可能会让读者读得更慢。</text>
+  <rect x="80" y="390" width="1040" height="150" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="432" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">计算方法</text>
+  <text x="112" y="489" fill="#172033" font-family="Arial, sans-serif" font-size="32" font-weight="700">24 个词语 ÷ 2 句 = 平均每句 12 个词语</text>
+  <text x="112" y="520" fill="#493867" font-family="Arial, sans-serif" font-size="17" font-weight="600">编辑参考，而非通用目标</text>
+</svg>

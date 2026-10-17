@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Longitud media de las oraciones</title>
+  <desc id="desc">Una muestra de dos oraciones contiene 24 palabras. Al dividir 24 entre 2, la media es de 12 palabras por oración.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CLARIDAD AL ESCRIBIR</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Longitud media de las oraciones</text>
+  <rect x="80" y="190" width="1040" height="170" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="233" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UNA MUESTRA DE DOS ORACIONES</text>
+  <text x="112" y="283" fill="#172033" font-family="Arial, sans-serif" font-size="25" font-weight="700">Las frases breves ayudan.</text>
+  <text x="112" y="323" fill="#172033" font-family="Arial, sans-serif" font-size="17" font-weight="600">Las frases más largas pueden explicar una idea compleja, pero demasiados detalles en una sola frase pueden dificultar la lectura.</text>
+  <rect x="80" y="390" width="1040" height="150" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="432" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">EL CÁLCULO</text>
+  <text x="112" y="489" fill="#172033" font-family="Arial, sans-serif" font-size="32" font-weight="700">24 palabras ÷ 2 oraciones = 12 palabras por oración</text>
+  <text x="112" y="520" fill="#493867" font-family="Arial, sans-serif" font-size="17" font-weight="600">Una pista para editar, no una meta universal</text>
+</svg>

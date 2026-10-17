@@ -1,5 +1,105 @@
 [
   {
+    "slug": "average-sentence-length",
+    "published": "2026-10-17",
+    "title": "Average Sentence Length: How to Calculate and Use It | TextToools",
+    "description": "Learn how to calculate average sentence length, interpret the result in context, and revise long or repetitive sentences without chasing a rigid target.",
+    "summary": "Divide the words in a sample by its sentences to find average sentence length. Use the result as an editing clue, not a universal readability score.",
+    "image": "blog-images/average-sentence-length.svg",
+    "imageAlt": "A two-sentence sample with 21 words has an average sentence length of 10.5 words per sentence.",
+    "sections": [
+      {
+        "heading": "The quick answer: divide words by sentences",
+        "paragraphs": [
+          "Average sentence length is the number of words in a passage divided by the number of sentences. If a sample has 120 words across 8 sentences, its average is 15 words per sentence.",
+          "The figure describes the sample; it does not say whether every sentence is 15 words long. Some may be short and direct, while others carry more detail. Use the average to spot a draft worth reviewing, not as a grade for the writing."
+        ]
+      },
+      {
+        "heading": "How to calculate average sentence length",
+        "paragraphs": [
+          "Choose a passage, count its words, and divide that total by the number of sentences: average sentence length = total words ÷ total sentences. Keep the same passage boundaries and counting method for any comparison.",
+          "For example, 120 words ÷ 8 sentences = 15 words per sentence. If the division does not come out evenly, keep a decimal or round it consistently; 21 words ÷ 2 sentences = 10.5 words per sentence.",
+          "A word counter that shows both word and sentence totals can provide the two numbers. Sentence boundaries can be ambiguous around abbreviations, initials, decimals, or unfinished text, so check the sample if a small counting difference would change your conclusion."
+        ]
+      },
+      {
+        "heading": "Worked example: calculate the average",
+        "paragraphs": [
+          "This short sample has two sentences. Count all the words in both, then divide by two. The result is a quick description of this passage, not a target that every sentence in it should match."
+        ],
+        "examples": [
+          {
+            "text": "Short sentences help. Longer sentences can explain a complex idea, but too many details in one sentence may slow readers down.",
+            "count": 21,
+            "explanation": "21 words ÷ 2 sentences = 10.5 words per sentence."
+          }
+        ]
+      },
+      {
+        "heading": "What counts as a good average sentence length?",
+        "paragraphs": [
+          "There is no single average that makes every kind of writing clear. The U.S. Office of Personnel Management's plain-language guidance suggests aiming for an average of 15 to 20 words per sentence in that context. Treat it as a practical prompt to review, not a universal rule, a reading-level score, or a guarantee that readers will understand.",
+          "Audience, purpose, subject, and language all matter. A technical explanation may need a longer sentence to show how ideas connect; a warning or instruction may be easier to act on when it is brief. Do not apply an English word-count range to a language whose writing and segmentation work differently."
+        ]
+      },
+      {
+        "heading": "Why the average can hide awkward writing",
+        "paragraphs": [
+          "An average can hide extremes. A paragraph with one 35-word sentence and one 5-word sentence averages 20 words, yet the long sentence might still be difficult to follow. Conversely, several short sentences can sound choppy if they repeat the same point.",
+          "Look at the sentences themselves as well as the number: Is the main idea easy to find? Do extra clauses, repeated phrases, or unnecessary transitions make the reader hold too much in mind? Does each sentence connect naturally to the next? A mean is a signal to inspect, not a substitute for reading aloud or checking meaning."
+        ]
+      },
+      {
+        "heading": "How to shorten a sentence without losing meaning",
+        "paragraphs": [
+          "Start with the sentence's main point. Remove a repeated idea, replace an unnecessary phrase with a direct one, or split a sentence where the subject or action changes. Keep a detail if the reader needs it; shorter is not automatically clearer.",
+          "After editing, reread the surrounding paragraph. Check that pronouns still have clear references, cause and effect remain accurate, and the transition between the new sentences feels natural. If you are editing to meet a strict limit, follow the destination's counting rules as well as your own judgment."
+        ]
+      },
+      {
+        "heading": "A simple editing workflow",
+        "paragraphs": [
+          "1. Select a representative passage rather than one unusually short paragraph.",
+          "2. Count words and sentences with one consistent tool and calculate the average.",
+          "3. Read the passage and mark sentences that feel overloaded, vague, repetitive, or abrupt.",
+          "4. Revise only where it improves clarity, then reread the complete passage and recalculate if the comparison matters.",
+          "5. Compare like with like: use the same kind of text, similar sample lengths, and the same counting method. Do not edit merely to make the number smaller."
+        ]
+      },
+      {
+        "heading": "Try the TextToools Word Counter",
+        "paragraphs": [
+          "Paste a passage into the TextToools Word Counter to see its word and sentence totals, then divide the word count by the sentence count. The result is a manual estimate based on those totals; the counter does not present it as a separate readability score. Review sentence boundaries and your passage scope before comparing drafts."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "The TextToools Word Counter shows word and sentence totals separately. I see their ratio as a useful starting point for editing, not a score: a number can point me toward a passage to review, but only the writing itself tells me whether the ideas are clear."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Plain Language",
+        "publisher": "U.S. Office of Personnel Management",
+        "url": "https://www.opm.gov/information-management/plain-language/"
+      },
+      {
+        "title": "Clear language",
+        "publisher": "GOV.UK Service Manual",
+        "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/"
+      }
+    ]
+  },
+  {
     "slug": "how-to-count-words-in-a-pdf",
     "published": "2026-10-16",
     "title": "How to Count Words in a PDF (Text and Scanned Files) | TextToools",

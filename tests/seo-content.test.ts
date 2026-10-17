@@ -27,6 +27,9 @@ const parsedEnglishBlogPosts = JSON.parse(englishBlogPosts)
 const parsedChineseContent = JSON.parse(chineseContent)
 const parsedSpanishContent = JSON.parse(spanishContent)
 const parsedPortugueseContent = JSON.parse(portugueseContent)
+const averageSentenceLengthPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'average-sentence-length',
+)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
@@ -440,6 +443,62 @@ test('sentence-count guide examples match each locale and include localized auth
         'https://www.unicode.org/reports/tr29/',
       ].sort(),
     )
+  }
+})
+
+test('average sentence length examples match each locale word and sentence counter', () => {
+  const posts = [
+    {
+      post: averageSentenceLengthPost,
+      locale: 'en' as const,
+      words: 21,
+      average: 10.5,
+      explanation: '21 words ÷ 2 sentences = 10.5 words per sentence.',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['average-sentence-length'],
+      locale: 'es' as const,
+      words: 24,
+      average: 12,
+      explanation: '24 palabras ÷ 2 oraciones = 12 palabras por oración.',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['average-sentence-length'],
+      locale: 'pt-BR' as const,
+      words: 22,
+      average: 11,
+      explanation: '22 palavras ÷ 2 frases = 11 palavras por frase.',
+    },
+    {
+      post: parsedChineseContent.blog.posts['average-sentence-length'],
+      locale: 'zh-CN' as const,
+      words: 24,
+      average: 12,
+      explanation: '24 个词语 ÷ 2 句 = 平均每句 12 个词语。',
+    },
+  ]
+
+  for (const { post, locale, words, average, explanation } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, locale === 'en'
+      ? 'About the author'
+      : locale === 'es'
+        ? 'Sobre el autor'
+        : locale === 'pt-BR'
+          ? 'Sobre o autor'
+          : '关于作者')
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number; explanation: string }[] }) =>
+        section.examples ?? [],
+    )
+    assert.equal(examples.length, 1)
+    assert.equal(countWords(examples[0].text, locale), words, locale)
+    assert.equal(countSentences(examples[0].text, locale), 2, locale)
+    assert.equal(words / countSentences(examples[0].text, locale), average, locale)
+    assert.equal(examples[0].count, words, locale)
+    assert.equal(examples[0].explanation, explanation, locale)
+    assert.ok(post.sources.some(({ url }: { url: string }) =>
+      url === 'https://www.opm.gov/information-management/plain-language/'))
   }
 })
 
