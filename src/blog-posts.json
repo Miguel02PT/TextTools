@@ -1,5 +1,100 @@
 [
   {
+    "slug": "keyword-density-guide",
+    "published": "2026-10-18",
+    "title": "Keyword Density: How to Calculate It Without Over-Optimizing | TextToools",
+    "description": "Learn how keyword density is calculated, what a frequency checker can and cannot tell you, and how to edit repeated terms for readers.",
+    "summary": "Divide a term's occurrences by the passage's total word count to calculate keyword density. Use the percentage to review repetition, not as a ranking target.",
+    "image": "blog-images/keyword-density-guide.svg",
+    "imageAlt": "A 25-word passage uses the word clear twice, giving it a frequency of 8 percent.",
+    "sections": [
+      {
+        "heading": "The short answer: compare a term's count with the passage",
+        "paragraphs": [
+          "Keyword density is a way to describe how often a word or phrase appears relative to the length of a passage. For a single word, divide its number of occurrences by the passage's total word count, then multiply by 100.",
+          "For example, if a 25-word sample contains the word clear twice, its frequency is 2 ÷ 25 × 100 = 8%. That describes this sample and this counting method; it is not a recommended target for a page."
+        ]
+      },
+      {
+        "heading": "How to calculate keyword density",
+        "paragraphs": [
+          "Use this formula: keyword density = occurrences of the term ÷ total words × 100. Count the same version of the term consistently, and decide whether you are measuring one word or an exact multi-word phrase.",
+          "A phrase needs a clearly defined counting rule. For example, decide whether a longer phrase that contains your target phrase also counts, and whether inflected or related terms are separate. A tool that lists individual words does not automatically calculate phrase frequency.",
+          "The total depends on how words are segmented and what text you include. State the passage and counting method when comparing drafts; otherwise, two percentages may not be measuring the same thing."
+        ],
+        "examples": [
+          {
+            "text": "Clear instructions help readers complete each task. A clear example can show the steps, explain the choices, and make a useful guide easier to follow.",
+            "count": 25,
+            "explanation": "The word “clear” appears 2 times: 2 ÷ 25 × 100 = 8.0%."
+          }
+        ]
+      },
+      {
+        "heading": "What the TextToools checker measures",
+        "paragraphs": [
+          "The TextToools Keyword Density Checker ranks up to ten frequent individual terms in the text you paste. It matches without regard to capitalization, excludes common stop words from the ranked list, and calculates each displayed percentage against the full word total, including those stop words. The listed percentages therefore do not have to add up to 100%.",
+          "The checker reports individual terms, not multi-word keyphrases, and it does not combine related forms such as “write” and “writing.” Its segmentation and stop-word handling depend on the selected language. Use the count and percentage as a quick description of the pasted sample, not as a complete SEO analysis."
+        ]
+      },
+      {
+        "heading": "Is there an ideal keyword density?",
+        "paragraphs": [
+          "There is no universal percentage that guarantees visibility or a higher search position. A term may appear often because it is the precise subject of a useful page; forcing it into every paragraph can make the writing repetitive or unnatural.",
+          "Google's spam policies describe keyword stuffing as filling a page with keywords or numbers to manipulate rankings, often in ways that sound unnatural. The practical lesson is not to avoid relevant terms, but to use them where they help readers understand the page.",
+          "Search systems consider more than a raw repetition count. A density checker cannot determine whether a page satisfies a searcher's need, is accurate, or is more useful than another result. Treat any fixed percentage target as an editing choice, not a ranking rule."
+        ]
+      },
+      {
+        "heading": "Use frequency as an editing signal",
+        "paragraphs": [
+          "A frequent word is not automatically a problem. Proper names, technical terms, and the main subject of a page naturally recur. Read the sentences around repeated terms and ask whether each use adds meaning or simply repeats what the reader already knows.",
+          "If a sentence feels awkward, rewrite it for clarity rather than replacing a relevant word with a misleading synonym. Keep the terminology consistent when precision matters, and do not remove a necessary term just to lower a percentage."
+        ]
+      },
+      {
+        "heading": "A practical review workflow",
+        "paragraphs": [
+          "1. Choose the passage you actually want to assess, including the same headings or paragraphs in each draft.",
+          "2. Identify the exact word or phrase you are checking and decide how to count its occurrences.",
+          "3. Calculate its share of the passage's total words, or use a frequency checker to spot recurring individual terms.",
+          "4. Read the surrounding sentences. Look for unnatural repetition, unclear phrasing, or terminology that changes without reason.",
+          "5. Edit for accuracy and usefulness, then read the passage again. Recheck the count only if it helps you compare versions; do not edit to reach an arbitrary percentage."
+        ]
+      },
+      {
+        "heading": "Try the TextToools Keyword Density Checker",
+        "paragraphs": [
+          "Paste a draft into the TextToools Keyword Density Checker to see the most frequent individual terms, their counts, and their percentages of the total word count. The analysis runs in your browser. It is a quick way to notice patterns in a sample, not a measure of ranking potential or a phrase-level SEO audit."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I designed the TextToools Keyword Density Checker to make repeated terms easier to notice, not to prescribe what a page should say. A frequency table can point me to a passage to review, but reading the surrounding sentences is what tells me whether the repetition helps."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Spam policies for Google web search",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies#keyword-stuffing"
+      },
+      {
+        "title": "Creating helpful, reliable, people-first content",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      }
+    ]
+  },
+  {
     "slug": "average-sentence-length",
     "published": "2026-10-17",
     "title": "Average Sentence Length: How to Calculate and Use It | TextToools",

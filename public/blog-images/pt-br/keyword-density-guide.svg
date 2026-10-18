@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Densidade de palavras-chave</title>
+  <desc id="desc">A palavra clara aparece duas vezes em uma amostra de 15 palavras. Duas divididas por 15 e multiplicadas por 100 equivalem a 13,3 por cento.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CLAREZA NA ESCRITA</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Densidade de palavras-chave</text>
+  <rect x="80" y="190" width="1040" height="155" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="233" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UM TRECHO DE EXEMPLO</text>
+  <text x="112" y="298" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">clara × 2</text>
+  <text x="450" y="298" fill="#69558E" font-family="Arial, sans-serif" font-size="34" font-weight="700">15 palavras no total</text>
+  <rect x="80" y="375" width="1040" height="165" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="418" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">A FÓRMULA</text>
+  <text x="112" y="478" fill="#172033" font-family="Arial, sans-serif" font-size="32" font-weight="700">2 ÷ 15 × 100 = 13,3%</text>
+  <text x="112" y="518" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">Descreve o trecho, não é uma meta de SEO</text>
+</svg>

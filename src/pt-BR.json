@@ -543,6 +543,99 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "keyword-density-guide": {
+        "image": "blog-images/pt-br/keyword-density-guide.svg",
+        "imageAlt": "Uma amostra de 15 palavras contém duas vezes a palavra clara, com frequência de 13,3%.",
+        "title": "Densidade de palavras-chave: como calcular sem exagerar | TextToools",
+        "description": "Aprenda a calcular a densidade de palavras-chave, entenda os limites de um contador de frequência e edite pensando nos leitores.",
+        "summary": "Divida as ocorrências de um termo pelo total de palavras para calcular sua densidade. Use a porcentagem para revisar repetições, não como meta de ranqueamento.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: compare as ocorrências com o total do trecho",
+            "paragraphs": [
+              "A densidade de palavras-chave descreve com que frequência uma palavra ou frase aparece em relação ao tamanho de um trecho. Para uma palavra, divida o número de ocorrências pelo total de palavras e multiplique por 100.",
+              "Por exemplo, se uma amostra de 15 palavras contém duas vezes a palavra clara, o cálculo é 2 ÷ 15 × 100 = 13,3%. Isso descreve essa amostra e esse método de contagem; não é uma meta recomendada para uma página."
+            ]
+          },
+          {
+            "heading": "Como calcular a densidade de palavras-chave",
+            "paragraphs": [
+              "Use esta fórmula: densidade = ocorrências do termo ÷ total de palavras × 100. Conte a mesma forma do termo de maneira consistente e decida se você está medindo uma palavra ou uma frase exata.",
+              "Para uma frase, defina uma regra de contagem. Por exemplo, decida se uma expressão mais longa que contém a frase desejada também conta e se variações ou termos relacionados são contados separadamente. Um contador que lista palavras individuais não calcula automaticamente a frequência de frases.",
+              "O total depende de como as palavras são segmentadas e de qual texto você inclui. Anote o trecho e o método usados na comparação; caso contrário, as porcentagens podem medir coisas diferentes."
+            ],
+            "examples": [
+              {
+                "text": "Uma frase clara ajuda. Uma explicação clara pode mostrar o ponto e facilitar a leitura.",
+                "count": 15,
+                "explanation": "A palavra “clara” aparece 2 vezes: 2 ÷ 15 × 100 = 13,3%."
+              }
+            ]
+          },
+          {
+            "heading": "O que o contador do TextToools mede",
+            "paragraphs": [
+              "O Contador de densidade de palavras-chave do TextToools classifica até dez termos individuais frequentes no texto colado. Ele não diferencia maiúsculas de minúsculas, exclui palavras comuns da lista e calcula cada porcentagem com base no total de palavras, incluindo essas palavras comuns. Por isso, as porcentagens exibidas não precisam somar 100%.",
+              "O contador mostra termos individuais, não frases com várias palavras, e não agrupa formas relacionadas como “escrever” e “escrita”. A segmentação e as palavras comuns dependem do idioma selecionado. Use o resultado como uma descrição rápida do trecho, não como uma análise SEO completa."
+            ]
+          },
+          {
+            "heading": "Existe uma densidade ideal de palavras-chave?",
+            "paragraphs": [
+              "Não há uma porcentagem universal que garanta visibilidade ou uma posição melhor nas buscas. Um termo pode aparecer bastante por ser o assunto exato de uma página útil; forçar sua repetição em todos os parágrafos pode deixar o texto artificial ou repetitivo.",
+              "As políticas contra spam do Google descrevem o excesso de palavras-chave como preencher uma página com termos ou números para manipular posições, muitas vezes de forma que soe pouco natural. A lição prática não é evitar termos relevantes, mas usá-los quando ajudam o leitor a entender a página.",
+              "Os sistemas de busca consideram mais do que uma contagem bruta de repetições. Um contador de densidade não consegue dizer se a página atende à necessidade de quem pesquisou, se está correta ou se é mais útil do que outros resultados. Trate qualquer porcentagem fixa como uma escolha editorial, não como regra de ranqueamento."
+            ]
+          },
+          {
+            "heading": "Use a frequência como uma pista de edição",
+            "paragraphs": [
+              "Uma palavra frequente não é automaticamente um problema. Nomes próprios, termos técnicos e o assunto principal de uma página aparecem naturalmente. Leia as frases ao redor e veja se cada ocorrência acrescenta sentido ou apenas repete o que a pessoa já sabe.",
+              "Se uma frase soar estranha, reescreva-a para ficar clara em vez de trocar um termo relevante por um sinônimo impreciso. Mantenha a terminologia quando a precisão for importante e não remova uma palavra necessária apenas para reduzir a porcentagem."
+            ]
+          },
+          {
+            "heading": "Um fluxo prático de revisão",
+            "paragraphs": [
+              "1. Escolha o trecho que quer avaliar, incluindo as mesmas seções em cada versão comparada.",
+              "2. Identifique a palavra ou frase exata e decida como contar as ocorrências.",
+              "3. Calcule a proporção em relação ao total de palavras ou use um contador para encontrar termos individuais recorrentes.",
+              "4. Leia as frases ao redor. Procure repetições forçadas, trechos pouco claros ou mudanças de termos sem motivo.",
+              "5. Edite para melhorar a precisão e a utilidade; depois, releia o trecho. Refaça a contagem apenas se isso ajudar a comparar versões, não para chegar a uma porcentagem arbitrária."
+            ]
+          },
+          {
+            "heading": "Experimente o Contador de densidade de palavras-chave do TextToools",
+            "paragraphs": [
+              "Cole um rascunho no Contador de densidade de palavras-chave do TextToools para ver os termos individuais mais frequentes, suas contagens e seus percentuais do total de palavras. A análise acontece no seu navegador. É uma forma rápida de perceber padrões em um trecho, não uma medida de potencial de ranqueamento ou uma auditoria de frases-chave."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Quando criei o Contador de densidade de palavras-chave do TextToools, quis facilitar a identificação de termos repetidos, não prescrever o que uma página deve dizer. Uma tabela de frequência pode indicar um trecho para revisar, mas é a leitura das frases ao redor que mostra se a repetição ajuda."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Spam policies for Google web search",
+            "publisher": "Google Search Central",
+            "url": "https://developers.google.com/search/docs/essentials/spam-policies#keyword-stuffing"
+          },
+          {
+            "title": "Creating helpful, reliable, people-first content",
+            "publisher": "Google Search Central",
+            "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          }
+        ]
+      },
       "average-sentence-length": {
         "image": "blog-images/pt-br/average-sentence-length.svg",
         "imageAlt": "Uma amostra de duas frases e 22 palavras tem média de 11 palavras por frase.",

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">关键词密度</title>
+  <desc id="desc">在一段包含 15 个分词结果的文本中，“清晰”出现两次。2 除以 15 再乘以 100，结果为 13.3%。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  清晰表达</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">关键词密度</text>
+  <rect x="80" y="190" width="1040" height="155" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="233" fill="#647084" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">示例文本</text>
+  <text x="112" y="298" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">清晰 × 2</text>
+  <text x="450" y="298" fill="#69558E" font-family="Arial, sans-serif" font-size="34" font-weight="700">总计 15 个词语</text>
+  <rect x="80" y="375" width="1040" height="165" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="418" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">计算公式</text>
+  <text x="112" y="478" fill="#172033" font-family="Arial, sans-serif" font-size="32" font-weight="700">2 ÷ 15 × 100 = 13.3%</text>
+  <text x="112" y="518" fill="#493867" font-family="Arial, sans-serif" font-size="18" font-weight="600">描述文本，不是 SEO 目标</text>
+</svg>

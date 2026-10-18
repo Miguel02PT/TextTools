@@ -30,6 +30,9 @@ const parsedPortugueseContent = JSON.parse(portugueseContent)
 const averageSentenceLengthPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'average-sentence-length',
 )
+const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'keyword-density-guide',
+)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
@@ -499,6 +502,72 @@ test('average sentence length examples match each locale word and sentence count
     assert.equal(examples[0].explanation, explanation, locale)
     assert.ok(post.sources.some(({ url }: { url: string }) =>
       url === 'https://www.opm.gov/information-management/plain-language/'))
+  }
+})
+
+test('keyword density examples match the localized checker and explain its limits', () => {
+  const posts = [
+    {
+      post: keywordDensityGuidePost,
+      locale: 'en' as const,
+      term: 'clear',
+      words: 25,
+      percentage: 8,
+      explanation: 'The word “clear” appears 2 times: 2 ÷ 25 × 100 = 8.0%.',
+      authorHeading: 'About the author',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['keyword-density-guide'],
+      locale: 'es' as const,
+      term: 'clara',
+      words: 16,
+      percentage: 12.5,
+      explanation: 'La palabra «clara» aparece 2 veces: 2 ÷ 16 × 100 = 12,5 %.',
+      authorHeading: 'Sobre el autor',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['keyword-density-guide'],
+      locale: 'pt-BR' as const,
+      term: 'clara',
+      words: 15,
+      percentage: 13.3,
+      explanation: 'A palavra “clara” aparece 2 vezes: 2 ÷ 15 × 100 = 13,3%.',
+      authorHeading: 'Sobre o autor',
+    },
+    {
+      post: parsedChineseContent.blog.posts['keyword-density-guide'],
+      locale: 'zh-CN' as const,
+      term: '清晰',
+      words: 15,
+      percentage: 13.3,
+      explanation: '“清晰”出现 2 次：2 ÷ 15 × 100 = 13.3%。',
+      authorHeading: '关于作者',
+    },
+  ]
+
+  for (const { post, locale, term, words, percentage, explanation, authorHeading } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number; explanation: string }[] }) =>
+        section.examples ?? [],
+    )
+    assert.equal(examples.length, 1)
+    const keywordData = getKeywordData(examples[0].text, locale)
+    assert.equal(keywordData.totalWords, words, locale)
+    assert.equal(examples[0].count, words, locale)
+    assert.equal(examples[0].explanation, explanation, locale)
+    const keywordEntry = keywordData.entries.find(({ word }) => word === term)
+    assert.ok(keywordEntry, `${locale} ranks ${term}`)
+    assert.equal(keywordEntry.count, 2, locale)
+    assert.equal(Math.round(keywordEntry.percentage * 10) / 10, percentage, locale)
+    assert.ok(post.sources.some(({ url }: { url: string }) =>
+      url === 'https://developers.google.com/search/docs/essentials/spam-policies#keyword-stuffing'))
+    const articleText = post.sections.flatMap(
+      (section: { paragraphs: string[] }) => section.paragraphs,
+    ).join(' ')
+    assert.match(articleText, /founder|fundador|创始人/i)
+    assert.match(articleText, /checker|contador|统计工具/i)
   }
 })
 
