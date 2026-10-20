@@ -33,6 +33,9 @@ const averageSentenceLengthPost = parsedEnglishBlogPosts.find(
 const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'keyword-density-guide',
 )
+const googleDocsWordCountPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'google-docs-word-count',
+)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
@@ -568,6 +571,58 @@ test('keyword density examples match the localized checker and explain its limit
     ).join(' ')
     assert.match(articleText, /founder|fundador|创始人/i)
     assert.match(articleText, /checker|contador|统计工具/i)
+  }
+})
+
+test('Google Docs word-count examples match each locale counter and source its exclusions', () => {
+  const posts = [
+    {
+      post: googleDocsWordCountPost,
+      locale: 'en' as const,
+      words: 11,
+      authorHeading: 'About the author',
+      exclusions: /headers, footers, and footnotes/,
+    },
+    {
+      post: parsedSpanishContent.blog.posts['google-docs-word-count'],
+      locale: 'es' as const,
+      words: 10,
+      authorHeading: 'Sobre el autor',
+      exclusions: /encabezados, pies de página y notas al pie/,
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['google-docs-word-count'],
+      locale: 'pt-BR' as const,
+      words: 10,
+      authorHeading: 'Sobre o autor',
+      exclusions: /cabeçalhos, rodapés e notas de rodapé/,
+    },
+    {
+      post: parsedChineseContent.blog.posts['google-docs-word-count'],
+      locale: 'zh-CN' as const,
+      words: 11,
+      authorHeading: '关于作者',
+      exclusions: /页眉、页脚和脚注/,
+    },
+  ]
+
+  for (const { post, locale, words, authorHeading, exclusions } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number }[] }) =>
+        section.examples ?? [],
+    )
+    assert.equal(examples.length, 1)
+    assert.equal(countWords(examples[0].text, locale), words, locale)
+    assert.equal(examples[0].count, words, locale)
+    assert.match(post.sections.flatMap(
+      (section: { paragraphs: string[] }) => section.paragraphs,
+    ).join(' '), exclusions)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url),
+      ['https://support.google.com/docs/answer/39003?hl=en'],
+    )
   }
 })
 

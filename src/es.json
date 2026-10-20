@@ -368,6 +368,94 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "google-docs-word-count": {
+        "image": "blog-images/es/google-docs-word-count.svg",
+        "imageAlt": "Lista para contar palabras en Google Docs: abrir Herramientas, elegir Recuento de palabras y comprobar el alcance.",
+        "title": "Cómo ver el recuento de palabras en Google Docs (y qué excluye) | TextToools",
+        "description": "Consulta el recuento de palabras en Google Docs, cuenta un fragmento seleccionado y ten en cuenta los encabezados, pies y notas al pie excluidos.",
+        "summary": "Usa Herramientas > Recuento de palabras para contar un documento o una selección. Google Docs excluye los encabezados, pies y notas al pie del total del documento.",
+        "sections": [
+          {
+            "heading": "Respuesta rápida: abre Herramientas y elige Recuento de palabras",
+            "paragraphs": [
+              "En Google Docs para ordenador, abre el documento y elige Herramientas > Recuento de palabras. El cuadro muestra el total del documento. Si antes seleccionas un fragmento, Google Docs calcula el recuento de esa selección.",
+              "Antes de usar la cifra, comprueba qué incluye tu tarea o editor. Google Docs excluye los encabezados, pies de página y notas al pie del recuento de todo el documento, por lo que el total puede ser menor que el límite solicitado."
+            ]
+          },
+          {
+            "heading": "Cómo contar un documento entero o una parte",
+            "paragraphs": [
+              "1. Abre el documento de Google Docs en un ordenador.",
+              "2. Para contar todo el documento, no selecciones texto. Para contar un fragmento, selecciónalo primero.",
+              "3. Elige Herramientas > Recuento de palabras y consulta el total.",
+              "4. Compáralo con el alcance exacto de las instrucciones. Comprueba si incluyen el título, los encabezados, los pies de foto, las citas, las referencias y las notas.",
+              "5. Si editas el texto, vuelve a contar la versión final."
+            ]
+          },
+          {
+            "heading": "Qué excluye Google Docs",
+            "paragraphs": [
+              "La ayuda de Google indica que el recuento de todo el documento incluye el contenido salvo los encabezados, pies de página y notas al pie. Estas partes pueden importar en una tarea, un informe o un límite de entrega, así que la cifra del cuadro quizá no coincida con el total que piden las instrucciones.",
+              "Si esas partes cuentan para el límite, comprueba el método que exigen las instrucciones. Si no se especifica ninguno, copia el texto pertinente en otro contador y suma el resultado al total del cuerpo, sin contar el mismo texto dos veces. Usa las mismas partes y el mismo método para comparar borradores."
+            ]
+          },
+          {
+            "heading": "Por qué Google Docs y otro contador pueden discrepar",
+            "paragraphs": [
+              "El total depende tanto del texto incluido como de la convención de recuento. Un contador puede excluir partes del documento que otro sí incluye; las herramientas también pueden tratar de manera distinta la puntuación, los guiones, los símbolos y otros casos particulares.",
+              "TextToools cuenta en tu navegador el texto que pegas en su contador de palabras; cada grupo de caracteres separado por espacios en blanco cuenta como una palabra. No abre archivos de Google Docs ni obtiene el texto desde un enlace al documento. Si hay un límite estricto, sigue las instrucciones del destino y usa el contador requerido cuando se indique."
+            ]
+          },
+          {
+            "heading": "Un pequeño ejemplo para contar un fragmento",
+            "paragraphs": [
+              "Imagina que solo necesitas contar una sección breve de un informe. Selecciona el texto principal de esa sección antes de abrir Recuento de palabras. El ejemplo siguiente contiene 10 palabras según la regla de espacios de TextToools; una selección o un contador distintos pueden dar otro resultado si cambian el alcance o las reglas."
+            ],
+            "examples": [
+              {
+                "text": "El informe está listo. Revisa cada sección antes de enviarlo.",
+                "count": 10,
+                "explanation": "Dos oraciones y 10 palabras. Selecciona solo el fragmento que necesitas contar."
+              }
+            ]
+          },
+          {
+            "heading": "Lista rápida para comprobar el recuento",
+            "paragraphs": [
+              "1. Lee las instrucciones y anota si incluyen encabezados, notas al pie, referencias u otro material adicional.",
+              "2. Decide si necesitas contar el documento entero o solo una selección.",
+              "3. Usa Herramientas > Recuento de palabras en Google Docs y recuerda las exclusiones documentadas.",
+              "4. Si las instrucciones lo piden, cuenta aparte el material excluido que también deba entrar en el límite.",
+              "5. Vuelve a comprobar la versión final con el método que exija el destino."
+            ]
+          },
+          {
+            "heading": "Prueba el contador de palabras de TextToools",
+            "paragraphs": [
+              "Si necesitas contar texto aparte o revisar un fragmento con una regla coherente basada en espacios, copia el texto pertinente y pégalo en el contador de palabras de TextToools. El recuento se realiza en tu navegador; la herramienta no abre archivos de Google Docs y solo cuenta el texto que le proporcionas."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Cuando diseñé el contador de palabras de TextToools, quise contar el texto pegado en el navegador en lugar de pedir que se subieran documentos. Así, tú decides qué texto incluir y puedes compararlo con las reglas que se aplican a tu documento."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Count the words in a document",
+            "publisher": "Google Docs Editors Help",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
       "keyword-density-guide": {
         "image": "blog-images/es/keyword-density-guide.svg",
         "imageAlt": "Una muestra de 16 palabras contiene dos veces la palabra clara, con una frecuencia del 12,5 %.",

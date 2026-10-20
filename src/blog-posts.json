@@ -1,5 +1,95 @@
 [
   {
+    "slug": "google-docs-word-count",
+    "published": "2026-10-20",
+    "title": "How to Check Word Count in Google Docs (and What It Leaves Out) | TextToools",
+    "description": "Find the word count in Google Docs, count a selected section, and account for headers, footers, and footnotes that Google Docs leaves out.",
+    "summary": "Use Tools > Word count in Google Docs to check a document or selection. Google Docs excludes headers, footers, and footnotes from the document total.",
+    "image": "blog-images/google-docs-word-count.svg",
+    "imageAlt": "A Google Docs word count checklist: open Tools, choose Word count, then check the document scope.",
+    "sections": [
+      {
+        "heading": "The quick answer: open Tools, then Word count",
+        "paragraphs": [
+          "In Google Docs on a computer, open the document and choose Tools > Word count. The dialog shows the document's word total. If you select a section first, Google Docs reports the count for that selection instead.",
+          "Check what your assignment or publisher includes before relying on the number. Google Docs excludes headers, footers, and footnotes from the document-wide count, so its total may be lower than a brief that includes those parts."
+        ]
+      },
+      {
+        "heading": "How to count all or part of a document",
+        "paragraphs": [
+          "1. Open the Google Docs document on a computer.",
+          "2. To count the document, leave the text unselected. To count a passage, select that passage first.",
+          "3. Choose Tools > Word count and read the word total in the dialog.",
+          "4. Compare the result with the exact scope in your instructions. Check whether the title, headings, captions, quotations, references, and notes are included.",
+          "5. If you edit the text, run the count again on the final version."
+        ]
+      },
+      {
+        "heading": "What Google Docs leaves out",
+        "paragraphs": [
+          "Google's help documentation says a document-wide word count covers everything except headers, footers, and footnotes. Those sections can matter for an assignment, report, or submission limit, so the number in the dialog may not represent the total your instructions ask for.",
+          "If those sections count toward your limit, check the brief for a required method. Otherwise, copy the relevant text into a separate counter and add that count to the body total, taking care not to count the same text twice. Keep the parts and method consistent if you compare drafts."
+        ]
+      },
+      {
+        "heading": "Why Google Docs and another counter can disagree",
+        "paragraphs": [
+          "A word total depends on both the text included and the counting convention. One counter may leave out document sections that another includes; tools can also differ in how they treat punctuation, hyphens, symbols, and other edge cases.",
+          "TextToools counts the text pasted into its Word Counter in your browser, with each group of non-whitespace characters treated as one word. It does not read a Google Docs file or fetch text from a document link. If a strict limit applies, follow the destination's instructions and use its required counter when specified."
+        ]
+      },
+      {
+        "heading": "A small example of checking a passage",
+        "paragraphs": [
+          "Suppose you only need the count for a short report section. Select the body text for that section before opening Word count. The example below contains 11 words using TextToools' whitespace-based rule; a selection or a different counter can give another result if its scope or conventions differ."
+        ],
+        "examples": [
+          {
+            "text": "A short report is ready. Check every section before sending it.",
+            "count": 11,
+            "explanation": "Two sentences, 11 words total. Select only the passage you need to count."
+          }
+        ]
+      },
+      {
+        "heading": "A reliable word-count checklist",
+        "paragraphs": [
+          "1. Read the instructions and note whether they include headings, footnotes, references, or other supporting text.",
+          "2. Decide whether you need the whole document or one selected section.",
+          "3. Use Tools > Word count in Google Docs and remember its documented exclusions.",
+          "4. Count any required excluded material separately if the instructions call for it.",
+          "5. Recheck the final version with the method required by the destination."
+        ]
+      },
+      {
+        "heading": "Try the TextToools Word Counter",
+        "paragraphs": [
+          "If you need to count text separately or check a passage with a consistent whitespace-based rule, copy the relevant text and paste it into the TextToools Word Counter. The count runs in your browser; the tool does not open Google Docs files, and it counts only the text you provide."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "When I built the TextToools Word Counter, I chose to count text pasted into the browser rather than ask people to upload a document. That makes the counting scope visible: you decide which text to include, then check it against the rules that apply to your document."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Count the words in a document",
+        "publisher": "Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/39003?hl=en"
+      }
+    ]
+  },
+  {
     "slug": "keyword-density-guide",
     "published": "2026-10-18",
     "title": "Keyword Density: How to Calculate It Without Over-Optimizing | TextToools",

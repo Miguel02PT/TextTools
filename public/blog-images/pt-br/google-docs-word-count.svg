@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Contagem de palavras no Google Docs</title>
+  <desc id="desc">Selecione um trecho, abra Ferramentas e escolha Contagem de palavras. O Google Docs exclui cabeçalhos, rodapés e notas de rodapé do total.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CONTAGEM DE PALAVRAS</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Contagem no Google Docs</text>
+  <rect x="80" y="190" width="320" height="155" rx="22" fill="#FFFFFF"/>
+  <rect x="440" y="190" width="320" height="155" rx="22" fill="#FFFFFF"/>
+  <rect x="800" y="190" width="320" height="155" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="235" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ETAPA 1</text>
+  <text x="112" y="288" fill="#172033" font-family="Arial, sans-serif" font-size="28" font-weight="700">Selecione um trecho</text>
+  <text x="472" y="235" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ETAPA 2</text>
+  <text x="472" y="288" fill="#172033" font-family="Arial, sans-serif" font-size="28" font-weight="700">Ferramentas → Contagem</text>
+  <text x="832" y="235" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ETAPA 3</text>
+  <text x="832" y="288" fill="#172033" font-family="Arial, sans-serif" font-size="28" font-weight="700">Confira o escopo</text>
+  <rect x="80" y="380" width="1040" height="160" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="428" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">FORA DO TOTAL DO DOCUMENTO</text>
+  <text x="112" y="493" fill="#172033" font-family="Arial, sans-serif" font-size="32" font-weight="700">Cabeçalhos  ·  Rodapés  ·  Notas de rodapé</text>
+  <text x="112" y="525" fill="#493867" font-family="Arial, sans-serif" font-size="17" font-weight="600">Confira as instruções antes de enviar</text>
+</svg>

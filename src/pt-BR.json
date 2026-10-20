@@ -543,6 +543,94 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "google-docs-word-count": {
+        "image": "blog-images/pt-br/google-docs-word-count.svg",
+        "imageAlt": "Lista para contar palavras no Google Docs: abrir Ferramentas, escolher Contagem de palavras e conferir o escopo.",
+        "title": "Como ver a contagem de palavras no Google Docs (e o que fica de fora) | TextToools",
+        "description": "Veja a contagem de palavras no Google Docs, conte um trecho selecionado e confira as exclusões de cabeçalhos, rodapés e notas de rodapé.",
+        "summary": "Use Ferramentas > Contagem de palavras para contar um documento ou uma seleção. O Google Docs exclui cabeçalhos, rodapés e notas de rodapé do total do documento.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: abra Ferramentas e escolha Contagem de palavras",
+            "paragraphs": [
+              "No Google Docs para computador, abra o documento e escolha Ferramentas > Contagem de palavras. A janela mostra o total do documento. Se você selecionar um trecho antes, o Google Docs informa a contagem daquela seleção.",
+              "Antes de confiar no número, confira o que o trabalho ou a publicação inclui. O Google Docs exclui cabeçalhos, rodapés e notas de rodapé da contagem do documento inteiro, então o total pode ser menor que o limite pedido."
+            ]
+          },
+          {
+            "heading": "Como contar um documento inteiro ou só uma parte",
+            "paragraphs": [
+              "1. Abra o documento do Google Docs em um computador.",
+              "2. Para contar o documento inteiro, não selecione texto. Para contar um trecho, selecione-o primeiro.",
+              "3. Escolha Ferramentas > Contagem de palavras e confira o total.",
+              "4. Compare o resultado com o escopo exato das instruções. Veja se entram título, cabeçalhos, legendas, citações, referências e notas.",
+              "5. Se editar o texto, faça a contagem novamente na versão final."
+            ]
+          },
+          {
+            "heading": "O que o Google Docs deixa de fora",
+            "paragraphs": [
+              "A documentação de ajuda do Google informa que a contagem do documento inteiro inclui todo o conteúdo, exceto cabeçalhos, rodapés e notas de rodapé. Essas partes podem ser importantes em um trabalho, relatório ou limite de envio; por isso, o número exibido talvez não represente o total exigido nas instruções.",
+              "Se essas partes entrarem no limite, confira o método pedido nas instruções. Caso não haja um método definido, copie o texto relevante para outro contador e some esse resultado ao total do corpo, sem contar o mesmo trecho duas vezes. Mantenha as mesmas partes e o mesmo método ao comparar rascunhos."
+            ]
+          },
+          {
+            "heading": "Por que o Google Docs e outro contador podem divergir",
+            "paragraphs": [
+              "O total depende tanto do texto incluído quanto da regra de contagem. Um contador pode deixar de fora partes do documento que outro inclui; ferramentas também podem tratar pontuação, hífens, símbolos e outros casos de maneiras diferentes.",
+              "O TextToools conta no navegador o texto colado em seu Contador de palavras, considerando cada grupo separado por espaços em branco como uma palavra. Ele não abre arquivos do Google Docs nem busca texto por um link do documento. Se houver um limite rígido, siga as instruções do destino e use o contador exigido quando houver um."
+            ]
+          },
+          {
+            "heading": "Um exemplo simples para contar um trecho",
+            "paragraphs": [
+              "Imagine que você precisa contar apenas uma seção curta de um relatório. Selecione o texto principal daquela seção antes de abrir Contagem de palavras. O exemplo abaixo tem 10 palavras pela regra de espaços em branco do TextToools; uma seleção ou outro contador pode mostrar um total diferente se o escopo ou a regra mudar."
+            ],
+            "examples": [
+              {
+                "text": "O relatório está pronto. Revise cada seção antes de enviar.",
+                "count": 10,
+                "explanation": "Duas frases, 10 palavras no total. Selecione apenas o trecho que precisa contar."
+              }
+            ]
+          },
+          {
+            "heading": "Checklist para conferir a contagem",
+            "paragraphs": [
+              "1. Leia as instruções e anote se elas incluem cabeçalhos, notas de rodapé, referências ou outros materiais de apoio.",
+              "2. Decida se você precisa contar o documento inteiro ou apenas um trecho selecionado.",
+              "3. Use Ferramentas > Contagem de palavras no Google Docs e lembre das exclusões documentadas.",
+              "4. Se as instruções exigirem, conte separadamente o material excluído que também precisa entrar no limite.",
+              "5. Confira a versão final pelo método exigido pelo destino."
+            ]
+          },
+          {
+            "heading": "Experimente o Contador de palavras do TextToools",
+            "paragraphs": [
+              "Se você precisa contar um texto à parte ou conferir um trecho com uma regra consistente baseada em espaços, copie o texto relevante e cole no Contador de palavras do TextToools. A contagem acontece no seu navegador; a ferramenta não abre arquivos do Google Docs e conta apenas o texto fornecido."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Quando criei o Contador de palavras do TextToools, quis contar o texto colado no navegador em vez de pedir que as pessoas enviassem um documento. Assim, você decide o que incluir e pode conferir o resultado de acordo com as regras do seu documento."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Count the words in a document",
+            "publisher": "Google Docs Editors Help",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
       "keyword-density-guide": {
         "image": "blog-images/pt-br/keyword-density-guide.svg",
         "imageAlt": "Uma amostra de 15 palavras contém duas vezes a palavra clara, com frequência de 13,3%.",
