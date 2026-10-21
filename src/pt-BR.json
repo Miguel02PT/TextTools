@@ -543,6 +543,83 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "five-minute-speech-word-count": {
+        "image": "blog-images/pt-br/five-minute-speech.svg",
+        "imageAlt": "Estimativa de cinco minutos de discurso: multiplique o ritmo de fala por cinco e ensaie em voz alta.",
+        "title": "Quantas palavras tem um discurso de 5 minutos? | TextToools",
+        "description": "Estime o tamanho de um discurso de cinco minutos pelo ritmo de fala, use a fórmula de palavras por minuto e ensaie o texto final para incluir as pausas.",
+        "summary": "A 120–160 palavras por minuto, cinco minutos equivalem a cerca de 600–800 palavras em inglês. Seu ritmo, idioma, pausas e público podem mudar o resultado.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: cerca de 600–800 palavras a 120–160 por minuto",
+            "paragraphs": [
+              "Um discurso de cinco minutos pode ter cerca de 600–800 palavras em inglês se você usar como referência um ritmo de 120–160 palavras por minuto. A Toastmasters inclui essa faixa em seu guia sobre a voz ao falar, mas ela é um ponto de partida, não uma regra para todas as pessoas ou idiomas.",
+              "Pausas, ênfase, reações do público e transições consomem tempo sem acrescentar palavras. Se você fala com calma ou inclui interação, prepare menos palavras do que a conta direta sugere e ensaie o texto completo."
+            ]
+          },
+          {
+            "heading": "Use a fórmula de palavras por minuto",
+            "paragraphs": [
+              "Para estimar a duração: tempo de fala em minutos = número de palavras ÷ ritmo em palavras por minuto. Para planejar o tamanho do texto, inverta a operação: palavras = minutos × palavras por minuto.",
+              "Em cinco minutos, a conta fica assim: a 120 palavras por minuto, 600 palavras; a 140, 700 palavras; a 160, 800 palavras. São estimativas matemáticas antes das pausas ou reações do público, não uma garantia de duração."
+            ]
+          },
+          {
+            "heading": "Por que seu discurso de cinco minutos pode ter outro tamanho",
+            "paragraphs": [
+              "Ninguém fala sempre na mesma velocidade. Você pode diminuir o ritmo para explicar um conceito técnico, fazer uma pausa para dar ênfase ou esperar uma reação do público. Nomes, citações, mudanças de slides e demonstrações também podem aumentar a duração.",
+              "A faixa de 120–160 palavras por minuto é uma referência útil para planejar discursos em inglês, não um ritmo universal. A segmentação das palavras e o ritmo da fala variam conforme o idioma. Conte e ensaie a versão que você realmente vai apresentar, sem aplicar automaticamente uma estimativa em inglês a outra língua."
+            ]
+          },
+          {
+            "heading": "Meça seu ritmo ensaiando",
+            "paragraphs": [
+              "1. Prepare o roteiro que pretende apresentar. Não inclua notas privadas nem instruções de palco na contagem, a menos que vá dizê-las em voz alta.",
+              "2. Leia o roteiro em voz alta em um ritmo natural de apresentação e cronometre toda a fala, incluindo pausas e transições.",
+              "3. Divida o número de palavras faladas pelo tempo do ensaio em minutos para estimar seu ritmo. Por exemplo, 630 palavras em 4,5 minutos equivalem a 140 palavras por minuto.",
+              "4. Se passar do tempo, remova ou simplifique o conteúdo menos importante. Se terminar antes, acrescente uma explicação útil onde o público precisar; não estique todas as frases.",
+              "5. Ensaie novamente depois de editar. Uma segunda rodada ajuda a perceber mudanças causadas por um novo exemplo, uma pausa maior ou uma transição."
+            ]
+          },
+          {
+            "heading": "Reserve tempo para pausas e reações do público",
+            "paragraphs": [
+              "Um roteiro que leva exatamente cinco minutos quando lido sem parar pode ultrapassar o limite diante de um público. Marque as pausas intencionais, reserve tempo para slides ou demonstrações e considere a possibilidade de risadas ou perguntas.",
+              "A Toastmasters recomenda ensaiar com um cronômetro e levar em conta as pausas e reações do público. Use a contagem para preparar um rascunho; use um ensaio cronometrado para conferir a duração real."
+            ]
+          },
+          {
+            "heading": "Experimente o contador de palavras do TextToools",
+            "paragraphs": [
+              "Cole no contador de palavras do TextToools o texto que pretende falar para conferir o tamanho do roteiro. Se não for dizer as instruções de palco em voz alta, remova-as antes de contar. A contagem acontece no navegador, mas a ferramenta não cronometra o ensaio nem prevê pausas: use um cronômetro enquanto fala em voz alta."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar o contador de palavras do TextToools, percebi que o total sozinho não poderia dizer quanto tempo um discurso levaria. O ritmo de quem fala e as pausas também importam; por isso, considero a contagem uma ajuda para planejar e o ensaio a verdadeira verificação do tempo."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Your Speaking Voice",
+            "publisher": "Toastmasters International",
+            "url": "https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/199-your-speaking-voice.pdf"
+          },
+          {
+            "title": "Manage Your Speaking Time",
+            "publisher": "Toastmasters International",
+            "url": "https://toastmasters.org/magazine/magazine-issues/2025/feb/manage-your-speaking-time"
+          }
+        ]
+      },
       "google-docs-word-count": {
         "image": "blog-images/pt-br/google-docs-word-count.svg",
         "imageAlt": "Lista para contar palavras no Google Docs: abrir Ferramentas, escolher Contagem de palavras e conferir o escopo.",

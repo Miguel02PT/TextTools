@@ -36,6 +36,9 @@ const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
 const googleDocsWordCountPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'google-docs-word-count',
 )
+const fiveMinuteSpeechPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'five-minute-speech-word-count',
+)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
@@ -673,6 +676,68 @@ test('PDF word-count guide is accurate, localized, and linked to its text counte
         'https://support.google.com/drive/answer/176692?hl=en',
         'https://support.microsoft.com/en-us/office/opening-pdfs-in-word-0b36fa53-00c1-404c-b3c3-dc26df397aee',
       ].sort(),
+    )
+  }
+})
+
+test('five-minute speech estimates are accurate, localized, and distinguish rehearsal from word count', () => {
+  const posts = [
+    {
+      post: fiveMinuteSpeechPost,
+      locale: 'en',
+      authorHeading: 'About the author',
+      authorText: 'Written by the founder of TextToools.',
+      founderHeading: 'A note from the founder',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['five-minute-speech-word-count'],
+      locale: 'es',
+      authorHeading: 'Sobre el autor',
+      authorText: 'Escrito por el fundador de TextToools.',
+      founderHeading: 'Una nota del fundador',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['five-minute-speech-word-count'],
+      locale: 'pt-BR',
+      authorHeading: 'Sobre o autor',
+      authorText: 'Escrito pelo fundador do TextToools.',
+      founderHeading: 'Uma observação do fundador',
+    },
+    {
+      post: parsedChineseContent.blog.posts['five-minute-speech-word-count'],
+      locale: 'zh-CN',
+      authorHeading: '关于作者',
+      authorText: 'TextToools 创始人',
+      founderHeading: '创始人的一点想法',
+    },
+  ]
+
+  assert.equal(5 * 120, 600)
+  assert.equal(5 * 140, 700)
+  assert.equal(5 * 160, 800)
+
+  for (const { post, locale, authorHeading, authorText, founderHeading } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    assert.ok(post.sections.at(-1).paragraphs.join(' ').includes(authorText))
+    assert.ok(post.sections.some((section: { heading: string }) =>
+      section.heading === founderHeading,
+    ))
+    const articleText = post.sections.flatMap(
+      (section: { paragraphs: string[] }) => section.paragraphs,
+    ).join(' ')
+    assert.match(articleText, /600/)
+    assert.match(articleText, /800/)
+    assert.match(articleText, /Toastmasters/)
+    assert.match(articleText, /rehears|ensay|ensai|排练/i)
+    assert.match(articleText, /pause|pausa|停顿/i)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      [
+        'https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/199-your-speaking-voice.pdf',
+        'https://toastmasters.org/magazine/magazine-issues/2025/feb/manage-your-speaking-time',
+      ].sort(),
+      locale,
     )
   }
 })
