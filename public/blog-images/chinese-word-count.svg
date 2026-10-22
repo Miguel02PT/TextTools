@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">How to count words in Chinese</title>
+  <desc id="desc">Chinese text is segmented into word-like units. Word count and character count are different, and another segmenter may give a different total.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CHINESE WORD COUNT</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Words or characters?</text>
+  <rect x="80" y="190" width="1040" height="156" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">ONE CHINESE SENTENCE</text>
+  <text x="112" y="300" fill="#172033" font-family="Arial, sans-serif" font-size="38" font-weight="700">今天的天气很好，我们去公园散步。</text>
+  <rect x="80" y="380" width="500" height="160" rx="22" fill="#E8E1F1"/>
+  <rect x="620" y="380" width="500" height="160" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="431" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">WORD-LIKE SEGMENTS</text>
+  <text x="112" y="496" fill="#172033" font-family="Arial, sans-serif" font-size="44" font-weight="700">8 in this counter</text>
+  <text x="652" y="431" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">CHARACTERS ≠ WORDS</text>
+  <text x="652" y="483" fill="#172033" font-family="Arial, sans-serif" font-size="29" font-weight="700">Rules can vary</text>
+  <text x="652" y="516" fill="#493867" font-family="Arial, sans-serif" font-size="17" font-weight="600">Use the required counter</text>
+</svg>

@@ -543,6 +543,96 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "how-to-count-words-in-chinese": {
+        "image": "blog-images/pt-br/chinese-word-count.svg",
+        "imageAlt": "O texto em chinês é dividido em segmentos semelhantes a palavras; outro segmentador pode apresentar um resultado diferente.",
+        "title": "Como contar palavras em chinês (e por que os resultados variam) | TextToools",
+        "description": "Entenda por que a contagem de palavras em chinês depende da segmentação, como os contadores dividem o texto e quando seguir o método exigido.",
+        "summary": "O chinês não separa as palavras com espaços. Um contador usa regras de segmentação para estimar unidades semelhantes a palavras, então ferramentas diferentes podem mostrar totais diferentes.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: a contagem de palavras em chinês depende da segmentação",
+            "paragraphs": [
+              "Em geral, a escrita chinesa não separa as palavras com espaços. Um contador não consegue dividir o texto pelos espaços como faz com o inglês: precisa estimar onde cada unidade lexical começa e termina.",
+              "Por isso, dois contadores podem mostrar totais diferentes para o mesmo trecho em chinês. As regras de segmentação ou os dados de idioma podem variar. Se uma instituição, publicação ou formulário exigir um método, use esse método para obter a contagem final."
+            ]
+          },
+          {
+            "heading": "Palavras, caracteres e segmentos não são a mesma coisa",
+            "paragraphs": [
+              "Um caractere chinês é uma unidade escrita; uma palavra pode ter um ou mais caracteres. Por exemplo, na frase “今天的天气很好” (O tempo está bom hoje), um segmentador pode agrupar o texto assim: “今天 / 的 / 天气 / 很好”. Contar cada caractere, cada segmento ou apenas os símbolos sem espaços responde a perguntas diferentes.",
+              "Confira o que o trabalho realmente pede: palavras (词数), caracteres (字数) ou o limite específico de uma plataforma. Não presuma que o total de “palavras” equivale ao de caracteres nem que todos os contadores usam a mesma definição."
+            ]
+          },
+          {
+            "heading": "Como um contador divide o texto em chinês",
+            "paragraphs": [
+              "O TextToools usa a segmentação de palavras do navegador, configurada para chinês simplificado, e conta os segmentos identificados como unidades lexicais. Isso é diferente de contar espaços, caracteres ou sinais de pontuação. O contador também mostra um total separado de caracteres, calculado com sua própria regra baseada em grafemas.",
+              "O Unicode descreve os limites do texto como diretrizes que podem ser adaptadas a idiomas e convenções específicas. Um segmentador oferece uma estimativa prática e consistente, não uma autoridade linguística universal para todos os contextos ou vocabulários."
+            ]
+          },
+          {
+            "heading": "Um exemplo simples de por que os totais variam",
+            "paragraphs": [
+              "Considere “今天的天气很好，我们去公园散步。” (O tempo está bom hoje e vamos passear no parque). O segmentador atual do TextToools divide o texto assim: “今天 / 的 / 天气 / 很好 / 我们 / 去 / 公园 / 散步”. Já uma contagem de caracteres considera os caracteres visíveis, enquanto um contador que só separa por espaços pode tratar a frase inteira como um único grupo. Cada resultado segue uma regra diferente."
+            ],
+            "examples": [
+              {
+                "text": "今天的天气很好，我们去公园散步。",
+                "count": 8,
+                "explanation": "O segmentador atual de chinês simplificado do TextToools retorna oito segmentos lexicais neste exemplo. Os dados podem variar entre navegadores e produzir outras divisões."
+              }
+            ]
+          },
+          {
+            "heading": "Como conferir uma contagem de palavras em chinês",
+            "paragraphs": [
+              "1. Confirme se o limite pedido é em palavras, caracteres ou outra unidade.",
+              "2. Use um contador configurado para chinês em vez de depender da separação por espaços.",
+              "3. Cole exatamente o texto incluído na contagem; adicione títulos ou notas somente se as instruções também os incluírem.",
+              "4. Compare o resultado com o método exigido pelo destino. Se o limite for rígido e nenhum método estiver indicado, pergunte qual contador ou definição deve ser usado.",
+              "5. Mantenha o mesmo método durante as revisões, para que as diferenças reflitam as edições e não uma mudança na regra de contagem."
+            ]
+          },
+          {
+            "heading": "Por que outro contador pode mostrar um resultado diferente",
+            "paragraphs": [
+              "A segmentação do chinês não é simplesmente uma busca por espaços. Programas diferentes podem usar dados de idioma, versões ou regras distintas para limites ambíguos, nomes próprios e trechos que misturam chinês e inglês. Uma divergência não significa automaticamente que exista um erro; primeiro confira se os dois contadores medem a mesma unidade pelo mesmo método.",
+              "O TextToools calcula o total no navegador e não envia o texto. Ele usa o comportamento de segmentação disponível no navegador, por isso outra ferramenta ou sistema pode apresentar um resultado diferente. Se o sistema de envio exigir um contador específico, siga o resultado dele."
+            ]
+          },
+          {
+            "heading": "Experimente o contador de palavras do TextToools",
+            "paragraphs": [
+              "Cole o texto em chinês simplificado no contador de palavras do TextToools para ver os totais de segmentos lexicais e de caracteres. Use o total de palavras como referência consistente durante a edição e siga o método do destino quando precisar cumprir um limite formal."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao incluir a contagem de palavras em chinês no TextToools, quis usar a segmentação adequada ao idioma em vez de tratar uma frase sem espaços como uma palavra só. Também deixei a contagem de caracteres separada, porque palavras e caracteres respondem a perguntas diferentes."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Intl.Segmenter",
+            "publisher": "MDN Web Docs",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+          },
+          {
+            "title": "Unicode Text Segmentation (Unicode Standard Annex #29)",
+            "publisher": "The Unicode Consortium",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
       "five-minute-speech-word-count": {
         "image": "blog-images/pt-br/five-minute-speech.svg",
         "imageAlt": "Estimativa de cinco minutos de discurso: multiplique o ritmo de fala por cinco e ensaie em voz alta.",

@@ -39,6 +39,9 @@ const googleDocsWordCountPost = parsedEnglishBlogPosts.find(
 const fiveMinuteSpeechPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'five-minute-speech-word-count',
 )
+const chineseWordCountPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-count-words-in-chinese',
+)
 const hyphenatedWordsPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-word-counters-count-hyphenated-words',
 )
@@ -738,6 +741,64 @@ test('five-minute speech estimates are accurate, localized, and distinguish rehe
         'https://toastmasters.org/magazine/magazine-issues/2025/feb/manage-your-speaking-time',
       ].sort(),
       locale,
+    )
+  }
+})
+
+test('Chinese word-count examples match the localized segmenter and distinguish words from characters', () => {
+  const posts = [
+    {
+      post: chineseWordCountPost,
+      authorHeading: 'About the author',
+      authorText: 'Written by the founder of TextToools.',
+      founderHeading: 'A note from the founder',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['how-to-count-words-in-chinese'],
+      authorHeading: 'Sobre el autor',
+      authorText: 'Escrito por el fundador de TextToools.',
+      founderHeading: 'Una nota del fundador',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['how-to-count-words-in-chinese'],
+      authorHeading: 'Sobre o autor',
+      authorText: 'Escrito pelo fundador do TextToools.',
+      founderHeading: 'Uma observação do fundador',
+    },
+    {
+      post: parsedChineseContent.blog.posts['how-to-count-words-in-chinese'],
+      authorHeading: '关于作者',
+      authorText: 'TextToools 创始人',
+      founderHeading: '创始人的一点想法',
+    },
+  ]
+
+  for (const { post, authorHeading, authorText, founderHeading } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    assert.ok(post.sections.at(-1).paragraphs.join(' ').includes(authorText))
+    assert.ok(post.sections.some((section: { heading: string }) =>
+      section.heading === founderHeading,
+    ))
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number; explanation: string }[] }) =>
+        section.examples ?? [],
+    )
+    assert.equal(examples.length, 1)
+    assert.equal(examples[0].count, 8)
+    assert.equal(countWords(examples[0].text, 'zh-CN'), examples[0].count)
+    assert.equal(examples[0].text, '\u4eca\u5929\u7684\u5929\u6c14\u5f88\u597d\uff0c\u6211\u4eec\u53bb\u516c\u56ed\u6563\u6b65\u3002')
+    const articleText = post.sections.flatMap(
+      (section: { paragraphs: string[] }) => section.paragraphs,
+    ).join(' ')
+    assert.match(articleText, /segmentation|segmentación|segmentação|分词/i)
+    assert.match(articleText, /character|caracter|汉字|字符/i)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      [
+        'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter',
+        'https://www.unicode.org/reports/tr29/',
+      ].sort(),
     )
   }
 })
