@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Google Sheets word count formula</title>
+  <desc id="desc">Use a formula to count whitespace-separated groups in one cell or across a range.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  WORD COUNT</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Google Sheets word count</text>
+  <rect x="80" y="190" width="500" height="190" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="190" width="500" height="190" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ONE CELL</text>
+  <text x="112" y="298" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">REGEXREPLACE + SPLIT</text>
+  <text x="112" y="342" fill="#493867" font-family="Arial, sans-serif" font-size="22" font-weight="600">Normalize spaces, then count</text>
+  <text x="652" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">CELL RANGE</text>
+  <text x="652" y="298" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">TEXTJOIN + SPLIT</text>
+  <text x="652" y="342" fill="#493867" font-family="Arial, sans-serif" font-size="22" font-weight="600">Combine cells, then count</text>
+  <rect x="80" y="415" width="1040" height="125" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="460" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">COUNTING RULE</text>
+  <text x="112" y="510" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">One whitespace-separated group = one</text>
+</svg>

@@ -1,5 +1,111 @@
 [
   {
+    "slug": "how-to-count-words-in-google-sheets",
+    "published": "2026-10-23",
+    "title": "How to Count Words in Google Sheets (Formula for Cells and Ranges) | TextToools",
+    "description": "Use a Google Sheets word count formula for one cell or a range, normalize spaces and line breaks, and understand what the result includes.",
+    "summary": "Normalize whitespace, split the text into groups, and count them. The formulas below count whitespace-separated groups, not language-aware words.",
+    "image": "blog-images/google-sheets-word-count.svg",
+    "imageAlt": "A Google Sheets formula counts nine whitespace-separated words, with a reminder to check the formula's scope.",
+    "sections": [
+      {
+        "heading": "The quick answer: normalize whitespace, then split and count",
+        "paragraphs": [
+          "Google Sheets does not have a built-in word-count button for a cell. You can use a formula that replaces runs of whitespace with one space, splits the result, and counts the pieces.",
+          "For English text in cell A1, paste this into another cell. It returns 0 for an empty or whitespace-only cell:"
+        ],
+        "examples": [
+          {
+            "text": "=IF(LEN(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")),\" \")))",
+            "count": 9,
+            "explanation": "For “The quick brown fox jumps over the lazy dog.” in A1, the formula returns 9."
+          }
+        ]
+      },
+      {
+        "heading": "What the formula does",
+        "paragraphs": [
+          "REGEXREPLACE(A1,\"\\s+\",\" \") replaces each run of whitespace with one ordinary space. In Google Sheets, REGEXREPLACE uses RE2 regular expressions; this pattern handles regular spaces, tabs, and line breaks.",
+          "TRIM removes leading and trailing spaces, SPLIT divides the cleaned text at spaces, and COUNTA counts the resulting pieces. The IF check prevents an empty cell from being treated as one item.",
+          "Punctuation stays attached to its group, and a hyphenated expression without spaces counts as one group. This is a whitespace-based count, not a grammar checker or a universal definition of a word."
+        ]
+      },
+      {
+        "heading": "Count words across a range of cells",
+        "paragraphs": [
+          "To count text in cells A1 through A10 as one total, TEXTJOIN combines the non-empty cells with spaces between them. The rest of the formula normalizes whitespace, splits the combined text, and counts the groups."
+        ],
+        "examples": [
+          {
+            "text": "=IF(LEN(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")),\" \")))",
+            "count": 9,
+            "explanation": "If A1 contains “The quick brown fox” and A2 contains “jumps over the lazy dog.”, the range formula returns 9."
+          }
+        ]
+      },
+      {
+        "heading": "Check the range and counting rule",
+        "paragraphs": [
+          "Replace A1 or A1:A10 with the cell or range you need. The range formula combines all its non-empty cells into a single total; it does not return a separate count for each row.",
+          "The formulas use English function names and comma separators. If your spreadsheet reports a formula parse error, check its locale settings: the argument separator or function names may differ. Use a finite range that covers the text you want, and make sure the count cell is outside that range."
+        ]
+      },
+      {
+        "heading": "Where this formula can give a different count",
+        "paragraphs": [
+          "The formula treats each group separated by whitespace as one word. It is useful for a straightforward English draft, but punctuation remains attached and hyphenated terms count as one group. Another word counter may follow a different convention.",
+          "Google Sheets' TRIM documentation notes that non-breaking spaces are not removed by TRIM. If pasted text contains unusual invisible spacing, normalize or replace it before relying on the total. For Chinese text, whitespace splitting is not a linguistic word count; use a counter with Chinese-aware segmentation instead.",
+          "For a strict assignment or publishing limit, check whether headings, notes, or other cells are included and use the method specified by the recipient."
+        ]
+      },
+      {
+        "heading": "Try the TextToools Word Counter",
+        "paragraphs": [
+          "If you want to check a passage without setting up a spreadsheet formula, copy the exact text into the TextToools Word Counter. It counts groups separated by whitespace in your browser. It does not open Google Sheets or read a spreadsheet range, so copy only the text you want counted."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "When I built the TextToools Word Counter, I chose a clear whitespace-based rule for English: each group between spaces or line breaks counts as one. A spreadsheet formula can follow a similar rule, but it is important to know what the formula includes before comparing its result with another counter."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "SPLIT function",
+        "publisher": "Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/3094136?hl=en"
+      },
+      {
+        "title": "REGEXREPLACE function",
+        "publisher": "Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/3098245?hl=en"
+      },
+      {
+        "title": "TRIM function",
+        "publisher": "Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/3094140?hl=en"
+      },
+      {
+        "title": "TEXTJOIN function",
+        "publisher": "Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/7013992?hl=en"
+      },
+      {
+        "title": "RE2 syntax reference",
+        "publisher": "Google RE2",
+        "url": "https://github.com/google/re2/blob/main/doc/syntax.txt"
+      }
+    ]
+  },
+  {
     "slug": "how-to-count-words-in-chinese",
     "published": "2026-10-22",
     "title": "How to Count Words in Chinese (and Why Counters Differ) | TextToools",

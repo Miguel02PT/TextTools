@@ -331,6 +331,110 @@
     "description": "关于字数、字符、文本清理和写作工作流的实用指南。",
     "intro": "简明实用的文本处理指南，帮助你理解统计规则、整理内容并更高效地写作。",
     "posts": {
+      "how-to-count-words-in-google-sheets": {
+        "image": "blog-images/zh-cn/google-sheets-word-count.svg",
+        "imageAlt": "Google 表格公式统计出九个以空白字符分隔的词组，并提醒你确认统计范围。",
+        "title": "如何在 Google 表格中统计词数（单元格和区域公式）| TextToools",
+        "description": "使用 Google 表格公式统计单元格或区域中的词数，规范空格和换行，并了解统计结果包含哪些内容。",
+        "summary": "规范空白字符、拆分文本并统计词组。以下公式统计由空白字符分隔的词组，并非基于语言分析的词数。",
+        "sections": [
+          {
+            "heading": "快速解答：规范空白字符，然后拆分并统计",
+            "paragraphs": [
+              "Google 表格没有内置的单元格词数统计按钮。你可以使用公式将连续空白字符替换为一个空格，再拆分结果并统计各部分。",
+              "对于 A1 单元格中的英文文本，将此公式粘贴到其他单元格。如果 A1 为空或只包含空白字符，公式会返回 0："
+            ],
+            "examples": [
+              {
+                "text": "=IF(LEN(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")),\" \")))",
+                "count": 9,
+                "explanation": "如果 A1 中的内容是 “The quick brown fox jumps over the lazy dog.”，公式会返回 9。"
+              }
+            ]
+          },
+          {
+            "heading": "公式的工作原理",
+            "paragraphs": [
+              "REGEXREPLACE(A1,\"\\s+\",\" \") 会将每一段连续空白字符替换为一个普通空格。Google 表格的 REGEXREPLACE 使用 RE2 正则表达式；此模式可处理普通空格、制表符和换行符。",
+              "TRIM 删除首尾空格，SPLIT 按空格拆分清理后的文本，COUNTA 统计拆分结果。IF 检查可避免将空单元格误计为一项。",
+              "标点符号仍与所在词组相连，不含空格的连字符表达式会计为一个词组。这是基于空白字符的统计，并非语法检查器，也不是对“词”的普遍定义。"
+            ]
+          },
+          {
+            "heading": "统计单元格区域中的词数",
+            "paragraphs": [
+              "如果要将 A1 到 A10 中的文本合并为一个总数，TEXTJOIN 会用空格连接非空单元格。公式的其余部分会规范空白字符、拆分合并后的文本并统计词组。"
+            ],
+            "examples": [
+              {
+                "text": "=IF(LEN(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")),\" \")))",
+                "count": 9,
+                "explanation": "如果 A1 中是 “The quick brown fox”，A2 中是 “jumps over the lazy dog.”，区域公式会返回 9。"
+              }
+            ]
+          },
+          {
+            "heading": "确认统计区域和规则",
+            "paragraphs": [
+              "将 A1 或 A1:A10 替换为所需的单元格或区域。区域公式会将所有非空单元格合并为一个总数，不会为每一行分别返回统计结果。",
+              "公式使用英文函数名和逗号分隔参数。如果表格提示公式解析错误，请检查区域设置：参数分隔符或函数名可能有所不同。请使用覆盖目标文本的有限区域，并将结果单元格放在该区域之外。"
+            ]
+          },
+          {
+            "heading": "哪些情况会导致结果不同",
+            "paragraphs": [
+              "公式将每个由空白字符分隔的词组视为一个词。它适用于简单的英文草稿，但标点仍与词组相连，带连字符的词语会计为一个词组。其他计数工具可能采用不同规则。",
+              "Google 表格的 TRIM 文档说明，不间断空格不会被 TRIM 删除。如果粘贴的文本含有不常见的不可见空格，请先规范或替换它们，再使用统计结果。中文文本不应依靠空格拆分来进行语言层面的词数统计；请使用支持中文分词的工具。",
+              "如果作业或发布有严格字数限制，请确认标题、注释或其他单元格是否计入，并遵循接收方指定的方法。"
+            ]
+          },
+          {
+            "heading": "试用 TextToools 字数统计工具",
+            "paragraphs": [
+              "如果不想设置表格公式，可以将需要统计的原文复制到 TextToools 字数统计工具中。该工具会在浏览器中统计由空白字符分隔的词组，但不会打开 Google 表格或读取单元格区域，因此只需复制要统计的文本。"
+            ]
+          },
+          {
+            "heading": "创始人的一点想法",
+            "paragraphs": [
+              "开发 TextToools 英文词数统计工具时，我选择了一个清晰的空白字符统计规则：空格或换行之间的每个词组计为一个。表格公式也可以采用类似规则，但在与其他计数工具比较之前，先了解公式统计的范围很重要。"
+            ]
+          },
+          {
+            "heading": "关于作者",
+            "paragraphs": [
+              "本文由 TextToools 创始人撰写。我致力于打造尊重隐私的文本工具，因为我相信你的文本不应该离开浏览器。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "SPLIT 函数",
+            "publisher": "Google 文档编辑器帮助",
+            "url": "https://support.google.com/docs/answer/3094136?hl=en"
+          },
+          {
+            "title": "REGEXREPLACE 函数",
+            "publisher": "Google 文档编辑器帮助",
+            "url": "https://support.google.com/docs/answer/3098245?hl=en"
+          },
+          {
+            "title": "TRIM 函数",
+            "publisher": "Google 文档编辑器帮助",
+            "url": "https://support.google.com/docs/answer/3094140?hl=en"
+          },
+          {
+            "title": "TEXTJOIN 函数",
+            "publisher": "Google 文档编辑器帮助",
+            "url": "https://support.google.com/docs/answer/7013992?hl=en"
+          },
+          {
+            "title": "RE2 语法参考",
+            "publisher": "Google RE2",
+            "url": "https://github.com/google/re2/blob/main/doc/syntax.txt"
+          }
+        ]
+      },
       "how-to-count-words-in-chinese": {
         "image": "blog-images/zh-cn/chinese-word-count.svg",
         "imageAlt": "中文文本被拆分为类似词语的片段；其他分词器可能会给出不同结果。",

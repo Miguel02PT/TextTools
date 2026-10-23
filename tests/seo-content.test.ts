@@ -36,6 +36,9 @@ const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
 const googleDocsWordCountPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'google-docs-word-count',
 )
+const googleSheetsWordCountPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-count-words-in-google-sheets',
+)
 const fiveMinuteSpeechPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'five-minute-speech-word-count',
 )
@@ -629,6 +632,77 @@ test('Google Docs word-count examples match each locale counter and source its e
       post.sources.map(({ url }: { url: string }) => url),
       ['https://support.google.com/docs/answer/39003?hl=en'],
     )
+  }
+})
+
+test('Google Sheets word-count formulas are localized, scoped, and sourced', () => {
+  const posts = [
+    {
+      post: googleSheetsWordCountPost,
+      authorHeading: 'About the author',
+      founderHeading: 'A note from the founder',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['how-to-count-words-in-google-sheets'],
+      authorHeading: 'Sobre el autor',
+      founderHeading: 'Una nota del fundador',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['how-to-count-words-in-google-sheets'],
+      authorHeading: 'Sobre o autor',
+      founderHeading: 'Uma observação do fundador',
+    },
+    {
+      post: parsedChineseContent.blog.posts['how-to-count-words-in-google-sheets'],
+      authorHeading: '关于作者',
+      founderHeading: '创始人的一点想法',
+    },
+  ]
+  const sourceUrls = [
+    'https://support.google.com/docs/answer/3094136?hl=en',
+    'https://support.google.com/docs/answer/3098245?hl=en',
+    'https://support.google.com/docs/answer/3094140?hl=en',
+    'https://support.google.com/docs/answer/7013992?hl=en',
+    'https://github.com/google/re2/blob/main/doc/syntax.txt',
+  ]
+  const expectedSample = 'The quick brown fox jumps over the lazy dog.'
+  let expectedFormulas: string[] | undefined
+
+  for (const { post, authorHeading, founderHeading } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number; explanation: string }[] }) =>
+        section.examples ?? [],
+    )
+    assert.equal(examples.length, 2)
+    assert.deepEqual(examples.map(({ count }: { count: number }) => count), [9, 9])
+    assert.equal(countWords(expectedSample, 'en'), 9)
+    assert.ok(examples[0].explanation.includes(expectedSample))
+    assert.ok(examples[1].explanation.includes('The quick brown fox'))
+    assert.ok(examples[1].explanation.includes('jumps over the lazy dog.'))
+    assert.ok(examples[0].text.includes('REGEXREPLACE'))
+    assert.ok(examples[0].text.includes('\\s+'))
+    assert.ok(examples[0].text.includes('SPLIT'))
+    assert.ok(examples[0].text.includes('COUNTA'))
+    assert.ok(examples[0].text.includes('LEN'))
+    assert.ok(examples[1].text.includes('TEXTJOIN'))
+    assert.ok(examples[1].text.includes('A1:A10'))
+    assert.ok(examples.every(({ text }: { text: string }) => text.includes('COUNTA')))
+    assert.deepEqual(post.sources.map(({ url }: { url: string }) => url), sourceUrls)
+
+    const headings = post.sections.map(({ heading }: { heading: string }) => heading)
+    assert.ok(headings.includes(founderHeading))
+    const articleText = post.sections.flatMap(
+      ({ paragraphs }: { paragraphs: string[] }) => paragraphs,
+    ).join(' ')
+    assert.match(articleText, /founder|fundador|创始人/i)
+    const formulas = examples.map(({ text }: { text: string }) => text)
+    if (expectedFormulas) {
+      assert.deepEqual(formulas, expectedFormulas)
+    } else {
+      expectedFormulas = formulas
+    }
   }
 })
 

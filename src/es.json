@@ -368,6 +368,110 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "how-to-count-words-in-google-sheets": {
+        "image": "blog-images/es/google-sheets-word-count.svg",
+        "imageAlt": "Una fórmula de Google Sheets cuenta nueve grupos separados por espacios y recuerda comprobar el alcance del recuento.",
+        "title": "Cómo contar palabras en Google Sheets (fórmula para celdas y rangos) | TextToools",
+        "description": "Usa una fórmula de Google Sheets para contar palabras en una celda o un rango, normalizar espacios y saltos de línea, y entender qué incluye el resultado.",
+        "summary": "Normaliza los espacios, divide el texto en grupos y cuéntalos. Estas fórmulas cuentan grupos separados por espacios, no palabras mediante análisis lingüístico.",
+        "sections": [
+          {
+            "heading": "Respuesta rápida: normaliza los espacios, divide el texto y cuenta",
+            "paragraphs": [
+              "Google Sheets no incluye un botón de recuento de palabras para las celdas. Puedes usar una fórmula que sustituya cada secuencia de espacios por uno solo, divida el resultado y cuente las partes.",
+              "Para texto en inglés en la celda A1, pega esta fórmula en otra celda. Devuelve 0 si A1 está vacía o solo contiene espacios:"
+            ],
+            "examples": [
+              {
+                "text": "=IF(LEN(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")),\" \")))",
+                "count": 9,
+                "explanation": "Si A1 contiene «The quick brown fox jumps over the lazy dog.», la fórmula devuelve 9."
+              }
+            ]
+          },
+          {
+            "heading": "Qué hace la fórmula",
+            "paragraphs": [
+              "REGEXREPLACE(A1,\"\\s+\",\" \") sustituye cada secuencia de espacios en blanco por un espacio normal. En Google Sheets, REGEXREPLACE usa expresiones regulares RE2; este patrón contempla espacios, tabulaciones y saltos de línea.",
+              "TRIM elimina los espacios iniciales y finales, SPLIT divide el texto limpio por espacios y COUNTA cuenta las partes resultantes. La comprobación con IF evita que una celda vacía se cuente como un elemento.",
+              "La puntuación permanece junto a su grupo y una expresión con guion y sin espacios cuenta como un solo grupo. Es un recuento basado en espacios, no un corrector gramatical ni una definición universal de palabra."
+            ]
+          },
+          {
+            "heading": "Cuenta las palabras de un rango de celdas",
+            "paragraphs": [
+              "Para obtener un único total del texto de A1 a A10, TEXTJOIN combina las celdas no vacías y añade espacios entre ellas. El resto de la fórmula normaliza los espacios, divide el texto combinado y cuenta los grupos."
+            ],
+            "examples": [
+              {
+                "text": "=IF(LEN(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")),\" \")))",
+                "count": 9,
+                "explanation": "Si A1 contiene «The quick brown fox» y A2 «jumps over the lazy dog.», la fórmula del rango devuelve 9."
+              }
+            ]
+          },
+          {
+            "heading": "Comprueba el rango y la regla de recuento",
+            "paragraphs": [
+              "Cambia A1 o A1:A10 por la celda o el rango que necesites. La fórmula para rangos combina las celdas no vacías en un único total; no devuelve un recuento independiente para cada fila.",
+              "Las fórmulas usan nombres de funciones en inglés y comas como separadores. Si aparece un error de análisis, comprueba la configuración regional de la hoja: el separador de argumentos o los nombres de función pueden ser distintos. Usa un rango finito que cubra el texto que quieres contar y coloca la celda del resultado fuera de ese rango."
+            ]
+          },
+          {
+            "heading": "Cuándo puede variar el resultado",
+            "paragraphs": [
+              "La fórmula considera palabra cada grupo separado por espacios en blanco. Es útil para un borrador sencillo en inglés, pero la puntuación permanece unida y las expresiones con guion cuentan como un grupo. Otro contador puede aplicar una convención distinta.",
+              "La documentación de TRIM de Google Sheets indica que no elimina los espacios de no separación. Si el texto pegado contiene espacios invisibles poco comunes, normalízalo antes de confiar en el total. Para chino, separar por espacios no equivale a contar palabras según el idioma; usa un contador con segmentación adaptada al chino.",
+              "Si tienes un límite estricto para una tarea o publicación, comprueba si incluye títulos, notas u otras celdas y sigue el método indicado por quien recibirá el texto."
+            ]
+          },
+          {
+            "heading": "Prueba el contador de palabras de TextToools",
+            "paragraphs": [
+              "Si quieres contar un fragmento sin preparar una fórmula, copia el texto exacto en el contador de palabras de TextToools. Cuenta grupos separados por espacios en tu navegador. No abre Google Sheets ni lee un rango de la hoja, así que copia únicamente el texto que quieras contar."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Al crear el contador de palabras de TextToools, quise establecer una regla clara para el inglés: cada grupo entre espacios o saltos de línea cuenta como uno. Una fórmula de hoja de cálculo puede aplicar una regla similar, pero conviene saber qué incluye antes de comparar el resultado con otro contador."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Función SPLIT",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/3094136?hl=en"
+          },
+          {
+            "title": "Función REGEXREPLACE",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/3098245?hl=en"
+          },
+          {
+            "title": "Función TRIM",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/3094140?hl=en"
+          },
+          {
+            "title": "Función TEXTJOIN",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/7013992?hl=en"
+          },
+          {
+            "title": "Referencia de sintaxis de RE2",
+            "publisher": "Google RE2",
+            "url": "https://github.com/google/re2/blob/main/doc/syntax.txt"
+          }
+        ]
+      },
       "how-to-count-words-in-chinese": {
         "image": "blog-images/es/chinese-word-count.svg",
         "imageAlt": "El texto chino se divide en segmentos similares a palabras; otro segmentador puede dar un resultado distinto.",
