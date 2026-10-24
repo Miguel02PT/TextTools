@@ -331,6 +331,92 @@
     "description": "关于字数、字符、文本清理和写作工作流的实用指南。",
     "intro": "简明实用的文本处理指南，帮助你理解统计规则、整理内容并更高效地写作。",
     "posts": {
+      "how-to-count-characters-in-excel": {
+        "image": "blog-images/zh-cn/excel-character-count.svg",
+        "imageAlt": "Excel 的 LEN 公式对 “The quick brown fox.” 返回 20，空格和句点也计入。",
+        "title": "如何在 Excel 中统计字符数（单元格或区域）| TextToools",
+        "description": "使用 Excel 的 LEN 公式统计单元格字符数、向下填充统计列表，或汇总多个单元格，包括空格和标点。",
+        "summary": "单个单元格使用 =LEN(A1)，向下填充可统计列表，多个 LEN 结果也能相加。Excel 会统计空格。",
+        "sections": [
+          {
+            "heading": "快速解答：使用 LEN",
+            "paragraphs": [
+              "要统计 Excel 单元格中的字符数，请在另一个单元格输入 =LEN(A1)，并将 A1 替换为要检查的单元格。例如，“The quick brown fox.” 共 20 个字符，其中包括空格和末尾句点。",
+              "LEN 会统计单元格中的全部文本，不会在返回结果前删除多余空格或标点。"
+            ],
+            "examples": [
+              {
+                "text": "=LEN(A1)",
+                "count": 20,
+                "explanation": "如果 A1 中是 “The quick brown fox.”，LEN 会返回 20。"
+              }
+            ]
+          },
+          {
+            "heading": "统计多个单元格中的字符",
+            "paragraphs": [
+              "如果要分别统计每一行，请在第一个文本单元格旁输入 =LEN(A1)，再向下复制或拖动公式。Excel 会为每行调整引用，因此下一行的公式会变为 =LEN(A2)。Microsoft 文档介绍了使用填充公式统计多个单元格的方法。"
+            ]
+          },
+          {
+            "heading": "汇总多个单元格中的字符数",
+            "paragraphs": [
+              "如果需要一个合计数，可以在 SUM 中为每个单元格添加一个 LEN 计算。例如，A1 中是 “The quick brown”，A2 中是 “fox.”，使用下面的公式会得到两个单元格共 19 个字符；单元格之间不会额外插入字符。"
+            ],
+            "examples": [
+              {
+                "text": "=SUM(LEN(A1),LEN(A2))",
+                "count": 19,
+                "explanation": "A1 有 15 个字符，A2 有 4 个，合计为 19。"
+              }
+            ]
+          },
+          {
+            "heading": "Excel 的字符统计包含哪些内容",
+            "paragraphs": [
+              "空格也计为字符，包括单元格开头或末尾的空格。文本中的标点、数字和换行也会影响结果。如果总数看起来偏高，请检查是否有多余的尾随空格或未注意到的文本。",
+              "如果要求不统计普通空格，可以使用 =LEN(A1)-LEN(SUBSTITUTE(A1,\" \",\"\")) 从总数中减去它们。此公式只删除普通空格，不会删除制表符或换行。请遵循表单或接收方指定的空白字符规则。",
+              "示例使用英文函数名和逗号分隔参数。根据 Excel 的语言和区域设置，你可能需要使用本地化函数名或其他分隔符。如果 Excel 提示公式错误，请检查这些设置。"
+            ]
+          },
+          {
+            "heading": "Excel 与其他计数工具对表情符号的统计可能不同",
+            "paragraphs": [
+              "Excel 的 LEN 行为取决于工作簿的兼容性版本。Microsoft 文档指出，兼容性版本 2 会将许多由代理项对构成的表情符号计为一个字符，但变体选择符和某些组合表情的组成部分仍可能分别统计。旧版兼容行为可能会给出不同结果。",
+              "TextToools 按 Unicode 字素簇统计，通常与用户看到的字符相对应。这与 Excel LEN 的统计规则不同。如果字数或字符数限制很严格，请在目标应用中检查，或使用其说明指定的计数工具。"
+            ]
+          },
+          {
+            "heading": "创始人的一点想法",
+            "paragraphs": [
+              "开发 TextToools 字符统计工具时，我选择按可见的 Unicode 字素簇计数，因此连接的表情符号序列或带组合重音的字母会作为一个可见字符统计。Excel LEN 遵循工作簿自身的兼容性规则，因此遇到严格限制时，我建议使用最终接收文本的工具核对。"
+            ]
+          },
+          {
+            "heading": "关于作者",
+            "paragraphs": [
+              "本文由 TextToools 创始人撰写。我致力于打造尊重隐私的文本工具，因为我相信你的文本不应该离开浏览器。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "LEN 函数",
+            "publisher": "Microsoft 支持",
+            "url": "https://support.microsoft.com/en-us/excel/functions/len-function"
+          },
+          {
+            "title": "在 Excel 单元格中统计字符",
+            "publisher": "Microsoft 支持",
+            "url": "https://support.microsoft.com/en-us/excel/count-characters-in-cells-in-excel"
+          },
+          {
+            "title": "兼容性版本",
+            "publisher": "Microsoft 支持",
+            "url": "https://support.microsoft.com/en-us/excel/compatibility-versions"
+          }
+        ]
+      },
       "how-to-count-words-in-google-sheets": {
         "image": "blog-images/zh-cn/google-sheets-word-count.svg",
         "imageAlt": "Google 表格公式统计出九个以空白字符分隔的词组，并提醒你确认统计范围。",

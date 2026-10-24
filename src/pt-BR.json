@@ -543,6 +543,92 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "how-to-count-characters-in-excel": {
+        "image": "blog-images/pt-br/excel-character-count.svg",
+        "imageAlt": "A fórmula LEN do Excel retorna 20 para “The quick brown fox.”, incluindo os espaços e o ponto final.",
+        "title": "Como contar caracteres no Excel (uma célula ou um intervalo) | TextToools",
+        "description": "Use a fórmula LEN do Excel para contar caracteres em uma célula, copiá-la por uma lista ou somar várias células, incluindo espaços e pontuação.",
+        "summary": "Use =LEN(A1) para uma célula, copie a fórmula para baixo para contar uma lista ou some vários resultados de LEN. O Excel também conta os espaços.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: use LEN",
+            "paragraphs": [
+              "Para contar os caracteres de uma célula no Excel, digite =LEN(A1) em outra célula e troque A1 pela referência que deseja conferir. Por exemplo, “The quick brown fox.” tem 20 caracteres, incluindo os espaços e o ponto final.",
+              "LEN conta todo o texto da célula. A função não remove espaços extras nem pontuação antes de retornar o resultado."
+            ],
+            "examples": [
+              {
+                "text": "=LEN(A1)",
+                "count": 20,
+                "explanation": "Se A1 contiver “The quick brown fox.”, LEN retorna 20."
+              }
+            ]
+          },
+          {
+            "heading": "Conte caracteres em várias células",
+            "paragraphs": [
+              "Para obter uma contagem separada por linha, digite =LEN(A1) ao lado da primeira célula com texto e copie ou arraste a fórmula para baixo. O Excel ajusta a referência em cada linha, então a fórmula seguinte passa a ser =LEN(A2). A Microsoft documenta esse método de preenchimento para contar várias células."
+            ]
+          },
+          {
+            "heading": "Some os caracteres de várias células",
+            "paragraphs": [
+              "Se você precisa de um total combinado, some um cálculo de LEN para cada célula. Por exemplo, se A1 contiver “The quick brown” e A2 contiver “fox.”, use a fórmula abaixo. Ela retorna 19 caracteres entre as duas células; não acrescenta um caractere entre elas."
+            ],
+            "examples": [
+              {
+                "text": "=SUM(LEN(A1),LEN(A2))",
+                "count": 19,
+                "explanation": "A1 tem 15 caracteres e A2 tem 4, totalizando 19."
+              }
+            ]
+          },
+          {
+            "heading": "O que entra na contagem do Excel",
+            "paragraphs": [
+              "Espaços contam como caracteres, inclusive os que aparecem no início ou no fim da célula. Pontuação, números e quebras de linha no texto também entram no resultado. Se o total parecer alto demais, confira se há espaços no final ou algum texto que passou despercebido.",
+              "Se as instruções excluírem espaços comuns, =LEN(A1)-LEN(SUBSTITUTE(A1,\" \",\"\")) subtrai esses espaços do total. Essa fórmula remove somente o caractere de espaço comum; não remove tabulações nem quebras de linha. Siga a regra de espaços indicada pelo formulário ou por quem vai receber o texto.",
+              "Os exemplos usam nomes de funções em inglês e vírgulas entre os argumentos. Dependendo do idioma do Excel e das configurações regionais, talvez seja necessário usar nomes localizados ou outros separadores. Se o Excel indicar erro na fórmula, confira essas configurações."
+            ]
+          },
+          {
+            "heading": "O Excel e outros contadores podem tratar emojis de forma diferente",
+            "paragraphs": [
+              "O comportamento de LEN no Excel depende da versão de compatibilidade da pasta de trabalho. A Microsoft informa que a Versão de compatibilidade 2, em pastas compatíveis do Microsoft 365, conta muitos emojis formados por pares substitutos como um caractere; seletores de variação e componentes de alguns emojis combinados ainda podem ser contados separadamente. O comportamento de versões anteriores pode ser diferente.",
+              "O TextToools conta grupos de grafemas Unicode, que normalmente correspondem aos caracteres visíveis. Essa regra é diferente da função LEN do Excel. Se o limite for rígido, confira o texto no aplicativo de destino ou use o contador indicado nas instruções."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar o contador de caracteres do TextToools, quis contar grupos de grafemas Unicode visíveis: assim, uma sequência de emojis unidos ou uma letra com acento combinante conta como um caractere visível. O LEN do Excel segue as regras de compatibilidade da pasta de trabalho, então recomendo conferir limites rígidos com o contador que receberá o texto."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Função LEN",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/excel/functions/len-function"
+          },
+          {
+            "title": "Contar caracteres nas células do Excel",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/excel/count-characters-in-cells-in-excel"
+          },
+          {
+            "title": "Versões de compatibilidade",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/excel/compatibility-versions"
+          }
+        ]
+      },
       "how-to-count-words-in-google-sheets": {
         "image": "blog-images/pt-br/google-sheets-word-count.svg",
         "imageAlt": "Uma fórmula do Google Sheets conta nove grupos separados por espaços e lembra de conferir o escopo da contagem.",

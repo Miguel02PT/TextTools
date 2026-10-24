@@ -36,6 +36,9 @@ const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
 const googleDocsWordCountPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'google-docs-word-count',
 )
+const excelCharacterCountPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-count-characters-in-excel',
+)
 const googleSheetsWordCountPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-count-words-in-google-sheets',
 )
@@ -697,6 +700,71 @@ test('Google Sheets word-count formulas are localized, scoped, and sourced', () 
       ({ paragraphs }: { paragraphs: string[] }) => paragraphs,
     ).join(' ')
     assert.match(articleText, /founder|fundador|创始人/i)
+    const formulas = examples.map(({ text }: { text: string }) => text)
+    if (expectedFormulas) {
+      assert.deepEqual(formulas, expectedFormulas)
+    } else {
+      expectedFormulas = formulas
+    }
+  }
+})
+
+test('Excel character-count examples match LEN rules in every locale', () => {
+  const posts = [
+    {
+      post: excelCharacterCountPost,
+      authorHeading: 'About the author',
+      founderHeading: 'A note from the founder',
+    },
+    {
+      post: parsedSpanishContent.blog.posts['how-to-count-characters-in-excel'],
+      authorHeading: 'Sobre el autor',
+      founderHeading: 'Una nota del fundador',
+    },
+    {
+      post: parsedPortugueseContent.blog.posts['how-to-count-characters-in-excel'],
+      authorHeading: 'Sobre o autor',
+      founderHeading: 'Uma observação do fundador',
+    },
+    {
+      post: parsedChineseContent.blog.posts['how-to-count-characters-in-excel'],
+      authorHeading: '关于作者',
+      founderHeading: '创始人的一点想法',
+    },
+  ]
+  const sourceUrls = [
+    'https://support.microsoft.com/en-us/excel/functions/len-function',
+    'https://support.microsoft.com/en-us/excel/count-characters-in-cells-in-excel',
+    'https://support.microsoft.com/en-us/excel/compatibility-versions',
+  ]
+  const sampleLengths = [20, 19]
+  let expectedFormulas: string[] | undefined
+
+  for (const { post, authorHeading, founderHeading } of posts) {
+    assert.ok(post)
+    assert.equal(post.sections.at(-1).heading, authorHeading)
+    const examples = post.sections.flatMap(
+      (section: { examples?: { text: string; count: number }[] }) =>
+        section.examples ?? [],
+    )
+    assert.equal(examples.length, 2)
+    assert.deepEqual(
+      examples.map(({ count }: { count: number }) => count),
+      sampleLengths,
+    )
+    assert.equal(countGraphemes('The quick brown fox.'), 20)
+    assert.equal(countGraphemes('The quick brown') + countGraphemes('fox.'), 19)
+    assert.equal(examples[0].text, '=LEN(A1)')
+    assert.equal(examples[1].text, '=SUM(LEN(A1),LEN(A2))')
+    assert.deepEqual(post.sources.map(({ url }: { url: string }) => url), sourceUrls)
+
+    const headings = post.sections.map(({ heading }: { heading: string }) => heading)
+    assert.ok(headings.includes(founderHeading))
+    const articleText = post.sections.flatMap(
+      ({ paragraphs }: { paragraphs: string[] }) => paragraphs,
+    ).join(' ')
+    assert.match(articleText, /spaces|espacios|espaços|空格/i)
+    assert.match(articleText, /variation selectors|selectores de variación|seletores de variação|变体选择符/i)
     const formulas = examples.map(({ text }: { text: string }) => text)
     if (expectedFormulas) {
       assert.deepEqual(formulas, expectedFormulas)
