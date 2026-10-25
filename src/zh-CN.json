@@ -331,6 +331,81 @@
     "description": "关于字数、字符、文本清理和写作工作流的实用指南。",
     "intro": "简明实用的文本处理指南，帮助你理解统计规则、整理内容并更高效地写作。",
     "posts": {
+      "microsoft-word-word-count": {
+        "image": "blog-images/zh-cn/word-word-count.svg",
+        "imageAlt": "Microsoft Word 显示文档共 1,247 个词，选中的段落为 82 个词。",
+        "title": "如何在 Microsoft Word 中查看字数（全文或选中内容）| TextToools",
+        "description": "了解如何在桌面版或网页版 Word 中查看字数、统计选中内容，并在提交或发布前确认统计范围。",
+        "summary": "使用 Word 状态栏或“审阅”>“字数统计”查看全文字数。选中一段文字可单独统计；严格限制字数时，还要确认统计范围。",
+        "sections": [
+          {
+            "heading": "最快查看字数的方法",
+            "paragraphs": [
+              "在 Microsoft Word 中打开文档，查看窗口底部附近状态栏上的字数。编辑时统计结果会更新，无需手动数词。",
+              "如果状态栏没有显示字数，请打开“审阅”选项卡并选择“字数统计”。不同 Word 版本中的菜单名称和位置可能略有差异。"
+            ]
+          },
+          {
+            "heading": "只统计一个段落或选中内容",
+            "paragraphs": [
+              "选中要统计的文字。Word 会同时显示选中部分的字数和文档总字数，适合检查某个章节、摘要或有单独字数限制的答复。",
+              "确认选区的起点和终点正确。遗漏标题、引文或最后一句，都可能影响结果。"
+            ]
+          },
+          {
+            "heading": "打开详细的字数统计窗口",
+            "paragraphs": [
+              "点击状态栏上的字数可以查看更详细的信息。Microsoft 的 Word 字数统计说明列出了单词数、页数、字符数、段落数和行数。当要求不止是字数限制时，这些信息会很有帮助。",
+              "如果通过“审阅”选项卡打开“字数统计”，请查看当前 Word 版本提供的选项，并按照作业或出版方要求的范围统计。"
+            ]
+          },
+          {
+            "heading": "网页版 Word 与桌面版 Word",
+            "paragraphs": [
+              "网页版 Word 在编辑时也会显示字数，并可通过选中文字查看部分内容的字数。其控件外观可能与桌面应用不同。",
+              "正式提交前，请使用要求中指定的 Word 版本检查最终文档。如果字数限制涉及脚注、尾注、图注或其他单独内容，请确认这些内容应如何处理，不要假设所有版本的统计方式都相同。"
+            ]
+          },
+          {
+            "heading": "为什么两个字数结果可能不同",
+            "paragraphs": [
+              "先确认统计范围：一个结果可能统计全文，另一个只统计选中内容。还要检查文档中的标题、注释、图注或参考文献是否属于接收方规定的统计范围。",
+              "独立的在线计数器只能读取你粘贴进去的文字，无法识别 Word 的排版，也不知道要求排除了哪些部分。不同工具还可能采用不同的分词规则；严格限制时应使用指定的方法。"
+            ]
+          },
+          {
+            "heading": "提交前检查字数",
+            "paragraphs": [
+              "提交前先保存最终版本，在 Word 中检查全文；对于有单独限制的部分，再选中该部分单独检查。如果要求不计参考文献或注释，请按其具体规则处理，并分别核对相关文字。",
+              "尽量留出一点低于上限的余量。编辑文档后字数会变化，因此请对准备提交的最终版本重新统计。"
+            ]
+          },
+          {
+            "heading": "创始人的一点想法",
+            "paragraphs": [
+              "只有明确统计范围，字数才有意义。我建议在同一个应用中检查已保存的完整文档，并采用接收方所用的统计范围，尤其是在字数限制严格时。"
+            ]
+          },
+          {
+            "heading": "关于作者",
+            "paragraphs": [
+              "本文由 TextToools 创始人撰写。我致力于打造尊重隐私的文本工具，因为我相信你的文本不应该离开浏览器。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "显示字数",
+            "publisher": "Microsoft 支持",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          },
+          {
+            "title": "功能对比：网页版 Word 与桌面版 Word",
+            "publisher": "Microsoft 支持",
+            "url": "https://support.microsoft.com/en-us/word/word-features-comparison-word-for-the-web-vs-desktop."
+          }
+        ]
+      },
       "how-to-count-characters-in-excel": {
         "image": "blog-images/zh-cn/excel-character-count.svg",
         "imageAlt": "Excel 的 LEN 公式对 “The quick brown fox.” 返回 20，空格和句点也计入。",

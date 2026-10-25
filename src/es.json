@@ -368,6 +368,81 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "microsoft-word-word-count": {
+        "image": "blog-images/es/word-word-count.svg",
+        "imageAlt": "Microsoft Word muestra 1.247 palabras en el documento y 82 en el fragmento seleccionado.",
+        "title": "Cómo ver el recuento de palabras en Microsoft Word (documento o selección) | TextToools",
+        "description": "Consulta el recuento de palabras en Word para escritorio o web, cuenta el texto seleccionado y comprueba el alcance antes de entregar o publicar.",
+        "summary": "Usa la barra de estado o Revisar > Contar palabras para ver el total del documento. Selecciona un fragmento para contar solo esa parte y comprueba el alcance si tienes un límite estricto.",
+        "sections": [
+          {
+            "heading": "La forma más rápida de ver el recuento",
+            "paragraphs": [
+              "Abre el documento en Microsoft Word y busca el recuento de palabras en la barra de estado, normalmente en la parte inferior de la ventana. Se actualiza mientras editas, así que puedes revisar un borrador sin contar a mano.",
+              "Si no aparece el recuento, abre la pestaña Revisar y elige Contar palabras. El nombre y la ubicación del menú pueden variar un poco según la versión de Word."
+            ]
+          },
+          {
+            "heading": "Cuenta solo un párrafo o una selección",
+            "paragraphs": [
+              "Selecciona el fragmento que quieres medir. Word muestra el número de palabras de la selección y el total del documento; es útil para comprobar una sección, un resumen o una respuesta con su propio límite.",
+              "Asegúrate de que la selección empieza y termina donde corresponde. Dejar fuera un título, una cita o la última frase puede cambiar el resultado."
+            ]
+          },
+          {
+            "heading": "Abre el cuadro de recuento detallado",
+            "paragraphs": [
+              "Haz clic en el recuento de palabras de la barra de estado para ver más detalles. La guía de Word de Microsoft enumera palabras, páginas, caracteres, párrafos y líneas. Puede servirte si las instrucciones especifican algo más que un límite de palabras.",
+              "Si usas el comando Contar palabras de la pestaña Revisar, comprueba las opciones de tu versión de Word y aplica el alcance que pidan las instrucciones o la editorial."
+            ]
+          },
+          {
+            "heading": "Word para la web y Word de escritorio",
+            "paragraphs": [
+              "Word para la web también muestra el recuento mientras editas y permite seleccionar texto para comprobar un recuento parcial. Los controles pueden verse distintos a los de la aplicación de escritorio.",
+              "Para una entrega formal, comprueba el documento final en la versión de Word que indiquen las instrucciones. Si el límite depende de notas al pie, notas finales, pies de imagen u otro contenido separado, confirma cómo debe tratarse en vez de suponer que todas las versiones lo cuentan igual."
+            ]
+          },
+          {
+            "heading": "Por qué pueden diferir dos recuentos",
+            "paragraphs": [
+              "Primero compara el alcance: un resultado puede incluir todo el documento y otro solo el texto seleccionado. Comprueba también si hay títulos, notas, pies de imagen o referencias que no deban contar para el destinatario.",
+              "Un contador independiente solo ve el texto que pegas; no puede interpretar el diseño de Word ni saber qué partes excluyen las instrucciones. Además, distintas herramientas pueden aplicar reglas diferentes: sigue el método indicado cuando el límite sea estricto."
+            ]
+          },
+          {
+            "heading": "Comprueba el documento antes de entregarlo",
+            "paragraphs": [
+              "Antes de enviarlo, guarda la versión final, comprueba el documento completo en Word y selecciona cada sección que tenga un límite propio. Si las instrucciones excluyen referencias o notas, sigue su regla exacta y revisa ese texto por separado.",
+              "Si puedes, deja un pequeño margen por debajo del máximo. La edición puede cambiar el total, así que vuelve a contar la versión que realmente vas a enviar."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Un recuento solo es útil cuando sabes qué mide. Recomiendo revisar el documento completo y guardado en la misma aplicación y con el mismo alcance que usará quien lo reciba, sobre todo si el límite es estricto."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Mostrar el recuento de palabras",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          },
+          {
+            "title": "Comparación de funciones: Word para la web y Word de escritorio",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/word-features-comparison-word-for-the-web-vs-desktop."
+          }
+        ]
+      },
       "how-to-count-characters-in-excel": {
         "image": "blog-images/es/excel-character-count.svg",
         "imageAlt": "La fórmula LEN de Excel devuelve 20 para «The quick brown fox.», incluidos los espacios y el punto.",

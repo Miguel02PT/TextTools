@@ -543,6 +543,81 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "microsoft-word-word-count": {
+        "image": "blog-images/pt-br/word-word-count.svg",
+        "imageAlt": "O Microsoft Word mostra 1.247 palavras no documento e 82 palavras no trecho selecionado.",
+        "title": "Como ver a contagem de palavras no Microsoft Word (documento ou seleção) | TextToools",
+        "description": "Veja a contagem de palavras no Word para computador ou na web, conte um trecho selecionado e confira o escopo antes de entregar ou publicar.",
+        "summary": "Use a barra de status ou Revisão > Contagem de Palavras para ver o total do documento. Selecione um trecho para contar apenas essa parte e confira o escopo quando houver um limite rígido.",
+        "sections": [
+          {
+            "heading": "A maneira mais rápida de ver a contagem",
+            "paragraphs": [
+              "Abra o documento no Microsoft Word e procure a contagem de palavras na barra de status, geralmente na parte inferior da janela. Ela é atualizada enquanto você edita, então dá para conferir um rascunho sem contar manualmente.",
+              "Se a contagem não aparecer, abra a guia Revisão e escolha Contagem de Palavras. O nome e a posição do menu podem variar um pouco conforme a versão do Word."
+            ]
+          },
+          {
+            "heading": "Conte apenas um parágrafo ou trecho selecionado",
+            "paragraphs": [
+              "Selecione o trecho que deseja medir. O Word mostra a quantidade de palavras da seleção e o total do documento, o que ajuda a conferir uma seção, um resumo ou uma resposta com limite próprio.",
+              "Confira se a seleção começa e termina nos pontos corretos. Deixar um título, uma citação ou a última frase de fora pode mudar o resultado."
+            ]
+          },
+          {
+            "heading": "Abra a janela de contagem detalhada",
+            "paragraphs": [
+              "Clique na contagem de palavras na barra de status para ver mais detalhes. A orientação do Word da Microsoft lista palavras, páginas, caracteres, parágrafos e linhas. Isso ajuda quando as instruções especificam mais do que um limite de palavras.",
+              "Se abrir a Contagem de Palavras pela guia Revisão, confira as opções da sua versão do Word e use o escopo exigido pelo trabalho ou pela publicação."
+            ]
+          },
+          {
+            "heading": "Word para a Web e Word para computador",
+            "paragraphs": [
+              "O Word para a Web também mostra a contagem durante a edição e permite selecionar um trecho para conferir uma contagem parcial. Os controles podem ser diferentes dos encontrados no aplicativo para computador.",
+              "Para uma entrega formal, confira o documento final na versão do Word indicada pelas instruções. Se o limite depender de notas de rodapé, notas de fim, legendas ou outro conteúdo separado, confirme como esse material deve ser tratado em vez de presumir que todas as versões o contam da mesma forma."
+            ]
+          },
+          {
+            "heading": "Por que duas contagens podem ser diferentes",
+            "paragraphs": [
+              "Primeiro, compare o escopo: um resultado pode incluir o documento inteiro e outro apenas o texto selecionado. Confira também se há títulos, notas, legendas ou referências que não entram na contagem definida por quem receberá o texto.",
+              "Um contador independente só vê o texto colado; ele não interpreta a diagramação do Word nem sabe quais partes as instruções excluem. Ferramentas diferentes também podem usar regras diferentes, então siga o método indicado quando o limite for rígido."
+            ]
+          },
+          {
+            "heading": "Confira o documento antes de entregar",
+            "paragraphs": [
+              "Antes de enviar, salve a versão final, confira o documento inteiro no Word e selecione cada seção que tenha um limite próprio. Se as instruções excluírem referências ou notas, siga a regra exata e confira esse texto separadamente.",
+              "Se possível, deixe uma pequena margem abaixo do máximo. Editar o documento pode alterar a contagem; por isso, confira novamente a versão que você realmente vai enviar."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar ferramentas de contagem, percebi que um número só é útil quando você sabe o que ele mede. Recomendo conferir o documento completo e salvo no mesmo aplicativo e com o mesmo escopo que será usado por quem vai recebê-lo, especialmente quando o limite for rígido."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Mostrar a contagem de palavras",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          },
+          {
+            "title": "Comparação de recursos: Word para a Web e Word para computador",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/word-features-comparison-word-for-the-web-vs-desktop."
+          }
+        ]
+      },
       "how-to-count-characters-in-excel": {
         "image": "blog-images/pt-br/excel-character-count.svg",
         "imageAlt": "A fórmula LEN do Excel retorna 20 para “The quick brown fox.”, incluindo os espaços e o ponto final.",
