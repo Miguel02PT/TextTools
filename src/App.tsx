@@ -2225,8 +2225,10 @@ function App() {
               </h2>
               <div className="mt-3 flex flex-wrap gap-3">
                 {(
-                  activeBlogPost.slug === 'clean-pasted-text-without-losing-formatting'
-                    ? toolList.filter((tool) => tool.id === 'text-cleaner')
+                    activeBlogPost.slug === 'remove-duplicate-lines-from-text'
+                      ? toolList.filter((tool) => tool.id === 'duplicate-lines')
+                      : activeBlogPost.slug === 'clean-pasted-text-without-losing-formatting'
+                      ? toolList.filter((tool) => tool.id === 'text-cleaner')
                     : activeBlogPost.slug === 'how-to-count-characters-including-spaces'
                       ? toolList.filter((tool) => tool.id === 'character-counter')
                       : activeBlogPost.slug === 'how-long-to-read-1000-words'

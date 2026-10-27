@@ -6,6 +6,7 @@ import {
   countSentences,
   countWords,
   getKeywordData,
+  removeDuplicateLines,
   sortLines,
 } from '../src/tool-logic'
 import { createSeoMetadata, injectPrerenderedApp } from '../scripts/seo-metadata.mjs'
@@ -72,6 +73,34 @@ const portugueseHyphenatedWordsPost = parsedPortugueseContent.blog.posts[
 const portugueseWordCountEditingPost = parsedPortugueseContent.blog.posts[
   'how-to-cut-word-count-without-losing-meaning'
 ]
+
+test('duplicate-line guide examples match exact, order-preserving deduplication', () => {
+  const post = parsedEnglishBlogPosts.find(
+    (article: { slug: string }) => article.slug === 'remove-duplicate-lines-from-text',
+  )
+
+  assert.ok(post)
+  assert.equal(
+    removeDuplicateLines('pear\napple\npear\nApple'),
+    'pear\napple\nApple',
+  )
+  assert.equal(
+    removeDuplicateLines('Name\nname\nName \nName'),
+    'Name\nname\nName ',
+  )
+  assert.equal(
+    removeDuplicateLines('first\n\nsecond\n\n'),
+    'first\n\nsecond',
+  )
+  for (const localePost of [
+    parsedChineseContent.blog.posts[post.slug],
+    parsedSpanishContent.blog.posts[post.slug],
+    parsedPortugueseContent.blog.posts[post.slug],
+  ]) {
+    assert.ok(localePost, `${post.slug} is localized`)
+    assert.equal(localePost.sections.length, post.sections.length)
+  }
+})
 
 test('default production URL uses the live custom domain for assets and SEO', () => {
   const liveSiteUrl = 'https://texttoools.com/'

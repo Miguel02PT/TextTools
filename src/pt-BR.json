@@ -543,6 +543,69 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "remove-duplicate-lines-from-text": {
+        "image": "blog-images/pt-br/remove-duplicate-lines.svg",
+        "imageAlt": "A linha pear repetida é removida, enquanto apple e Apple permanecem separadas e na ordem original.",
+        "title": "Como remover linhas duplicadas de um texto sem mudar a ordem | TextToools",
+        "description": "Remova duplicatas de uma lista de texto preservando a primeira ocorrência e a ordem, com regras claras para maiúsculas, espaços e linhas em branco.",
+        "summary": "Coloque um item em cada linha. Duplicatas exatas são removidas, a primeira ocorrência é mantida e as linhas restantes preservam a ordem.",
+        "sections": [
+          {
+            "heading": "A maneira rápida de remover linhas duplicadas",
+            "paragraphs": [
+              "Coloque um item em cada linha e remova as repetições exatas mantendo a primeira ocorrência. Por exemplo, pear, apple, pear, Apple se torna pear, apple, Apple. A ordem original das linhas restantes é preservada.",
+              "Isso ajuda a limpar listas copiadas de nomes, URLs, palavras-chave, IDs ou outros dados em texto antes de reutilizá-los."
+            ]
+          },
+          {
+            "heading": "O que conta como duplicata?",
+            "paragraphs": [
+              "Duas linhas são duplicatas apenas quando o conteúdo é exatamente igual. Maiúsculas e espaços fazem diferença: Apple e apple são linhas diferentes, assim como name e name com um espaço no final.",
+              "A ferramenta não remove espaços, altera maiúsculas, corrige erros nem compara itens parecidos. Se quiser que essas diferenças sejam consideradas iguais, limpe ou normalize a lista antes."
+            ]
+          },
+          {
+            "heading": "A primeira ocorrência mantém sua posição",
+            "paragraphs": [
+              "Quando uma linha exata aparece várias vezes, a primeira permanece e as seguintes são removidas. A ferramenta não ordena a lista: os itens únicos mantêm a ordem em que apareceram pela primeira vez.",
+              "Isso é útil quando a ordem importa, como em uma sequência de tarefas ou em nomes coletados. Se precisar de ordem alfabética, faça isso em uma etapa separada."
+            ]
+          },
+          {
+            "heading": "Como as linhas em branco são tratadas",
+            "paragraphs": [
+              "Linhas em branco também são linhas. As repetidas são reduzidas a uma na posição da primeira ocorrência. Se elas separam seções importantes, mantenha uma cópia do original e confira se o resultado preserva a estrutura necessária.",
+              "Uma linha que contém apenas espaços não é igual a uma linha realmente vazia: ela continua sendo diferente."
+            ]
+          },
+          {
+            "heading": "Prepare a lista antes de remover duplicatas",
+            "paragraphs": [
+              "Confira se cada item completo está em uma única linha. Se a lista veio de uma planilha, copie apenas a coluna que deseja deduplicar; juntar várias colunas como texto pode separar valores que pertenciam à mesma linha.",
+              "Se maiúsculas ou espaços extras não devem diferenciar os itens, normalize essas diferenças antes no editor ou em uma etapa de limpeza de texto. Guarde uma cópia intacta quando a ordem ou a formatação original for importante."
+            ]
+          },
+          {
+            "heading": "Revise o resultado antes de reutilizá-lo",
+            "paragraphs": [
+              "A ferramenta remove apenas repetições exatas posteriores. Ela não combina variações parecidas, valida endereços ou IDs, corrige erros de digitação nem decide se duas grafias diferentes pertencem à mesma pessoa.",
+              "Confira algumas linhas do início e do fim, especialmente se a lista será usada para importar dados, gerenciar contatos ou alimentar outro sistema."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar a ferramenta para remover linhas duplicadas, quis manter a primeira correspondência exata e preservar a ordem original. Isso deixa o resultado previsível, mas uma letra maiúscula ou um espaço pode tornar dois itens diferentes; por isso, recomendo conferir a regra antes de reutilizar a lista."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ]
+      },
       "microsoft-word-word-count": {
         "image": "blog-images/pt-br/word-word-count.svg",
         "imageAlt": "O Microsoft Word mostra 1.247 palavras no documento e 82 palavras no trecho selecionado.",

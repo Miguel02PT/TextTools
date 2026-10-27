@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Quitar líneas duplicadas sin cambiar el orden de la lista</title>
+  <desc id="desc">Se elimina la segunda línea pear; apple y Apple permanecen separadas y conservan su orden.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  LIMPIAR UNA LISTA</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Quitar duplicados sin cambiar el orden</text>
+  <rect x="80" y="190" width="500" height="245" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="190" width="500" height="245" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ANTES</text>
+  <text x="112" y="294" fill="#172033" font-family="Arial, sans-serif" font-size="30">pear</text>
+  <text x="112" y="336" fill="#172033" font-family="Arial, sans-serif" font-size="30">apple</text>
+  <text x="112" y="378" fill="#A34B54" font-family="Arial, sans-serif" font-size="30" text-decoration="line-through">pear</text>
+  <text x="112" y="420" fill="#172033" font-family="Arial, sans-serif" font-size="30">Apple</text>
+  <text x="652" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">DESPUÉS</text>
+  <text x="652" y="294" fill="#172033" font-family="Arial, sans-serif" font-size="30">pear</text>
+  <text x="652" y="336" fill="#172033" font-family="Arial, sans-serif" font-size="30">apple</text>
+  <text x="652" y="378" fill="#172033" font-family="Arial, sans-serif" font-size="30">Apple</text>
+  <text x="652" y="420" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="600">Se conserva la primera coincidencia</text>
+  <rect x="80" y="465" width="1040" height="105" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="510" fill="#172033" font-family="Arial, sans-serif" font-size="27" font-weight="700">Elimina coincidencias exactas y conserva el orden.</text>
+</svg>
