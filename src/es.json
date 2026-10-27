@@ -368,6 +368,76 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "google-docs-character-count": {
+        "image": "blog-images/es/google-docs-character-count.svg",
+        "imageAlt": "Google Docs muestra 13 caracteres con espacios y 12 sin espacios para «Hello, world!».",
+        "title": "Cómo ver el recuento de caracteres en Google Docs (con o sin espacios) | TextToools",
+        "description": "Consulta el recuento de caracteres en Google Docs, compara los totales con y sin espacios y cuenta un fragmento o el documento completo.",
+        "summary": "Abre Herramientas > Recuento de palabras en Google Docs para ver los caracteres con y sin espacios. Selecciona un fragmento antes si solo quieres contar esa parte.",
+        "sections": [
+          {
+            "heading": "La forma más rápida de contar caracteres",
+            "paragraphs": [
+              "Abre el documento en Google Docs y elige Herramientas > Recuento de palabras. El cuadro muestra las páginas y palabras, además de los recuentos de caracteres.",
+              "Google Docs separa los dos totales: caracteres con espacios y caracteres sin espacios. Usa el que corresponda al límite que te hayan indicado. Por ejemplo, «Hello, world!» tiene 13 caracteres con el espacio y 12 sin él."
+            ]
+          },
+          {
+            "heading": "Cuenta un fragmento y no todo el documento",
+            "paragraphs": [
+              "Para revisar un párrafo, título o sección, selecciona primero ese texto y luego abre Herramientas > Recuento de palabras. El resultado corresponde al fragmento seleccionado, no al documento entero.",
+              "Comprueba los límites de la selección. Un espacio, un salto de línea o un signo de puntuación al principio o al final puede cambiar el total."
+            ]
+          },
+          {
+            "heading": "Muestra el recuento mientras escribes",
+            "paragraphs": [
+              "En el cuadro de recuento, activa «Mostrar recuento de palabras mientras escribes» para mantener visible un indicador de palabras mientras editas. Es práctico si tienes un límite de palabras.",
+              "El indicador continuo muestra palabras. Para comparar caracteres con y sin espacios, vuelve a abrir el cuadro completo de recuento."
+            ]
+          },
+          {
+            "heading": "Comprueba qué incluye el total del documento",
+            "paragraphs": [
+              "La ayuda de Google indica que el recuento del documento completo excluye encabezados, pies de página y notas al pie, salvo que selecciones una parte del documento. Si una tarea o editorial establece una regla concreta, usa ese alcance en lugar de suponer que se incluye todo lo visible.",
+              "Para contar un fragmento, revisa exactamente qué has seleccionado y usa el resultado de esa selección. Si el total requerido incluye notas u otros elementos separados, confirma cómo quiere contarlos quien lo recibirá."
+            ]
+          },
+          {
+            "heading": "Elige el total de caracteres correcto",
+            "paragraphs": [
+              "Usa «caracteres con espacios» cuando los espacios cuenten para el límite. Elige «caracteres sin espacios» solo si las instrucciones excluyen expresamente los espacios.",
+              "No elimines los espacios del documento solo para obtener un número menor. Eso modifica el texto; los dos totales permiten medir el mismo fragmento con reglas diferentes."
+            ]
+          },
+          {
+            "heading": "Comprueba la versión final antes de entregarla",
+            "paragraphs": [
+              "Cuenta el texto exacto que vas a entregar, confirma si el límite corresponde a todo el documento o a una sección y elige el total con o sin espacios que corresponda. Guarda los cambios y vuelve a comprobar el recuento.",
+              "Si un formulario o una editorial exige su propio contador de caracteres, sigue esa indicación. Las herramientas pueden aplicar reglas distintas a espacios, saltos de línea o caracteres Unicode combinados."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Al crear el contador de caracteres de TextToools, quise mostrar tanto el total como el recuento sin espacios en blanco, porque cada formulario define sus límites de manera distinta. Recomiendo comprobar la regla exacta y el texto final antes de confiar en cualquiera de los dos números."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Contar las palabras de un documento",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
       "remove-duplicate-lines-from-text": {
         "image": "blog-images/es/remove-duplicate-lines.svg",
         "imageAlt": "Se elimina una línea pear repetida, mientras apple y Apple permanecen separadas y en su orden original.",

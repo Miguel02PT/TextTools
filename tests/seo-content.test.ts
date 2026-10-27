@@ -102,6 +102,34 @@ test('duplicate-line guide examples match exact, order-preserving deduplication'
   }
 })
 
+test('Google Docs character-count guide matches the grapheme counter and official help', () => {
+  const slug = 'google-docs-character-count'
+  const post = parsedEnglishBlogPosts.find(
+    (article: { slug: string }) => article.slug === slug,
+  )
+
+  assert.ok(post)
+  assert.equal(countGraphemes('Hello, world!'), 13)
+  assert.equal(countGraphemes('Hello, world!'.replaceAll(' ', '')), 12)
+  assert.ok(post.sources.some(
+    (source: { url: string }) => source.url === 'https://support.google.com/docs/answer/39003?hl=en',
+  ))
+  assert.match(post.sections[1].heading, /selected passage/i)
+  assert.match(post.sections[3].paragraphs.join(' '), /headers, footers, and footnotes/)
+
+  for (const localePost of [
+    parsedChineseContent.blog.posts[slug],
+    parsedSpanishContent.blog.posts[slug],
+    parsedPortugueseContent.blog.posts[slug],
+  ]) {
+    assert.ok(localePost, `${slug} is localized`)
+    assert.equal(localePost.sections.length, post.sections.length)
+    assert.ok(localePost.sources.some(
+      (source: { url: string }) => source.url === 'https://support.google.com/docs/answer/39003?hl=en',
+    ))
+  }
+})
+
 test('default production URL uses the live custom domain for assets and SEO', () => {
   const liveSiteUrl = 'https://texttoools.com/'
   assert.ok(viteConfig.includes(`const defaultSiteUrl = '${liveSiteUrl}'`))

@@ -2225,7 +2225,9 @@ function App() {
               </h2>
               <div className="mt-3 flex flex-wrap gap-3">
                 {(
-                    activeBlogPost.slug === 'remove-duplicate-lines-from-text'
+                    activeBlogPost.slug === 'google-docs-character-count'
+                      ? toolList.filter((tool) => tool.id === 'character-counter')
+                      : activeBlogPost.slug === 'remove-duplicate-lines-from-text'
                       ? toolList.filter((tool) => tool.id === 'duplicate-lines')
                       : activeBlogPost.slug === 'clean-pasted-text-without-losing-formatting'
                       ? toolList.filter((tool) => tool.id === 'text-cleaner')

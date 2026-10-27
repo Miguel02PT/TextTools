@@ -543,6 +543,76 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "google-docs-character-count": {
+        "image": "blog-images/pt-br/google-docs-character-count.svg",
+        "imageAlt": "O Google Docs mostra 13 caracteres com espaços e 12 sem espaços para “Hello, world!”.",
+        "title": "Como ver a contagem de caracteres no Google Docs (com ou sem espaços) | TextToools",
+        "description": "Veja a contagem de caracteres no Google Docs, compare os totais com e sem espaços e confira um trecho ou o documento inteiro.",
+        "summary": "Acesse Ferramentas > Contagem de palavras no Google Docs para ver os caracteres com e sem espaços. Selecione um trecho antes para contar apenas aquela parte.",
+        "sections": [
+          {
+            "heading": "A maneira mais rápida de contar caracteres",
+            "paragraphs": [
+              "Abra o documento no Google Docs e escolha Ferramentas > Contagem de palavras. A janela mostra as páginas e palavras, além das contagens de caracteres.",
+              "O Google Docs separa os dois totais: caracteres com espaços e caracteres sem espaços. Use o que corresponde ao limite informado. Por exemplo, “Hello, world!” tem 13 caracteres com o espaço e 12 sem ele."
+            ]
+          },
+          {
+            "heading": "Conte um trecho em vez do documento inteiro",
+            "paragraphs": [
+              "Para conferir um parágrafo, título ou seção, selecione esse texto primeiro e depois abra Ferramentas > Contagem de palavras. O resultado será do trecho selecionado, e não do documento inteiro.",
+              "Confira os limites da seleção. Um espaço, uma quebra de linha ou um sinal de pontuação no início ou no fim pode alterar o total."
+            ]
+          },
+          {
+            "heading": "Mostre a contagem enquanto digita",
+            "paragraphs": [
+              "Na janela de contagem, ative “Exibir contagem de palavras ao digitar” para manter um indicador de palavras visível durante a edição. Isso é útil quando há um limite de palavras.",
+              "O indicador contínuo mostra palavras. Para comparar caracteres com e sem espaços, abra novamente a janela completa de contagem."
+            ]
+          },
+          {
+            "heading": "Saiba o que entra no total do documento",
+            "paragraphs": [
+              "A ajuda do Google informa que a contagem do documento inteiro exclui cabeçalhos, rodapés e notas de rodapé, a menos que você selecione uma seção do documento. Se um trabalho ou uma publicação tiver uma regra específica, use esse escopo em vez de presumir que todo conteúdo visível entra na contagem.",
+              "Para contar um trecho, confira exatamente o que foi selecionado e use o resultado daquela seleção. Se o total exigido incluir notas ou outros elementos separados, confirme como o destinatário espera que eles sejam contados."
+            ]
+          },
+          {
+            "heading": "Escolha o total de caracteres correto",
+            "paragraphs": [
+              "Use “caracteres com espaços” quando os espaços entrarem no limite informado. Escolha “caracteres sem espaços” somente quando as instruções excluírem os espaços explicitamente.",
+              "Não remova os espaços do documento só para obter um número menor. Isso altera o texto; os dois totais permitem medir o mesmo trecho com regras diferentes."
+            ]
+          },
+          {
+            "heading": "Confira a versão final antes de entregar",
+            "paragraphs": [
+              "Conte o texto exato que você pretende enviar, confirme se o limite vale para o documento inteiro ou para uma seção e escolha o total com ou sem espaços correspondente. Salve as alterações e confira a contagem novamente.",
+              "Se um formulário ou uma publicação exigir um contador próprio, siga essa orientação. Ferramentas diferentes podem aplicar regras distintas a espaços, quebras de linha ou caracteres Unicode combinados."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar o contador de caracteres do TextToools, quis mostrar tanto o total quanto a contagem sem espaços em branco, porque cada formulário define seus limites de um jeito. Recomendo conferir a regra exata e o texto final antes de confiar em qualquer um dos números."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Contar as palavras em um documento",
+            "publisher": "Ajuda dos Editores de Documentos Google",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
       "remove-duplicate-lines-from-text": {
         "image": "blog-images/pt-br/remove-duplicate-lines.svg",
         "imageAlt": "A linha pear repetida é removida, enquanto apple e Apple permanecem separadas e na ordem original.",
