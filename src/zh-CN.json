@@ -331,6 +331,76 @@
     "description": "关于字数、字符、文本清理和写作工作流的实用指南。",
     "intro": "简明实用的文本处理指南，帮助你理解统计规则、整理内容并更高效地写作。",
     "posts": {
+      "how-to-change-text-case": {
+        "image": "blog-images/zh-cn/text-case-converter.svg",
+        "imageAlt": "将一个短语转换为大写、Title Case、camelCase 和 snake_case。",
+        "title": "如何转换文本大小写：大写、小写、Title Case 等 | TextToools",
+        "description": "将文本转换为大写、小写、Title Case、Sentence case、camelCase 或 snake_case，并了解使用结果前需要检查什么。",
+        "summary": "选择一种格式即可更改大小写，无需重新输入。了解六种常见格式、换行处理方式，以及使用前如何检查姓名和缩写。",
+        "sections": [
+          {
+            "heading": "选择需要的大小写格式",
+            "paragraphs": [
+              "大小写转换工具可以更改字母的大小写，无需重新输入整段文字。应根据使用场景选择格式，例如标题、句子或代码标识符。",
+              "例如，“a quiet morning”转换为大写后是“A QUIET MORNING”，转换为小写后是“a quiet morning”，Title Case 是“A Quiet Morning”，Sentence case 是“A quiet morning”，camelCase 是“aQuietMorning”，snake_case 是“a_quiet_morning”。"
+            ]
+          },
+          {
+            "heading": "大写和小写",
+            "paragraphs": [
+              "大写会将字母转为大写字母；小写会将字母转为小写。这些格式适用于统一标签格式或修正文本中意外的大小写。",
+              "转换会更改全文中的字母大小写，包括姓名和缩写。如果品牌名称、缩写或其他术语必须保持特定写法，请检查转换结果。"
+            ]
+          },
+          {
+            "heading": "Title Case 不等于出版物的标题格式规范",
+            "paragraphs": [
+              "在此转换器中，Title Case 会将每个词的首字母大写，其余字母转为小写。例如，“A Guide to Clear Writing”会变成“A Guide To Clear Writing”。",
+              "不同出版物的标题规则各不相同，有些会将“to”等短词保留为小写。此格式不会遵循某个出版物的专用规范，因此需要时请手动调整冠词、介词、姓名和缩写。"
+            ]
+          },
+          {
+            "heading": "Sentence case 会转换整段文字",
+            "paragraphs": [
+              "Sentence case 会先将文本转为小写，再将首字母以及句号、感叹号或问号后空白字符之后的首字母大写。例如，“hELLO. wORLD!”会变成“Hello. World!”。",
+              "这只是简单的大小写转换，不是语法检查器。它可能会更改专有名称或缩写，也无法识别缩写后的所有句子边界，或没有句末标点的换行。"
+            ]
+          },
+          {
+            "heading": "在标识符中使用 camelCase 或 snake_case",
+            "paragraphs": [
+              "camelCase 会删除分隔符，并将后续词语的首字母大写：“quick task name”会变成“quickTaskName”。snake_case 会用下划线连接词语：“quick_task_name”。",
+              "这些格式会按标点符号及其他非字母、非数字字符拆分每一行。重音字母会保留。工具会逐行转换，因此多行列表仍然保持为列表。"
+            ]
+          },
+          {
+            "heading": "空格和换行会怎样处理？",
+            "paragraphs": [
+              "大写、小写、Title Case 和 Sentence case 会保留原有空格和换行，只更改字母大小写。camelCase 和 snake_case 会逐行转换，并保留行与行之间的换行。",
+              "如果代码、诗歌或格式化数据中的空格或缩进很重要，请先查看预览再复制。大小写转换只更改字母形式和标识符分隔符，不会清理或验证文本。"
+            ]
+          },
+          {
+            "heading": "使用转换结果前先检查",
+            "paragraphs": [
+              "查看预览并检查姓名、缩写、标点和所需格式。在确认转换结果正确之前，请保留原始文本副本。",
+              "如果文档或品牌有特定的大小写规范，可以先使用转换器处理，再手动应用需要的例外规则。"
+            ]
+          },
+          {
+            "heading": "创始人的一点想法",
+            "paragraphs": [
+              "开发 TextToools 大小写转换工具时，我希望 Title Case 和 Sentence case 的规则简单明确，而不是猜测出版规范或所有句子边界。这样转换结果更容易预期，但使用前仍值得检查姓名和缩写。"
+            ]
+          },
+          {
+            "heading": "关于作者",
+            "paragraphs": [
+              "本文由 TextToools 创始人撰写。我致力于打造尊重隐私的文本工具，因为我相信你的文本不应该离开浏览器。"
+            ]
+          }
+        ]
+      },
       "google-docs-character-count": {
         "image": "blog-images/zh-cn/google-docs-character-count.svg",
         "imageAlt": "Google 文档显示 “Hello, world!” 含空格为 13 个字符，不含空格为 12 个字符。",

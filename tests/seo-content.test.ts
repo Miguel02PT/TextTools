@@ -5,6 +5,7 @@ import {
   countGraphemes,
   countSentences,
   countWords,
+  convertCase,
   getKeywordData,
   removeDuplicateLines,
   sortLines,
@@ -127,6 +128,34 @@ test('Google Docs character-count guide matches the grapheme counter and officia
     assert.ok(localePost.sources.some(
       (source: { url: string }) => source.url === 'https://support.google.com/docs/answer/39003?hl=en',
     ))
+  }
+})
+
+test('case-converter guide examples match all six formats and line behavior', () => {
+  const slug = 'how-to-change-text-case'
+  const post = parsedEnglishBlogPosts.find(
+    (article: { slug: string }) => article.slug === slug,
+  )
+
+  assert.ok(post)
+  assert.equal(convertCase('a quiet morning', 'upper'), 'A QUIET MORNING')
+  assert.equal(convertCase('a quiet morning', 'lower'), 'a quiet morning')
+  assert.equal(convertCase('a quiet morning', 'title'), 'A Quiet Morning')
+  assert.equal(convertCase('hELLO. wORLD!', 'sentence'), 'Hello. World!')
+  assert.equal(convertCase('quick task name', 'camel'), 'quickTaskName')
+  assert.equal(convertCase('quick task name', 'snake'), 'quick_task_name')
+  assert.equal(convertCase('ação rápida\nsecond line', 'camel'), 'açãoRápida\nsecondLine')
+  assert.equal(convertCase('a  quiet\nmorning', 'title'), 'A  Quiet\nMorning')
+  assert.ok(post.sections[2].paragraphs.join(' ').includes('does not apply a publication’s style guide'))
+  assert.ok(post.sections[5].paragraphs.join(' ').includes('preserve the original spacing and line breaks'))
+
+  for (const localePost of [
+    parsedChineseContent.blog.posts[slug],
+    parsedSpanishContent.blog.posts[slug],
+    parsedPortugueseContent.blog.posts[slug],
+  ]) {
+    assert.ok(localePost, `${slug} is localized`)
+    assert.equal(localePost.sections.length, post.sections.length)
   }
 })
 

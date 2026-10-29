@@ -543,6 +543,76 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "how-to-change-text-case": {
+        "image": "blog-images/pt-br/text-case-converter.svg",
+        "imageAlt": "Uma frase convertida para maiúsculas, Title Case, camelCase e snake_case.",
+        "title": "Como alterar maiúsculas e minúsculas: Title Case, camelCase e mais | TextToools",
+        "description": "Converta o texto para maiúsculas, minúsculas, Title Case, Sentence case, camelCase ou snake_case e saiba o que revisar antes de usar o resultado.",
+        "summary": "Escolha um formato para alterar a capitalização sem reescrever o texto. Compare seis formatos comuns, preserve as quebras de linha quando esperado e confira nomes ou siglas.",
+        "sections": [
+          {
+            "heading": "Escolha o formato de que você precisa",
+            "paragraphs": [
+              "Um conversor de maiúsculas e minúsculas altera a capitalização sem que você precise reescrever um trecho. O formato adequado depende de onde o texto será usado: em um título, uma frase ou um identificador de código.",
+              "Por exemplo, “a quiet morning” vira “A QUIET MORNING” em maiúsculas, “a quiet morning” em minúsculas, “A Quiet Morning” em Title Case, “A quiet morning” em Sentence case, “aQuietMorning” em camelCase e “a_quiet_morning” em snake_case."
+            ]
+          },
+          {
+            "heading": "Maiúsculas e minúsculas",
+            "paragraphs": [
+              "Maiúsculas transforma as letras em capitais; minúsculas transforma em letras pequenas. Esses formatos ajudam a padronizar rótulos ou corrigir a capitalização acidental de um trecho.",
+              "Eles alteram a capitalização de todo o texto, incluindo nomes e abreviações. Confira o resultado se uma marca, sigla ou outro termo precisar manter uma grafia específica."
+            ]
+          },
+          {
+            "heading": "Title Case não é o mesmo que o padrão editorial de títulos",
+            "paragraphs": [
+              "Neste conversor, Title Case coloca em maiúscula a primeira letra de cada palavra e converte as demais para minúsculas. Por exemplo, “A Guide to Clear Writing” vira “A Guide To Clear Writing”.",
+              "Cada publicação usa regras diferentes para títulos, e algumas mantêm palavras curtas como “to” em minúsculas. Esse formato não segue um guia editorial específico; ajuste artigos, preposições, nomes e siglas quando necessário."
+            ]
+          },
+          {
+            "heading": "Sentence case transforma o trecho inteiro",
+            "paragraphs": [
+              "Sentence case converte o texto para minúsculas e depois coloca em maiúscula sua primeira letra e a primeira letra após ponto, exclamação ou interrogação seguidos de espaço em branco. Por exemplo, “hELLO. wORLD!” vira “Hello. World!”.",
+              "É uma transformação simples, não um corretor gramatical. Ela pode alterar nomes próprios ou siglas e não identifica todos os limites de frases após abreviações ou quebras de linha sem pontuação final."
+            ]
+          },
+          {
+            "heading": "Use camelCase ou snake_case em identificadores",
+            "paragraphs": [
+              "camelCase remove os separadores e coloca em maiúscula o início de cada palavra seguinte: “quick task name” vira “quickTaskName”. snake_case conecta as palavras com sublinhados: “quick_task_name”.",
+              "Esses formatos separam uma linha em pontuações e outros caracteres que não são letras ou números. Letras acentuadas são mantidas. Cada linha é processada separadamente, então uma lista com várias linhas continua sendo uma lista."
+            ]
+          },
+          {
+            "heading": "O que acontece com espaços e quebras de linha?",
+            "paragraphs": [
+              "Maiúsculas, minúsculas, Title Case e Sentence case preservam os espaços e as quebras de linha originais enquanto alteram as letras. camelCase e snake_case transformam cada linha separadamente e mantêm as quebras entre elas.",
+              "Se espaços ou recuos forem importantes em código, poesia ou dados formatados, confira a prévia antes de copiar. O conversor altera a capitalização e os separadores de identificadores; ele não limpa nem valida o texto."
+            ]
+          },
+          {
+            "heading": "Revise antes de usar o texto convertido",
+            "paragraphs": [
+              "Confira a prévia e revise nomes, siglas, abreviações, pontuação e o padrão desejado. Mantenha uma cópia do original até ter certeza de que a versão transformada está correta.",
+              "Se o documento ou a marca seguir um guia específico de capitalização, use o conversor como primeira etapa e aplique manualmente as exceções necessárias."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar o conversor de maiúsculas e minúsculas do TextToools, quis que Title Case e Sentence case fossem transformações previsíveis, em vez de tentar adivinhar um guia editorial ou todos os limites entre frases. Isso deixa as regras claras, mas ainda recomendo conferir nomes e siglas antes de usar o resultado."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Construo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deve sair do seu navegador."
+            ]
+          }
+        ]
+      },
       "google-docs-character-count": {
         "image": "blog-images/pt-br/google-docs-character-count.svg",
         "imageAlt": "O Google Docs mostra 13 caracteres com espaços e 12 sem espaços para “Hello, world!”.",

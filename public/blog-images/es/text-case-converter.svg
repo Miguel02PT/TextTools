@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Seis formas de cambiar mayúsculas y minúsculas</title>
+  <desc id="desc">Ejemplos de mayúsculas, minúsculas, Title Case, Sentence case, camelCase y snake_case.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="72" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CONVERSOR DE MAYÚSCULAS</text>
+  <text x="80" y="128" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Seis formas de cambiar las mayúsculas</text>
+  <rect x="80" y="160" width="500" height="115" rx="20" fill="#FFFFFF"/>
+  <rect x="620" y="160" width="500" height="115" rx="20" fill="#FFFFFF"/>
+  <rect x="80" y="290" width="500" height="115" rx="20" fill="#FFFFFF"/>
+  <rect x="620" y="290" width="500" height="115" rx="20" fill="#FFFFFF"/>
+  <rect x="80" y="420" width="500" height="115" rx="20" fill="#FFFFFF"/>
+  <rect x="620" y="420" width="500" height="115" rx="20" fill="#FFFFFF"/>
+  <text x="108" y="194" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">MAYÚSCULAS</text>
+  <text x="108" y="240" fill="#172033" font-family="Arial, sans-serif" font-size="27" font-weight="700">A QUIET MORNING</text>
+  <text x="648" y="194" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">minúsculas</text>
+  <text x="648" y="240" fill="#172033" font-family="Arial, sans-serif" font-size="27">a quiet morning</text>
+  <text x="108" y="324" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">TITLE CASE</text>
+  <text x="108" y="370" fill="#172033" font-family="Arial, sans-serif" font-size="27" font-weight="700">A Quiet Morning</text>
+  <text x="648" y="324" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">SENTENCE CASE</text>
+  <text x="648" y="370" fill="#172033" font-family="Arial, sans-serif" font-size="24">A quiet morning. Another day.</text>
+  <text x="108" y="454" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">camelCase</text>
+  <text x="108" y="500" fill="#172033" font-family="Arial, sans-serif" font-size="27" font-weight="700">quickTaskName</text>
+  <text x="648" y="454" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">snake_case</text>
+  <text x="648" y="500" fill="#172033" font-family="Arial, sans-serif" font-size="27" font-weight="700">quick_task_name</text>
+</svg>
