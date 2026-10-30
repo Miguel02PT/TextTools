@@ -1,5 +1,77 @@
 [
   {
+    "slug": "microsoft-word-character-count",
+    "published": "2026-10-30",
+    "title": "How to Count Characters in Microsoft Word (Document or Selection) | TextToools",
+    "description": "Find the character count in Word, check a selected passage, and understand when its total may differ from a character limit.",
+    "summary": "Use Word’s status bar and Word Count dialog to check characters in a document or selection. Confirm the counting scope and whether your limit includes spaces.",
+    "image": "blog-images/word-character-count.svg",
+    "imageAlt": "Microsoft Word character count for a document and a selected passage, with a reminder to check spaces.",
+    "sections": [
+      {
+        "heading": "Find the character count in Word",
+        "paragraphs": [
+          "Open your document and look for the word count on Word’s status bar, usually along the bottom of the window. Click the count to open the detailed Word Count dialog.",
+          "Microsoft’s guide says this view includes characters as well as words, pages, paragraphs, and lines. The exact controls can vary by Word version."
+        ]
+      },
+      {
+        "heading": "Count a selection instead of the whole document",
+        "paragraphs": [
+          "Select the sentence, paragraph, or other passage you need to measure before opening Word Count. Word can show the count for the selected text alongside the document total.",
+          "Check the selection boundaries carefully. A space, punctuation mark, heading, or line at either edge can change the result."
+        ]
+      },
+      {
+        "heading": "Open Word Count if the status bar is not enough",
+        "paragraphs": [
+          "If you cannot see a count on the status bar, look for Word Count on the Review tab in desktop Word. You can also use the Word Count command in the app’s search or help field if the menu is arranged differently.",
+          "For a selected passage, make the selection first, then open the dialog. Check any scope options shown in your version, especially if the document uses text boxes, footnotes, or endnotes."
+        ]
+      },
+      {
+        "heading": "Check what your character limit means",
+        "paragraphs": [
+          "A requirement may count characters with spaces, exclude spaces, or set a limit for only one part of a document. Read the instructions before deciding which total to use; Word’s dialog may present its character details differently across versions.",
+          "For a separate with-and-without-whitespace comparison, paste the exact passage into the TextToools Character Counter. It reports both totals in your browser. Its “without whitespace” total also excludes tabs and line breaks, not just ordinary spaces."
+        ]
+      },
+      {
+        "heading": "Why two character counts may differ",
+        "paragraphs": [
+          "Compare the scope first: one count may cover a selected passage while another covers the document. Also check whether text boxes, notes, headers, or other separate content are included in the method you are using.",
+          "A browser-based counter only measures the text you paste; it cannot inspect Word’s layout or decide which parts your assignment excludes. For a strict limit, follow the recipient’s counting rules and verify the final text in the required app."
+        ]
+      },
+      {
+        "heading": "Check the final passage before using it",
+        "paragraphs": [
+          "Copy only the text that belongs in the field or section you are submitting, then compare it with the required limit. Keep punctuation and spacing as they will appear in the final version.",
+          "If the limit is strict, leave a small margin and count again after your last edit. A small change to a heading, space, or line break can affect the total."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "Word’s character count is useful when you are already editing a document, while a separate counter can make its whitespace rule easier to see. I recommend checking the exact selection and the recipient’s counting rule before relying on either total."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Show word count",
+        "publisher": "Microsoft Support",
+        "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+      }
+    ]
+  },
+  {
     "slug": "how-to-change-text-case",
     "published": "2026-10-29",
     "title": "How to Change Text Case: Uppercase, Lowercase, Title Case & More | TextToools",

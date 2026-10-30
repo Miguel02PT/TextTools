@@ -368,6 +368,76 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "microsoft-word-character-count": {
+        "image": "blog-images/es/word-character-count.svg",
+        "imageAlt": "Recuento de caracteres en Microsoft Word para un documento y un fragmento seleccionado; recuerda comprobar los espacios.",
+        "title": "Cómo contar caracteres en Microsoft Word (documento o selección) | TextToools",
+        "description": "Consulta el recuento de caracteres en Word, revisa un fragmento seleccionado y entiende por qué el total puede diferir de un límite.",
+        "summary": "Usa la barra de estado y el cuadro Recuento de palabras de Word para comprobar los caracteres de un documento o una selección. Confirma el alcance y si el límite incluye espacios.",
+        "sections": [
+          {
+            "heading": "Encuentra el recuento de caracteres en Word",
+            "paragraphs": [
+              "Abre el documento y busca el recuento de palabras en la barra de estado de Word, normalmente en la parte inferior de la ventana. Haz clic en el recuento para abrir el cuadro detallado.",
+              "La guía de Microsoft indica que esta vista incluye caracteres, además de palabras, páginas, párrafos y líneas. Los controles exactos pueden variar según la versión de Word."
+            ]
+          },
+          {
+            "heading": "Cuenta una selección en lugar de todo el documento",
+            "paragraphs": [
+              "Selecciona la oración, el párrafo u otro fragmento que quieras medir antes de abrir Recuento de palabras. Word puede mostrar el recuento del texto seleccionado junto al total del documento.",
+              "Comprueba los límites de la selección. Un espacio, un signo de puntuación, un título o una línea en cualquiera de los extremos puede cambiar el resultado."
+            ]
+          },
+          {
+            "heading": "Abre Recuento de palabras si la barra de estado no basta",
+            "paragraphs": [
+              "Si no ves el recuento en la barra de estado, busca Recuento de palabras en la pestaña Revisar de Word para escritorio. También puedes buscar ese comando en la ayuda o en el buscador de la aplicación si el menú está organizado de otra forma.",
+              "Para medir un fragmento, selecciónalo antes de abrir el cuadro. Revisa las opciones de alcance disponibles en tu versión, sobre todo si el documento contiene cuadros de texto, notas al pie o notas finales."
+            ]
+          },
+          {
+            "heading": "Comprueba qué significa tu límite de caracteres",
+            "paragraphs": [
+              "Un requisito puede contar los caracteres con espacios, excluirlos o limitar solo una parte del documento. Lee las instrucciones antes de elegir el total; los detalles que muestra Word pueden variar entre versiones.",
+              "Para comparar por separado el total con y sin espacios en blanco, pega el fragmento exacto en el contador de caracteres de TextToools. Muestra ambos totales en el navegador. El total «sin espacios en blanco» también excluye tabulaciones y saltos de línea, no solo los espacios normales."
+            ]
+          },
+          {
+            "heading": "Por qué pueden diferir dos recuentos",
+            "paragraphs": [
+              "Compara primero el alcance: un recuento puede medir una selección y otro todo el documento. Comprueba también si el método incluye cuadros de texto, notas, encabezados u otro contenido separado.",
+              "Un contador del navegador solo mide el texto que pegas; no puede interpretar el diseño de Word ni decidir qué partes excluye la tarea. Si el límite es estricto, sigue las reglas del destinatario y comprueba el texto final en la aplicación requerida."
+            ]
+          },
+          {
+            "heading": "Revisa el fragmento final antes de usarlo",
+            "paragraphs": [
+              "Copia solo el texto que corresponda al campo o la sección que vas a entregar y compáralo con el límite. Conserva la puntuación y los espacios tal como aparecerán en la versión final.",
+              "Si el límite es estricto, deja un pequeño margen y vuelve a contar después de la última edición. Un cambio pequeño en un título, un espacio o un salto de línea puede afectar el total."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "El recuento de Word resulta práctico mientras editas un documento; un contador aparte puede mostrar con más claridad cómo trata los espacios en blanco. Recomiendo comprobar la selección exacta y la regla del destinatario antes de confiar en cualquiera de los dos resultados."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Mostrar el recuento de palabras",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          }
+        ]
+      },
       "how-to-change-text-case": {
         "image": "blog-images/es/text-case-converter.svg",
         "imageAlt": "Una frase convertida a mayúsculas, Title Case, camelCase y snake_case.",

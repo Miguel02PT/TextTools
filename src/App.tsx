@@ -2225,7 +2225,9 @@ function App() {
               </h2>
               <div className="mt-3 flex flex-wrap gap-3">
                 {(
-                      activeBlogPost.slug === 'how-to-change-text-case'
+                      activeBlogPost.slug === 'microsoft-word-character-count'
+                        ? toolList.filter((tool) => tool.id === 'character-counter')
+                        : activeBlogPost.slug === 'how-to-change-text-case'
                         ? toolList.filter((tool) => tool.id === 'case-converter')
                         : activeBlogPost.slug === 'google-docs-character-count'
                       ? toolList.filter((tool) => tool.id === 'character-counter')

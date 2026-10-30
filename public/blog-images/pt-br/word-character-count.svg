@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Contagem de caracteres no Microsoft Word</title>
+  <desc id="desc">Compare um documento e um trecho selecionado e confira se o limite de caracteres inclui espaços.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  CONTAGEM NO WORD</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Caracteres no Word</text>
+  <rect x="80" y="190" width="500" height="190" rx="22" fill="#FFFFFF"/>
+  <rect x="620" y="190" width="500" height="190" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">DOCUMENTO</text>
+  <text x="112" y="298" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">Contagem de palavras</text>
+  <text x="112" y="342" fill="#493867" font-family="Arial, sans-serif" font-size="22" font-weight="600">Caracteres e outros detalhes</text>
+  <text x="652" y="238" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">TEXTO SELECIONADO</text>
+  <text x="652" y="298" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">Confira o trecho</text>
+  <text x="652" y="342" fill="#493867" font-family="Arial, sans-serif" font-size="22" font-weight="600">O escopo faz diferença</text>
+  <rect x="80" y="415" width="1040" height="125" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="460" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ANTES DE ENVIAR</text>
+  <text x="112" y="510" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">Confirme se o limite inclui espaços</text>
+</svg>

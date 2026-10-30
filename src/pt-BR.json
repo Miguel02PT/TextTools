@@ -543,6 +543,76 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "microsoft-word-character-count": {
+        "image": "blog-images/pt-br/word-character-count.svg",
+        "imageAlt": "Contagem de caracteres no Microsoft Word para um documento e um trecho selecionado, com um lembrete para conferir os espaços.",
+        "title": "Como contar caracteres no Microsoft Word (documento ou seleção) | TextToools",
+        "description": "Veja a contagem de caracteres no Word, confira um trecho selecionado e entenda por que o total pode diferir de um limite.",
+        "summary": "Use a barra de status e a caixa Contagem de Palavras do Word para conferir os caracteres de um documento ou seleção. Verifique o escopo e se o limite inclui espaços.",
+        "sections": [
+          {
+            "heading": "Encontre a contagem de caracteres no Word",
+            "paragraphs": [
+              "Abra o documento e procure a contagem de palavras na barra de status do Word, geralmente na parte inferior da janela. Clique na contagem para abrir a caixa detalhada.",
+              "O guia da Microsoft informa que essa visualização inclui caracteres, além de palavras, páginas, parágrafos e linhas. Os controles podem variar conforme a versão do Word."
+            ]
+          },
+          {
+            "heading": "Conte uma seleção em vez do documento inteiro",
+            "paragraphs": [
+              "Selecione a frase, o parágrafo ou outro trecho que você quer medir antes de abrir Contagem de Palavras. O Word pode mostrar a contagem do texto selecionado junto com o total do documento.",
+              "Confira os limites da seleção. Um espaço, sinal de pontuação, título ou linha em qualquer uma das extremidades pode alterar o resultado."
+            ]
+          },
+          {
+            "heading": "Abra Contagem de Palavras se a barra de status não bastar",
+            "paragraphs": [
+              "Se a contagem não aparecer na barra de status, procure Contagem de Palavras na guia Revisão do Word para desktop. Você também pode buscar esse comando na ajuda ou na pesquisa do aplicativo se o menu estiver organizado de outra forma.",
+              "Para medir um trecho, selecione-o antes de abrir a caixa. Confira as opções de escopo disponíveis na sua versão, principalmente se o documento tiver caixas de texto, notas de rodapé ou notas de fim."
+            ]
+          },
+          {
+            "heading": "Confira o que significa o limite de caracteres",
+            "paragraphs": [
+              "Uma exigência pode contar caracteres com espaços, excluí-los ou limitar apenas uma parte do documento. Leia as instruções antes de escolher o total; os detalhes exibidos pelo Word podem variar entre versões.",
+              "Para comparar separadamente o total com e sem espaços em branco, cole o trecho exato no contador de caracteres do TextToools. Ele mostra os dois totais no navegador. O total “sem espaços em branco” também exclui tabulações e quebras de linha, não apenas espaços comuns."
+            ]
+          },
+          {
+            "heading": "Por que duas contagens podem ser diferentes",
+            "paragraphs": [
+              "Compare primeiro o escopo: uma contagem pode medir uma seleção e outra, o documento inteiro. Confira também se o método inclui caixas de texto, notas, cabeçalhos ou outro conteúdo separado.",
+              "Um contador no navegador mede apenas o texto que você cola; ele não interpreta o layout do Word nem decide quais partes o trabalho exclui. Se o limite for rigoroso, siga as regras do destinatário e confira o texto final no aplicativo exigido."
+            ]
+          },
+          {
+            "heading": "Confira o trecho final antes de usá-lo",
+            "paragraphs": [
+              "Copie apenas o texto que pertence ao campo ou à seção que você vai enviar e compare com o limite. Mantenha pontuação e espaços como aparecerão na versão final.",
+              "Se o limite for rigoroso, deixe uma pequena margem e conte novamente depois da última edição. Uma pequena alteração em um título, espaço ou quebra de linha pode afetar o total."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "A contagem do Word é prática enquanto você edita um documento; um contador separado pode deixar mais claro como os espaços em branco são tratados. Por isso, prefiro conferir a seleção exata e a regra do destinatário antes de confiar em qualquer um dos resultados."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas de texto que respeitam a privacidade porque acredito que seu texto não precisa sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Mostrar a contagem de palavras",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          }
+        ]
+      },
       "how-to-change-text-case": {
         "image": "blog-images/pt-br/text-case-converter.svg",
         "imageAlt": "Uma frase convertida para maiúsculas, Title Case, camelCase e snake_case.",

@@ -131,6 +131,36 @@ test('Google Docs character-count guide matches the grapheme counter and officia
   }
 })
 
+test('Microsoft Word character-count guide matches the counter and official help', () => {
+  const slug = 'microsoft-word-character-count'
+  const post = parsedEnglishBlogPosts.find(
+    (article: { slug: string }) => article.slug === slug,
+  )
+
+  assert.ok(post)
+  assert.equal(countGraphemes('Hello, world!'), 13)
+  assert.equal(countGraphemes('Hello, world!'.replace(/\s/gu, '')), 12)
+  assert.ok(post.sources.some(
+    (source: { url: string }) =>
+      source.url === 'https://support.microsoft.com/en-us/word/training/show-word-count',
+  ))
+  assert.match(post.sections[1].heading, /selection/i)
+  assert.match(post.sections[3].paragraphs.join(' '), /tabs and line breaks/i)
+
+  for (const localePost of [
+    parsedChineseContent.blog.posts[slug],
+    parsedSpanishContent.blog.posts[slug],
+    parsedPortugueseContent.blog.posts[slug],
+  ]) {
+    assert.ok(localePost, `${slug} is localized`)
+    assert.equal(localePost.sections.length, post.sections.length)
+    assert.ok(localePost.sources.some(
+      (source: { url: string }) =>
+        source.url === 'https://support.microsoft.com/en-us/word/training/show-word-count',
+    ))
+  }
+})
+
 test('case-converter guide examples match all six formats and line behavior', () => {
   const slug = 'how-to-change-text-case'
   const post = parsedEnglishBlogPosts.find(
