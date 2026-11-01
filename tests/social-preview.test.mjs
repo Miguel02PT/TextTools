@@ -12,6 +12,9 @@ const chinesePosts = JSON.parse(
 const portuguesePosts = JSON.parse(
   readFileSync(new URL('../src/pt-BR.json', import.meta.url), 'utf8'),
 ).blog.posts
+const frenchPosts = JSON.parse(
+  readFileSync(new URL('../src/fr.json', import.meta.url), 'utf8'),
+).blog.posts
 
 test('brand correction changes only the site name, not the canonical URL', () => {
   const html = createSeoMetadata({
@@ -53,6 +56,7 @@ test('each localized article image is a local 1200x630 PNG', () => {
       englishPost,
       chinesePosts[englishPost.slug],
       portuguesePosts[englishPost.slug],
+      frenchPosts[englishPost.slug],
     ]
 
     for (const post of locales) {

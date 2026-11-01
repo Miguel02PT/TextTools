@@ -23,6 +23,7 @@ import importedToolGuides from './tool-pages.json'
 import importedChinese from './zh-CN.json'
 import importedSpanish from './es.json'
 import importedPortuguese from './pt-BR.json'
+import importedFrench from './fr.json'
 import importedBlogPosts from './blog-posts.json'
 import { getBrowserLocaleSuggestion } from './browser-language'
 import { createGoogleAnalyticsCommand } from './google-analytics'
@@ -324,6 +325,17 @@ const portuguese = importedPortuguese as {
     posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
   }
 }
+const french = importedFrench as {
+  site: Record<string, string>
+  inline: Record<string, string>
+  tools: Record<ToolId, LocalizedToolGuide>
+  blog: {
+    title: string
+    description: string
+    intro: string
+    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
+  }
+}
 const blogPosts: BlogPost[] = importedBlogPosts
 const informationPages = [
   { slug: 'faq', title: 'Frequently asked questions', label: 'FAQ' },
@@ -371,6 +383,7 @@ function getLocaleSite(locale: Locale) {
   if (locale === 'zh-CN') return chinese.site
   if (locale === 'es') return spanish.site
   if (locale === 'pt-BR') return portuguese.site
+  if (locale === 'fr') return french.site
   return undefined
 }
 
@@ -389,6 +402,7 @@ function localizedCopy(locale: Locale, english: string, chineseText: string) {
   if (locale === 'zh-CN') return chineseText
   if (locale === 'es') return spanish.inline[english] ?? english
   if (locale === 'pt-BR') return portuguese.inline[english] ?? english
+  if (locale === 'fr') return french.inline[english] ?? english
   return english
 }
 
@@ -635,18 +649,22 @@ function App() {
     if (pathWithinBase === 'zh-cn' || pathWithinBase.startsWith('zh-cn/')) return 'zh-CN'
     if (pathWithinBase === 'es' || pathWithinBase.startsWith('es/')) return 'es'
     if (pathWithinBase === 'pt-br' || pathWithinBase.startsWith('pt-br/')) return 'pt-BR'
+    if (pathWithinBase === 'fr' || pathWithinBase.startsWith('fr/')) return 'fr'
     return 'en'
   })
   const isChineseLocale = locale === 'zh-CN'
   const isSpanishLocale = locale === 'es'
   const isPortugueseLocale = locale === 'pt-BR'
+  const isFrenchLocale = locale === 'fr'
   const localePrefix = isChineseLocale
     ? 'zh-cn/'
     : isSpanishLocale
       ? 'es/'
       : isPortugueseLocale
         ? 'pt-br/'
-        : ''
+        : isFrenchLocale
+          ? 'fr/'
+          : ''
   const relativePath = localePrefix
     ? pathWithinBase.slice(localePrefix.slice(0, -1).length).replace(/^\/+/, '')
     : pathWithinBase
@@ -657,11 +675,13 @@ function App() {
   const chineseLanguageHref = `${basePath}zh-cn/${relativePath}`
   const spanishLanguageHref = `${basePath}es/${relativePath}`
   const portugueseLanguageHref = `${basePath}pt-br/${relativePath}`
+  const frenchLanguageHref = `${basePath}fr/${relativePath}`
   const languageOptions: { locale: Locale; href: string; label: string }[] = [
     { locale: 'en', href: englishLanguageHref, label: 'English' },
     { locale: 'zh-CN', href: chineseLanguageHref, label: '简体中文' },
     { locale: 'es', href: spanishLanguageHref, label: 'Español' },
     { locale: 'pt-BR', href: portugueseLanguageHref, label: 'Português' },
+    { locale: 'fr', href: frenchLanguageHref, label: 'Français' },
   ]
   const routeToolId = relativePath.match(/^tools\/([^/]+)\/?$/)?.[1]
   const routeTool = toolList.find((tool) => tool.id === routeToolId)
@@ -670,9 +690,11 @@ function App() {
       ? chinese.tools[routeTool.id]
       : isSpanishLocale
         ? spanish.tools[routeTool.id]
-        : isPortugueseLocale
-          ? portuguese.tools[routeTool.id]
-          : toolGuides.find((guide) => guide.id === routeTool.id)
+        : isFrenchLocale
+          ? french.tools[routeTool.id]
+          : isPortugueseLocale
+            ? portuguese.tools[routeTool.id]
+            : toolGuides.find((guide) => guide.id === routeTool.id)
     : undefined
   const routePageSlug = relativePath.match(/^(faq|about|privacy|terms|contact|report-bug)\/?$/)?.[1]
   const activeInformationPage = informationPages.find((page) => page.slug === routePageSlug)
@@ -689,7 +711,9 @@ function App() {
             ? chinese.blog.posts[activeBlogPost.slug]
             : isSpanishLocale
               ? spanish.blog.posts[activeBlogPost.slug]
-              : portuguese.blog.posts[activeBlogPost.slug]),
+              : isPortugueseLocale
+                ? portuguese.blog.posts[activeBlogPost.slug]
+                : french.blog.posts[activeBlogPost.slug]),
         }
       : activeBlogPost
   const localizedBlogPosts = blogPosts.map((post) => ({
@@ -698,9 +722,11 @@ function App() {
       ? chinese.blog.posts[post.slug]
       : isSpanishLocale
         ? spanish.blog.posts[post.slug]
-        : isPortugueseLocale
-          ? portuguese.blog.posts[post.slug]
-          : undefined),
+        : isFrenchLocale
+          ? french.blog.posts[post.slug]
+          : isPortugueseLocale
+            ? portuguese.blog.posts[post.slug]
+            : undefined),
   }))
   const [featuredBlogPost, ...otherBlogPosts] = localizedBlogPosts
   const [activeTool] = useState<ToolId>(routeTool?.id ?? 'word-counter')
@@ -814,26 +840,33 @@ function App() {
   const filteredTools = useMemo(() => {
     return toolList.filter((tool) => {
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory
+      const localizedTool = isChineseLocale
+        ? chinese.tools[tool.id]
+        : isSpanishLocale
+          ? spanish.tools[tool.id]
+          : isPortugueseLocale
+            ? portuguese.tools[tool.id]
+            : isFrenchLocale
+              ? french.tools[tool.id]
+              : undefined
       const matchesSearch =
         search.trim().length === 0 ||
         tool.name.toLowerCase().includes(search.toLowerCase()) ||
         tool.description.toLowerCase().includes(search.toLowerCase()) ||
-        (locale !== 'en' &&
-          `${isChineseLocale
-            ? chinese.tools[tool.id].name
-            : isSpanishLocale
-              ? spanish.tools[tool.id].name
-              : portuguese.tools[tool.id].name} ${
-            locale === 'zh-CN'
-              ? chinese.tools[tool.id].description
-              : isSpanishLocale
-                ? spanish.tools[tool.id].description
-                : portuguese.tools[tool.id].description
-          }`.toLowerCase().includes(search.trim().toLowerCase()))
+        `${localizedTool?.name ?? ''} ${localizedTool?.description ?? ''}`
+          .toLowerCase()
+          .includes(search.trim().toLowerCase())
 
       return matchesCategory && matchesSearch
     })
-  }, [isChineseLocale, isSpanishLocale, locale, search, selectedCategory])
+  }, [
+    isChineseLocale,
+    isFrenchLocale,
+    isPortugueseLocale,
+    isSpanishLocale,
+    search,
+    selectedCategory,
+  ])
 
   const activeToolInfo =
     toolList.find((tool) => tool.id === activeTool) ?? toolList[0]
@@ -842,17 +875,21 @@ function App() {
       ? chinese.tools[tool.id].name
       : isSpanishLocale
         ? spanish.tools[tool.id].name
-        : isPortugueseLocale
-          ? portuguese.tools[tool.id].name
-          : tool.name
+        : isFrenchLocale
+          ? french.tools[tool.id].name
+          : isPortugueseLocale
+            ? portuguese.tools[tool.id].name
+            : tool.name
   const getToolDescription = (tool: Tool) =>
     isChineseLocale
       ? chinese.tools[tool.id].description
       : isSpanishLocale
         ? spanish.tools[tool.id].description
-        : isPortugueseLocale
-          ? portuguese.tools[tool.id].description
-          : tool.description
+        : isFrenchLocale
+          ? french.tools[tool.id].description
+          : isPortugueseLocale
+            ? portuguese.tools[tool.id].description
+            : tool.description
   const categoryLabel = (category: (typeof categories)[number]) => {
     if (!localeText) return category
     const categoryKeys: Record<(typeof categories)[number], string> = {
@@ -1376,7 +1413,9 @@ function App() {
               ? '¿Prefieres ver TextToools en español?'
               : suggestedLocale === 'pt-BR'
                 ? 'Prefere acessar o TextToools em português?'
-                : '您更喜欢使用简体中文浏览 TextToools 吗？'}
+                : suggestedLocale === 'fr'
+                  ? 'Préférez-vous utiliser TextToools en français ?'
+                  : '您更喜欢使用简体中文浏览 TextToools 吗？'}
           </p>
           <div className="flex items-center gap-3">
             <a
@@ -1385,7 +1424,9 @@ function App() {
                   ? 'es/'
                   : suggestedLocale === 'pt-BR'
                     ? 'pt-br/'
-                    : 'zh-cn/'
+                    : suggestedLocale === 'fr'
+                      ? 'fr/'
+                      : 'zh-cn/'
               }`}
               className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4"
             >
@@ -1393,7 +1434,9 @@ function App() {
                 ? 'Ver en español'
                 : suggestedLocale === 'pt-BR'
                   ? 'Acessar em português'
-                  : '切换到简体中文'}
+                  : suggestedLocale === 'fr'
+                    ? 'Voir en français'
+                    : '切换到简体中文'}
             </a>
             <button
               type="button"
@@ -1404,7 +1447,9 @@ function App() {
                 ? 'Seguir en inglés'
                 : suggestedLocale === 'pt-BR'
                   ? 'Continuar em inglês'
-                  : '继续使用英文'}
+                  : suggestedLocale === 'fr'
+                    ? 'Continuer en anglais'
+                    : '继续使用英文'}
             </button>
           </div>
         </aside>
@@ -1702,6 +1747,8 @@ function App() {
                       ? `${metrics.words} 个词，阅读速度 ${readingSpeed} 字/分钟`
                       : isSpanishLocale
                         ? `${metrics.words} ${metrics.words === 1 ? 'palabra' : 'palabras'} a ${readingSpeed} ${localeText?.wordsPerMinute ?? 'palabras por minuto'}`
+                        : isFrenchLocale
+                          ? `${metrics.words} ${metrics.words === 1 ? 'mot' : 'mots'} à ${readingSpeed} ${localeText?.wordsPerMinute ?? 'mots par minute'}`
                         : isPortugueseLocale
                           ? `${metrics.words} ${metrics.words === 1 ? 'palavra' : 'palavras'} a ${readingSpeed} ${localeText?.wordsPerMinute ?? 'palavras por minuto'}`
                           : `${metrics.words} words at ${readingSpeed} words per minute`}
@@ -1988,9 +2035,11 @@ function App() {
                   ? chinese.blog.title
                   : isSpanishLocale
                     ? spanish.blog.title
-                    : isPortugueseLocale
-                      ? portuguese.blog.title
-                      : 'TextToools Blog'}
+                    : isFrenchLocale
+                      ? french.blog.title
+                      : isPortugueseLocale
+                        ? portuguese.blog.title
+                        : 'TextToools Blog'}
               </h1>
               <p className="mt-2 max-w-3xl text-base leading-7 text-slate-600">
                 {locale !== 'en'
@@ -1998,7 +2047,9 @@ function App() {
                     ? chinese.blog.intro
                     : isSpanishLocale
                       ? spanish.blog.intro
-                      : portuguese.blog.intro
+                      : isFrenchLocale
+                        ? french.blog.intro
+                        : portuguese.blog.intro
                   : 'Practical, clear guides to counting, cleaning, and working with text.'}
               </p>
             </div>
@@ -2175,16 +2226,20 @@ function App() {
                                   ? '个句子'
                                   : isSpanishLocale
                                     ? example.count === 1 ? 'oración' : 'oraciones'
-                                    : isPortugueseLocale
-                                      ? example.count === 1 ? 'frase' : 'frases'
-                                      : example.count === 1 ? 'sentence' : 'sentences'
+                                      : isFrenchLocale
+                                        ? example.count === 1 ? 'phrase' : 'phrases'
+                                        : isPortugueseLocale
+                                          ? example.count === 1 ? 'frase' : 'frases'
+                                          : example.count === 1 ? 'sentence' : 'sentences'
                                 : isChineseLocale
                                   ? '个词'
                                   : isSpanishLocale
                                     ? example.count === 1 ? 'palabra' : 'palabras'
-                                    : isPortugueseLocale
-                                      ? example.count === 1 ? 'palavra' : 'palavras'
-                                      : example.count === 1 ? 'word' : 'words'}
+                                    : isFrenchLocale
+                                      ? example.count === 1 ? 'mot' : 'mots'
+                                      : isPortugueseLocale
+                                        ? example.count === 1 ? 'palavra' : 'palavras'
+                                        : example.count === 1 ? 'word' : 'words'}
                             </span>
                           </div>
                           <p className="mt-2 text-sm leading-6 text-slate-600">

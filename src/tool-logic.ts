@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'zh-CN' | 'es' | 'pt-BR'
+export type Locale = 'en' | 'zh-CN' | 'es' | 'pt-BR' | 'fr'
 export type CaseFormat = 'upper' | 'lower' | 'title' | 'sentence' | 'camel' | 'snake'
 export type SortMode = 'az' | 'za' | 'reverse'
 export type ToolId =
@@ -70,6 +70,20 @@ const portugueseStopWords = new Set([
   'quando', 'que', 'quem', 'se', 'sem', 'ser', 'seu', 'seus', 'só', 'sua',
   'suas', 'também', 'te', 'tem', 'têm', 'um', 'uma', 'você', 'vocês',
 ])
+const frenchStopWords = new Set([
+  'a', 'à', 'afin', 'après', 'au', 'aucun', 'aucune', 'aussi', 'autre',
+  'autres', 'aux', 'avec', 'ce', 'cela', 'celle', 'celles', 'celui', 'cependant',
+  'ces', 'cet', 'cette', 'ceux', 'chaque', 'chez', 'comme', 'comment', 'dans',
+  'de', 'des', 'du', 'depuis', 'donc', 'dont', 'elle', 'elles', 'en', 'encore',
+  'entre', 'est', 'et', 'eux', 'il', 'ils', 'je', 'la', 'le', 'les', 'leur',
+  'leurs', 'lui', 'ma', 'mais', 'me', 'même', 'mes', 'moi', 'moins', 'mon',
+  'ne', 'ni', 'notre', 'nous', 'on', 'ou', 'où', 'par', 'parce', 'pas',
+  'pendant', 'peu', 'plus', 'pour', 'pourquoi', 'quand', 'que', 'quel',
+  'quelle', 'quelles', 'quels', 'qui', 'quoi', 'sa', 'sans', 'se', 'ses',
+  'si', 'soi', 'soit', 'son', 'sous', 'sur', 'ta', 'te', 'tes', 'toi', 'ton',
+  'tous', 'tout', 'toute', 'toutes', 'très', 'tu', 'un', 'une', 'vos',
+  'votre', 'vous', 'y', 'ça', 'être',
+])
 const chineseWordSegmenter = new Intl.Segmenter('zh-CN', { granularity: 'word' })
 const graphemeSegmenter = new Intl.Segmenter(undefined, { granularity: 'grapheme' })
 const sentenceSegmenters: Record<Locale, Intl.Segmenter> = {
@@ -77,6 +91,7 @@ const sentenceSegmenters: Record<Locale, Intl.Segmenter> = {
   'zh-CN': new Intl.Segmenter('zh-CN', { granularity: 'sentence' }),
   es: new Intl.Segmenter('es', { granularity: 'sentence' }),
   'pt-BR': new Intl.Segmenter('pt-BR', { granularity: 'sentence' }),
+  fr: new Intl.Segmenter('fr', { granularity: 'sentence' }),
 }
 
 const loremWords = [
@@ -121,6 +136,11 @@ export function countSentences(text: string, locale: Locale = 'en') {
 }
 
 export function formatReadingTime(words: number, seconds: number, locale: Locale = 'en') {
+  if (locale === 'fr') {
+    if (words === 0) return '0 min 0 s'
+    if (seconds < 60) return 'moins d’une minute'
+    return `${Math.floor(seconds / 60)} min ${seconds % 60} s`
+  }
   if (locale === 'pt-BR') {
     if (words === 0) return '0 min 0 s'
     if (seconds < 60) return 'menos de 1 min'
@@ -339,7 +359,9 @@ export function getKeywordData(text: string, locale: Locale): KeywordData {
           ? spanishStopWords.has(token)
           : locale === 'pt-BR'
             ? portugueseStopWords.has(token)
-            : chineseStopWords.has(token))
+            : locale === 'fr'
+              ? frenchStopWords.has(token)
+              : chineseStopWords.has(token))
     ) continue
     counts.set(token, (counts.get(token) ?? 0) + 1)
   }

@@ -1,0 +1,2438 @@
+{
+  "site": {
+    "language": "Fran?ais",
+    "switchLanguage": "Changer de langue",
+    "switchToEnglish": "Passer à l'anglais",
+    "switchToChinese": "Passer au chinois simplifié",
+    "switchToSpanish": "Passer à l'espagnol",
+    "english": "Anglais",
+    "allTools": "Tous les outils",
+    "allTextTools": "Tous les outils de texte",
+    "chooseTool": "Choisissez un outil pour ouvrir votre page.",
+    "browseAll": "Voir tout",
+    "writing": "Écriture",
+    "textCleaning": "Nettoyage de texte",
+    "textFormatting": "Mise en forme du texte",
+    "textAnalysis": "Analyse de texte",
+    "home": "Accueil",
+    "faq": "Questions fr?quentes",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "Termes et conditions",
+    "contact": "Contacter",
+    "reportBug": "Signaler un probl?me",
+    "blog": "Blog",
+    "product": "Produit",
+    "popularTools": "Outils populaires",
+    "resources": "Ressources",
+    "legal": "Mentions légales",
+    "socialLinks": "Suivez-nous",
+    "footerDescription": "Outils de texte gratuits qui fonctionnent dans votre navigateur. Le texte que vous saisissez n'est pas envoyé à nos serveurs pour traitement.",
+    "footerTagline": "Outils de texte simples. La confidentialité avant tout.",
+    "allToolsHeading": "Tous les outils",
+    "openToolsMenu": "Ouvrir le menu outils",
+    "closeToolsMenu": "Fermer le menu outils",
+    "searchTools": "Rechercher des outils",
+    "homeHeading": "Outils de texte simples et pratiques",
+    "homeIntro": "Comptez, nettoyez, formatez et analysez le texte gratuitement depuis votre navigateur.",
+    "noToolsFound": "Nous n’avons trouvé aucun outil. Essayez une autre recherche.",
+    "homeBreadcrumb": "Accueil",
+    "toolBreadcrumb": "Tous les outils",
+    "toolInput": "Saisissez le texte",
+    "inputPlaceholder": "Collez ou tapez le texte ici…",
+    "clearInput": "Effacer le texte",
+    "output": "R?sultat",
+    "copy": "Copie",
+    "download": "Télécharger",
+    "copied": "Copié dans le presse-papiers.",
+    "copyFailed": "Impossible de copier. Sélectionnez et copiez le résultat manuellement.",
+    "downloadStarted": "Le téléchargement a commencé.",
+    "downloadFailed": "Impossible de télécharger. Essayer à nouveau.",
+    "emptyOutput": "Le résultat apparaîtra ici lorsque vous saisirez du texte.",
+    "emptyResult": "Le résultat traité est vide.",
+    "transformedOutput": "Le texte traité apparaîtra ici.",
+    "exampleInput": "Exemple de texte",
+    "result": "Questions fréquemment posées sur",
+    "frequentlyAsked": "Questions fr?quentes",
+    "exploreTools": "Explorer d'autres outils de texte",
+    "exploreToolsIntro": "Chaque outil possède sa propre page afin que vous puissiez facilement changer de tâche.",
+    "searchNoResults": "Nous n’avons trouvé aucun mot-clé. Ajoutez du texte pour analyser sa fréquence.",
+    "categoryWriting": "Écriture",
+    "categoryTextCleaning": "Nettoyage de texte",
+    "categoryTextFormatting": "Mise en forme du texte",
+    "categoryTextAnalysis": "Analyse de texte",
+    "wordCount": "Mots",
+    "characters": "Caractères",
+    "withoutWhitespace": "Caractères sans espace",
+    "sentences": "Prières",
+    "paragraphs": "Paragraphes",
+    "lines": "Lignes",
+    "totalWords": "Nombre total de mots",
+    "topKeywords": "Mots-cl?s les plus fr?quents (nombre et pourcentage du total) :",
+    "rank": "Rang",
+    "keyword": "Mot-cl?",
+    "count": "Nombre",
+    "density": "Pourcentage",
+    "noKeywords": "Aucun mot clé trouvé.",
+    "find": "Rechercher",
+    "replaceWith": "Remplacer par",
+    "findPlaceholder": "Texte que vous souhaitez rechercher",
+    "replacePlaceholder": "Texte de remplacement",
+    "matchCase": "Sensible à la casse",
+    "wholeWord": "Mot entier",
+    "replacement": "Remplacements",
+    "replacements": "Remplacements",
+    "paragraphCount": "Paragraphes",
+    "sentencesPerParagraph": "Phrases par paragraphe",
+    "startWithLorem": "Commencez par Lorem ipsum",
+    "readingSpeed": "Vitesse de lecture",
+    "wordsPerMinute": "mots par minute",
+    "estimatedReadingTime": "Temps de lecture estimé",
+    "naturalNumberOrder": "Ordre numérique naturel",
+    "removeEmptyLines": "Supprimer les lignes vides",
+    "trimLines": "Supprimer les espaces au début et à la fin des lignes",
+    "collapseSpaces": "Réduire les espaces répétés",
+    "removeBlankLines": "Supprimer les lignes vides supplémentaires",
+    "upper": "LETTRES MAJUSCULES",
+    "lower": "minuscule",
+    "titleCase": "Lettre majuscule initiale dans chaque mot",
+    "sentenceCase": "Capital initial",
+    "camelCase": "camelÉtui",
+    "snakeCase": "serpent_case",
+    "az": "A-Z",
+    "za": "Z-A",
+    "reverseOrder": "Inverser la commande",
+    "welcome": "Nous vous souhaitons la bienvenue",
+    "isFree": "TextToools est-il gratuit ?",
+    "privacyFaq": "Mon texte est-il envoyé à un serveur ?",
+    "howToUse": "Comment utiliser les outils ?",
+    "feedbackFaq": "Comment puis-je suggérer un outil ou signaler un problème ?",
+    "yesFree": "Oui. Tous les outils de texte peuvent être utilisés gratuitement depuis le navigateur, sans créer de compte.",
+    "noUpload": "Non. Le texte est compté et transformé dans votre navigateur ; il n'est pas envoyé aux serveurs TextToools pour traitement.",
+    "chooseToolAnswer": "Choisissez un outil sur la page d'accueil. Chaque page comprend des commandes, un guide pratique, des exemples et des réponses aux questions fréquemment posées.",
+    "feedbackAnswer": "Oui. Vous pouvez utiliser les formulaires de contact ou de rapport de problème ; Les messages sont envoyés par e-mail à TextToools afin que nous puissions vous répondre.",
+    "aboutText": "TextToools regroupe des outils de comptage, de nettoyage, de formatage et d'analyse de texte. Chaque outil possède sa propre page et un guide pratique pour vous aider dans les tâches courantes.",
+    "aboutPrivacy": "Le texte est traité dans votre navigateur, sans avoir besoin d'un compte. Le texte que vous saisissez n'est pas envoyé aux serveurs TextToools pour traitement.",
+    "aboutGoal": "Nous voulons que les tâches quotidiennes avec du texte soient simples, claires et fiables. Vous pouvez partager des suggestions en utilisant le formulaire de contact.",
+    "privacyInputHeading": "Texte saisi dans les outils",
+    "privacyInput": "Les transformations et les calculs sont effectués dans votre navigateur. Le texte que vous saisissez n'est pas envoyé aux serveurs TextToools pour traitement. Lorsque vous supprimez le texte ou fermez la page, l'entrée qui était en mémoire est supprimée.",
+    "privacyFormsHeading": "Formulaires de contact",
+    "privacyForms": "Lorsque vous soumettez un formulaire de contact ou de rapport de problème, votre nom (si vous l'indiquez), votre e-mail de réponse, l'objet, le message, le type de formulaire et le chemin de la page sont envoyés à TextToools. Cloudflare Turnstile vérifie le jeton anti-spam et reçoit votre adresse IP pour la vérifier. Renvoyer remet le message à la boîte aux lettres du projet. Les e-mails livrés y sont conservés en fonction de la configuration de cette boîte aux lettres. Renvoyer indique que son forfait gratuit conserve les données des événements de messagerie pendant les jours 30. N'incluez pas de mots de passe, d'informations de paiement ou de texte privé provenant de documents.",
+    "privacyStorageHeading": "Stockage local et analyses",
+    "privacyStorage": "TextToools n'enregistre pas le texte des outils dans le stockage local et ne nécessite pas de compte. Nous utilisons Cloudflare Web Analytics pour mesurer les visites, les pages vues et les performances de manière agrégée, y compris les Core Web Vitals. Cloudflare indique que Web Analytics ne suit pas les utilisateurs individuels entre les sites des clients et ne collecte ni n'utilise leurs données personnelles. Nous utilisons également Google Analytics 4 (GA4) pour comprendre l'utilisation du site, mais seulement après que vous ayez expressément accepté. Si vous refusez ou ne choisissez pas, la balise GA4 n'est pas chargée et aucune demande n'est envoyée à Google. Avec votre consentement, GA4 enregistre les pages vues, le début d'utilisation des outils et les actions de copie ou de téléchargement. Votre choix est enregistré dans le stockage local de ce navigateur et vous pouvez le modifier à tout moment dans les Paramètres de confidentialité. GA4 ne reçoit jamais le texte saisi dans les outils, les recherches, les valeurs de remplacement ou les résultats générés ; tout le traitement de texte est effectué dans votre navigateur.",
+    "privacySettings": "Param?tres de confidentialit?",
+    "analyticsConsentBody": "Cloudflare Web Analytics restera actif pour mesurer le trafic et les performances sur une base globale. Google Analytics 4 n'est téléchargé que si vous donnez votre consentement exprès ; Si vous refusez ou ne faites pas de choix, aucune demande GA4 n'est envoyée à Google. Après acceptation, GA4 enregistre les pages consultées, les débuts d'utilisation des outils et les actions de copie ou de téléchargement, mais jamais le texte que vous saisissez. Votre choix est enregistré dans ce navigateur et vous pouvez le modifier à tout moment depuis les paramètres de confidentialité.",
+    "termsUsageHeading": "Utilisation des outils",
+    "termsUsage": "TextToools fournit des outils intégrés au navigateur pour les informations générales et les tâches de productivité. C'est à vous d'examiner les résultats et de décider s'ils correspondent à vos besoins. N'utilisez pas un outil comme substitut à l'avis d'un professionnel ou aux règles et limites de la plateforme cible.",
+    "termsAvailabilityHeading": "Disponibilité et modifications",
+    "termsAvailability": "Les fonctionnalités peuvent changer à mesure que nous améliorons le site. Nous ne garantissons pas que le service sera toujours disponible, sans erreur ou adapté à un usage particulier. Conservez une copie des textes importants et examinez les téléchargements avant de les utiliser.",
+    "termsContactHeading": "Contacter",
+    "termsContact": "Si vous avez des questions sur ces conditions, veuillez utiliser la page de contact. Avant de publier le site, une personne familière avec l'entreprise et les lois applicables doit lire ces conditions dans un langage simple.",
+    "contactIntro": "Envoyez-nous des questions, des suggestions ou des commentaires. Votre email ne servira qu'à vous répondre et ne sera pas affiché publiquement.",
+    "bugIntro": "Dites-nous ce qui s'est passé, ce que vous attendiez et quel outil vous utilisiez. N'incluez pas d'informations sensibles dans vos documents.",
+    "name": "Nom",
+    "optional": "En option",
+    "email": "Adresse e-mail de r?ponse",
+    "subject": "Message",
+    "message": "Message",
+    "sending": "Envoi…",
+    "sent": "Merci. Votre message a été envoyé.",
+    "sendFailed": "Le message n'a pas pu être envoyé. Veuillez réessayer plus tard.",
+    "formNotConfigured": "Le service de messagerie n'est pas configuré. Les informations que vous saisissez ici ne seront ni envoyées ni enregistrées.",
+    "submissionNotice": "Lors de la soumission, votre nom, votre e-mail de réponse et votre message seront envoyés à TextToools via un fournisseur de messagerie afin que nous puissions vous répondre. N’incluez pas d’informations sensibles.",
+    "challengeUnavailable": "La vérification anti-spam n’est pas disponible. Veuillez réessayer plus tard.",
+    "sendMessage": "Envoyer un message",
+    "lastUpdated": "Dernière mise à jour :",
+    "articleDate": "Publié :"
+  },
+  "inline": {
+    "Bug report": "Signaler un problème",
+    "wpm": "mots par minute",
+    "Main navigation": "Navigation principale",
+    "TextToools home": "Accueil de TextToools",
+    "Page not found": "Nous n'avons pas trouvé cette page",
+    "This address does not exist or may have moved.": "Cette adresse n'existe pas ou a peut-être déménagé.",
+    "Go to homepage": "Aller en haut",
+    "Browse tools": "Afficher les outils",
+    "Copy the output content": "Copier le résultat",
+    "Download the output content": "Télécharger le résultat",
+    "Estimated reading time": "Temps de lecture estim?",
+    "Featured guide": "Guide ? la une",
+    "Updated:": "Mise à jour :",
+    "Read guide": "Lire le guide",
+    "More practical guides": "Autres guides pratiques",
+    "guide": "OUTIL",
+    "tool": "outil",
+    "Breadcrumb": "Chemin de navigation",
+    "word": "mot",
+    "words": "mots",
+    "Related tools": "Outils associés",
+    "Use a related text tool": "Utiliser un autre outil de texte",
+    "Sources and further reading": "Sources et lectures recommandées",
+    "All guides": "Tous les guides",
+    "English": "Anglais",
+    "简体中文": "Chinois simplifi?",
+    "Español": "Espagnol",
+    "Google Analytics choice": "Choix de Google Analytics",
+    "Privacy policy": "Politique de confidentialité",
+    "Reject Google Analytics": "Rejeter Google Analytics",
+    "Accept Google Analytics": "OK Google Analytics",
+    "Close": "Fermer",
+    "Learn how Cloudflare Web Analytics handles data.": "Découvrez comment Cloudflare Web Analytics gère les données.",
+    "Learn how Google handles data.": "Découvrez comment Google traite les données."
+  },
+  "tools": {
+    "word-counter": {
+      "name": "Compteur de mots",
+      "description": "Compte instantanément les mots, les caractères, les phrases et les paragraphes.",
+      "title": "Compteur de mots en ligne gratuit | TextToools",
+      "meta": "Comptez les mots, les caractères, les phrases et les paragraphes avec ce compteur gratuit intégré au navigateur. Votre texte reste sur votre appareil.",
+      "heading": "Compteur de mots en ligne gratuit",
+      "intro": "Vérifie si un texte respecte une limite sans compter manuellement. Le nombre total de mots, caractères, phrases et paragraphes est mis à jour au fur et à mesure que vous tapez.",
+      "sections": [
+        {
+          "heading": "Comment compter les mots",
+          "paragraphs": [
+            "Chaque groupe de caractères séparés par des espaces compte pour un mot. La ponctuation à côté d’un mot reste dans le même groupe et les mots coupés sans espaces comptent pour un. Un saut de ligne ou un autre espace blanc sépare les groupes.",
+            "Par exemple, « Un brouillon court et bien réalisé ». contient six mots selon cette règle. D'autres applications peuvent gérer les mots avec trait d'union différemment ; Si vous avez une limite stricte, utilisez le guichet indiqué par la plateforme de livraison."
+          ]
+        },
+        {
+          "heading": "Signification des autres chiffres",
+          "paragraphs": [
+            "Le nombre total de caractères inclut les espaces et la ponctuation. Le comptage sans blancs exclut les espaces, les tabulations et les sauts de ligne. Les phrases suivent les règles de segmentation du navigateur et les paragraphes sont séparés par des lignes vides.",
+            "Pour estimer le temps de lecture et régler la vitesse, utilisez le calculateur de temps de lecture."
+          ]
+        },
+        {
+          "heading": "Vérifier une limite de mots",
+          "paragraphs": [
+            "Collez l'intégralité du texte et incluez des titres, des notes ou des références s'ils comptent dans votre limite. Comparez le total mis à jour avec les instructions et vérifiez à nouveau après l'édition. Les boutons Copier et Télécharger exportent les statistiques récapitulatives, pas le texte original."
+          ],
+          "bullets": [
+            "Vérifie si les instructions incluent des notes de bas de page, des références ou des titres.",
+            "Les limites des médias sociaux peuvent changer ; vérifiez les règles en vigueur pour chaque plateforme.",
+            "Pour estimer la durée d'un discours, répétez-le à voix haute en plus d'utiliser le temps de lecture."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Le compteur envoie-t-il mon texte à un serveur ?",
+          "answer": "Non. Le décompte est calculé dans votre navigateur et le texte n'est pas téléchargé pour traitement."
+        },
+        {
+          "question": "Pourquoi une autre application affiche-t-elle un total différent ?",
+          "answer": "Les règles varient, notamment en ce qui concerne les mots avec trait d'union, les symboles et la ponctuation. TextToools sépare les mots par des espaces."
+        },
+        {
+          "question": "Copier copie-t-il le texte original ?",
+          "answer": "Dans le compteur de mots, Copier et Télécharger exportent les statistiques récapitulatives, pas le texte original."
+        }
+      ]
+    },
+    "character-counter": {
+      "name": "Compteur de caractères",
+      "description": "Compte les caractères, les espaces, les lignes et les mots.",
+      "title": "Compteur de caractères en ligne gratuit | TextToools",
+      "meta": "Compte les caractères, les espaces, la ponctuation, les sauts de ligne, les lignes et les mots du navigateur.",
+      "heading": "Compteur de caractères en ligne gratuit",
+      "intro": "Vérifie la longueur d'un titre, d'une description, d'un message ou d'une réponse de formulaire. Le décompte est mis à jour au fur et à mesure que vous tapez.",
+      "sections": [
+        {
+          "heading": "Ce que comprend le décompte",
+          "paragraphs": [
+            "Le total inclut tous les caractères : espaces, ponctuation, tabulations et sauts de ligne. Compter sans espaces exclut tous ces espaces, pas seulement ceux qui séparent les mots.",
+            "TextToools compte les groupes de graphèmes Unicode : une lettre visible, un accent combiné ou une séquence d'émojis liés comptent pour un caractère. D'autres services peuvent appliquer des règles différentes."
+          ]
+        },
+        {
+          "heading": "Lignes et mots",
+          "paragraphs": [
+            "Chaque saut de ligne sépare les lignes ; une ligne vide entre les paragraphes compte également. Une entrée vide n'a aucune ligne et un saut de fin crée une dernière ligne vide. Les mots sont séparés par des espaces blancs."
+          ],
+          "example": {
+            "input": "Bonjour !\nTout va bien",
+            "output": "16 caractères 14 sans espaces 2 lignes 3 mots"
+          }
+        },
+        {
+          "heading": "Utiliser avec une limite de caractères",
+          "paragraphs": [
+            "Collez exactement le texte que vous allez envoyer. Inclut les espaces, la ponctuation et les sauts de ligne si la destination les inclut. Si vous le pouvez, laissez un peu de place car certaines plateformes traitent différemment les liens, les emojis ou le formatage."
+          ],
+          "bullets": [
+            "Veuillez vérifier les règles actuelles de la plateforme avant de raccourcir une publication.",
+            "Dans un formulaire, collez uniquement le contenu qui ira dans ce champ.",
+            "Utilisez le nombre sans espaces uniquement si la limite exclut les espaces."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Les espaces et les signes de ponctuation sont-ils comptés ?",
+          "answer": "Oui. Le total comprend les espaces, la ponctuation, les tabulations et les sauts de ligne."
+        },
+        {
+          "question": "« Aucun espace » supprime-t-il également les sauts de ligne ?",
+          "answer": "Oui. Supprime tous les espaces, y compris les espaces, les tabulations et les sauts de ligne."
+        },
+        {
+          "question": "Comment les emojis sont-ils comptés ?",
+          "answer": "Une séquence d'emoji visible, même si elle est liée ou inclut un teint, compte comme un groupe de graphèmes. D'autres services peuvent appliquer des règles différentes."
+        }
+      ]
+    },
+    "case-converter": {
+      "name": "Convertisseur majuscules et minuscules",
+      "description": "Modifiez la majuscule sans retaper le texte.",
+      "title": "Convertisseur de majuscules et de minuscules en ligne | TextToools",
+      "meta": "Convertit le texte en majuscules, minuscules, format de titre, phrase, camelCase ou Snake_case.",
+      "heading": "Convertisseur majuscules et minuscules",
+      "intro": "Modifiez la majuscule sans saisir à nouveau. Choisissez le format dont vous avez besoin et vérifiez le résultat instantanément.",
+      "sections": [
+        {
+          "heading": "Choisissez le format",
+          "paragraphs": [
+            "UPPERCASE convertit les lettres en majuscules et les minuscules les convertit en minuscules. Le formatage du titre met en majuscule la première lettre de chaque mot, et le formatage des phrases met en majuscule le début du texte et des phrases.",
+            "camelCase et Snake_case sont utilisés pour les identifiants. Ils séparent chaque ligne en groupes de lettres ou de chiffres ; camelCase les rejoint et Snake_case les sépare par des traits de soulignement."
+          ],
+          "bullets": [
+            "Titre : « une matinée tranquille » → « Une matinée tranquille »",
+            "camelCase : « action rapide » → « action rapide »",
+            "Snake_case : « action rapide » → « quick_action »"
+          ]
+        },
+        {
+          "heading": "Conservez le format d'origine lorsque cela est possible",
+          "paragraphs": [
+            "préservent les espaces et les sauts de ligne dans le texte. Les accents sont conservés. Les lignes vides restent vides."
+          ]
+        },
+        {
+          "heading": "Vérifier le résultat",
+          "paragraphs": [
+            "La conversion modifie les majuscules, mais ne corrige pas l'orthographe ou la grammaire. Vérifiez les noms propres, les acronymes et l'utilisation des accents avant d'utiliser le texte."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Puis-je convertir plusieurs lignes à la fois ?",
+          "answer": "Oui. Collez tout le texte et la conversion sera appliquée ligne par ligne."
+        },
+        {
+          "question": "Les accents sont-ils conservés ?",
+          "answer": "Oui. Les lettres accentuées et autres caractères Unicode sont conservés."
+        },
+        {
+          "question": "La conversion corrige-t-elle la grammaire ?",
+          "answer": "Non. Seuls les changements de majuscules ; révisez le texte séparément."
+        }
+      ]
+    },
+    "text-cleaner": {
+      "name": "Nettoyeur de texte",
+      "description": "Supprime les espaces répétés et les lignes vides supplémentaires.",
+      "title": "Nettoyeur de texte en ligne gratuit | TextToools",
+      "meta": "Nettoie le texte collé en supprimant les espaces répétés et les lignes vides, avec un aperçu immédiat.",
+      "heading": "Nettoyeur de texte en ligne gratuit",
+      "intro": "Trie le texte copié sans le retaper. Choisissez les espaces et lignes vides que vous souhaitez nettoyer et examinez le résultat.",
+      "sections": [
+        {
+          "heading": "Choisissez les espaces à nettoyer",
+          "paragraphs": [
+            "Vous pouvez supprimer des espaces au début et à la fin de chaque ligne, réduire les espaces répétés et supprimer les lignes vides supplémentaires. Chaque option peut être activée séparément."
+          ]
+        },
+        {
+          "heading": "Préserver les sauts de ligne importants",
+          "paragraphs": [
+            "Les sauts de ligne peuvent séparer les titres, les listes, les adresses et les paragraphes. Vérifiez l'aperçu pour vous assurer que le résultat conserve la structure dont vous avez besoin."
+          ]
+        },
+        {
+          "heading": "Vérifier avant de copier",
+          "paragraphs": [
+            "Le nettoyage est automatique et ne peut pas savoir quels espaces étaient intentionnels. Comparez le résultat avec l'original, surtout s'il contient des listes numérotées, du code ou des tableaux. Le traitement a lieu dans votre navigateur."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Le sens du texte a-t-il changé ?",
+          "answer": "L'outil modifie les espaces, pas les mots ; Vérifiez quand même le résultat car les sauts peuvent avoir un sens."
+        },
+        {
+          "question": "Puis-je conserver les sauts de ligne ?",
+          "answer": "Oui. Les options vous permettent de libérer des espaces sans convertir tout le texte en un seul paragraphe."
+        },
+        {
+          "question": "Le texte est-il téléchargé ?",
+          "answer": "Non. Le nettoyage est effectué dans votre navigateur."
+        }
+      ]
+    },
+    "duplicate-lines": {
+      "name": "Supprimer les lignes en double",
+      "description": "Supprime les lignes répétées et conserve l'ordre d'origine.",
+      "title": "Supprimez gratuitement les lignes en double en ligne | TextToools",
+      "meta": "Supprime les lignes en double d'une liste et conserve l'ordre de première occurrence.",
+      "heading": "Supprimer les lignes en double",
+      "intro": "Collez une liste pour supprimer les lignes identiques. L'ordre dans lequel chaque ligne est apparue pour la première fois est conservé.",
+      "sections": [
+        {
+          "heading": "Comment les doublons sont détectés",
+          "paragraphs": [
+            "Les lignes dont le contenu est exactement le même sont considérées comme des doublons. Les différences entre les majuscules et les minuscules sont conservées, donc \"Texte\" et \"texte\" sont des lignes différentes."
+          ]
+        },
+        {
+          "heading": "Qu'arrive-t-il aux lignes vides",
+          "paragraphs": [
+            "S'il y a des lignes vides répétées, une seule est conservée. Les lignes simples restent dans leur position d'origine."
+          ]
+        },
+        {
+          "heading": "Vérifier le résultat",
+          "paragraphs": [
+            "L'outil ne trie ni ne réécrit les lignes. Examinez les données avant de remplacer la liste d'origine, surtout si les espaces de début ou de fin sont importants."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Est-il sensible à la casse ?",
+          "answer": "Oui. Seules les lignes exactement identiques sont supprimées."
+        },
+        {
+          "question": "Les lignes sont-elles ordonnées ?",
+          "answer": "Non. L’ordre de première comparution est conservé."
+        },
+        {
+          "question": "Les lignes vides sont-elles supprimées ?",
+          "answer": "Au maximum une ligne vide est conservée."
+        }
+      ]
+    },
+    "text-sorter": {
+      "name": "Trier le texte",
+      "description": "Triez les lignes par ordre alphabétique ou inversez leur ordre.",
+      "title": "Trier le texte en ligne : A-Z ou inversement | TextToools",
+      "meta": "Triez les lignes de texte de A à Z, de Z à A, ou inversez l'ordre d'origine.",
+      "heading": "Trier le texte en ligne",
+      "intro": "Collez un texte organisé par lignes et choisissez l'ordre alphabétique, l'ordre inverse ou l'inversion de l'ordre d'origine.",
+      "sections": [
+        {
+          "heading": "Choisissez comment commander",
+          "paragraphs": [
+            "A-Z et Z-A sont triés par ordre alphabétique sans tenir compte de la casse. Inverser l’ordre change directement la position des lignes. Dans l'ordre numérique naturel, 2 apparaît avant 10."
+          ]
+        },
+        {
+          "heading": "Traitement des lignes vides",
+          "paragraphs": [
+            "Par défaut, les lignes vides sont conservées lors du tri. Activez l'option pour les supprimer du résultat."
+          ]
+        },
+        {
+          "heading": "Vérifier la commande finale",
+          "paragraphs": [
+            "L'outil déplace des lignes entières et ne modifie pas leur contenu. Vérifie le résultat si les lignes ont des numéros, une indentation ou appartiennent à des groupes."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Le tri est-il sensible à la casse ?",
+          "answer": "Non. L’ordre alphabétique n’est pas sensible à la casse."
+        },
+        {
+          "question": "À quoi sert l’ordre numérique naturel ?",
+          "answer": "Trie les nombres par valeur : par exemple, 2 apparaît avant 10."
+        },
+        {
+          "question": "Puis-je supprimer les lignes vides ?",
+          "answer": "Oui. Activez l'option pour les supprimer du résultat."
+        }
+      ]
+    },
+    "find-replace": {
+      "name": "Rechercher et remplacer",
+      "description": "Recherche du texte et remplace toutes les correspondances.",
+      "title": "Rechercher et remplacer du texte en ligne gratuitement | TextToools",
+      "meta": "Recherchez et remplacez du texte à partir du navigateur, avec des options de recherche sensible à la casse et par mot entier.",
+      "heading": "Rechercher et remplacer du texte",
+      "intro": "Met à jour le texte répété en une seule étape. Tapez ce que vous souhaitez rechercher et le remplacement pour voir les modifications instantanément.",
+      "sections": [
+        {
+          "heading": "Configurer la recherche",
+          "paragraphs": [
+            "Par défaut, la recherche ne respecte pas la casse et remplace toutes les correspondances. Activez cette option pour exiger la même combinaison de majuscules, ou recherchez le mot entier pour ne pas modifier certaines parties de mots plus longs."
+          ]
+        },
+        {
+          "heading": "Aperçu des remplacements",
+          "paragraphs": [
+            "Le nombre de correspondances est mis à jour lorsque vous tapez et le résultat apparaît dans l'aperçu. Si le texte recherché est vide, aucun remplacement n'est effectué."
+          ]
+        },
+        {
+          "heading": "Vérifier avant d'appliquer le résultat",
+          "paragraphs": [
+            "Un remplacement groupé peut modifier les noms, les liens ou le code. Vérifiez le contexte avant d'utiliser le résultat, surtout si vous recherchez un mot court ou fréquent."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Toutes les correspondances sont-elles remplacées ?",
+          "answer": "Oui. Le résultat inclut toutes les correspondances qui répondent aux options choisies."
+        },
+        {
+          "question": "Puis-je être sensible à la casse ?",
+          "answer": "Oui. Activez cette option pour qu'elle corresponde exactement."
+        },
+        {
+          "question": "Que se passe-t-il si je laisse la recherche vide ?",
+          "answer": "Aucun remplacement n'est effectué."
+        }
+      ]
+    },
+    "lorem-ipsum": {
+      "name": "Lorem Ipsum",
+      "description": "Génère un texte factice pour les conceptions et les prototypes.",
+      "title": "Générateur Lorem Ipsum gratuit | TextToools",
+      "meta": "Générez du texte Lorem Ipsum de remplissage et personnalisez le nombre de paragraphes et de phrases.",
+      "heading": "Lorem Ipsum",
+      "intro": "Créez un texte de remplissage pour les prototypes, les pages et les mises en page. Ajustez le nombre de paragraphes et de phrases.",
+      "sections": [
+        {
+          "heading": "Personnaliser la longueur",
+          "paragraphs": [
+            "Choisissez le nombre de paragraphes et de phrases que vous souhaitez générer. Chaque paramètre prend en charge les valeurs de 1 à 10."
+          ]
+        },
+        {
+          "heading": "À quoi sert le texte Lorem Ipsum",
+          "paragraphs": [
+            "permet de prévisualiser la mise en page et la densité du contenu lors de la mise en page. Ne représente pas le contenu réel : veuillez le remplacer par un texte précis qui a été révisé avant la publication."
+          ]
+        },
+        {
+          "heading": "Copier ou télécharger le résultat",
+          "paragraphs": [
+            "Le texte est généré instantanément. Utilisez les boutons pour le copier ou le télécharger et vérifier les sauts de ligne et l'espacement dans votre conception."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Combien de paragraphes puis-je générer ?",
+          "answer": "Vous pouvez choisir entre les paragraphes 1 et 10 et entre les phrases 1 et 10 par paragraphe."
+        },
+        {
+          "question": "Le texte généré est-il un contenu réel ?",
+          "answer": "Non. Il s’agit d’un texte de remplissage permettant de prévisualiser les conceptions et non de remplacer le contenu final."
+        },
+        {
+          "question": "Puis-je copier le texte généré ?",
+          "answer": "Oui. Utilisez le bouton Copier qui apparaît au-dessus du résultat."
+        }
+      ]
+    },
+    "reading-time": {
+      "name": "Calculateur de temps de lecture",
+      "description": "Calculez le temps qu'il faut pour lire un texte.",
+      "title": "Calculateur de temps de lecture gratuit | TextToools",
+      "meta": "Calcule le temps de lecture approximatif en fonction du nombre de mots et d'une vitesse réglable.",
+      "heading": "Calculateur de temps de lecture",
+      "intro": "Collez le texte et ajustez le nombre de mots par minute pour estimer le temps de lecture.",
+      "sections": [
+        {
+          "heading": "Comment le temps est calculé",
+          "paragraphs": [
+            "Le temps estimé est calculé en divisant le nombre de mots par la vitesse de lecture. La vitesse initiale est de 200 mots par minute et peut être ajustée entre 100 et 500."
+          ]
+        },
+        {
+          "heading": "Limites d’estimation",
+          "paragraphs": [
+            "La vitesse change en fonction de la personne, de la langue et de la difficulté du texte. Les pauses, les graphiques et la lecture à haute voix peuvent également augmenter le temps ; Le résultat est indicatif."
+          ]
+        },
+        {
+          "heading": "Planifier un texte ou une présentation",
+          "paragraphs": [
+            "Collez l'intégralité du texte et choisissez une vitesse adaptée à votre public. Pour une présentation, répétez à voix haute et comptez vos pauses au lieu de vous fier uniquement au calcul."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Puis-je modifier la vitesse de lecture ?",
+          "answer": "Oui. Le contrôle vous permet de choisir entre 100 et 500 mots par minute."
+        },
+        {
+          "question": "Le résultat est-il exact ?",
+          "answer": "Il s'agit d'une estimation basée sur le nombre de mots et la vitesse choisie ; le temps réel varie."
+        },
+        {
+          "question": "Le texte est-il envoyé à un serveur ?",
+          "answer": "Non, le calcul s'effectue dans votre navigateur."
+        }
+      ]
+    },
+    "keyword-density": {
+      "name": "Analyseur de fréquence de mots",
+      "description": "Découvrez quels mots apparaissent le plus souvent dans un texte.",
+      "title": "Analyseur de fréquence de mots en ligne | TextToools",
+      "meta": "Analysez les mots les plus fréquents d'un texte, avec leur quantité et leur pourcentage.",
+      "heading": "Analyseur de fréquence de mots",
+      "intro": "Découvrez quels mots apparaissent le plus. L'outil affiche jusqu'à dix mots et leur pourcentage.",
+      "sections": [
+        {
+          "heading": "Comment la fréquence est calculée",
+          "paragraphs": [
+            "L'analyse ne respecte pas la casse et reconnaît les lettres et les chiffres Unicode. Les mots espagnols courants sont exclus de la liste présentée, mais sont toujours inclus dans le total."
+          ]
+        },
+        {
+          "heading": "Utiliser le résultat comme aide à l'édition",
+          "paragraphs": [
+            "Un mot fréquent n'est pas toujours un problème : les noms propres et les termes principaux sont souvent répétés. L'outil ne prédit pas les positions dans les moteurs de recherche et ne recommande pas une densité de mots clés fixe."
+          ]
+        },
+        {
+          "heading": "Veuillez noter la langue",
+          "paragraphs": [
+            "La liste des mots courants est destinée à l'espagnol et à l'anglais. Lors de l’analyse d’une autre langue, certains mots courants peuvent apparaître dans les résultats. L'analyse est effectuée dans votre navigateur."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Pourquoi les pourcentages ne totalisent-ils pas 100 % ?",
+          "answer": "Les mots courants sont masqués de la liste, mais sont inclus dans le total utilisé pour calculer les pourcentages."
+        },
+        {
+          "question": "Une fréquence plus élevée améliore-t-elle le positionnement ?",
+          "answer": "L'outil n'évalue pas le positionnement dans les moteurs de recherche ni ne recommande une densité de mots clés."
+        },
+        {
+          "question": "Puis-je analyser d’autres langues ?",
+          "answer": "Oui, même si la liste des mots courants est préparée pour l'espagnol et l'anglais."
+        }
+      ]
+    }
+  },
+  "blog": {
+    "title": "Guides textuels pratiques | Le blog de TextToools",
+    "description": "Guides pratiques sur le comptage de mots et de caractères, le nettoyage de texte et l'écriture.",
+    "intro": "Des guides clairs et pratiques pour comprendre les décomptes, organiser le contenu et mieux travailler avec le texte.",
+    "posts": {
+      "what-does-lorem-ipsum-mean": {
+        "image": "blog-images/lorem-ipsum-meaning.svg",
+        "imageAlt": "Lorem Ipsum comme texte de remplissage, avec une note sur son origine latine et son histoire de conception.",
+        "title": "Que signifie Lorem Ipsum ? Son origine et son histoire | TextToools",
+        "description": "Découvrez ce que signifie le texte bien connu Lorem Ipsum, d'où il vient et pourquoi il est utilisé comme texte de remplissage dans la conception.",
+        "summary": "Lorem Ipsum est un latin modifié utilisé comme texte de remplissage. Le passage connu vient de Cicéron, mais ce n’est pas une phrase cohérente et traduisible.",
+        "sections": [
+          {
+            "heading": "Qu'est-ce que Lorem Ipsum ?",
+            "paragraphs": [
+              "Lorem Ipsum est un texte temporaire, ou de remplissage, utilisé dans la composition et la conception lorsque le texte est nécessaire pour une mise en page avant que le contenu final ne soit disponible. Vous permet de prévisualiser la forme et la densité des paragraphes sans les confondre avec le texte approuvé.",
+              "Ce n'est pas une instruction spéciale ni son propre langage. Le passage connu est du latin modifié provenant d’une source ancienne."
+            ]
+          },
+          {
+            "heading": "Lorem Ipsum a-t-il une signification ?",
+            "paragraphs": [
+              "Le passage standard de Lorem Ipsum n'est pas une phrase latine cohérente pouvant être traduite dans son ensemble. Son début a été modifié à partir d'une phrase de Cicéron : le célèbre « lorem » est une forme abrégée de « dolorem », qui dans son contexte original signifie « douleur ».",
+              "Le passage original traite de la douleur et du plaisir. Cela ne transforme pas un texte de remplissage moderne en contenu significatif : les mots ont été modifiés et réorganisés, ils doivent donc être traités comme un texte provisoire, et non comme une citation ou une traduction."
+            ]
+          },
+          {
+            "heading": "D'où vient le texte ?",
+            "paragraphs": [
+              "La source est l'ouvrage philosophique de Cicéron *De finibus bonorum et malorum*, écrit en l'année 45 av. C. Le passage connu de Lorem Ipsum est basé sur les sections 1.10.32 et 1.10.33 ; le texte habituel est une version modifiée et non un extrait littéral.",
+              "La connexion a été identifiée en faisant remonter le mot latin inhabituel « consectetur » dans des exemples imprimés au texte de Cicéron. L'âge du passage et son utilisation ultérieure comme remplissage sont deux parties différentes de son histoire."
+            ]
+          },
+          {
+            "heading": "Comment Lorem Ipsum est-il devenu populaire ?",
+            "paragraphs": [
+              "Lorem Ipsum s'est répandu dans le design moderne grâce aux feuilles de transfert Letraset des années soixante, qui comprenaient des passages d'échantillons pour les modèles. Les logiciels de publication assistée par ordinateur l'ont ensuite étendu à la conception de pages numériques.",
+              "Sa longue histoire explique pourquoi le même début apparaît dans tant de modèles. Cela ne signifie pas que tous les textes Lorem Ipsum générés sont identiques : les générateurs peuvent faire varier les mots et la longueur."
+            ]
+          },
+          {
+            "heading": "Quand le texte de remplissage est-il utile ?",
+            "paragraphs": [
+              "Dans une maquette initiale filaire ou visuelle, le texte provisoire peut afficher la densité des paragraphes, les sauts de ligne et l'équilibre entre les éléments pendant la rédaction du contenu final.",
+              "Choisissez une longueur et une structure similaires à celles du contenu final. Un court paragraphe latin ne remplace pas un titre long, une balise localisée ou un véritable contenu structuré."
+            ]
+          },
+          {
+            "heading": "Quand devez-vous le remplacer ?",
+            "paragraphs": [
+              "Remplacez Lorem Ipsum par un texte réel ou représentatif avant les tests d'utilisabilité, la révision du contenu ou la publication. Nielsen Norman Group explique qu'un remplissage inconsidéré peut distraire les participants d'un test et masquer les exigences de contenu ou les problèmes de conception.",
+              "N'utilisez pas de texte de remplissage comme seule étiquette ou instruction pour un champ. Les WCAG nécessitent des étiquettes ou des instructions lorsqu'un contrôle attend des données ; Fournissez des informations claires que les gens peuvent utiliser."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je considère Lorem Ipsum comme une aide temporaire à la mise en page, et non comme un raccourci vers le contenu final. Un texte réaliste modifie souvent la longueur et la signification d'une page. Je recommande donc de remplacer le remplissage avant de demander à quelqu'un de réviser ou d'utiliser une mise en page."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lorem ipsum",
+            "publisher": "Encyclopédie britannique",
+            "url": "https://www.britannica.com/topic/Lorem-ipsum"
+          },
+          {
+            "title": "Qu’est-ce que le Lorem Ipsum ?",
+            "publisher": "Lorem Ipsum",
+            "url": "https://www.lipsum.com/"
+          },
+          {
+            "title": "Promptframes : faire évoluer le wireframe à l’ère de l’IA",
+            "publisher": "Groupe Nielsen Norman",
+            "url": "https://www.nngroup.com/articles/promptframes/"
+          },
+          {
+            "title": "Comprendre le critère de réussite 3.3.2 : étiquettes ou instructions",
+            "publisher": "Initiative d'accessibilité du Web du W3C",
+            "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html"
+          }
+        ]
+      },
+      "microsoft-word-character-count": {
+        "image": "blog-images/word-character-count.svg",
+        "imageAlt": "Nombre de caractères dans Microsoft Word pour un document et un fragment sélectionné ; pensez à vérifier les espaces.",
+        "title": "Comment compter les caractères dans Microsoft Word (document ou sélection) | TextToools",
+        "description": "Affichez le nombre de caractères dans Word, examinez un fragment sélectionné et comprenez pourquoi le total peut différer d'une limite.",
+        "summary": "Utilisez la barre d'état et la zone Nombre de mots dans Word pour vérifier les caractères d'un document ou d'une sélection. Confirmez la portée et si la limite inclut des espaces.",
+        "sections": [
+          {
+            "heading": "Rechercher le nombre de caractères dans Word",
+            "paragraphs": [
+              "Ouvrez le document et recherchez le nombre de mots dans la barre d'état de Word, généralement en bas de la fenêtre. Cliquez sur le nombre pour ouvrir le graphique détaillé.",
+              "Les conseils de Microsoft indiquent que cette vue inclut des caractères en plus des mots, des pages, des paragraphes et des lignes. Les contrôles exacts peuvent varier en fonction de la version de Word."
+            ]
+          },
+          {
+            "heading": "Compter une sélection au lieu du document entier",
+            "paragraphs": [
+              "Sélectionnez la phrase, le paragraphe ou tout autre fragment que vous souhaitez mesurer avant d'ouvrir Word Count. Word peut afficher le nombre de textes sélectionnés à côté du total du document.",
+              "Vérifie les limites de la sélection. Un espace, un signe de ponctuation, un titre ou une ligne à chaque extrémité peut modifier le résultat."
+            ]
+          },
+          {
+            "heading": "Ouvrir le nombre de mots si la barre d'état n'est pas suffisante",
+            "paragraphs": [
+              "Si vous ne voyez pas le nombre dans la barre d’état, recherchez Nombre de mots sous l’onglet Révision dans Word pour ordinateur. Vous pouvez également rechercher cette commande dans l'aide ou le moteur de recherche de l'application si le menu est organisé différemment.",
+              "Pour mesurer un fragment, sélectionnez-le avant d'ouvrir la boîte. Passez en revue les options de portée disponibles dans votre version, en particulier si le document contient des zones de texte, des notes de bas de page ou des notes de fin."
+            ]
+          },
+          {
+            "heading": "Vérifiez ce que signifie votre limite de caractères",
+            "paragraphs": [
+              "Une exigence peut compter les caractères avec des espaces, les exclure ou limiter seulement une partie du document. Veuillez lire les instructions avant de choisir le total ; Les détails affichés par Word peuvent varier selon les versions.",
+              "Pour comparer séparément le total avec et sans espace, collez le fragment exact dans le compteur de caractères de TextToools. Affichez les deux totaux dans le navigateur. Le total \"pas d'espace\" exclut également les tabulations et les sauts de ligne, pas seulement les espaces normaux."
+            ]
+          },
+          {
+            "heading": "Pourquoi deux comptes peuvent différer",
+            "paragraphs": [
+              "Comparez d'abord la portée : un compte peut mesurer une sélection et un autre peut mesurer l'ensemble du document. Vérifiez également si la méthode inclut des zones de texte, des notes, des en-têtes ou tout autre contenu distinct.",
+              "Un compteur de navigateur mesure uniquement le texte que vous collez ; Vous ne pouvez pas interpréter la mise en page de Word ni décider quelles parties le devoir exclut. Si la limite est stricte, suivez les règles du destinataire et vérifiez le texte final dans la demande requise."
+            ]
+          },
+          {
+            "heading": "Examinez le fragment final avant de l'utiliser",
+            "paragraphs": [
+              "Copiez uniquement le texte qui correspond au champ ou à la section que vous soumettez et comparez-le à la limite. Conservez la ponctuation et les espaces tels qu’ils apparaîtront dans la version finale.",
+              "Si la limite est stricte, laissez une petite marge et comptez à nouveau après la dernière modification. Une légère modification d'un titre, d'un espace ou d'un saut de ligne peut affecter le total."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Le nombre de mots est pratique lors de l'édition d'un document ; un compteur séparé peut montrer plus clairement comment il traite les espaces blancs. Je recommande de vérifier la sélection exacte et la règle du destinataire avant de faire confiance à l'un ou l'autre résultat."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Afficher le nombre de mots",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          }
+        ]
+      },
+      "how-to-change-text-case": {
+        "image": "blog-images/text-case-converter.svg",
+        "imageAlt": "Une phrase convertie en majuscules, Title Case, camelCase et Snake_case.",
+        "title": "Comment changer de casse : Title Case, camelCase et plus | TextToools",
+        "description": "Convertissez le texte en majuscules, minuscules, casse de titre, casse de phrase, camelCase ou Snake_case et apprenez ce qu'il faut vérifier avant d'utiliser le résultat.",
+        "summary": "Choisissez un format pour modifier la majuscule sans retaper. Comparez six formats courants, conservez les sauts de ligne le cas échéant et examinez les noms ou les acronymes.",
+        "sections": [
+          {
+            "heading": "Choisissez le format dont vous avez besoin",
+            "paragraphs": [
+              "Un convertisseur de majuscules modifie le formatage des lettres sans avoir à retaper un fragment. Le formatage approprié dépend de l'endroit où vous utiliserez le texte : dans un titre, une phrase ou un identifiant de code.",
+              "Par exemple, « une matinée tranquille » devient « UNE MATINÉE QUIET » en majuscules, « une matinée calme » en minuscules, « Une matinée tranquille » dans la casse du titre, « Une matinée tranquille » dans la casse de la phrase, « aQuietMorning » dans la casse camelCase et « a_quiet_morning » dans la casse_serpent."
+            ]
+          },
+          {
+            "heading": "Majuscules et minuscules",
+            "paragraphs": [
+              "Les lettres majuscules convertissent les lettres en majuscules ; les lettres minuscules deviennent des minuscules. Ces formats sont utilisés pour normaliser les étiquettes ou corriger les majuscules accidentelles.",
+              "Modifiez les lettres de tout le texte, y compris les noms et les abréviations. Vérifiez le résultat si une marque, un acronyme ou un autre terme doit conserver une forme spécifique."
+            ]
+          },
+          {
+            "heading": "La casse du titre n'est pas la même que le style éditorial d'un titre",
+            "paragraphs": [
+              "Dans ce convertisseur, Title Case met en majuscule la première lettre de chaque mot et convertit le reste en minuscules. Par exemple, « Un guide pour une écriture claire » devient « Un guide pour une écriture claire ».",
+              "Chaque éditorial applique des règles différentes aux titres, et certains maintiennent en minuscules des mots courts comme « to ». Ce format n'applique pas de guide éditorial spécifique : ajustez les articles, les prépositions, les noms et les sigles en cas de besoin."
+            ]
+          },
+          {
+            "heading": "transforme tout le fragment",
+            "paragraphs": [
+              "La casse de la phrase convertit le texte en minuscules, puis met en majuscule sa première lettre et la première lettre après un point, un point d'exclamation ou une question suivie d'un espace vide. Par exemple, « bonjour. monde ! » devient « bonjour. Monde!\"",
+              "Il s'agit d'une simple transformation, pas d'un vérificateur grammatical. Il peut modifier les noms propres ou les acronymes et ne déduit pas toutes les limites des phrases après des abréviations ou après un saut de ligne sans ponctuation finale."
+            ]
+          },
+          {
+            "heading": "Utilisez camelCase ou Snake_case pour les identifiants",
+            "paragraphs": [
+              "camelCase supprime les séparateurs et met en majuscule le début de chaque mot suivant : « nom de la tâche rapide » devient « quickTaskName ». Snake_case joint les mots avec des traits de soulignement : « quick_task_name ».",
+              "Ces formats séparent une ligne par des signes de ponctuation et d'autres caractères qui ne sont ni des lettres ni des chiffres. Ils conservent les lettres accentuées. Chaque ligne est traitée séparément, donc une liste multiligne reste une liste."
+            ]
+          },
+          {
+            "heading": "Qu'en est-il des espaces et des sauts de ligne ?",
+            "paragraphs": [
+              "Les majuscules, les minuscules, la casse du titre et la casse de la phrase conservent les espaces et les sauts de ligne d'origine pendant que les lettres changent. camelCase et Snake_case transforment chaque ligne séparément et maintiennent les ruptures entre elles.",
+              "Si les espaces ou l'indentation sont importants dans le code, la poésie ou les données formatées, vérifiez l'aperçu avant de copier. Le convertisseur modifie la majuscule et les séparateurs des identifiants ; il ne nettoie ni ne valide le texte."
+            ]
+          },
+          {
+            "heading": "Vérifiez le texte avant de l'utiliser",
+            "paragraphs": [
+              "Prévisualisez le résultat et vérifiez les noms, les acronymes, les abréviations, la ponctuation et le style requis. Conservez une copie de l'original jusqu'à ce que vous confirmiez que la transformation est correcte.",
+              "Si le document ou la marque suit un guide de capitalisation spécifique, utilisez le convertisseur dans un premier temps, puis appliquez les exceptions nécessaires."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création du convertisseur de majuscules TextToools, j'ai préféré que la casse du titre et la casse de la phrase soient des transformations prévisibles, plutôt que d'essayer de deviner les règles éditoriales ou toutes les limites des phrases. Ainsi les règles sont claires, mais il convient de vérifier les noms et acronymes avant d’utiliser le résultat."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ]
+      },
+      "google-docs-character-count": {
+        "image": "blog-images/google-docs-character-count.svg",
+        "imageAlt": "Google Docs affiche les caractères 13 avec des espaces et 12 sans espaces pour « Hello, world ! ».",
+        "title": "Comment afficher le nombre de caractères dans Google Docs (avec ou sans espaces) | TextToools",
+        "description": "Interroge le nombre de caractères dans Google Docs, compare les totaux avec et sans espaces et compte un fragment ou l'intégralité du document.",
+        "summary": "Ouvrez Outils > Nombre de mots dans Google Docs pour afficher les caractères avec et sans espaces. Sélectionnez un fragment avant si vous souhaitez uniquement raconter cette partie.",
+        "sections": [
+          {
+            "heading": "Le moyen le plus rapide de compter les caractères",
+            "paragraphs": [
+              "Ouvrez le document Google Docs et choisissez Outils > Nombre de mots. Le graphique montre les pages et les mots, ainsi que le nombre de caractères.",
+              "Google Docs sépare les deux totaux : caractères avec espaces et caractères sans espaces. Utilisez celui qui correspond à la limite qui vous est indiquée. Par exemple, « Bonjour tout le monde ! » contient des caractères 13 avec l'espace et 12 sans celui-ci."
+            ]
+          },
+          {
+            "heading": "Compte un fragment et non l'intégralité du document",
+            "paragraphs": [
+              "Pour consulter un paragraphe, un titre ou une section, sélectionnez d'abord ce texte, puis ouvrez Outils > Nombre de mots. Le résultat correspond au fragment sélectionné et non à l'intégralité du document.",
+              "Vérifie les limites de la sélection. Un espace, un saut de ligne ou un signe de ponctuation au début ou à la fin peuvent modifier le total."
+            ]
+          },
+          {
+            "heading": "Afficher le nombre à mesure que vous tapez",
+            "paragraphs": [
+              "Dans la zone de décompte, activez « Afficher le nombre de mots pendant que vous tapez » pour garder un indicateur de mot visible pendant que vous modifiez. C'est pratique si vous avez une limite de mots.",
+              "L'indicateur continu affiche les mots. Pour comparer des caractères avec et sans espaces, rouvrez la zone de décompte complet."
+            ]
+          },
+          {
+            "heading": "Vérifiez ce que comprend le total du document",
+            "paragraphs": [
+              "L'aide Google indique que le nombre total de documents exclut les en-têtes, les pieds de page et les notes de bas de page, sauf si vous sélectionnez une partie du document. Si une tâche ou un éditorial définit une règle spécifique, utilisez cette portée au lieu de supposer que tout ce qui est visible est inclus.",
+              "Pour raconter un fragment, examinez exactement ce que vous avez sélectionné et utilisez le résultat de cette sélection. Si le total requis comprend des notes ou d'autres éléments distincts, confirmez comment le destinataire souhaite les compter."
+            ]
+          },
+          {
+            "heading": "Choisissez le nombre total de caractères correct",
+            "paragraphs": [
+              "Utilisez « caractères avec des espaces » lorsque les espaces comptent dans la limite. Choisissez « caractères sans espaces » uniquement si les instructions excluent expressément les espaces.",
+              "Ne supprimez pas les espaces du document uniquement pour obtenir un nombre plus petit. Cela modifie le texte ; Les deux totaux permettent de mesurer un même fragment avec des règles différentes."
+            ]
+          },
+          {
+            "heading": "Vérifier la version finale avant de la soumettre",
+            "paragraphs": [
+              "Comptez le texte exact que vous allez livrer, confirmez si la limite correspond à l'ensemble du document ou à une section et choisissez le total correspondant avec ou sans espaces. Enregistrez vos modifications et vérifiez à nouveau le décompte.",
+              "Si un formulaire ou un éditorial nécessite son propre compteur de caractères, suivez cette invite. Les outils peuvent appliquer différentes règles aux espaces, aux sauts de ligne ou aux caractères Unicode mixtes."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création du compteur de caractères pour TextToools, j'ai souhaité afficher à la fois le total et le décompte sans espaces, car chaque forme définit ses limites différemment. Je recommande de vérifier la règle exacte et le texte final avant de faire confiance à l'un ou l'autre des nombres."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Compter les mots dans un document",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
+      "remove-duplicate-lines-from-text": {
+        "image": "blog-images/remove-duplicate-lines.svg",
+        "imageAlt": "Une ligne de poire répétée est supprimée, tandis que la pomme et la pomme restent séparées et dans leur ordre d'origine.",
+        "title": "Comment supprimer les lignes en double du texte sans modifier l'ordre | TextToools",
+        "description": "Supprimez les doublons d'une liste de texte tout en préservant la première occurrence et l'ordre, avec des règles claires pour les majuscules, les espaces et les lignes vides.",
+        "summary": "Écrit un élément par ligne. Les doublons exacts sont supprimés, la première occurrence est conservée et les lignes restantes conservent leur ordre.",
+        "sections": [
+          {
+            "heading": "Le moyen rapide de supprimer les lignes en double",
+            "paragraphs": [
+              "Écrit un élément sur chaque ligne et supprime les répétitions exactes tout en préservant la première occurrence. Par exemple, poire, pomme, poire, pomme devient poire, pomme, pomme. L'ordre d'origine des lignes restantes est conservé.",
+              "Nettoie les listes copiées de noms, d'URL, de mots-clés, d'identifiants ou d'autres données textuelles avant de les réutiliser."
+            ]
+          },
+          {
+            "heading": "Qu'est-ce qui est considéré comme un doublon ?",
+            "paragraphs": [
+              "Deux lignes sont des doublons uniquement si leur contenu correspond exactement. Les majuscules et les espaces sont importants : Apple et Apple sont des lignes différentes, tout comme le nom et le nom avec un espace à la fin.",
+              "L'outil ne supprime pas les espaces, ne modifie pas les majuscules, ne corrige pas les erreurs et ne compare pas les éléments identiques. Si vous souhaitez que ces différences soient considérées comme égales, nettoyez ou normalisez d’abord la liste."
+            ]
+          },
+          {
+            "heading": "La première occurrence et sa position sont conservées",
+            "paragraphs": [
+              "Si une ligne exacte apparaît plusieurs fois, la première est conservée et les suivantes sont supprimées. L'outil ne trie pas la liste ; Les éléments uniques conservent l’ordre de leur première apparition.",
+              "Ceci est utile lorsque l'ordre est important, par exemple dans une séquence de tâches ou une liste de noms collectés. Si vous avez besoin d’un ordre alphabétique, faites-le lors d’une étape distincte."
+            ]
+          },
+          {
+            "heading": "Qu'arrive-t-il aux lignes vides",
+            "paragraphs": [
+              "Les lignes vides comptent également comme des lignes. Les répétitions sont réduites à une dans la position de la première. Si vous séparez des sections importantes, conservez une copie de l'original et vérifiez que le résultat conserve la structure dont vous avez besoin.",
+              "Une ligne contenant uniquement des espaces n'est pas la même chose qu'une ligne vide : elle est quand même différente."
+            ]
+          },
+          {
+            "heading": "Préparer la liste avant de supprimer les doublons",
+            "paragraphs": [
+              "Vérifie que chaque élément complet occupe une seule ligne. Si la liste provient d'une feuille de calcul, copiez uniquement la colonne que vous souhaitez purger ; La combinaison de plusieurs colonnes sous forme de texte peut séparer les valeurs appartenant à la même ligne.",
+              "Si les majuscules ou les espaces supplémentaires ne doivent pas distinguer les éléments, normalisez-les d'abord avec votre éditeur ou un outil de nettoyage de texte. Enregistre une copie intacte lorsque vous importez la commande ou le format d'origine."
+            ]
+          },
+          {
+            "heading": "Vérifier le résultat avant de le réutiliser",
+            "paragraphs": [
+              "L'outil supprime uniquement les répétitions exactes suivantes. Il ne combine pas des variantes similaires, ne valide pas les adresses ou les identifiants, ne corrige pas les fautes de frappe ou ne détermine pas si deux noms différents appartiennent à la même personne.",
+              "Vérifiez certaines lignes au début et à la fin, surtout si la liste sera utilisée pour importer des données, gérer des contacts ou alimenter un autre système."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création de l'outil de suppression des doublons, je souhaitais conserver la première correspondance exacte et conserver l'ordre d'origine. Ainsi le résultat est prévisible, mais une majuscule ou un espace peut rendre deux éléments différents ; C'est pourquoi je recommande de revoir la règle avant de réutiliser la liste."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ]
+      },
+      "microsoft-word-word-count": {
+        "image": "blog-images/word-word-count.svg",
+        "imageAlt": "Microsoft Word affiche les mots 1.247 dans le document et 82 dans le fragment sélectionné.",
+        "title": "Comment afficher le nombre de mots dans Microsoft Word (document ou sélection) | TextToools",
+        "description": "Affichez le nombre de mots dans Word pour ordinateur ou Web, comptez le texte sélectionné et vérifiez la portée avant de livrer ou de publier.",
+        "summary": "Utilisez la barre d'état ou Révision > Nombre de mots pour afficher le total du document. Sélectionnez un morceau pour ne compter que cette partie et vérifiez la portée si vous avez une limite stricte.",
+        "sections": [
+          {
+            "heading": "Le moyen le plus rapide de voir le décompte",
+            "paragraphs": [
+              "Ouvrez le document à l'adresse Microsoft Word et recherchez le nombre de mots dans la barre d'état, généralement en bas de la fenêtre. Il se met à jour au fur et à mesure que vous modifiez, afin que vous puissiez réviser un brouillon sans compter manuellement.",
+              "Si le nombre n'apparaît pas, ouvrez l'onglet Révision et choisissez Nombre de mots. Le nom et l'emplacement du menu peuvent varier légèrement selon la version de Word."
+            ]
+          },
+          {
+            "heading": "Ne compte qu'un seul paragraphe ou sélection",
+            "paragraphs": [
+              "Sélectionnez le fragment que vous souhaitez mesurer. Word affiche le nombre de mots dans la sélection et le total dans le document ; Ceci est utile pour vérifier une section, un résumé ou une réponse par rapport à sa propre limite.",
+              "Assurez-vous que la sélection commence et se termine là où elle doit être. Omettre un titre, une citation ou la dernière phrase peut modifier le résultat."
+            ]
+          },
+          {
+            "heading": "Ouvrir la boîte de comptage détaillé",
+            "paragraphs": [
+              "Cliquez sur le nombre de mots dans la barre d'état pour voir plus de détails. Le guide Word de Microsoft répertorie les mots, les pages, les caractères, les paragraphes et les lignes. Il peut être utile que les instructions spécifient plus qu'une simple limite de mots.",
+              "Si vous utilisez la commande Nombre de mots dans l'onglet Révision, vérifiez les options de votre version de Word et appliquez la portée demandée par les instructions ou par l'éditeur."
+            ]
+          },
+          {
+            "heading": "Word pour le Web et le bureau Word",
+            "paragraphs": [
+              "Word pour le Web affiche également le décompte pendant que vous modifiez et vous permet de sélectionner du texte pour vérifier un décompte partiel. Les commandes peuvent être différentes de celles de l'application de bureau.",
+              "Pour une livraison formelle, vérifier le document final dans la version de Word indiquée dans les instructions. Si la limite dépend des notes de bas de page, des notes de fin, des légendes d'images ou de tout autre contenu distinct, confirmez la manière dont il doit être traité plutôt que de supposer que toutes les versions le comptent de la même manière."
+            ]
+          },
+          {
+            "heading": "Pourquoi deux comptes peuvent différer",
+            "paragraphs": [
+              "Commencez par comparer la portée : un résultat peut inclure l'intégralité du document et un autre uniquement le texte sélectionné. Vérifiez également s'il y a des titres, des notes, des légendes ou des références qui ne doivent pas compter pour le destinataire.",
+              "Un compteur autonome ne voit que le texte que vous collez ; Vous ne pouvez pas interpréter la mise en page de Word ni savoir quelles parties les instructions excluent. De plus, différents outils peuvent appliquer des règles différentes : suivez la méthode indiquée lorsque la limite est stricte."
+            ]
+          },
+          {
+            "heading": "Vérifiez le document avant de le soumettre",
+            "paragraphs": [
+              "Avant de soumettre, enregistrez la version finale, vérifiez l'intégralité du document dans Word et sélectionnez chaque section qui a sa propre limite. Si les instructions excluent des références ou des notes, suivez leur règle exacte et relisez ce texte séparément.",
+              "Si vous le pouvez, laissez une petite marge en dessous du maximum. La modification peut modifier le total, alors racontez la version que vous soumettez réellement."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Un décompte n’est utile que lorsque vous savez ce qu’il mesure. Je recommande de consulter le document complet enregistré dans la même application et avec la même portée que celle qu'utilisera la personne qui le reçoit, surtout si la limite est stricte."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Afficher le nombre de mots",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/show-word-count"
+          },
+          {
+            "title": "Comparaison des fonctionnalités de Word : Word pour le Web et le bureau",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/word-features-comparison-word-for-the-web-vs-desktop."
+          }
+        ]
+      },
+      "how-to-count-characters-in-excel": {
+        "image": "blog-images/excel-character-count.svg",
+        "imageAlt": "La formule Excel LEN renvoie 20 pour « Le renard brun rapide ». y compris les espaces et la période.",
+        "title": "Comment compter les caractères dans Excel (une cellule ou une plage) | TextToools",
+        "description": "Utilisez la formule Excel LEN pour compter les caractères dans une cellule, la copier dans une liste ou ajouter plusieurs cellules, y compris les espaces et la ponctuation.",
+        "summary": "Utilisez =LEN(A1) pour une cellule, copiez la formule pour compter une liste ou additionnez plusieurs résultats LEN. Excel compte également les espaces.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : Utilisez LEN",
+            "paragraphs": [
+              "Pour compter les caractères dans une cellule dans Excel, tapez =LEN(A1) dans une autre cellule et remplacez A1 par la référence que vous souhaitez vérifier. Par exemple, « Le renard brun rapide ». contient des caractères 20, y compris les espaces et le point final.",
+              "LEN compte tout le texte de la cellule. Il ne supprime pas les espaces supplémentaires ni les signes de ponctuation avant de renvoyer le résultat."
+            ],
+            "examples": [
+              {
+                "text": "=LEN(A1)",
+                "count": 20,
+                "explanation": "Si A1 contient \"Le renard brun rapide.\", LEN renvoie 20."
+              }
+            ]
+          },
+          {
+            "heading": "Compte les caractères dans plusieurs cellules",
+            "paragraphs": [
+              "Pour obtenir un nombre distinct dans chaque ligne, tapez =LEN(A1) à côté de la première cellule de texte et copiez ou faites glisser la formule vers le bas. Excel ajuste la référence dans chaque ligne, donc la formule suivante devient =LEN(A2). Microsoft explique cette méthode de remplissage pour compter plusieurs cellules."
+            ]
+          },
+          {
+            "heading": "Ajouter des caractères dans plusieurs cellules",
+            "paragraphs": [
+              "Si vous avez besoin d'un total combiné, ajoutez une opération LEN pour chaque cellule. Par exemple, si A1 contient « Le brun rapide » et A2 contient « renard », utilisez la formule suivante. Renvoie les caractères 19 entre les deux cellules ; cela n'ajoute pas de caractère supplémentaire entre eux."
+            ],
+            "examples": [
+              {
+                "text": "=SOMME(LEN(A1),LEN(A2))",
+                "count": 19,
+                "explanation": "A1 a des caractères 15 et A2 a 4 ; le total combiné est 19."
+              }
+            ]
+          },
+          {
+            "heading": "Que comprend le décompte Excel ?",
+            "paragraphs": [
+              "Les espaces comptent comme des caractères, y compris ceux qui apparaissent au début ou à la fin d'une cellule. La ponctuation, les chiffres et les sauts de ligne dans le texte contribuent également au résultat. Si le total semble trop élevé, vérifiez les espaces de fin ou tout autre texte que vous avez manqué.",
+              "Si les instructions excluent les espaces normaux, =LEN(A1)-LEN(SUBSTITUTE(A1,\" \",\"\")) les soustrait du total. Cette formule supprime uniquement les espaces normaux ; il ne supprime pas les tabulations ni les sauts de ligne. Appliquez la règle exacte indiquée sur le formulaire ou qui recevra le texte.",
+              "Les exemples utilisent des noms de fonctions en anglais et des virgules entre les arguments. En fonction de votre langue Excel et de vos paramètres régionaux, vous aurez peut-être besoin de noms traduits ou de séparateurs différents. Si Excel affiche une erreur de formule, vérifiez ce paramètre."
+            ]
+          },
+          {
+            "heading": "Excel et d'autres comptables peuvent traiter les emoji différemment",
+            "paragraphs": [
+              "Le comportement de LEN dans Excel dépend de la version de compatibilité du classeur. Microsoft indique que la version de compatibilité 2, dans les livres Microsoft pris en charge 365, compte pour un seul emoji composé de paires de substitution ; les sélecteurs de variations et les composants de certains emoji combinés peuvent toujours compter séparément. Le comportement des versions précédentes peut différer.",
+              "TextToools compte les groupes de graphèmes Unicode, qui correspondent généralement à des caractères visibles. Cette règle n'est pas la même que la règle LEN dans Excel. Si la limite est stricte, vérifiez le texte dans l'application cible ou utilisez le compteur indiqué dans ses instructions."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création du compteur de caractères pour TextToools, j'ai choisi de compter les groupes de graphèmes Unicode visibles : ainsi, une séquence d'emoji liés ou une lettre avec un accent combiné compte comme un caractère visible. LEN dans Excel suit les règles de compatibilité des classeurs, je recommande donc de vérifier les limites strictes avec le comptable qui recevra le texte."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Fonction LEN",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/excel/functions/len-function"
+          },
+          {
+            "title": "Compter les caractères dans les cellules dans Excel",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/excel/count-characters-in-cells-in-excel"
+          },
+          {
+            "title": "Versions de compatibilité",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/excel/compatibility-versions"
+          }
+        ]
+      },
+      "how-to-count-words-in-google-sheets": {
+        "image": "blog-images/google-sheets-word-count.svg",
+        "imageAlt": "Une formule Google Sheets compte neuf groupes séparés par des espaces et n'oublie pas de vérifier la portée du décompte.",
+        "title": "Comment compter les mots dans Google Sheets (formule pour les cellules et les plages) | TextToools",
+        "description": "Utilisez une formule Google Sheets pour compter les mots dans une cellule ou une plage, normaliser les espaces et les sauts de ligne et comprendre ce que le résultat inclut.",
+        "summary": "Normalisez les espaces, divisez le texte en groupes et comptez-les. Ces formules comptent les groupes séparés par des espaces, et non les mots grâce à l'analyse linguistique.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : normaliser les espaces, diviser le texte et compter",
+            "paragraphs": [
+              "Google Sheets n'inclut pas de bouton de comptage de mots pour les cellules. Vous pouvez utiliser une formule qui remplace chaque séquence d'espaces par une seule, divise le résultat et compte les parties.",
+              "Pour le texte anglais dans la cellule A1, collez cette formule dans une autre cellule. Renvoie 0 si A1 est vide ou ne contient que des espaces :"
+            ],
+            "examples": [
+              {
+                "text": "=IF(LEN(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(A1,\"\\s+\",\" \")),\" \")))",
+                "count": 9,
+                "explanation": "Si A1 contient « Le renard brun rapide saute par-dessus le chien paresseux. », la formule renvoie 9."
+              }
+            ]
+          },
+          {
+            "heading": "Ce que fait la formule",
+            "paragraphs": [
+              "REGEXREPLACE(A1,\"\\s+\",\" \") remplace chaque séquence d'espaces par un espace régulier. Dans Google Sheets, REGEXREPLACE utilise les expressions régulières RE2 ; Ce modèle comprend des espaces, des tabulations et des sauts de ligne.",
+              "TRIM supprime les espaces de début et de fin, SPLIT divise le texte propre par espaces et COUNTA compte les parties résultantes. Vérifier avec IF empêche qu'une cellule vide soit comptée comme un élément.",
+              "La ponctuation reste avec son groupe et une expression avec un trait d'union et sans espaces compte comme un seul groupe. Il s'agit d'un décompte basé sur l'espace, et non d'un vérificateur grammatical ou d'une définition de mot universelle."
+            ]
+          },
+          {
+            "heading": "Compte les mots dans une plage de cellules",
+            "paragraphs": [
+              "Pour obtenir un total unique de texte de A1 à A10, TEXTJOIN combine les cellules non vides et ajoute des espaces entre elles. Le reste de la formule normalise les espaces, divise le texte combiné et compte les groupes."
+            ],
+            "examples": [
+              {
+                "text": "=IF(LEN(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")))=0,0,COUNTA(SPLIT(TRIM(REGEXREPLACE(TEXTJOIN(\" \",TRUE,A1:A10),\"\\s+\",\" \")),\" \")))",
+                "count": 9,
+                "explanation": "Si A1 contient « Le renard brun rapide » et A2 « saute par-dessus le chien paresseux », la formule de plage renvoie 9."
+              }
+            ]
+          },
+          {
+            "heading": "Vérifier la plage et la règle de comptage",
+            "paragraphs": [
+              "Remplacez A1 ou A1:A10 par la cellule ou la plage dont vous avez besoin. La formule de plage combine les cellules non vides en un seul total ; il ne renvoie pas de décompte distinct pour chaque ligne.",
+              "Les formules utilisent des noms de fonctions en anglais et des virgules comme séparateurs. Si vous voyez une erreur d'analyse, vérifiez les paramètres régionaux de votre feuille : le séparateur d'arguments ou les noms de fonctions peuvent être différents. Utilisez une plage finie qui couvre le texte que vous souhaitez compter et placez la cellule de résultat en dehors de cette plage."
+            ]
+          },
+          {
+            "heading": "Lorsque le résultat peut varier",
+            "paragraphs": [
+              "La formule considère chaque mot du groupe séparé par des espaces blancs. C'est utile pour un simple brouillon en anglais, mais la ponctuation reste ensemble et les expressions avec trait d'union comptent comme un groupe. Un autre comptable peut appliquer une convention différente.",
+              "La documentation TRIM pour Google Sheets indique qu'il ne supprime pas les espaces insécables. Si le texte collé contient des espaces invisibles inhabituels, normalisez-le avant de vous fier au total. Pour le chinois, séparer par des espaces n’équivaut pas à compter les mots selon la langue ; utilise un compteur avec une segmentation adaptée au chinois.",
+              "Si vous avez une limite stricte pour une tâche ou une publication, vérifiez si elle comprend des titres, des notes ou d'autres cellules, et suivez la méthode indiquée par celui qui recevra le texte."
+            ]
+          },
+          {
+            "heading": "Essayez le compteur de mots de TextToools",
+            "paragraphs": [
+              "Si vous souhaitez compter un passage sans préparer de formule, copiez le texte exact dans le compteur de mots de TextToools. Comptez les groupes séparés par des espaces dans votre navigateur. Il n'ouvre pas Google Sheets et ne lit pas une plage de la feuille, copiez donc uniquement le texte que vous souhaitez compter."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création du compteur de mots TextToools, j'ai voulu établir une règle claire pour l'anglais : chaque groupe entre des espaces ou des sauts de ligne compte pour un. Une formule de feuille de calcul peut appliquer une règle similaire, mais c'est une bonne idée de savoir ce qu'elle inclut avant de comparer le résultat avec un autre compteur."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Fonction SPLIT",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/3094136?hl=en"
+          },
+          {
+            "title": "Fonction REGEXREPLACE",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/3098245?hl=en"
+          },
+          {
+            "title": "Fonction TRIM",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/3094140?hl=en"
+          },
+          {
+            "title": "Fonction TEXTJOIN",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/7013992?hl=en"
+          },
+          {
+            "title": "Référence de syntaxe RE2",
+            "publisher": "Google RE2",
+            "url": "https://github.com/google/re2/blob/main/doc/syntax.txt"
+          }
+        ]
+      },
+      "how-to-count-words-in-chinese": {
+        "image": "blog-images/chinese-word-count.svg",
+        "imageAlt": "Le texte chinois est divisé en segments de type mot ; un autre segmenteur peut donner un résultat différent.",
+        "title": "Comment compter les mots en chinois (et pourquoi les résultats varient) | TextToools",
+        "description": "Découvrez pourquoi le nombre de mots chinois dépend de la segmentation, comment les compteurs divisent le texte et quand utiliser la méthode requise.",
+        "summary": "Le chinois ne sépare pas les mots par des espaces. Un compteur utilise des règles de segmentation pour estimer les unités lexicales, de sorte que différents outils peuvent afficher des totaux différents.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : le nombre de mots chinois dépend de la segmentation",
+            "paragraphs": [
+              "Le chinois ne sépare normalement pas les mots par des espaces. Un comptable ne peut pas le diviser par espaces comme il le fait avec l'anglais : il doit estimer où commence et se termine chaque unité lexicale.",
+              "Ainsi, deux compteurs peuvent afficher des totaux différents pour le même texte. Vos règles de ciblage ou vos données linguistiques peuvent varier. Si une école, un éditeur ou un formulaire spécifie une méthode, utilisez cette méthode pour le décompte final."
+            ]
+          },
+          {
+            "heading": "Les mots, caractères et segments ne sont pas identiques",
+            "paragraphs": [
+              "Un caractère chinois est une unité écrite ; Un mot peut comporter un ou plusieurs caractères. Par exemple, dans « 今天的天气很好 » (Il fait beau aujourd'hui), un segmenteur pourrait regrouper le texte comme ceci : « 今天 / 的 / 天气 / 很好 ». Compter chaque caractère, chaque segment ou simplement les symboles sans espaces répond à différentes questions.",
+              "Vérifiez ce que votre tâche demande réellement : des mots (词数), des caractères (字数) ou une limite spécifique à la plate-forme. Ne présumez pas que le nombre total de « mots » est égal au nombre total de caractères ou que tous les outils utilisent la même définition."
+            ]
+          },
+          {
+            "heading": "Comment un compteur chinois divise le texte",
+            "paragraphs": [
+              "TextToools utilise la segmentation des mots du navigateur adaptée au chinois simplifié et compte les segments identifiés comme unités lexicales. Il ne compte pas les espaces, les caractères ou les signes de ponctuation. Le compteur affiche également les caractères séparément, avec sa propre règle basée sur le graphème.",
+              "Unicode décrit les limites du texte comme des lignes directrices pouvant être adaptées aux langages et aux conventions. Un segmenteur fournit une estimation pratique et cohérente, mais ne constitue pas une autorité linguistique universelle pour chaque contexte ou vocabulaire."
+            ]
+          },
+          {
+            "heading": "Un exemple rapide de la raison pour laquelle les totaux varient",
+            "paragraphs": [
+              "Dans « 今天的天气很好，我们去公园散步。 » (Aujourd'hui il fait beau et nous allons nous promener dans le parc), le segmenteur actuel de TextToools le divise comme ceci : « 今天 / 的/天气 / 很好 / 我们 / 去 / 公园 / 散步». Un compteur de caractères compte les caractères visibles ; celui qui sépare uniquement par des espaces peut traiter la phrase entière comme un seul groupe."
+            ],
+            "examples": [
+              {
+                "text": "今天的天气很好，我们去公园散步。",
+                "count": 8,
+                "explanation": "Le segmenteur chinois simplifié actuel dans TextToools renvoie huit segments lexicaux dans cet exemple. Les données peuvent varier selon les navigateurs et produire d'autres divisions."
+              }
+            ]
+          },
+          {
+            "heading": "Comment vérifier le nombre de mots chinois",
+            "paragraphs": [
+              "1. Confirmez si la limite demandée fait référence à des mots, des caractères ou une autre unité.",
+              "2. Utilisez un compteur configuré pour le chinois au lieu de vous fier à la séparation des espaces.",
+              "3. Collez exactement le texte qui entre dans le décompte ; Incluez des titres ou des notes uniquement si les instructions les incluent.",
+              "4. Comparez le résultat avec la méthode requise par le destinataire. Si la limite est stricte et qu'aucune méthode n'est indiquée, demandez quel compteur ou quelle définition vous devez suivre.",
+              "5. Conservez la même méthode lors de la révision du texte afin que les différences soient dues à vos modifications et non à une autre règle de comptage."
+            ]
+          },
+          {
+            "heading": "Pourquoi un autre compteur peut donner un résultat différent",
+            "paragraphs": [
+              "La segmentation chinoise ne consiste pas seulement à rechercher des espaces. Différents programmes peuvent utiliser différentes données, versions ou règles linguistiques pour résoudre les limites ambiguës, les noms propres et les textes mélangeant le chinois et l'anglais. Un écart ne signifie pas automatiquement qu'il y a une erreur : vérifiez d'abord si les deux compteurs mesurent la même unité en utilisant la même méthode.",
+              "TextToools calcule le décompte dans votre navigateur et ne télécharge pas le texte. Il utilise le comportement de ciblage disponible dans le navigateur, donc un autre outil ou système peut donner un total différent. Si le système de livraison spécifie un compteur, son résultat suit."
+            ]
+          },
+          {
+            "heading": "Test TextToools compteur de mots",
+            "paragraphs": [
+              "Collez le texte chinois simplifié dans le compteur de mots de TextToools pour voir le nombre total de segments lexicaux et le nombre de caractères. Utilisez le nombre de mots comme référence cohérente lors de l'édition et suivez la méthode du destinataire lorsque vous devez respecter une limite formelle."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de l'ajout du nombre de mots chinois à TextToools, je souhaitais utiliser une segmentation conviviale au lieu de traiter une phrase sans espaces comme un seul mot. J'ai également séparé le total des caractères, car les mots et les personnages répondent à des questions différentes."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Segmenteur international",
+            "publisher": "Documents Web MDN",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+          },
+          {
+            "title": "Segmentation de texte Unicode (Annexe n° 29 de la norme Unicode)",
+            "publisher": "Le Consortium Unicode",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
+      "five-minute-speech-word-count": {
+        "image": "blog-images/five-minute-speech.svg",
+        "imageAlt": "Estimation pour un discours de cinq minutes : multipliez votre rythme de parole par cinq et répétez à voix haute.",
+        "title": "Combien de mots y a-t-il dans une minute de discours 5 ? | TextToools",
+        "description": "Calculez la durée approximative d'un discours de cinq minutes en fonction de votre rythme de parole et vérifiez le timing en répétant l'intégralité du texte.",
+        "summary": "A 120–160 mots par minute, cinq minutes équivalent à environ 600–800 mots en anglais. Votre rythme, votre langage, vos pauses et votre public peuvent changer le résultat.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : environ 600–800 mots en 120–160 par minute",
+            "paragraphs": [
+              "Un discours de cinq minutes peut contenir environ 600–800 mots anglais si vous calculez un rythme de 120–160 mots par minute. Toastmasters inclut cette gamme dans son guide sur la voix parlée, mais il s'agit d'un point de départ et non d'une règle pour toutes les personnes ou toutes les langues.",
+              "Les pauses, l'emphase, les réactions du public et les transitions prennent du temps sans ajouter de mots. Si vous parlez lentement ou incluez une interaction, préparez moins de mots que ne l'indique la multiplication directe et répétez l'intégralité du texte."
+            ]
+          },
+          {
+            "heading": "Utilisez la formule de mots par minute",
+            "paragraphs": [
+              "Pour estimer la durée : minutes de parole = nombre de mots ÷ rythme en mots par minute. Pour calculer le nombre de mots à préparer, inversez l’opération : mots = minutes × mots par minute.",
+              "En cinq minutes, le décompte est : a 120 mots par minute, 600 mots ; à 140, 700 ; à 160, 800. Ce sont des estimations mathématiques avant les pauses et les réactions du public, et non une garantie de durée."
+            ]
+          },
+          {
+            "heading": "Pourquoi votre discours de cinq minutes peut être d'une autre durée",
+            "paragraphs": [
+              "Personne ne parle toujours à la même vitesse. Vous pouvez ralentir pour expliquer une idée technique, faire une pause pour insister ou attendre une réponse du public. Les noms, citations, changements de diapositives et démonstrations peuvent également allonger votre présentation.",
+              "L'intervalle de mots 120–160 par minute sert de référence pour la planification des discours en anglais, et non de rythme universel. La segmentation des mots et le rythme oral changent selon la langue. Racontez et répétez la version que vous allez réellement présenter, plutôt que de simplement appliquer une estimation anglaise à une autre langue."
+            ]
+          },
+          {
+            "heading": "Mesurez votre rythme avec un test",
+            "paragraphs": [
+              "1. Préparez le scénario que vous allez présenter. N'incluez pas de notes privées ou de directives scéniques dans votre récit, à moins que vous ne les prononciez à voix haute.",
+              "2. Lisez le scénario à voix haute à un rythme de présentation naturel et chronométrez l'intégralité du discours, y compris les pauses et les transitions.",
+              "3. Divisez le nombre de mots prononcés par les minutes de répétition pour calculer votre rythme. Par exemple, les mots 630 en minutes 4,5 correspondent à des mots 140 par minute.",
+              "4. Si vous manquez de temps, éliminez ou simplifiez les parties les moins importantes. Si vous terminez tôt, ajoutez des explications utiles uniquement là où le public en a besoin ; N'allongez pas artificiellement chaque phrase.",
+              "5. Répétez après le montage. Un deuxième test permet de détecter des changements dans le temps dus à un nouvel exemple, une pause plus longue ou une transition."
+            ]
+          },
+          {
+            "heading": "Réserve de temps pour les pauses et les réactions",
+            "paragraphs": [
+              "Un script qui dure exactement cinq minutes lu en une seule séance peut dépasser la limite lorsqu'il est présenté à un public. Marquez les pauses intentionnelles, réservez du temps pour des diapositives ou des démonstrations et réfléchissez s'il pourrait y avoir des rires ou des questions.",
+              "Toastmasters recommande de s'entraîner avec un chronomètre et de prendre en compte les pauses et les réactions du public. Utilisez le récit pour préparer un brouillon et une répétition chronométrée pour vérifier la durée réelle."
+            ]
+          },
+          {
+            "heading": "Essayez le compteur de mots TextToools",
+            "paragraphs": [
+              "Collez le texte que vous prévoyez de prononcer dans le compteur de mots TextToools pour vérifier sa longueur. Si vous ne prononcez pas les indications scéniques, supprimez-les avant de compter. Le décompte se fait dans votre navigateur, mais l'outil ne chronomètre pas la répétition ni ne calcule les pauses : il utilise un chronomètre pendant que vous parlez à voix haute."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création du compteur de mots TextToools, il était clair pour moi que le total à lui seul ne pouvait pas dire combien de temps durerait un discours. Le rythme et les pauses de l'orateur comptent également ; C'est pourquoi je considère le recomptage comme une aide à la planification et la répétition comme le véritable contrôle du temps."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Votre voix parlante",
+            "publisher": "Toastmasters International",
+            "url": "https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/199-your-speaking-voice.pdf"
+          },
+          {
+            "title": "Gérez votre temps de parole",
+            "publisher": "Toastmasters International",
+            "url": "https://toastmasters.org/magazine/magazine-issues/2025/feb/manage-your-speaking-time"
+          }
+        ]
+      },
+      "google-docs-word-count": {
+        "image": "blog-images/google-docs-word-count.svg",
+        "imageAlt": "Liste du nombre de mots dans Google Docs : ouvrez Outils, choisissez Nombre de mots et vérifiez la plage.",
+        "title": "Comment voir le nombre de mots dans Google Docs (et ce qu'il exclut) | TextToools",
+        "description": "Vérifiez le nombre de mots dans Google Docs, comptez un passage sélectionné et notez tous les en-têtes, pieds de page et notes de bas de page exclus.",
+        "summary": "Utilisez Outils > Nombre de mots pour compter un document ou une sélection. Google Docs exclut les en-têtes, pieds de page et notes de bas de page du total du document.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : ouvrez Outils et choisissez Nombre de mots",
+            "paragraphs": [
+              "Dans Google Docs pour ordinateur, ouvrez le document et choisissez Outils > Nombre de mots. Le tableau montre le total du document. Si vous sélectionnez d'abord un fragment, Google Docs calcule le nombre de cette sélection.",
+              "Avant d'utiliser la figure, vérifiez ce que comprend votre tâche ou votre éditeur. Google Docs exclut les en-têtes, les pieds de page et les notes de bas de page du décompte de l'ensemble du document. Le total peut donc être inférieur à la limite demandée."
+            ]
+          },
+          {
+            "heading": "Comment compter un document entier ou une partie",
+            "paragraphs": [
+              "1. Ouvrez le document Google Docs sur un ordinateur.",
+              "2. Pour compter l'intégralité du document, ne sélectionnez pas de texte. Pour raconter un fragment, sélectionnez-le d'abord.",
+              "3. Choisissez Outils > Nombre de mots et voyez votre total.",
+              "4. Comparez-le à la portée exacte des instructions. Vérifiez s'ils incluent le titre, les titres, les légendes, les citations, les références et les notes.",
+              "5. Si vous modifiez le texte, racontez la version finale."
+            ]
+          },
+          {
+            "heading": "Ce qui exclut Google Docs",
+            "paragraphs": [
+              "L'aide Google indique que le décompte pour l'ensemble du document inclut le contenu à l'exception des en-têtes, des pieds de page et des notes de bas de page. Ces parties peuvent être importantes dans une tâche, un rapport ou une date limite, de sorte que le chiffre dans le tableau peut ne pas correspondre au total demandé par les instructions.",
+              "Si ces pièces comptent dans la limite, vérifiez la méthode requise par les instructions. Si aucun n'est spécifié, il copie le texte concerné sur un autre compteur et ajoute le résultat au total du corps, sans compter deux fois le même texte. Utilisez les mêmes pièces et la même méthode pour comparer les ébauches."
+            ]
+          },
+          {
+            "heading": "Pourquoi Google Docs et un autre compteur peuvent être en désaccord",
+            "paragraphs": [
+              "Le total dépend à la fois du texte inclus et de la convention de comptage. Un comptable peut exclure des parties du document qu'un autre inclut ; Les outils peuvent également traiter différemment la ponctuation, les traits d’union, les symboles et d’autres cas particuliers.",
+              "TextToools compte le texte que vous collez dans son compteur de mots dans votre navigateur ; chaque groupe de caractères séparés par des espaces compte pour un mot. Il n'ouvre pas les fichiers Google Docs et n'obtient pas le texte d'un lien vers le document. S'il y a une limite stricte, suivez les instructions de la destination et utilisez le compteur requis lorsqu'il est indiqué."
+            ]
+          },
+          {
+            "heading": "Un petit exemple pour raconter un fragment",
+            "paragraphs": [
+              "Imaginez que vous ayez seulement besoin de raconter une courte section d'un rapport. Sélectionnez le texte principal de cette section avant d’ouvrir Word Count. L'exemple suivant contient des mots 10 basés sur la règle d'espacement de TextToools ; Une sélection ou un compteur différent peut donner un résultat différent si la portée ou les règles changent."
+            ],
+            "examples": [
+              {
+                "text": "Le rapport est prêt. Examinez chaque section avant de la soumettre.",
+                "count": 10,
+                "explanation": "Deux phrases et mots 10. Sélectionnez uniquement le fragment que vous devez raconter."
+              }
+            ]
+          },
+          {
+            "heading": "Liste rapide pour vérifier le nombre",
+            "paragraphs": [
+              "1. Lisez les instructions et notez si elles contiennent des titres, des notes de bas de page, des références ou tout autre élément supplémentaire.",
+              "2. Décidez si vous devez compter l’intégralité du document ou seulement une sélection.",
+              "3. Utilisez Outils > Nombre de mots dans Google Docs et rappelez-vous les exclusions documentées.",
+              "4. Si les instructions l'exigent, comptez séparément les matières exclues qui doivent également être incluses dans la limite.",
+              "5. Revérifiez la version finale en utilisant la méthode requise par la cible."
+            ]
+          },
+          {
+            "heading": "Testez le compteur de mots de TextToools",
+            "paragraphs": [
+              "Si vous devez compter un texte séparé ou vérifier un passage avec une règle cohérente basée sur l'espace, copiez le texte concerné et collez-le dans le compteur de mots TextToools. Le décompte se fait dans votre navigateur ; L'outil n'ouvre pas les fichiers Google Docs et compte uniquement le texte que vous fournissez."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lorsque j'ai conçu le compteur de mots TextToools, je voulais compter le texte collé dans le navigateur au lieu de demander le téléchargement de documents. De cette façon, vous décidez quel texte inclure et pouvez le comparer avec les règles qui s'appliquent à votre document."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Compter les mots dans un document",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
+      "keyword-density-guide": {
+        "image": "blog-images/keyword-density-guide.svg",
+        "imageAlt": "Un échantillon de 16 mots contient deux fois le mot clair, avec une fréquence de 12,5 %.",
+        "title": ": comment la calculer sans sur-optimisation | TextToools",
+        "description": "Apprenez à calculer la densité des mots clés, à comprendre les limites d'un compteur de fréquence et à éditer en pensant à vos lecteurs.",
+        "summary": "Divisez les occurrences d'un terme par le nombre total de mots pour calculer sa densité. Utilisez le pourcentage pour examiner les répétitions, et non comme objectif de positionnement.",
+        "sections": [
+          {
+            "heading": "Réponse courte : comparer les occurrences au texte total",
+            "paragraphs": [
+              "La densité des mots clés décrit la fréquence à laquelle un mot ou une expression apparaît par rapport à la longueur d'un texte. Pour un mot, divisez ses occurrences par le nombre total de mots et multipliez par 100.",
+              "Par exemple, si un échantillon de mots 16 contient deux fois le mot clair, le calcul est 2 ÷ 16 × 100 = 12,5 %. Décrire cet échantillon et cette méthode de comptage ; Ce n'est pas un chiffre recommandé pour une page."
+            ]
+          },
+          {
+            "heading": "Comment calculer la densité des mots clés",
+            "paragraphs": [
+              "Utilisez cette formule : densité = occurrences de termes ÷ nombre total de mots × 100. Comptez systématiquement la même version du terme et décidez s’il faut mesurer un mot ou une expression exacte.",
+              "Pour une phrase, définissez d'abord la règle de comptage. Décidez, par exemple, si une phrase plus longue contenant l'expression cible compte également et si les variantes ou les mots apparentés sont comptés séparément. Un compteur qui affiche des mots individuels ne calcule pas automatiquement la fréquence des phrases.",
+              "Le total dépend de la façon dont les mots sont segmentés et du texte que vous incluez. Indiquez quel fragment et quelle méthode vous comparez ; Autrement, les pourcentages pourraient mesurer des choses différentes."
+            ],
+            "examples": [
+              {
+                "text": "Un guide clair est utile. Une explication claire rend chaque instruction plus facile à suivre.",
+                "count": 16,
+                "explanation": "Le mot « clear » apparaît 2 fois : 2 ÷ 16 × 100 = 12,5 %."
+              }
+            ]
+          },
+          {
+            "heading": "Que mesure le compteur TextToools ?",
+            "paragraphs": [
+              "TextToools trie jusqu'à dix termes individuels courants à partir du texte que vous collez. Il n'est pas sensible à la casse, exclut les mots vides courants de la liste et calcule chaque pourcentage du total des mots, y compris ces mots vides. C'est pourquoi la somme des pourcentages indiqués ne doit pas nécessairement correspondre à 100 %.",
+              "Le compteur affiche des termes individuels, pas des expressions de plusieurs mots, et ne regroupe pas les formes associées telles que « écriture » et « écriture ». Le ciblage et les mots vides dépendent de la langue sélectionnée. Interprétez le résultat comme une description rapide de l’échantillon, et non comme une analyse SEO complète."
+            ]
+          },
+          {
+            "heading": "Existe-t-il une densité de mots clés idéale ?",
+            "paragraphs": [
+              "Il n’existe pas de pourcentage universel garantissant une visibilité ou une meilleure position dans les recherches. Un terme peut apparaître souvent parce qu’il s’agit exactement du sujet d’une page utile ; forcer sa présence dans chaque paragraphe peut rendre le texte répétitif ou artificiel.",
+              "Les politiques anti-spam de Google décrivent l'abus de mots clés comme le fait de remplir une page de termes ou de chiffres pour manipuler la position, souvent de manière peu naturelle. La leçon de choses n’est pas d’éviter les termes pertinents, mais de les utiliser lorsqu’ils aident le lecteur à comprendre la page.",
+              "Les moteurs de recherche analysent plus que le nombre de répétitions. Un comptable ne peut pas déterminer si la page répond aux besoins du chercheur, est exacte ou fournit plus que les autres résultats. Traitez tout pourcentage fixe comme une décision éditoriale et non comme une règle de positionnement."
+            ]
+          },
+          {
+            "heading": "Utiliser la fréquence comme piste d'édition",
+            "paragraphs": [
+              "Un mot fréquent n'est pas nécessairement un problème. Les noms propres, les termes techniques et le sujet principal d'une page apparaissent naturellement plusieurs fois. Lisez les phrases dans leur contexte et demandez-vous si chaque répétition ajoute quelque chose ou réitère simplement ce que le lecteur sait déjà.",
+              "Si une phrase semble forcée, réécrivez-la pour qu'elle soit claire plutôt que de remplacer un terme pertinent par un synonyme vague. Conservez la terminologie là où la précision est nécessaire et n’éliminez pas un mot nécessaire simplement pour réduire le pourcentage."
+            ]
+          },
+          {
+            "heading": "Un flux de révision pratique",
+            "paragraphs": [
+              "1. Choisissez le passage que vous souhaitez analyser et incluez les mêmes sections lorsque vous comparez les brouillons.",
+              "2. Identifiez le mot ou la phrase exacte et décidez comment vous comptez ses occurrences.",
+              "3. Calculez leur proportion par rapport au total ou utilisez un compteur pour détecter les termes individuels récurrents.",
+              "4. Lisez les phrases à proximité. Recherchez les répétitions artificielles, les expressions peu claires ou les changements de terminologie sans raison.",
+              "5. Modifiez pour plus d’exactitude et d’utilité, puis relisez le texte. Répétez le décompte uniquement s'il sert à comparer les versions ; ne modifiez pas pour atteindre un pourcentage arbitraire."
+            ]
+          },
+          {
+            "heading": "Test TextToools compteur de densité de mots clés",
+            "paragraphs": [
+              "Collez un brouillon dans le compteur de densité de mots clés de TextToools pour voir les termes individuels les plus courants, leur nombre et leur pourcentage du total de mots. L'analyse est effectuée dans votre navigateur. Il est utilisé pour détecter des modèles dans un échantillon, et non pour mesurer le potentiel de classement ou pour auditer des phrases clés."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "J'ai conçu le compteur de densité de mots clés TextToools pour faciliter la détection des termes répétés, et non pour décider ce qu'une page doit dire. Un tableau de fréquence peut m'indiquer un passage à réviser, mais la lecture des phrases dans leur contexte est ce qui me permet de savoir si la répétition est utile."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Politiques anti-spam pour la recherche sur le Web Google",
+            "publisher": "Centre de recherche Google",
+            "url": "https://developers.google.com/search/docs/essentials/spam-policies#keyword-stuffing"
+          },
+          {
+            "title": "Créer du contenu utile, fiable et axé sur les personnes",
+            "publisher": "Centre de recherche Google",
+            "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          }
+        ]
+      },
+      "average-sentence-length": {
+        "image": "blog-images/average-sentence-length.svg",
+        "imageAlt": "Un échantillon de deux phrases et de mots 21 a une moyenne de mots 10,5 par phrase.",
+        "title": "Durée moyenne des peines : comment la calculer et l'utiliser | TextToools",
+        "description": "Apprenez à calculer la longueur moyenne des phrases, à interpréter le résultat et à le modifier sans courir après un chiffre rigide.",
+        "summary": "Divisez les mots d'un texte par ses phrases pour trouver la longueur moyenne. Utilisez le résultat comme un indice d’édition, et non comme une règle de lisibilité universelle.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : divisez les mots entre les phrases",
+            "paragraphs": [
+              "La longueur moyenne des phrases correspond au nombre de mots dans un texte divisé par le nombre de phrases. Si un échantillon contient des mots 120 dans des phrases 8, la moyenne est de 15 mots par phrase.",
+              "La figure décrit l'ensemble ; ne signifie pas que toutes les phrases contiennent des mots 15. Certains peuvent être courts et directs et d’autres contiennent plus de détails. Utilisez la moyenne pour détecter un texte qui mérite d'être révisé, pas pour le noter."
+            ]
+          },
+          {
+            "heading": "Comment calculer la longueur moyenne des phrases",
+            "paragraphs": [
+              "Choisissez un texte, comptez les mots et divisez le total par le nombre de phrases : longueur moyenne = nombre total de mots ÷ nombre de phrases. Conservez la même portée et la même méthode de comptage lors de la comparaison de textes.",
+              "Par exemple, mots 120 ÷ phrases 8 = mots 15 par phrase. Si la division laisse des décimales, gardez-en une ou arrondissez toujours de la même manière ; Mots 21 ÷ Phrases 2 = Mots 10,5 par phrase.",
+              "Un compteur qui affiche des mots et des phrases vous donne les deux données. Les limites peuvent être ambiguës avec des abréviations, des initiales, des décimales ou du texte inachevé. Vérifiez l'échantillon pour voir si une petite différence de nombre pourrait modifier votre conclusion."
+            ]
+          },
+          {
+            "heading": "Exemple : calculer la moyenne",
+            "paragraphs": [
+              "Ce court exemple comporte deux phrases. Comptez les mots des deux et divisez par deux. Le résultat décrit ce texte ; Ce n’est pas un chiffre que toutes vos prières doivent atteindre."
+            ],
+            "examples": [
+              {
+                "text": "Aide aux phrases courtes. Des phrases plus longues peuvent expliquer une idée complexe, mais trop de détails dans une seule phrase peuvent rendre la lecture difficile.",
+                "count": 24,
+                "explanation": "24 mots ÷ 2 phrases = 12 mots par phrase."
+              }
+            ]
+          },
+          {
+            "heading": "Quelle longueur moyenne convient ?",
+            "paragraphs": [
+              "Il n’existe pas de méthode unique pour rendre un texte plus clair. Le guide en langage clair de l'Office of Personnel Management des États-Unis propose en moyenne de 15 à 20 mots par phrase dans ce contexte. Considérez cela comme une invitation pratique à réviser, et non comme une règle universelle, un niveau de lecture ou une garantie de compréhension.",
+              "Public concerné, objectif, sujet et langue. Une explication technique peut nécessiter une longue phrase pour relier les idées ; Un avertissement ou une instruction peut être plus facile à suivre s’il est bref. N'appliquez pas de plage de comptage en anglais aux langues dont l'écriture et la segmentation fonctionnent différemment."
+            ]
+          },
+          {
+            "heading": "Pourquoi le bas peut cacher des phrases peu claires",
+            "paragraphs": [
+              "Un bas peut cacher des extrêmes. Un paragraphe comportant une phrase de mots 35 et une autre de 5 a une moyenne de 20, même si la phrase longue reste difficile à suivre. D’un autre côté, plusieurs phrases courtes peuvent paraître saccadées si elles répètent la même idée.",
+              "En plus du numéro, vérifiez les phrases elles-mêmes : l'idée principale est-elle comprise ? Y a-t-il des clauses subordonnées inutiles, des répétitions ou des transitions qui demandent trop d’efforts ? Se connectent-ils naturellement ? La moyenne est un signal de révision, et non un substitut à la lecture à haute voix ou à la vérification du sens."
+            ]
+          },
+          {
+            "heading": "Comment raccourcir une phrase sans perdre le sens",
+            "paragraphs": [
+              "Commencez par le point principal. Éliminez une idée répétée, remplacez une expression inutile par une expression plus directe ou divisez la phrase lorsque le sujet ou l'action change. Conservez les détails dont le lecteur a besoin : écrire plus court n’est pas toujours écrire plus clairement.",
+              "Après édition, relisez tout le paragraphe. Vérifiez que les pronoms ont des référents clairs, que les relations de cause à effet sont toujours correctes et que la transition entre les nouvelles phrases est fluide. Si vous avez une limite stricte, suivez également les règles de comptage de la destination."
+            ]
+          },
+          {
+            "heading": "Une méthode simple pour modifier",
+            "paragraphs": [
+              "1. Choisissez un fragment représentatif et non un paragraphe exceptionnellement court.",
+              "2. Comptez les mots et les phrases avec le même outil et calculez la moyenne.",
+              "3. Lisez le texte et marquez les phrases qui semblent chargées, imprécises, répétitives ou trop coupantes.",
+              "4. Examinez uniquement ce qui peut améliorer la clarté ; puis relisez l'intégralité du texte et recalculez si la comparaison est importante.",
+              "5. Comparez des textes similaires, avec des échantillons de taille similaire et la même méthode. Ne modifiez pas uniquement pour réduire le nombre."
+            ]
+          },
+          {
+            "heading": "Essayez le compteur de mots de TextToools",
+            "paragraphs": [
+              "Collez un texte dans le compteur de mots de TextToools pour voir le nombre total de mots et de phrases ; puis divisez les mots entre les phrases. Il s'agit d'un calcul manuel basé sur ces totaux, et non d'un score de lisibilité indépendant. Examinez les limites des phrases et la portée de l’échantillon avant de comparer les brouillons."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Le compteur de mots TextToools affiche les mots et les phrases séparément. Je considère son ratio comme un bon point de départ pour l'édition, pas comme une partition : la figure peut m'indiquer un passage à réviser, mais seul le texte lui-même me dit si les idées sont claires."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Langage simple",
+            "publisher": "Bureau américain de gestion du personnel",
+            "url": "https://www.opm.gov/information-management/plain-language/"
+          },
+          {
+            "title": "Un langage clair",
+            "publisher": "Manuel d'entretien GOV.UK",
+            "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/"
+          }
+        ]
+      },
+      "how-to-count-words-in-a-pdf": {
+        "published": "2026-10-16",
+        "image": "blog-images/count-words-in-pdf.svg",
+        "imageAlt": "Un PDF avec du texte sélectionnable et une autre numérisation qui nécessite une OCR avant de compter ses mots.",
+        "title": "Comment compter les mots dans un PDF : texte et documents numérisés | TextToools",
+        "description": "Compte les mots dans un PDF en vérifiant si le texte est sélectionnable, en utilisant l'OCR pour les numérisations et en examinant le contenu extrait.",
+        "summary": "Vérifie si le PDF contient du texte sélectionnable. Copiez le texte sur un compteur ; S'il s'agit d'une analyse, utilisez l'OCR et recherchez d'éventuelles erreurs.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : Vérifiez si vous pouvez sélectionner le texte",
+            "paragraphs": [
+              "Un PDF ne contient pas toujours du texte qu'un compteur de mots peut lire. Essayez de sélectionner une phrase avec le curseur. Si vous pouvez le sélectionner et le copier, collez le texte dans un compteur. Si la page se comporte comme une image et que vous ne pouvez pas sélectionner les mots, vous avez besoin d'un programme de reconnaissance optique de caractères (OCR) pour convertir l'image en texte.",
+              "Aucune des deux méthodes ne garantit un total précis. L'extraction peut sauter ou brouiller le contenu, et l'OCR peut mélanger les caractères. Comparez le texte extrait au PDF avant de vous fier au décompte."
+            ]
+          },
+          {
+            "heading": "Compte les mots dans un PDF contenant du texte",
+            "paragraphs": [
+              "1. Ouvrez le PDF dans un lecteur qui vous permet de sélectionner du texte et de copier le fragment ou les pages que vous devez compter.",
+              "2. Collez le texte dans un outil de comptage de mots. TextToools compte le texte collé dans votre navigateur ; n'ouvre ni ne traite directement les fichiers PDF.",
+              "3. Comparez le texte collé au PDF, surtout s'il comporte des colonnes, des barres latérales, des tableaux, des en-têtes, des pieds de page ou des numéros de page. Lors de la copie, les colonnes peuvent être mélangées et le contenu répété de chaque page peut être inclus par inadvertance.",
+              "4. Supprimez ce que les instructions d’affectation excluent et vérifiez à nouveau le total. Gardez le PDF original ouvert pour détecter les paragraphes manquants ou les lignes en double."
+            ]
+          },
+          {
+            "heading": "Utiliser l'OCR avec un PDF numérisé",
+            "paragraphs": [
+              "Un document numérisé se compose généralement d'images de pages et non de texte sélectionnable. Un programme OCR reconnaît les lettres de ces images et génère du texte que vous pouvez ensuite consulter et compter. Le scan doit être clair et direct ; Les images floues ou peu contrastées, l'écriture manuscrite et le texte inhabituel peuvent être mal reconnus.",
+              "Après OCR, corrigez le résultat en le comparant avec les images des pages. Faites attention aux noms, aux chiffres, à la ponctuation, aux accents, aux notes de bas de page et au texte dans les colonnes ou les tableaux. Google Drive vous permet d'ouvrir des fichiers PDF et des images sous forme de texte dans Google Docs, mais son aide vous avertit que les colonnes et les tableaux peuvent ne pas s'aligner correctement.",
+              "OCR convertit le contenu, mais ne garantit pas que tous les mots visibles soient reconnus. Si le document est long ou important, relisez chaque page et corrigez le texte avant de le raconter."
+            ]
+          },
+          {
+            "heading": "Convertissez le PDF si la copie n'est pas pratique",
+            "paragraphs": [
+              "Si le PDF contient du texte, vous pouvez ouvrir une copie à Microsoft Word et compter le document converti. Word transforme le PDF en un format modifiable ; Microsoft prévient que le résultat risque de ne pas conserver la présentation d'origine, en particulier dans les fichiers contenant des tableaux, des graphiques ou des colonnes complexes.",
+              "Considérez le document converti comme une autre façon d'extraire du texte, et non comme une preuve que rien n'a changé. Comparez-le au PDF, éliminez tout ce qui reste en dehors du décompte et suivez la méthode indiquée dans les instructions de livraison."
+            ]
+          },
+          {
+            "heading": "Décidez ce que la limite de mots inclut",
+            "paragraphs": [
+              "Un compteur ne peut compter que le texte que vous lui donnez. L'affectation ou les instructions de l'éditeur déterminent si le total comprend le titre, les titres, les légendes, les citations, les références, les notes et les annexes. Vérifiez ces règles avant de copier le PDF afin de ne pas inclure ou ignorer accidentellement des sections.",
+              "S'il n'y a pas de règle de comptage, définissez un périmètre, appliquez-le de manière cohérente et indiquez-le lorsque d'autres personnes doivent vérifier le total. Les comptables peuvent également traiter différemment les traits d’union et autres signes ; S'il existe une limite stricte, utilisez la méthode requise."
+            ]
+          },
+          {
+            "heading": "Protéger les documents privés et vérifier le décompte",
+            "paragraphs": [
+              "Un PDF peut contenir des informations personnelles, médicales, juridiques, financières ou professionnelles. Avant d'utiliser un service OCR ou de conversion, vérifiez si le fichier est téléchargé, comment il est géré et si votre organisation le permet. Si le document est confidentiel, utilisez un outil local approuvé au lieu de l'envoyer vers un site Web non autorisé.",
+              "Une fois que vous avez le texte, comparez-le page par page avec l'original, confirmez qu'il comprend les sections nécessaires et comptez la version corrigée de manière uniforme. Enregistrez le texte extrait uniquement là où il est approprié au niveau de sensibilité du document."
+            ]
+          },
+          {
+            "heading": "Test TextToools compteur de mots",
+            "paragraphs": [
+              "Lorsque vous avez révisé le texte et confirmé que vous pouvez le traiter, collez-le dans le compteur de mots TextToools pour voir les mots, les caractères, les phrases et les paragraphes. Le décompte se fait dans votre navigateur. Le texte n'est pas téléchargé, mais l'outil n'ouvre pas les fichiers PDF : vous devez d'abord extraire ou reconnaître les mots avec une méthode adaptée."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création du compteur de mots pour TextToools, j'ai décidé de faire le décompte dans le navigateur et de ne demander à personne de télécharger ses documents. Cela signifie également que l'outil compte le texte collé, pas les fichiers PDF. Pour compter un document, je vous recommande d'abord de revoir l'extraction pour vous assurer que le total inclut les mots que vous souhaitez réellement compter."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Convertir des fichiers PDF et photo en texte",
+            "publisher": "Aide Google Drive",
+            "url": "https://support.google.com/drive/answer/176692?hl=en"
+          },
+          {
+            "title": "Ouverture de fichiers PDF dans Word",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/office/opening-pdfs-in-word-0b36fa53-00c1-404c-b3c3-dc26df397aee"
+          }
+        ]
+      },
+      "how-to-count-sentences-in-a-paragraph": {
+        "published": "2026-10-14",
+        "image": "blog-images/count-sentences.svg",
+        "imageAlt": "Quatre exemples montrent comment les abréviations, les décimales, les sauts de ligne et l'absence de ponctuation finale affectent le nombre de phrases.",
+        "title": "Comment compter les phrases dans un paragraphe : règles et exemples | TextToools",
+        "description": "Apprenez à compter les phrases dans un paragraphe et révisez les abréviations, les nombres décimaux, les guillemets, les sauts de ligne et le texte sans point.",
+        "summary": "Comptez les limites entre les phrases, pas seulement les points ou les lignes, et vérifiez les abréviations, les décimales et les fragments inachevés.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : comptez les phrases, pas les lignes",
+            "paragraphs": [
+              "Pour compter les phrases d'un paragraphe, identifiez chaque unité complète ; Ne vous contentez pas de compter les points ou les lignes. Le point, le point d'interrogation et le point d'exclamation marquent généralement une limite, mais les abréviations et les décimales peuvent rendre un point ambigu.",
+              "Un compteur automatique peut inclure comme phrase un fragment final sans ponctuation. Pour obtenir un résultat cohérent, utilisez la même méthode tout au long du texte et vérifiez manuellement les cas douteux."
+            ]
+          },
+          {
+            "heading": "Cochez les cas qui peuvent modifier le total",
+            "paragraphs": [
+              "Les programmes appliquent des règles pour décider où se termine une phrase et où commence une autre. Ces exemples montrent pourquoi les signes de ponctuation, les limites automatiques et les critères grammaticaux ne coïncident pas toujours."
+            ],
+            "examples": [
+              {
+                "text": "M. Ruiz est arrivé. La réunion commence maintenant.",
+                "count": 3,
+                "unit": "phrase",
+                "explanation": "Un segmenteur de navigateur peut interpréter le point de « M. ». comme une limite. TextToools compte trois segments ; vérifiez les abréviations si vous avez besoin d’un total exact."
+              },
+              {
+                "text": "La valeur est 3,5. Vérifiez-le à nouveau.",
+                "count": 2,
+                "unit": "phrase",
+                "explanation": "Le point décimal est conservé dans 3,5 ; les deux points finaux marquent deux phrases."
+              },
+              {
+                "text": "Il a dit : \"Attends.\" Puis il est parti.",
+                "count": 2,
+                "unit": "phrase",
+                "explanation": "Le point entre guillemets ferme la première phrase ; les guillemets n'en créent pas d'autres."
+              },
+              {
+                "text": "Cette idée se poursuit\nsur la ligne suivante.",
+                "count": 1,
+                "unit": "phrase",
+                "explanation": "Un saut de ligne à lui seul ne met pas fin à l’idée ni ne commence une autre phrase."
+              },
+              {
+                "text": "La dernière note n'a pas de point final",
+                "count": 1,
+                "unit": "phrase",
+                "explanation": "TextToools compte le segment final s'il contient des lettres ou des chiffres, même s'il n'a pas de ponctuation finale."
+              }
+            ]
+          },
+          {
+            "heading": "Suivez une méthode simple",
+            "paragraphs": [
+              "1. Lisez tout le paragraphe et marquez les fins possibles : points, points d'interrogation et points d'exclamation.",
+              "2. Vérifiez les points qui apparaissent dans les abréviations, les initiales ou les chiffres. Ne présumez pas qu'ils terminent une phrase ; lisez les mots des deux côtés.",
+              "3. Traite les sauts de ligne comme un formatage, sauf si le texte comporte également une limite de phrase. Une phrase peut s'étendre sur plusieurs lignes et une ligne peut contenir plusieurs phrases.",
+              "4. Décidez comment raconter un passage final sans ponctuation. Certaines tâches nécessitent des phrases complètes, même si un compteur les inclut comme unité.",
+              "5. Si le recomptage concerne une livraison formelle, suivez leurs instructions et appliquez systématiquement une seule méthode."
+            ]
+          },
+          {
+            "heading": "Pourquoi les compteurs peuvent varier",
+            "paragraphs": [
+              "Un point peut fermer une phrase, faire partie d'une abréviation ou séparer des décimales. Les directives de segmentation Unicode reconnaissent que le texte seul ne détermine pas toujours la limite correcte. Par conséquent, les programmes appliquent des règles qui peuvent varier en fonction de l'outil et de la langue.",
+              "Le compteur de mots TextToools utilise la segmentation des phrases du navigateur en fonction de la langue et compte un segment final contenant des lettres ou des chiffres. Il s'agit d'une estimation cohérente, et non d'un vérificateur grammatical ou d'une définition universelle. Si vous avez une limite stricte, vérifiez leurs règles et relisez manuellement les abréviations et les extraits."
+            ]
+          },
+          {
+            "heading": "Essayez le compteur de mots TextToools",
+            "paragraphs": [
+              "Collez l'intégralité du texte dans le compteur de mots de TextToools pour voir le nombre total de phrases ainsi que les mots, les caractères et les paragraphes. Le calcul se fait dans votre navigateur. Si une abréviation, une citation de ponctuation ou une dernière ligne incomplète modifie le résultat, vérifiez si le décompte automatique suit la règle dont vous avez besoin."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "En ajoutant le nombre de phrases au nombre de mots de TextToools, je l'ai conçu comme une estimation basée sur les limites de chaque langue, et non comme un simple décompte de points. La différence est perceptible dans les textes réels : un saut de ligne peut ne pas fermer une phrase, alors qu'une abréviation peut sembler le faire."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Segmenteur international",
+            "publisher": "Documents Web MDN",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"
+          },
+          {
+            "title": "Segmentation de texte Unicode (Annexe n° 29 de la norme Unicode)",
+            "publisher": "Le Consortium Unicode",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
+      "sort-list-alphabetically": {
+        "published": "2026-10-13",
+        "image": "blog-images/sort-list-alphabetically.svg",
+        "imageAlt": "Une liste classée par ordre alphabétique avec un ordre numérique naturel : pomme, article 2, article 10.",
+        "title": "Comment trier une liste par ordre alphabétique en ligne (A–Z, Z–A et chiffres) | TextToools",
+        "description": "Triez une liste de texte, choisissez comment trier les nombres, gérez les lignes vides et conservez les lignes d'une feuille de calcul ensemble.",
+        "summary": "Placez chaque élément sur une ligne, choisissez A-Z ou Z-A et examinez les options pour les nombres et les lignes vides.",
+        "sections": [
+          {
+            "heading": "Le moyen rapide de trier une liste de textes",
+            "paragraphs": [
+              "Placez chaque élément sur une ligne, sélectionnez la liste entière et triez-la de A à Z. Pour l'ordre alphabétique inversé, choisissez Z à A. Avant d'utiliser le résultat, vérifiez comment les nombres inclus dans les étiquettes sont ordonnés et ce qui doit arriver aux lignes vides.",
+              "Un ordinateur de texte modifie l'ordre des lignes ; Il ne sait pas quelles cellules vont ensemble dans une feuille de calcul, il ne supprime pas les doublons ni ne vérifie l'orthographe. Conservez une copie intacte si la commande originale est importante."
+            ]
+          },
+          {
+            "heading": "Préparez la liste avant de la commander",
+            "paragraphs": [
+              "Utiliser un article complet par ligne. Vérifiez que les noms ou les phrases n'ont pas été divisés en différentes lignes et supprimez les titres ou les notes qui n'appartiennent pas à la liste. Si les données proviennent d'une feuille de calcul, ne copiez pas une seule colonne lorsque ses valeurs sont liées à d'autres colonnes de la même ligne.",
+              "Décide quoi faire avec les lignes vides et les éléments répétés. Le tri ne supprime pas les doublons : les entrées identiques sont conservées. Les lignes vides peuvent être déplacées vers le début ou la fin ; supprimez-les uniquement s’ils n’ont aucune signification."
+            ]
+          },
+          {
+            "heading": "Choisissez A–Z, Z–A ou inversez l'ordre",
+            "paragraphs": [
+              "A à Z trie les lignes par ordre alphabétique croissant. Z – A les trie par ordre alphabétique puis inverse le résultat. Inverser l'ordre est différent : cela change la séquence d'origine sans trier, de sorte que la dernière ligne devient la première.",
+              "Par exemple, si la commande initiale est poire, pomme, banane, l'inverser donne banane, pomme, poire. Z – A, quant à lui, classe ces noms par ordre alphabétique à partir de la fin de l'alphabet."
+            ]
+          },
+          {
+            "heading": "Décidez comment classer les numéros",
+            "paragraphs": [
+              "Si les éléments incluent des chiffres, l'ordre numérique naturel correspond généralement à ce que nous attendons lors de la lecture des balises : l'élément 2 précède l'élément 10. Une comparaison caractère par caractère peut placer l'élément 10 en premier, car elle compare le chiffre 1 avant le 2.",
+              "Sur l'ordinateur de TextToools, l'ordre numérique naturel est activé par défaut. Laissez-le actif pour les chapitres, les versions ou les tâches numérotées ; désactivez-le si vous devez comparer caractère par caractère, par exemple lorsque les chiffres sont des identifiants et non des quantités. Cochez l'option : tous les ordinateurs ne traitent pas les nombres de la même manière."
+            ]
+          },
+          {
+            "heading": "Vérifier les accents, les lignes vides et les doublons",
+            "paragraphs": [
+              "Les règles peuvent changer en fonction de l'outil et de la langue. Sur l'ordinateur de TextToools, A à Z n'est pas sensible à la casse ni entre les lettres accentuées et non accentuées. Si la position exacte des noms avec accents est importante, vérifiez le résultat selon les règles que votre liste doit suivre.",
+              "L'ordinateur TextToools conserve les lignes vides par défaut et offre une option pour supprimer les lignes vides ou contenant uniquement des espaces. Il préserve également les doublons. Le tri change l'ordre ; Il ne nettoie ni ne valide la liste, vérifiez donc l'orthographe et les répétitions séparément."
+            ]
+          },
+          {
+            "heading": "Trie les données dans une feuille sans séparer les lignes",
+            "paragraphs": [
+              "Dans une feuille de calcul, triez toute la plage de colonnes associées, et non une seule colonne, afin que les autres valeurs de chaque personne restent dans la même ligne. Incluez les en-têtes uniquement lorsque les options de tri peuvent les traiter comme tels. Google Sheets explique comment sélectionner une plage et choisir la colonne et la direction.",
+              "Pour une liste simple avec un élément par ligne, il est plus simple d'utiliser un trieur de lignes. Pour un tableau contenant des noms, des dates ou d'autres champs associés, utilisez les options de plage de la feuille et examinez le résultat avant de l'enregistrer."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Lors de la création de l'ordinateur de texte pour TextToools, j'ai gardé Z – A séparé de la liste inversée. Dans un menu, ils peuvent se ressembler, mais ils résolvent des tâches différentes : une option ordonne les valeurs ; l'autre préserve la séquence originale et l'inverse simplement."
+            ]
+          },
+          {
+            "heading": "Test TextToools Ordinateur de texte",
+            "paragraphs": [
+              "Colle une liste, avec un élément par ligne, dans l'ordinateur de texte de TextToools. Choisissez A – Z, Z – A ou inversez l'ordre et décidez si l'ordre numérique naturel et l'élimination des lignes vides vous conviennent. Le processus se fait dans votre navigateur. Conservez l'original et examinez le résultat avant de le recoller dans un document ou une feuille de calcul."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Trier les données par ordre alphabétique ou numérique",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/3540681?hl=en"
+          }
+        ]
+      },
+      "how-long-to-read-1000-words": {
+        "image": "blog-images/reading-time-estimate.svg",
+        "imageAlt": "Estimation de la lecture en trois étapes : comptez les mots 1.000, divisez par les mots 200 par minute et obtenez environ cinq minutes.",
+        "title": "Combien de temps faut-il pour lire les mots 1.000 ? | TextToools",
+        "description": "Calculez le temps qu'il faut pour lire les mots 1.000, appliquez la formule de mots par minute et ajustez-la à votre rythme, votre texte et votre contexte.",
+        "summary": "Avec 200 mots par minute, la lecture des mots 1.000 prend environ cinq minutes. Le temps effectif dépend du texte, de la langue, de l'objectif et du rythme personnel.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : environ cinq minutes à 200 mots par minute",
+            "paragraphs": [
+              "Si vous lisez des mots 1.000 à des mots 200 par minute, le calcul est de cinq minutes. Avec 238 mots par minute, cela représente environ 4 minutes et 13 secondes une fois arrondi à la seconde suivante. La lecture du même texte à haute voix avec 183 mots par minute prend environ 5 minutes et 28 secondes.",
+              "Il s’agit d’estimations et non de promesses. Un texte simple et familier peut prendre moins de temps ; un dense ou inconnu peut en transporter davantage. Ils influencent également votre rythme et si vous lisez en silence ou à haute voix."
+            ]
+          },
+          {
+            "heading": "La formule du temps de lecture",
+            "paragraphs": [
+              "Pour estimer le temps à partir des mots, divisez le nombre de mots par la vitesse de lecture en mots par minute. Le résultat est en minutes : temps de lecture = nombre de mots ÷ mots par minute.",
+              "Par exemple, 1.000 ÷ 200 = 5 minutes. Un article de mots 1.500 à la même vitesse prend des minutes 7,5, c'est-à-dire des minutes 7 et des secondes 30. Si le compteur arrondit à la seconde près, les fractions de seconde sont arrondies à l'unité supérieure.",
+              "La formule est simple ; choisir une vitesse réaliste est le plus difficile. Utilisez toujours la même méthode de comptage et incluez des titres ou d'autres éléments si le lecteur est censé les lire également."
+            ]
+          },
+          {
+            "heading": "Combien de temps faut-il pour lire les mots 1.000 à différentes vitesses ?",
+            "paragraphs": [
+              "À 150 mots par minute, les mots 1.000 prennent des minutes 6 et des secondes 40. À 200 mots par minute, 5 minutes. À 238 mots par minute, environ 4 minutes et 13 secondes. À 260 mots par minute, environ 3 minutes et 51 secondes.",
+              "À voix haute, les mots 183 par minute équivalent à environ des minutes 5 et des secondes 28. Un discours ou une présentation peut être prolongé en ajoutant des pauses, de l'emphase, des réactions du public ou la durée d'un diaporama. Répéter le texte lui-même est plus fiable que d’utiliser une vitesse de lecture silencieuse."
+            ]
+          },
+          {
+            "heading": "Ce que disent les recherches sur la vitesse de lecture moyenne",
+            "paragraphs": [
+              "Une revue et une méta-analyse par Marc Brysbaert de 2019 ont regroupé les résultats des études 190. Il a estimé que les adultes qui lisent silencieusement en anglais obtiennent en moyenne 238 mots par minute dans les textes de non-fiction et 260 dans la fiction ; la moyenne en lecture à haute voix était de 183 mots par minute.",
+              "Il s’agit de références utiles et non d’objectifs à atteindre par tous les lecteurs. Ils décrivent des moyennes d'échantillons de recherche, ils ne garantissent pas le rythme d'une personne, un article spécifique ou une langue quelconque. Les vitesses étudiées pour l'anglais ne doivent pas être appliquées directement au chinois et ne remplacent pas le timing de votre propre texte."
+            ]
+          },
+          {
+            "heading": "Pourquoi votre temps de lecture peut être différent",
+            "paragraphs": [
+              "La familiarité influence l’effort requis par un texte. Vous pouvez avancer rapidement sur un sujet que vous connaissez et plus lentement lorsque vous rencontrez de nouveaux noms, concepts ou instructions. Le vocabulaire technique, les phrases longues, les arguments complexes et les tableaux peuvent rendre un article plus long que ne le suggère le décompte.",
+              "L’objectif compte également. Survoler un fait n’est pas la même chose qu’étudier un chapitre, vérifier une source ou lire attentivement pour en vérifier l’exactitude. Vous pouvez faire une pause, relire, prendre des notes ou basculer entre le texte et un graphique. Une formule de mots par minute ne peut pas prendre en compte ces actions.",
+              "La langue et le système d’écriture comptent également. Les décomptes ne sont pas directement comparés entre les langues : certains systèmes ne séparent pas les mots par des espaces comme l'anglais. Utilisez une méthode et une rapidité adaptées au texte plutôt que de transférer une référence anglaise inchangée."
+            ]
+          },
+          {
+            "heading": "Comment mesurer votre propre vitesse de lecture",
+            "paragraphs": [
+              "1. Choisissez un passage représentatif dans la langue et le format que vous lisez habituellement. Évitez celui que vous connaissez déjà par cœur.",
+              "2. Comptez les mots de manière cohérente. Démarrez un chronomètre lorsque vous démarrez et arrêtez-le lorsque vous avez terminé ; Incluez les pauses normales si vous recherchez une estimation réaliste.",
+              "3. Divisez le nombre de mots par le temps en minutes. Si vous lisez des mots 600 en trois minutes, votre vitesse sur ce morceau est de 200 mots par minute.",
+              "4. Répétez le test avec deux ou trois fragments similaires et calculez une moyenne approximative. Un extrait court peut être affecté par une interruption ou par un paragraphe inhabituellement facile ou difficile.",
+              "5. Gardez la compréhension à l’esprit. Si en lisant plus vite vous perdez des idées importantes, cette vitesse n’est pas utile pour planifier une lecture attentive."
+            ]
+          },
+          {
+            "heading": "Utiliser judicieusement les estimations de lecture",
+            "paragraphs": [
+              "Dans un article ou une leçon, la durée approximative vous aide à décider si vous souhaitez lire maintenant ou enregistrer le contenu pour plus tard. Indiquez qu’il s’agit d’une estimation et utilisez une méthode claire, plutôt que de la présenter comme l’heure exacte dont aura besoin chaque visiteur.",
+              "Pour les discours, les cours ou les tests chronométrés, répétez ou entraînez-vous sur le matériel réel et mesurez le temps. Incluez les pauses, les transitions, les questions et le temps nécessaire pour regarder des images ou des exemples. Une estimation en lecture silencieuse ne prend pas en compte ces éléments.",
+              "Prévoyez du temps supplémentaire si les paramètres d'accessibilité, la fatigue, la traduction ou le besoin de relire jouent un rôle. L’estimation doit guider et non forcer quiconque à lire à une certaine vitesse."
+            ]
+          },
+          {
+            "heading": "Essayez le calculateur de temps de lecture TextToools",
+            "paragraphs": [
+              "Collez le fragment que vous souhaitez estimer dans le calculateur de temps de lecture TextToools et ajustez la vitesse à l'utilisation prévue. Les versions anglaise et espagnole calculent à partir du nombre de mots ; La version chinoise utilise des caractères sans espaces, sans ponctuation ni symboles par minute. Les moyennes des recherches en anglais ne sont pas utiles pour évaluer la lecture en chinois.",
+              "Utilisez le résultat pour comparer des ébauches ou planifier à l’avance, et chronométrez votre lecture lorsque vous avez besoin d’une estimation fiable. Il s’agit d’un point de départ et non d’une mesure de compréhension ou d’une date limite."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Combien de mots lisons-nous par minute ? Une revue et une méta-analyse du taux de lecture",
+            "publisher": "Journal de la mémoire et du langage",
+            "url": "https://doi.org/10.1016/j.jml.2019.104047"
+          }
+        ]
+      },
+      "how-word-counters-count-hyphenated-words": {
+        "modified": "2026-10-05",
+        "image": "blog-images/hyphenated-words.svg",
+        "imageAlt": "Comparaison visuelle : « bien cuit » compte pour un groupe et « bien cuit » pour trois groupes séparés par des espaces.",
+        "title": "Les mots coupés comptent-ils pour un ou deux ? | TextToools",
+        "description": "Découvrez comment TextToools compte les mots avec trait d'union avec des exemples d'espaces, de tirets, de ponctuation et de sauts de ligne.",
+        "summary": "Chaque compteur peut appliquer des règles différentes. Consultez la règle d'espacement TextToools, examinez les exemples et suivez les instructions de livraison, le cas échéant.",
+        "sections": [
+          {
+            "heading": "La réponse courte pour TextToools",
+            "paragraphs": [
+              "Dans le compteur de mots TextToools, une expression telle que « bien connu » compte comme un mot si elle ne contient pas d'espaces. TextToools sépare les mots par des espaces et non par des traits d'union.",
+              "Il s'agit de la règle TextToools, et non d'une norme universelle pour les écoles, les éditeurs ou les applications. Si une tâche ou une plateforme indique sa propre méthode, suivez ces instructions et vérifiez le résultat avec son compteur."
+            ]
+          },
+          {
+            "heading": "Exemples : espaces, tirets et signes de ponctuation",
+            "paragraphs": [
+              "Ces exemples suivent la règle du mode anglais : chaque groupe continu sans espaces compte pour un mot. Les résultats correspondent au compteur de TextToools."
+            ],
+            "examples": [
+              {
+                "text": "bien connu",
+                "count": 1,
+                "explanation": "Il n’y a pas d’espaces à l’intérieur de l’expression, elle forme donc un seul groupe."
+              },
+              {
+                "text": "à la pointe de la technologie",
+                "count": 1,
+                "explanation": "Les traits d'union ne créent pas de mots supplémentaires ; seuls des espaces séparent les groupes."
+              },
+              {
+                "text": "écrivain bien connu",
+                "count": 2,
+                "explanation": "L'espace sépare « bien connu » de « écrivain »."
+              },
+              {
+                "text": "bien connu",
+                "count": 3,
+                "explanation": "Les espaces forment trois groupes : « bien », la ligne et « connu »."
+              },
+              {
+                "text": "bien connu\nécrivain",
+                "count": 2,
+                "explanation": "Le saut de ligne est également un espace, donc « écrivain » démarre un autre groupe."
+              },
+              {
+                "text": "bien connu",
+                "count": 1,
+                "explanation": "Le tiret court sans espaces reste dans le même groupe."
+              }
+            ]
+          },
+          {
+            "heading": "Pourquoi un autre compteur peut afficher un résultat différent",
+            "paragraphs": [
+              "Les compteurs ne doivent pas nécessairement séparer le texte de la même manière. Un compteur spatial préserve la ponctuation et les tirets au sein de chaque groupe ; un analyseur linguistique peut appliquer d'autres limites. C'est pourquoi un mot avec trait d'union peut avoir des comptes différents.",
+              "Avec cette règle simple, un nombre, une URL ou un emoji séparé par des espaces compte également comme un groupe. Il s’agit d’une méthode transparente, mais elle ne détermine pas si chaque groupe est un mot ayant une signification linguistique ou académique."
+            ]
+          },
+          {
+            "heading": "Comment vérifier une limite de mots",
+            "paragraphs": [
+              "Tout d’abord, confirmez ce que comprend la limite : elle peut compter uniquement le texte principal ou inclure des titres, des notes, des légendes et des références. Ne présumez pas que toutes les tâches utilisent la même portée.",
+              "Utilisez ensuite le compteur requis par votre école, éditeur ou formulaire. Si aucun n'est spécifié, appliquez toujours la même méthode et laissez une certaine marge. Vous pouvez également coller le brouillon dans le compteur de mots de TextToools pour voir le résultat basé sur les espaces."
+            ]
+          },
+          {
+            "heading": "Une note sur le texte chinois",
+            "paragraphs": [
+              "Ce guide explique le compteur de mots anglais. En mode chinois, TextToools utilise la segmentation des mots du navigateur au lieu de les séparer uniquement par des espaces ; par conséquent, les exemples anglais ne définissent pas le décompte en chinois."
+            ]
+          }
+        ]
+      },
+      "how-to-count-characters-including-spaces": {
+        "modified": "2026-10-04",
+        "image": "blog-images/character-count.svg",
+        "imageAlt": "Une lettre visible avec un accent combiné et une séquence d'émojis liés, chacun étant compté comme un groupe de graphèmes.",
+        "title": "Comment compter les caractères, y compris les espaces",
+        "description": "Découvrez ce qu'un compteur de caractères comprend (espaces, ponctuation, sauts de ligne et emojis) et vérifiez les limites.",
+        "summary": "Une liste pratique pour compter les caractères dans une description, un titre, un formulaire ou un message court.",
+        "sections": [
+          {
+            "heading": "Qu'est-ce qui compte comme personnage ?",
+            "paragraphs": [
+              "Le nombre comprend généralement des lettres, des chiffres, des signes de ponctuation, des espaces, des tabulations et des sauts de ligne. Si la limite comprend des espaces, elle conserve les espaces dans le texte que vous vérifiez.",
+              "Les émojis et les symboles combinés sont comptés différemment selon le système. Certains environnements disposent d'unités UTF-16 ; d'autres, des points de code Unicode ou des groupes de graphèmes visibles. C'est pourquoi un réseau social peut afficher un total différent de celui d'un comptable général."
+            ]
+          },
+          {
+            "heading": "Vérifiez le texte exact que vous allez envoyer",
+            "paragraphs": [
+              "Colle le texte final, avec la ponctuation et les sauts de ligne, dans le compteur de caractères. Vérifiez le total et comptez sans espaces, et utilisez la définition indiquée par la plateforme cible.",
+              "Si possible, laissez une marge en dessous de la limite. Certaines plateformes traitent les liens, le formatage et les emojis d’une manière particulière."
+            ]
+          },
+          {
+            "heading": "Une note sur les emojis et Unicode",
+            "paragraphs": [
+              "Un symbole visible n’est pas toujours stocké comme une seule unité. Les modificateurs de teint, les émojis joints et les accents mélangés peuvent être constitués de plusieurs points de code ou unités.",
+              "TextToools compte les groupes de graphèmes Unicode : une lettre visible avec des marques combinées ou une séquence d'émojis liés compte pour un caractère. Si la limite est stricte, utilisez le compteur de la plateforme cible comme référence finale."
+            ]
+          }
+        ]
+      },
+      "clean-pasted-text-without-losing-formatting": {
+        "image": "blog-images/clean-pasted-text.svg",
+        "imageAlt": "Comparaison avant et après : nettoyage des espaces supplémentaires et des lignes vides sans supprimer les sauts de paragraphe.",
+        "title": "Comment nettoyer le texte collé sans perdre sa structure",
+        "description": "Supprime les espaces indésirables et les lignes vides du texte copié sans perdre les sauts de ligne et les paragraphes nécessaires.",
+        "summary": "Une méthode étape par étape pour organiser le texte copié sans aplatir accidentellement les listes ou les paragraphes.",
+        "sections": [
+          {
+            "heading": "Commencez par une copie",
+            "paragraphs": [
+              "Le texte copié à partir d'un PDF, d'une page Web ou d'un document peut inclure des espaces supplémentaires, des indentations irrégulières ou trop de lignes vides. Conservez l'original afin de pouvoir comparer et récupérer tous les formats importants.",
+              "Collez le texte dans le nettoyeur et vérifiez l'aperçu. Vous pouvez supprimer les espaces au début et à la fin des lignes, réduire les espaces horizontaux répétés et limiter les lignes vides consécutives."
+            ]
+          },
+          {
+            "heading": "Gardez des pauses qui ont du sens",
+            "paragraphs": [
+              "Les sauts peuvent séparer les éléments de liste, les adresses, les titres et les paragraphes. Ne convertissez pas tous les sauts en espaces, sauf si vous souhaitez former un seul paragraphe.",
+              "Modifiez une option à la fois et examinez le résultat. Si des lignes vides séparent des sections, conservez-les au lieu de toutes les supprimer."
+            ]
+          },
+          {
+            "heading": "Vérifiez le texte propre avant utilisation",
+            "paragraphs": [
+              "Comparez le résultat avec l'original, surtout s'il existe des listes numérotées, du code, des tableaux ou de la poésie. Le nettoyage automatique ne peut pas savoir quelles lacunes étaient intentionnelles.",
+              "Le nettoyeur fonctionne dans votre navigateur. Copiez le résultat lorsqu'il est correct et conservez l'original si le formatage exact est important."
+            ]
+          }
+        ]
+      },
+      "how-to-cut-word-count-without-losing-meaning": {
+        "modified": "2026-10-06",
+        "image": "blog-images/word-count-editing.svg",
+        "imageAlt": "Avant et après édition : Une phrase répétitive de neuf mots est réduite à six sans perdre son idée principale.",
+        "title": "Comment réduire le nombre de mots sans perdre le sens",
+        "description": "Réduisez les mots d'un brouillon avec une révision ciblée, sans perdre le sens, les preuves ou les nuances importantes.",
+        "summary": "Un ordre pratique pour détecter les répétitions, raccourcir les phrases et vérifier chaque changement par rapport à la limite.",
+        "sections": [
+          {
+            "heading": "Commencez par l'idée, pas par le comptoir",
+            "paragraphs": [
+              "Avant de couper, notez ce que le paragraphe doit communiquer : l'idée principale, les preuves à l'appui et le contexte dont le lecteur a besoin. Conservez une copie de l’original pour comparer la signification après chaque révision.",
+              "Vérifiez également les instructions. La limite peut inclure des titres, des citations, des notes de bas de page ou des références, ou exclure certains éléments. Confirmez la portée et la méthode de comptage avant de décider quelle quantité couper."
+            ]
+          },
+          {
+            "heading": "Supprimer les répétitions avant les détails utiles",
+            "paragraphs": [
+              "Recherchez des idées répétées dans la même phrase ou dans des phrases proches. Des expressions comme « à ce moment » peuvent être réduites à « maintenant » ; Des mots comme « actuellement » peuvent répéter la même référence temporelle. Gardez l'accent si c'est intentionnel, mais supprimez-le lorsqu'il ne fournit pas d'informations."
+            ],
+            "examples": [
+              {
+                "text": "À ce stade, l'équipe examine actuellement le projet.",
+                "count": 12,
+                "explanation": "12. « À ce moment précis » et « actuellement » expriment la même référence temporelle."
+              },
+              {
+                "text": "L'équipe est en train d'examiner le brouillon.",
+                "count": 7,
+                "explanation": "7. La phrase conserve une référence temporelle et la même information principale."
+              },
+              {
+                "text": "Chaque participant a terminé la tâche.",
+                "count": 7,
+                "explanation": "7. « Chacun » peut être raccourci si l'accent supplémentaire n'est pas intentionnel."
+              },
+              {
+                "text": "Chaque participant a terminé la tâche.",
+                "count": 5,
+                "explanation": "5. L'idée reste claire sans l'expression en double."
+              }
+            ]
+          },
+          {
+            "heading": "Utilisez des mots plus courts uniquement s'ils maintiennent la précision",
+            "paragraphs": [
+              "Remplacez les expressions longues par des expressions directes lorsqu'elles signifient la même chose dans leur contexte. Préférez un verbe concret à une phrase vague et éliminez les introductions vides qui retardent l’idée principale.",
+              "Ne modifiez pas le degré de certitude ou la portée pour raccourcir une phrase. Des mots comme « peut », « certains » et « dans cet échantillon » peuvent indiquer des limites importantes. Conservez les termes techniques si une alternative réduit la précision."
+            ]
+          },
+          {
+            "heading": "Protéger les preuves et le contexte",
+            "paragraphs": [
+              "Préserve les détails qui permettent de comprendre ou de vérifier l'idée : noms, dates, unités, sources, conditions et transitions nécessaires. Une phrase plus courte n’améliore pas la situation si elle masque qui a fait quoi ou élimine la raison d’une conclusion.",
+              "Après avoir raccourci un paragraphe, lisez-le sans regarder l'original. Si l’idée, la preuve ou la relation entre les concepts n’est plus comprise, récupérez le contexte nécessaire."
+            ]
+          },
+          {
+            "heading": "Racontez la version que vous allez livrer",
+            "paragraphs": [
+              "Relisez à chaque fois, puis vérifiez le texte intégral. Collez la version finale dans le compteur de mots TextToools et suivez la méthode indiquée par votre devoir, éditorial ou formulaire ; les compteurs peuvent séparer les mots différemment.",
+              "Enfin, lisez le texte à haute voix et vérifiez qu'il semble toujours naturel et approprié. Le but n’est pas d’utiliser le moins de mots possible, mais d’exprimer clairement l’idée et de suivre les instructions."
+            ]
+          }
+        ]
+      },
+      "how-long-should-a-blog-post-be": {
+        "modified": "2026-10-09",
+        "image": "blog-images/blog-post-length.svg",
+        "imageAlt": "Un processus de rédaction en trois parties : comprendre la question du lecteur, fournir une réponse utile et réviser jusqu'à ce que la tâche soit terminée.",
+        "title": "Combien de mots un article de blog doit-il contenir ? Guide pratique | TextToools",
+        "description": "Choisissez la longueur d'un article en fonction de l'intention du lecteur, de la complexité du sujet et de l'évaluation, et non d'un nombre fixe pour le référencement.",
+        "summary": "Il n’existe pas de nombre de mots idéal pour tous les articles. Utilisez la tâche du lecteur, les preuves disponibles et une révision claire pour décider quand elle sera terminée.",
+        "sections": [
+          {
+            "heading": "Réponse courte : se termine lorsque le lecteur a ce dont il a besoin",
+            "paragraphs": [
+              "Une entrée doit être de la longueur nécessaire pour répondre de manière claire et responsable à la question réelle du lecteur, et pas plus. Il n’existe pas de décompte unique qui fonctionne pour tous les sujets, publics et formats.",
+              "Commencez par la fonction de l'élément. Une définition peut ne nécessiter que quelques paragraphes. Un guide pratique peut nécessiter des étapes, des exemples et un dépannage. Un guide de recherche peut nécessiter des méthodes, des tests, des limites et des sources. La différence réside dans le travail requis pour répondre, pas dans un nombre magique.",
+              "Si vous avez besoin d'un devis pour planifier, utilisez-le pour réserver du temps ou organiser votre brouillon. Ensuite, laissez les besoins du lecteur décider quel contenu restera."
+            ]
+          },
+          {
+            "heading": "Pourquoi il n’existe pas d’extension universelle idéale",
+            "paragraphs": [
+              "L'expression « meilleure extension pour un article de blog » peut laisser penser que tous les articles rivalisent dans les mêmes conditions, mais ce n'est pas le cas. Ceux qui recherchent une information rapide ont besoin de quelque chose de différent de ceux qui doivent suivre un processus complexe ou comparer plusieurs options.",
+              "Fixer un objectif avant de comprendre la question peut produire deux problèmes opposés : un article superficiel qui omet le contexte nécessaire ou un texte volumineux qui répète la même idée. Atteindre un chiffre précis ne rend aucun d’eux utile.",
+              "Le guide de Google sur le contenu utile indique explicitement qu'il n'y a pas de nombre de mots préféré. Cela ne signifie pas que l’extension n’affecte jamais l’expérience ; Cela signifie qu’il ne faut pas le considérer comme une formule de positionnement. La priorité est que la page soit utile, fiable et complète par rapport à son objectif."
+            ]
+          },
+          {
+            "heading": "Ce que l'enquête la plus récente peut et ne peut pas dire",
+            "paragraphs": [
+              "d'Orbit Media 2026, basée sur les réponses des professionnels du marketing de contenu 1.042, évalue la longueur moyenne des articles à 1.312 mots. Il s’agit d’un instantané de ce que publient les personnes interrogées, et non d’une recommandation pour tous les articles.",
+              "Une moyenne globale n’indique pas le nombre de mots requis par une réponse particulière ni ne démontre que l’ajout de mots produit de meilleurs résultats. Les personnes interrogées travaillent sur différents sujets et publics, et leurs résultats déclarés ne constituent pas un test contrôlé d'une ampleur spécifique. Utilisez la figure comme contexte et non comme exigence."
+            ]
+          },
+          {
+            "heading": "Adapter l'extension à la tâche du lecteur",
+            "paragraphs": [
+              "Pour une réponse rapide, commencez par la réponse, expliquez toutes les mises en garde importantes et proposez une étape suivante si cela est utile. Si le lecteur peut terminer le devoir sans une longue introduction, éliminez-le.",
+              "Pour un guide étape par étape, il comprend les conditions préalables, les étapes dans le bon ordre, un exemple réaliste et les erreurs susceptibles de modifier le résultat. Conserve les détails qui aident à terminer ou à vérifier la tâche ; éliminer ce qui ne fait que répéter les instructions.",
+              "Dans une comparaison, un résumé de recherche ou un guide de référence, expliquez comment vous avez sélectionné et vérifié les informations. Il définit les termes, montre les différences pertinentes, cite les sources originales et indique ce que les tests ne permettent pas de conclure. Ce travail peut justifier un article plus long, mais la longueur doit répondre aux preuves et non les remplacer."
+            ]
+          },
+          {
+            "heading": "Une méthode pratique pour décider de l'extension",
+            "paragraphs": [
+              "1. Écrivez la question du lecteur en une phrase. Précisez la personne, la situation et la décision ou la tâche. « Combien de mots une entrée doit-elle contenir ? » C'est spacieux; \"Comment une petite entreprise peut-elle savoir si son brouillon répond à la personne qui vient d'une recherche ?\" Précisez mieux la commande.",
+              "2. Décidez ce qu’une réponse satisfaisante devrait inclure. Notez les faits, les étapes, les exemples, les mises en garde et les sources dont une personne a besoin pour agir en toute confiance. Séparez les informations essentielles du contexte qui n’est qu’intéressant.",
+              "3. Consultez les résultats actuels et les sources fiables pour comprendre l’intention, et non pour copier un chiffre. Recherchez des définitions, des instructions, des comparaisons ou des recherches originales. Notez les questions qui restent sans réponse et vérifiez les affirmations importantes dans les sources primaires.",
+              "4. Préparez un bref aperçu basé sur ces exigences. Attribuez une fonction à chaque section et publiez bientôt la réponse la plus directe. Si deux sections répètent la même idée, combinez-les avant d'écrire.",
+              "5. Écrivez la réponse complète sans forcer toutes les sections à avoir la même longueur. Ajoutez des exemples lorsqu’ils aident à appliquer une idée et des preuves lorsqu’une affirmation a besoin d’être étayée. N'étendez pas une explication simple pour arriver à un chiffre arbitraire.",
+              "6. Passez en revue le bénéfice, puis vérifiez le décompte final. Supprimez les répétitions, préservez les nuances et les preuves nécessaires, et confirmez que le titre, l'introduction et la fin correspondent au contenu. Si le devoir ou l'éditorial nécessite une méthode de comptage spécifique, suivez-la."
+            ]
+          },
+          {
+            "heading": "Utiliser les résultats de recherche pour comprendre, pas pour copier",
+            "paragraphs": [
+              "L'examen des pages qui s'affichent pour une requête peut révéler le format et les sous-questions attendues par les lecteurs. Il permet également de détecter des détails pratiques confus, obsolètes ou manquant. Cette recherche est utile même si les pages ont des extensions très différentes.",
+              "Ne présumez pas que le résultat le plus long est le meilleur modèle ou que faire correspondre son nombre de mots rendra votre article plus compétitif. Les résultats changent et peuvent être positionnés pour des raisons autres que la prolongation. Utilisez-les pour comprendre la tâche, puis fournissez des informations originales et précises qui servent votre public."
+            ]
+          },
+          {
+            "heading": "Le comptage et le temps de lecture sont des outils et non des notes de qualité.",
+            "paragraphs": [
+              "Un compteur vous permet de mesurer un brouillon, de comparer les versions et de respecter une limite explicite. Il ne peut pas vous dire si le raisonnement est clair, si les données sont correctes ou si la question a reçu une réponse. Si une publication définit votre méthode, utilisez cette définition ; Les comptables peuvent traiter différemment la ponctuation, les traits d’union, les titres et les références.",
+              "Le temps de lecture est également une estimation. TextToools vous permet de modifier la vitesse de lecture supposée, ce qui permet de comparer les brouillons ou d'informer le lecteur, mais chaque personne lit à un rythme différent et peut sauter ou relire des sections. Utilisez ceci comme une ligne directrice et non comme une promesse que toutes les visites se termineront à ce moment-là."
+            ]
+          },
+          {
+            "heading": "Quand le brouillon est-il terminé ?",
+            "paragraphs": [
+              "Le projet est prêt lorsqu'il répond rapidement à la question, soutient les affirmations importantes, inclut les détails nécessaires pour appliquer la réponse et explique ses limites. Il doit également être facile à naviguer : des titres descriptifs, des paragraphes ciblés et des exemples qui clarifient plutôt que décorent.",
+              "Lisez-le du point de vue du lecteur. Trouvez-vous la réponse ? Y a-t-il des sections qui en répètent d’autres ? Avez-vous conservé la source, la date, l'unité ou l'exception qui modifie la façon dont une instruction est comprise ? Éliminez ce qui n'aide pas et récupérez toutes les données dont l'absence rend la réponse trompeuse.",
+              "Le résultat final peut contenir les mots 500, 1.300 ou plus. Ces chiffres sont une conséquence du travail et non des règles à suivre. Un article utile gagne en longueur en aidant quelqu’un à accomplir une tâche réelle."
+            ]
+          },
+          {
+            "heading": "Que se passe-t-il si l'affectation définit une plage de mots ?",
+            "paragraphs": [
+              "Certaines tâches, éditeurs et clients définissent un minimum ou un maximum. Considérez cette plage comme une condition pratique ainsi que les besoins du lecteur, et non comme une preuve que l'ajout de mots améliore l'article. Confirmez ce qui est inclus dans le décompte : les titres, en-têtes, légendes, notes et références peuvent être comptés différemment.",
+              "S'il existe un minimum, répondez-y à l'aide d'explications, de preuves ou d'exemples pertinents, et non de remplissage. S'il y a un maximum, protégez d'abord la réponse et ses nuances essentielles ; puis supprimez les répétitions ou le contexte secondaire. S'il n'y a pas de place pour des informations importantes, demandez si une annexe ou une page connexe est autorisée au lieu de supprimer le contexte dont le lecteur a besoin."
+            ]
+          },
+          {
+            "heading": "Si la gomme semble trop courte ou trop longue",
+            "paragraphs": [
+              "Un court brouillon n’est pas nécessairement incomplet. Comparez-le au plan : définit-il des termes moins connus, répond-il à toutes les parties de la question, soutient-il les déclarations nécessaires et mentionne-t-il des exceptions qui pourraient modifier les conseils ? Ajoutez uniquement ce qui aide le lecteur à agir ou à comprendre.",
+              "Dans un long brouillon, recherchez les déclarations répétées, les introductions génériques, le contexte non pertinent et les sous-thèmes qui méritent des conseils séparés. Préservez le contexte, les nuances et les exemples qui changent ou vérifient la réponse. Après l'édition, relisez l'ouverture et les titres pour confirmer qu'ils décrivent l'article final."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Créer du contenu utile, fiable et axé sur les personnes",
+            "publisher": "Centre de recherche Google",
+            "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          },
+          {
+            "title": "Statistiques de blogs 2026 : ce que 1 042 spécialistes du marketing de contenu nous ont dit sur ce qui fonctionne",
+            "publisher": "Orbite Media Studios",
+            "url": "https://www.orbitmedia.com/blog/blogging-statistics/"
+          }
+        ]
+      },
+      "find-replace-text-safely": {
+        "modified": "2026-10-12",
+        "image": "blog-images/find-replace-safely.svg",
+        "imageAlt": "Un flux en trois étapes pour rechercher et remplacer : recherchez une expression, remplacez-la et examinez trois correspondances.",
+        "title": "Comment rechercher et remplacer du texte en toute sécurité : un guide pratique | TextToools",
+        "description": "Apprenez à choisir des correspondances précises, à éviter les substitutions indésirables, à vérifier le décompte et à mettre à jour en toute sécurité le texte répété.",
+        "summary": "Une méthode pratique pour rechercher et remplacer du texte répété sans modifier plus que prévu.",
+        "sections": [
+          {
+            "heading": "Réponse courte : veuillez vérifier la portée avant de remplacer",
+            "paragraphs": [
+              "Rechercher et remplacer est plus sûr si vous le traitez comme un petit processus d'édition, et non comme un bouton appuyer et oublier. Définissez exactement ce qui doit changer, limitez la correspondance, vérifiez combien d'occurrences seront modifiées et examinez le texte modifié dans son contexte.",
+              "Ceci est important car un remplacement peut mettre à jour plusieurs occurrences à la fois. Corriger le nom d'un projet peut être simple ; La modification d'un mot, d'une date ou d'une abréviation courante peut altérer par inadvertance des exemples, des liens, des citations ou leur signification."
+            ]
+          },
+          {
+            "heading": "Définit le changement exact avant la recherche",
+            "paragraphs": [
+              "Notez l'ancien et le nouveau texte avant de le modifier. Incluez la ponctuation, les espaces, les majuscules et toutes les versions ou dates pertinentes. Si vous modifiez le nom d'un produit, par exemple, décidez s'il doit également changer les titres, les citations, les URL, le code et les anciennes notes, ou simplement le texte principal actuel.",
+              "Déterminez ensuite la portée : un paragraphe, un document entier ou plusieurs fichiers. Une substitution sûre dans une courte annonce peut s'avérer risquée dans un long rapport. Si l'éditeur agit sur l'ensemble du document, limitez d'abord la sélection lorsque cela est possible ou travaillez sur une copie."
+            ]
+          },
+          {
+            "heading": "Choisir les options de correspondance d'intention",
+            "paragraphs": [
+              "Le respect de la casse contrôle la capitalisation. Désactivé, une recherche de « draft » peut également trouver « Draft » ; activés, ce sont des correspondances différentes. Utilisez-le pour les identifiants, les acronymes, les noms de fichiers et les balises dont la majuscule a une signification. Si vous souhaitez le rendre uniforme, laissez-le désactivé seulement après avoir vérifié la plage.",
+              "L'option de mot entier permet de distinguer un mot indépendant de ces mêmes lettres au sein d'un mot plus long. La recherche de « soleil » en tant que mot complet ne change pas « console ». Cependant, il ne comprend pas la grammaire : la ponctuation, comme une écriture, peut marquer une limite ; Passez en revue les termes composés et avec trait d’union s’ils sont importants.",
+              "Cette option est utile avec les mots courants, mais ne remplace pas la vérification du nombre et du contexte. C'est une bonne idée d'essayer d'abord un fragment si vous recherchez des noms, des acronymes, des codes de produits ou du texte avec des accents."
+            ]
+          },
+          {
+            "heading": "Vérifie si la recherche est littérale ou utilise des modèles",
+            "paragraphs": [
+              "Une recherche littérale trouve exactement les caractères que vous tapez. Dans Rechercher et remplacer de TextToools, des symboles tels que \"+\", \".\" et \"(\" sont recherchés sous forme de texte normal, et non comme opérateurs d'expression régulière. Par exemple, la recherche de \"a+b\" trouve cette séquence exacte, et non \"un ou plusieurs a suivis de b\". Le texte de remplacement est inséré exactement tel que vous le tapez ; une substitution vide élimine délibérément la correspondance et une recherche vide ne modifie pas le texte.",
+              "La recherche de modèles, souvent appelée expressions régulières, est une autre fonction permettant de rechercher des règles telles que divers formats de date. Ne présumez pas que tous les éditeurs interprètent les caractères spéciaux de la même manière. Google Docs fournit une option explicite pour utiliser des expressions régulières ; allumez-le intentionnellement et vérifiez les correspondances avant de le remplacer."
+            ]
+          },
+          {
+            "heading": "Un processus minutieux pour remplacer plusieurs correspondances",
+            "paragraphs": [
+              "1. Enregistrez une copie ou confirmez que vous pouvez annuler la modification et vérifier l'historique des versions. De cette façon, vous aurez un moyen de récupérer l'original si le résultat est plus grand que prévu.",
+              "2. Recherchez d'abord le texte précédent. Lisez plusieurs matchs dans leur contexte et décidez lesquels doivent changer. Si le nombre est étonnamment élevé, arrêtez et affinez la phrase ou ajustez les options de majuscules et de mots entiers.",
+              "3. Écrivez exactement comment le nouveau texte doit apparaître. Vérifiez les majuscules, les espaces, la ponctuation et que la nouvelle expression s'intègre dans toutes les phrases où elle sera insérée.",
+              "4. Appliquez la substitution et enregistrez le décompte. TextToools remplace toutes les correspondances à la fois ; Le numéro est une vérification utile et non une garantie que chaque modification est correcte.",
+              "5. Passez en revue des exemples du début, du milieu et de la fin, ainsi que des titres, des listes, des citations et toutes les sections importantes. Lisez la phrase entière si changer un mot peut affecter le ton ou la grammaire.",
+              "6. Recherchez à nouveau l’ancienne expression et vérifiez la nouvelle. Vérifiez qu'il ne vous manque aucune correspondance attendue et que la substitution n'a pas créé de répétitions étranges ni modifié le texte étranger."
+            ]
+          },
+          {
+            "heading": "Exemples d'échec d'un remplacement rapide",
+            "paragraphs": [
+              "Changer le nom de famille d'une personne peut accidentellement changer un autre mot contenant les mêmes lettres. La substitution de « May » peut affecter le mois de mai, un nom propre ou le verbe anglais « may » ; les options de majuscules et de mots entiers sont utiles, mais le contexte détermine toujours si chaque correspondance est valide.",
+              "Vous pouvez également modifier le contenu qui doit rester exact : une citation, un texte juridique, un exemple de code, une URL, un e-mail ou une balise historique. Si ces sections ont des règles différentes, modifiez-les séparément au lieu d'appliquer un remplacement général à tout.",
+              "Enfin, remplacer une phrase courte par une phrase plus longue peut créer des espaces doubles, des mots répétés ou des problèmes grammaticaux. Le décompte indique combien de substitutions ont eu lieu, et non si les phrases révisées sont lues correctement."
+            ]
+          },
+          {
+            "heading": "Gardez le contrôle du texte et du résultat final",
+            "paragraphs": [
+              "Avant de partager ou de publier une modification avec rupture, conservez l'original et comparez le résultat. Si le document est collaboratif, faites savoir à ceux qui l’examinent quelle expression a changé et où la vérifier. Pour les textes confidentiels ou sensibles, utilisez un processus et un outil approuvés pour ce matériel.",
+              "TextToools Rechercher et remplacer effectue le remplacement dans le navigateur et affiche le nombre de correspondances, vous permettant de consulter un bloc de texte sans le télécharger vers un service de traitement de texte. Quel que soit l'outil utilisé, examinez le document final, pas seulement les résultats de la recherche, et conservez une copie récupérable jusqu'à ce que vous soyez satisfait."
+            ]
+          },
+          {
+            "heading": "Une réflexion du fondateur",
+            "paragraphs": [
+              "En travaillant sur Rechercher et remplacer pour TextToools, une chose m'est devenue claire : le nombre de correspondances fait partie de l'édition, pas un détail mineur. Le consulter avant de s’appuyer sur un changement massif peut révéler que votre recherche est plus large que prévu. C'est pourquoi je recommande d'utiliser ce numéro comme point de contrôle, puis de lire le texte modifié dans son contexte."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte qui respectent la vie privée car votre texte ne doit pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Rechercher et remplacer des mots dans un document, une feuille de calcul ou une présentation",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/62754?hl=en"
+          },
+          {
+            "title": "Rechercher et remplacer du texte dans Word",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/training/find-and-replace-text-in-word"
+          }
+        ]
+      }
+    }
+  }
+}

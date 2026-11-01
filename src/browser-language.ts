@@ -8,6 +8,7 @@ export function getBrowserLocaleSuggestion(
     if (languageTag === 'en' || languageTag.startsWith('en-')) return 'en'
     if (languageTag === 'es' || languageTag.startsWith('es-')) return 'es'
     if (languageTag === 'pt' || languageTag.startsWith('pt-br')) return 'pt-BR'
+    if (languageTag === 'fr' || languageTag.startsWith('fr-')) return 'fr'
     if (
       languageTag === 'zh' ||
       languageTag === 'zh-cn' ||
