@@ -1,5 +1,92 @@
 [
   {
+    "slug": "what-does-lorem-ipsum-mean",
+    "published": "2026-11-01",
+    "title": "What Does Lorem Ipsum Mean? Its Origin and History | TextToools",
+    "description": "Learn what the familiar Lorem Ipsum passage means, where it came from, and why designers use it as dummy text.",
+    "summary": "Lorem Ipsum is altered Latin used as dummy text. Its familiar passage traces to Cicero, but the standard text is not a coherent sentence to translate.",
+    "image": "blog-images/lorem-ipsum-meaning.svg",
+    "imageAlt": "Lorem Ipsum shown as placeholder text, with a note about its Latin source and design history.",
+    "sections": [
+      {
+        "heading": "What is Lorem Ipsum?",
+        "paragraphs": [
+          "Lorem Ipsum is placeholder, or dummy, text used in typesetting and design when a layout needs text before the final copy is ready. It lets people preview the shape and density of paragraphs without mistaking the words for approved content.",
+          "It is not a special instruction or a language of its own. The familiar passage is altered Latin drawn from an older source."
+        ]
+      },
+      {
+        "heading": "Does Lorem Ipsum have a meaning?",
+        "paragraphs": [
+          "The standard Lorem Ipsum passage is not a coherent Latin sentence that can be translated as a whole. Its opening was altered from a phrase in Cicero: the familiar “lorem” is a clipped form of “dolorem,” meaning “pain” in that original context.",
+          "The original passage discusses pain and pleasure. That does not make the modern filler paragraph meaningful copy: words have been changed and rearranged, so it should be treated as placeholder text, not as a quotation or translation."
+        ]
+      },
+      {
+        "heading": "Where did the text come from?",
+        "paragraphs": [
+          "The source is Cicero’s philosophical work *De finibus bonorum et malorum*, written in 45 BCE. The familiar Lorem Ipsum passage draws on sections 1.10.32 and 1.10.33; the commonly used text is an altered version, not a verbatim excerpt.",
+          "This connection was identified by tracing the unusual Latin word “consectetur” in printed examples back to Cicero’s text. The passage’s age and its later use as filler are two different parts of its history."
+        ]
+      },
+      {
+        "heading": "How did Lorem Ipsum become familiar?",
+        "paragraphs": [
+          "Lorem Ipsum became widely known in modern design through Letraset transfer sheets in the 1960s, which included sample passages for layouts. Desktop-publishing software later helped spread it to digital page design.",
+          "Its long history explains why the same opening appears in so many mockups. It does not mean every generated Lorem Ipsum passage is the same: generators can vary the wording and length."
+        ]
+      },
+      {
+        "heading": "When is dummy text useful?",
+        "paragraphs": [
+          "In an early wireframe or visual mockup, temporary text can help show paragraph density, line wrapping, and the balance between elements while final copy is still being written.",
+          "Choose a length and structure close to the content the design will eventually contain. A short Latin filler paragraph cannot stand in for a long heading, a localized label, or structured real-world content."
+        ]
+      },
+      {
+        "heading": "When should you replace it?",
+        "paragraphs": [
+          "Replace Lorem Ipsum with real or representative copy before usability testing, content review, or publishing. As Nielsen Norman Group explains, meaningless filler can distract people in a usability session and hide content requirements or layout problems.",
+          "Do not use dummy text as the only label or instruction for a form field. WCAG calls for labels or instructions when a control expects user input; provide clear information people can use instead."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I think of Lorem Ipsum as a temporary layout aid, not a shortcut for finished content. Realistic wording often changes the length and meaning of a page, so I recommend replacing filler before asking people to review or use a design."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Lorem ipsum",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Lorem-ipsum"
+      },
+      {
+        "title": "What is Lorem Ipsum?",
+        "publisher": "Lorem Ipsum",
+        "url": "https://www.lipsum.com/"
+      },
+      {
+        "title": "Promptframes: Evolving the Wireframe for the Age of AI",
+        "publisher": "Nielsen Norman Group",
+        "url": "https://www.nngroup.com/articles/promptframes/"
+      },
+      {
+        "title": "Understanding Success Criterion 3.3.2: Labels or Instructions",
+        "publisher": "W3C Web Accessibility Initiative",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html"
+      }
+    ]
+  },
+  {
     "slug": "microsoft-word-character-count",
     "published": "2026-10-30",
     "title": "How to Count Characters in Microsoft Word (Document or Selection) | TextToools",

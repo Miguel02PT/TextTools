@@ -331,6 +331,91 @@
     "description": "关于字数、字符、文本清理和写作工作流的实用指南。",
     "intro": "简明实用的文本处理指南，帮助你理解统计规则、整理内容并更高效地写作。",
     "posts": {
+      "what-does-lorem-ipsum-mean": {
+        "image": "blog-images/zh-cn/lorem-ipsum-meaning.svg",
+        "imageAlt": "Lorem Ipsum 作为占位文本，并介绍其拉丁语来源和设计应用历史。",
+        "title": "Lorem Ipsum 是什么意思？它的起源与历史 | TextToools",
+        "description": "了解常见的 Lorem Ipsum 文本是什么意思、源自何处，以及设计师为何用它作为占位文字。",
+        "summary": "Lorem Ipsum 是经过改写的拉丁文占位文本。常见段落源自西塞罗，但它本身并不是可以连贯翻译的句子。",
+        "sections": [
+          {
+            "heading": "什么是 Lorem Ipsum？",
+            "paragraphs": [
+              "Lorem Ipsum 是排版和设计中使用的占位文本，也称虚拟文本。当最终文案尚未准备好时，它可以为版面提供文字，让人预览段落的形状和密度，同时避免误把它当成已审核的内容。",
+              "它不是特殊指令，也不是一种独立语言。常见段落是经过改写的拉丁文，源自古代文献。"
+            ]
+          },
+          {
+            "heading": "Lorem Ipsum 有实际含义吗？",
+            "paragraphs": [
+              "标准 Lorem Ipsum 段落并不是可以整体翻译的连贯拉丁语句。它的开头改写自西塞罗的一句话：常见的“lorem”是“dolorem”的截短形式，在原文语境中表示“痛苦”。",
+              "原文讨论的是痛苦与快乐。这并不意味着现代填充段落本身有实际意义：其中的词语经过改动和重新组合，因此应将其视为占位文本，而不是引文或译文。"
+            ]
+          },
+          {
+            "heading": "这段文字从何而来？",
+            "paragraphs": [
+              "它源自西塞罗的哲学著作 *De finibus bonorum et malorum*，成书于公元前 45 年。常见的 Lorem Ipsum 段落取材于第 1.10.32 和 1.10.33 节；如今使用的文本经过改写，并非原文逐字摘录。",
+              "研究者通过追溯印刷样本中不常见的拉丁词“consectetur”，将它与西塞罗的原文联系起来。这段文字的古代出处与后来作为占位文本的用途，是历史中的两个不同阶段。"
+            ]
+          },
+          {
+            "heading": "Lorem Ipsum 如何广为人知？",
+            "paragraphs": [
+              "20 世纪 60 年代，Letraset 转印字贴包含用于版面示例的 Lorem Ipsum 段落，推动了它在现代设计领域的普及。之后，桌面排版软件又让它在数字页面设计中流传开来。",
+              "它悠久的应用历史解释了为什么许多设计稿都使用相同的开头。但这并不意味着所有生成的 Lorem Ipsum 都完全相同：不同工具可能会改变词语和长度。"
+            ]
+          },
+          {
+            "heading": "什么时候适合使用占位文本？",
+            "paragraphs": [
+              "在早期线框图或视觉稿中，临时文本可以帮助预览段落密度、换行效果和元素布局，而正式文案还在撰写中。",
+              "尽量选择与最终内容长度和结构相近的文本。简短的拉丁文段落无法代替较长的标题、本地化标签或结构化的真实内容。"
+            ]
+          },
+          {
+            "heading": "什么时候应该替换它？",
+            "paragraphs": [
+              "在可用性测试、内容审核或发布之前，请将 Lorem Ipsum 替换为真实或具有代表性的文案。Nielsen Norman Group 指出，无意义的占位文本可能会分散测试参与者的注意力，并掩盖内容要求或版面问题。",
+              "不要将虚拟文本作为表单字段唯一的标签或说明。WCAG 要求在控件需要用户输入时提供标签或说明；请提供清晰、可供用户理解的信息。"
+            ]
+          },
+          {
+            "heading": "创始人的一点想法",
+            "paragraphs": [
+              "我把 Lorem Ipsum 看作临时的版面辅助内容，而不是完成正式文案的捷径。真实的措辞常会改变页面的长度和含义，因此我建议在请人审核或使用设计稿之前替换占位文本。"
+            ]
+          },
+          {
+            "heading": "关于作者",
+            "paragraphs": [
+              "本文由 TextToools 创始人撰写。我开发注重隐私的文本工具，因为我认为你的文本不应离开浏览器。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lorem ipsum",
+            "publisher": "Encyclopaedia Britannica",
+            "url": "https://www.britannica.com/topic/Lorem-ipsum"
+          },
+          {
+            "title": "什么是 Lorem Ipsum？",
+            "publisher": "Lorem Ipsum",
+            "url": "https://www.lipsum.com/"
+          },
+          {
+            "title": "Promptframes：人工智能时代的线框图演进",
+            "publisher": "Nielsen Norman Group",
+            "url": "https://www.nngroup.com/articles/promptframes/"
+          },
+          {
+            "title": "理解成功准则 3.3.2：标签或说明",
+            "publisher": "W3C Web 无障碍倡议",
+            "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html"
+          }
+        ]
+      },
       "microsoft-word-character-count": {
         "image": "blog-images/zh-cn/word-character-count.svg",
         "imageAlt": "Microsoft Word 文档和所选文本的字符数示例，并提醒你确认空格的计算规则。",

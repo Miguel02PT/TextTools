@@ -161,6 +161,55 @@ test('Microsoft Word character-count guide matches the counter and official help
   }
 })
 
+test('Lorem Ipsum guide answers the meaning query and stays distinct from the generator page', () => {
+  const slug = 'what-does-lorem-ipsum-mean'
+  const post = parsedEnglishBlogPosts.find(
+    (article: { slug: string }) => article.slug === slug,
+  )
+
+  assert.ok(post)
+  assert.match(post.title, /^What Does Lorem Ipsum Mean\?/)
+  assert.doesNotMatch(post.title, /generator/i)
+  assert.ok(post.sections.some(
+    (section: { heading: string }) => /does lorem ipsum have a meaning/i.test(section.heading),
+  ))
+  assert.ok(post.sections.some(
+    (section: { heading: string }) => /where did the text come from/i.test(section.heading),
+  ))
+  assert.ok(post.sources.some(
+    (source: { url: string }) => source.url === 'https://www.britannica.com/topic/Lorem-ipsum',
+  ))
+  assert.ok(post.sources.some(
+    (source: { url: string }) => source.url === 'https://www.nngroup.com/articles/promptframes/',
+  ))
+  assert.ok(post.sources.some(
+    (source: { url: string }) =>
+      source.url === 'https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html',
+  ))
+  assert.match(post.sections[1].paragraphs.join(' '), /not a coherent Latin sentence/i)
+  assert.match(post.sections[2].paragraphs.join(' '), /not a verbatim excerpt/i)
+
+  const loremGenerator = JSON.parse(
+    readFileSync(new URL('../src/tool-pages.json', import.meta.url), 'utf8'),
+  ).find((tool: { id: string }) => tool.id === 'lorem-ipsum')
+  assert.ok(loremGenerator)
+  assert.match(loremGenerator.title, /Lorem Ipsum Generator/)
+  assert.doesNotMatch(loremGenerator.title, /what does lorem ipsum mean/i)
+
+  for (const localePost of [
+    parsedChineseContent.blog.posts[slug],
+    parsedSpanishContent.blog.posts[slug],
+    parsedPortugueseContent.blog.posts[slug],
+  ]) {
+    assert.ok(localePost, `${slug} is localized`)
+    assert.equal(localePost.sections.length, post.sections.length)
+    assert.deepEqual(
+      localePost.sources.map(({ url }: { url: string }) => url).sort(),
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+    )
+  }
+})
+
 test('case-converter guide examples match all six formats and line behavior', () => {
   const slug = 'how-to-change-text-case'
   const post = parsedEnglishBlogPosts.find(

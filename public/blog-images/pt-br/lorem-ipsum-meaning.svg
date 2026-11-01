@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">O que significa Lorem Ipsum?</title>
+  <desc id="desc">Lorem Ipsum é latim alterado usado como texto provisório, com raízes na obra de Cícero.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1060" cy="70" r="150" fill="#E8E1F1"/>
+  <circle cx="145" cy="610" r="140" fill="#EAE5F0"/>
+  <text x="80" y="82" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  HISTÓRIA DO TEXTO</text>
+  <text x="80" y="145" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">O que significa Lorem Ipsum?</text>
+  <rect x="80" y="190" width="1040" height="190" rx="22" fill="#FFFFFF"/>
+  <text x="112" y="248" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">LATIM ALTERADO  /  TEXTO PROVISÓRIO</text>
+  <text x="112" y="315" fill="#172033" font-family="Georgia, serif" font-size="38" font-weight="700">Lorem ipsum dolor sit amet</text>
+  <text x="112" y="355" fill="#647084" font-family="Arial, sans-serif" font-size="20">Uma fonte antiga, modificada para layouts</text>
+  <rect x="80" y="415" width="1040" height="125" rx="22" fill="#E8E1F1"/>
+  <text x="112" y="462" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">CÍCERO  /  45 A.C.  /  HISTÓRIA DO DESIGN</text>
+  <text x="112" y="510" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">Texto temporário, não uma tradução final</text>
+</svg>

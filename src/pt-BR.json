@@ -543,6 +543,91 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "what-does-lorem-ipsum-mean": {
+        "image": "blog-images/pt-br/lorem-ipsum-meaning.svg",
+        "imageAlt": "Lorem Ipsum como texto provisório, com uma nota sobre sua origem latina e sua história no design.",
+        "title": "O que significa Lorem Ipsum? Origem e história | TextToools",
+        "description": "Entenda o que significa o conhecido texto Lorem Ipsum, de onde ele veio e por que é usado como texto provisório em projetos.",
+        "summary": "Lorem Ipsum é latim alterado usado como texto provisório. O trecho conhecido tem origem em Cícero, mas não forma uma frase coerente para tradução.",
+        "sections": [
+          {
+            "heading": "O que é Lorem Ipsum?",
+            "paragraphs": [
+              "Lorem Ipsum é um texto provisório, ou de preenchimento, usado em composição tipográfica e design quando um layout precisa de texto antes de a versão final estar pronta. Ele permite visualizar a forma e a densidade dos parágrafos sem confundi-los com conteúdo aprovado.",
+              "Não é uma instrução especial nem um idioma próprio. O trecho conhecido é latim alterado, derivado de uma fonte antiga."
+            ]
+          },
+          {
+            "heading": "Lorem Ipsum tem algum significado?",
+            "paragraphs": [
+              "O trecho padrão de Lorem Ipsum não é uma frase coerente em latim que possa ser traduzida por inteiro. Sua abertura foi alterada a partir de uma frase de Cícero: o conhecido “lorem” é uma forma abreviada de “dolorem”, que naquele contexto original significa “dor”.",
+              "O trecho original discute dor e prazer. Isso não transforma o texto provisório moderno em conteúdo com sentido: as palavras foram alteradas e reorganizadas, portanto ele deve ser tratado como texto temporário, não como citação ou tradução."
+            ]
+          },
+          {
+            "heading": "De onde veio o texto?",
+            "paragraphs": [
+              "A fonte é a obra filosófica de Cícero *De finibus bonorum et malorum*, escrita em 45 a.C. O trecho conhecido de Lorem Ipsum tem origem nas seções 1.10.32 e 1.10.33; o texto usado atualmente é uma versão alterada, não uma citação literal.",
+              "Essa relação foi identificada ao rastrear a palavra latina incomum “consectetur” em exemplos impressos até o texto de Cícero. A idade do trecho e seu uso posterior como texto provisório são partes diferentes de sua história."
+            ]
+          },
+          {
+            "heading": "Como Lorem Ipsum se tornou tão conhecido?",
+            "paragraphs": [
+              "Lorem Ipsum se popularizou no design moderno por meio das folhas de transferência Letraset, nos anos 1960, que incluíam trechos de exemplo para layouts. Mais tarde, os programas de editoração eletrônica ajudaram a levá-lo para o design de páginas digitais.",
+              "Sua longa história explica por que a mesma abertura aparece em tantas maquetes. Isso não significa que todo texto Lorem Ipsum gerado seja igual: os geradores podem variar as palavras e o tamanho."
+            ]
+          },
+          {
+            "heading": "Quando o texto provisório é útil?",
+            "paragraphs": [
+              "Em um wireframe inicial ou uma maquete visual, o texto temporário pode ajudar a visualizar a densidade dos parágrafos, a quebra de linhas e o equilíbrio entre os elementos enquanto o conteúdo final ainda está sendo escrito.",
+              "Escolha um tamanho e uma estrutura parecidos com os do conteúdo que será usado. Um parágrafo curto em latim não substitui um título longo, um rótulo localizado ou conteúdo real estruturado."
+            ]
+          },
+          {
+            "heading": "Quando você deve substituí-lo?",
+            "paragraphs": [
+              "Substitua Lorem Ipsum por conteúdo real ou representativo antes de testes de usabilidade, revisões de conteúdo ou publicação. O Nielsen Norman Group explica que um texto sem sentido pode distrair participantes durante os testes e esconder requisitos de conteúdo ou problemas de layout.",
+              "Não use texto provisório como único rótulo ou instrução de um campo de formulário. A WCAG exige rótulos ou instruções quando um controle espera dados; forneça informações claras que as pessoas possam usar."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Vejo Lorem Ipsum como um recurso temporário de layout, não como um atalho para o conteúdo final. Um texto realista costuma mudar o tamanho e o significado de uma página, por isso prefiro substituir o preenchimento antes de pedir que alguém revise ou use um design."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas de texto que respeitam a privacidade porque acredito que seu texto não precisa sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lorem ipsum",
+            "publisher": "Encyclopaedia Britannica",
+            "url": "https://www.britannica.com/topic/Lorem-ipsum"
+          },
+          {
+            "title": "O que é Lorem Ipsum?",
+            "publisher": "Lorem Ipsum",
+            "url": "https://www.lipsum.com/"
+          },
+          {
+            "title": "Promptframes: a evolução do wireframe na era da IA",
+            "publisher": "Nielsen Norman Group",
+            "url": "https://www.nngroup.com/articles/promptframes/"
+          },
+          {
+            "title": "Entenda o Critério de Sucesso 3.3.2: Rótulos ou Instruções",
+            "publisher": "Iniciativa de Acessibilidade na Web do W3C",
+            "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html"
+          }
+        ]
+      },
       "microsoft-word-character-count": {
         "image": "blog-images/pt-br/word-character-count.svg",
         "imageAlt": "Contagem de caracteres no Microsoft Word para um documento e um trecho selecionado, com um lembrete para conferir os espaços.",

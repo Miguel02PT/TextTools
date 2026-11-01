@@ -368,6 +368,91 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "what-does-lorem-ipsum-mean": {
+        "image": "blog-images/es/lorem-ipsum-meaning.svg",
+        "imageAlt": "Lorem Ipsum como texto de relleno, con una nota sobre su origen latino y su historia en el diseño.",
+        "title": "¿Qué significa Lorem Ipsum? Su origen e historia | TextToools",
+        "description": "Descubre qué significa el conocido texto Lorem Ipsum, de dónde procede y por qué se usa como texto de relleno en diseño.",
+        "summary": "Lorem Ipsum es latín alterado que se usa como texto de relleno. El pasaje conocido procede de Cicerón, pero no es una oración coherente que pueda traducirse.",
+        "sections": [
+          {
+            "heading": "¿Qué es Lorem Ipsum?",
+            "paragraphs": [
+              "Lorem Ipsum es texto provisional, o de relleno, que se usa en composición tipográfica y diseño cuando se necesita texto para una maqueta antes de tener el contenido final. Permite previsualizar la forma y la densidad de los párrafos sin confundirlos con texto aprobado.",
+              "No es una instrucción especial ni un idioma propio. El pasaje conocido es latín alterado que procede de una fuente antigua."
+            ]
+          },
+          {
+            "heading": "¿Lorem Ipsum tiene significado?",
+            "paragraphs": [
+              "El pasaje estándar de Lorem Ipsum no es una oración coherente en latín que pueda traducirse en conjunto. Su inicio se modificó a partir de una frase de Cicerón: el conocido «lorem» es una forma recortada de «dolorem», que en ese contexto original significa «dolor».",
+              "El pasaje original trata del dolor y el placer. Eso no convierte el texto de relleno moderno en contenido con sentido: se han cambiado y reordenado palabras, por lo que debe tratarse como texto provisional, no como cita ni traducción."
+            ]
+          },
+          {
+            "heading": "¿De dónde procede el texto?",
+            "paragraphs": [
+              "La fuente es la obra filosófica de Cicerón *De finibus bonorum et malorum*, escrita en el año 45 a. C. El pasaje conocido de Lorem Ipsum se basa en las secciones 1.10.32 y 1.10.33; el texto habitual es una versión modificada, no un extracto literal.",
+              "La conexión se identificó al rastrear la inusual palabra latina «consectetur» en ejemplos impresos hasta el texto de Cicerón. La antigüedad del pasaje y su uso posterior como relleno son dos partes distintas de su historia."
+            ]
+          },
+          {
+            "heading": "¿Cómo se popularizó Lorem Ipsum?",
+            "paragraphs": [
+              "Lorem Ipsum se difundió en el diseño moderno gracias a las hojas de transferencia Letraset de los años sesenta, que incluían pasajes de muestra para maquetas. El software de autoedición lo extendió después al diseño digital de páginas.",
+              "Su larga historia explica por qué el mismo comienzo aparece en tantas maquetas. No significa que todo texto Lorem Ipsum generado sea igual: los generadores pueden variar las palabras y la longitud."
+            ]
+          },
+          {
+            "heading": "¿Cuándo resulta útil el texto de relleno?",
+            "paragraphs": [
+              "En un wireframe inicial o una maqueta visual, el texto provisional puede mostrar la densidad de los párrafos, el salto de línea y el equilibrio entre elementos mientras se redacta el contenido definitivo.",
+              "Elige una longitud y una estructura parecidas a las del contenido final. Un párrafo latino breve no sustituye un título largo, una etiqueta localizada ni contenido real estructurado."
+            ]
+          },
+          {
+            "heading": "¿Cuándo deberías sustituirlo?",
+            "paragraphs": [
+              "Sustituye Lorem Ipsum por texto real o representativo antes de las pruebas de usabilidad, la revisión del contenido o la publicación. Nielsen Norman Group explica que el relleno sin sentido puede distraer a los participantes de una prueba y ocultar requisitos de contenido o problemas de diseño.",
+              "No uses texto de relleno como única etiqueta o instrucción de un campo. WCAG exige etiquetas o instrucciones cuando un control espera datos; ofrece información clara que las personas puedan utilizar."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Considero Lorem Ipsum una ayuda temporal para la maquetación, no un atajo para el contenido definitivo. Un texto realista suele cambiar la longitud y el significado de una página, así que recomiendo sustituir el relleno antes de pedir a alguien que revise o use un diseño."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lorem ipsum",
+            "publisher": "Encyclopaedia Britannica",
+            "url": "https://www.britannica.com/topic/Lorem-ipsum"
+          },
+          {
+            "title": "¿Qué es Lorem Ipsum?",
+            "publisher": "Lorem Ipsum",
+            "url": "https://www.lipsum.com/"
+          },
+          {
+            "title": "Promptframes: evolución del wireframe en la era de la IA",
+            "publisher": "Nielsen Norman Group",
+            "url": "https://www.nngroup.com/articles/promptframes/"
+          },
+          {
+            "title": "Comprender el criterio 3.3.2: etiquetas o instrucciones",
+            "publisher": "Iniciativa de Accesibilidad Web del W3C",
+            "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html"
+          }
+        ]
+      },
       "microsoft-word-character-count": {
         "image": "blog-images/es/word-character-count.svg",
         "imageAlt": "Recuento de caracteres en Microsoft Word para un documento y un fragmento seleccionado; recuerda comprobar los espacios.",
