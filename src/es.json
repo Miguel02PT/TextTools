@@ -1806,6 +1806,80 @@
             ]
           }
         ]
+      },
+      "count-words-in-powerpoint": {
+        "modified": "2026-11-02",
+        "image": "blog-images/es/powerpoint-word-count.svg",
+        "imageAlt": "Una diapositiva y una página de notas se combinan en un único recuento de palabras.",
+        "title": "Cómo contar palabras en PowerPoint (diapositivas y notas) | TextToools",
+        "description": "Consulta el recuento de palabras de una presentación de PowerPoint, descubre qué incluye y cuenta las notas del orador por separado.",
+        "summary": "La propiedad Palabras de PowerPoint suma el texto de las diapositivas y las páginas de notas. Aprende dónde verla y cómo comprobar solo las notas.",
+        "sections": [
+          {
+            "heading": "Respuesta rápida: consulta las propiedades de la presentación",
+            "paragraphs": [
+              "En PowerPoint de escritorio para Windows, abre Archivo > Información, selecciona Mostrar todas las propiedades y consulta la propiedad Palabras. Microsoft indica que este total incluye el texto de las diapositivas y de las páginas de notas.",
+              "Es el recuento de toda la presentación, no solo de las diapositivas. Para contar únicamente las notas del orador, exporta las páginas de notas a Word y consulta allí el recuento."
+            ]
+          },
+          {
+            "heading": "Contar palabras en PowerPoint para Windows",
+            "paragraphs": [
+              "1. Abre la presentación en la aplicación de escritorio de PowerPoint.",
+              "2. Selecciona Archivo y después Información.",
+              "3. En el panel de propiedades de la derecha, selecciona Mostrar todas las propiedades.",
+              "4. Busca Palabras en la lista ampliada. El valor suma el texto de las diapositivas y de las páginas de notas.",
+              "Los nombres exactos pueden cambiar si PowerPoint está configurado en otro idioma. Microsoft documenta este método para la aplicación de escritorio de Windows."
+            ]
+          },
+          {
+            "heading": "¿Qué incluye el recuento de palabras de PowerPoint?",
+            "paragraphs": [
+              "Microsoft explica que la propiedad Palabras cuenta el texto de las diapositivas y de las páginas de notas. Si las notas del orador incluyen un guion, recordatorios o citas, se suman al mismo total que el texto de las diapositivas.",
+              "Para comparar rápidamente con un contador de texto plano, este ejemplo tiene seis grupos separados por espacios o saltos de línea: «Project review / Quarterly results / Next steps». Es el resultado del recuento por espacios de TextToools, no una predicción de cómo PowerPoint analizará todos los objetos de texto."
+            ],
+            "examples": [
+              {
+                "text": "Project review\nQuarterly results\nNext steps",
+                "count": 6,
+                "explanation": "TextToools cuenta como palabra cada grupo separado por un espacio o un salto de línea. La propiedad de presentación de PowerPoint puede usar otras reglas."
+              }
+            ]
+          },
+          {
+            "heading": "Contar solo las notas del orador",
+            "paragraphs": [
+              "La propiedad de la presentación de PowerPoint combina el texto de las diapositivas y el de las páginas de notas. Microsoft documenta la creación de documentos en Word para trabajar con las notas por separado.",
+              "En PowerPoint, selecciona Archivo > Exportar > Crear documentos y, después, Crear documentos en Microsoft Word. Elige un diseño y envía el documento a Word. Word abrirá el resultado como un documento y mostrará el recuento de palabras. Comprueba que el diseño y el contenido seleccionados coincidan con lo que quieres contar."
+            ]
+          },
+          {
+            "heading": "Por qué otro contador puede mostrar una cifra distinta",
+            "paragraphs": [
+              "Los contadores pueden aplicar reglas distintas a la puntuación, las palabras con guion, los saltos de línea y otros textos. También pueden medir contenidos diferentes: toda la presentación, solo el texto seleccionado de las diapositivas o las notas junto con las diapositivas no son el mismo material.",
+              "Antes de comparar resultados, comprueba que ambos recuentos cubren el mismo contenido. Si pegas texto en el contador de palabras de TextToools, este cuenta los grupos separados por espacios del texto pegado; no abre archivos de PowerPoint ni incluye texto que no hayas copiado. Para un límite estricto, sigue las instrucciones de quien recibirá el trabajo y compruébalo con la aplicación que especifique."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Al crear el contador de palabras de TextToools, quise que su regla fuera fácil de comprobar: los espacios y los saltos de línea separan los grupos, y el texto permanece en el navegador. En una presentación, recomiendo revisar primero el alcance: las notas pueden cambiar el total aunque las diapositivas no hayan cambiado."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto respetuosas con la privacidad porque tu texto no debería tener que salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Buscar el recuento de palabras de una presentación",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+          }
+        ]
       }
     }
   }

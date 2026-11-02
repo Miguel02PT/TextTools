@@ -1959,6 +1959,80 @@
             ]
           }
         ]
+      },
+      "count-words-in-powerpoint": {
+        "modified": "2026-11-02",
+        "image": "blog-images/zh-cn/powerpoint-word-count.svg",
+        "imageAlt": "幻灯片和备注页合并为一个字数统计结果。",
+        "title": "如何统计 PowerPoint 演示文稿中的字数（幻灯片和备注）| TextToools",
+        "description": "查找 PowerPoint 演示文稿的字数，了解统计范围，并单独统计演讲者备注。",
+        "summary": "PowerPoint 的“字数”属性会合并统计幻灯片和备注页中的文本。了解在哪里查看，以及如何单独统计备注。",
+        "sections": [
+          {
+            "heading": "快速答案：查看演示文稿属性",
+            "paragraphs": [
+              "在 Windows 桌面版 PowerPoint 中，打开“文件”>“信息”，选择“显示所有属性”，然后查看“字数”。Microsoft 表示，该总数包含幻灯片和备注页中的文本。",
+              "这是整份演示文稿的总数，并非仅统计幻灯片。若要只统计演讲者备注，请将备注页导出到 Word，再查看 Word 字数。"
+            ]
+          },
+          {
+            "heading": "在 Windows 版 PowerPoint 中统计字数",
+            "paragraphs": [
+              "1. 在 PowerPoint 桌面应用中打开演示文稿。",
+              "2. 选择“文件”，然后选择“信息”。",
+              "3. 在右侧的属性面板中选择“显示所有属性”。",
+              "4. 在展开的属性列表中找到“字数”。该数值同时统计幻灯片文本和备注页文本。",
+              "如果 PowerPoint 使用其他显示语言，菜单名称可能不同。Microsoft 文档说明的是 Windows 桌面版的这一方法。"
+            ]
+          },
+          {
+            "heading": "PowerPoint 字数统计包括哪些内容？",
+            "paragraphs": [
+              "Microsoft 说明，“字数”属性会统计幻灯片和备注页中的文本。如果演讲者备注里有讲稿、提醒或引用，它们会与幻灯片文本一起计入总数。",
+              "要与纯文本计数器快速比较，下面的示例按空格或换行分隔后有 6 个词组：“Project review / Quarterly results / Next steps”。这是 TextToools 按空白字符统计的结果，并不表示 PowerPoint 对每种文本对象都采用相同规则。"
+            ],
+            "examples": [
+              {
+                "text": "Project review\nQuarterly results\nNext steps",
+                "count": 6,
+                "explanation": "TextToools 将空格或换行分隔的每组内容计为一个词。PowerPoint 的演示文稿属性可能采用不同的统计规则。"
+              }
+            ]
+          },
+          {
+            "heading": "只统计演讲者备注",
+            "paragraphs": [
+              "PowerPoint 的演示文稿属性会合并统计幻灯片文本和备注页文本。Microsoft 文档建议使用 Word 创建讲义，以便单独处理备注。",
+              "在 PowerPoint 中选择“文件”>“导出”>“创建讲义”，然后选择“在 Microsoft Word 中创建讲义”。选择版式并将讲义发送到 Word。Word 会将结果作为文档打开并显示字数。请确认所选版式和内容符合你的统计范围。"
+            ]
+          },
+          {
+            "heading": "为什么其他字数统计工具可能会显示不同结果",
+            "paragraphs": [
+              "不同的计数器可能采用不同规则处理标点、带连字符的词语、换行和其他文本。统计范围也可能不同：整份演示文稿、选中的幻灯片文本，以及备注与幻灯片的合计并不是同一份内容。",
+              "比较结果前，先确认两种统计覆盖的是相同内容。将文本粘贴到 TextToools 字数统计器时，它会统计粘贴内容中由空白字符分隔的词组；它不会读取 PowerPoint 文件，也不会统计你没有复制的文字。若有严格的提交字数限制，请遵循接收方的要求，并使用其指定的应用程序复核。"
+            ]
+          },
+          {
+            "heading": "创始人的一点想法",
+            "paragraphs": [
+              "开发 TextToools 字数统计器时，我希望统计规则简单易核对：空格和换行会分隔词组，文本始终留在浏览器中。统计演示文稿时，我建议先确认统计范围——即使幻灯片没有变化，备注也可能改变总数。"
+            ]
+          },
+          {
+            "heading": "关于作者",
+            "paragraphs": [
+              "作者：TextToools 创始人。我开发注重隐私的文本工具，因为我认为你的文本不应离开浏览器。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "查找演示文稿的字数",
+            "publisher": "Microsoft 支持",
+            "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+          }
+        ]
       }
     }
   }

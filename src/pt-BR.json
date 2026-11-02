@@ -2348,6 +2348,80 @@
             "url": "https://support.microsoft.com/en-us/word/training/find-and-replace-text-in-word"
           }
         ]
+      },
+      "count-words-in-powerpoint": {
+        "modified": "2026-11-02",
+        "image": "blog-images/pt-br/powerpoint-word-count.svg",
+        "imageAlt": "Um slide e uma página de anotações formam uma única contagem de palavras.",
+        "title": "Como contar palavras no PowerPoint (slides e anotações) | TextToools",
+        "description": "Veja a contagem de palavras de uma apresentação do PowerPoint, entenda o que ela inclui e conte as anotações do apresentador separadamente.",
+        "summary": "A propriedade Palavras do PowerPoint soma o texto dos slides e das páginas de anotações. Saiba onde encontrá-la e como conferir apenas as anotações.",
+        "sections": [
+          {
+            "heading": "Resposta rápida: confira as propriedades da apresentação",
+            "paragraphs": [
+              "No PowerPoint para desktop no Windows, abra Arquivo > Informações, selecione Mostrar Todas as Propriedades e consulte a propriedade Palavras. Segundo a Microsoft, esse total inclui o texto dos slides e das páginas de anotações.",
+              "Essa é a contagem da apresentação inteira, não apenas dos slides. Para contar somente as anotações do apresentador, exporte as páginas de anotações para o Word e confira a contagem lá."
+            ]
+          },
+          {
+            "heading": "Conte palavras no PowerPoint para Windows",
+            "paragraphs": [
+              "1. Abra a apresentação no aplicativo PowerPoint para desktop.",
+              "2. Selecione Arquivo e depois Informações.",
+              "3. No painel de propriedades à direita, selecione Mostrar Todas as Propriedades.",
+              "4. Encontre Palavras na lista expandida. O valor soma o texto dos slides e das páginas de anotações.",
+              "Os nomes exatos podem mudar se o PowerPoint estiver configurado em outro idioma. A Microsoft documenta esse método para o aplicativo desktop do Windows."
+            ]
+          },
+          {
+            "heading": "O que a contagem de palavras do PowerPoint inclui?",
+            "paragraphs": [
+              "A Microsoft informa que a propriedade Palavras conta o texto dos slides e das páginas de anotações. Se as anotações tiverem um roteiro, lembretes ou referências, esse conteúdo entra no mesmo total que o texto dos slides.",
+              "Para uma comparação rápida com um contador de texto simples, este exemplo tem seis grupos separados por espaços ou quebras de linha: “Project review / Quarterly results / Next steps”. Esse é o resultado da contagem por espaços do TextToools, não uma previsão de como o PowerPoint vai analisar todos os objetos de texto."
+            ],
+            "examples": [
+              {
+                "text": "Project review\nQuarterly results\nNext steps",
+                "count": 6,
+                "explanation": "O TextToools considera uma palavra cada grupo separado por espaço ou quebra de linha. A propriedade da apresentação no PowerPoint pode usar outras regras."
+              }
+            ]
+          },
+          {
+            "heading": "Conte somente as anotações do apresentador",
+            "paragraphs": [
+              "A propriedade da apresentação do PowerPoint combina o texto dos slides com o das páginas de anotações. A Microsoft documenta a criação de folhetos no Word para trabalhar com as anotações separadamente.",
+              "No PowerPoint, selecione Arquivo > Exportar > Criar Folhetos e, em seguida, Criar Folhetos no Microsoft Word. Escolha um layout e envie os folhetos para o Word. O Word abrirá o resultado como um documento e mostrará a contagem de palavras. Confira se o layout e o conteúdo selecionados correspondem ao que você quer contar."
+            ]
+          },
+          {
+            "heading": "Por que outro contador pode mostrar um número diferente",
+            "paragraphs": [
+              "Os contadores podem usar regras diferentes para pontuação, termos com hífen, quebras de linha e outros textos. Também podem contar materiais diferentes: a apresentação inteira, apenas o texto selecionado dos slides ou as anotações junto com os slides não são o mesmo conteúdo.",
+              "Antes de comparar resultados, confirme se as duas contagens abrangem o mesmo conteúdo. Se você colar um texto no contador de palavras do TextToools, ele conta os grupos separados por espaços naquele texto; não abre arquivos do PowerPoint nem inclui o que você não copiou. Para um limite rígido, siga as instruções de quem receberá o trabalho e confira com o aplicativo exigido."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Ao criar o contador de palavras do TextToools, quis que a regra fosse fácil de conferir: espaços e quebras de linha separam os grupos, e o texto permanece no navegador. Em apresentações, recomendo verificar o escopo primeiro — as anotações podem mudar o total mesmo quando os slides não mudaram."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas de texto que respeitam a privacidade porque acredito que seu texto não precisa sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Encontrar a contagem de palavras da apresentação",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+          }
+        ]
       }
     }
   }

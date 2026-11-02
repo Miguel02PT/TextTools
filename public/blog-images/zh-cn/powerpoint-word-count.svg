@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <title>PowerPoint 演示文稿字数统计</title>
+  <desc>幻灯片和备注页合并为一个字数统计结果。</desc>
+  <rect width="1200" height="630" fill="#F5F7FB"/>
+  <rect x="54" y="46" width="1092" height="538" rx="32" fill="#FFFFFF"/>
+  <rect x="148" y="157" width="340" height="278" rx="20" fill="#FFFFFF" stroke="#D8DEEA" stroke-width="4"/>
+  <rect x="168" y="177" width="300" height="26" rx="8" fill="#FBE6E1"/>
+  <rect x="186" y="229" width="122" height="11" rx="5.5" fill="#303B53"/>
+  <rect x="186" y="258" width="160" height="8" rx="4" fill="#B7C0D0"/>
+  <rect x="186" y="282" width="138" height="8" rx="4" fill="#B7C0D0"/>
+  <rect x="186" y="318" width="120" height="72" rx="10" fill="#E8EDFA"/>
+  <path d="M321 390V345L347 321L373 345V390" stroke="#6978A5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="394" y="329" width="67" height="61" rx="10" fill="#E9F2ED"/>
+  <rect x="580" y="183" width="206" height="254" rx="18" fill="#FFFFFF" stroke="#D8DEEA" stroke-width="4"/>
+  <path d="M738 183V231H786" stroke="#D8DEEA" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="609" y="254" width="133" height="10" rx="5" fill="#6978A5"/>
+  <rect x="609" y="283" width="147" height="8" rx="4" fill="#B7C0D0"/>
+  <rect x="609" y="308" width="147" height="8" rx="4" fill="#B7C0D0"/>
+  <rect x="609" y="333" width="124" height="8" rx="4" fill="#B7C0D0"/>
+  <rect x="609" y="370" width="139" height="8" rx="4" fill="#D9DEEA"/>
+  <path d="M815 309H872" stroke="#7C88AA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M857 290L878 309L857 328" stroke="#7C88AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="899" y="200" width="170" height="218" rx="24" fill="#EEF1FF"/>
+  <rect x="924" y="225" width="120" height="168" rx="18" fill="#FFFFFF"/>
+  <text x="984" y="284" fill="#4F5FA4" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle">123</text>
+  <rect x="947" y="319" width="74" height="13" rx="6.5" fill="#6978A5"/>
+  <rect x="947" y="345" width="74" height="8" rx="4" fill="#C5CCDA"/>
+  <rect x="947" y="363" width="52" height="8" rx="4" fill="#C5CCDA"/>
+</svg>

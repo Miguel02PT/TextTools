@@ -336,7 +336,9 @@ const french = importedFrench as {
     posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
   }
 }
-const blogPosts: BlogPost[] = importedBlogPosts
+const blogPosts: BlogPost[] = [...importedBlogPosts].sort((left, right) =>
+  right.published.localeCompare(left.published),
+)
 const informationPages = [
   { slug: 'faq', title: 'Frequently asked questions', label: 'FAQ' },
   { slug: 'about', title: 'About TextToools', label: 'About us' },

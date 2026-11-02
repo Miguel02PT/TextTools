@@ -2432,6 +2432,80 @@
             "url": "https://support.microsoft.com/en-us/word/training/find-and-replace-text-in-word"
           }
         ]
+      },
+      "count-words-in-powerpoint": {
+        "modified": "2026-11-02",
+        "image": "blog-images/powerpoint-word-count.svg",
+        "imageAlt": "Une diapositive et une page de notes sont réunies dans un seul décompte de mots.",
+        "title": "Comment compter les mots dans PowerPoint (diapositives et notes) | TextToools",
+        "description": "Consultez le nombre de mots d’une présentation PowerPoint, découvrez ce qu’il comprend et comptez les notes de l’orateur séparément.",
+        "summary": "La propriété Mots de PowerPoint additionne le texte des diapositives et des pages de notes. Découvrez où la trouver et comment vérifier uniquement les notes.",
+        "sections": [
+          {
+            "heading": "Réponse rapide : consultez les propriétés de la présentation",
+            "paragraphs": [
+              "Dans l’application de bureau PowerPoint pour Windows, ouvrez Fichier > Informations, sélectionnez Afficher toutes les propriétés, puis consultez la propriété Mots. Microsoft précise que ce total comprend le texte des diapositives et des pages de notes.",
+              "Il s’agit du total de toute la présentation, et non des diapositives seules. Pour compter uniquement les notes de l’orateur, exportez les pages de notes vers Word et consultez le décompte dans Word."
+            ]
+          },
+          {
+            "heading": "Compter les mots dans PowerPoint pour Windows",
+            "paragraphs": [
+              "1. Ouvrez la présentation dans l’application de bureau PowerPoint.",
+              "2. Sélectionnez Fichier, puis Informations.",
+              "3. Dans le panneau des propriétés à droite, sélectionnez Afficher toutes les propriétés.",
+              "4. Repérez Mots dans la liste développée. La valeur additionne le texte des diapositives et des pages de notes.",
+              "Les libellés exacts peuvent varier si votre copie de PowerPoint utilise une autre langue. Microsoft documente cette méthode pour l’application de bureau Windows."
+            ]
+          },
+          {
+            "heading": "Que comprend le décompte de mots de PowerPoint ?",
+            "paragraphs": [
+              "Microsoft indique que la propriété Mots compte le texte des diapositives et des pages de notes. Si vos notes contiennent un script, des rappels ou des références, ils s’ajoutent au même total que le texte des diapositives.",
+              "Pour une comparaison rapide avec un compteur de texte brut, cet exemple comporte six groupes séparés par des espaces ou des retours à la ligne : « Project review / Quarterly results / Next steps ». C’est le résultat du comptage par espaces de TextToools, et non une prédiction de la façon dont PowerPoint analysera chaque objet texte."
+            ],
+            "examples": [
+              {
+                "text": "Project review\nQuarterly results\nNext steps",
+                "count": 6,
+                "explanation": "TextToools considère chaque groupe séparé par un espace ou un retour à la ligne comme un mot. La propriété de présentation de PowerPoint peut appliquer d’autres règles."
+              }
+            ]
+          },
+          {
+            "heading": "Compter uniquement les notes de l’orateur",
+            "paragraphs": [
+              "La propriété de présentation de PowerPoint additionne le texte des diapositives et celui des pages de notes. Microsoft recommande de créer des documents dans Word pour traiter les notes séparément.",
+              "Dans PowerPoint, sélectionnez Fichier > Exporter > Créer des documents, puis Créer des documents dans Microsoft Word. Choisissez une mise en page et envoyez les documents vers Word. Le résultat s’ouvre sous forme de document et Word en affiche le nombre de mots. Vérifiez que la mise en page et le contenu sélectionnés correspondent bien à ce que vous souhaitez compter."
+            ]
+          },
+          {
+            "heading": "Pourquoi un autre compteur peut afficher un nombre différent",
+            "paragraphs": [
+              "Les compteurs peuvent appliquer des règles différentes à la ponctuation, aux mots composés avec un trait d’union, aux retours à la ligne et aux autres textes. Ils peuvent aussi compter des contenus différents : une présentation entière, le texte sélectionné des diapositives, ou les notes en plus des diapositives ne sont pas des entrées équivalentes.",
+              "Avant de comparer les résultats, vérifiez que les deux décomptes portent sur le même contenu. Si vous collez du texte dans le compteur de mots de TextToools, il compte les groupes séparés par des espaces dans ce texte ; il ne lit pas un fichier PowerPoint et n’inclut pas ce que vous n’avez pas copié. Pour une limite stricte, suivez les consignes du destinataire et vérifiez le résultat avec l’application exigée."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "En créant le compteur de mots de TextToools, je voulais une règle facile à vérifier : les espaces et les retours à la ligne séparent les groupes, et le texte reste dans votre navigateur. Pour les présentations, je recommande de vérifier d’abord le périmètre : les notes peuvent modifier le total même si les diapositives n’ont pas changé."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car vos textes ne devraient pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Trouver le nombre de mots de votre présentation",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+          }
+        ]
       }
     }
   }

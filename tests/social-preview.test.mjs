@@ -9,6 +9,9 @@ const englishPosts = JSON.parse(
 const chinesePosts = JSON.parse(
   readFileSync(new URL('../src/zh-CN.json', import.meta.url), 'utf8'),
 ).blog.posts
+const spanishPosts = JSON.parse(
+  readFileSync(new URL('../src/es.json', import.meta.url), 'utf8'),
+).blog.posts
 const portuguesePosts = JSON.parse(
   readFileSync(new URL('../src/pt-BR.json', import.meta.url), 'utf8'),
 ).blog.posts
@@ -55,6 +58,7 @@ test('each localized article image is a local 1200x630 PNG', () => {
     const locales = [
       englishPost,
       chinesePosts[englishPost.slug],
+      spanishPosts[englishPost.slug],
       portuguesePosts[englishPost.slug],
       frenchPosts[englishPost.slug],
     ]

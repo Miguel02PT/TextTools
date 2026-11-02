@@ -1841,5 +1841,81 @@
         "url": "https://support.microsoft.com/en-us/word/training/find-and-replace-text-in-word"
       }
     ]
+  },
+  {
+    "slug": "count-words-in-powerpoint",
+    "published": "2026-11-02",
+    "modified": "2026-11-02",
+    "title": "How to Count Words in PowerPoint (Slides and Notes) | TextToools",
+    "description": "Find the word count for a PowerPoint presentation, learn what the total includes, and count speaker notes separately.",
+    "summary": "PowerPoint's Words property counts text on slides and notes pages together. Learn where to find it and how to check notes on their own.",
+    "image": "blog-images/powerpoint-word-count.svg",
+    "imageAlt": "A presentation slide and a notes page flow into one combined word count.",
+    "sections": [
+      {
+        "heading": "Quick answer: check the presentation properties",
+        "paragraphs": [
+          "In desktop PowerPoint for Windows, open File > Info, select Show All Properties, and read the Words property. Microsoft says this total includes text on both the slides and the notes pages.",
+          "This is a presentation-wide count, not a slide-only total. To count only speaker notes, export the notes pages to Word and use Word's word count."
+        ]
+      },
+      {
+        "heading": "Count words in PowerPoint on Windows",
+        "paragraphs": [
+          "1. Open the presentation in the PowerPoint desktop app.",
+          "2. Select File, then Info.",
+          "3. In the properties panel on the right, select Show All Properties.",
+          "4. Find Words in the expanded properties list. The value is for the presentation's slide text and notes pages together.",
+          "The exact labels can differ if your copy of PowerPoint uses another display language. Microsoft documents this method for the Windows desktop app."
+        ]
+      },
+      {
+        "heading": "What does the PowerPoint word count include?",
+        "paragraphs": [
+          "Microsoft describes the Words property as counting text on slides and notes pages. If your speaker notes contain a script, reminders, or citations, they contribute to the same total as the slide text.",
+          "For a quick comparison with a plain-text counter, this sample has six whitespace-separated words: “Project review / Quarterly results / Next steps.” That illustrates TextToools' whitespace-based count; it is not a prediction of how PowerPoint will parse every text object."
+        ],
+        "examples": [
+          {
+            "text": "Project review\nQuarterly results\nNext steps",
+            "count": 6,
+            "explanation": "TextToools treats each group separated by a space or line break as one word. PowerPoint's presentation property may use different counting rules."
+          }
+        ]
+      },
+      {
+        "heading": "Count only the speaker notes",
+        "paragraphs": [
+          "PowerPoint's presentation property combines slide text with notes-page text. Microsoft's documented way to work with notes separately is to create handouts in Word.",
+          "In PowerPoint, select File > Export > Create Handouts, then choose Create Handouts in Microsoft Word. Select a layout and send the handouts to Word. Word opens the result as a document and shows its word count. Check that the selected layout and content match what you intend to count."
+        ]
+      },
+      {
+        "heading": "Why another word counter may show a different number",
+        "paragraphs": [
+          "Counters can use different rules for punctuation, hyphenated terms, line breaks, and other text. They may also count different material: a whole presentation, only selected slide text, or notes as well as slides are not equivalent inputs.",
+          "When comparing results, first make sure both counts cover the same content. If you paste text into the TextToools Word Counter, it counts whitespace-separated groups in that pasted text; it does not inspect a PowerPoint file or include text you did not copy. For a strict submission limit, follow the instructions from the recipient and check with the required application."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "While building TextToools' Word Counter, I wanted its counting rule to be easy to verify: spaces and line breaks separate groups, and the text stays in your browser. For presentations, I recommend checking the scope first—notes can change the total even when the slides themselves have not."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Find the word count of your presentation",
+        "publisher": "Microsoft Support",
+        "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+      }
+    ]
   }
 ]
