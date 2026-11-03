@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {
+  compareText,
   cleanText,
   computeMetrics,
   convertCase,
@@ -8,6 +9,7 @@ import {
   countSentences,
   countWords,
   formatReadingTime,
+  formatTextDiff,
   generateLoremText,
   getKeywordData,
   getToolOutputContent,
@@ -92,6 +94,64 @@ test('find and replace treats the search term literally and supports empty repla
   assert.deepEqual(replaceMatches('unchanged', '', 'x', true, false), {
     text: 'unchanged',
     count: 0,
+  })
+})
+
+test('text comparison reports ordered line additions, removals, and replacements', () => {
+  assert.deepEqual(compareText('alpha\nold\nkeep\nend', 'alpha\nnew\nkeep\nextra\nend'), {
+    lines: [
+      { type: 'unchanged', text: 'alpha' },
+      { type: 'removed', text: 'old' },
+      { type: 'added', text: 'new' },
+      { type: 'unchanged', text: 'keep' },
+      { type: 'added', text: 'extra' },
+      { type: 'unchanged', text: 'end' },
+    ],
+    additions: 2,
+    deletions: 1,
+    error: null,
+  })
+  assert.equal(formatTextDiff(compareText('first\nold\nlast', 'first\nnew\nlast').lines),
+    '  first\n- old\n+ new\n  last')
+})
+
+test('text comparison handles empty input, line endings, and repeated lines', () => {
+  assert.deepEqual(compareText('', ''), {
+    lines: [],
+    additions: 0,
+    deletions: 0,
+    error: null,
+  })
+  assert.deepEqual(compareText('one\r\ntwo', 'one\ntwo'), {
+    lines: [
+      { type: 'unchanged', text: 'one' },
+      { type: 'unchanged', text: 'two' },
+    ],
+    additions: 0,
+    deletions: 0,
+    error: null,
+  })
+  assert.deepEqual(compareText('same\nsame\nold', 'same\nnew\nsame'), {
+    lines: [
+      { type: 'unchanged', text: 'same' },
+      { type: 'added', text: 'new' },
+      { type: 'unchanged', text: 'same' },
+      { type: 'removed', text: 'old' },
+    ],
+    additions: 1,
+    deletions: 1,
+    error: null,
+  })
+})
+
+test('text comparison reports when the bounded comparison size is exceeded', () => {
+  const manyLines = Array.from({ length: 1414 }, (_, index) => `old-${index}`).join('\n')
+  const otherLines = Array.from({ length: 1414 }, (_, index) => `new-${index}`).join('\n')
+  assert.deepEqual(compareText(manyLines, otherLines), {
+    lines: [],
+    additions: 0,
+    deletions: 0,
+    error: 'too-large',
   })
 })
 

@@ -6,7 +6,7 @@ import { renderToString } from 'react-dom/server'
 import { JSDOM } from 'jsdom'
 import { createServer } from 'vite'
 
-test('pre-rendered find-replace route hydrates without React mismatch', async () => {
+async function assertPreRenderedRouteHydrates(pathname: string) {
   const vite = await createServer({
     configFile: join(process.cwd(), 'vite.config.ts'),
     mode: 'production',
@@ -26,12 +26,12 @@ test('pre-rendered find-replace route hydrates without React mismatch', async ()
     const { default: App } = await vite.ssrLoadModule('/src/App.tsx')
     Object.defineProperty(globalThis, 'window', {
       configurable: true,
-      value: { location: { pathname: '/tools/find-replace/' } },
+      value: { location: { pathname } },
     })
     const html = renderToString(createElement(StrictMode, null, createElement(App)))
 
     dom = new JSDOM(`<div id="root" data-prerendered="true">${html}</div>`, {
-      url: 'https://texttoools.com/tools/find-replace/',
+      url: `https://texttoools.com${pathname}`,
     })
     dom.window.localStorage.setItem('texttools-ga4-consent', 'accepted')
     Object.defineProperty(globalThis, 'window', { configurable: true, value: dom.window })
@@ -70,4 +70,12 @@ test('pre-rendered find-replace route hydrates without React mismatch', async ()
     }
     await vite.close()
   }
+}
+
+test('pre-rendered find-replace route hydrates without React mismatch', async () => {
+  await assertPreRenderedRouteHydrates('/tools/find-replace/')
+})
+
+test('pre-rendered text-diff route hydrates without React mismatch', async () => {
+  await assertPreRenderedRouteHydrates('/tools/text-diff/')
 })

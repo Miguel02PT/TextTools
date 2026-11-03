@@ -438,6 +438,66 @@
     ]
   },
   {
+    "id": "text-diff",
+    "title": "Compare Text Online: Free Text Diff Checker | TextToools",
+    "description": "Compare two text versions line by line, highlight additions and removals, and copy or download the diff in your browser.",
+    "heading": "Compare text online",
+    "intro": "Paste an original and a revised text to see which lines were added, removed, or left unchanged. Your text stays in your browser.",
+    "comparisonLabels": {
+      "original": "Original text",
+      "revised": "Revised text",
+      "added": "added",
+      "removed": "removed",
+      "unchanged": "No changes",
+      "tooLarge": "These texts are too large to compare at once. Try shorter sections."
+    },
+    "sections": [
+      {
+        "heading": "How the text comparison works",
+        "paragraphs": [
+          "Paste the earlier version on the left and the revised version on the right. The tool compares complete lines and labels each line as unchanged, added, or removed. Changed lines appear as one removal and one addition, with the original shown first.",
+          "Line breaks are significant. Windows, Unix, and classic Mac line endings are normalized before comparison, but different wording or blank lines remain visible changes. This is a line-level diff, not a character-by-character or document-format comparison."
+        ],
+        "bullets": [
+          "Unchanged lines remain in their original order.",
+          "Removed lines are marked with a minus sign.",
+          "Added lines are marked with a plus sign."
+        ]
+      },
+      {
+        "heading": "Review changes before you use them",
+        "paragraphs": [
+          "Use the difference list to locate edits, then read each changed line in context. A line comparison can show that text moved or changed, but it cannot decide whether a revision is accurate, authorized, or appropriate.",
+          "For tracked changes, comments, formatting, tables, or reviewer names, use the review or compare features in your document editor. TextToools compares the plain text you paste; it does not open or modify document files."
+        ]
+      },
+      {
+        "heading": "Large comparisons",
+        "paragraphs": [
+          "To keep comparisons responsive, the tool limits the number of input lines and the size of the line-alignment calculation. If a heavily changed passage is too large to process at once, compare shorter sections. The limit message appears in the results area and the export buttons are disabled until the input can be compared."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the tool compare whole documents or only the text I paste?",
+        "answer": "It compares only the two plain-text passages you paste. It does not open Word, PDF, or other document files."
+      },
+      {
+        "question": "Can I compare two paragraphs on a word-by-word basis?",
+        "answer": "This tool compares complete lines. It marks changed lines as removed and added; it does not highlight changed words within a line."
+      },
+      {
+        "question": "Are blank lines and line endings ignored?",
+        "answer": "Windows, Unix, and classic Mac line-ending formats are normalized. Blank lines and other changes to the text remain part of the comparison."
+      },
+      {
+        "question": "Is my text uploaded?",
+        "answer": "No. The comparison runs in your browser. The tool does not send the text you enter to a TextToools server."
+      }
+    ]
+  },
+  {
     "id": "keyword-density",
     "title": "Free Keyword Density Checker | TextToools",
     "description": "Find the most frequent words in a passage with counts and percentages of total words using this browser-based keyword checker.",

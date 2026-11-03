@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Compare document versions and review changes</title>
+  <desc id="desc">An original and a revised document lead to a marked comparison and a careful review.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  DOCUMENT REVIEW</text>
+  <text x="80" y="158" fill="#172033" font-family="Arial, sans-serif" font-size="44" font-weight="700">Compare versions. Review with care.</text>
+  <text x="80" y="199" fill="#647084" font-family="Arial, sans-serif" font-size="21">A difference is a signal to check, not an approval.</text>
+  <rect x="80" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="440" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="800" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="305" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">01  /  SOURCE</text>
+  <text x="476" y="305" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">02  /  CHANGES</text>
+  <text x="836" y="305" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">03  /  REVIEW</text>
+  <text x="116" y="356" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">Original</text>
+  <text x="476" y="356" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">Revised</text>
+  <text x="836" y="356" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">Check in context</text>
+  <rect x="116" y="384" width="224" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="116" y="410" width="184" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="476" y="384" width="224" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="476" y="410" width="142" height="12" rx="6" fill="#F5DADA"/>
+  <rect x="476" y="406" width="98" height="20" rx="6" fill="#F5DADA"/>
+  <path d="M408 359H427M419 351L427 359L419 367M768 359H787M779 351L787 359L779 367" stroke="#69558E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="851" cy="401" r="13" fill="#E5F0E7"/>
+  <path d="M845 401L850 406L858 396" stroke="#3C7450" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="875" y="408" fill="#647084" font-family="Arial, sans-serif" font-size="18">Verify before approving.</text>
+  <text x="80" y="548" fill="#647084" font-family="Arial, sans-serif" font-size="19">Keep both originals. Read every change beside the surrounding text.</text>
+</svg>

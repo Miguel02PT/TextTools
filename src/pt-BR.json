@@ -504,6 +504,67 @@
         {"question":"O resultado é exato?","answer":"Não. É uma estimativa; o ritmo real varia conforme a pessoa e o texto."}
       ]
     },
+    "text-diff": {
+      "name": "Comparador de textos",
+      "description": "Compare duas versões linha por linha e confira o que foi adicionado ou removido.",
+      "title": "Compare textos online: comparador de diferenças grátis | TextToools",
+      "meta": "Compare duas versões de um texto linha por linha, destaque adições e remoções e copie ou baixe o resultado no navegador.",
+      "heading": "Compare textos online",
+      "intro": "Cole o texto original e a versão revisada para ver quais linhas foram adicionadas, removidas ou permaneceram iguais. O texto fica no seu navegador.",
+      "comparisonLabels": {
+        "original": "Texto original",
+        "revised": "Texto revisado",
+        "added": "adicionadas",
+        "removed": "removidas",
+        "unchanged": "Sem alterações",
+        "tooLarge": "Os textos são grandes demais para comparar de uma vez. Tente comparar trechos menores."
+      },
+      "sections": [
+        {
+          "heading": "Como funciona a comparação de textos",
+          "paragraphs": [
+            "Cole a versão anterior à esquerda e a revisada à direita. A ferramenta compara linhas completas e identifica cada uma como inalterada, adicionada ou removida. Uma linha modificada aparece como uma remoção e uma adição, com o original primeiro.",
+            "As quebras de linha fazem diferença. Os formatos de quebra do Windows, Unix e Mac clássico são normalizados antes da comparação, mas mudanças no texto e linhas em branco continuam visíveis. Esta é uma comparação linha por linha, não uma comparação caractere por caractere ou de formatação de documentos."
+          ],
+          "bullets": [
+            "As linhas inalteradas mantêm a ordem original.",
+            "As linhas removidas são marcadas com um sinal de menos.",
+            "As linhas adicionadas são marcadas com um sinal de mais."
+          ]
+        },
+        {
+          "heading": "Revise as alterações antes de usar o texto",
+          "paragraphs": [
+            "Use a lista de diferenças para localizar as edições e leia cada linha no contexto. A comparação pode mostrar que um trecho mudou ou foi movido, mas não consegue avaliar se a revisão está correta, autorizada ou adequada.",
+            "Para controlar alterações, comentários, formatação, tabelas ou nomes de revisores, use os recursos de revisão ou comparação do seu editor de documentos. O TextToools compara o texto simples que você cola; não abre nem altera arquivos de documentos."
+          ]
+        },
+        {
+          "heading": "Comparações grandes",
+          "paragraphs": [
+            "Para manter a ferramenta ágil, há limites para o total de linhas e o tamanho do cálculo de alinhamento. Se um trecho grande e muito alterado não puder ser processado de uma vez, compare partes menores. O aviso aparece nos resultados e os botões de exportação ficam desativados até que seja possível concluir a comparação."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "A ferramenta compara documentos inteiros ou apenas o texto que colo?",
+          "answer": "Ela compara apenas os dois trechos de texto simples que você cola. Não abre arquivos do Word, PDF ou outros documentos."
+        },
+        {
+          "question": "Posso comparar dois parágrafos palavra por palavra?",
+          "answer": "A ferramenta compara linhas completas. Linhas alteradas aparecem como removidas e adicionadas; palavras específicas dentro da linha não são destacadas."
+        },
+        {
+          "question": "Linhas em branco e formatos de quebra de linha são ignorados?",
+          "answer": "Os formatos de quebra do Windows, Unix e Mac clássico são normalizados. Linhas em branco e outras mudanças no texto continuam fazendo parte da comparação."
+        },
+        {
+          "question": "Meu texto é enviado para um servidor?",
+          "answer": "Não. A comparação é feita no seu navegador e o texto não é enviado para um servidor do TextToools."
+        }
+      ]
+    },
     "keyword-density": {
       "name": "Analisador de densidade de palavras-chave",
       "description": "Encontre as palavras e expressões mais frequentes no texto.",
@@ -2420,6 +2481,86 @@
             "title": "Encontrar a contagem de palavras da apresentação",
             "publisher": "Suporte da Microsoft",
             "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+          }
+        ]
+      },
+      "how-to-compare-document-versions": {
+        "modified": "2026-11-03",
+        "image": "blog-images/pt-br/compare-document-versions.svg",
+        "imageAlt": "Duas versões de um documento levam a uma comparação marcada e a uma lista de revisão.",
+        "title": "Como comparar duas versões de um documento e revisar as alterações | TextToools",
+        "description": "Compare versões de documentos no Word ou Google Docs, preserve os originais e revise cada alteração no contexto antes de aprová-la.",
+        "summary": "A comparação mostra o que mudou, não se a edição está correta. Preserve os originais, escolha o fluxo adequado e confira as alterações no contexto.",
+        "sections": [
+          {
+            "heading": "Comece protegendo as versões necessárias",
+            "paragraphs": [
+              "Antes de comparar rascunhos, identifique qual arquivo é o original e qual é a revisão proposta. Salve ou mantenha as duas versões e confirme que você tem autorização para revisá-las. A comparação deve ajudar a inspecionar as alterações sem sobrescrever acidentalmente os documentos.",
+              "Defina também o escopo. Confirme se está comparando o mesmo documento, as mesmas seções e os mesmos anexos. Uma cópia revisada pode omitir uma página ou usar outros títulos; essas diferenças podem afetar a revisão, mesmo quando as mudanças nas frases parecem pequenas."
+            ]
+          },
+          {
+            "heading": "Compare arquivos de documentos no Microsoft Word",
+            "paragraphs": [
+              "No Word para desktop, abra Revisão > Comparar > Comparar. Selecione o documento original e o revisado, escolha os tipos de alteração que deseja mostrar e inicie a comparação. Por padrão, o Word mostra o resultado em um terceiro documento novo e mantém os dois arquivos de origem sem alterações.",
+              "O Word pode comparar texto, formatação e comentários, e permite visualizar mudanças no nível do caractere ou da palavra. Se algum arquivo tiver alterações controladas, o Word pode perguntar como tratá-las antes de continuar. Leia o aviso com atenção: a comparação aceita as alterações no original e exibe as mudanças na versão revisada como alterações controladas."
+            ]
+          },
+          {
+            "heading": "Compare documentos no Google Docs",
+            "paragraphs": [
+              "Para comparar dois documentos do Google Docs, abra o documento principal e selecione Ferramentas > Comparar documentos. Escolha o outro arquivo e inicie a comparação. O Google Docs cria um terceiro documento com as diferenças como sugestões de edição, para que você possa revisar o resultado sem substituir nenhum dos originais.",
+              "O Google Docs também permite comparar um documento com um arquivo Word .docx armazenado no Google Drive. A página de ajuda informa que alterações no layout das colunas e na largura das colunas de tabelas não são comparadas. Confira se o resultado gerado inclui a formatação e o conteúdo necessários para a sua revisão."
+            ]
+          },
+          {
+            "heading": "Revise as alterações no contexto, não apenas pelas marcações",
+            "paragraphs": [
+              "Leia cada adição e remoção junto da frase e da seção ao redor. Confira nomes, datas, valores, links, requisitos e exceções com a fonte confiável. Uma alteração pode parecer correta gramaticalmente e ainda mudar o escopo ou a obrigação de uma frase.",
+              "Procure parágrafos movidos, títulos ausentes, texto duplicado e conteúdo que ficou fora da comparação. Uma diferença identifica alterações de acordo com o método utilizado; ela não determina se uma edição foi intencional ou se o documento está completo."
+            ]
+          },
+          {
+            "heading": "Quando comparar texto simples é suficiente",
+            "paragraphs": [
+              "Se você só precisa comparar um texto copiado, cole o mesmo trecho de cada versão no Comparador de textos do TextToools. Ele destaca linhas adicionadas, removidas e inalteradas no navegador. A ferramenta não abre arquivos de documentos, preserva a formatação nem mostra quem fez uma alteração.",
+              "Se a revisão depender de comentários, alterações controladas, tabelas, layout ou identidade dos revisores, use o recurso de comparação do editor de documentos. Mantenha os arquivos originais e decida se aceita as alterações no fluxo responsável por esses documentos."
+            ]
+          },
+          {
+            "heading": "Uma lista prática para revisão",
+            "paragraphs": [
+              "1. Confirme o original, a versão revisada e o escopo da revisão.",
+              "2. Mantenha cópias recuperáveis dos dois documentos de origem.",
+              "3. Use um método de comparação que inclua o conteúdo e a formatação necessários.",
+              "4. Leia cada alteração no contexto e confira fatos importantes em fontes confiáveis.",
+              "5. Verifique omissões, seções movidas, comentários e alterações controladas.",
+              "6. Registre qual versão foi revisada e quem aprovou o documento final."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Criei o comparador do TextToools para conferir rapidamente trechos de texto simples, não para substituir a revisão de documentos. Quando uma alteração é importante, prefiro preservar o original, examinar a diferença no contexto e usar o editor de documentos para qualquer decisão que dependa de comentários, formatação ou histórico de revisões."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas de texto que respeitam a privacidade porque acredito que seu texto não precisa sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Comparar diferenças entre documentos usando a opção de linha preta legal",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/compare-document-differences-using-the-legal-blackline-option"
+          },
+          {
+            "title": "Comparar documentos no Google Docs",
+            "publisher": "Ajuda dos Editores de Documentos Google",
+            "url": "https://support.google.com/docs/answer/18512262?hl=en"
           }
         ]
       }

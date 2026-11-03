@@ -9,6 +9,7 @@ export type ToolId =
   | 'duplicate-lines'
   | 'text-sorter'
   | 'find-replace'
+  | 'text-diff'
   | 'lorem-ipsum'
   | 'reading-time'
   | 'keyword-density'
@@ -23,6 +24,21 @@ export type KeywordData = {
   totalWords: number
   entries: KeywordEntry[]
 }
+
+export type TextDiffLine = {
+  type: 'unchanged' | 'added' | 'removed'
+  text: string
+}
+
+export type TextDiffResult = {
+  lines: TextDiffLine[]
+  additions: number
+  deletions: number
+  error: 'too-large' | null
+}
+
+const MAX_DIFF_LINES = 5000
+const MAX_DIFF_CELLS = 2_000_000
 
 export type ToolMetrics = {
   words: number
@@ -154,6 +170,156 @@ export function formatReadingTime(words: number, seconds: number, locale: Locale
 
 export function normalizeText(text: string) {
   return text.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+}
+
+export function compareText(originalText: string, revisedText: string): TextDiffResult {
+  const original = normalizeText(originalText)
+  const revised = normalizeText(revisedText)
+  if (original === revised) {
+    const lines = original ? original.split('\n') : []
+    return {
+      lines: lines.map((text) => ({ type: 'unchanged', text })),
+      additions: 0,
+      deletions: 0,
+      error: null,
+    }
+  }
+
+  const originalLines = original ? original.split('\n') : []
+  const revisedLines = revised ? revised.split('\n') : []
+  if (originalLines.length + revisedLines.length > MAX_DIFF_LINES) {
+    return { lines: [], additions: 0, deletions: 0, error: 'too-large' }
+  }
+
+  let prefix = 0
+  while (
+    prefix < originalLines.length &&
+    prefix < revisedLines.length &&
+    originalLines[prefix] === revisedLines[prefix]
+  ) {
+    prefix += 1
+  }
+
+  let suffix = 0
+  while (
+    suffix < originalLines.length - prefix &&
+    suffix < revisedLines.length - prefix &&
+    originalLines[originalLines.length - suffix - 1] ===
+      revisedLines[revisedLines.length - suffix - 1]
+  ) {
+    suffix += 1
+  }
+
+  const originalMiddleLength = originalLines.length - prefix - suffix
+  const revisedMiddleLength = revisedLines.length - prefix - suffix
+  const columns = revisedMiddleLength + 1
+  const cellCount = (originalMiddleLength + 1) * columns
+  if (cellCount > MAX_DIFF_CELLS) {
+    return { lines: [], additions: 0, deletions: 0, error: 'too-large' }
+  }
+
+  const lines: TextDiffLine[] = originalLines
+    .slice(0, prefix)
+    .map((text) => ({ type: 'unchanged', text }))
+  const middleLines: TextDiffLine[] = []
+  let additions = 0
+  let deletions = 0
+
+  function flushChanges(pendingDeletions: string[], pendingAdditions: string[]) {
+    if (pendingDeletions.length === 0 && pendingAdditions.length === 0) return
+    const pairedCount = Math.min(pendingDeletions.length, pendingAdditions.length)
+    for (let index = 0; index < pairedCount; index += 1) {
+      middleLines.push({ type: 'removed', text: pendingDeletions[index] })
+      middleLines.push({ type: 'added', text: pendingAdditions[index] })
+    }
+    middleLines.push(
+      ...pendingDeletions
+        .slice(pairedCount)
+        .map((text) => ({ type: 'removed' as const, text })),
+      ...pendingAdditions
+        .slice(pairedCount)
+        .map((text) => ({ type: 'added' as const, text })),
+    )
+  }
+
+  if (originalMiddleLength === 0) {
+    const addedLines = revisedLines.slice(prefix, revisedLines.length - suffix)
+    additions = addedLines.length
+    middleLines.push(...addedLines.map((text): TextDiffLine => ({ type: 'added', text })))
+  } else if (revisedMiddleLength === 0) {
+    const removedLines = originalLines.slice(prefix, originalLines.length - suffix)
+    deletions = removedLines.length
+    middleLines.push(...removedLines.map((text): TextDiffLine => ({ type: 'removed', text })))
+  } else {
+    const table = new Uint32Array(cellCount)
+    for (let originalIndex = originalMiddleLength - 1; originalIndex >= 0; originalIndex -= 1) {
+      for (let revisedIndex = revisedMiddleLength - 1; revisedIndex >= 0; revisedIndex -= 1) {
+        const index = originalIndex * columns + revisedIndex
+        if (originalLines[prefix + originalIndex] === revisedLines[prefix + revisedIndex]) {
+          table[index] = table[index + columns + 1] + 1
+        } else {
+          table[index] = Math.max(table[index + columns], table[index + 1])
+        }
+      }
+    }
+
+    let originalIndex = 0
+    let revisedIndex = 0
+    let pendingDeletions: string[] = []
+    let pendingAdditions: string[] = []
+    while (originalIndex < originalMiddleLength || revisedIndex < revisedMiddleLength) {
+      if (
+        originalIndex < originalMiddleLength &&
+        revisedIndex < revisedMiddleLength &&
+        originalLines[prefix + originalIndex] === revisedLines[prefix + revisedIndex]
+      ) {
+        flushChanges(pendingDeletions, pendingAdditions)
+        additions += pendingAdditions.length
+        deletions += pendingDeletions.length
+        pendingDeletions = []
+        pendingAdditions = []
+        middleLines.push({ type: 'unchanged', text: originalLines[prefix + originalIndex] })
+        originalIndex += 1
+        revisedIndex += 1
+      } else if (
+        originalIndex < originalMiddleLength &&
+        (revisedIndex === revisedMiddleLength ||
+          table[(originalIndex + 1) * columns + revisedIndex] >=
+            table[originalIndex * columns + revisedIndex + 1])
+      ) {
+        pendingDeletions.push(originalLines[prefix + originalIndex])
+        originalIndex += 1
+      } else {
+        pendingAdditions.push(revisedLines[prefix + revisedIndex])
+        revisedIndex += 1
+      }
+    }
+    flushChanges(pendingDeletions, pendingAdditions)
+    additions += pendingAdditions.length
+    deletions += pendingDeletions.length
+  }
+
+  lines.push(...middleLines)
+  if (suffix > 0) {
+    lines.push(
+      ...originalLines
+        .slice(originalLines.length - suffix)
+        .map((text) => ({ type: 'unchanged' as const, text })),
+    )
+  }
+
+  return {
+    lines,
+    additions,
+    deletions,
+    error: null,
+  }
+}
+
+export function formatTextDiff(lines: readonly TextDiffLine[]) {
+  return lines
+    .map(({ type, text }) => `${type === 'added' ? '+' : type === 'removed' ? '-' : ' '} ${text}`)
+    .join('\n')
 }
 
 export function toTitleCase(text: string) {
@@ -451,6 +617,8 @@ export function getToolOutputContent(
             )
           : [label('noKeywords', 'No keywords found.')]),
       ].join('\n')
+    case 'text-diff':
+      return transformedText
     default:
       return transformedText
   }

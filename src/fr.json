@@ -583,6 +583,67 @@
         }
       ]
     },
+    "text-diff": {
+      "name": "Comparateur de textes",
+      "description": "Comparez deux versions ligne par ligne et repérez les ajouts et les suppressions.",
+      "title": "Comparer des textes en ligne : comparateur de différences gratuit | TextToools",
+      "meta": "Comparez deux versions d’un texte ligne par ligne, repérez les ajouts et les suppressions, puis copiez ou téléchargez le résultat dans votre navigateur.",
+      "heading": "Comparer des textes en ligne",
+      "intro": "Collez le texte d’origine et sa version révisée pour voir les lignes ajoutées, supprimées ou inchangées. Votre texte reste dans votre navigateur.",
+      "comparisonLabels": {
+        "original": "Texte d’origine",
+        "revised": "Texte révisé",
+        "added": "ajoutées",
+        "removed": "supprimées",
+        "unchanged": "Aucun changement",
+        "tooLarge": "Ces textes sont trop volumineux pour être comparés en une fois. Essayez des passages plus courts."
+      },
+      "sections": [
+        {
+          "heading": "Comment fonctionne la comparaison de textes",
+          "paragraphs": [
+            "Collez l’ancienne version à gauche et la version révisée à droite. L’outil compare des lignes entières et indique si elles sont inchangées, ajoutées ou supprimées. Une ligne modifiée apparaît comme une suppression et un ajout, l’original étant affiché en premier.",
+            "Les retours à la ligne comptent. Les formats de fin de ligne de Windows, Unix et du Mac classique sont normalisés avant la comparaison, mais les différences de formulation et les lignes vides restent visibles. Il s’agit d’une comparaison ligne par ligne, et non caractère par caractère ou entre formats de documents."
+          ],
+          "bullets": [
+            "Les lignes inchangées conservent leur ordre d’origine.",
+            "Les lignes supprimées sont précédées d’un signe moins.",
+            "Les lignes ajoutées sont précédées d’un signe plus."
+          ]
+        },
+        {
+          "heading": "Vérifiez les modifications avant d’utiliser le texte",
+          "paragraphs": [
+            "Utilisez la liste des différences pour repérer les modifications, puis relisez chaque ligne dans son contexte. La comparaison peut montrer qu’une ligne a changé ou été déplacée, mais elle ne peut pas déterminer si une révision est exacte, autorisée ou appropriée.",
+            "Pour le suivi des modifications, les commentaires, la mise en forme, les tableaux ou les noms des réviseurs, utilisez les fonctions de révision ou de comparaison de votre éditeur de documents. TextToools compare uniquement le texte brut que vous collez ; il n’ouvre ni ne modifie les fichiers."
+          ]
+        },
+        {
+          "heading": "Comparaisons volumineuses",
+          "paragraphs": [
+            "Pour que l’outil reste réactif, le nombre de lignes et la taille du calcul d’alignement sont limités. Si un long passage très modifié ne peut pas être traité en une seule fois, comparez des sections plus courtes. Le message s’affiche dans les résultats et les boutons d’exportation sont désactivés jusqu’à ce que la comparaison soit possible."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "L’outil compare-t-il des documents entiers ou uniquement le texte collé ?",
+          "answer": "Il compare uniquement les deux passages en texte brut que vous collez. Il n’ouvre pas les fichiers Word, PDF ou d’autres documents."
+        },
+        {
+          "question": "Puis-je comparer deux paragraphes mot à mot ?",
+          "answer": "L’outil compare des lignes entières. Les lignes modifiées sont indiquées comme supprimées et ajoutées ; les mots modifiés à l’intérieur d’une ligne ne sont pas surlignés."
+        },
+        {
+          "question": "Les lignes vides et les fins de ligne sont-elles ignorées ?",
+          "answer": "Les formats de fin de ligne de Windows, Unix et du Mac classique sont normalisés. Les lignes vides et les autres modifications du texte restent prises en compte."
+        },
+        {
+          "question": "Mon texte est-il envoyé à un serveur ?",
+          "answer": "Non. La comparaison s’effectue dans votre navigateur et le texte n’est pas envoyé à un serveur TextToools."
+        }
+      ]
+    },
     "keyword-density": {
       "name": "Analyseur de fréquence de mots",
       "description": "Découvrez quels mots apparaissent le plus souvent dans un texte.",
@@ -2504,6 +2565,86 @@
             "title": "Trouver le nombre de mots de votre présentation",
             "publisher": "Assistance Microsoft",
             "url": "https://support.microsoft.com/en-us/powerpoint/find-the-word-count-of-your-presentation"
+          }
+        ]
+      },
+      "how-to-compare-document-versions": {
+        "modified": "2026-11-03",
+        "image": "blog-images/compare-document-versions.svg",
+        "imageAlt": "Deux versions d’un document mènent à une comparaison annotée et à une liste de vérification.",
+        "title": "Comment comparer deux versions d’un document et vérifier les modifications | TextToools",
+        "description": "Comparez des versions d’un document dans Word ou Google Docs, conservez les originaux et vérifiez chaque modification dans son contexte avant de l’approuver.",
+        "summary": "Une comparaison montre ce qui a changé, pas si une modification est correcte. Conservez les originaux, choisissez le bon processus et vérifiez les changements dans leur contexte.",
+        "sections": [
+          {
+            "heading": "Commencez par protéger les versions nécessaires",
+            "paragraphs": [
+              "Avant de comparer des brouillons, identifiez le fichier d’origine et la révision proposée. Enregistrez ou conservez les deux versions et vérifiez que vous êtes autorisé à les consulter. Une comparaison doit permettre d’examiner les changements sans écraser accidentellement les documents.",
+              "Définissez également le périmètre. Vérifiez que vous comparez le même document, les mêmes sections et les mêmes pièces jointes. Une copie révisée peut omettre une page ou utiliser d’autres titres ; ces différences peuvent compter même si les phrases modifiées semblent anodines."
+            ]
+          },
+          {
+            "heading": "Comparer des documents dans Microsoft Word",
+            "paragraphs": [
+              "Dans Word pour ordinateur, ouvrez Révision > Comparer > Comparer. Sélectionnez le document d’origine et la version révisée, choisissez les types de modifications à afficher, puis lancez la comparaison. Par défaut, Word présente le résultat dans un troisième document et laisse les deux fichiers sources inchangés.",
+              "Word peut comparer le texte, la mise en forme et les commentaires, et afficher les changements au niveau du caractère ou du mot. Si un document contient des marques de révision, Word peut demander comment les traiter avant de poursuivre. Lisez attentivement le message : la comparaison accepte les modifications de l’original et affiche celles de la version révisée sous forme de marques de révision."
+            ]
+          },
+          {
+            "heading": "Comparer des documents dans Google Docs",
+            "paragraphs": [
+              "Pour comparer deux documents Google Docs, ouvrez le document principal et sélectionnez Outils > Comparer des documents. Choisissez l’autre fichier et lancez la comparaison. Google Docs crée un troisième document où les différences apparaissent sous forme de suggestions, sans remplacer les fichiers sources.",
+              "Google Docs permet aussi de comparer un document à un fichier Word .docx stocké dans Google Drive. Son aide précise que les modifications de disposition des colonnes et de largeur des colonnes de tableaux ne sont pas comparées. Vérifiez que le résultat contient la mise en forme et le contenu nécessaires à votre examen."
+            ]
+          },
+          {
+            "heading": "Vérifiez les changements dans leur contexte, pas seulement les marques",
+            "paragraphs": [
+              "Lisez chaque ajout et chaque suppression avec la phrase et la section qui l’entourent. Vérifiez les noms, dates, montants, liens, exigences et exceptions à partir de sources fiables. Une modification peut être grammaticalement fluide tout en changeant la portée ou l’obligation d’une phrase.",
+              "Repérez les paragraphes déplacés, les titres manquants, les textes dupliqués et les contenus absents de la comparaison. Un outil de comparaison indique les différences selon sa méthode ; il ne peut pas savoir si une modification était voulue ni si le document est complet."
+            ]
+          },
+          {
+            "heading": "Quand une comparaison en texte brut suffit",
+            "paragraphs": [
+              "Si vous avez seulement besoin de comparer du texte copié, collez le même passage de chaque version dans le comparateur de textes TextToools. Il met en évidence les lignes ajoutées, supprimées et inchangées dans votre navigateur. L’outil ne lit pas les fichiers, ne conserve pas la mise en forme et n’indique pas qui a effectué une modification.",
+              "Si votre examen dépend des commentaires, des marques de révision, des tableaux, de la mise en page ou de l’identité des réviseurs, utilisez la fonction de comparaison de votre éditeur de documents. Conservez les fichiers d’origine et décidez d’accepter ou non les modifications dans le processus qui gère ces documents."
+            ]
+          },
+          {
+            "heading": "Une liste de vérification pratique",
+            "paragraphs": [
+              "1. Confirmez l’original, la version révisée et le périmètre de l’examen.",
+              "2. Conservez des copies récupérables des deux documents sources.",
+              "3. Choisissez une méthode qui inclut le contenu et la mise en forme nécessaires.",
+              "4. Lisez chaque modification dans son contexte et vérifiez les faits importants avec des sources fiables.",
+              "5. Vérifiez les omissions, les sections déplacées, les commentaires et les marques de révision.",
+              "6. Notez la version examinée et la personne qui a approuvé le document final."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "J’ai créé le comparateur TextToools pour vérifier rapidement des passages en texte brut, et non pour remplacer la révision de documents. Lorsqu’une modification est importante, je préfère conserver l’original, examiner les différences dans leur contexte et utiliser l’éditeur pour toute décision liée aux commentaires, à la mise en forme ou à l’historique des révisions."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car vos textes ne devraient pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Comparer les différences entre des documents à l’aide de l’option de comparaison juridique",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/word/compare-document-differences-using-the-legal-blackline-option"
+          },
+          {
+            "title": "Comparer des documents dans Google Docs",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/18512262?hl=en"
           }
         ]
       }

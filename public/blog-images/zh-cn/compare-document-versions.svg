@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">比较文档版本并仔细审阅更改</title>
+  <desc id="desc">原始文档和修订版经过比较后，进入带标记的差异结果和审阅步骤。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  文档审阅</text>
+  <text x="80" y="158" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="44" font-weight="700">比较版本，仔细审阅更改</text>
+  <text x="80" y="199" fill="#647084" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="21">发现差异后，还要检查更改是否正确。</text>
+  <rect x="80" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="440" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="800" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="305" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" letter-spacing="2">01  /  原文</text>
+  <text x="476" y="305" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" letter-spacing="2">02  /  更改</text>
+  <text x="836" y="305" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" letter-spacing="2">03  /  审阅</text>
+  <text x="116" y="356" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700">原始版本</text>
+  <text x="476" y="356" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700">修订版本</text>
+  <text x="836" y="356" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700">结合上下文检查</text>
+  <rect x="116" y="384" width="224" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="116" y="410" width="184" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="476" y="384" width="224" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="476" y="406" width="142" height="20" rx="6" fill="#F5DADA"/>
+  <path d="M408 359H427M419 351L427 359L419 367M768 359H787M779 351L787 359L779 367" stroke="#69558E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="851" cy="401" r="13" fill="#E5F0E7"/>
+  <path d="M845 401L850 406L858 396" stroke="#3C7450" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="875" y="408" fill="#647084" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18">确认后再批准</text>
+  <text x="80" y="548" fill="#647084" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="19">保留两个原件，并结合上下文逐项检查更改。</text>
+</svg>

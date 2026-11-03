@@ -39,6 +39,8 @@ import {
   generateLoremText,
   getToolOutputContent,
   removeDuplicateLines,
+  compareText,
+  formatTextDiff,
   replaceMatches,
   resolveRouteKind,
   sortLines,
@@ -82,6 +84,14 @@ type ToolGuide = {
   id: string
   heading: string
   intro: string
+  comparisonLabels?: {
+    original: string
+    revised: string
+    added: string
+    removed: string
+    unchanged: string
+    tooLarge: string
+  }
   sections: {
     heading: string
     paragraphs: string[]
@@ -266,6 +276,13 @@ const toolList: Tool[] = [
     description: 'Update repeated entries across your full text block.',
     category: 'Text Formatting',
     icon: Replace,
+  },
+  {
+    id: 'text-diff',
+    name: 'Compare Text',
+    description: 'Compare two versions line by line and review what changed.',
+    category: 'Text Analysis',
+    icon: FileText,
   },
   {
     id: 'lorem-ipsum',
@@ -744,6 +761,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<(typeof categories)[number]>('All')
   const [search, setSearch] = useState('')
   const [text, setText] = useState('')
+  const [revisedText, setRevisedText] = useState('')
   const [findText, setFindText] = useState('')
   const [replaceText, setReplaceText] = useState('')
   const [actionMessage, setActionMessage] = useState('')
@@ -914,9 +932,16 @@ function App() {
     () => replaceMatches(text, findText, replaceText, matchCase, wholeWord),
     [findText, matchCase, replaceText, text, wholeWord],
   )
+  const textDiffResult = useMemo(
+    () => compareText(text, revisedText),
+    [revisedText, text],
+  )
 
   const transformedText = useMemo(() => {
     switch (activeTool) {
+      case 'text-diff':
+        return formatTextDiff(textDiffResult.lines)
+
       case 'case-converter':
         return convertCase(text, caseFormat)
 
@@ -947,6 +972,7 @@ function App() {
     }
   }, [
     activeTool,
+    textDiffResult,
     caseFormat,
     collapseCleanerSpaces,
     findReplaceResult,
@@ -1608,8 +1634,9 @@ function App() {
                 <button
                   type="button"
                   onClick={copyText}
+                  disabled={activeTool === 'text-diff' && textDiffResult.error !== null}
                   title={localizedCopy(locale, 'Copy the output content', '复制结果')}
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Copy className="h-4 w-4" />
                   {localeText?.copy ?? 'Copy'}
@@ -1617,8 +1644,9 @@ function App() {
                 <button
                   type="button"
                   onClick={downloadText}
+                  disabled={activeTool === 'text-diff' && textDiffResult.error !== null}
                   title={localizedCopy(locale, 'Download the output content', '下载结果')}
-                  className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
+                  className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Download className="h-4 w-4" />
                   {localeText?.download ?? 'Download'}
@@ -1634,58 +1662,155 @@ function App() {
                 className={`grid grid-cols-1 gap-4 ${activeTool === 'lorem-ipsum' ? '' : 'lg:grid-cols-2'}`}
               >
                 {activeTool !== 'lorem-ipsum' ? (
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="tool-input"
-                      className="block text-sm font-medium text-slate-700"
-                    >
-                      {localeText?.toolInput ?? 'Input text'}
-                    </label>
-                    <textarea
-                      id="tool-input"
-                      value={text}
-                      onChange={(event) => {
-                        setText(event.target.value)
-                        setActionMessage('')
-                      }}
-                      rows={10}
-                      placeholder={localeText?.inputPlaceholder ?? 'Paste or type your text here...'}
-                      autoCapitalize="off"
-                      spellCheck={false}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-base text-slate-900 outline-none transition focus:border-slate-400"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setText('')
-                        setActionMessage('')
-                      }}
-                      disabled={!text}
-                      className="rounded-md px-2 py-1 text-sm font-medium text-slate-600 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 disabled:cursor-not-allowed disabled:text-slate-400"
-                    >
-                      {localeText?.clearInput ?? 'Clear input'}
-                    </button>
-                  </div>
+                  activeTool === 'text-diff' ? (
+                    <div className="space-y-2">
+                      <div className="grid gap-4 lg:grid-cols-2">
+                        <label className="block space-y-2 text-sm font-medium text-slate-700">
+                          {activeToolGuide?.comparisonLabels?.original ?? 'Original text'}
+                          <textarea
+                            id="tool-input"
+                            value={text}
+                            onChange={(event) => {
+                              setText(event.target.value)
+                              setActionMessage('')
+                            }}
+                            rows={10}
+                            placeholder={localeText?.inputPlaceholder ?? 'Paste or type your text here...'}
+                            autoCapitalize="off"
+                            spellCheck={false}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-base text-slate-900 outline-none transition focus:border-slate-400"
+                          />
+                        </label>
+                        <label className="block space-y-2 text-sm font-medium text-slate-700">
+                          {activeToolGuide?.comparisonLabels?.revised ?? 'Revised text'}
+                          <textarea
+                            id="revised-text-input"
+                            value={revisedText}
+                            onChange={(event) => {
+                              setRevisedText(event.target.value)
+                              setActionMessage('')
+                            }}
+                            rows={10}
+                            placeholder={localeText?.inputPlaceholder ?? 'Paste or type your text here...'}
+                            autoCapitalize="off"
+                            spellCheck={false}
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-base text-slate-900 outline-none transition focus:border-slate-400"
+                          />
+                        </label>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setText('')
+                          setRevisedText('')
+                          setActionMessage('')
+                        }}
+                        disabled={!text && !revisedText}
+                        className="rounded-md px-2 py-1 text-sm font-medium text-slate-600 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 disabled:cursor-not-allowed disabled:text-slate-400"
+                      >
+                        {localeText?.clearInput ?? 'Clear input'}
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="tool-input"
+                        className="block text-sm font-medium text-slate-700"
+                      >
+                        {localeText?.toolInput ?? 'Input text'}
+                      </label>
+                      <textarea
+                        id="tool-input"
+                        value={text}
+                        onChange={(event) => {
+                          setText(event.target.value)
+                          setActionMessage('')
+                        }}
+                        rows={10}
+                        placeholder={localeText?.inputPlaceholder ?? 'Paste or type your text here...'}
+                        autoCapitalize="off"
+                        spellCheck={false}
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-base text-slate-900 outline-none transition focus:border-slate-400"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setText('')
+                          setActionMessage('')
+                        }}
+                        disabled={!text}
+                        className="rounded-md px-2 py-1 text-sm font-medium text-slate-600 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 disabled:cursor-not-allowed disabled:text-slate-400"
+                      >
+                        {localeText?.clearInput ?? 'Clear input'}
+                      </button>
+                    </div>
+                  )
                 ) : null}
 
-                <div className="space-y-2 text-sm font-medium text-slate-700">
+                <div className={`space-y-2 text-sm font-medium text-slate-700 ${activeTool === 'text-diff' ? 'lg:col-span-2' : ''}`}>
                   <p id="tool-output-label">{localeText?.output ?? 'Output'}</p>
                   <div className="min-h-[240px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
-                    <pre
-                      aria-labelledby="tool-output-label"
-                      className="h-full min-h-[208px] whitespace-pre-wrap break-words font-sans"
-                    >
-                      {activeTool === 'text-cleaner' ||
-                      activeTool === 'case-converter' ||
-                      activeTool === 'lorem-ipsum' ||
-                      activeTool === 'find-replace' ||
-                      activeTool === 'text-sorter'
-                        ? transformedText ||
-                          (text
-                            ? (localeText?.emptyResult ?? 'The result is empty.')
-                            : (localeText?.emptyOutput ?? 'Your result will appear here when you enter text.'))
-                        : outputContent || (localeText?.transformedOutput ?? 'Your transformed text will appear here.')}
-                    </pre>
+                    {activeTool === 'text-diff' ? (
+                      textDiffResult.error ? (
+                        <p role="alert" className="text-rose-700">
+                          {activeToolGuide?.comparisonLabels?.tooLarge ??
+                            'These texts are too large to compare at once. Try shorter sections.'}
+                        </p>
+                      ) : (
+                        <>
+                          {textDiffResult.lines.length > 0 ? (
+                            <>
+                              <p className="mb-3 text-xs font-medium text-slate-600">
+                                + {textDiffResult.additions} {activeToolGuide?.comparisonLabels?.added ?? 'added'}
+                                {' · '}
+                                − {textDiffResult.deletions} {activeToolGuide?.comparisonLabels?.removed ?? 'removed'}
+                                {textDiffResult.additions === 0 && textDiffResult.deletions === 0
+                                  ? ` · ${activeToolGuide?.comparisonLabels?.unchanged ?? 'No changes'}`
+                                  : ''}
+                              </p>
+                              <pre
+                                aria-labelledby="tool-output-label"
+                                className="min-h-[208px] whitespace-pre-wrap break-words font-mono text-xs leading-6"
+                              >
+                                {textDiffResult.lines.map((line, index) => (
+                                  <span
+                                    key={`${index}-${line.type}`}
+                                    className={
+                                      line.type === 'added'
+                                        ? 'block bg-emerald-100 px-2 text-emerald-900'
+                                        : line.type === 'removed'
+                                          ? 'block bg-rose-100 px-2 text-rose-900'
+                                          : 'block px-2 text-slate-600'
+                                    }
+                                  >
+                                    {line.type === 'added' ? '+ ' : line.type === 'removed' ? '− ' : '  '}
+                                    {line.text || ' '}
+                                  </span>
+                                ))}
+                              </pre>
+                            </>
+                          ) : (
+                            <p>{localeText?.emptyOutput ?? 'Your result will appear here when you enter text.'}</p>
+                          )}
+                        </>
+                      )
+                    ) : (
+                      <pre
+                        aria-labelledby="tool-output-label"
+                        className="h-full min-h-[208px] whitespace-pre-wrap break-words font-sans"
+                      >
+                        {activeTool === 'text-cleaner' ||
+                        activeTool === 'case-converter' ||
+                        activeTool === 'lorem-ipsum' ||
+                        activeTool === 'find-replace' ||
+                        activeTool === 'text-sorter'
+                          ? transformedText ||
+                            (text
+                              ? (localeText?.emptyResult ?? 'The result is empty.')
+                              : (localeText?.emptyOutput ?? 'Your result will appear here when you enter text.'))
+                          : outputContent || (localeText?.transformedOutput ?? 'Your transformed text will appear here.')}
+                      </pre>
+                    )}
                   </div>
                 </div>
               </div>
