@@ -2563,6 +2563,85 @@
             "url": "https://support.google.com/docs/answer/18512262?hl=en"
           }
         ]
+      },
+      "count-words-in-email": {
+        "modified": "2026-11-04",
+        "image": "blog-images/pt-br/email-word-count.svg",
+        "imageAlt": "Um rascunho de e-mail é conferido em um contador de palavras antes do envio.",
+        "title": "Como contar as palavras de um e-mail antes de enviar (Gmail e Outlook) | TextToools",
+        "description": "Conte as palavras de um rascunho de e-mail, decida se o assunto ou a assinatura entram no limite e veja onde encontrar a contagem em cada versão do Outlook.",
+        "summary": "Confira exatamente qual parte do e-mail tem limite de palavras. Use um contador no navegador para Gmail e o novo Outlook, ou o Word Count no Outlook clássico para Windows.",
+        "sections": [
+          {
+            "heading": "Defina o que entra no limite de palavras",
+            "paragraphs": [
+              "Antes de contar, confira se o limite vale para o corpo da mensagem, o assunto ou os dois. Decida também se deve incluir saudação, despedida, assinatura automática e respostas citadas. Essas partes podem mudar o total, então conte o texto especificado nas instruções.",
+              "Se a regra não estiver clara, mantenha o assunto e o corpo separados e confirme o escopo com o destinatário ou editor. Não presuma que a contagem exibida para uma mensagem inclui todas as partes de uma conversa por e-mail."
+            ]
+          },
+          {
+            "heading": "Conte um rascunho do Gmail ou de outro webmail",
+            "paragraphs": [
+              "Copie somente o texto do rascunho que deseja medir e cole no Contador de palavras do TextToools. Se o limite incluir o assunto, conte-o separadamente ou acrescente-o ao corpo apenas quando a regra pedir a soma dos dois. Confira o texto colado para não incluir respostas antigas nem conteúdo fora do escopo.",
+              "O contador funciona no navegador e não envia o texto para um servidor. Se o rascunho contiver informações confidenciais, siga as regras da sua organização e use somente ferramentas aprovadas para esse conteúdo."
+            ]
+          },
+          {
+            "heading": "Use o Word Count no Outlook clássico para Windows",
+            "paragraphs": [
+              "As instruções da Microsoft para o Outlook clássico dizem para abrir ou redigir a mensagem e escolher Revisão > Word Count na janela da mensagem. A caixa de diálogo informa as contagens de palavras, caracteres e parágrafos do corpo.",
+              "A Microsoft informa que esse recurso não está disponível no novo Outlook para Windows. Se você usa o novo Outlook ou o Outlook na Web, copie o texto relevante do rascunho para um contador. Confira a versão antes de seguir as instruções, pois os aplicativos do Outlook não têm os mesmos recursos."
+            ]
+          },
+          {
+            "heading": "Use um editor de texto como alternativa",
+            "paragraphs": [
+              "Você também pode colar o trecho selecionado do e-mail em um novo documento do Google Docs e escolher Ferramentas > Contagem de palavras. O Google Docs mostra palavras e caracteres, mas a página de ajuda informa que a contagem do documento inteiro não inclui cabeçalhos, rodapés e notas de rodapé, a menos que você selecione o texto.",
+              "Para um e-mail curto, um contador no navegador costuma ser uma forma mais rápida de conferir uma cópia em texto simples. Seja qual for o método, meça o mesmo texto e use sempre o mesmo escopo."
+            ]
+          },
+          {
+            "heading": "Por que as contagens podem ser diferentes",
+            "paragraphs": [
+              "Nem todos os contadores usam as mesmas regras. O contador do TextToools considera uma palavra cada grupo de caracteres separado por espaços em branco; por isso, um termo hifenizado sem espaços conta como uma palavra. A pontuação ligada a uma palavra permanece com ela, e outros editores podem usar convenções diferentes.",
+              "Copiar texto formatado do e-mail também pode incluir assinatura, respostas citadas ou conteúdo que você não queria medir. Compare o trecho selecionado com a regra que precisa cumprir, em vez de presumir que todos os aplicativos contam da mesma forma."
+            ]
+          },
+          {
+            "heading": "Uma conferência rápida antes do envio",
+            "paragraphs": [
+              "1. Confirme se o limite inclui o assunto, o corpo, a assinatura ou respostas citadas.",
+              "2. Copie somente o texto que deve entrar na contagem.",
+              "3. Use a contagem integrada do Outlook clássico para Windows ou um contador no navegador para um rascunho em texto simples.",
+              "4. Conte novamente após as últimas edições, mantendo o mesmo escopo e método.",
+              "5. Leia a mensagem mais uma vez para conferir se está clara; o total de palavras não garante que o e-mail seja fácil de entender."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Criei o Contador de palavras do TextToools para permitir uma verificação rápida sem enviar o rascunho para um servidor. A contagem ajuda quando há um limite, mas prefiro reler o e-mail para confirmar se o pedido e o próximo passo estão claros."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas de texto que respeitam a privacidade porque acredito que seu texto não precisa sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Contar o número de palavras em uma mensagem de e-mail",
+            "publisher": "Suporte da Microsoft",
+            "url": "https://support.microsoft.com/en-us/outlook/count-the-number-of-words-in-an-email-message"
+          },
+          {
+            "title": "Contar as palavras em um documento",
+            "publisher": "Ajuda dos Editores de Documentos Google",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
       }
     }
   }

@@ -2021,6 +2021,85 @@
             "url": "https://support.google.com/docs/answer/18512262?hl=en"
           }
         ]
+      },
+      "count-words-in-email": {
+        "modified": "2026-11-04",
+        "image": "blog-images/es/email-word-count.svg",
+        "imageAlt": "Un borrador de correo electrónico se revisa con un contador de palabras antes de enviarlo.",
+        "title": "Cómo contar las palabras de un correo antes de enviarlo (Gmail y Outlook) | TextToools",
+        "description": "Cuenta las palabras de un borrador de correo, decide si incluir el asunto o la firma y consulta dónde está el contador en cada versión de Outlook.",
+        "summary": "Comprueba qué parte del correo está sujeta al límite. Usa un contador en el navegador para Gmail y el nuevo Outlook, o Word Count en Outlook clásico para Windows.",
+        "sections": [
+          {
+            "heading": "Decide qué incluye el límite de palabras",
+            "paragraphs": [
+              "Antes de contar, comprueba si el límite se aplica al cuerpo del mensaje, al asunto o a ambos. Decide también si debes incluir el saludo, la despedida, la firma automática y las respuestas citadas. Estos elementos pueden cambiar el total, así que cuenta el texto que indiquen las instrucciones.",
+              "Si no está claro, mantén el asunto y el cuerpo separados y consulta la regla con el destinatario o editor. No des por hecho que el recuento visible de un mensaje incluye todas las partes de una conversación por correo."
+            ]
+          },
+          {
+            "heading": "Cuenta un borrador de Gmail o de otro correo web",
+            "paragraphs": [
+              "Copia solo el texto del borrador que quieras medir y pégalo en el contador de palabras de TextToools. Si el límite incluye el asunto, cuéntalo por separado o añádelo al cuerpo solo cuando las reglas indiquen que deben sumarse. Revisa el texto pegado para no incluir respuestas antiguas ni contenido ajeno por accidente.",
+              "El contador funciona en tu navegador y no sube el texto a un servidor. Si el borrador contiene información confidencial, sigue las normas de tu organización y utiliza únicamente herramientas aprobadas para ese contenido."
+            ]
+          },
+          {
+            "heading": "Usa Word Count en Outlook clásico para Windows",
+            "paragraphs": [
+              "Las instrucciones de Microsoft para Outlook clásico indican que abras o redactes el mensaje y elijas Review > Word Count en la ventana del mensaje. El cuadro muestra el número de palabras, caracteres y párrafos del cuerpo.",
+              "Microsoft señala que esta función no está disponible en el nuevo Outlook para Windows. Si usas el nuevo Outlook o Outlook en la web, copia el texto pertinente del borrador en un contador. Comprueba qué versión tienes antes de seguir los pasos, porque las aplicaciones de Outlook no ofrecen las mismas funciones."
+            ]
+          },
+          {
+            "heading": "Usa un procesador de textos como alternativa",
+            "paragraphs": [
+              "También puedes pegar el texto seleccionado del correo en un documento nuevo de Google Docs y elegir Herramientas > Recuento de palabras. Google Docs muestra el total de palabras y caracteres, pero su ayuda indica que el recuento de todo el documento excluye encabezados, pies de página y notas al pie, salvo que selecciones el texto.",
+              "Para un correo corto, un contador en el navegador suele ser una forma más rápida de revisar una copia en texto plano. Sea cual sea el método, mide siempre el mismo texto y con el mismo alcance."
+            ]
+          },
+          {
+            "heading": "Por qué pueden variar los recuentos",
+            "paragraphs": [
+              "No todos los contadores usan las mismas reglas. El contador de TextToools considera una palabra cada grupo de caracteres separado por espacios en blanco; por eso, una palabra compuesta con guion y sin espacios cuenta como una sola. La puntuación unida a una palabra se mantiene con ella, y otros editores pueden aplicar convenciones distintas.",
+              "Al copiar texto con formato también puedes incluir una firma, respuestas citadas o contenido que no querías medir. Compara el pasaje seleccionado con la regla que debes cumplir, en vez de asumir que todas las aplicaciones cuentan lo mismo."
+            ]
+          },
+          {
+            "heading": "Una comprobación rápida antes de enviar",
+            "paragraphs": [
+              "1. Confirma si el límite incluye el asunto, el cuerpo, la firma o las respuestas citadas.",
+              "2. Copia solo el texto que forma parte del recuento.",
+              "3. Usa el contador integrado de Outlook clásico para Windows o uno en el navegador para un borrador en texto plano.",
+              "4. Vuelve a contar después de los últimos cambios, manteniendo el mismo alcance y método.",
+              "5. Lee el mensaje una vez más para comprobar que se entiende: el total no indica por sí solo si el correo es claro."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Creé el contador de palabras de TextToools para que puedas revisar rápidamente un texto sin subir el borrador. El total ayuda cuando hay un límite, pero también leo el correo por separado para asegurarme de que la petición y el siguiente paso se entienden."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque tu texto no debería salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Contar el número de palabras de un mensaje de correo electrónico",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/outlook/count-the-number-of-words-in-an-email-message"
+          },
+          {
+            "title": "Contar las palabras de un documento",
+            "publisher": "Ayuda de Editores de Documentos de Google",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
       }
     }
   }

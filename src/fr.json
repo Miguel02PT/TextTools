@@ -2647,6 +2647,85 @@
             "url": "https://support.google.com/docs/answer/18512262?hl=en"
           }
         ]
+      },
+      "count-words-in-email": {
+        "modified": "2026-11-04",
+        "image": "blog-images/email-word-count.svg",
+        "imageAlt": "Un brouillon d’e-mail est vérifié avec un compteur de mots avant son envoi.",
+        "title": "Comment compter les mots d’un e-mail avant de l’envoyer (Gmail et Outlook) | TextToools",
+        "description": "Comptez les mots d’un brouillon d’e-mail, décidez si l’objet ou la signature entre dans la limite et découvrez où trouver le compteur selon votre version d’Outlook.",
+        "summary": "Vérifiez quelle partie de l’e-mail est soumise à la limite. Utilisez un compteur dans le navigateur pour Gmail et le nouvel Outlook, ou Word Count dans Outlook classique pour Windows.",
+        "sections": [
+          {
+            "heading": "Déterminez ce que comprend la limite de mots",
+            "paragraphs": [
+              "Avant de compter, vérifiez si la limite concerne le corps du message, l’objet ou les deux. Décidez aussi si vous devez inclure la formule d’appel, la salutation, la signature automatique et les réponses citées. Ces éléments peuvent modifier le total : comptez donc le texte visé par les consignes.",
+              "Si la règle n’est pas claire, gardez l’objet et le corps séparés et demandez des précisions au destinataire ou à la personne chargée de la révision. Ne supposez pas que le nombre affiché pour un message comprend toutes les parties d’un fil d’e-mails."
+            ]
+          },
+          {
+            "heading": "Comptez un brouillon Gmail ou un autre webmail",
+            "paragraphs": [
+              "Copiez uniquement le texte du brouillon que vous souhaitez mesurer, puis collez-le dans le compteur de mots TextToools. Si la limite inclut l’objet, comptez-le séparément ou ajoutez-le au corps uniquement si les consignes demandent de les combiner. Relisez le texte collé pour éviter d’inclure d’anciennes réponses ou du contenu sans rapport.",
+              "Le compteur fonctionne dans votre navigateur et n’envoie pas le texte à un serveur. Si le brouillon contient des informations confidentielles, suivez les règles de votre organisation et utilisez uniquement les outils approuvés pour ces données."
+            ]
+          },
+          {
+            "heading": "Utilisez Word Count dans Outlook classique pour Windows",
+            "paragraphs": [
+              "Selon les instructions de Microsoft pour Outlook classique, ouvrez ou rédigez le message, puis choisissez Révision > Word Count dans la fenêtre du message. La boîte de dialogue indique le nombre de mots, de caractères et de paragraphes dans le corps du message.",
+              "Microsoft précise que cette fonctionnalité n’est pas disponible dans le nouvel Outlook pour Windows. Si vous utilisez le nouvel Outlook ou Outlook sur le web, copiez le texte pertinent du brouillon dans un compteur. Vérifiez votre version avant de suivre les étapes, car les applications Outlook n’offrent pas les mêmes fonctionnalités."
+            ]
+          },
+          {
+            "heading": "Utilisez un traitement de texte comme autre solution",
+            "paragraphs": [
+              "Vous pouvez aussi coller le passage sélectionné de l’e-mail dans un nouveau document Google Docs, puis choisir Outils > Nombre de mots. Google Docs affiche les nombres de mots et de caractères, mais sa page d’aide précise que le total du document exclut les en-têtes, pieds de page et notes de bas de page, sauf si vous sélectionnez le texte.",
+              "Pour un e-mail court, un compteur dans le navigateur est souvent un moyen plus rapide de vérifier une copie en texte brut. Quel que soit l’outil choisi, mesurez le même texte et le même périmètre à chaque fois."
+            ]
+          },
+          {
+            "heading": "Pourquoi les résultats peuvent différer",
+            "paragraphs": [
+              "Les compteurs de mots n’utilisent pas tous les mêmes règles. Le compteur TextToools considère chaque groupe de caractères séparé par des espaces comme un mot ; un terme composé avec un trait d’union et sans espace compte donc pour un mot. La ponctuation accolée reste avec le mot, et d’autres éditeurs peuvent appliquer des conventions différentes.",
+              "Le copier-coller d’un e-mail mis en forme peut aussi inclure une signature, des réponses citées ou du texte que vous ne vouliez pas compter. Comparez le passage sélectionné à la règle à respecter au lieu de supposer que toutes les applications mesurent la même chose."
+            ]
+          },
+          {
+            "heading": "Une vérification rapide avant l’envoi",
+            "paragraphs": [
+              "1. Vérifiez si la limite inclut l’objet, le corps, la signature ou les réponses citées.",
+              "2. Copiez uniquement le texte qui doit être compté.",
+              "3. Utilisez le compteur intégré d’Outlook classique pour Windows ou un compteur dans le navigateur pour un brouillon en texte brut.",
+              "4. Recomptez après vos dernières modifications, avec le même périmètre et la même méthode.",
+              "5. Relisez le message pour vérifier sa clarté : le nombre de mots ne suffit pas à savoir si l’e-mail est facile à comprendre."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "J’ai créé le compteur de mots TextToools pour vérifier rapidement un texte sans téléverser le brouillon. Le total est utile lorsqu’un message est soumis à une limite, mais je relis aussi l’e-mail pour m’assurer que la demande et la prochaine étape sont claires."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car vos textes ne devraient pas quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Compter le nombre de mots dans un e-mail",
+            "publisher": "Assistance Microsoft",
+            "url": "https://support.microsoft.com/en-us/outlook/count-the-number-of-words-in-an-email-message"
+          },
+          {
+            "title": "Compter les mots dans un document",
+            "publisher": "Aide pour les éditeurs Google Docs",
+            "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
       }
     }
   }

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">发送前统计邮件字数</title>
+  <desc id="desc">发送前使用合适的字数统计工具检查邮件草稿。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="548" r="170" fill="#E8E1F1"/>
+  <circle cx="86" cy="95" r="110" fill="#EAE5F0"/>
+  <text x="80" y="86" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" letter-spacing="3">TEXTTOOOLS  /  邮件写作</text>
+  <text x="80" y="158" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="44" font-weight="700">发送前统计邮件字数</text>
+  <text x="80" y="199" fill="#647084" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="21">只统计字数限制所涵盖的文本。</text>
+  <rect x="80" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="440" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <rect x="800" y="252" width="320" height="214" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="305" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" letter-spacing="2">01  /  草稿</text>
+  <text x="476" y="305" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" letter-spacing="2">02  /  统计</text>
+  <text x="836" y="305" fill="#69558E" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" letter-spacing="2">03  /  检查</text>
+  <text x="116" y="356" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700">邮件正文</text>
+  <text x="476" y="356" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700">统计字数</text>
+  <text x="836" y="356" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700">发送前检查</text>
+  <rect x="116" y="384" width="224" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="116" y="410" width="184" height="12" rx="6" fill="#E8E5EE"/>
+  <rect x="476" y="384" width="216" height="14" rx="7" fill="#E8E5EE"/>
+  <rect x="476" y="410" width="166" height="12" rx="6" fill="#E8E5EE"/>
+  <path d="M408 359H427M419 351L427 359L419 367M768 359H787M779 351L787 359L779 367" stroke="#69558E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="852" cy="405" r="18" fill="#E5F0E7"/>
+  <path d="M844 405L850 411L861 398" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="548" fill="#647084" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="19">主题、签名和引用回复都会影响统计结果。</text>
+</svg>
