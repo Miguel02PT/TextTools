@@ -39,6 +39,14 @@
     "homeBreadcrumb": "Accueil",
     "toolBreadcrumb": "Tous les outils",
     "toolInput": "Saisissez le texte",
+    "notepadListTools": "Mise en forme des listes",
+    "notepadBullets": "Liste à puces",
+    "notepadNumbers": "Liste numérotée",
+    "notepadClear": "Effacer la note",
+    "notepadEditorLabel": "Note",
+    "notepadPlaceholder": "Écrivez vos notes ici. Collez du texte ou utilisez les boutons pour créer des listes.",
+    "notepadStorageNotice": "Enregistrée uniquement dans ce navigateur et sur cet appareil. Elle n’est ni envoyée ni synchronisée. Évitez les informations sensibles.",
+    "notepadSaveError": "Ce navigateur n’a pas pu enregistrer la note. Copiez-la ou téléchargez-la avant de partir.",
     "inputPlaceholder": "Collez ou tapez le texte ici…",
     "clearInput": "Effacer le texte",
     "output": "R?sultat",
@@ -115,11 +123,11 @@
     "aboutPrivacy": "Le texte est traité dans votre navigateur, sans avoir besoin d'un compte. Le texte que vous saisissez n'est pas envoyé aux serveurs TextToools pour traitement.",
     "aboutGoal": "Nous voulons que les tâches quotidiennes avec du texte soient simples, claires et fiables. Vous pouvez partager des suggestions en utilisant le formulaire de contact.",
     "privacyInputHeading": "Texte saisi dans les outils",
-    "privacyInput": "Les transformations et les calculs sont effectués dans votre navigateur. Le texte que vous saisissez n'est pas envoyé aux serveurs TextToools pour traitement. Lorsque vous supprimez le texte ou fermez la page, l'entrée qui était en mémoire est supprimée.",
+    "privacyInput": "Les transformations et les calculs sont effectués dans votre navigateur ; le texte n'est pas envoyé aux serveurs TextToools. Le contenu des autres outils reste uniquement en mémoire et disparaît lorsque vous fermez la page. Le Bloc-notes du navigateur fait exception : la note est enregistrée dans le stockage local de ce navigateur pour rester disponible à votre retour. Effacer la note supprime la copie enregistrée. N'y stockez pas d'informations sensibles.",
     "privacyFormsHeading": "Formulaires de contact",
     "privacyForms": "Lorsque vous soumettez un formulaire de contact ou de rapport de problème, votre nom (si vous l'indiquez), votre e-mail de réponse, l'objet, le message, le type de formulaire et le chemin de la page sont envoyés à TextToools. Cloudflare Turnstile vérifie le jeton anti-spam et reçoit votre adresse IP pour la vérifier. Renvoyer remet le message à la boîte aux lettres du projet. Les e-mails livrés y sont conservés en fonction de la configuration de cette boîte aux lettres. Renvoyer indique que son forfait gratuit conserve les données des événements de messagerie pendant les jours 30. N'incluez pas de mots de passe, d'informations de paiement ou de texte privé provenant de documents.",
     "privacyStorageHeading": "Stockage local et analyses",
-    "privacyStorage": "TextToools n'enregistre pas le texte des outils dans le stockage local et ne nécessite pas de compte. Nous utilisons Cloudflare Web Analytics pour mesurer les visites, les pages vues et les performances de manière agrégée, y compris les Core Web Vitals. Cloudflare indique que Web Analytics ne suit pas les utilisateurs individuels entre les sites des clients et ne collecte ni n'utilise leurs données personnelles. Nous utilisons également Google Analytics 4 (GA4) pour comprendre l'utilisation du site, mais seulement après que vous ayez expressément accepté. Si vous refusez ou ne choisissez pas, la balise GA4 n'est pas chargée et aucune demande n'est envoyée à Google. Avec votre consentement, GA4 enregistre les pages vues, le début d'utilisation des outils et les actions de copie ou de téléchargement. Votre choix est enregistré dans le stockage local de ce navigateur et vous pouvez le modifier à tout moment dans les Paramètres de confidentialité. GA4 ne reçoit jamais le texte saisi dans les outils, les recherches, les valeurs de remplacement ou les résultats générés ; tout le traitement de texte est effectué dans votre navigateur.",
+    "privacyStorage": "Le Bloc-notes du navigateur enregistre automatiquement la note dans le stockage local de ce navigateur et de cet appareil ; elle n'est pas envoyée à TextToools ni synchronisée avec nos serveurs. Le texte des autres outils n'est pas enregistré et aucun compte n'est nécessaire. Nous utilisons Cloudflare Web Analytics pour mesurer les visites, les pages vues et les performances de manière agrégée, y compris les Core Web Vitals. Cloudflare indique que Web Analytics ne suit pas les utilisateurs individuels entre les sites des clients et ne collecte ni n'utilise leurs données personnelles. Nous utilisons également Google Analytics 4 (GA4) pour comprendre l'utilisation du site, mais seulement après que vous ayez expressément accepté. Si vous refusez ou ne choisissez pas, la balise GA4 n'est pas chargée et aucune demande n'est envoyée à Google. Avec votre consentement, GA4 enregistre les pages vues, le début d'utilisation des outils et les actions de copie ou de téléchargement. Votre choix est enregistré dans le stockage local de ce navigateur et vous pouvez le modifier à tout moment dans les Paramètres de confidentialité. GA4 ne reçoit jamais le texte saisi dans les outils, les recherches, les valeurs de remplacement ou les résultats générés ; tout le traitement de texte est effectué dans votre navigateur.",
     "privacySettings": "Param?tres de confidentialit?",
     "analyticsConsentBody": "Cloudflare Web Analytics restera actif pour mesurer le trafic et les performances sur une base globale. Google Analytics 4 n'est téléchargé que si vous donnez votre consentement exprès ; Si vous refusez ou ne faites pas de choix, aucune demande GA4 n'est envoyée à Google. Après acceptation, GA4 enregistre les pages consultées, les débuts d'utilisation des outils et les actions de copie ou de téléchargement, mais jamais le texte que vous saisissez. Votre choix est enregistré dans ce navigateur et vous pouvez le modifier à tout moment depuis les paramètres de confidentialité.",
     "termsUsageHeading": "Utilisation des outils",
@@ -182,6 +190,50 @@
     "Learn how Google handles data.": "Découvrez comment Google traite les données."
   },
   "tools": {
+    "browser-notepad": {
+      "name": "Bloc-notes du navigateur",
+      "description": "Rédigez, organisez et copiez vos notes directement dans le navigateur.",
+      "title": "Bloc-notes en ligne gratuit | TextToools",
+      "meta": "Rédigez et organisez vos notes, créez des listes à puces ou numérotées et copiez votre texte dans le navigateur. Les notes restent sur cet appareil.",
+      "heading": "Bloc-notes en ligne gratuit",
+      "intro": "Notez vos idées, collez du texte et organisez vos tâches avec des listes simples. Le brouillon est enregistré dans ce navigateur pour rester disponible à votre retour.",
+      "sections": [
+        {
+          "heading": "Rédiger, coller et organiser",
+          "paragraphs": [
+            "Saisissez du texte directement dans la zone de note ou collez-le depuis une autre application. Les boutons de liste à puces et numérotée mettent en forme les lignes sélectionnées ; sans sélection, ils s'appliquent à la ligne du curseur.",
+            "Sélectionnez plusieurs lignes pour les organiser en une fois. Vous pouvez modifier les marqueurs et le texte manuellement."
+          ]
+        },
+        {
+          "heading": "Copier, télécharger et conserver vos notes",
+          "paragraphs": [
+            "Utilisez Copier pour placer la note dans le presse-papiers ou Télécharger pour enregistrer un fichier texte. Le brouillon est enregistré automatiquement dans le stockage local de ce navigateur et reste disponible après la fermeture de la page.",
+            "La note n'est pas envoyée à TextToools et n'est pas synchronisée avec nos serveurs. Fermez le navigateur ou revenez sur la page pour continuer ; Effacer la note supprime le brouillon enregistré."
+          ]
+        },
+        {
+          "heading": "Protéger la confidentialité de l'appareil",
+          "paragraphs": [
+            "Le stockage local est propre à ce navigateur et au profil de l'appareil. N'enregistrez pas de mots de passe ni d'informations sensibles, surtout si d'autres personnes peuvent utiliser ce profil. Si le navigateur bloque le stockage, copiez ou téléchargez la note avant de partir."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Puis-je copier et coller du texte ?",
+          "answer": "Oui. Collez du texte avec les commandes habituelles du navigateur, puis utilisez Copier ou Télécharger pour récupérer la note."
+        },
+        {
+          "question": "La note est-elle conservée après la fermeture de la page ?",
+          "answer": "Oui. Elle est enregistrée automatiquement dans le stockage local de ce navigateur et de cet appareil. Effacer la note supprime le brouillon."
+        },
+        {
+          "question": "La note est-elle envoyée à TextToools ?",
+          "answer": "Non. Elle reste dans le stockage local du navigateur et n'est pas envoyée aux serveurs TextToools."
+        }
+      ]
+    },
     "word-counter": {
       "name": "Compteur de mots",
       "description": "Compte instantanément les mots, les caractères, les phrases et les paragraphes.",

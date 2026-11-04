@@ -11,7 +11,9 @@ import {
   FileText,
   Grid2X2,
   Hash,
+  List,
   ListFilter,
+  ListOrdered,
   Replace,
   Rows3,
   Search,
@@ -41,6 +43,7 @@ import {
   removeDuplicateLines,
   compareText,
   formatTextDiff,
+  formatSelectedLinesAsList,
   replaceMatches,
   resolveRouteKind,
   sortLines,
@@ -139,6 +142,7 @@ const GA_MEASUREMENT_ID = 'G-CDBK2W6TB0'
 const ANALYTICS_CONSENT_STORAGE_KEY = 'texttools-ga4-consent'
 const GOOGLE_ANALYTICS_SCRIPT_ID = 'google-analytics-script'
 const ANALYTICS_CONSENT_CHANGE_EVENT = 'texttools-analytics-consent-change'
+const BROWSER_NOTEPAD_STORAGE_KEY = 'texttools-browser-notepad'
 
 type AnalyticsConsent = 'accepted' | 'rejected' | null
 let analyticsConsentMemoryFallback: AnalyticsConsent = null
@@ -304,6 +308,13 @@ const toolList: Tool[] = [
     description: 'See the most frequent words in your text.',
     category: 'Text Analysis',
     icon: BarChart3,
+  },
+  {
+    id: 'browser-notepad',
+    name: 'Browser Notepad',
+    description: 'Write, organize, and copy notes in your browser.',
+    category: 'Writing',
+    icon: FileText,
   },
 ]
 
@@ -761,6 +772,8 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<(typeof categories)[number]>('All')
   const [search, setSearch] = useState('')
   const [text, setText] = useState('')
+  const [notepadStorageError, setNotepadStorageError] = useState(false)
+  const [notepadLoaded, setNotepadLoaded] = useState(activeTool !== 'browser-notepad')
   const [revisedText, setRevisedText] = useState('')
   const [findText, setFindText] = useState('')
   const [replaceText, setReplaceText] = useState('')
@@ -778,6 +791,39 @@ function App() {
   const [trimCleanerLines, setTrimCleanerLines] = useState(true)
   const [collapseCleanerSpaces, setCollapseCleanerSpaces] = useState(true)
   const [removeExtraBlankLines, setRemoveExtraBlankLines] = useState(true)
+  const notepadRef = useRef<HTMLTextAreaElement>(null)
+
+  useEffect(() => {
+    if (activeTool !== 'browser-notepad') return
+
+    const frame = window.requestAnimationFrame(() => {
+      try {
+        setText(window.localStorage.getItem(BROWSER_NOTEPAD_STORAGE_KEY) ?? '')
+        setNotepadStorageError(false)
+      } catch (error) {
+        console.error('Unable to load the browser notepad draft.', error)
+        setNotepadStorageError(true)
+      }
+      setNotepadLoaded(true)
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [activeTool])
+
+  useEffect(() => {
+    if (activeTool !== 'browser-notepad' || !notepadLoaded) return
+
+    try {
+      if (text) {
+        window.localStorage.setItem(BROWSER_NOTEPAD_STORAGE_KEY, text)
+      } else {
+        window.localStorage.removeItem(BROWSER_NOTEPAD_STORAGE_KEY)
+      }
+    } catch (error) {
+      console.error('Unable to save the browser notepad draft.', error)
+      const frame = window.requestAnimationFrame(() => setNotepadStorageError(true))
+      return () => window.cancelAnimationFrame(frame)
+    }
+  }, [activeTool, notepadLoaded, text])
   const analyticsConsent = useSyncExternalStore(
     subscribeToAnalyticsConsent,
     getAnalyticsConsentSnapshot,
@@ -1048,6 +1094,23 @@ function App() {
       console.error('Unable to download tool output.', error)
       setActionMessage(localeText?.downloadFailed ?? 'Download failed. Please try again.')
     }
+  }
+
+  const formatNoteAsList = (style: 'bulleted' | 'numbered') => {
+    const textarea = notepadRef.current
+    if (!textarea) return
+
+    const formatted = formatSelectedLinesAsList(
+      textarea.value,
+      textarea.selectionStart,
+      textarea.selectionEnd,
+      style,
+    )
+    setText(formatted.text)
+    window.requestAnimationFrame(() => {
+      textarea.focus()
+      textarea.setSelectionRange(formatted.selectionStart, formatted.selectionEnd)
+    })
   }
 
   const renderControls = () => {
@@ -1659,7 +1722,11 @@ function App() {
 
             <div className="space-y-5">
               <div
-                className={`grid grid-cols-1 gap-4 ${activeTool === 'lorem-ipsum' ? '' : 'lg:grid-cols-2'}`}
+                className={`grid grid-cols-1 gap-4 ${
+                  activeTool === 'lorem-ipsum' || activeTool === 'browser-notepad'
+                    ? ''
+                    : 'lg:grid-cols-2'
+                }`}
               >
                 {activeTool !== 'lorem-ipsum' ? (
                   activeTool === 'text-diff' ? (
@@ -1672,6 +1739,7 @@ function App() {
                             value={text}
                             onChange={(event) => {
                               setText(event.target.value)
+                              setNotepadStorageError(false)
                               setActionMessage('')
                             }}
                             rows={10}
@@ -1711,6 +1779,79 @@ function App() {
                         {localeText?.clearInput ?? 'Clear input'}
                       </button>
                     </div>
+                  ) : activeTool === 'browser-notepad' ? (
+                    <div className="space-y-3">
+                      <div
+                        role="toolbar"
+                        aria-label={localeText?.notepadListTools ?? 'Note formatting'}
+                        className="flex flex-wrap gap-2"
+                      >
+                        <button
+                          type="button"
+                          onMouseDown={(event) => event.preventDefault()}
+                          onClick={() => formatNoteAsList('bulleted')}
+                          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                        >
+                          <List className="h-4 w-4" aria-hidden="true" />
+                          {localeText?.notepadBullets ?? 'Bullet list'}
+                        </button>
+                        <button
+                          type="button"
+                          onMouseDown={(event) => event.preventDefault()}
+                          onClick={() => formatNoteAsList('numbered')}
+                          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                        >
+                          <ListOrdered className="h-4 w-4" aria-hidden="true" />
+                          {localeText?.notepadNumbers ?? 'Numbered list'}
+                        </button>
+                      </div>
+                      <label htmlFor="tool-input" className="sr-only">
+                        {localeText?.notepadEditorLabel ?? 'Note'}
+                      </label>
+                      <textarea
+                        ref={notepadRef}
+                        id="tool-input"
+                        value={text}
+                        onChange={(event) => {
+                          setText(event.target.value)
+                          setActionMessage('')
+                        }}
+                        rows={18}
+                        placeholder={
+                          localeText?.notepadPlaceholder ??
+                          'Write your notes here. Paste text or use the list buttons above.'
+                        }
+                        autoCapitalize="off"
+                        spellCheck
+                        className="min-h-[420px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50 p-4 font-mono text-base leading-7 text-slate-900 outline-none transition focus:border-slate-400"
+                      />
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setText('')
+                            setNotepadStorageError(false)
+                            setActionMessage('')
+                          }}
+                          disabled={!text}
+                          className="w-fit rounded-md px-2 py-1 text-sm font-medium text-slate-600 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 disabled:cursor-not-allowed disabled:text-slate-400"
+                        >
+                          {localeText?.notepadClear ?? 'Clear note'}
+                        </button>
+                        <p
+                          role="status"
+                          className={`text-xs leading-5 ${
+                            notepadStorageError ? 'text-rose-700' : 'text-slate-500'
+                          }`}
+                        >
+                          {notepadStorageError
+                            ? localeText?.notepadSaveError ??
+                              'This browser could not save the note. Copy or download it before leaving.'
+                            : localeText?.notepadStorageNotice ??
+                              'Saved only in this browser on this device. Your note is not uploaded.'}
+                        </p>
+                      </div>
+                    </div>
                   ) : (
                     <div className="space-y-2">
                       <label
@@ -1747,7 +1888,11 @@ function App() {
                   )
                 ) : null}
 
-                <div className={`space-y-2 text-sm font-medium text-slate-700 ${activeTool === 'text-diff' ? 'lg:col-span-2' : ''}`}>
+                <div
+                  className={`${activeTool === 'browser-notepad' ? 'hidden ' : ''}space-y-2 text-sm font-medium text-slate-700 ${
+                    activeTool === 'text-diff' ? 'lg:col-span-2' : ''
+                  }`}
+                >
                   <p id="tool-output-label">{localeText?.output ?? 'Output'}</p>
                   <div className="min-h-[240px] rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm leading-7 text-slate-700">
                     {activeTool === 'text-diff' ? (
@@ -2085,7 +2230,7 @@ function App() {
                 <p className="font-medium text-slate-800">{localeText?.lastUpdated ?? 'Last updated:'} {currentYear}</p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyInputHeading ?? 'Text entered into tools'}</h2>
                 <p>
-                  {localeText?.privacyInput ?? 'Text transformations and calculations run in your browser. Text entered into the tools is not sent to a TextToools server for processing. Clearing or closing the page removes the current in-memory tool input.'}
+                  {localeText?.privacyInput ?? 'Text transformations and calculations run in your browser; text is not sent to TextToools servers. Other tools keep text only in memory and clear it when you close the page. Browser Notepad is different: its note is saved in this browser’s local storage so it is available when you return. Clearing the note removes the saved copy. Do not store sensitive information here.'}
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyFormsHeading ?? 'Contact forms'}</h2>
                 <p>
@@ -2093,7 +2238,7 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyStorageHeading ?? 'Local storage and analytics'}</h2>
                 <p>
-                  {localeText?.privacyStorage ?? 'TextToools does not save tool input in local storage or require an account. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
+                  {localeText?.privacyStorage ?? 'Browser Notepad automatically saves its note in local storage on this browser and device; it is not uploaded to TextToools or synced with our servers. Text entered into other tools is not saved, and no account is required. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
                 </p>
                 <p>
                   <a

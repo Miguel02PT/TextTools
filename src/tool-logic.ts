@@ -13,6 +13,43 @@ export type ToolId =
   | 'lorem-ipsum'
   | 'reading-time'
   | 'keyword-density'
+  | 'browser-notepad'
+
+export type TextListStyle = 'bulleted' | 'numbered'
+
+export function formatSelectedLinesAsList(
+  text: string,
+  selectionStart: number,
+  selectionEnd: number,
+  style: TextListStyle,
+) {
+  const start = Math.max(0, Math.min(selectionStart, text.length))
+  const end = Math.max(start, Math.min(selectionEnd, text.length))
+  const blockStart = text.lastIndexOf('\n', Math.max(0, start - 1)) + 1
+  const endAnchor = end > start && text[end - 1] === '\n' ? end - 1 : end
+  const nextLineBreak = text.indexOf('\n', endAnchor)
+  const blockEnd = nextLineBreak === -1 ? text.length : nextLineBreak
+  let itemNumber = 0
+  const formattedBlock = text
+    .slice(blockStart, blockEnd)
+    .split('\n')
+    .map((line) => {
+      const match = line.match(/^(\s*)(?:(?:[-*•])\s+|\d+[.)]\s+)?(.*)$/u)
+      const indentation = match?.[1] ?? ''
+      const content = match?.[2] ?? line
+      if (!content.trim()) return line
+      itemNumber += 1
+      const marker = style === 'numbered' ? `${itemNumber}.` : '-'
+      return `${indentation}${marker} ${content}`
+    })
+    .join('\n')
+
+  return {
+    text: `${text.slice(0, blockStart)}${formattedBlock}${text.slice(blockEnd)}`,
+    selectionStart: blockStart,
+    selectionEnd: blockStart + formattedBlock.length,
+  }
+}
 
 export type KeywordEntry = {
   word: string

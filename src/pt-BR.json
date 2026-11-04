@@ -40,6 +40,14 @@
     "homeBreadcrumb": "Início",
     "toolBreadcrumb": "Todas as ferramentas",
     "toolInput": "Digite o texto",
+    "notepadListTools": "Formatação de listas",
+    "notepadBullets": "Lista com marcadores",
+    "notepadNumbers": "Lista numerada",
+    "notepadClear": "Apagar nota",
+    "notepadEditorLabel": "Nota",
+    "notepadPlaceholder": "Escreva suas anotações aqui. Cole textos ou use os botões para criar listas.",
+    "notepadStorageNotice": "Salva apenas neste navegador e dispositivo. Não é enviada nem sincronizada. Evite guardar informações sensíveis.",
+    "notepadSaveError": "Este navegador não conseguiu salvar a nota. Copie ou baixe o conteúdo antes de sair.",
     "inputPlaceholder": "Cole ou digite seu texto aqui…",
     "clearInput": "Limpar texto",
     "output": "Resultado",
@@ -116,11 +124,11 @@
     "aboutPrivacy": "O texto é processado no seu navegador, sem necessidade de uma conta. O conteúdo digitado não é enviado aos servidores do TextToools para processamento.",
     "aboutGoal": "Queremos tornar as tarefas cotidianas com texto simples, claras e confiáveis. Envie sugestões pelo formulário de contato.",
     "privacyInputHeading": "Texto inserido nas ferramentas",
-    "privacyInput": "As transformações e os cálculos acontecem no seu navegador. O texto digitado não é enviado aos servidores do TextToools para processamento. Ao apagar o texto ou fechar a página, a entrada mantida na memória é removida.",
+    "privacyInput": "As transformações e os cálculos acontecem no seu navegador; o texto não é enviado aos servidores do TextToools. O conteúdo das outras ferramentas fica apenas na memória e desaparece ao fechar a página. O Bloco de notas do navegador é a exceção: a nota é salva no armazenamento local deste navegador para continuar disponível depois. Apagar a nota remove a cópia salva. Não guarde informações sensíveis.",
     "privacyFormsHeading": "Formulários de contato",
     "privacyForms": "Ao enviar um formulário de contato ou de relato de problema, são enviados ao TextToools seu nome (se informado), e-mail para resposta, assunto, mensagem, tipo de formulário e caminho da página. O Cloudflare Turnstile verifica o token antispam e recebe seu endereço IP para fazer essa validação. O Resend entrega a mensagem à caixa de entrada do projeto. Os e-mails recebidos são mantidos conforme as configurações dessa caixa. O Resend informa que o plano gratuito mantém os dados de eventos de e-mail por 30 dias. Não inclua senhas, dados de pagamento nem textos privados de documentos.",
     "privacyStorageHeading": "Armazenamento local e análise de uso",
-    "privacyStorage": "O TextToools não salva os textos das ferramentas no armazenamento local e não exige uma conta. Usamos o Cloudflare Web Analytics para medir visitas, visualizações de página e desempenho de forma agregada, incluindo as Core Web Vitals. A Cloudflare informa que o Web Analytics não rastreia usuários individuais entre sites de clientes nem coleta ou usa dados pessoais. Também usamos o Google Analytics 4 (GA4) para entender como o site é utilizado, mas somente depois que você aceita. Se você recusar ou não escolher, a tag do GA4 não é carregada e nenhuma solicitação é enviada ao Google. Com seu consentimento, o GA4 registra visualizações de página, início do uso de ferramentas e ações de cópia ou download. Sua escolha fica salva no armazenamento local deste navegador e pode ser alterada a qualquer momento em Configurações de privacidade. O GA4 nunca recebe o texto digitado nas ferramentas, as buscas, os valores de substituição nem os resultados gerados; todo o processamento de texto acontece no seu navegador.",
+    "privacyStorage": "O Bloco de notas do navegador salva automaticamente a nota no armazenamento local deste navegador e dispositivo; ela não é enviada ao TextToools nem sincronizada com nossos servidores. O texto das outras ferramentas não é salvo, e não é necessário criar uma conta. Usamos o Cloudflare Web Analytics para medir visitas, visualizações de página e desempenho de forma agregada, incluindo as Core Web Vitals. A Cloudflare informa que o Web Analytics não rastreia usuários individuais entre sites de clientes nem coleta ou usa dados pessoais. Também usamos o Google Analytics 4 (GA4) para entender como o site é utilizado, mas somente depois que você aceita. Se você recusar ou não escolher, a tag do GA4 não é carregada e nenhuma solicitação é enviada ao Google. Com seu consentimento, o GA4 registra visualizações de página, início do uso de ferramentas e ações de cópia ou download. Sua escolha fica salva no armazenamento local deste navegador e pode ser alterada a qualquer momento em Configurações de privacidade. O GA4 nunca recebe o texto digitado nas ferramentas, as buscas, os valores de substituição nem os resultados gerados; todo o processamento de texto acontece no seu navegador.",
     "privacySettings": "Configurações de privacidade",
     "analyticsConsentBody": "O Cloudflare Web Analytics continuará ativo para medir tráfego e desempenho de forma agregada. O Google Analytics 4 só é carregado se você der consentimento explícito; se recusar ou não escolher, nenhuma solicitação do GA4 será enviada ao Google. Depois do consentimento, o GA4 registra visualizações de página, início do uso de ferramentas e ações de cópia ou download, mas nunca o texto digitado. Sua escolha fica salva neste navegador e pode ser alterada a qualquer momento em Configurações de privacidade.",
     "termsUsageHeading": "Uso das ferramentas",
@@ -184,6 +192,50 @@
     "Learn how Google handles data.": "Saiba como o Google trata os dados."
   },
   "tools": {
+    "browser-notepad": {
+      "name": "Bloco de notas do navegador",
+      "description": "Escreva, organize e copie anotações diretamente no navegador.",
+      "title": "Bloco de notas online grátis | TextToools",
+      "meta": "Escreva e organize anotações, crie listas com marcadores ou numeradas e copie o texto no navegador. As notas ficam salvas apenas neste dispositivo.",
+      "heading": "Bloco de notas online grátis",
+      "intro": "Anote ideias, cole textos e organize tarefas com listas simples. O rascunho é salvo neste navegador para continuar disponível quando você voltar.",
+      "sections": [
+        {
+          "heading": "Escreva, cole e organize",
+          "paragraphs": [
+            "Digite diretamente na área de notas ou cole texto de outro aplicativo. Os botões de lista com marcadores e numerada formatam as linhas selecionadas; sem seleção, aplicam o formato à linha onde está o cursor.",
+            "Selecione várias linhas para organizá-las de uma vez. Você pode continuar editando os marcadores e o texto manualmente."
+          ]
+        },
+        {
+          "heading": "Copie, baixe e mantenha suas notas",
+          "paragraphs": [
+            "Use Copiar para enviar a nota à área de transferência ou Baixar para salvar um arquivo de texto. O rascunho é salvo automaticamente no armazenamento local deste navegador e permanece depois que você fecha a página.",
+            "A nota não é enviada ao TextToools nem sincronizada com nossos servidores. Feche o navegador ou volte à página para continuar; use Apagar nota para remover o rascunho salvo."
+          ]
+        },
+        {
+          "heading": "Considere a privacidade do dispositivo",
+          "paragraphs": [
+            "O armazenamento local pertence a este navegador e perfil do dispositivo. Não salve senhas nem informações sensíveis, especialmente se outras pessoas puderem usar esse perfil. Se o navegador bloquear o armazenamento, copie ou baixe a nota antes de sair."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Posso copiar e colar textos?",
+          "answer": "Sim. Cole texto usando os controles do navegador e use Copiar ou Baixar para retirar a nota."
+        },
+        {
+          "question": "A nota fica salva quando eu fecho a página?",
+          "answer": "Sim. Ela é salva automaticamente no armazenamento local deste navegador e dispositivo. Apagar nota remove o rascunho."
+        },
+        {
+          "question": "A nota é enviada ao TextToools?",
+          "answer": "Não. A nota permanece no armazenamento local do navegador e não é enviada aos servidores do TextToools."
+        }
+      ]
+    },
     "word-counter": {
       "name": "Contador de palavras",
       "description": "Conte palavras, caracteres, frases e parágrafos na hora.",

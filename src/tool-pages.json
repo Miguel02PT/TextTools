@@ -543,5 +543,48 @@
         "answer": "It recognizes accented Unicode letters, but its stop-word list is English. Common Portuguese words may therefore appear in the results."
       }
     ]
+  },
+  {
+    "id": "browser-notepad",
+    "title": "Free Online Notepad | TextToools",
+    "description": "Write notes, organize bullet or numbered lists, and copy or download your text in a browser-based notepad that saves drafts on your device.",
+    "heading": "Free online notepad",
+    "intro": "Jot down ideas, paste text, and organize tasks with simple lists. Your draft is saved in this browser so it is available when you return.",
+    "sections": [
+      {
+        "heading": "Write, paste, and organize",
+        "paragraphs": [
+          "Type in the note area or paste text from another app. The bullet and numbered list buttons format selected lines; with no selection, they format the line where the cursor sits.",
+          "Select multiple lines to organize them at once. You can continue editing list markers and text manually."
+        ]
+      },
+      {
+        "heading": "Copy, download, and keep notes",
+        "paragraphs": [
+          "Use Copy to place the note on your clipboard or Download to save a text file. The draft is saved automatically in this browser's local storage and remains available after you close the page.",
+          "The note is not sent to TextToools or synced with our servers. Reopen the page to continue; use Clear note to remove the saved draft."
+        ]
+      },
+      {
+        "heading": "Keep device privacy in mind",
+        "paragraphs": [
+          "Local storage belongs to this browser and device profile. Avoid saving passwords or sensitive information, especially if other people can access the profile. If browser storage is blocked, copy or download the note before leaving."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I copy and paste text?",
+        "answer": "Yes. Paste with your browser's usual controls, then use Copy or Download to take the note with you."
+      },
+      {
+        "question": "Will my note still be there after I close the page?",
+        "answer": "Yes. It is saved automatically in this browser's local storage on this device. Clear note removes the saved draft."
+      },
+      {
+        "question": "Is my note uploaded to TextToools?",
+        "answer": "No. The note stays in this browser's local storage and is not sent to TextToools servers."
+      }
+    ]
   }
 ]

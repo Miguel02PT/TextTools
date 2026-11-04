@@ -10,6 +10,7 @@ import {
   countWords,
   formatReadingTime,
   formatTextDiff,
+  formatSelectedLinesAsList,
   generateLoremText,
   getKeywordData,
   getToolOutputContent,
@@ -80,6 +81,26 @@ test('duplicate-line removal and sorting preserve meaningful empty output', () =
   assert.equal(sortLines('a\n\nb', 'az', true, true, 'en'), 'a\nb')
   assert.equal(sortLines(' \n\t ', 'az', true, true, 'en'), '')
   assert.equal(sortLines('', 'reverse', true, false, 'en'), '')
+})
+
+test('notepad list formatting handles selections, blank lines, and existing markers', () => {
+  const bullets = formatSelectedLinesAsList(
+    'before\nfirst\n\nsecond\nafter',
+    8,
+    17,
+    'bulleted',
+  )
+  assert.equal(bullets.text, 'before\n- first\n\n- second\nafter')
+  assert.equal(bullets.text.slice(bullets.selectionStart, bullets.selectionEnd), '- first\n\n- second')
+
+  assert.equal(
+    formatSelectedLinesAsList('old\n3) second\n', 0, 13, 'numbered').text,
+    '1. old\n2. second\n',
+  )
+  assert.equal(
+    formatSelectedLinesAsList('one\ntwo', 5, 5, 'numbered').text,
+    'one\n1. two',
+  )
 })
 
 test('find and replace treats the search term literally and supports empty replacements', () => {
