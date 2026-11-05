@@ -211,6 +211,7 @@
       "meta": "Planeje tarefas para qualquer data, marque as concluídas e baixe uma cópia em texto com o dia selecionado no nome do arquivo.",
       "heading": "Planejador diário de tarefas grátis",
       "intro": "Escolha uma data, adicione tarefas e marque-as ao concluir. Suas listas ficam salvas neste navegador, e cada download leva o nome do dia selecionado.",
+      "filenamePrefix": "lista de tarefas do dia",
       "sections": [
         {
           "heading": "Crie uma lista para um dia específico",
@@ -222,7 +223,7 @@
         {
           "heading": "Acompanhe o progresso e baixe a lista do dia",
           "paragraphs": [
-            "Marque uma tarefa como concluída quando terminar ou remova-a se ela não fizer mais parte da lista. Copiar exporta a data selecionada e suas tarefas; Baixar cria um arquivo de texto chamado “list de tarefas dia AAAA-MM-DD.txt”, usando a data escolhida no calendário.",
+            "Marque uma tarefa como concluída quando terminar ou remova-a se ela não fizer mais parte da lista. Copiar exporta a data selecionada e suas tarefas; Baixar cria um arquivo de texto chamado “lista de tarefas do dia AAAA-MM-DD.txt”, usando a data escolhida no calendário.",
             "As tarefas concluídas mantêm a marcação no arquivo baixado. A data faz parte do nome para ajudar você a identificar a lista depois."
           ]
         },
@@ -241,7 +242,7 @@
         },
         {
           "question": "Qual é o nome do arquivo baixado?",
-          "answer": "O arquivo se chama “list de tarefas dia AAAA-MM-DD.txt”, com a data escolhida no calendário."
+          "answer": "O arquivo se chama “lista de tarefas do dia AAAA-MM-DD.txt”, com a data escolhida no calendário."
         },
         {
           "question": "Minhas tarefas são sincronizadas ou salvas online?",

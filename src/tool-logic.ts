@@ -75,8 +75,8 @@ export function formatTodoList(
   ].join('\n')
 }
 
-export function getTodoDownloadFilename(date: string) {
-  return `list de tarefas dia ${date}.txt`
+export function getTodoDownloadFilename(date: string, prefix: string) {
+  return `${prefix} ${date}.txt`
 }
 
 export function formatSelectedLinesAsList(

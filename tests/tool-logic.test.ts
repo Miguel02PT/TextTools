@@ -126,7 +126,23 @@ test('daily task lists validate storage and export the selected date and complet
     formatTodoList(date, [], { heading: 'Tasks for', empty: 'No tasks.' }),
     'Tasks for 2026-11-05\n\nNo tasks.',
   )
-  assert.equal(getTodoDownloadFilename(date), 'list de tarefas dia 2026-11-05.txt')
+  assert.equal(getTodoDownloadFilename(date, 'daily task list'), 'daily task list 2026-11-05.txt')
+  assert.equal(
+    getTodoDownloadFilename(date, 'lista de tareas del día'),
+    'lista de tareas del día 2026-11-05.txt',
+  )
+  assert.equal(
+    getTodoDownloadFilename(date, 'lista de tarefas do dia'),
+    'lista de tarefas do dia 2026-11-05.txt',
+  )
+  assert.equal(
+    getTodoDownloadFilename(date, 'liste des tâches du jour'),
+    'liste des tâches du jour 2026-11-05.txt',
+  )
+  assert.equal(
+    getTodoDownloadFilename(date, '每日任务清单'),
+    '每日任务清单 2026-11-05.txt',
+  )
   assert.throws(() => parseTodoLists('null'), TypeError)
   assert.throws(() => parseTodoLists('{"2026-02-30":[]}'), TypeError)
   assert.throws(() => parseTodoLists('{"2026-11-05":[{"id":"a","text":"Task"}]}'), TypeError)

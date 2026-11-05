@@ -593,6 +593,7 @@
     "description": "Plan a to-do list for any date, check off finished tasks, and download a plain-text copy named for the selected day.",
     "heading": "Free daily to-do list planner",
     "intro": "Choose a date, add tasks, and check them off as you go. Your lists stay in this browser, and each download is named for the selected day.",
+    "filenamePrefix": "daily task list",
     "sections": [
       {
         "heading": "Make a list for a specific day",
@@ -604,7 +605,7 @@
       {
         "heading": "Track progress and download the day's list",
         "paragraphs": [
-          "Mark a task complete when it is done, or remove it if it no longer belongs on the list. Copy exports the selected date and its tasks; Download creates a plain-text file named “list de tarefas dia YYYY-MM-DD.txt” using the date selected in the calendar.",
+          "Mark a task complete when it is done, or remove it if it no longer belongs on the list. Copy exports the selected date and its tasks; Download creates a plain-text file named “daily task list YYYY-MM-DD.txt” using the date selected in the calendar.",
           "Completed items remain visible in the downloaded list with a checked marker. The selected date is included in the file so a saved list is easy to identify later."
         ]
       },
@@ -623,7 +624,7 @@
       },
       {
         "question": "What is the downloaded file called?",
-        "answer": "The file name is “list de tarefas dia YYYY-MM-DD.txt”, where the date is the day selected in the calendar."
+        "answer": "The file name is “daily task list YYYY-MM-DD.txt”, where the date is the day selected in the calendar."
       },
       {
         "question": "Are my tasks synced or backed up online?",

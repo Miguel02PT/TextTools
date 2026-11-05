@@ -1149,7 +1149,10 @@ function App() {
       anchor.href = url
       anchor.download =
         activeTool === 'daily-todo-list'
-          ? getTodoDownloadFilename(todoSelectedDate)
+          ? getTodoDownloadFilename(
+              todoSelectedDate,
+              localeText?.filenamePrefix ?? 'daily task list',
+            )
           : `${activeToolInfo.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.txt`
       document.body.appendChild(anchor)
       anchor.click()

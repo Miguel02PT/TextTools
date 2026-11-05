@@ -209,6 +209,7 @@
       "meta": "Planifiez vos tâches à n’importe quelle date, cochez celles qui sont terminées et téléchargez une copie texte dont le nom contient le jour sélectionné.",
       "heading": "Planificateur quotidien de tâches gratuit",
       "intro": "Choisissez une date, ajoutez des tâches et cochez-les une fois terminées. Vos listes restent dans ce navigateur et chaque téléchargement porte le nom du jour sélectionné.",
+      "filenamePrefix": "liste des tâches du jour",
       "sections": [
         {
           "heading": "Créer une liste pour un jour précis",
@@ -220,7 +221,7 @@
         {
           "heading": "Suivre l’avancement et télécharger la liste du jour",
           "paragraphs": [
-            "Cochez une tâche lorsqu’elle est terminée ou supprimez-la si elle n’a plus sa place dans la liste. Copier exporte la date choisie et ses tâches ; Télécharger crée un fichier texte nommé « list de tarefas dia AAAA-MM-JJ » selon la date du calendrier.",
+            "Cochez une tâche lorsqu’elle est terminée ou supprimez-la si elle n’a plus sa place dans la liste. Copier exporte la date choisie et ses tâches ; Télécharger crée un fichier texte nommé « liste des tâches du jour AAAA-MM-JJ.txt » selon la date du calendrier.",
             "Les tâches terminées conservent leur coche dans le fichier téléchargé. La date dans le nom permet de retrouver facilement la liste."
           ]
         },
@@ -239,7 +240,7 @@
         },
         {
           "question": "Quel est le nom du fichier téléchargé ?",
-          "answer": "Le fichier s’appelle « list de tarefas dia AAAA-MM-JJ » ; la date correspond au jour choisi dans le calendrier."
+          "answer": "Le fichier s’appelle « liste des tâches du jour AAAA-MM-JJ.txt » ; la date correspond au jour choisi dans le calendrier."
         },
         {
           "question": "Mes tâches sont-elles synchronisées ou sauvegardées en ligne ?",

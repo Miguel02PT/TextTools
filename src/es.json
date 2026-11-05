@@ -209,6 +209,7 @@
       "meta": "Planifica tareas para cualquier fecha, marca las completadas y descarga una copia de texto con el día seleccionado en el nombre del archivo.",
       "heading": "Planificador diario de tareas gratis",
       "intro": "Elige una fecha, añade tareas y márcalas al completarlas. Tus listas se guardan en este navegador y cada descarga lleva el nombre del día seleccionado.",
+      "filenamePrefix": "lista de tareas del día",
       "sections": [
         {
           "heading": "Crea una lista para un día concreto",
@@ -220,7 +221,7 @@
         {
           "heading": "Sigue el progreso y descarga la lista del día",
           "paragraphs": [
-            "Marca una tarea como completada cuando la termines o elimínala si ya no corresponde. Copiar exporta la fecha seleccionada y sus tareas; Descargar crea un archivo de texto llamado «list de tarefas dia AAAA-MM-DD.txt» con la fecha elegida en el calendario.",
+            "Marca una tarea como completada cuando la termines o elimínala si ya no corresponde. Copiar exporta la fecha seleccionada y sus tareas; Descargar crea un archivo de texto llamado «lista de tareas del día AAAA-MM-DD.txt» con la fecha elegida en el calendario.",
             "Las tareas completadas conservan su marca en la lista descargada. La fecha aparece en el archivo para que puedas identificarlo más tarde."
           ]
         },
@@ -239,7 +240,7 @@
         },
         {
           "question": "¿Cómo se llama el archivo descargado?",
-          "answer": "El archivo se llama «list de tarefas dia AAAA-MM-DD.txt» y la fecha corresponde al día seleccionado en el calendario."
+          "answer": "El archivo se llama «lista de tareas del día AAAA-MM-DD.txt» y la fecha corresponde al día seleccionado en el calendario."
         },
         {
           "question": "¿Mis tareas se sincronizan o se guardan en línea?",

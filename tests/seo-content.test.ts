@@ -16,6 +16,7 @@ const englishBlogPosts = readFileSync(new URL('../src/blog-posts.json', import.m
 const chineseContent = readFileSync(new URL('../src/zh-CN.json', import.meta.url), 'utf8')
 const spanishContent = readFileSync(new URL('../src/es.json', import.meta.url), 'utf8')
 const portugueseContent = readFileSync(new URL('../src/pt-BR.json', import.meta.url), 'utf8')
+const frenchContent = readFileSync(new URL('../src/fr.json', import.meta.url), 'utf8')
 const responseHeaders = readFileSync(new URL('../public/_headers', import.meta.url), 'utf8')
 const englishToolGuides = JSON.parse(
   readFileSync(new URL('../src/tool-pages.json', import.meta.url), 'utf8'),
@@ -29,6 +30,7 @@ const parsedEnglishBlogPosts = JSON.parse(englishBlogPosts)
 const parsedChineseContent = JSON.parse(chineseContent)
 const parsedSpanishContent = JSON.parse(spanishContent)
 const parsedPortugueseContent = JSON.parse(portugueseContent)
+const parsedFrenchContent = JSON.parse(frenchContent)
 const averageSentenceLengthPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'average-sentence-length',
 )
@@ -88,6 +90,24 @@ test('task prioritization article and daily task list target complementary searc
   assert.doesNotMatch(taskPrioritizationPost.title, /daily to-do list/i)
   assert.match(dailyTodoListGuide.title, /daily to-do list/i)
   assert.ok(taskPrioritizationPost.sections.length >= 6)
+})
+
+test('daily task list download filename prefix is localized in every supported language', () => {
+  const prefixes = [
+    dailyTodoListGuide.filenamePrefix,
+    parsedSpanishContent.tools['daily-todo-list'].filenamePrefix,
+    parsedPortugueseContent.tools['daily-todo-list'].filenamePrefix,
+    parsedFrenchContent.tools['daily-todo-list'].filenamePrefix,
+    parsedChineseContent.tools['daily-todo-list'].filenamePrefix,
+  ]
+
+  assert.deepEqual(prefixes, [
+    'daily task list',
+    'lista de tareas del día',
+    'lista de tarefas do dia',
+    'liste des tâches du jour',
+    '每日任务清单',
+  ])
 })
 
 test('duplicate-line guide examples match exact, order-preserving deduplication', () => {
