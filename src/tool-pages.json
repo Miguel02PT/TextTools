@@ -586,5 +586,49 @@
         "answer": "No. The note stays in this browser's local storage and is not sent to TextToools servers."
       }
     ]
+  },
+  {
+    "id": "daily-todo-list",
+    "title": "Free Daily To-Do List Planner | TextToools",
+    "description": "Plan a to-do list for any date, check off finished tasks, and download a plain-text copy named for the selected day.",
+    "heading": "Free daily to-do list planner",
+    "intro": "Choose a date, add tasks, and check them off as you go. Your lists stay in this browser, and each download is named for the selected day.",
+    "sections": [
+      {
+        "heading": "Make a list for a specific day",
+        "paragraphs": [
+          "Choose a date with the calendar, then add the tasks you want to track for that day. Selecting another date shows its own list, so you can prepare a future day or revisit a previous one.",
+          "Write each item as a clear next action. For a large project, add the next step you can actually do rather than a broad outcome such as “finish everything.”"
+        ]
+      },
+      {
+        "heading": "Track progress and download the day's list",
+        "paragraphs": [
+          "Mark a task complete when it is done, or remove it if it no longer belongs on the list. Copy exports the selected date and its tasks; Download creates a plain-text file named “list de tarefas dia YYYY-MM-DD.txt” using the date selected in the calendar.",
+          "Completed items remain visible in the downloaded list with a checked marker. The selected date is included in the file so a saved list is easy to identify later."
+        ]
+      },
+      {
+        "heading": "Know where your tasks are saved",
+        "paragraphs": [
+          "Task lists are saved in local storage in this browser and device profile. They are not uploaded or synchronized, so they will not follow you to another browser or device. Clearing this site's browser data can remove them.",
+          "Avoid storing sensitive information in a shared browser profile. Download a copy if you need a separate backup or want to move a list elsewhere."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I plan tasks for a different date?",
+        "answer": "Yes. Choose any date in the calendar. Each date has its own task list, and you can return to it later in this browser."
+      },
+      {
+        "question": "What is the downloaded file called?",
+        "answer": "The file name is “list de tarefas dia YYYY-MM-DD.txt”, where the date is the day selected in the calendar."
+      },
+      {
+        "question": "Are my tasks synced or backed up online?",
+        "answer": "No. They are saved only in local storage in this browser and device profile. Download the list if you need a separate copy."
+      }
+    ]
   }
 ]

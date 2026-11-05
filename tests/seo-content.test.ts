@@ -35,6 +35,12 @@ const averageSentenceLengthPost = parsedEnglishBlogPosts.find(
 const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'keyword-density-guide',
 )
+const taskPrioritizationPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-prioritize-tasks',
+)
+const dailyTodoListGuide = englishToolGuides.find(
+  (guide: { id: string }) => guide.id === 'daily-todo-list',
+)
 const googleDocsWordCountPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'google-docs-word-count',
 )
@@ -74,6 +80,15 @@ const portugueseHyphenatedWordsPost = parsedPortugueseContent.blog.posts[
 const portugueseWordCountEditingPost = parsedPortugueseContent.blog.posts[
   'how-to-cut-word-count-without-losing-meaning'
 ]
+
+test('task prioritization article and daily task list target complementary search intents', () => {
+  assert.ok(taskPrioritizationPost)
+  assert.ok(dailyTodoListGuide)
+  assert.match(taskPrioritizationPost.title, /prioritize tasks/i)
+  assert.doesNotMatch(taskPrioritizationPost.title, /daily to-do list/i)
+  assert.match(dailyTodoListGuide.title, /daily to-do list/i)
+  assert.ok(taskPrioritizationPost.sections.length >= 6)
+})
 
 test('duplicate-line guide examples match exact, order-preserving deduplication', () => {
   const post = parsedEnglishBlogPosts.find(

@@ -11,8 +11,12 @@ import {
   formatReadingTime,
   formatTextDiff,
   formatSelectedLinesAsList,
+  formatTodoList,
+  getLocalDateInputValue,
+  getTodoDownloadFilename,
   generateLoremText,
   getKeywordData,
+  parseTodoLists,
   getToolOutputContent,
   removeDuplicateLines,
   replaceMatches,
@@ -101,6 +105,31 @@ test('notepad list formatting handles selections, blank lines, and existing mark
     formatSelectedLinesAsList('one\ntwo', 5, 5, 'numbered').text,
     'one\n1. two',
   )
+})
+
+test('daily task lists validate storage and export the selected date and completion state', () => {
+  const date = '2026-11-05'
+  const lists = {
+    [date]: [
+      { id: 'a', text: 'Send the draft', completed: true },
+      { id: 'b', text: 'Review the notes', completed: false },
+    ],
+  }
+
+  assert.equal(getLocalDateInputValue(new Date(2026, 10, 5, 23)), date)
+  assert.deepEqual(parseTodoLists(JSON.stringify(lists)), lists)
+  assert.equal(
+    formatTodoList(date, lists[date], { heading: 'Tasks for', empty: 'No tasks.' }),
+    'Tasks for 2026-11-05\n\n[x] Send the draft\n[ ] Review the notes',
+  )
+  assert.equal(
+    formatTodoList(date, [], { heading: 'Tasks for', empty: 'No tasks.' }),
+    'Tasks for 2026-11-05\n\nNo tasks.',
+  )
+  assert.equal(getTodoDownloadFilename(date), 'list de tarefas dia 2026-11-05.txt')
+  assert.throws(() => parseTodoLists('null'), TypeError)
+  assert.throws(() => parseTodoLists('{"2026-02-30":[]}'), TypeError)
+  assert.throws(() => parseTodoLists('{"2026-11-05":[{"id":"a","text":"Task"}]}'), TypeError)
 })
 
 test('find and replace treats the search term literally and supports empty replacements', () => {

@@ -32,6 +32,7 @@ async function assertPreRenderedRouteHydrates(pathname: string) {
 
     dom = new JSDOM(`<div id="root" data-prerendered="true">${html}</div>`, {
       url: `https://texttoools.com${pathname}`,
+      pretendToBeVisual: true,
     })
     dom.window.localStorage.setItem('texttools-ga4-consent', 'accepted')
     Object.defineProperty(globalThis, 'window', { configurable: true, value: dom.window })
@@ -78,4 +79,8 @@ test('pre-rendered find-replace route hydrates without React mismatch', async ()
 
 test('pre-rendered text-diff route hydrates without React mismatch', async () => {
   await assertPreRenderedRouteHydrates('/tools/text-diff/')
+})
+
+test('pre-rendered daily todo list route hydrates without React mismatch', async () => {
+  await assertPreRenderedRouteHydrates('/tools/daily-todo-list/')
 })

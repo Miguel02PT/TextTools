@@ -4,6 +4,7 @@ import {
   ArrowRight,
   BarChart3,
   BookOpen,
+  CalendarDays,
   Clock3,
   ChevronDown,
   Copy,
@@ -14,9 +15,11 @@ import {
   List,
   ListFilter,
   ListOrdered,
+  Plus,
   Replace,
   Rows3,
   Search,
+  Trash2,
   Type,
   Wand2,
   X,
@@ -40,6 +43,10 @@ import {
   formatReadingTime,
   generateLoremText,
   getToolOutputContent,
+  getLocalDateInputValue,
+  formatTodoList,
+  getTodoDownloadFilename,
+  parseTodoLists,
   removeDuplicateLines,
   compareText,
   formatTextDiff,
@@ -50,6 +57,8 @@ import {
   type CaseFormat,
   type Locale,
   type SortMode,
+  type TodoItem,
+  type TodoLists,
   type ToolId,
 } from './tool-logic'
 
@@ -143,6 +152,7 @@ const ANALYTICS_CONSENT_STORAGE_KEY = 'texttools-ga4-consent'
 const GOOGLE_ANALYTICS_SCRIPT_ID = 'google-analytics-script'
 const ANALYTICS_CONSENT_CHANGE_EVENT = 'texttools-analytics-consent-change'
 const BROWSER_NOTEPAD_STORAGE_KEY = 'texttools-browser-notepad'
+const DAILY_TODO_LIST_STORAGE_KEY = 'texttools-daily-todo-lists'
 
 type AnalyticsConsent = 'accepted' | 'rejected' | null
 let analyticsConsentMemoryFallback: AnalyticsConsent = null
@@ -315,6 +325,13 @@ const toolList: Tool[] = [
     description: 'Write, organize, and copy notes in your browser.',
     category: 'Writing',
     icon: FileText,
+  },
+  {
+    id: 'daily-todo-list',
+    name: 'Daily To-Do List',
+    description: 'Plan tasks by date and download a list for the selected day.',
+    category: 'Writing',
+    icon: CalendarDays,
   },
 ]
 
@@ -774,6 +791,11 @@ function App() {
   const [text, setText] = useState('')
   const [notepadStorageError, setNotepadStorageError] = useState(false)
   const [notepadLoaded, setNotepadLoaded] = useState(activeTool !== 'browser-notepad')
+  const [todoItemsByDate, setTodoItemsByDate] = useState<TodoLists>({})
+  const [todoSelectedDate, setTodoSelectedDate] = useState('')
+  const [todoDraft, setTodoDraft] = useState('')
+  const [todoStorageError, setTodoStorageError] = useState(false)
+  const [todoStorageLoaded, setTodoStorageLoaded] = useState(activeTool !== 'daily-todo-list')
   const [revisedText, setRevisedText] = useState('')
   const [findText, setFindText] = useState('')
   const [replaceText, setReplaceText] = useState('')
@@ -792,6 +814,36 @@ function App() {
   const [collapseCleanerSpaces, setCollapseCleanerSpaces] = useState(true)
   const [removeExtraBlankLines, setRemoveExtraBlankLines] = useState(true)
   const notepadRef = useRef<HTMLTextAreaElement>(null)
+
+  useEffect(() => {
+    if (activeTool !== 'daily-todo-list') return
+
+    const frame = window.requestAnimationFrame(() => {
+      try {
+        const savedLists = window.localStorage.getItem(DAILY_TODO_LIST_STORAGE_KEY)
+        setTodoItemsByDate(savedLists ? parseTodoLists(savedLists) : {})
+        setTodoStorageError(false)
+      } catch (error) {
+        console.error('Unable to load saved daily task lists.', error)
+        setTodoStorageError(true)
+      }
+      setTodoSelectedDate(getLocalDateInputValue(new Date()))
+      setTodoStorageLoaded(true)
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [activeTool])
+
+  useEffect(() => {
+    if (activeTool !== 'daily-todo-list' || !todoStorageLoaded || todoStorageError) return
+
+    try {
+      window.localStorage.setItem(DAILY_TODO_LIST_STORAGE_KEY, JSON.stringify(todoItemsByDate))
+    } catch (error) {
+      console.error('Unable to save daily task lists.', error)
+      const frame = window.requestAnimationFrame(() => setTodoStorageError(true))
+      return () => window.cancelAnimationFrame(frame)
+    }
+  }, [activeTool, todoItemsByDate, todoStorageError, todoStorageLoaded])
 
   useEffect(() => {
     if (activeTool !== 'browser-notepad') return
@@ -1035,16 +1087,28 @@ function App() {
   ])
 
   const outputContent = useMemo(
-    () =>
-      getToolOutputContent(
+    () => {
+      if (activeTool === 'daily-todo-list') {
+        return formatTodoList(
+          todoSelectedDate,
+          todoItemsByDate[todoSelectedDate] ?? [],
+          {
+            heading: localeText?.todoExportHeading ?? 'Tasks for',
+            empty: localeText?.todoEmptyExport ?? 'No tasks for this date.',
+          },
+        )
+      }
+
+      return getToolOutputContent(
         activeTool,
         transformedText,
         metrics,
         readingSpeed,
         locale,
         getLocaleOutputLabels(locale),
-      ),
-    [activeTool, locale, metrics, readingSpeed, transformedText],
+      )
+    },
+    [activeTool, locale, localeText, metrics, readingSpeed, todoItemsByDate, todoSelectedDate, transformedText],
   )
 
   const copyText = async () => {
@@ -1083,7 +1147,10 @@ function App() {
       const url = URL.createObjectURL(blob)
       const anchor = document.createElement('a')
       anchor.href = url
-      anchor.download = `${activeToolInfo.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.txt`
+      anchor.download =
+        activeTool === 'daily-todo-list'
+          ? getTodoDownloadFilename(todoSelectedDate)
+          : `${activeToolInfo.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.txt`
       document.body.appendChild(anchor)
       anchor.click()
       anchor.remove()
@@ -1697,7 +1764,10 @@ function App() {
                 <button
                   type="button"
                   onClick={copyText}
-                  disabled={activeTool === 'text-diff' && textDiffResult.error !== null}
+                  disabled={
+                    (activeTool === 'text-diff' && textDiffResult.error !== null) ||
+                    (activeTool === 'daily-todo-list' && !todoSelectedDate)
+                  }
                   title={localizedCopy(locale, 'Copy the output content', '复制结果')}
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                 >
@@ -1707,7 +1777,10 @@ function App() {
                 <button
                   type="button"
                   onClick={downloadText}
-                  disabled={activeTool === 'text-diff' && textDiffResult.error !== null}
+                  disabled={
+                    (activeTool === 'text-diff' && textDiffResult.error !== null) ||
+                    (activeTool === 'daily-todo-list' && !todoSelectedDate)
+                  }
                   title={localizedCopy(locale, 'Download the output content', '下载结果')}
                   className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
                 >
@@ -1723,7 +1796,9 @@ function App() {
             <div className="space-y-5">
               <div
                 className={`grid grid-cols-1 gap-4 ${
-                  activeTool === 'lorem-ipsum' || activeTool === 'browser-notepad'
+                  activeTool === 'lorem-ipsum' ||
+                  activeTool === 'browser-notepad' ||
+                  activeTool === 'daily-todo-list'
                     ? ''
                     : 'lg:grid-cols-2'
                 }`}
@@ -1852,6 +1927,123 @@ function App() {
                         </p>
                       </div>
                     </div>
+                  ) : activeTool === 'daily-todo-list' ? (
+                    <div className="space-y-6">
+                      <label className="flex w-fit flex-col gap-2 text-sm font-medium text-slate-700 sm:flex-row sm:items-center">
+                        <span className="inline-flex items-center gap-2">
+                          <CalendarDays className="h-4 w-4" aria-hidden="true" />
+                          {localeText?.todoChooseDate ?? 'Choose a day'}
+                        </span>
+                        <input
+                          type="date"
+                          value={todoSelectedDate}
+                          onChange={(event) => {
+                            setTodoSelectedDate(event.target.value)
+                            setTodoDraft('')
+                            setActionMessage('')
+                          }}
+                          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-base text-slate-900 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                        />
+                      </label>
+
+                      <form
+                        onSubmit={(event) => {
+                          event.preventDefault()
+                          const taskText = todoDraft.trim()
+                          if (!taskText || !todoSelectedDate || todoStorageError) return
+                          const task: TodoItem = {
+                            id: window.crypto.randomUUID(),
+                            text: taskText,
+                            completed: false,
+                          }
+                          setTodoItemsByDate((current) => ({
+                            ...current,
+                            [todoSelectedDate]: [...(current[todoSelectedDate] ?? []), task],
+                          }))
+                          setTodoDraft('')
+                        }}
+                        className="flex flex-col gap-2 sm:flex-row"
+                      >
+                        <label htmlFor="todo-task-input" className="sr-only">
+                          {localeText?.todoTaskLabel ?? 'New task'}
+                        </label>
+                        <input
+                          id="todo-task-input"
+                          type="text"
+                          value={todoDraft}
+                          onChange={(event) => setTodoDraft(event.target.value)}
+                          placeholder={localeText?.todoTaskPlaceholder ?? 'Add a task for this day'}
+                          disabled={!todoSelectedDate || todoStorageError}
+                          className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 disabled:bg-slate-100"
+                        />
+                        <button
+                          type="submit"
+                          disabled={!todoDraft.trim() || !todoSelectedDate || todoStorageError}
+                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+                        >
+                          <Plus className="h-4 w-4" aria-hidden="true" />
+                          {localeText?.todoAdd ?? 'Add task'}
+                        </button>
+                      </form>
+
+                      {todoSelectedDate ? (
+                        <ul aria-label={`${localeText?.todoTasksFor ?? 'Tasks for'} ${todoSelectedDate}`} className="divide-y divide-slate-100">
+                          {(todoItemsByDate[todoSelectedDate] ?? []).map((task) => (
+                            <li key={task.id} className="flex items-center gap-3 py-3">
+                              <input
+                                type="checkbox"
+                                checked={task.completed}
+                                disabled={todoStorageError}
+                                aria-label={`${localeText?.todoMarkComplete ?? 'Mark complete'}: ${task.text}`}
+                                onChange={() =>
+                                  setTodoItemsByDate((current) => ({
+                                    ...current,
+                                    [todoSelectedDate]: (current[todoSelectedDate] ?? []).map((item) =>
+                                      item.id === task.id ? { ...item, completed: !item.completed } : item,
+                                    ),
+                                  }))
+                                }
+                                className="h-4 w-4 shrink-0 rounded border-slate-300 accent-slate-900"
+                              />
+                              <span className={`min-w-0 flex-1 break-words text-sm leading-6 ${task.completed ? 'text-slate-400 line-through' : 'text-slate-800'}`}>
+                                {task.text}
+                              </span>
+                              <button
+                                type="button"
+                                disabled={todoStorageError}
+                                aria-label={`${localeText?.todoRemoveTask ?? 'Remove task'}: ${task.text}`}
+                                onClick={() =>
+                                  setTodoItemsByDate((current) => ({
+                                    ...current,
+                                    [todoSelectedDate]: (current[todoSelectedDate] ?? []).filter(
+                                      (item) => item.id !== task.id,
+                                    ),
+                                  }))
+                                }
+                                className="rounded-md p-2 text-slate-400 transition hover:bg-rose-50 hover:text-rose-700 disabled:cursor-not-allowed"
+                              >
+                                <Trash2 className="h-4 w-4" aria-hidden="true" />
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      {todoSelectedDate && (todoItemsByDate[todoSelectedDate] ?? []).length === 0 ? (
+                        <p className="rounded-xl border border-dashed border-slate-200 px-4 py-8 text-center text-sm text-slate-500">
+                          {localeText?.todoEmptyDay ?? 'No tasks for this day yet.'}
+                        </p>
+                      ) : null}
+                      <p
+                        role={todoStorageError ? 'alert' : 'status'}
+                        className={`text-xs leading-5 ${todoStorageError ? 'text-rose-700' : 'text-slate-500'}`}
+                      >
+                        {todoStorageError
+                          ? localeText?.todoStorageError ??
+                            'This browser could not load or save tasks. Copy or download your list before leaving.'
+                          : localeText?.todoStorageNotice ??
+                            'Task lists are saved only in this browser on this device. They are not uploaded or synced.'}
+                      </p>
+                    </div>
                   ) : (
                     <div className="space-y-2">
                       <label
@@ -1889,7 +2081,10 @@ function App() {
                 ) : null}
 
                 <div
-                  className={`${activeTool === 'browser-notepad' ? 'hidden ' : ''}space-y-2 text-sm font-medium text-slate-700 ${
+                  className={`${                  activeTool === 'browser-notepad' || activeTool === 'daily-todo-list'
+                    ? 'hidden '
+                    : ''
+                  }space-y-2 text-sm font-medium text-slate-700 ${
                     activeTool === 'text-diff' ? 'lg:col-span-2' : ''
                   }`}
                 >
@@ -2230,7 +2425,7 @@ function App() {
                 <p className="font-medium text-slate-800">{localeText?.lastUpdated ?? 'Last updated:'} {currentYear}</p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyInputHeading ?? 'Text entered into tools'}</h2>
                 <p>
-                  {localeText?.privacyInput ?? 'Text transformations and calculations run in your browser; text is not sent to TextToools servers. Other tools keep text only in memory and clear it when you close the page. Browser Notepad is different: its note is saved in this browser’s local storage so it is available when you return. Clearing the note removes the saved copy. Do not store sensitive information here.'}
+                  {localeText?.privacyInput ?? 'Text transformations and calculations run in your browser; text is not sent to TextToools servers. Other tools keep text only in memory and clear it when you close the page. Browser Notepad saves its note, and the Daily To-Do List saves separate lists by date, in this browser’s local storage so they are available when you return. Clearing the note removes its draft; removing tasks or clearing this site’s browser data can remove saved lists. Do not store sensitive information here.'}
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyFormsHeading ?? 'Contact forms'}</h2>
                 <p>
@@ -2238,7 +2433,7 @@ function App() {
                 </p>
                 <h2 className="text-lg font-semibold text-slate-900">{localeText?.privacyStorageHeading ?? 'Local storage and analytics'}</h2>
                 <p>
-                  {localeText?.privacyStorage ?? 'Browser Notepad automatically saves its note in local storage on this browser and device; it is not uploaded to TextToools or synced with our servers. Text entered into other tools is not saved, and no account is required. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
+                  {localeText?.privacyStorage ?? 'Browser Notepad and the Daily To-Do List save their data in local storage on this browser and device; they are not uploaded to TextToools or synced with our servers. Task lists are stored by date. Text entered into other tools is not saved, and no account is required. We use Cloudflare Web Analytics to measure aggregate page views, visits, and page performance, including Core Web Vitals. Cloudflare states that Web Analytics does not track individual end users across customer websites or collect or use visitors’ personal data. We also use Google Analytics 4 (GA4) to understand site usage only after you explicitly accept. If you reject or make no choice, the GA4 tag is not loaded and no GA4 requests are sent. With consent, GA4 records page views, which tool you start using, and copy or download actions. Your choice is stored in this browser’s local storage and can be changed at any time using Privacy settings. GA4 never receives text entered into tools, search terms, replacement values, or generated output; all text processing stays in your browser.'}
                 </p>
                 <p>
                   <a
@@ -2570,7 +2765,9 @@ function App() {
                         ? toolList.filter((tool) => tool.id === 'reading-time')
                         : activeBlogPost.slug === 'how-long-should-a-blog-post-be'
                           ? toolList.filter((tool) => tool.id === 'word-counter' || tool.id === 'reading-time')
-                          : activeBlogPost.slug === 'find-replace-text-safely'
+                          : activeBlogPost.slug === 'how-to-prioritize-tasks'
+                            ? toolList.filter((tool) => tool.id === 'daily-todo-list')
+                            : activeBlogPost.slug === 'find-replace-text-safely'
                             ? toolList.filter((tool) => tool.id === 'find-replace')
                                 : activeBlogPost.slug === 'sort-list-alphabetically'
                                   ? toolList.filter((tool) => tool.id === 'text-sorter')

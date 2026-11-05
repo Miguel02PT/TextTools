@@ -2080,5 +2080,88 @@
         "url": "https://support.google.com/docs/answer/39003?hl=en"
       }
     ]
+  },
+  {
+    "slug": "how-to-prioritize-tasks",
+    "published": "2026-11-05",
+    "modified": "2026-11-05",
+    "title": "How to Prioritize Tasks When Everything Feels Urgent | TextToools",
+    "description": "A practical way to sort urgent requests from important work, choose a realistic next step, and adjust your plan when the day changes.",
+    "summary": "When every task feels urgent, make the work visible, check deadlines and consequences, choose a small number of meaningful outcomes, and leave room to revise.",
+    "image": "blog-images/prioritize-tasks.svg",
+    "imageAlt": "A daily task list arranged by priority, with one next action highlighted.",
+    "sections": [
+      {
+        "heading": "Start by getting the tasks out of your head",
+        "paragraphs": [
+          "When requests arrive from several directions, it is easy to treat every new message as the next thing to do. Write down the open tasks first. A visible list makes it easier to compare them and reduces the chance that the loudest reminder becomes the default priority.",
+          "Keep this capture list separate from a promise to finish everything today. It is an inventory to review, not a measure of how much a person should be able to do."
+        ]
+      },
+      {
+        "heading": "Separate a real deadline from a loud request",
+        "paragraphs": [
+          "For each item, ask when it is actually due, what changes if it waits, and whether someone else is blocked. A short deadline can matter, but urgency alone does not tell you the task's value. A message marked “urgent” may be less consequential than work with a firm deadline or a dependent teammate.",
+          "If the consequences or deadline are unclear, ask the person who requested the work. Confirming scope is often more useful than silently guessing which request should come first."
+        ]
+      },
+      {
+        "heading": "Choose a small number of meaningful outcomes",
+        "paragraphs": [
+          "Pick one or a few outcomes that would make the day useful if they were completed. The right number depends on the work, interruptions, and available time; a universal quota can make a plan unrealistic. Keep lower-priority items visible, but do not treat them as equally promised.",
+          "This is a way to make trade-offs explicit, not a guarantee of productivity. If a critical task appears, revisit the list and decide what moves rather than pretending that nothing else will be affected."
+        ],
+        "bullets": [
+          "Keep fixed appointments and deadlines in view.",
+          "Consider impact, dependencies, and the time and energy each task needs.",
+          "Leave uncommitted space for interruptions and routine work."
+        ]
+      },
+      {
+        "heading": "Turn broad goals into the next action",
+        "paragraphs": [
+          "A task such as “prepare the report” can hide several decisions. Make the first step specific enough to begin: find the latest figures, outline the sections, or ask for a missing input. If a task still feels difficult to start, it may need a smaller action or clarification.",
+          "Use a daily list to keep these actions tied to the day you plan to work on them. A dated list is also useful for moving unfinished work forward deliberately, instead of carrying every item over without review."
+        ]
+      },
+      {
+        "heading": "Check the plan against the time you actually have",
+        "paragraphs": [
+          "Estimate how long the selected work might take and compare it with the time left after meetings, breaks, and responsibilities. Estimates are imperfect; their purpose is to reveal an overloaded plan before the day is gone.",
+          "If the list does not fit, renegotiate a deadline, reduce the scope, ask for help, or move a task to a specific later date. A clear conversation about trade-offs is better than silently accepting incompatible commitments."
+        ]
+      },
+      {
+        "heading": "Reprioritize when the day changes",
+        "paragraphs": [
+          "Plans are snapshots, not contracts with the day. When new information arrives, compare its deadline and consequences with what is already planned. Update the order and tell affected people if the change affects what they can expect.",
+          "At the end of the day, review unfinished tasks. Decide whether each one is still needed, should be broken into a smaller action, or belongs on another date. This short review keeps tomorrow's list intentional rather than inherited."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I find a task list most useful when it helps me make a choice, not when it becomes a longer record of everything I have not done. I built the TextToools Daily To-Do List so people can keep a simple list for a chosen date and take a copy with them."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build straightforward browser tools for everyday writing and planning tasks."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "How to Prioritize When There’s Always More To Do",
+        "publisher": "Todoist",
+        "url": "https://www.todoist.com/inspiration/how-to-prioritize"
+      },
+      {
+        "title": "How to Plan Your Day: The Complete Guide to Everyday Productivity",
+        "publisher": "Todoist",
+        "url": "https://www.todoist.com/inspiration/how-to-plan-your-day"
+      }
+    ]
   }
 ]

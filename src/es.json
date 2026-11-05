@@ -47,6 +47,18 @@
     "notepadPlaceholder": "Escribe tus notas aquí. Pega texto o usa los botones para crear listas.",
     "notepadStorageNotice": "Se guarda solo en este navegador y dispositivo. No se sube ni se sincroniza. Evita guardar información sensible.",
     "notepadSaveError": "Este navegador no pudo guardar la nota. Cópiala o descárgala antes de salir.",
+    "todoChooseDate": "Elige un día",
+    "todoTaskLabel": "Nueva tarea",
+    "todoTaskPlaceholder": "Añade una tarea para este día",
+    "todoAdd": "Añadir tarea",
+    "todoTasksFor": "Tareas para",
+    "todoMarkComplete": "Marcar como completada",
+    "todoRemoveTask": "Eliminar tarea",
+    "todoEmptyDay": "Aún no hay tareas para este día.",
+    "todoStorageNotice": "Las listas se guardan solo en este navegador y dispositivo. No se suben ni se sincronizan.",
+    "todoStorageError": "Este navegador no pudo cargar o guardar las tareas. Copia o descarga la lista antes de salir.",
+    "todoExportHeading": "Tareas para",
+    "todoEmptyExport": "No hay tareas para esta fecha.",
     "inputPlaceholder": "Pega o escribe el texto aquí…",
     "clearInput": "Borrar texto",
     "output": "Resultado",
@@ -123,11 +135,11 @@
     "aboutPrivacy": "El texto se procesa en tu navegador, sin necesidad de una cuenta. El texto que introduces no se envía a los servidores de TextToools para procesarlo.",
     "aboutGoal": "Queremos que las tareas cotidianas con texto sean sencillas, claras y fiables. Puedes compartir sugerencias mediante el formulario de contacto.",
     "privacyInputHeading": "Texto introducido en las herramientas",
-    "privacyInput": "Las transformaciones y los cálculos se realizan en tu navegador; el texto no se envía a los servidores de TextToools. El contenido de las demás herramientas solo permanece en memoria y desaparece al cerrar la página. El Bloc de notas del navegador es la excepción: guarda la nota en el almacenamiento local de este navegador para que siga disponible al volver. Borrar la nota elimina la copia guardada. No guardes información sensible.",
+    "privacyInput": "Las transformaciones y los cálculos se realizan en tu navegador; el texto no se envía a los servidores de TextToools. El contenido de las demás herramientas solo permanece en memoria y desaparece al cerrar la página. El Bloc de notas guarda la nota y la Lista diaria de tareas guarda listas separadas por fecha en el almacenamiento local de este navegador para que sigan disponibles al volver. Borrar la nota elimina el borrador; eliminar tareas y borrar los datos del sitio también puede eliminar listas guardadas. No guardes información sensible.",
     "privacyFormsHeading": "Formularios de contacto",
     "privacyForms": "Al enviar un formulario de contacto o de informe de problemas, se envían a TextToools tu nombre (si lo indicas), correo para responderte, asunto, mensaje, tipo de formulario y ruta de la página. Cloudflare Turnstile comprueba el token antispam y recibe tu dirección IP para verificarlo. Resend entrega el mensaje al buzón del proyecto. Los correos entregados se conservan allí según la configuración de ese buzón. Resend indica que su plan gratuito conserva los datos de eventos de correo durante 30 días. No incluyas contraseñas, datos de pago ni texto privado de documentos.",
     "privacyStorageHeading": "Almacenamiento local y analítica",
-    "privacyStorage": "El Bloc de notas del navegador guarda automáticamente su nota en el almacenamiento local de este navegador y dispositivo; no se sube a TextToools ni se sincroniza con nuestros servidores. El texto de las demás herramientas no se guarda. No necesitas una cuenta. Usamos Cloudflare Web Analytics para medir visitas, páginas vistas y rendimiento de forma agregada, incluidas las Core Web Vitals. Cloudflare indica que Web Analytics no rastrea a usuarios individuales entre sitios de clientes ni recopila o usa sus datos personales. También usamos Google Analytics 4 (GA4) para entender el uso del sitio, pero solo después de que aceptes expresamente. Si rechazas o no eliges, la etiqueta de GA4 no se carga ni se envían solicitudes a Google. Con tu consentimiento, GA4 registra páginas vistas, el inicio de uso de herramientas y acciones de copia o descarga. Tu elección se guarda en el almacenamiento local de este navegador y puedes cambiarla en cualquier momento desde Ajustes de privacidad. GA4 nunca recibe el texto introducido en las herramientas, las búsquedas, los valores de reemplazo ni los resultados generados; todo el procesamiento de texto se realiza en tu navegador.",
+    "privacyStorage": "El Bloc de notas del navegador y la Lista diaria de tareas guardan sus datos en el almacenamiento local de este navegador y dispositivo; no se suben a TextToools ni se sincronizan con nuestros servidores. Las listas de tareas se guardan por fecha. El texto de las demás herramientas no se guarda. No necesitas una cuenta. Usamos Cloudflare Web Analytics para medir visitas, páginas vistas y rendimiento de forma agregada, incluidas las Core Web Vitals. Cloudflare indica que Web Analytics no rastrea a usuarios individuales entre sitios de clientes ni recopila o usa sus datos personales. También usamos Google Analytics 4 (GA4) para entender el uso del sitio, pero solo después de que aceptes expresamente. Si rechazas o no eliges, la etiqueta de GA4 no se carga ni se envían solicitudes a Google. Con tu consentimiento, GA4 registra páginas vistas, el inicio de uso de herramientas y acciones de copia o descarga. Tu elección se guarda en el almacenamiento local de este navegador y puedes cambiarla en cualquier momento desde Ajustes de privacidad. GA4 nunca recibe el texto introducido en las herramientas, las búsquedas, los valores de reemplazo ni los resultados generados; todo el procesamiento de texto se realiza en tu navegador.",
     "privacySettings": "Ajustes de privacidad",
     "analyticsConsentBody": "Cloudflare Web Analytics seguirá activo para medir el tráfico y el rendimiento de forma agregada. Google Analytics 4 solo se carga si das tu consentimiento expreso; si rechazas o no eliges, no se envían solicitudes de GA4 a Google. Tras aceptar, GA4 registra páginas vistas, el inicio de uso de herramientas y acciones de copia o descarga, pero nunca el texto que introduces. Tu elección se guarda en este navegador y puedes cambiarla en cualquier momento desde Ajustes de privacidad.",
     "termsUsageHeading": "Uso de las herramientas",
@@ -190,6 +202,51 @@
       "Learn how Google handles data.": "Consulta cómo trata los datos Google."
   },
   "tools": {
+    "daily-todo-list": {
+      "name": "Lista diaria de tareas",
+      "description": "Organiza tareas por fecha y descarga la lista del día seleccionado.",
+      "title": "Planificador diario de tareas gratis | TextToools",
+      "meta": "Planifica tareas para cualquier fecha, marca las completadas y descarga una copia de texto con el día seleccionado en el nombre del archivo.",
+      "heading": "Planificador diario de tareas gratis",
+      "intro": "Elige una fecha, añade tareas y márcalas al completarlas. Tus listas se guardan en este navegador y cada descarga lleva el nombre del día seleccionado.",
+      "sections": [
+        {
+          "heading": "Crea una lista para un día concreto",
+          "paragraphs": [
+            "Elige una fecha en el calendario y añade las tareas que quieras seguir ese día. Al seleccionar otra fecha aparece su propia lista, para que puedas preparar un día futuro o volver a uno anterior.",
+            "Escribe cada elemento como una próxima acción clara. Para un proyecto grande, añade el siguiente paso que realmente puedas dar en lugar de un objetivo amplio como «terminarlo todo»."
+          ]
+        },
+        {
+          "heading": "Sigue el progreso y descarga la lista del día",
+          "paragraphs": [
+            "Marca una tarea como completada cuando la termines o elimínala si ya no corresponde. Copiar exporta la fecha seleccionada y sus tareas; Descargar crea un archivo de texto llamado «list de tarefas dia AAAA-MM-DD.txt» con la fecha elegida en el calendario.",
+            "Las tareas completadas conservan su marca en la lista descargada. La fecha aparece en el archivo para que puedas identificarlo más tarde."
+          ]
+        },
+        {
+          "heading": "Dónde se guardan las tareas",
+          "paragraphs": [
+            "Las listas se guardan en el almacenamiento local de este navegador y perfil del dispositivo. No se suben ni se sincronizan, así que no aparecerán en otro navegador o dispositivo. Si borras los datos de este sitio en el navegador, también podrías eliminarlas.",
+            "Evita guardar información sensible en un perfil compartido. Descarga una copia si necesitas una copia de seguridad independiente o quieres trasladar una lista."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Puedo planificar tareas para otra fecha?",
+          "answer": "Sí. Elige cualquier fecha en el calendario. Cada día tiene su propia lista y puedes volver a ella más tarde en este navegador."
+        },
+        {
+          "question": "¿Cómo se llama el archivo descargado?",
+          "answer": "El archivo se llama «list de tarefas dia AAAA-MM-DD.txt» y la fecha corresponde al día seleccionado en el calendario."
+        },
+        {
+          "question": "¿Mis tareas se sincronizan o se guardan en línea?",
+          "answer": "No. Solo se guardan en el almacenamiento local de este navegador y perfil del dispositivo. Descarga la lista si necesitas otra copia."
+        }
+      ]
+    },
     "browser-notepad": {
       "name": "Bloc de notas del navegador",
       "description": "Escribe, organiza y copia notas directamente en tu navegador.",
@@ -2150,6 +2207,87 @@
             "title": "Contar las palabras de un documento",
             "publisher": "Ayuda de Editores de Documentos de Google",
             "url": "https://support.google.com/docs/answer/39003?hl=en"
+          }
+        ]
+      },
+      "how-to-prioritize-tasks": {
+        "modified": "2026-11-05",
+        "image": "blog-images/es/prioritize-tasks.svg",
+        "imageAlt": "Una lista diaria ordenada por prioridad, con la siguiente acción destacada.",
+        "title": "Cómo priorizar tareas cuando todo parece urgente | TextToools",
+        "description": "Distingue las solicitudes urgentes del trabajo importante, elige un siguiente paso realista y ajusta el plan cuando cambie el día.",
+        "summary": "Cuando todo parece urgente, haz visibles las tareas, revisa plazos y consecuencias, elige pocos resultados importantes y deja margen para cambiar el plan.",
+        "sections": [
+          {
+            "heading": "Empieza por sacar las tareas de tu cabeza",
+            "paragraphs": [
+              "Cuando llegan peticiones de varias partes, es fácil tratar cada mensaje nuevo como lo siguiente que hay que hacer. Anota primero las tareas pendientes. Una lista visible facilita compararlas y evita que el recordatorio más insistente determine la prioridad.",
+              "Esta lista de captura no es una promesa de terminarlo todo hoy. Es un inventario para revisar, no una medida de cuánto debería poder hacer una persona."
+            ]
+          },
+          {
+            "heading": "Distingue un plazo real de una petición insistente",
+            "paragraphs": [
+              "Para cada tarea, pregunta cuándo vence realmente, qué ocurre si espera y si bloquea a otra persona. Un plazo corto puede importar, pero la urgencia por sí sola no indica el valor. Un mensaje marcado como «urgente» puede tener menos consecuencias que un compromiso con fecha límite o que el trabajo de otra persona depende de ti.",
+              "Si no están claras las consecuencias o la fecha, pregunta a quien solicitó el trabajo. Confirmar el alcance suele ser mejor que adivinar en silencio qué petición va primero."
+            ]
+          },
+          {
+            "heading": "Elige pocos resultados importantes",
+            "paragraphs": [
+              "Elige uno o unos pocos resultados que harían que el día fuera útil si los completas. El número adecuado depende del trabajo, las interrupciones y el tiempo disponible; una cuota universal puede volver irrealista el plan. Mantén visibles los elementos de menor prioridad, pero no prometas cumplirlos todos por igual.",
+              "Esto sirve para hacer explícitas las decisiones, no garantiza la productividad. Si aparece una tarea crítica, revisa la lista y decide qué se mueve, en vez de fingir que nada más se verá afectado."
+            ],
+            "bullets": [
+              "Ten presentes las citas y los plazos fijos.",
+              "Considera el impacto, las dependencias y el tiempo y energía que necesita cada tarea.",
+              "Deja espacio para interrupciones y trabajo rutinario."
+            ]
+          },
+          {
+            "heading": "Convierte los objetivos amplios en la siguiente acción",
+            "paragraphs": [
+              "Una tarea como «preparar el informe» puede ocultar varias decisiones. Haz que el primer paso sea concreto: buscar los datos más recientes, preparar un esquema o pedir la información que falta. Si todavía cuesta empezar, quizá haga falta una acción más pequeña o una aclaración.",
+              "Usa una lista diaria para asociar esas acciones a la fecha en que planeas trabajar en ellas. Una lista fechada también ayuda a trasladar tareas pendientes de forma deliberada, en vez de arrastrarlas sin revisarlas."
+            ]
+          },
+          {
+            "heading": "Comprueba el plan con el tiempo disponible",
+            "paragraphs": [
+              "Calcula cuánto podrían durar las tareas elegidas y compáralo con el tiempo disponible después de reuniones, descansos y responsabilidades. Las estimaciones no son exactas; sirven para detectar un plan sobrecargado antes de que termine el día.",
+              "Si la lista no cabe, negocia el plazo, reduce el alcance, pide ayuda o pasa una tarea a una fecha concreta. Hablar con claridad de los compromisos es mejor que aceptar en silencio obligaciones incompatibles."
+            ]
+          },
+          {
+            "heading": "Reordena las prioridades si cambia el día",
+            "paragraphs": [
+              "Los planes son una fotografía del momento, no un contrato con el día. Cuando llega información nueva, compárala con lo previsto según sus plazos y consecuencias. Cambia el orden y avisa a las personas afectadas si cambia lo que pueden esperar.",
+              "Al final del día, revisa las tareas pendientes. Decide si cada una sigue siendo necesaria, necesita convertirse en una acción más pequeña o corresponde a otra fecha. Esta revisión breve hace que la lista de mañana sea intencional, no heredada."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Una lista me resulta más útil cuando me ayuda a elegir, no cuando se convierte en un registro más largo de todo lo que aún no he hecho. Creé la Lista diaria de tareas de TextToools para organizar tareas por fecha y guardar una copia."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas sencillas en el navegador para tareas cotidianas de escritura y planificación."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Cómo priorizar cuando siempre hay más cosas por hacer",
+            "publisher": "Todoist",
+            "url": "https://www.todoist.com/inspiration/how-to-prioritize"
+          },
+          {
+            "title": "Cómo planificar tu día: guía completa para la productividad diaria",
+            "publisher": "Todoist",
+            "url": "https://www.todoist.com/inspiration/how-to-plan-your-day"
           }
         ]
       }

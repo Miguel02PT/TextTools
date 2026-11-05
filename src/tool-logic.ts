@@ -14,8 +14,70 @@ export type ToolId =
   | 'reading-time'
   | 'keyword-density'
   | 'browser-notepad'
+  | 'daily-todo-list'
 
 export type TextListStyle = 'bulleted' | 'numbered'
+export type TodoItem = { id: string; text: string; completed: boolean }
+export type TodoLists = Record<string, TodoItem[]>
+
+export function getLocalDateInputValue(date: Date) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+export function parseTodoLists(value: string): TodoLists {
+  const parsed: unknown = JSON.parse(value)
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    throw new TypeError('Saved task lists must be an object.')
+  }
+
+  const lists: TodoLists = {}
+  for (const [date, items] of Object.entries(parsed)) {
+    const parsedDate = new Date(`${date}T00:00:00.000Z`)
+    if (
+      !/^\d{4}-\d{2}-\d{2}$/u.test(date) ||
+      Number.isNaN(parsedDate.getTime()) ||
+      parsedDate.toISOString().slice(0, 10) !== date ||
+      !Array.isArray(items)
+    ) {
+      throw new TypeError('Saved task lists contain an invalid date or list.')
+    }
+
+    lists[date] = items.map((item) => {
+      if (
+        !item ||
+        typeof item !== 'object' ||
+        typeof item.id !== 'string' ||
+        typeof item.text !== 'string' ||
+        typeof item.completed !== 'boolean'
+      ) {
+        throw new TypeError('A saved task is invalid.')
+      }
+      return { id: item.id, text: item.text, completed: item.completed }
+    })
+  }
+  return lists
+}
+
+export function formatTodoList(
+  date: string,
+  items: readonly TodoItem[],
+  labels = { heading: 'Tasks for', empty: 'No tasks for this date.' },
+) {
+  return [
+    `${labels.heading} ${date}`,
+    '',
+    ...(items.length
+      ? items.map((item) => `${item.completed ? '[x]' : '[ ]'} ${item.text}`)
+      : [labels.empty]),
+  ].join('\n')
+}
+
+export function getTodoDownloadFilename(date: string) {
+  return `list de tarefas dia ${date}.txt`
+}
 
 export function formatSelectedLinesAsList(
   text: string,

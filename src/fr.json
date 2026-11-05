@@ -47,6 +47,18 @@
     "notepadPlaceholder": "Écrivez vos notes ici. Collez du texte ou utilisez les boutons pour créer des listes.",
     "notepadStorageNotice": "Enregistrée uniquement dans ce navigateur et sur cet appareil. Elle n’est ni envoyée ni synchronisée. Évitez les informations sensibles.",
     "notepadSaveError": "Ce navigateur n’a pas pu enregistrer la note. Copiez-la ou téléchargez-la avant de partir.",
+    "todoChooseDate": "Choisir un jour",
+    "todoTaskLabel": "Nouvelle tâche",
+    "todoTaskPlaceholder": "Ajouter une tâche pour ce jour",
+    "todoAdd": "Ajouter",
+    "todoTasksFor": "Tâches du",
+    "todoMarkComplete": "Marquer comme terminée",
+    "todoRemoveTask": "Supprimer la tâche",
+    "todoEmptyDay": "Aucune tâche pour ce jour pour le moment.",
+    "todoStorageNotice": "Les listes restent dans ce navigateur et sur cet appareil. Elles ne sont ni envoyées ni synchronisées.",
+    "todoStorageError": "Impossible de charger ou d’enregistrer les tâches. Copiez ou téléchargez la liste avant de partir.",
+    "todoExportHeading": "Tâches du",
+    "todoEmptyExport": "Aucune tâche pour cette date.",
     "inputPlaceholder": "Collez ou tapez le texte ici…",
     "clearInput": "Effacer le texte",
     "output": "R?sultat",
@@ -123,11 +135,11 @@
     "aboutPrivacy": "Le texte est traité dans votre navigateur, sans avoir besoin d'un compte. Le texte que vous saisissez n'est pas envoyé aux serveurs TextToools pour traitement.",
     "aboutGoal": "Nous voulons que les tâches quotidiennes avec du texte soient simples, claires et fiables. Vous pouvez partager des suggestions en utilisant le formulaire de contact.",
     "privacyInputHeading": "Texte saisi dans les outils",
-    "privacyInput": "Les transformations et les calculs sont effectués dans votre navigateur ; le texte n'est pas envoyé aux serveurs TextToools. Le contenu des autres outils reste uniquement en mémoire et disparaît lorsque vous fermez la page. Le Bloc-notes du navigateur fait exception : la note est enregistrée dans le stockage local de ce navigateur pour rester disponible à votre retour. Effacer la note supprime la copie enregistrée. N'y stockez pas d'informations sensibles.",
+    "privacyInput": "Les transformations et les calculs sont effectués dans votre navigateur ; le texte n'est pas envoyé aux serveurs TextToools. Le contenu des autres outils reste uniquement en mémoire et disparaît lorsque vous fermez la page. Le Bloc-notes enregistre la note et la Liste quotidienne des tâches enregistre des listes par date dans le stockage local de ce navigateur afin qu'elles restent disponibles à votre retour. Effacer la note supprime le brouillon ; supprimer des tâches et effacer les données du site peut également supprimer les listes enregistrées. N'y stockez pas d'informations sensibles.",
     "privacyFormsHeading": "Formulaires de contact",
     "privacyForms": "Lorsque vous soumettez un formulaire de contact ou de rapport de problème, votre nom (si vous l'indiquez), votre e-mail de réponse, l'objet, le message, le type de formulaire et le chemin de la page sont envoyés à TextToools. Cloudflare Turnstile vérifie le jeton anti-spam et reçoit votre adresse IP pour la vérifier. Renvoyer remet le message à la boîte aux lettres du projet. Les e-mails livrés y sont conservés en fonction de la configuration de cette boîte aux lettres. Renvoyer indique que son forfait gratuit conserve les données des événements de messagerie pendant les jours 30. N'incluez pas de mots de passe, d'informations de paiement ou de texte privé provenant de documents.",
     "privacyStorageHeading": "Stockage local et analyses",
-    "privacyStorage": "Le Bloc-notes du navigateur enregistre automatiquement la note dans le stockage local de ce navigateur et de cet appareil ; elle n'est pas envoyée à TextToools ni synchronisée avec nos serveurs. Le texte des autres outils n'est pas enregistré et aucun compte n'est nécessaire. Nous utilisons Cloudflare Web Analytics pour mesurer les visites, les pages vues et les performances de manière agrégée, y compris les Core Web Vitals. Cloudflare indique que Web Analytics ne suit pas les utilisateurs individuels entre les sites des clients et ne collecte ni n'utilise leurs données personnelles. Nous utilisons également Google Analytics 4 (GA4) pour comprendre l'utilisation du site, mais seulement après que vous ayez expressément accepté. Si vous refusez ou ne choisissez pas, la balise GA4 n'est pas chargée et aucune demande n'est envoyée à Google. Avec votre consentement, GA4 enregistre les pages vues, le début d'utilisation des outils et les actions de copie ou de téléchargement. Votre choix est enregistré dans le stockage local de ce navigateur et vous pouvez le modifier à tout moment dans les Paramètres de confidentialité. GA4 ne reçoit jamais le texte saisi dans les outils, les recherches, les valeurs de remplacement ou les résultats générés ; tout le traitement de texte est effectué dans votre navigateur.",
+    "privacyStorage": "Le Bloc-notes et la Liste quotidienne des tâches enregistrent leurs données dans le stockage local de ce navigateur et de cet appareil ; elles ne sont pas envoyées à TextToools ni synchronisées avec nos serveurs. Les listes de tâches sont enregistrées par date. Le texte des autres outils n'est pas enregistré et aucun compte n'est nécessaire. Nous utilisons Cloudflare Web Analytics pour mesurer les visites, les pages vues et les performances de manière agrégée, y compris les Core Web Vitals. Cloudflare indique que Web Analytics ne suit pas les utilisateurs individuels entre les sites des clients et ne collecte ni n'utilise leurs données personnelles. Nous utilisons également Google Analytics 4 (GA4) pour comprendre l'utilisation du site, mais seulement après que vous ayez expressément accepté. Si vous refusez ou ne choisissez pas, la balise GA4 n'est pas chargée et aucune demande n'est envoyée à Google. Avec votre consentement, GA4 enregistre les pages vues, le début d'utilisation des outils et les actions de copie ou de téléchargement. Votre choix est enregistré dans le stockage local de ce navigateur et vous pouvez le modifier à tout moment dans les Paramètres de confidentialité. GA4 ne reçoit jamais le texte saisi dans les outils, les recherches, les valeurs de remplacement ou les résultats générés ; tout le traitement de texte est effectué dans votre navigateur.",
     "privacySettings": "Param?tres de confidentialit?",
     "analyticsConsentBody": "Cloudflare Web Analytics restera actif pour mesurer le trafic et les performances sur une base globale. Google Analytics 4 n'est téléchargé que si vous donnez votre consentement exprès ; Si vous refusez ou ne faites pas de choix, aucune demande GA4 n'est envoyée à Google. Après acceptation, GA4 enregistre les pages consultées, les débuts d'utilisation des outils et les actions de copie ou de téléchargement, mais jamais le texte que vous saisissez. Votre choix est enregistré dans ce navigateur et vous pouvez le modifier à tout moment depuis les paramètres de confidentialité.",
     "termsUsageHeading": "Utilisation des outils",
@@ -190,6 +202,51 @@
     "Learn how Google handles data.": "Découvrez comment Google traite les données."
   },
   "tools": {
+    "daily-todo-list": {
+      "name": "Liste quotidienne de tâches",
+      "description": "Organisez vos tâches par date et téléchargez la liste du jour choisi.",
+      "title": "Planificateur quotidien de tâches gratuit | TextToools",
+      "meta": "Planifiez vos tâches à n’importe quelle date, cochez celles qui sont terminées et téléchargez une copie texte dont le nom contient le jour sélectionné.",
+      "heading": "Planificateur quotidien de tâches gratuit",
+      "intro": "Choisissez une date, ajoutez des tâches et cochez-les une fois terminées. Vos listes restent dans ce navigateur et chaque téléchargement porte le nom du jour sélectionné.",
+      "sections": [
+        {
+          "heading": "Créer une liste pour un jour précis",
+          "paragraphs": [
+            "Choisissez une date dans le calendrier, puis ajoutez les tâches à suivre ce jour-là. Une autre date affiche sa propre liste ; vous pouvez ainsi préparer un jour futur ou revenir à un jour passé.",
+            "Formulez chaque élément comme une prochaine action claire. Pour un grand projet, indiquez la prochaine étape réalisable plutôt qu'un objectif vague comme « tout terminer »."
+          ]
+        },
+        {
+          "heading": "Suivre l’avancement et télécharger la liste du jour",
+          "paragraphs": [
+            "Cochez une tâche lorsqu’elle est terminée ou supprimez-la si elle n’a plus sa place dans la liste. Copier exporte la date choisie et ses tâches ; Télécharger crée un fichier texte nommé « list de tarefas dia AAAA-MM-JJ » selon la date du calendrier.",
+            "Les tâches terminées conservent leur coche dans le fichier téléchargé. La date dans le nom permet de retrouver facilement la liste."
+          ]
+        },
+        {
+          "heading": "Savoir où les tâches sont enregistrées",
+          "paragraphs": [
+            "Les listes sont enregistrées dans le stockage local de ce navigateur et de ce profil d’appareil. Elles ne sont ni envoyées ni synchronisées et ne suivent pas l’utilisateur vers un autre navigateur ou appareil. Effacer les données de ce site dans le navigateur peut les supprimer.",
+            "Évitez d’enregistrer des informations sensibles dans un profil partagé. Téléchargez une copie si vous avez besoin d’une sauvegarde indépendante ou souhaitez déplacer une liste."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Puis-je planifier des tâches pour une autre date ?",
+          "answer": "Oui. Choisissez n’importe quelle date dans le calendrier. Chaque jour a sa propre liste, que vous pouvez retrouver plus tard dans ce navigateur."
+        },
+        {
+          "question": "Quel est le nom du fichier téléchargé ?",
+          "answer": "Le fichier s’appelle « list de tarefas dia AAAA-MM-JJ » ; la date correspond au jour choisi dans le calendrier."
+        },
+        {
+          "question": "Mes tâches sont-elles synchronisées ou sauvegardées en ligne ?",
+          "answer": "Non. Elles restent dans le stockage local de ce navigateur et de ce profil d’appareil. Téléchargez la liste si vous avez besoin d’une copie séparée."
+        }
+      ]
+    },
     "browser-notepad": {
       "name": "Bloc-notes du navigateur",
       "description": "Rédigez, organisez et copiez vos notes directement dans le navigateur.",
@@ -2697,6 +2754,87 @@
             "title": "Comparer des documents dans Google Docs",
             "publisher": "Aide pour les éditeurs Google Docs",
             "url": "https://support.google.com/docs/answer/18512262?hl=en"
+          }
+        ]
+      },
+      "how-to-prioritize-tasks": {
+        "modified": "2026-11-05",
+        "image": "blog-images/prioritize-tasks.svg",
+        "imageAlt": "Une liste quotidienne classée par priorité, avec la prochaine action mise en évidence.",
+        "title": "Comment hiérarchiser les tâches quand tout semble urgent | TextToools",
+        "description": "Distinguez les demandes urgentes du travail important, choisissez une prochaine étape réaliste et adaptez votre plan si la journée change.",
+        "summary": "Quand tout semble urgent, notez les tâches, vérifiez les échéances et les conséquences, choisissez quelques résultats importants et gardez de la marge pour revoir le plan.",
+        "sections": [
+          {
+            "heading": "Commencez par sortir les tâches de votre tête",
+            "paragraphs": [
+              "Lorsque des demandes arrivent de plusieurs côtés, chaque nouveau message peut sembler être la prochaine chose à faire. Notez d’abord les tâches en attente. Une liste visible facilite les comparaisons et évite que le rappel le plus insistant décide de la priorité.",
+              "Cette liste de collecte ne constitue pas une promesse de tout terminer aujourd’hui. C’est un inventaire à examiner, pas une mesure de ce qu’une personne devrait pouvoir accomplir."
+            ]
+          },
+          {
+            "heading": "Distinguez une vraie échéance d’une demande pressante",
+            "paragraphs": [
+              "Pour chaque tâche, demandez-vous quelle est sa véritable échéance, ce qui se passerait si elle attendait et si quelqu’un dépend de son achèvement. Une échéance proche peut compter, mais l’urgence ne suffit pas à définir la valeur. Un message marqué « urgent » peut avoir moins de conséquences qu’une date limite ferme ou qu’une tâche qui bloque une autre personne.",
+              "Si les conséquences ou l’échéance ne sont pas claires, demandez des précisions à la personne à l’origine de la demande. Confirmer le périmètre est souvent plus utile que de deviner en silence quelle demande doit passer en premier."
+            ]
+          },
+          {
+            "heading": "Choisissez quelques résultats importants",
+            "paragraphs": [
+              "Choisissez un ou quelques résultats qui rendraient la journée utile s’ils étaient achevés. Le bon nombre dépend du travail, des interruptions et du temps disponible ; un quota universel peut rendre le plan irréaliste. Gardez les tâches moins prioritaires visibles sans promettre de les terminer toutes au même titre.",
+              "Cette méthode rend les arbitrages explicites, mais ne garantit pas la productivité. Si une tâche critique apparaît, revoyez la liste et décidez ce qui doit être déplacé au lieu de faire comme si rien d’autre ne serait affecté."
+            ],
+            "bullets": [
+              "Gardez à l’esprit les rendez-vous et les échéances fixes.",
+              "Tenez compte de l’impact, des dépendances et du temps et de l’énergie nécessaires.",
+              "Laissez du temps libre pour les interruptions et les tâches habituelles."
+            ]
+          },
+          {
+            "heading": "Transformez les objectifs vagues en prochaine action",
+            "paragraphs": [
+              "Une tâche comme « préparer le rapport » peut cacher plusieurs décisions. Rendez la première étape concrète : trouver les chiffres les plus récents, préparer un plan ou demander l’information manquante. Si elle reste difficile à commencer, divisez-la davantage ou clarifiez la demande.",
+              "Utilisez une liste quotidienne pour associer ces actions au jour où vous prévoyez de les réaliser. Une liste datée permet aussi de reporter consciemment les tâches inachevées, plutôt que de les reconduire sans examen."
+            ]
+          },
+          {
+            "heading": "Vérifiez le plan par rapport au temps disponible",
+            "paragraphs": [
+              "Estimez la durée des tâches retenues et comparez-la au temps qui reste après les réunions, les pauses et les autres responsabilités. Ces estimations sont imparfaites ; elles servent à repérer un programme trop chargé avant la fin de la journée.",
+              "Si la liste ne tient pas, renégociez une échéance, réduisez le périmètre, demandez de l’aide ou reportez une tâche à une date précise. Parler clairement des compromis vaut mieux que d’accepter en silence des engagements incompatibles."
+            ]
+          },
+          {
+            "heading": "Reprenez les priorités lorsque la journée change",
+            "paragraphs": [
+              "Un plan est un instantané, pas un contrat avec la journée. Quand une nouvelle information arrive, comparez son échéance et ses conséquences aux tâches déjà prévues. Réordonnez la liste et prévenez les personnes concernées si leurs attentes changent.",
+              "En fin de journée, examinez les tâches inachevées. Décidez si chacune est toujours nécessaire, doit être décomposée ou appartient à une autre date. Ce bref bilan rend la liste du lendemain réfléchie plutôt que simplement héritée."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Une liste de tâches m’est surtout utile lorsqu’elle m’aide à faire un choix, pas lorsqu’elle devient un inventaire toujours plus long de ce que je n’ai pas fait. J’ai créé la liste quotidienne de tâches TextToools pour organiser simplement les tâches par date et en garder une copie."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils simples dans le navigateur pour les tâches quotidiennes d’écriture et de planification."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Comment établir des priorités lorsqu’il y a toujours plus à faire",
+            "publisher": "Todoist",
+            "url": "https://www.todoist.com/inspiration/how-to-prioritize"
+          },
+          {
+            "title": "Comment planifier sa journée : le guide complet de la productivité au quotidien",
+            "publisher": "Todoist",
+            "url": "https://www.todoist.com/inspiration/how-to-plan-your-day"
           }
         ]
       },
