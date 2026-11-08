@@ -539,6 +539,88 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "how-to-write-a-thesis-statement": {
+        "image": "blog-images/es/thesis-statement.svg",
+        "imageAlt": "Un tema amplio de ensayo se convierte en una tesis respaldada por tres razones relacionadas.",
+        "title": "Cómo escribir una tesis clara (con ejemplos) | TextToools",
+        "description": "Convierte la consigna de un ensayo en una tesis concreta, comprueba si puedes respaldar tu afirmación y revísala mientras desarrollas el argumento.",
+        "summary": "Una tesis útil responde a la consigna con una afirmación concreta y defendible. Aprende a pasar de un tema a una postura clara y a revisarla mientras escribes.",
+        "sections": [
+          {
+            "heading": "Qué hace una tesis",
+            "paragraphs": [
+              "Una tesis presenta la idea o interpretación central que desarrollará el texto. En un ensayo argumentativo, plantea una afirmación que el resto del trabajo respalda. En un texto explicativo, puede indicar la idea principal que se aclarará.",
+              "No todas las consignas necesitan la misma tesis. Una narración personal, un informe de laboratorio o una respuesta breve pueden seguir otra estructura; sigue la consigna y las indicaciones del profesor en vez de forzar todo texto a convertirse en un argumento."
+            ]
+          },
+          {
+            "heading": "Empieza por la consigna",
+            "paragraphs": [
+              "Antes de redactar la tesis, identifica qué te pide la consigna: comparar dos ideas, explicar una causa, interpretar una obra o defender una postura. Si es demasiado amplia, conviértela en una pregunta que puedas responder.",
+              "Por ejemplo, «¿Deberían los comedores escolares ofrecer porciones iniciales más pequeñas?» permite centrarse mejor que «¿Qué deberían hacer las escuelas con la comida?». La pregunta ayuda a decidir qué parte del tema cabe en el trabajo."
+            ]
+          },
+          {
+            "heading": "Pasa del tema a una respuesta",
+            "paragraphs": [
+              "El tema indica de qué trata el trabajo; la tesis expresa qué piensas al respecto. «Las porciones del comedor escolar» es un tema, todavía no una afirmación. Una primera respuesta podría ser: «Los comedores deberían ofrecer una porción inicial más pequeña y facilitar que se pidan más».",
+              "Esa respuesta adopta una postura que se puede debatir. También limita el trabajo a una decisión concreta, en lugar de prometer que tratará todos los asuntos relacionados con la comida escolar."
+            ]
+          },
+          {
+            "heading": "Formula una afirmación concreta y defendible",
+            "paragraphs": [
+              "Cambia juicios generales como «esta política es buena» por el cambio exacto que propones y la razón. Por ejemplo: «Los comedores escolares deberían ofrecer una porción inicial más pequeña y permitir repetir fácilmente, para que cada estudiante elija una cantidad adecuada sin quedar limitado a un solo tamaño».",
+              "Tómala como una tesis provisional, no como una verdad que se demuestra por sí sola. El texto todavía necesita pruebas para sostener su razonamiento, y la investigación puede llevarte a acotar o cambiar la afirmación. Si las fuentes no respaldan una parte de la tesis, revisa esa parte en vez de exagerar lo que encontraste."
+            ]
+          },
+          {
+            "heading": "Usa las razones para organizar el texto",
+            "paragraphs": [
+              "Una tesis útil deja entrever la lógica de la respuesta. Pregúntate: «¿Por qué esta postura?». Después, indica las razones principales o la relación que analizarás. No es necesario enumerar todas las secciones ni seguir una fórmula rígida de «tres razones».",
+              "Comprueba que cada sección del desarrollo ayude a explicar o respaldar la afirmación central. Si un párrafo no se relaciona con ella, tal vez debas revisarlo, añadir una conexión o hacer que la tesis sea más precisa."
+            ]
+          },
+          {
+            "heading": "Pon a prueba y revisa el borrador",
+            "paragraphs": [
+              "Lee la tesis por separado y pregúntate: ¿responde a la consigna? ¿Es lo bastante concreta para orientar un texto enfocado? ¿Podría cuestionarla un lector razonable? ¿Puedo respaldarla con las pruebas que tengo? ¿Se entiende por qué importa?",
+              "Si la respuesta es no, identifica qué falta. Una frase que solo nombra un tema necesita una postura; una afirmación que abarcaría un libro entero necesita límites; y una afirmación que las fuentes no sostienen necesita más investigación o una conclusión más prudente."
+            ]
+          },
+          {
+            "heading": "Colócala donde ayude al lector",
+            "paragraphs": [
+              "En muchos ensayos académicos, la tesis aparece cerca del final de la introducción, cuando el lector ya cuenta con contexto para entenderla. La ubicación depende de la consigna y del tipo de texto; ser claro importa más que seguir una posición por costumbre.",
+              "Puedes empezar con una tesis provisional y revisarla cuando el desarrollo esté escrito. Si el borrador final ya no respalda la frase original, actualízala para que refleje el argumento que realmente presentas."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Prefiero tratar la tesis como una respuesta provisional, no como una frase que hay que pulir antes de empezar a pensar. Cuando la evidencia y el alcance están más claros, resulta más fácil escribir una afirmación precisa y seguirla."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Desarrollo herramientas de texto que respetan la privacidad porque creo que tu texto no debería tener que salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Tesis",
+            "publisher": "Centro de Escritura de UNC",
+            "url": "https://writingcenter.unc.edu/tips-and-tools/thesis-statements/"
+          },
+          {
+            "title": "Consejos y ejemplos para escribir tesis",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html"
+          }
+        ]
+      },
       "what-does-lorem-ipsum-mean": {
         "image": "blog-images/es/lorem-ipsum-meaning.svg",
         "imageAlt": "Lorem Ipsum como texto de relleno, con una nota sobre su origen latino y su historia en el diseño.",

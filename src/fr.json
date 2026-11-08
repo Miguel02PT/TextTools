@@ -802,6 +802,88 @@
     "description": "Guides pratiques sur le comptage de mots et de caractères, le nettoyage de texte et l'écriture.",
     "intro": "Des guides clairs et pratiques pour comprendre les décomptes, organiser le contenu et mieux travailler avec le texte.",
     "posts": {
+      "how-to-write-a-thesis-statement": {
+        "image": "blog-images/thesis-statement.svg",
+        "imageAlt": "Un sujet général de dissertation se précise en une thèse soutenue par trois raisons liées.",
+        "title": "Comment rédiger une thèse claire (avec des exemples) | TextToools",
+        "description": "Transformez un sujet de dissertation en thèse précise, vérifiez que votre affirmation est défendable et révisez-la à mesure que l’argument se construit.",
+        "summary": "Une thèse utile répond au sujet par une affirmation précise et défendable. Apprenez à passer d’un thème à une position claire et à la réviser en écrivant.",
+        "sections": [
+          {
+            "heading": "Le rôle d’une thèse",
+            "paragraphs": [
+              "La thèse présente l’idée ou l’interprétation centrale que votre texte développera. Dans une dissertation argumentative, elle formule une affirmation étayée par la suite du texte. Dans un texte explicatif, elle peut annoncer l’idée principale qui sera clarifiée.",
+              "Toutes les consignes ne demandent pas le même type de thèse. Un récit personnel, un rapport de laboratoire ou une réponse courte peut suivre une autre structure. Suivez la consigne et les indications de votre enseignant au lieu de transformer chaque texte en argument."
+            ]
+          },
+          {
+            "heading": "Commencez par la consigne",
+            "paragraphs": [
+              "Avant de rédiger la thèse, repérez ce que la consigne vous demande : comparer deux idées, expliquer une cause, interpréter une œuvre ou défendre une position. Si elle est trop large, reformulez-la en une question à laquelle vous pouvez répondre.",
+              "Par exemple, « Les cantines scolaires devraient-elles proposer une portion de départ plus petite ? » est plus facile à traiter que « Que devraient faire les écoles au sujet de l’alimentation ? ». La question vous aide à choisir la partie du sujet que votre texte abordera."
+            ]
+          },
+          {
+            "heading": "Passez du sujet à une réponse",
+            "paragraphs": [
+              "Le sujet indique de quoi parle le texte ; la thèse exprime votre point de vue. « Les portions des repas scolaires » est un sujet, pas encore une affirmation. Une première réponse pourrait être : « Les cantines devraient proposer une portion de départ plus petite et faciliter la demande d’une seconde portion. »",
+              "Cette réponse prend une position qui peut être discutée. Elle limite aussi le texte à un choix précis, au lieu de promettre de traiter toutes les questions liées aux repas scolaires."
+            ]
+          },
+          {
+            "heading": "Formulez une affirmation précise et défendable",
+            "paragraphs": [
+              "Remplacez les jugements généraux comme « cette politique est bonne » par le changement exact que vous proposez et sa raison. Par exemple : « Les cantines scolaires devraient proposer une portion de départ plus petite et permettre de se resservir facilement, afin que chacun puisse choisir une quantité adaptée sans être limité à une seule taille. »",
+              "Considérez cette phrase comme une thèse provisoire, pas comme un fait qui se prouve tout seul. Votre texte doit encore étayer son raisonnement, et vos recherches peuvent vous conduire à préciser ou modifier l’affirmation. Si les sources ne justifient pas un élément de la thèse, révisez-le au lieu d’exagérer vos résultats."
+            ]
+          },
+          {
+            "heading": "Laissez les raisons structurer le texte",
+            "paragraphs": [
+              "Une thèse utile laisse entrevoir la logique de votre réponse. Demandez-vous : « Pourquoi cette position ? », puis indiquez les principales raisons ou la relation que votre texte analysera. Il n’est pas nécessaire d’énumérer chaque partie ni de suivre une formule rigide en « trois raisons ».",
+              "Vérifiez que chaque partie du développement aide à expliquer ou à étayer l’affirmation centrale. Si un paragraphe n’y est pas lié, vous devrez peut-être le retravailler, ajouter une transition ou rendre la thèse plus précise."
+            ]
+          },
+          {
+            "heading": "Évaluez et révisez votre brouillon",
+            "paragraphs": [
+              "Lisez la thèse seule et demandez-vous : répond-elle à la consigne ? Est-elle assez précise pour guider un texte ciblé ? Un lecteur raisonnable pourrait-il la contester ? Pouvez-vous l’étayer avec vos éléments ? Le lecteur comprend-il pourquoi elle compte ?",
+              "Si la réponse est non, cherchez ce qui manque. Une phrase qui ne fait que nommer un sujet a besoin d’une position ; une affirmation qui pourrait remplir un livre a besoin de limites ; et une affirmation que vos sources n’étayent pas demande plus de recherches ou une conclusion plus mesurée."
+            ]
+          },
+          {
+            "heading": "Placez-la là où elle aide le lecteur",
+            "paragraphs": [
+              "Dans de nombreuses dissertations universitaires, la thèse apparaît vers la fin de l’introduction, une fois le contexte nécessaire présenté. Son emplacement dépend de la consigne et du type de texte ; la clarté compte davantage que le respect d’une position par habitude.",
+              "Vous pouvez commencer par une thèse provisoire, puis la revoir lorsque le développement prend forme. Si votre version finale ne justifie plus la phrase d’origine, modifiez-la pour qu’elle reflète l’argument réellement présenté."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je préfère considérer la thèse comme une réponse de travail, et non comme une phrase à polir avant même de réfléchir. Quand les preuves et le périmètre se précisent, il devient plus facile d’écrire une affirmation claire — et de la faire suivre par le lecteur."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car je pense que votre texte ne devrait pas avoir à quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Les thèses",
+            "publisher": "Centre de rédaction de l’UNC",
+            "url": "https://writingcenter.unc.edu/tips-and-tools/thesis-statements/"
+          },
+          {
+            "title": "Conseils et exemples pour rédiger une thèse",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html"
+          }
+        ]
+      },
       "what-does-lorem-ipsum-mean": {
         "image": "blog-images/lorem-ipsum-meaning.svg",
         "imageAlt": "Lorem Ipsum comme texte de remplissage, avec une note sur son origine latine et son histoire de conception.",

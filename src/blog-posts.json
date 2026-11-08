@@ -1,5 +1,89 @@
 [
   {
+    "slug": "how-to-write-a-thesis-statement",
+    "published": "2026-11-08",
+    "title": "How to Write a Thesis Statement (With Examples) | TextToools",
+    "description": "Turn an essay prompt into a focused thesis, check that your claim is supportable, and revise it as your argument develops.",
+    "summary": "A useful thesis answers the assignment with a specific, supportable claim. Learn how to move from a topic to a clear position and revise it as you write.",
+    "image": "blog-images/thesis-statement.svg",
+    "imageAlt": "A broad essay topic narrows into a thesis claim supported by three connected reasons.",
+    "sections": [
+      {
+        "heading": "What a thesis statement does",
+        "paragraphs": [
+          "A thesis statement gives readers the central point or interpretation your paper will develop. In an argumentative essay, it makes a claim that the rest of the paper supports. In an explanatory paper, it can state the main idea the paper will clarify.",
+          "Not every assignment needs the same kind of thesis. A personal narrative, lab report, or short response may use a different structure, so follow the prompt and your instructor’s guidance rather than forcing every paper into an argument."
+        ]
+      },
+      {
+        "heading": "Start with the assignment question",
+        "paragraphs": [
+          "Before drafting a thesis, identify what the assignment asks you to do: compare two ideas, explain a cause, interpret a work, or argue for a position. If the prompt is broad, rewrite it as a question you can answer.",
+          "For example, “Should school cafeterias offer smaller default portions?” gives you a more manageable question than “What should schools do about food?” The question helps you decide which part of the subject belongs in the paper."
+        ]
+      },
+      {
+        "heading": "Move from a topic to an answer",
+        "paragraphs": [
+          "A topic names what the paper is about; a thesis states what you think about it. “School lunch portions” is a topic, not yet a claim. A first answer might be: “Cafeterias should offer a smaller default serving and make seconds easy to request.”",
+          "That answer takes a position a reader could discuss. It also narrows the paper to one policy choice, instead of promising to cover every issue connected to school meals."
+        ]
+      },
+      {
+        "heading": "Make the claim specific and supportable",
+        "paragraphs": [
+          "Replace broad judgments such as “This policy is good” with the exact change you mean and why it matters. For example: “School cafeterias should offer a smaller default serving with easy seconds, so students can choose a portion that suits them without being limited to one serving size.”",
+          "Treat this as a working thesis, not a fact that proves itself. Your paper still needs evidence for its reasoning, and research may lead you to narrow or change the claim. If the evidence does not support a phrase in the thesis, revise the phrase rather than overstating what you found."
+        ]
+      },
+      {
+        "heading": "Use reasons to shape the paper",
+        "paragraphs": [
+          "A useful thesis hints at the logic behind your answer. Ask yourself, “Why this position?” Then name the main reasons or relationship your paper will examine. You do not have to list every section or use a rigid “three reasons” formula.",
+          "Check that each body section will help explain or support the central claim. If a paragraph does not connect to it, you may need to revise the paragraph, add a missing link, or make the thesis more accurate."
+        ]
+      },
+      {
+        "heading": "Test and revise your draft",
+        "paragraphs": [
+          "Read the thesis on its own and ask: Does it answer the assignment? Is it specific enough to guide a focused paper? Could a reasonable reader question it? Can I support it with the evidence I have? Would a reader know why the point matters?",
+          "If the answer is no, identify what is missing. A statement that only names a subject needs a position; a claim that could cover an entire book needs a narrower scope; and a claim that your sources cannot support needs more research or a more modest conclusion."
+        ]
+      },
+      {
+        "heading": "Place it where readers can use it",
+        "paragraphs": [
+          "In many academic essays, the thesis appears near the end of the introduction, after readers have enough context to understand the claim. The right placement depends on the assignment and form of writing; clarity matters more than following a position by habit.",
+          "You can draft a temporary thesis before writing, then revise it after the body of the paper takes shape. If your final draft no longer supports the original sentence, update the thesis so it describes the argument you actually made."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I prefer treating a thesis as a working answer, not a sentence to polish before the thinking begins. Once the evidence and scope become clearer, a more precise claim is easier to write—and easier for a reader to follow."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Thesis Statements",
+        "publisher": "UNC Writing Center",
+        "url": "https://writingcenter.unc.edu/tips-and-tools/thesis-statements/"
+      },
+      {
+        "title": "Tips and Examples for Writing Thesis Statements",
+        "publisher": "Purdue Online Writing Lab",
+        "url": "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html"
+      }
+    ]
+  },
+  {
     "slug": "what-does-lorem-ipsum-mean",
     "published": "2026-11-01",
     "title": "What Does Lorem Ipsum Mean? Its Origin and History | TextToools",

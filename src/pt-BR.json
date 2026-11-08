@@ -714,6 +714,88 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "how-to-write-a-thesis-statement": {
+        "image": "blog-images/pt-br/thesis-statement.svg",
+        "imageAlt": "Um tema amplo de redação se transforma em uma tese apoiada por três razões relacionadas.",
+        "title": "Como escrever uma tese clara (com exemplos) | TextToools",
+        "description": "Transforme a proposta de uma redação em uma tese específica, confira se é possível sustentar a afirmação e revise-a à medida que o argumento se desenvolve.",
+        "summary": "Uma tese útil responde à proposta com uma afirmação específica e defensável. Aprenda a passar do tema a um posicionamento claro e a revisá-lo enquanto escreve.",
+        "sections": [
+          {
+            "heading": "O que uma tese faz",
+            "paragraphs": [
+              "A tese apresenta a ideia ou interpretação central que o texto vai desenvolver. Em uma redação argumentativa, ela propõe uma afirmação que o restante do trabalho sustenta. Em um texto explicativo, pode indicar a ideia principal que será esclarecida.",
+              "Nem toda proposta exige o mesmo tipo de tese. Uma narrativa pessoal, um relatório de laboratório ou uma resposta curta pode ter outra estrutura. Siga a proposta e as orientações do professor, em vez de transformar qualquer texto à força em um argumento."
+            ]
+          },
+          {
+            "heading": "Comece pela proposta",
+            "paragraphs": [
+              "Antes de escrever a tese, identifique o que a proposta pede: comparar duas ideias, explicar uma causa, interpretar uma obra ou defender uma posição. Se o tema estiver amplo, reformule-o como uma pergunta que você consiga responder.",
+              "Por exemplo, “Os refeitórios escolares deveriam oferecer porções iniciais menores?” permite um recorte mais viável do que “O que as escolas deveriam fazer sobre alimentação?”. A pergunta ajuda a decidir qual parte do tema cabe no texto."
+            ]
+          },
+          {
+            "heading": "Passe do tema para uma resposta",
+            "paragraphs": [
+              "O tema diz sobre o que o texto trata; a tese diz o que você pensa a respeito. “Porções na merenda escolar” é um tema, ainda não uma afirmação. Uma primeira resposta poderia ser: “Os refeitórios deveriam oferecer uma porção inicial menor e facilitar o pedido de mais”.",
+              "Essa resposta assume uma posição que pode ser discutida. Também limita o texto a uma decisão específica, em vez de prometer abordar todos os assuntos ligados à alimentação escolar."
+            ]
+          },
+          {
+            "heading": "Faça uma afirmação específica e defensável",
+            "paragraphs": [
+              "Troque julgamentos amplos como “essa política é boa” pela mudança exata que você propõe e pelo motivo. Por exemplo: “Os refeitórios escolares deveriam oferecer uma porção inicial menor e permitir que os estudantes repitam com facilidade, para que cada um escolha uma quantidade adequada sem ficar limitado a um único tamanho”.",
+              "Trate essa frase como uma tese provisória, não como um fato que se comprova sozinho. O texto ainda precisa de evidências para sustentar o raciocínio, e a pesquisa pode levar você a restringir ou mudar a afirmação. Se as fontes não sustentam uma parte da tese, revise essa parte em vez de exagerar o que encontrou."
+            ]
+          },
+          {
+            "heading": "Use os motivos para organizar o texto",
+            "paragraphs": [
+              "Uma tese útil dá pistas sobre a lógica da resposta. Pergunte a si mesmo: “Por que essa posição?”. Depois, indique os principais motivos ou a relação que o texto vai analisar. Não é preciso listar cada seção nem seguir uma fórmula rígida de “três motivos”.",
+              "Confira se cada seção do desenvolvimento ajuda a explicar ou sustentar a afirmação central. Se um parágrafo não se relaciona com ela, talvez seja necessário revisá-lo, acrescentar uma ligação ou tornar a tese mais precisa."
+            ]
+          },
+          {
+            "heading": "Teste e revise o rascunho",
+            "paragraphs": [
+              "Leia a tese sem o restante do texto e pergunte: Ela responde à proposta? É específica o bastante para orientar uma redação focada? Um leitor razoável poderia questioná-la? Tenho evidências para sustentá-la? O leitor entende por que esse ponto importa?",
+              "Se a resposta for não, identifique o que falta. Uma frase que apenas nomeia um tema precisa de um posicionamento; uma afirmação que poderia ocupar um livro inteiro precisa de limites; e uma ideia que as fontes não sustentam exige mais pesquisa ou uma conclusão mais moderada."
+            ]
+          },
+          {
+            "heading": "Coloque-a onde ajude o leitor",
+            "paragraphs": [
+              "Em muitos textos acadêmicos, a tese aparece perto do fim da introdução, depois que o leitor já tem contexto para entender a afirmação. O lugar certo depende da proposta e do tipo de texto; clareza importa mais do que seguir uma posição por hábito.",
+              "Você pode começar com uma tese provisória e revisá-la depois que o desenvolvimento tomar forma. Se o texto final já não sustenta a frase original, atualize-a para que descreva o argumento que você realmente apresentou."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Prefiro tratar a tese como uma resposta de trabalho, não como uma frase para aperfeiçoar antes de começar a pensar. Quando as evidências e os limites ficam mais claros, é mais fácil escrever uma afirmação precisa — e mais fácil para o leitor acompanhá-la."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Desenvolvo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deveria precisar sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Teses",
+            "publisher": "Centro de Escrita da UNC",
+            "url": "https://writingcenter.unc.edu/tips-and-tools/thesis-statements/"
+          },
+          {
+            "title": "Dicas e exemplos para escrever teses",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html"
+          }
+        ]
+      },
       "what-does-lorem-ipsum-mean": {
         "image": "blog-images/pt-br/lorem-ipsum-meaning.svg",
         "imageAlt": "Lorem Ipsum como texto provisório, com uma nota sobre sua origem latina e sua história no design.",

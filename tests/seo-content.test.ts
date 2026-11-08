@@ -40,6 +40,9 @@ const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
 const taskPrioritizationPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-prioritize-tasks',
 )
+const thesisStatementPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-a-thesis-statement',
+)
 const dailyTodoListGuide = englishToolGuides.find(
   (guide: { id: string }) => guide.id === 'daily-todo-list',
 )
@@ -90,6 +93,44 @@ test('task prioritization article and daily task list target complementary searc
   assert.doesNotMatch(taskPrioritizationPost.title, /daily to-do list/i)
   assert.match(dailyTodoListGuide.title, /daily to-do list/i)
   assert.ok(taskPrioritizationPost.sections.length >= 6)
+})
+
+test('thesis statement guide is distinct, sourced, and complete in all locales', () => {
+  const localizedPosts = [
+    thesisStatementPost,
+    parsedSpanishContent.blog.posts['how-to-write-a-thesis-statement'],
+    parsedPortugueseContent.blog.posts['how-to-write-a-thesis-statement'],
+    parsedFrenchContent.blog.posts['how-to-write-a-thesis-statement'],
+    parsedChineseContent.blog.posts['how-to-write-a-thesis-statement'],
+  ]
+  const sourceUrls = [
+    'https://writingcenter.unc.edu/tips-and-tools/thesis-statements/',
+    'https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html',
+  ].sort()
+
+  assert.ok(thesisStatementPost)
+  assert.equal(
+    parsedEnglishBlogPosts.filter((post: { slug: string }) =>
+      post.slug === 'how-to-write-a-thesis-statement',
+    ).length,
+    1,
+  )
+  assert.match(thesisStatementPost.title, /thesis statement/i)
+  assert.ok(thesisStatementPost.sections.some((section: { heading: string }) =>
+    /revise/i.test(section.heading),
+  ))
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, thesisStatementPost.sections.length)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+    assert.ok(post.sections.at(-1).heading)
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+  }
 })
 
 test('daily task list download filename prefix is localized in every supported language', () => {
