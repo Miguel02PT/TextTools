@@ -43,6 +43,10 @@ import {
   formatReadingTime,
   generateLoremText,
   getToolOutputContent,
+  BLOG_POSTS_PER_PAGE,
+  getBlogPageCount,
+  getBlogPaginationItems,
+  getBlogPagePath,
   getLocalDateInputValue,
   formatTodoList,
   getTodoDownloadFilename,
@@ -715,6 +719,12 @@ function App() {
   const relativePath = localePrefix
     ? pathWithinBase.slice(localePrefix.slice(0, -1).length).replace(/^\/+/, '')
     : pathWithinBase
+  const routeKind = resolveRouteKind(
+    relativePath,
+    toolList.map((tool) => tool.id),
+    informationPages.map((page) => page.slug),
+    blogPosts.map((post) => post.slug),
+  )
   const isHomePage = relativePath === '' || relativePath === '/'
   const localeText = getLocaleSite(locale)
   const localizedHref = (path = '') => `${basePath}${localePrefix}${path}`
@@ -749,7 +759,10 @@ function App() {
   const activeBlogPost = routeBlogSlug
     ? blogPosts.find((post) => post.slug === routeBlogSlug)
     : undefined
-  const isBlogIndex = relativePath === 'blog' || relativePath === 'blog/'
+  const requestedBlogPage = relativePath.match(/^blog\/page\/(\d+)\/?$/)?.[1]
+  const currentBlogPage = requestedBlogPage ? Number(requestedBlogPage) : 1
+  const blogPageCount = getBlogPageCount(blogPosts.length)
+  const isBlogIndex = routeKind === 'blog-index'
   const localizedBlogPost =
     locale !== 'en' && activeBlogPost
       ? {
@@ -775,14 +788,19 @@ function App() {
             ? portuguese.blog.posts[post.slug]
             : undefined),
   }))
-  const [featuredBlogPost, ...otherBlogPosts] = localizedBlogPosts
-  const [activeTool] = useState<ToolId>(routeTool?.id ?? 'word-counter')
-  const routeKind = resolveRouteKind(
-    relativePath,
-    toolList.map((tool) => tool.id),
-    informationPages.map((page) => page.slug),
-    blogPosts.map((post) => post.slug),
+  const blogPageStart = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE
+  const blogPagePosts = localizedBlogPosts.slice(
+    blogPageStart,
+    blogPageStart + BLOG_POSTS_PER_PAGE,
   )
+  const [featuredBlogPost, ...otherBlogPosts] = blogPagePosts
+  const blogSummaryTemplate =
+    localeText?.blogShowingPosts ?? 'Showing {start}–{end} of {total} guides'
+  const blogSummary = blogSummaryTemplate
+    .replace('{start}', String(blogPageStart + 1))
+    .replace('{end}', String(Math.min(blogPageStart + blogPagePosts.length, blogPosts.length)))
+    .replace('{total}', String(blogPosts.length))
+  const [activeTool] = useState<ToolId>(routeTool?.id ?? 'word-counter')
   const [isToolMenuOpen, setIsToolMenuOpen] = useState(false)
   const [isLanguageSuggestionDismissed, setIsLanguageSuggestionDismissed] = useState(false)
   const toolMenuRef = useRef<HTMLDivElement>(null)
@@ -2522,6 +2540,7 @@ function App() {
                         : portuguese.blog.intro
                   : 'Practical, clear guides to counting, cleaning, and working with text.'}
               </p>
+              <p className="mt-4 text-sm text-slate-500">{blogSummary}</p>
             </div>
             {featuredBlogPost ? (
               <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white md:grid md:grid-cols-2">
@@ -2617,6 +2636,82 @@ function App() {
                   ))}
                 </div>
               </section>
+            ) : null}
+            {blogPageCount > 1 ? (
+              <nav
+                aria-label={localeText?.blogPaginationLabel ?? 'Blog pages'}
+                className="flex flex-wrap items-center justify-center gap-1.5 pt-2"
+              >
+                {currentBlogPage > 1 ? (
+                  <a
+                    href={localizedHref(getBlogPagePath(currentBlogPage - 1))}
+                    aria-label={localeText?.blogPreviousPage ?? 'Previous page'}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                  >
+                    <ArrowRight className="h-4 w-4 rotate-180" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span
+                    aria-disabled="true"
+                    aria-label={localeText?.blogPreviousPage ?? 'Previous page'}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-100 text-slate-300"
+                  >
+                    <ArrowRight className="h-4 w-4 rotate-180" aria-hidden="true" />
+                  </span>
+                )}
+                {getBlogPaginationItems(currentBlogPage, blogPageCount).map((page, index) =>
+                  page === 'ellipsis' ? (
+                    <span
+                      key={`ellipsis-${index}`}
+                      aria-hidden="true"
+                      className="inline-flex h-10 min-w-7 items-center justify-center text-sm text-slate-500"
+                    >
+                      …
+                    </span>
+                  ) : page === currentBlogPage ? (
+                    <span
+                      key={page}
+                      aria-current="page"
+                      aria-label={(localeText?.blogPageLabel ?? 'Page {page}').replace(
+                        '{page}',
+                        String(page),
+                      )}
+                      className="inline-flex h-10 min-w-10 items-center justify-center rounded-full bg-slate-900 px-3 text-sm font-medium text-white"
+                    >
+                      {page}
+                    </span>
+                  ) : (
+                    <a
+                      key={page}
+                      href={localizedHref(getBlogPagePath(page))}
+                      aria-label={(localeText?.blogPageLabel ?? 'Page {page}').replace(
+                        '{page}',
+                        String(page),
+                      )}
+                      className="inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-slate-200 px-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                    >
+                      {page}
+                    </a>
+                  ),
+                )}
+                {currentBlogPage < blogPageCount ? (
+                  <a
+                    href={localizedHref(getBlogPagePath(currentBlogPage + 1))}
+                    aria-label={localeText?.blogNextPage ?? 'Next page'}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                  >
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span
+                    aria-disabled="true"
+                    aria-label={localeText?.blogNextPage ?? 'Next page'}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-100 text-slate-300"
+                  >
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                )}
+              </nav>
             ) : null}
           </section>
         ) : null}

@@ -6,7 +6,7 @@ import { renderToString } from 'react-dom/server'
 import { JSDOM } from 'jsdom'
 import { createServer } from 'vite'
 
-async function assertPreRenderedRouteHydrates(pathname: string) {
+async function assertPreRenderedRouteHydrates(pathname: string, expectedContent?: RegExp) {
   const vite = await createServer({
     configFile: join(process.cwd(), 'vite.config.ts'),
     mode: 'production',
@@ -29,6 +29,7 @@ async function assertPreRenderedRouteHydrates(pathname: string) {
       value: { location: { pathname } },
     })
     const html = renderToString(createElement(StrictMode, null, createElement(App)))
+    if (expectedContent) assert.match(html, expectedContent)
 
     dom = new JSDOM(`<div id="root" data-prerendered="true">${html}</div>`, {
       url: `https://texttoools.com${pathname}`,
@@ -83,4 +84,15 @@ test('pre-rendered text-diff route hydrates without React mismatch', async () =>
 
 test('pre-rendered daily todo list route hydrates without React mismatch', async () => {
   await assertPreRenderedRouteHydrates('/tools/daily-todo-list/')
+})
+
+test('paginated blog routes show the correct range and localized navigation', async () => {
+  await assertPreRenderedRouteHydrates(
+    '/blog/page/2/',
+    /Showing 11–20 of \d+ guides/,
+  )
+  await assertPreRenderedRouteHydrates(
+    '/pt-br/blog/page/2/',
+    /Exibindo 11–20 de \d+ guias/,
+  )
 })

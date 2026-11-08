@@ -20,6 +20,37 @@ export type TextListStyle = 'bulleted' | 'numbered'
 export type TodoItem = { id: string; text: string; completed: boolean }
 export type TodoLists = Record<string, TodoItem[]>
 
+export const BLOG_POSTS_PER_PAGE = 10
+
+export function getBlogPageCount(postCount: number) {
+  return Math.max(1, Math.ceil(postCount / BLOG_POSTS_PER_PAGE))
+}
+
+export function getBlogPagePath(page: number) {
+  return page <= 1 ? 'blog/' : `blog/page/${Math.trunc(page)}/`
+}
+
+export function getBlogPaginationItems(currentPage: number, totalPages: number) {
+  const total = Math.max(1, Math.trunc(totalPages))
+  const current = Math.min(total, Math.max(1, Math.trunc(currentPage)))
+  if (total <= 7) return Array.from({ length: total }, (_, index) => index + 1)
+
+  const pages = new Set([1, total])
+  if (current <= 4) {
+    for (let page = 2; page <= 5; page += 1) pages.add(page)
+  } else if (current >= total - 3) {
+    for (let page = total - 4; page < total; page += 1) pages.add(page)
+  } else {
+    for (let page = current - 1; page <= current + 1; page += 1) pages.add(page)
+  }
+
+  const orderedPages = [...pages].sort((left, right) => left - right)
+  return orderedPages.flatMap((page, index) => [
+    ...(index > 0 && page - orderedPages[index - 1] > 1 ? ['ellipsis' as const] : []),
+    page,
+  ])
+}
+
 export function getLocalDateInputValue(date: Date) {
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0')
@@ -733,6 +764,14 @@ export function resolveRouteKind(
 ): RouteKind {
   if (relativePath === '' || relativePath === 'index.html') return 'home'
   if (relativePath === 'blog' || relativePath === 'blog/') return 'blog-index'
+  const blogPage = relativePath.match(/^blog\/page\/(\d+)\/?$/)?.[1]
+  if (blogPage) {
+    const page = Number(blogPage)
+    if (Number.isSafeInteger(page) && page >= 2 && page <= getBlogPageCount(blogSlugs.length)) {
+      return 'blog-index'
+    }
+    return 'not-found'
+  }
 
   const toolSlug = relativePath.match(/^tools\/([^/]+)\/?$/)?.[1]
   if (toolSlug && toolIds.includes(toolSlug)) return 'tool'

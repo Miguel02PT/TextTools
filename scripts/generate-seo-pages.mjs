@@ -73,6 +73,8 @@ const vite = await createServer({
   appType: 'custom',
 })
 const { default: App } = await vite.ssrLoadModule('/src/App.tsx')
+const { getBlogPageCount } = await vite.ssrLoadModule('/src/tool-logic.ts')
+const blogPageCount = getBlogPageCount(blogPosts.length)
 
 function localizedUrls(relativePath) {
   return {
@@ -697,6 +699,70 @@ for (const locale of ['en', 'zh-CN', 'es', 'pt-BR', 'fr']) {
   )
 }
 
+for (let page = 2; page <= blogPageCount; page += 1) {
+  const localizedPath = `blog/page/${page}/`
+  for (const locale of ['en', 'zh-CN', 'es', 'pt-BR', 'fr']) {
+    const localizedContent =
+      locale === 'zh-CN'
+        ? chinese
+        : locale === 'es'
+          ? spanish
+          : locale === 'pt-BR'
+            ? portuguese
+            : locale === 'fr'
+              ? french
+              : undefined
+    const localizedUrlsByLanguage = localizedUrls(localizedPath)
+    const localeUrlKey =
+      locale === 'zh-CN' ? 'zh' : locale === 'pt-BR' ? 'ptBR' : locale
+    const canonicalUrl = localizedUrlsByLanguage[localeUrlKey]
+    const pageTitleTemplate =
+      localizedContent?.site.blogPaginationTitle ?? 'Page {page} of {total}'
+    const pageTitle = pageTitleTemplate
+      .replace('{page}', String(page))
+      .replace('{total}', String(blogPageCount))
+    const blogTitle = localizedContent?.blog.title ?? 'TextToools Blog'
+    const description =
+      localizedContent?.blog.description ??
+      'Practical, clear guides to counting, cleaning, and working with text.'
+    const title = `${blogTitle} | ${pageTitle}`
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: title,
+      description,
+      url: canonicalUrl,
+      inLanguage: locale,
+    }
+    const localePath =
+      locale === 'en'
+        ? []
+        : [locale === 'zh-CN' ? 'zh-cn' : locale === 'pt-BR' ? 'pt-br' : locale]
+    const destination = path.join(
+      outputRoot,
+      ...localePath,
+      'blog',
+      'page',
+      String(page),
+      'index.html',
+    )
+    await mkdir(path.dirname(destination), { recursive: true })
+    await writeFile(
+      destination,
+      createPageHtml({
+        title,
+        description,
+        canonicalUrl,
+        structuredData,
+        routePath: new URL(canonicalUrl).pathname,
+        locale,
+        alternates: localizedAlternates(localizedPath),
+      }),
+      'utf8',
+    )
+  }
+}
+
 for (const post of blogPosts) {
   for (const locale of ['en', 'zh-CN', 'es', 'pt-BR', 'fr']) {
     const localizedPost =
@@ -793,6 +859,15 @@ const urls = [
   blogIndexUrls.es,
   blogIndexUrls.ptBR,
   blogIndexUrls.fr,
+  ...Array.from({ length: Math.max(0, blogPageCount - 1) }, (_, index) => index + 2).flatMap(
+    (page) => [
+      `${siteBase}blog/page/${page}/`,
+      `${siteBase}zh-cn/blog/page/${page}/`,
+      `${siteBase}es/blog/page/${page}/`,
+      `${siteBase}pt-br/blog/page/${page}/`,
+      `${siteBase}fr/blog/page/${page}/`,
+    ],
+  ),
   ...blogPosts.flatMap((post) => [
     `${siteBase}blog/${post.slug}/`,
     `${siteBase}zh-cn/blog/${post.slug}/`,

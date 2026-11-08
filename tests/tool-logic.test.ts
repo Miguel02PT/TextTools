@@ -8,6 +8,9 @@ import {
   countGraphemes,
   countSentences,
   countWords,
+  getBlogPageCount,
+  getBlogPaginationItems,
+  getBlogPagePath,
   formatReadingTime,
   formatTextDiff,
   formatSelectedLinesAsList,
@@ -291,8 +294,24 @@ test('route resolver distinguishes valid routes from unknown paths', () => {
   assert.equal(resolveRouteKind('tools/word-counter/', tools, pages, posts), 'tool')
   assert.equal(resolveRouteKind('faq', tools, pages, posts), 'information')
   assert.equal(resolveRouteKind('blog/', tools, pages, posts), 'blog-index')
+  assert.equal(resolveRouteKind('blog/page/2/', tools, pages, [...posts, ...Array(10).fill('post')]), 'blog-index')
+  assert.equal(resolveRouteKind('blog/page/3/', tools, pages, posts), 'not-found')
+  assert.equal(resolveRouteKind('blog/page/1/', tools, pages, posts), 'not-found')
   assert.equal(resolveRouteKind('blog/word-count-guide/', tools, pages, posts), 'blog-post')
   assert.equal(resolveRouteKind('tools/unknown/', tools, pages, posts), 'not-found')
   assert.equal(resolveRouteKind('blog/not-a-post/', tools, pages, posts), 'not-found')
   assert.equal(resolveRouteKind('unknown/path', tools, pages, posts), 'not-found')
+})
+
+test('blog pagination keeps ten posts per page and collapses distant page numbers', () => {
+  assert.equal(getBlogPageCount(0), 1)
+  assert.equal(getBlogPageCount(10), 1)
+  assert.equal(getBlogPageCount(11), 2)
+  assert.equal(getBlogPageCount(56 * 10), 56)
+  assert.equal(getBlogPagePath(1), 'blog/')
+  assert.equal(getBlogPagePath(2), 'blog/page/2/')
+  assert.deepEqual(getBlogPaginationItems(1, 5), [1, 2, 3, 4, 5])
+  assert.deepEqual(getBlogPaginationItems(1, 56), [1, 2, 3, 4, 5, 'ellipsis', 56])
+  assert.deepEqual(getBlogPaginationItems(5, 56), [1, 'ellipsis', 4, 5, 6, 'ellipsis', 56])
+  assert.deepEqual(getBlogPaginationItems(56, 56), [1, 'ellipsis', 52, 53, 54, 55, 56])
 })
