@@ -37,11 +37,13 @@ function createThemeWindow(systemPrefersDark: boolean, savedPreference?: string)
   }
 }
 
-test('theme follows the system preference until the user chooses a theme', () => {
+test('theme starts in light mode regardless of the system preference', () => {
   const { dom, setSystemPreference } = createThemeWindow(true)
 
-  assert.equal(dom.window.document.documentElement.classList.contains('dark'), true)
-  assert.equal(dom.window.document.documentElement.style.colorScheme, 'dark')
+  assert.equal(dom.window.document.documentElement.classList.contains('dark'), false)
+  assert.equal(dom.window.document.documentElement.style.colorScheme, 'light')
+  setSystemPreference(true)
+  assert.equal(dom.window.document.documentElement.classList.contains('dark'), false)
   setSystemPreference(false)
   assert.equal(dom.window.document.documentElement.classList.contains('dark'), false)
   assert.equal(dom.window.document.documentElement.style.colorScheme, 'light')
@@ -71,7 +73,7 @@ test('saved theme takes precedence over system changes and follows cross-tab cha
     }),
   )
   setSystemPreference(true)
-  assert.equal(root.classList.contains('dark'), true)
+  assert.equal(root.classList.contains('dark'), false)
   dom.window.close()
 })
 
