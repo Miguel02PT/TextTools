@@ -43,6 +43,9 @@ const taskPrioritizationPost = parsedEnglishBlogPosts.find(
 const thesisStatementPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-a-thesis-statement',
 )
+const paraphrasingGuidePost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-paraphrase-sources',
+)
 const dailyTodoListGuide = englishToolGuides.find(
   (guide: { id: string }) => guide.id === 'daily-todo-list',
 )
@@ -130,6 +133,37 @@ test('thesis statement guide is distinct, sourced, and complete in all locales',
     )
     assert.ok(post.sections.at(-1).heading)
     assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+  }
+})
+
+test('paraphrasing guide has a distinct intent and localized citation guidance', () => {
+  const localizedPosts = [
+    paraphrasingGuidePost,
+    parsedSpanishContent.blog.posts['how-to-paraphrase-sources'],
+    parsedPortugueseContent.blog.posts['how-to-paraphrase-sources'],
+    parsedFrenchContent.blog.posts['how-to-paraphrase-sources'],
+    parsedChineseContent.blog.posts['how-to-paraphrase-sources'],
+  ]
+  const sourceUrls = [
+    'https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html',
+    'https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html',
+  ].sort()
+
+  assert.ok(paraphrasingGuidePost)
+  assert.match(paraphrasingGuidePost.title, /paraphrase/i)
+  assert.doesNotMatch(paraphrasingGuidePost.title, /thesis statement/i)
+  assert.match(paraphrasingGuidePost.sections[4].heading, /cite|citer|citar|citer|引用/i)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, paraphrasingGuidePost.sections.length)
+    assert.ok(post.sections.flatMap(({ paragraphs }: { paragraphs: string[] }) => paragraphs)
+      .some((paragraph: string) => /cite|citation|citar|cita|citer|引用/i.test(paragraph)))
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
   }
 })
 

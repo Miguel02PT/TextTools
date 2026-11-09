@@ -808,6 +808,81 @@
     "description": "Guides pratiques sur le comptage de mots et de caractères, le nettoyage de texte et l'écriture.",
     "intro": "Des guides clairs et pratiques pour comprendre les décomptes, organiser le contenu et mieux travailler avec le texte.",
     "posts": {
+      "how-to-paraphrase-sources": {
+        "image": "blog-images/paraphrase-sources.svg",
+        "imageAlt": "Une idée issue d’une source est comprise, reformulée et accompagnée d’une citation.",
+        "title": "Comment paraphraser une source sans en changer le sens | TextToools",
+        "description": "Apprenez à reformuler une source avec vos propres mots, à vérifier le sens avec l’original et à citer correctement l’idée.",
+        "summary": "Une bonne paraphrase présente l’idée d’une source dans une nouvelle structure, en préserve le sens et cite la source.",
+        "sections": [
+          {
+            "heading": "Le rôle de la paraphrase",
+            "paragraphs": [
+              "Une paraphrase reformule une idée précise d’une source avec vos propres mots et votre propre structure. Elle permet d’expliquer des éléments dans le contexte et le langage de votre texte, sans dépendre d’une longue citation directe.",
+              "Paraphraser ne consiste pas à remplacer quelques mots par des synonymes. La formulation et la structure vous appartiennent, tandis que l’idée de la source reste fidèle et attribuée."
+            ]
+          },
+          {
+            "heading": "Choisir entre citation, paraphrase et résumé",
+            "paragraphs": [
+              "Citez mot pour mot lorsque la formulation exacte compte, par exemple pour analyser les mots d’un auteur. Paraphrasez un passage précis lorsque son idée compte davantage que ses termes. Résumez lorsque vous n’avez besoin que de l’idée principale d’une section ou d’un ouvrage plus long.",
+              "Ces trois procédés utilisent le travail d’une autre personne et exigent une attribution. Suivez le style de citation et les consignes du travail pour le format et les détails requis."
+            ]
+          },
+          {
+            "heading": "Comprendre la source avant de la reformuler",
+            "paragraphs": [
+              "Lisez suffisamment de contexte pour comprendre l’idée, la situation et ses nuances. Puis éloignez-vous du texte et notez de mémoire ce que vous en avez compris. Vous pourrez ainsi construire votre phrase au lieu de suivre l’original ligne à ligne.",
+              "Si vous ne pouvez pas expliquer l’idée sans reprendre ses termes, relisez le passage ou consultez une autre explication fiable avant de l’utiliser. Ne supprimez pas une réserve qui modifierait le sens de la source."
+            ]
+          },
+          {
+            "heading": "Construire une nouvelle phrase et vérifier le sens",
+            "paragraphs": [
+              "Organisez l’idée autour du propos de votre paragraphe, plutôt que de l’ordre de la phrase d’origine. Vous pouvez changer la structure et insister sur l’élément pertinent pour votre discussion, mais ne rendez pas l’affirmation plus catégorique ou générale que la source.",
+              "Par exemple, une source peut expliquer qu’un peu de pratique quotidienne aide à conserver une compétence. Une paraphrase pourrait dire que de courtes séances régulières peuvent favoriser la mémorisation. La formulation change, mais l’idée et sa prudence restent ; la source doit tout de même être citée."
+            ]
+          },
+          {
+            "heading": "Citer l’idée, même avec vos propres mots",
+            "paragraphs": [
+              "L’idée paraphrasée vient toujours d’un autre auteur ; présentez donc la source ou ajoutez la référence exigée par votre travail. Placez la citation suffisamment près pour indiquer l’idée qu’elle étaye. Le besoin d’un numéro de page ou de section dépend du style, de la source et des consignes de votre enseignant.",
+              "Notez les références pendant vos recherches. Vous ne pourrez pas compléter une citation de façon fiable si vous ne savez plus quel livre, article ou passage présentait l’idée."
+            ]
+          },
+          {
+            "heading": "Vérifier la paraphrase avant de rendre le travail",
+            "paragraphs": [
+              "Comparez votre version à la source : le sens et la portée sont-ils préservés ? La formulation est-elle vraiment la vôtre, plutôt qu’une copie légèrement retouchée ? La citation est-elle présente ? La paraphrase étaye-t-elle l’idée de votre paragraphe ?",
+              "S’il reste des expressions distinctives ou la structure d’origine, mettez la source de côté et reformulez à partir de ce que vous avez compris. Si les termes exacts sont nécessaires, citez-les fidèlement et respectez le style demandé."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je trouve utile de noter d’abord l’idée que j’ai retenue d’une source, avant de chercher la formulation parfaite. Cette pause m’aide à distinguer mon explication des mots de l’auteur et à garder la référence liée à l’idée."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car je pense que votre texte ne devrait pas avoir à quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Paraphraser : exprimer une idée avec ses propres mots",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"
+          },
+          {
+            "title": "Citer, paraphraser et résumer",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html"
+          }
+        ]
+      },
       "how-to-write-a-thesis-statement": {
         "image": "blog-images/thesis-statement.svg",
         "imageAlt": "Un sujet général de dissertation se précise en une thèse soutenue par trois raisons liées.",

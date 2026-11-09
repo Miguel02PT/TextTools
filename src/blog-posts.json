@@ -1,5 +1,82 @@
 [
   {
+    "slug": "how-to-paraphrase-sources",
+    "published": "2026-11-09",
+    "title": "How to Paraphrase a Source Without Losing Its Meaning | TextToools",
+    "description": "Learn how to restate a source in your own words, check your meaning against the original, and cite the idea correctly.",
+    "summary": "A good paraphrase explains a source's idea in a genuinely new sentence structure while preserving its meaning and crediting the source.",
+    "image": "blog-images/paraphrase-sources.svg",
+    "imageAlt": "An idea from a source is understood, restated in new wording, and connected to a citation.",
+    "sections": [
+      {
+        "heading": "What paraphrasing does",
+        "paragraphs": [
+          "A paraphrase restates a specific idea from a source in your own words and sentence structure. It can help you explain evidence in the language and context of your own paper without relying on a long direct quotation.",
+          "A paraphrase is not just the original sentence with a few synonyms swapped in. The wording and structure should be yours, while the source's idea remains accurate and the source is credited."
+        ]
+      },
+      {
+        "heading": "Choose between a quotation, paraphrase, and summary",
+        "paragraphs": [
+          "Quote when the exact wording matters, such as when you are analyzing an author's phrasing. Paraphrase a specific passage when its idea matters more than its exact words. Summarize when you need only the main point of a much larger section or work.",
+          "All three use someone else's work and need attribution. Follow the citation style and assignment instructions for the format and detail your references require."
+        ]
+      },
+      {
+        "heading": "Understand the source before rewriting it",
+        "paragraphs": [
+          "Read enough of the surrounding passage to understand the point, its context, and any qualifications. Then look away from the original and write a short note explaining the idea from memory. This makes it easier to build your own sentence rather than follow the source line by line.",
+          "If you cannot explain the idea without copying its phrasing, reread it or check another reliable explanation before using it. Do not remove a limitation or qualification that changes what the source is saying."
+        ]
+      },
+      {
+        "heading": "Build a new sentence and compare the meaning",
+        "paragraphs": [
+          "Organize the thought around the point your paragraph is making, not the order of the source's sentence. You can change the sentence structure and emphasize the part most relevant to your discussion, but do not make the source claim more certain or broader than it is.",
+          "For example, a source might explain that a short practice session each day can help a learner retain a skill. A paraphrase could say that regular brief practice may support retention. The phrasing is different, but the idea and cautious wording are preserved; the source still needs to be cited."
+        ]
+      },
+      {
+        "heading": "Cite the idea, even when the words are yours",
+        "paragraphs": [
+          "A paraphrase still comes from another author, so introduce or cite the source using the citation style your assignment requires. Place the reference close enough that readers can tell which idea it supports. Page or section details depend on the style, the source, and your instructor's requirements.",
+          "Keep source details with your notes as you research. A citation cannot be completed reliably if you later lose track of which book, article, or page supplied the idea."
+        ]
+      },
+      {
+        "heading": "Check the paraphrase before you submit",
+        "paragraphs": [
+          "Compare your version with the original: does it preserve the same meaning and scope? Is the wording genuinely your own rather than a lightly edited copy? Is the citation present? Does the paraphrase support the point you are making in this paragraph?",
+          "If several distinctive phrases or the original sentence pattern remain, set the source aside and rewrite the passage from your understanding. If exact language is important, quote it accurately and follow the citation style instead."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I find it helpful to write the point I took from a source before trying to polish the sentence. That small pause makes it easier to separate my explanation from the author's wording and to keep the citation attached to the idea."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Paraphrase: Write It in Your Own Words",
+        "publisher": "Purdue Online Writing Lab",
+        "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"
+      },
+      {
+        "title": "Quoting, Paraphrasing, and Summarizing",
+        "publisher": "Purdue Online Writing Lab",
+        "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html"
+      }
+    ]
+  },
+  {
     "slug": "how-to-write-a-thesis-statement",
     "published": "2026-11-08",
     "title": "How to Write a Thesis Statement (With Examples) | TextToools",

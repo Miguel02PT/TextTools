@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Understand, restate, and cite a source</title>
+  <desc id="desc">A source idea is understood, rewritten in a new structure, and connected to its citation.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1090" cy="82" r="154" fill="#E8E1F1"/>
+  <circle cx="90" cy="570" r="148" fill="#EAE5F0"/>
+  <rect x="76" y="146" width="292" height="332" rx="26" fill="#FFFFFF"/>
+  <rect x="112" y="184" width="112" height="14" rx="7" fill="#D9D3E3"/>
+  <rect x="112" y="230" width="220" height="58" rx="14" fill="#F4F1F8"/>
+  <rect x="132" y="252" width="144" height="12" rx="6" fill="#A99ABD"/>
+  <rect x="112" y="306" width="220" height="58" rx="14" fill="#F4F1F8"/>
+  <rect x="132" y="328" width="166" height="12" rx="6" fill="#A99ABD"/>
+  <rect x="112" y="382" width="220" height="58" rx="14" fill="#E8E1F1"/>
+  <rect x="132" y="404" width="128" height="12" rx="6" fill="#69558E"/>
+  <path d="M412 312H472M454 294L472 312L454 330" stroke="#A99ABD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="510" y="106" width="614" height="418" rx="26" fill="#FFFFFF"/>
+  <rect x="550" y="148" width="534" height="118" rx="18" fill="#F0EEF8"/>
+  <rect x="580" y="178" width="410" height="13" rx="6.5" fill="#69558E"/>
+  <rect x="580" y="207" width="356" height="11" rx="5.5" fill="#A99ABD"/>
+  <rect x="580" y="232" width="270" height="9" rx="4.5" fill="#D9D3E3"/>
+  <path d="M814 278V316" stroke="#C9C1D5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M800 302L814 316L828 302" stroke="#C9C1D5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="550" y="332" width="430" height="118" rx="18" fill="#FAF9FB"/>
+  <rect x="580" y="362" width="334" height="13" rx="6.5" fill="#8876A5"/>
+  <rect x="580" y="391" width="286" height="11" rx="5.5" fill="#A99ABD"/>
+  <rect x="580" y="416" width="214" height="9" rx="4.5" fill="#D9D3E3"/>
+  <circle cx="1032" cy="390" r="38" fill="#E5F0E7"/>
+  <path d="M1016 390L1027 401L1049 378" stroke="#3C7450" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="550" y="468" width="186" height="28" rx="14" fill="#F0EEF8"/>
+  <rect x="570" y="478" width="104" height="8" rx="4" fill="#69558E"/>
+</svg>

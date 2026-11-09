@@ -720,6 +720,81 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "how-to-paraphrase-sources": {
+        "image": "blog-images/pt-br/paraphrase-sources.svg",
+        "imageAlt": "Uma ideia de uma fonte é compreendida, reescrita e acompanhada de uma citação.",
+        "title": "Como parafrasear uma fonte sem mudar o sentido | TextToools",
+        "description": "Aprenda a explicar uma fonte com suas palavras, conferir o sentido comparando com o original e citar corretamente a ideia.",
+        "summary": "Uma boa paráfrase explica a ideia de uma fonte com uma estrutura nova, preserva o sentido e dá crédito à fonte.",
+        "sections": [
+          {
+            "heading": "O que a paráfrase faz",
+            "paragraphs": [
+              "A paráfrase expressa uma ideia específica de uma fonte com suas próprias palavras e estrutura. Ela permite explicar evidências no contexto e na linguagem do seu texto, sem depender de uma citação direta longa.",
+              "Parafrasear não é trocar algumas palavras por sinônimos. A redação e a estrutura devem ser suas, enquanto a ideia da fonte continua fiel e recebe o devido crédito."
+            ]
+          },
+          {
+            "heading": "Escolha entre citação, paráfrase e resumo",
+            "paragraphs": [
+              "Use uma citação direta quando as palavras exatas forem importantes, como na análise da expressão de um autor. Parafraseie um trecho específico quando a ideia importar mais do que a formulação. Faça um resumo quando precisar apenas do ponto principal de uma seção ou obra mais extensa.",
+              "Os três recursos usam o trabalho de outra pessoa e exigem atribuição. Siga o estilo de citação e as instruções da atividade para saber o formato e os detalhes necessários."
+            ]
+          },
+          {
+            "heading": "Entenda a fonte antes de reescrever",
+            "paragraphs": [
+              "Leia o contexto necessário para compreender a ideia, a situação e suas ressalvas. Depois, afaste o original e escreva de memória uma nota curta que explique o ponto. Assim fica mais fácil construir sua própria frase, sem seguir o texto palavra por palavra.",
+              "Se não conseguir explicar a ideia sem copiar a formulação, releia o trecho ou consulte outra explicação confiável antes de usá-lo. Não remova uma ressalva que altere o sentido do que a fonte diz."
+            ]
+          },
+          {
+            "heading": "Crie outra frase e compare o sentido",
+            "paragraphs": [
+              "Organize a ideia em torno do ponto do seu parágrafo, não da ordem da frase original. Você pode mudar a estrutura e destacar a parte mais relevante para sua discussão, mas não amplie nem torne a afirmação mais categórica do que a fonte.",
+              "Por exemplo, uma fonte pode explicar que praticar um pouco por dia ajuda a pessoa a manter uma habilidade. Uma paráfrase poderia dizer que sessões curtas e regulares podem favorecer a retenção. A redação muda, mas mantém a ideia e a cautela; ainda é necessário citar a fonte."
+            ]
+          },
+          {
+            "heading": "Cite a ideia, mesmo quando as palavras são suas",
+            "paragraphs": [
+              "A ideia parafraseada ainda vem de outro autor, então apresente a fonte ou inclua a citação exigida pelo estilo da atividade. Deixe a referência próxima o suficiente para que o leitor saiba qual ideia ela sustenta. A indicação de página ou seção depende do estilo, da fonte e das orientações do professor.",
+              "Anote os dados da fonte durante a pesquisa. Não dá para montar uma referência com segurança depois se você já não sabe qual livro, artigo ou página apresentou a ideia."
+            ]
+          },
+          {
+            "heading": "Revise antes de entregar",
+            "paragraphs": [
+              "Compare sua versão com o original: o sentido e o alcance foram preservados? A redação é realmente sua, em vez de uma cópia com mudanças pequenas? A citação está presente? A paráfrase ajuda a sustentar o ponto do parágrafo?",
+              "Se ainda restarem expressões marcantes ou a estrutura original, deixe a fonte de lado e escreva novamente a partir do que você entendeu. Se precisar das palavras exatas, faça uma citação direta fiel e siga o estilo solicitado."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Considero útil anotar primeiro a ideia que entendi da fonte e só depois aperfeiçoar a frase. Essa pausa ajuda a separar minha explicação das palavras do autor e a manter a citação ligada à ideia."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Desenvolvo ferramentas de texto que respeitam a privacidade porque acredito que seu texto não deveria precisar sair do navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Parafrasear: escrever com suas próprias palavras",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"
+          },
+          {
+            "title": "Citação direta, paráfrase e resumo",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html"
+          }
+        ]
+      },
       "how-to-write-a-thesis-statement": {
         "image": "blog-images/pt-br/thesis-statement.svg",
         "imageAlt": "Um tema amplo de redação se transforma em uma tese apoiada por três razões relacionadas.",

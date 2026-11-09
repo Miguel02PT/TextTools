@@ -545,6 +545,81 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "how-to-paraphrase-sources": {
+        "image": "blog-images/es/paraphrase-sources.svg",
+        "imageAlt": "Una idea de una fuente se comprende, se expresa con otras palabras y se acompaña de una cita.",
+        "title": "Cómo parafrasear una fuente sin cambiar su significado | TextToools",
+        "description": "Aprende a explicar una fuente con tus propias palabras, comprobar el significado con el original y citar correctamente la idea.",
+        "summary": "Una buena paráfrasis explica la idea de una fuente con una estructura nueva, conserva su sentido y da crédito a la fuente.",
+        "sections": [
+          {
+            "heading": "Qué hace una paráfrasis",
+            "paragraphs": [
+              "Una paráfrasis expresa una idea concreta de una fuente con tus propias palabras y estructura. Te permite explicar pruebas con el lenguaje y el contexto de tu propio texto, sin depender de una cita literal extensa.",
+              "Parafrasear no consiste en cambiar unas cuantas palabras por sinónimos. La redacción y la estructura deben ser tuyas, mientras que la idea de la fuente se mantiene fiel y se atribuye."
+            ]
+          },
+          {
+            "heading": "Elige entre cita, paráfrasis y resumen",
+            "paragraphs": [
+              "Cita cuando importen las palabras exactas, por ejemplo, al analizar la expresión de un autor. Parafrasea un pasaje concreto cuando importe más la idea que su formulación. Resume cuando solo necesites el punto principal de una sección o un texto mucho más amplio.",
+              "Los tres casos utilizan el trabajo de otra persona y requieren atribución. Sigue el estilo de citación y las instrucciones de la tarea para dar el formato y el detalle adecuados."
+            ]
+          },
+          {
+            "heading": "Comprende la fuente antes de reescribir",
+            "paragraphs": [
+              "Lee suficiente contexto para entender el punto, las circunstancias y sus matices. Después, aparta el texto y escribe de memoria una nota breve que explique la idea. Así podrás construir una frase propia en lugar de seguir el original palabra por palabra.",
+              "Si no puedes explicar la idea sin copiar su expresión, vuelve a leerla o consulta otra explicación fiable antes de usarla. No elimines una limitación que cambie lo que afirma la fuente."
+            ]
+          },
+          {
+            "heading": "Construye otra frase y comprueba el significado",
+            "paragraphs": [
+              "Organiza la idea alrededor del punto de tu párrafo, no del orden de la frase original. Puedes cambiar la estructura y destacar lo más relevante para tu análisis, pero no presentes la afirmación con más certeza ni amplitud que la fuente.",
+              "Por ejemplo, una fuente puede explicar que practicar un poco cada día ayuda a recordar una habilidad. Una paráfrasis podría decir que las sesiones breves y regulares pueden favorecer la retención. La formulación cambia, pero conserva la idea y su cautela; aun así, hay que citar la fuente."
+            ]
+          },
+          {
+            "heading": "Cita la idea, aunque las palabras sean tuyas",
+            "paragraphs": [
+              "La idea parafraseada sigue procediendo de otro autor, así que presenta la fuente o incluye la cita que exija el estilo de tu trabajo. Coloca la referencia cerca para que quede claro qué idea respalda. Las páginas o secciones necesarias dependen del estilo, de la fuente y de las indicaciones del profesor.",
+              "Anota los datos bibliográficos mientras investigas. Más tarde no podrás completar una referencia con fiabilidad si has olvidado qué libro, artículo o página contenía la idea."
+            ]
+          },
+          {
+            "heading": "Revisa la paráfrasis antes de entregar",
+            "paragraphs": [
+              "Compara tu versión con la fuente: ¿mantiene el mismo significado y alcance? ¿La redacción es realmente tuya y no una copia con pequeños cambios? ¿Incluiste la cita? ¿La paráfrasis respalda el punto del párrafo?",
+              "Si aún conserva frases distintivas o la estructura original, deja la fuente a un lado y vuelve a redactar la idea desde tu comprensión. Si necesitas las palabras exactas, cítalas correctamente y sigue el estilo requerido."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Me resulta útil anotar primero la idea que entendí de una fuente antes de pulir la frase. Esa pausa ayuda a separar mi explicación de las palabras del autor y a mantener la cita vinculada a la idea."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Desarrollo herramientas de texto que respetan la privacidad porque creo que tu texto no debería tener que salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Parafrasear: escribir con tus propias palabras",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"
+          },
+          {
+            "title": "Citar, parafrasear y resumir",
+            "publisher": "Purdue Online Writing Lab",
+            "url": "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html"
+          }
+        ]
+      },
       "how-to-write-a-thesis-statement": {
         "image": "blog-images/es/thesis-statement.svg",
         "imageAlt": "Un tema amplio de ensayo se convierte en una tesis respaldada por tres razones relacionadas.",
