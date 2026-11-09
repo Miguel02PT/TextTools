@@ -12,6 +12,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html.dark {
+  color-scheme: dark;
+  background-color: #0b1120;
+  color: #f1f5f9;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,6 +32,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background: #f5f3ef;
+}
+
+html.dark body {
+  background: #0b1120;
 }
 
 * {
@@ -50,4 +60,199 @@ select {
 pre {
   margin: 0;
   font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+}
+
+html.dark [class~='bg-[#f7f6fa]'] {
+  background-color: #0b1120;
+}
+
+html.dark [class~='bg-[#f0eef8]'] {
+  background-color: #172033;
+}
+
+html.dark [class~='bg-white'],
+html.dark [class~='bg-white/95'] {
+  background-color: #111827;
+}
+
+html.dark [class~='bg-slate-50'] {
+  background-color: #172033;
+}
+
+html.dark [class~='bg-slate-100'] {
+  background-color: #1e293b;
+}
+
+html.dark [class~='bg-slate-900'] {
+  background-color: #334155;
+}
+
+html.dark [class~='bg-amber-50'] {
+  background-color: #422006;
+}
+
+html.dark [class~='bg-emerald-100'] {
+  background-color: #123226;
+}
+
+html.dark [class~='bg-rose-100'] {
+  background-color: #451a24;
+}
+
+html.dark [class~='bg-[#f0e9ff]'] {
+  background-color: #302347;
+}
+
+html.dark [class~='bg-[#e3f3e9]'] {
+  background-color: #173327;
+}
+
+html.dark [class~='bg-[#e5efff]'] {
+  background-color: #1d2e49;
+}
+
+html.dark [class~='text-slate-900'] {
+  color: #f1f5f9;
+}
+
+html.dark [class~='text-slate-800'] {
+  color: #e2e8f0;
+}
+
+html.dark [class~='text-slate-700'] {
+  color: #cbd5e1;
+}
+
+html.dark [class~='text-slate-600'],
+html.dark [class~='text-slate-500'] {
+  color: #a7b3c5;
+}
+
+html.dark [class~='text-slate-400'] {
+  color: #94a3b8;
+}
+
+html.dark [class~='text-slate-300'] {
+  color: #64748b;
+}
+
+html.dark [class~='text-rose-700'] {
+  color: #fda4af;
+}
+
+html.dark [class~='text-rose-900'] {
+  color: #fecdd3;
+}
+
+html.dark [class~='text-amber-900'] {
+  color: #fde68a;
+}
+
+html.dark [class~='text-emerald-900'] {
+  color: #a7f3d0;
+}
+
+html.dark [class~='text-violet-700'] {
+  color: #c4b5fd;
+}
+
+html.dark [class~='text-[#7251ad]'] {
+  color: #d8b4fe;
+}
+
+html.dark [class~='text-[#408454]'] {
+  color: #86efac;
+}
+
+html.dark [class~='text-[#4776b5]'] {
+  color: #93c5fd;
+}
+
+html.dark [class~='border-slate-100'],
+html.dark [class~='divide-slate-100'] > :not(:last-child) {
+  border-color: #1e293b;
+}
+
+html.dark [class~='border-slate-200'],
+html.dark [class~='divide-slate-200'] > :not(:last-child) {
+  border-color: #334155;
+}
+
+html.dark [class~='border-slate-300'] {
+  border-color: #475569;
+}
+
+html.dark [class~='placeholder:text-slate-400']::placeholder {
+  color: #94a3b8;
+}
+
+html.dark [class~='hover:bg-slate-50']:hover {
+  background-color: #1e293b;
+}
+
+html.dark [class~='hover:bg-slate-100']:hover {
+  background-color: #334155;
+}
+
+html.dark [class~='hover:bg-rose-50']:hover {
+  background-color: #451a24;
+}
+
+html.dark [class~='hover:bg-slate-700']:hover {
+  background-color: #475569;
+}
+
+html.dark [class~='hover:bg-slate-800']:hover {
+  background-color: #475569;
+}
+
+html.dark [class~='hover:border-slate-300']:hover,
+html.dark [class~='hover:border-slate-400']:hover,
+html.dark [class~='hover:border-slate-500']:hover {
+  border-color: #64748b;
+}
+
+html.dark [class~='hover:text-slate-900']:hover,
+html.dark [class~='hover:text-slate-950']:hover {
+  color: #f8fafc;
+}
+
+html.dark [class~='hover:text-rose-700']:hover {
+  color: #fecdd3;
+}
+
+html.dark [class~='focus:border-slate-400']:focus,
+html.dark [class~='focus:border-slate-500']:focus,
+html.dark [class~='focus-within:border-slate-900']:focus-within {
+  border-color: #94a3b8;
+}
+
+html.dark [class~='focus:ring-slate-200']:focus {
+  --tw-ring-color: #475569;
+}
+
+html.dark [class~='focus-visible:ring-slate-900']:focus-visible,
+html.dark [class~='focus-within:ring-slate-900']:focus-within {
+  --tw-ring-color: #94a3b8;
+}
+
+html.dark [class~='focus-visible:ring-offset-2']:focus-visible,
+html.dark [class~='focus-within:ring-offset-2']:focus-within {
+  --tw-ring-offset-color: #0b1120;
+}
+
+html.dark [class~='disabled:bg-slate-100']:disabled {
+  background-color: #1e293b;
+}
+
+html.dark [class~='disabled:bg-slate-300']:disabled {
+  background-color: #475569;
+}
+
+html.dark [class~='disabled:text-slate-400']:disabled {
+  color: #94a3b8;
+}
+
+html.dark [class~='accent-slate-900'] {
+  accent-color: #cbd5e1;
 }

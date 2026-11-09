@@ -15,10 +15,12 @@ import {
   List,
   ListFilter,
   ListOrdered,
+  Moon,
   Plus,
   Replace,
   Rows3,
   Search,
+  Sun,
   Trash2,
   Type,
   Wand2,
@@ -802,6 +804,8 @@ function App() {
     .replace('{total}', String(blogPosts.length))
   const [activeTool] = useState<ToolId>(routeTool?.id ?? 'word-counter')
   const [isToolMenuOpen, setIsToolMenuOpen] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [themeStorageError, setThemeStorageError] = useState(false)
   const [isLanguageSuggestionDismissed, setIsLanguageSuggestionDismissed] = useState(false)
   const toolMenuRef = useRef<HTMLDivElement>(null)
   const [selectedCategory, setSelectedCategory] = useState<(typeof categories)[number]>('All')
@@ -832,6 +836,16 @@ function App() {
   const [collapseCleanerSpaces, setCollapseCleanerSpaces] = useState(true)
   const [removeExtraBlankLines, setRemoveExtraBlankLines] = useState(true)
   const notepadRef = useRef<HTMLTextAreaElement>(null)
+
+  useEffect(() => {
+    const syncTheme = () => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'))
+    }
+
+    syncTheme()
+    window.addEventListener('texttools-theme-change', syncTheme)
+    return () => window.removeEventListener('texttools-theme-change', syncTheme)
+  }, [])
 
   useEffect(() => {
     if (activeTool !== 'daily-todo-list') return
@@ -1038,6 +1052,21 @@ function App() {
     return localeText[categoryKeys[category]]
   }
   const activeToolName = getToolName(activeToolInfo)
+
+  const toggleTheme = () => {
+    const nextIsDark = !isDarkMode
+    document.documentElement.classList.toggle('dark', nextIsDark)
+    document.documentElement.style.colorScheme = nextIsDark ? 'dark' : 'light'
+    setIsDarkMode(nextIsDark)
+    setThemeStorageError(false)
+
+    try {
+      window.localStorage.setItem('texttools-theme', nextIsDark ? 'dark' : 'light')
+    } catch (error) {
+      console.error('Unable to save the theme preference.', error)
+      setThemeStorageError(true)
+    }
+  }
 
   const metrics = useMemo(
     () => computeMetrics(text, locale, readingSpeed),
@@ -1471,7 +1500,32 @@ function App() {
             </button>
           </div>
 
-          <div ref={toolMenuRef} className="relative ml-auto shrink-0">
+          <div className="ml-auto flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={
+              isDarkMode
+                ? (localeText?.switchToLightMode ?? 'Switch to light mode')
+                : (localeText?.switchToDarkMode ?? 'Switch to dark mode')
+            }
+            title={
+              isDarkMode
+                ? (localeText?.switchToLightMode ?? 'Switch to light mode')
+                : (localeText?.switchToDarkMode ?? 'Switch to dark mode')
+            }
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+          >
+            {isDarkMode
+              ? <Sun className="h-5 w-5" aria-hidden="true" />
+              : <Moon className="h-5 w-5" aria-hidden="true" />}
+          </button>
+          <span className="sr-only" role="status" aria-live="polite">
+            {themeStorageError
+              ? (localeText?.themeSaveError ?? 'Your browser could not save this theme preference.')
+              : ''}
+          </span>
+          <div ref={toolMenuRef} className="relative shrink-0">
             <button
               type="button"
               aria-label={isToolMenuOpen
@@ -1577,6 +1631,7 @@ function App() {
                 </div>
               </div>
             ) : null}
+          </div>
           </div>
         </nav>
       </header>

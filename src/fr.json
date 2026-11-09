@@ -2,6 +2,9 @@
   "site": {
     "language": "Fran?ais",
     "switchLanguage": "Changer de langue",
+    "switchToDarkMode": "Activer le mode sombre",
+    "switchToLightMode": "Activer le mode clair",
+    "themeSaveError": "Ce navigateur n’a pas pu enregistrer la préférence de thème.",
     "switchToEnglish": "Passer à l'anglais",
     "switchToChinese": "Passer au chinois simplifié",
     "switchToSpanish": "Passer à l'espagnol",

@@ -6,7 +6,11 @@ import { renderToString } from 'react-dom/server'
 import { JSDOM } from 'jsdom'
 import { createServer } from 'vite'
 
-async function assertPreRenderedRouteHydrates(pathname: string, expectedContent?: RegExp) {
+async function assertPreRenderedRouteHydrates(
+  pathname: string,
+  expectedContent?: RegExp,
+  initialDarkMode = false,
+) {
   const vite = await createServer({
     configFile: join(process.cwd(), 'vite.config.ts'),
     mode: 'production',
@@ -35,6 +39,7 @@ async function assertPreRenderedRouteHydrates(pathname: string, expectedContent?
       url: `https://texttoools.com${pathname}`,
       pretendToBeVisual: true,
     })
+    if (initialDarkMode) dom.window.document.documentElement.classList.add('dark')
     dom.window.localStorage.setItem('texttools-ga4-consent', 'accepted')
     Object.defineProperty(globalThis, 'window', { configurable: true, value: dom.window })
     Object.defineProperty(globalThis, 'document', { configurable: true, value: dom.window.document })
@@ -54,6 +59,12 @@ async function assertPreRenderedRouteHydrates(pathname: string, expectedContent?
     })
 
     assert.equal(errors.some((message) => /hydration|#418|didn't match/i.test(message)), false, errors.join('\n'))
+    if (initialDarkMode) {
+      assert.equal(
+        dom.window.document.querySelector('[aria-label="Switch to light mode"]') !== null,
+        true,
+      )
+    }
   } finally {
     console.error = priorConsoleError
     if (root) {
@@ -80,6 +91,10 @@ test('pre-rendered find-replace route hydrates without React mismatch', async ()
 
 test('pre-rendered text-diff route hydrates without React mismatch', async () => {
   await assertPreRenderedRouteHydrates('/tools/text-diff/')
+})
+
+test('pre-rendered route synchronizes the dark theme after hydration', async () => {
+  await assertPreRenderedRouteHydrates('/', undefined, true)
 })
 
 test('pre-rendered daily todo list route hydrates without React mismatch', async () => {

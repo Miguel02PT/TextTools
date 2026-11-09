@@ -2,6 +2,9 @@
   "site": {
     "language": "简体中文",
     "switchLanguage": "切换语言",
+    "switchToDarkMode": "切换到深色模式",
+    "switchToLightMode": "切换到浅色模式",
+    "themeSaveError": "此浏览器无法保存主题偏好设置。",
     "switchToEnglish": "切换到英文",
     "switchToChinese": "切换到简体中文",
     "english": "English",
