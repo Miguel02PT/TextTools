@@ -2324,5 +2324,110 @@
         "url": "https://www.todoist.com/inspiration/how-to-plan-your-day"
       }
     ]
+  },
+  {
+    "slug": "how-to-write-meeting-minutes",
+    "published": "2026-11-10",
+    "modified": "2026-11-10",
+    "title": "How to Write Meeting Minutes: A Practical Guide and Template | TextToools",
+    "description": "Learn what to include in meeting minutes, how to record decisions and action items, and use a simple template to prepare a clear, neutral record.",
+    "summary": "Good meeting minutes record the decisions and actions people need to refer to later—not a transcript of every comment. Use this step-by-step guide and reusable template.",
+    "image": "blog-images/meeting-minutes.svg",
+    "imageAlt": "A meeting record organized around decisions, assigned actions, and a follow-up date.",
+    "sections": [
+      {
+        "heading": "What meeting minutes are for",
+        "paragraphs": [
+          "Meeting minutes are the agreed record of a meeting’s business: the decisions reached, actions assigned, and enough context to understand them later. They help people who attended confirm what was decided and help absent colleagues follow up.",
+          "Minutes are not usually a word-for-word transcript. The right level of detail depends on the type of meeting, your organization’s rules, and any legal or governance requirements that apply."
+        ]
+      },
+      {
+        "heading": "Prepare a structure before the meeting",
+        "paragraphs": [
+          "Start with the agenda so your notes follow the order of the meeting. Add the date, time, location or meeting link, chair, minute-taker, attendees, and apologies where appropriate. Bring forward unresolved actions from the previous meeting so they can be checked.",
+          "Before the meeting, confirm the required format, who will review and approve the minutes, and how confidential items should be handled. If recording is being considered to help with note-taking, check the applicable policy and get the attendees’ consent in advance."
+        ]
+      },
+      {
+        "heading": "Record decisions and actions as they happen",
+        "paragraphs": [
+          "For each agenda item, capture the outcome rather than trying to write down every contribution. Note formal recommendations or decisions, any essential reasoning or context, and the wording and result of a formal motion when your meeting rules require it. If the outcome is unclear, ask the chair to confirm it rather than guessing later.",
+          "Write each follow-up as a specific action with an owner and a target date. If nobody has accepted responsibility or no date was agreed, mark that as something to confirm instead of inventing an assignment."
+        ],
+        "bullets": [
+          "Decision: what was agreed, approved, rejected, or deferred?",
+          "Action: what needs to happen next, who owns it, and by when?",
+          "Context: what brief reason or key fact will make the outcome understandable later?"
+        ]
+      },
+      {
+        "heading": "Turn rough notes into a clear, neutral record",
+        "paragraphs": [
+          "Draft the minutes soon after the meeting while the notes are fresh. Use the agenda as your outline, write in clear language, and separate decisions from actions. Summarize discussion only when the main points help explain the outcome or are required by the meeting’s rules.",
+          "Keep the tone factual and impartial. Do not attribute comments to named people unless the rules, the person’s official role, or a request to record a formal objection makes that necessary. Check names, dates, figures, action owners, and decision wording against your notes; do not fill gaps with assumptions."
+        ]
+      },
+      {
+        "heading": "A simple meeting minutes template",
+        "paragraphs": [
+          "Copy this outline and remove any fields your meeting does not need. For a formal board or committee, follow its approved template and governing rules."
+        ],
+        "bullets": [
+          "Meeting: [name or group]",
+          "Date, time, and location: [details]",
+          "Chair and minute-taker: [names or roles]",
+          "Present and apologies: [attendees, as appropriate]",
+          "Agenda item: [topic]",
+          "Decision or key outcome: [concise, accurate record]",
+          "Action | owner | target date: [next step | responsible person | date]",
+          "Next meeting: [date or to be confirmed]",
+          "Approval status: [draft, approved, and approval date]"
+        ]
+      },
+      {
+        "heading": "Review, approve, and share the minutes",
+        "paragraphs": [
+          "Send the draft to the chair or designated reviewer for a factual check, then follow the group’s process for comments and formal approval. Many committees approve minutes at their next meeting, but the correct process depends on the organization. Keep a draft clearly marked as a draft until it is approved.",
+          "After approval, share the record with the people who need it and store it in the agreed location. Carry open actions into the next meeting’s follow-up list so responsibility and progress remain visible."
+        ]
+      },
+      {
+        "heading": "Treat recordings and confidential items carefully",
+        "paragraphs": [
+          "Do not assume that recording a meeting is automatically permitted. Follow workplace or committee policy, explain the purpose, and obtain consent before recording. Use a recording only as allowed to check your notes, then handle or delete it according to the applicable retention rules.",
+          "If an item is genuinely confidential, follow the organization’s rules for recording and distributing it, and include only the information needed for an accurate record. Do not label ordinary business confidential by default; legal, regulatory, and governance requirements vary, so check the rules that apply to your meeting."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I find meeting notes most useful when I can quickly see what was decided and what needs to happen next. A consistent outline makes that easier without turning the minutes into a transcript."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build straightforward browser tools for everyday writing and planning tasks."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Writing Minutes",
+        "publisher": "Michigan State University Academic Governance",
+        "url": "https://acadgov.msu.edu/about/writing-minutes"
+      },
+      {
+        "title": "Committee Minutes: Guidance for Note-Taking and Writing",
+        "publisher": "Loughborough University",
+        "url": "https://www.lboro.ac.uk/committees/handbook/19-minutes-guidance/"
+      },
+      {
+        "title": "Minutes and Actions",
+        "publisher": "University of Manchester Governance Office",
+        "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
+      }
+    ]
   }
 ]

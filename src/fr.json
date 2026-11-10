@@ -3083,6 +3083,109 @@
             "url": "https://support.google.com/docs/answer/39003?hl=en"
           }
         ]
+      },
+      "how-to-write-meeting-minutes": {
+        "modified": "2026-11-10",
+        "image": "blog-images/meeting-minutes.svg",
+        "imageAlt": "Un compte rendu organisé autour des décisions, des actions attribuées et d’une date de suivi.",
+        "title": "Comment rédiger un compte rendu de réunion : guide et modèle | TextToools",
+        "description": "Découvrez quoi inclure dans un compte rendu, comment noter les décisions et les actions, et utilisez un modèle simple pour créer un document clair et impartial.",
+        "summary": "Un bon compte rendu consigne les décisions et les actions à retrouver plus tard, pas chaque intervention. Suivez ce guide pratique et réutilisez son modèle.",
+        "sections": [
+          {
+            "heading": "À quoi sert un compte rendu de réunion",
+            "paragraphs": [
+              "Le compte rendu est la trace convenue des travaux d’une réunion : les décisions prises, les actions attribuées et le contexte nécessaire pour les comprendre plus tard. Il permet aux personnes présentes de confirmer les décisions et aux absents de suivre les suites à donner.",
+              "Il ne s’agit généralement pas d’une transcription mot à mot. Le niveau de détail dépend du type de réunion, des règles de l’organisation et des exigences juridiques ou de gouvernance applicables."
+            ]
+          },
+          {
+            "heading": "Préparez une structure avant la réunion",
+            "paragraphs": [
+              "Servez-vous de l’ordre du jour pour organiser vos notes. Ajoutez la date, l’heure, le lieu ou le lien, la personne qui préside et celle qui rédige le compte rendu, ainsi que les personnes présentes et excusées si nécessaire. Reprenez les actions encore ouvertes du compte rendu précédent pour les examiner.",
+              "Avant la réunion, vérifiez le format attendu, les personnes chargées de relire et d’approuver le document ainsi que les règles relatives aux sujets confidentiels. Si un enregistrement est envisagé pour faciliter la prise de notes, vérifiez la politique applicable et obtenez l’accord des participants à l’avance."
+            ]
+          },
+          {
+            "heading": "Notez les décisions et les actions pendant la réunion",
+            "paragraphs": [
+              "Pour chaque point de l’ordre du jour, consignez le résultat plutôt que toutes les interventions. Notez les recommandations ou décisions formelles, le contexte essentiel et, lorsque les règles de la réunion l’exigent, le libellé et le résultat exacts d’une motion officielle. Si la décision n’est pas claire, demandez à la personne qui préside de la confirmer au lieu de deviner après coup.",
+              "Formulez chaque action de suivi de façon précise, avec un responsable et une échéance. Si personne n’a accepté la responsabilité ou si aucune date n’a été fixée, indiquez qu’il faut le confirmer plutôt que d’inventer un engagement."
+            ],
+            "bullets": [
+              "Décision : qu’est-ce qui a été convenu, approuvé, rejeté ou reporté ?",
+              "Action : que faut-il faire, par qui et pour quelle date ?",
+              "Contexte : quel motif ou fait bref aidera à comprendre le résultat plus tard ?"
+            ]
+          },
+          {
+            "heading": "Transformez vos notes en un document clair et impartial",
+            "paragraphs": [
+              "Rédigez le compte rendu peu après la réunion, pendant que vos notes sont encore fraîches. Suivez l’ordre du jour, employez un langage clair et distinguez les décisions des actions. Résumez les échanges uniquement lorsque leurs points essentiels expliquent le résultat ou que les règles de la réunion l’exigent.",
+              "Adoptez un ton factuel et impartial. N’attribuez pas les propos à des personnes nommément, sauf si les règles, leur fonction officielle ou une demande de consignation d’une objection formelle le nécessitent. Vérifiez les noms, dates, chiffres, responsables et formulations des décisions ; ne comblez pas les lacunes par des suppositions."
+            ]
+          },
+          {
+            "heading": "Un modèle simple de compte rendu",
+            "paragraphs": [
+              "Copiez cette trame et supprimez les champs inutiles pour votre réunion. Pour un conseil ou un comité officiel, utilisez le modèle approuvé et respectez ses règles."
+            ],
+            "bullets": [
+              "Réunion : [nom ou groupe]",
+              "Date, heure et lieu : [détails]",
+              "Présidence et rédaction : [noms ou fonctions]",
+              "Présents et excusés : [selon le cas]",
+              "Point de l’ordre du jour : [sujet]",
+              "Décision ou résultat : [description concise et exacte]",
+              "Action | responsable | échéance : [étape suivante | responsable | date]",
+              "Prochaine réunion : [date ou à confirmer]",
+              "État d’approbation : [brouillon, approuvé et date d’approbation]"
+            ]
+          },
+          {
+            "heading": "Relisez, faites approuver et partagez le compte rendu",
+            "paragraphs": [
+              "Envoyez le brouillon à la personne qui préside ou au relecteur désigné pour vérifier les faits, puis suivez la procédure du groupe pour recueillir les commentaires et obtenir l’approbation officielle. De nombreux comités approuvent leur compte rendu à la réunion suivante, mais la procédure dépend de l’organisation. Indiquez clairement qu’il s’agit d’un brouillon tant qu’il n’est pas approuvé.",
+              "Après approbation, partagez le document avec les personnes concernées et conservez-le à l’emplacement convenu. Reportez les actions en cours dans le suivi de la réunion suivante afin que les responsables et l’avancement restent visibles."
+            ]
+          },
+          {
+            "heading": "Gérez avec précaution les enregistrements et les sujets confidentiels",
+            "paragraphs": [
+              "Ne supposez pas qu’un enregistrement est automatiquement autorisé. Respectez les règles du lieu de travail ou du comité, expliquez son objectif et obtenez le consentement avant de démarrer. N’utilisez l’enregistrement que pour vérifier vos notes si cela est permis, puis gérez-le selon les règles de conservation applicables.",
+              "Si un sujet est réellement confidentiel, suivez les règles de l’organisation pour le consigner et le diffuser, et n’incluez que les éléments nécessaires à l’exactitude du compte rendu. Ne classez pas par défaut les affaires ordinaires comme confidentielles : les exigences juridiques, réglementaires et de gouvernance varient, vérifiez celles qui s’appliquent à votre réunion."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je trouve les notes de réunion plus utiles lorsque je peux voir rapidement ce qui a été décidé et ce qu’il faut faire ensuite. Une trame cohérente facilite cette consultation sans transformer le compte rendu en transcription."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils simples dans le navigateur pour les tâches quotidiennes d’écriture et de planification."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Rédiger un compte rendu",
+            "publisher": "Gouvernance académique de la Michigan State University",
+            "url": "https://acadgov.msu.edu/about/writing-minutes"
+          },
+          {
+            "title": "Comptes rendus de comité : conseils pour la prise de notes et la rédaction",
+            "publisher": "Université de Loughborough",
+            "url": "https://www.lboro.ac.uk/committees/handbook/19-minutes-guidance/"
+          },
+          {
+            "title": "Comptes rendus et actions",
+            "publisher": "Bureau de la gouvernance de l’Université de Manchester",
+            "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
+          }
+        ]
       }
     }
   }

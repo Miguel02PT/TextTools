@@ -2457,6 +2457,109 @@
             "url": "https://www.todoist.com/inspiration/how-to-plan-your-day"
           }
         ]
+      },
+      "how-to-write-meeting-minutes": {
+        "modified": "2026-11-10",
+        "image": "blog-images/es/meeting-minutes.svg",
+        "imageAlt": "Un acta de reunión organizada en torno a decisiones, tareas asignadas y una fecha de seguimiento.",
+        "title": "Cómo redactar un acta de reunión: guía práctica y plantilla | TextToools",
+        "description": "Descubre qué incluir en un acta, cómo registrar decisiones y tareas, y utiliza una plantilla sencilla para crear un registro claro y neutral.",
+        "summary": "Un acta útil registra las decisiones y tareas que habrá que consultar después, no cada intervención. Sigue esta guía y utiliza la plantilla reutilizable.",
+        "sections": [
+          {
+            "heading": "Para qué sirve un acta de reunión",
+            "paragraphs": [
+              "El acta es el registro acordado de lo tratado en una reunión: las decisiones, las tareas asignadas y el contexto necesario para entenderlas más adelante. Ayuda a quienes asistieron a confirmar lo acordado y permite que las personas ausentes hagan el seguimiento.",
+              "Por lo general, no es una transcripción palabra por palabra. El nivel de detalle depende del tipo de reunión, las normas de la organización y los requisitos legales o de gobernanza aplicables."
+            ]
+          },
+          {
+            "heading": "Prepara la estructura antes de la reunión",
+            "paragraphs": [
+              "Usa el orden del día como esquema para tomar notas. Añade la fecha, la hora, el lugar o enlace, quién preside y quién redacta el acta, las personas asistentes y las ausencias justificadas cuando corresponda. Recupera las tareas pendientes del acta anterior para revisarlas.",
+              "Antes de la reunión, confirma el formato requerido, quién revisará y aprobará el acta y cómo se tratarán los asuntos confidenciales. Si se plantea grabar para facilitar las notas, consulta la política aplicable y pide el consentimiento de las personas asistentes con antelación."
+            ]
+          },
+          {
+            "heading": "Registra las decisiones y tareas durante la reunión",
+            "paragraphs": [
+              "En cada punto del orden del día, anota el resultado en vez de intentar recoger todas las intervenciones. Registra las recomendaciones o decisiones formales, el contexto imprescindible y, cuando lo exijan las normas de la reunión, el texto y el resultado exactos de una moción. Si no está claro qué se ha decidido, pide a quien preside que lo confirme en lugar de adivinarlo después.",
+              "Formula cada tarea de seguimiento de manera concreta e indica quién se responsabiliza y para cuándo. Si nadie ha aceptado la responsabilidad o no se ha acordado una fecha, señala que hay que confirmarlo en vez de inventar un compromiso."
+            ],
+            "bullets": [
+              "Decisión: ¿qué se acordó, aprobó, rechazó o aplazó?",
+              "Tarea: ¿qué hay que hacer, quién se encarga y para cuándo?",
+              "Contexto: ¿qué motivo o dato breve ayudará a entender el resultado más adelante?"
+            ]
+          },
+          {
+            "heading": "Convierte las notas en un acta clara y neutral",
+            "paragraphs": [
+              "Redacta el acta poco después, mientras tengas frescas las notas. Sigue el orden del día, utiliza un lenguaje claro y separa las decisiones de las tareas. Resume el debate solo cuando sus puntos principales ayuden a explicar el resultado o las normas exijan incluirlos.",
+              "Mantén un tono objetivo e imparcial. No atribuyas comentarios a personas concretas salvo que lo exijan las normas, su función oficial o una petición para dejar constancia de una objeción formal. Comprueba nombres, fechas, cifras, responsables y texto de las decisiones; no rellenes lagunas con suposiciones."
+            ]
+          },
+          {
+            "heading": "Plantilla sencilla para un acta de reunión",
+            "paragraphs": [
+              "Copia este esquema y elimina los campos que no necesite tu reunión. Para una junta o comité formal, sigue su plantilla aprobada y sus normas."
+            ],
+            "bullets": [
+              "Reunión: [nombre o grupo]",
+              "Fecha, hora y lugar: [datos]",
+              "Presidencia y persona que redacta el acta: [nombres o cargos]",
+              "Asistentes y ausencias: [según corresponda]",
+              "Punto del orden del día: [tema]",
+              "Decisión o resultado: [registro breve y preciso]",
+              "Tarea | responsable | fecha prevista: [siguiente paso | persona | fecha]",
+              "Próxima reunión: [fecha o por confirmar]",
+              "Estado de aprobación: [borrador, aprobado y fecha de aprobación]"
+            ]
+          },
+          {
+            "heading": "Revisa, aprueba y comparte el acta",
+            "paragraphs": [
+              "Envía el borrador a quien preside o a la persona designada para comprobar los datos y sigue el procedimiento del grupo para recibir comentarios y aprobarlo formalmente. Muchos comités aprueban el acta en la siguiente reunión, pero el proceso correcto depende de cada organización. Indica claramente que sigue siendo un borrador hasta que se apruebe.",
+              "Una vez aprobada, compártela con quienes la necesiten y guárdala en el lugar acordado. Incluye las tareas pendientes en el seguimiento de la siguiente reunión para que se vean las responsabilidades y los avances."
+            ]
+          },
+          {
+            "heading": "Trata con cuidado las grabaciones y los asuntos confidenciales",
+            "paragraphs": [
+              "No des por hecho que se puede grabar una reunión. Sigue la política del lugar de trabajo o del comité, explica el propósito y pide consentimiento antes de grabar. Utiliza la grabación solo para comprobar las notas si está permitido y gestiona su conservación o eliminación según las normas aplicables.",
+              "Si un asunto es realmente confidencial, sigue las normas de la organización para registrarlo y distribuirlo e incluye solo lo necesario para que el acta sea precisa. No marques por defecto como confidencial la actividad ordinaria: los requisitos legales, normativos y de gobernanza varían, así que comprueba cuáles se aplican."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Las notas de una reunión me resultan más útiles cuando puedo ver rápidamente qué se decidió y qué hay que hacer después. Un esquema coherente facilita esa consulta sin convertir el acta en una transcripción."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas sencillas en el navegador para tareas cotidianas de escritura y planificación."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Redacción de actas",
+            "publisher": "Gobierno Académico de la Universidad Estatal de Michigan",
+            "url": "https://acadgov.msu.edu/about/writing-minutes"
+          },
+          {
+            "title": "Actas de comités: orientación para tomar notas y redactarlas",
+            "publisher": "Universidad de Loughborough",
+            "url": "https://www.lboro.ac.uk/committees/handbook/19-minutes-guidance/"
+          },
+          {
+            "title": "Actas y acciones",
+            "publisher": "Oficina de Gobernanza de la Universidad de Mánchester",
+            "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
+          }
+        ]
       }
     }
   }

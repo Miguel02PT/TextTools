@@ -2999,6 +2999,109 @@
             "url": "https://support.google.com/docs/answer/39003?hl=en"
           }
         ]
+      },
+      "how-to-write-meeting-minutes": {
+        "modified": "2026-11-10",
+        "image": "blog-images/pt-br/meeting-minutes.svg",
+        "imageAlt": "Uma ata de reunião organizada em torno de decisões, ações atribuídas e uma data de acompanhamento.",
+        "title": "Como fazer uma ata de reunião: guia prático e modelo | TextToools",
+        "description": "Saiba o que incluir em uma ata, como registrar decisões e tarefas e use um modelo simples para criar um registro claro e imparcial.",
+        "summary": "Uma boa ata registra as decisões e ações que precisarão ser consultadas depois, não cada fala. Aprenda o processo e use um modelo reutilizável.",
+        "sections": [
+          {
+            "heading": "Para que serve uma ata de reunião",
+            "paragraphs": [
+              "A ata é o registro acordado do que aconteceu em uma reunião: decisões, ações atribuídas e contexto suficiente para entendê-las no futuro. Ela ajuda quem participou a confirmar o que foi decidido e permite que as pessoas ausentes acompanhem os próximos passos.",
+              "Em geral, a ata não é uma transcrição palavra por palavra. O nível de detalhe depende do tipo de reunião, das regras da organização e dos requisitos legais ou de governança aplicáveis."
+            ]
+          },
+          {
+            "heading": "Prepare a estrutura antes da reunião",
+            "paragraphs": [
+              "Use a pauta como roteiro para organizar as anotações. Inclua data, horário, local ou link, quem preside e quem redige a ata, participantes e ausências justificadas quando necessário. Traga as ações ainda pendentes da reunião anterior para que possam ser revisadas.",
+              "Antes da reunião, confirme o formato exigido, quem vai revisar e aprovar a ata e como assuntos confidenciais devem ser tratados. Se houver a possibilidade de gravar para ajudar nas anotações, consulte a política aplicável e peça o consentimento dos participantes com antecedência."
+            ]
+          },
+          {
+            "heading": "Registre decisões e ações durante a reunião",
+            "paragraphs": [
+              "Para cada item da pauta, registre o resultado em vez de tentar anotar todas as falas. Anote recomendações ou decisões formais, o contexto essencial e, quando as regras da reunião exigirem, a redação e o resultado exatos de uma moção formal. Se o resultado não estiver claro, peça à pessoa que preside para confirmá-lo, em vez de adivinhar depois.",
+              "Descreva cada ação de acompanhamento de forma específica, com responsável e prazo. Se ninguém aceitou a responsabilidade ou não foi definida uma data, marque isso para confirmar em vez de inventar um compromisso."
+            ],
+            "bullets": [
+              "Decisão: o que foi acordado, aprovado, rejeitado ou adiado?",
+              "Ação: o que precisa ser feito, por quem e até quando?",
+              "Contexto: qual motivo ou informação breve ajudará a entender o resultado depois?"
+            ]
+          },
+          {
+            "heading": "Transforme as anotações em um registro claro e imparcial",
+            "paragraphs": [
+              "Prepare a ata logo depois da reunião, enquanto as anotações ainda estão frescas. Siga a pauta, use linguagem clara e separe decisões de ações. Resuma a discussão apenas quando os pontos principais ajudarem a explicar o resultado ou quando as regras da reunião exigirem isso.",
+              "Mantenha um tom factual e imparcial. Não atribua comentários a pessoas específicas, a menos que as regras, o cargo oficial ou um pedido para registrar uma objeção formal tornem isso necessário. Confira nomes, datas, números, responsáveis e a redação das decisões; não preencha lacunas com suposições."
+            ]
+          },
+          {
+            "heading": "Um modelo simples de ata de reunião",
+            "paragraphs": [
+              "Copie este roteiro e remova os campos desnecessários para a sua reunião. Para uma reunião formal de conselho ou comissão, siga o modelo aprovado e as regras aplicáveis."
+            ],
+            "bullets": [
+              "Reunião: [nome ou grupo]",
+              "Data, horário e local: [detalhes]",
+              "Presidência e responsável pela ata: [nomes ou cargos]",
+              "Participantes e ausências: [conforme necessário]",
+              "Item da pauta: [assunto]",
+              "Decisão ou resultado: [registro conciso e preciso]",
+              "Ação | responsável | prazo: [próximo passo | pessoa responsável | data]",
+              "Próxima reunião: [data ou a confirmar]",
+              "Status de aprovação: [rascunho, aprovado e data da aprovação]"
+            ]
+          },
+          {
+            "heading": "Revise, aprove e compartilhe a ata",
+            "paragraphs": [
+              "Envie o rascunho à pessoa que preside ou ao revisor designado para conferir os fatos e siga o processo do grupo para receber comentários e obter aprovação formal. Muitas comissões aprovam a ata na reunião seguinte, mas o procedimento correto depende da organização. Identifique claramente o documento como rascunho até a aprovação.",
+              "Depois de aprovada, compartilhe a ata com quem precisa dela e guarde-a no local combinado. Leve as ações em aberto para o acompanhamento da reunião seguinte para que os responsáveis e o andamento continuem visíveis."
+            ]
+          },
+          {
+            "heading": "Tenha cuidado com gravações e assuntos confidenciais",
+            "paragraphs": [
+              "Não presuma que gravar uma reunião é permitido. Siga a política do local de trabalho ou da comissão, explique o objetivo e obtenha consentimento antes de gravar. Use a gravação apenas para conferir as anotações se isso for permitido e cuide dela de acordo com as regras de retenção aplicáveis.",
+              "Se um assunto for realmente confidencial, siga as regras da organização para registrá-lo e distribuí-lo e inclua somente o necessário para manter a ata precisa. Não marque atividades comuns como confidenciais por padrão: requisitos legais, regulatórios e de governança variam, então confira quais regras se aplicam."
+            ]
+          },
+          {
+            "heading": "Uma observação do fundador",
+            "paragraphs": [
+              "Prefiro anotações de reunião que mostram rapidamente o que foi decidido e o que precisa acontecer em seguida. Um roteiro consistente facilita essa consulta sem transformar a ata em uma transcrição."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas simples no navegador para tarefas cotidianas de escrita e planejamento."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Redação de atas",
+            "publisher": "Governança Acadêmica da Michigan State University",
+            "url": "https://acadgov.msu.edu/about/writing-minutes"
+          },
+          {
+            "title": "Atas de comissões: orientações para anotações e redação",
+            "publisher": "Loughborough University",
+            "url": "https://www.lboro.ac.uk/committees/handbook/19-minutes-guidance/"
+          },
+          {
+            "title": "Atas e ações",
+            "publisher": "Escritório de Governança da University of Manchester",
+            "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
+          }
+        ]
       }
     }
   }

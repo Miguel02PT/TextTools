@@ -40,6 +40,9 @@ const keywordDensityGuidePost = parsedEnglishBlogPosts.find(
 const taskPrioritizationPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-prioritize-tasks',
 )
+const meetingMinutesPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-meeting-minutes',
+)
 const thesisStatementPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-a-thesis-statement',
 )
@@ -96,6 +99,56 @@ test('task prioritization article and daily task list target complementary searc
   assert.doesNotMatch(taskPrioritizationPost.title, /daily to-do list/i)
   assert.match(dailyTodoListGuide.title, /daily to-do list/i)
   assert.ok(taskPrioritizationPost.sections.length >= 6)
+})
+
+test('meeting minutes guide has a distinct intent, usable template, and complete translations', () => {
+  const localizedPosts = [
+    meetingMinutesPost,
+    parsedSpanishContent.blog.posts['how-to-write-meeting-minutes'],
+    parsedPortugueseContent.blog.posts['how-to-write-meeting-minutes'],
+    parsedFrenchContent.blog.posts['how-to-write-meeting-minutes'],
+    parsedChineseContent.blog.posts['how-to-write-meeting-minutes'],
+  ]
+  const sourceUrls = [
+    'https://acadgov.msu.edu/about/writing-minutes',
+    'https://www.lboro.ac.uk/committees/handbook/19-minutes-guidance/',
+    'https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/',
+  ].sort()
+
+  assert.ok(meetingMinutesPost)
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'how-to-write-meeting-minutes',
+    ).length,
+    1,
+  )
+  assert.match(meetingMinutesPost.title, /meeting minutes/i)
+  assert.doesNotMatch(meetingMinutesPost.title, /prioritize tasks|daily to-do list/i)
+  assert.match(meetingMinutesPost.sections[0].paragraphs.join(' '), /not.*transcript/i)
+  assert.match(meetingMinutesPost.sections[2].paragraphs.join(' '), /owner and a target date/i)
+  assert.match(meetingMinutesPost.sections[6].paragraphs.join(' '), /consent/i)
+  assert.equal(meetingMinutesPost.sections[4].bullets.length, 9)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, meetingMinutesPost.sections.length)
+    assert.equal(post.sections[4].bullets.length, 9)
+    assert.ok(post.sections.at(-1).heading)
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+    const svgPath = new URL(`../public/${post.image}`, import.meta.url)
+    const pngPath = new URL(`../public/${post.image.replace(/\.svg$/i, '.png')}`, import.meta.url)
+    assert.ok(existsSync(svgPath), `${post.image} exists`)
+    assert.ok(existsSync(pngPath), `${post.image} has a social preview`)
+    const png = readFileSync(pngPath)
+    assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
+    assert.equal(png.readUInt32BE(16), 1200)
+    assert.equal(png.readUInt32BE(20), 630)
+  }
 })
 
 test('thesis statement guide is distinct, sourced, and complete in all locales', () => {
