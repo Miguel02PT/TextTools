@@ -3102,6 +3102,98 @@
             "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
           }
         ]
+      },
+      "how-to-write-project-status-report": {
+        "modified": "2026-11-11",
+        "image": "blog-images/pt-br/project-status-report.svg",
+        "imageAlt": "Um relatório mostra o status atual do projeto, um risco de entrega, a pessoa responsável e a próxima ação.",
+        "title": "Como escrever um relatório de status do projeto (com modelo simples) | TextToools",
+        "description": "Monte um relatório claro com resumo, andamento dos marcos, riscos, responsáveis e próximos passos concretos.",
+        "summary": "Um bom relatório de status mostra, com data, onde o projeto está, o que mudou, o que pode afetar o plano e o que precisa acontecer em seguida.",
+        "sections": [
+          {
+            "heading": "O que um relatório de status do projeto deve mostrar",
+            "paragraphs": [
+              "Um relatório de status é um panorama conciso da situação do projeto em um momento específico. Ele ajuda a equipe e as partes interessadas a entender o que está no caminho certo, o que mudou, o que pode atrasar o trabalho e o que precisa de atenção.",
+              "O relatório pode incluir entregas recentes, mas não é uma transcrição de reunião nem uma lista de todas as tarefas. Seu objetivo é explicar a situação atual e apoiar decisões sem obrigar ninguém a procurar informações em várias mensagens."
+            ]
+          },
+          {
+            "heading": "Defina o público e o período do relatório",
+            "paragraphs": [
+              "Comece pelas pessoas que vão usar a atualização. A equipe pode precisar conhecer bloqueios e dependências; quem patrocina o projeto pode precisar de marcos, mudanças de prazo ou orçamento e decisões que dependem de sua ajuda. Mantenha uma fonte comum e ajuste o nível de detalhe para cada público.",
+              "Escolha um período e uma frequência previsível, de acordo com o ritmo do projeto e a necessidade das partes interessadas. Atualizações semanais funcionam para muitos projetos ativos; trabalhos mais longos ou estáveis podem exigir menos. Informe o nome do projeto, o período coberto e a data do relatório."
+            ]
+          },
+          {
+            "heading": "Comece pelo status geral e explique o motivo",
+            "paragraphs": [
+              "Abra com um resumo curto: diga se o projeto está no prazo, em risco ou fora do plano e explique a principal razão. Use as mesmas definições em todos os relatórios; se a equipe usa verde, amarelo e vermelho, combinem o significado de cada cor.",
+              "Um rótulo de status não é evidência. Relacione-o a um marco, a uma premissa que mudou, a uma previsão ou a um bloqueio específico. Se faltarem dados, informe o que ainda não se sabe e quando será verificado, em vez de apresentar uma classificação tranquilizadora como certeza."
+            ]
+          },
+          {
+            "heading": "Mostre o andamento em relação aos marcos",
+            "paragraphs": [
+              "Resuma os resultados mais importantes do período e compare-os com o plano. Em seguida, indique o próximo marco, a data prevista e qualquer dependência que possa afetá-lo. Poucos resultados com datas são mais úteis do que uma lista longa de atividades.",
+              "Inclua métricas apenas quando ajudarem a explicar a situação do projeto. Por exemplo, apresente um indicador de prazo ou orçamento junto da referência e da data. Não informe porcentagens sem dizer o que medem nem trate horas trabalhadas ou tarefas encerradas como prova de que o resultado esperado foi entregue."
+            ]
+          },
+          {
+            "heading": "Transforme riscos, bloqueios e pedidos em ações",
+            "paragraphs": [
+              "Diferencie um risco que pode acontecer de um problema ou bloqueio que já afeta o trabalho. Para cada ponto importante, explique o impacto, indique uma pessoa responsável e defina a próxima medida e o prazo. Se ainda não houver responsável ou data acordados, marque para confirmar em vez de adivinhar.",
+              "Se precisar de uma decisão ou ajuda, deixe explícito o que deve ser decidido, por quem e até quando. Coloque pedidos urgentes perto do resumo para que não fiquem escondidos."
+            ]
+          },
+          {
+            "heading": "Modelo simples de relatório de status do projeto",
+            "paragraphs": [
+              "Copie este roteiro para uma atualização semanal ou mensal e retire os campos que não se aplicam. Mantenha o foco nas decisões, mudanças relevantes e próximos trabalhos."
+            ],
+            "bullets": [
+              "Projeto e data do relatório: [nome] | [data]",
+              "Período e responsável pela preparação: [início–fim] | [nome]",
+              "Status geral e motivo: [no prazo / em risco / fora do plano] | [evidência]",
+              "Andamento no período: [marco ou resultado concluído]",
+              "Próximo marco: [entrega] | [responsável] | [data prevista]",
+              "Riscos ou bloqueios: [impacto] | [responsável] | [próxima ação e prazo]",
+              "Decisão ou ajuda necessária: [pedido] | [quem decide] | [prazo]",
+              "Próxima atualização: [data]"
+            ]
+          },
+          {
+            "heading": "Revise o relatório antes de compartilhar",
+            "paragraphs": [
+              "Antes de enviar, confira nomes, datas, marcos, números e status com o plano atual da equipe. Veja se algum risco já virou um problema, se uma atividade concluída está sendo confundida com uma entrega e se as ações têm responsáveis quando isso foi combinado.",
+              "Compartilhe a versão mais recente em um local fácil de encontrar e mantenha uma frequência consistente. Uma atualização clara pode reduzir reuniões rotineiras de status, mas não substitui uma conversa quando é preciso decidir, escalar um problema ou tratar de um assunto delicado."
+            ]
+          },
+          {
+            "heading": "Uma nota do fundador",
+            "paragraphs": [
+              "Prefiro uma atualização que deixe clara a próxima decisão ou ação. Uma explicação curta ao lado do status é mais útil do que uma cor ou porcentagem isolada."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas simples no navegador para tarefas cotidianas de escrita e planejamento."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Relatório de status do projeto: dicas e modelos",
+            "publisher": "Atlassian",
+            "url": "https://www.atlassian.com/agile/project-management/status-report"
+          },
+          {
+            "title": "Como funcionam os relatórios de status de projetos: 8 etapas e modelo",
+            "publisher": "Asana",
+            "url": "https://asana.com/resources/how-project-status-reports"
+          }
+        ]
       }
     }
   }

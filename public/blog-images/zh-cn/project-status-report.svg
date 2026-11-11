@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">项目状态报告：进展、风险与下一步</title>
+  <desc id="desc">项目更新展示已完成的里程碑、交付风险、负责人和待决事项。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="80" y="66" fill="#69558E" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">项目状态报告</text>
+  <text x="78" y="132" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">让项目进展和下一步一目了然</text>
+  <text x="80" y="170" fill="#647084" font-family="Arial, sans-serif" font-size="22">进度、风险、负责人和行动，集中呈现。</text>
+  <rect x="76" y="204" width="492" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="110" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="2">本期进展</text>
+  <circle cx="124" cy="293" r="12" fill="#E5F0E7"/>
+  <path d="M118 293L123 298L131 288" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="152" y="300" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">原型已通过审核</text>
+  <text x="152" y="329" fill="#647084" font-family="Arial, sans-serif" font-size="20">里程碑完成 · 11月10日</text>
+  <rect x="110" y="354" width="424" height="1" fill="#E8E1F1"/>
+  <text x="110" y="394" fill="#69558E" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="2">下一个里程碑</text>
+  <text x="110" y="434" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">试点上线 · 11月14日</text>
+  <text x="110" y="476" fill="#647084" font-family="Arial, sans-serif" font-size="20">负责人：Morgan</text>
+  <rect x="604" y="204" width="520" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="640" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="2">项目状态概览</text>
+  <rect x="640" y="270" width="132" height="34" rx="17" fill="#FFF0DF"/>
+  <text x="656" y="293" fill="#9A5A18" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1">存在风险</text>
+  <text x="640" y="350" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">供应商交付延期</text>
+  <text x="640" y="381" fill="#647084" font-family="Arial, sans-serif" font-size="20">Morgan · 周三确认交付日期</text>
+  <rect x="640" y="415" width="448" height="74" rx="16" fill="#F0EEF8"/>
+  <text x="664" y="446" fill="#69558E" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1">需要作出决定</text>
+  <text x="664" y="472" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">批准增加一天缓冲时间</text>
+  <text x="80" y="578" fill="#647084" font-family="Arial, sans-serif" font-size="21">进展 / 风险 / 负责人 / 下一步行动</text>
+</svg>

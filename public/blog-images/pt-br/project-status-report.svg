@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Relatório de status do projeto: andamento, riscos e próximos passos</title>
+  <desc id="desc">Uma atualização mostra um marco concluído, um risco de entrega, uma pessoa responsável e uma decisão pendente.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="80" y="66" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">RELATÓRIO DE STATUS DO PROJETO</text>
+  <text x="78" y="132" fill="#172033" font-family="Arial, sans-serif" font-size="40" font-weight="700">Status claro, próximos passos à vista</text>
+  <text x="80" y="170" fill="#647084" font-family="Arial, sans-serif" font-size="20">Entregas, riscos e ações em um só panorama.</text>
+  <rect x="76" y="204" width="492" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="110" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">NESTE PERÍODO</text>
+  <circle cx="124" cy="293" r="12" fill="#E5F0E7"/>
+  <path d="M118 293L123 298L131 288" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="152" y="300" fill="#172033" font-family="Arial, sans-serif" font-size="23" font-weight="700">Protótipo aprovado</text>
+  <text x="152" y="329" fill="#647084" font-family="Arial, sans-serif" font-size="17">Marco concluído · 10 nov</text>
+  <rect x="110" y="354" width="424" height="1" fill="#E8E1F1"/>
+  <text x="110" y="394" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">PRÓXIMO MARCO</text>
+  <text x="110" y="434" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Lançamento piloto · 14 nov</text>
+  <text x="110" y="476" fill="#647084" font-family="Arial, sans-serif" font-size="17">Responsável: Morgan</text>
+  <rect x="604" y="204" width="520" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="640" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">RESUMO DO STATUS</text>
+  <rect x="640" y="270" width="140" height="34" rx="17" fill="#FFF0DF"/>
+  <text x="656" y="293" fill="#9A5A18" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">EM RISCO</text>
+  <text x="640" y="350" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">A entrega do fornecedor atrasou</text>
+  <text x="640" y="381" fill="#647084" font-family="Arial, sans-serif" font-size="17">Morgan · confirmar prazo na qua.</text>
+  <rect x="640" y="415" width="448" height="74" rx="16" fill="#F0EEF8"/>
+  <text x="664" y="446" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">DECISÃO NECESSÁRIA</text>
+  <text x="664" y="472" fill="#172033" font-family="Arial, sans-serif" font-size="18" font-weight="700">Aprovar um dia extra no cronograma</text>
+  <text x="80" y="578" fill="#647084" font-family="Arial, sans-serif" font-size="20">ANDAMENTO / RISCOS / RESPONSÁVEIS / AÇÕES</text>
+</svg>

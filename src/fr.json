@@ -3186,6 +3186,98 @@
             "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
           }
         ]
+      },
+      "how-to-write-project-status-report": {
+        "modified": "2026-11-11",
+        "image": "blog-images/project-status-report.svg",
+        "imageAlt": "Un rapport présente l’état actuel du projet, un risque de livraison, un responsable et la prochaine action.",
+        "title": "Comment rédiger un rapport d’avancement de projet (avec un modèle simple) | TextToools",
+        "description": "Rédigez un rapport clair avec un résumé, l’avancement des jalons, les risques, les responsables et les prochaines étapes.",
+        "summary": "Un bon rapport d’avancement donne une vue datée de la situation du projet, des changements, des risques pour le plan et des prochaines actions.",
+        "sections": [
+          {
+            "heading": "Ce qu’un rapport d’avancement doit expliquer",
+            "paragraphs": [
+              "Un rapport d’avancement est un aperçu concis de la santé du projet à un moment donné. Il permet à l’équipe et aux parties prenantes de voir ce qui se déroule comme prévu, ce qui a changé, ce qui peut retarder le travail et ce qui demande de l’attention.",
+              "Il peut mentionner les réalisations récentes, mais ce n’est ni le compte rendu d’une réunion ni la liste de toutes les tâches. Il sert à rendre la situation compréhensible et à faciliter les décisions sans devoir rechercher des informations dans plusieurs messages."
+            ]
+          },
+          {
+            "heading": "Définissez le public et la période",
+            "paragraphs": [
+              "Commencez par les personnes qui utiliseront la mise à jour. L’équipe peut avoir besoin des blocages et dépendances précis ; le sponsor peut avoir besoin des jalons, des changements de calendrier ou de budget et des décisions qui nécessitent son aide. Conservez une source commune et adaptez le niveau de détail à chaque public.",
+              "Choisissez une période et une fréquence régulière adaptées au rythme du projet et aux besoins des parties prenantes. Un suivi hebdomadaire convient à de nombreux projets actifs ; un projet plus long ou stable peut nécessiter des mises à jour moins fréquentes. Indiquez le nom du projet, la période couverte et la date du rapport."
+            ]
+          },
+          {
+            "heading": "Commencez par l’état général et sa raison",
+            "paragraphs": [
+              "Ouvrez par un résumé bref : précisez si le projet est dans les temps, à risque ou en retard, puis donnez la raison principale. Gardez les mêmes définitions d’un rapport à l’autre ; si vous utilisez le vert, le jaune et le rouge, convenez de la signification de chaque couleur.",
+              "Une étiquette n’est pas une preuve. Reliez-la à un jalon, à une hypothèse qui a changé, à une prévision ou à un blocage précis. Si des informations manquent, dites ce qui reste à confirmer et quand vous le vérifierez au lieu de présenter une étiquette rassurante comme une certitude."
+            ]
+          },
+          {
+            "heading": "Présentez l’avancement par rapport aux jalons",
+            "paragraphs": [
+              "Résumez les résultats les plus importants de la période et comparez-les au plan. Indiquez ensuite le prochain jalon, sa date cible et les dépendances susceptibles de l’affecter. Quelques résultats datés sont plus utiles qu’une longue liste d’activités.",
+              "N’incluez des indicateurs que s’ils aident à expliquer l’état du projet. Par exemple, associez une mesure de calendrier ou de budget à sa référence et à la date du rapport. Ne donnez pas de pourcentage sans expliquer ce qu’il mesure et ne confondez pas heures travaillées ou tâches clôturées avec résultat livré."
+            ]
+          },
+          {
+            "heading": "Transformez risques, blocages et demandes en actions",
+            "paragraphs": [
+              "Distinguez un risque susceptible de se produire d’un problème ou blocage qui affecte déjà le travail. Pour chaque point important, expliquez l’impact, désignez un responsable et précisez la prochaine mesure ainsi que sa date cible. Si personne n’a accepté la responsabilité ou si aucune date n’est convenue, indiquez qu’il faut le confirmer plutôt que de deviner.",
+              "Si vous avez besoin d’une décision ou d’une aide, formulez la demande explicitement : que faut-il décider, par qui et pour quand ? Placez les demandes urgentes près du résumé afin qu’elles ne soient pas enfouies."
+            ]
+          },
+          {
+            "heading": "Modèle simple de rapport d’avancement",
+            "paragraphs": [
+              "Reprenez cette trame pour une mise à jour hebdomadaire ou mensuelle et supprimez les champs inutiles. Concentrez-vous sur les décisions, les changements importants et les travaux à venir."
+            ],
+            "bullets": [
+              "Projet et date du rapport : [nom] | [date]",
+              "Période et rédaction : [début–fin] | [nom]",
+              "État général et raison : [dans les temps / à risque / en retard] | [élément vérifiable]",
+              "Avancement de la période : [jalon ou résultat terminé]",
+              "Prochain jalon : [livrable] | [responsable] | [date cible]",
+              "Risques ou blocages : [impact] | [responsable] | [prochaine action et date]",
+              "Décision ou aide nécessaire : [demande] | [décideur] | [date limite]",
+              "Prochaine mise à jour : [date]"
+            ]
+          },
+          {
+            "heading": "Vérifiez le rapport avant de le partager",
+            "paragraphs": [
+              "Avant l’envoi, vérifiez les noms, dates, jalons, chiffres et états par rapport au plan actuel de l’équipe. Assurez-vous qu’un risque ne soit pas devenu un problème sans être signalé, qu’une activité terminée ne soit pas présentée comme un résultat livré et que chaque prochaine étape ait un responsable lorsque cela a été convenu.",
+              "Partagez la dernière version dans un endroit facile à trouver et gardez un rythme régulier. Une mise à jour claire peut réduire les réunions de suivi routinières, mais elle ne remplace pas une discussion lorsqu’une décision, une escalade ou un sujet sensible l’exige."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je trouve une mise à jour plus facile à utiliser lorsqu’elle rend évidente la prochaine décision ou action. Une brève explication à côté de l’état du projet est plus utile qu’une couleur ou un pourcentage isolé."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Rédigé par le fondateur de TextToools. Je crée des outils simples dans le navigateur pour les tâches quotidiennes d’écriture et d’organisation."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Rapport d’avancement de projet : conseils et modèles",
+            "publisher": "Atlassian",
+            "url": "https://www.atlassian.com/agile/project-management/status-report"
+          },
+          {
+            "title": "Comment fonctionnent les rapports d’avancement de projet : 8 étapes et un modèle",
+            "publisher": "Asana",
+            "url": "https://asana.com/resources/how-project-status-reports"
+          }
+        ]
       }
     }
   }

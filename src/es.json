@@ -2560,6 +2560,98 @@
             "url": "https://www.staffnet.manchester.ac.uk/governance/handbook/minutes-actions/"
           }
         ]
+      },
+      "how-to-write-project-status-report": {
+        "modified": "2026-11-11",
+        "image": "blog-images/es/project-status-report.svg",
+        "imageAlt": "Un informe de proyecto muestra el estado actual, un riesgo de entrega, una persona responsable y el siguiente paso.",
+        "title": "Cómo redactar un informe de estado de proyecto: plantilla sencilla | TextToools",
+        "description": "Prepara un informe claro con un resumen breve, avances de hitos, riesgos, responsables y próximos pasos concretos.",
+        "summary": "Un buen informe de estado ofrece una fotografía fechada del proyecto: dónde está, qué ha cambiado, qué puede afectar al plan y qué debe ocurrir después.",
+        "sections": [
+          {
+            "heading": "Qué explica un informe de estado de proyecto",
+            "paragraphs": [
+              "Un informe de estado es una fotografía concisa de la salud del proyecto en un momento determinado. Ayuda al equipo y a las partes interesadas a ver qué va según lo previsto, qué ha cambiado, qué puede retrasar el trabajo y qué requiere atención.",
+              "Puede incluir logros recientes, pero no es una transcripción de una reunión ni una lista de todas las tareas. Su objetivo es explicar la situación actual y facilitar decisiones sin tener que buscar entre muchos mensajes."
+            ]
+          },
+          {
+            "heading": "Elige a quién va dirigido y el periodo",
+            "paragraphs": [
+              "Empieza por las personas que utilizarán la actualización. El equipo puede necesitar bloqueos y dependencias concretos; la persona patrocinadora puede necesitar hitos, cambios de calendario o presupuesto y decisiones en las que pueda ayudar. Conserva una fuente común y ajusta el nivel de detalle a cada audiencia.",
+              "Define un periodo y una frecuencia previsible según el ritmo del proyecto y las necesidades de quienes lo siguen. Muchos proyectos activos funcionan con actualizaciones semanales; otros más largos o estables pueden necesitar menos. Indica el nombre del proyecto, las fechas cubiertas y la fecha del informe para que se sepa cuán recientes son los datos."
+            ]
+          },
+          {
+            "heading": "Empieza con el estado general y su motivo",
+            "paragraphs": [
+              "Abre con un resumen breve: indica si el proyecto va según lo previsto, está en riesgo o se ha desviado, y explica el motivo principal. Mantén las mismas definiciones en cada informe; si usas verde, amarillo y rojo, acuerda qué significa cada color.",
+              "Una etiqueta no es una prueba. Relaciónala con un hito, un supuesto que haya cambiado, una previsión o un bloqueo concreto. Si faltan datos, di qué se desconoce y cuándo lo comprobarás en vez de presentar una etiqueta tranquilizadora como si fuera segura."
+            ]
+          },
+          {
+            "heading": "Muestra los avances frente a los hitos",
+            "paragraphs": [
+              "Resume los resultados más importantes del periodo y compáralos con el plan. Después indica el siguiente hito, su fecha objetivo y las dependencias que podrían afectarlo. Unos pocos resultados fechados son más útiles que una larga lista de actividad.",
+              "Incluye métricas solo si ayudan a explicar la salud del proyecto. Por ejemplo, acompaña una cifra de plazo o presupuesto con su referencia y fecha. No publiques porcentajes sin explicar qué miden ni presentes horas trabajadas o tareas cerradas como prueba de que el resultado esperado ya está entregado."
+            ]
+          },
+          {
+            "heading": "Convierte los riesgos, bloqueos y solicitudes en acciones",
+            "paragraphs": [
+              "Distingue un riesgo que podría ocurrir de un problema o bloqueo que ya está afectando al trabajo. Para cada asunto importante, explica el impacto, indica quién lo atenderá y concreta la medida siguiente y su fecha. Si aún no hay responsable o plazo acordado, márcalo para confirmar en vez de adivinar.",
+              "Si necesitas una decisión o ayuda, formula la solicitud con claridad: qué hay que decidir, quién debe hacerlo y para cuándo. Coloca las peticiones urgentes cerca del resumen para que no queden ocultas."
+            ]
+          },
+          {
+            "heading": "Plantilla sencilla para un informe de estado",
+            "paragraphs": [
+              "Copia este esquema para una actualización semanal o mensual y elimina los campos que no correspondan. Céntrate en las decisiones, los cambios relevantes y el trabajo que viene."
+            ],
+            "bullets": [
+              "Proyecto y fecha del informe: [nombre] | [fecha]",
+              "Periodo y persona responsable: [inicio–fin] | [nombre]",
+              "Estado general y motivo: [según lo previsto / en riesgo / desviado] | [evidencia]",
+              "Avances del periodo: [hito o resultado completado]",
+              "Siguiente hito: [entregable] | [responsable] | [fecha objetivo]",
+              "Riesgos o bloqueos: [impacto] | [responsable] | [siguiente medida y fecha]",
+              "Decisión o ayuda necesaria: [solicitud] | [persona que decide] | [fecha límite]",
+              "Próxima actualización: [fecha]"
+            ]
+          },
+          {
+            "heading": "Revisa el informe antes de compartirlo",
+            "paragraphs": [
+              "Antes de enviarlo, comprueba nombres, fechas, hitos, cifras y estado con el plan actual del equipo. Verifica que un riesgo no se haya convertido silenciosamente en un problema, que una actividad terminada no aparezca como resultado entregado y que cada acción tenga responsable cuando ya se haya acordado.",
+              "Comparte la versión más reciente en un lugar fácil de encontrar y mantén una frecuencia constante. Una actualización clara puede reducir reuniones rutinarias, pero no sustituye una conversación cuando hace falta decidir, escalar un problema o tratar un asunto delicado."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Me resulta más fácil actuar sobre una actualización cuando deja claro cuál es la siguiente decisión o acción. Una breve explicación junto al estado aporta más que un color o un porcentaje por sí solos."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas sencillas en el navegador para tareas cotidianas de escritura y planificación."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Informe de estado del proyecto: consejos y plantillas",
+            "publisher": "Atlassian",
+            "url": "https://www.atlassian.com/agile/project-management/status-report"
+          },
+          {
+            "title": "Cómo funcionan los informes de estado de proyectos: 8 pasos y plantilla",
+            "publisher": "Asana",
+            "url": "https://asana.com/resources/how-project-status-reports"
+          }
+        ]
       }
     }
   }
