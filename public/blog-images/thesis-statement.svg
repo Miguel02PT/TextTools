@@ -30,4 +30,6 @@
   <rect x="916" y="406" width="142" height="9" rx="4.5" fill="#E1DDE7"/>
   <circle cx="1052" cy="194" r="26" fill="#E5F0E7"/>
   <path d="M1041 194L1049 202L1064 185" stroke="#3C7450" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="78" y="76" fill="#172033" font-family="Arial, sans-serif" font-size="42" font-weight="700">Turn a topic into a clear thesis</text>
+  <text x="80" y="586" fill="#647084" font-family="Arial, sans-serif" font-size="24">A focused claim, backed by related reasons.</text>
 </svg>

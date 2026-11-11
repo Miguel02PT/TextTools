@@ -647,6 +647,64 @@ test('every English article has localized Chinese, Spanish, and Portuguese image
   }
 })
 
+test('recent blog illustrations have prominent localized headlines', () => {
+  const englishPosts = [
+    ['how-to-paraphrase-sources', 'Understand, rephrase, and cite'],
+    ['how-to-write-a-thesis-statement', 'Turn a topic into a clear thesis'],
+    ['how-to-write-meeting-minutes', 'Meeting minutes: decisions and actions'],
+  ]
+  const localizedHeadlines = [
+    [
+      parsedSpanishContent.blog.posts['how-to-paraphrase-sources'].image,
+      'Comprende, reformula y cita',
+    ],
+    [
+      parsedSpanishContent.blog.posts['how-to-write-a-thesis-statement'].image,
+      'De tema amplio a tesis clara',
+    ],
+    [
+      parsedSpanishContent.blog.posts['how-to-write-meeting-minutes'].image,
+      'Actas: acuerdos y tareas claras',
+    ],
+    [
+      parsedPortugueseContent.blog.posts['how-to-paraphrase-sources'].image,
+      'Entenda, reformule e cite',
+    ],
+    [
+      parsedPortugueseContent.blog.posts['how-to-write-a-thesis-statement'].image,
+      'De tema amplo a tese clara',
+    ],
+    [
+      parsedPortugueseContent.blog.posts['how-to-write-meeting-minutes'].image,
+      'Atas de reunião: decisões e tarefas',
+    ],
+    [
+      parsedChineseContent.blog.posts['how-to-paraphrase-sources'].image,
+      '理解原意，改写并注明来源',
+    ],
+    [
+      parsedChineseContent.blog.posts['how-to-write-a-thesis-statement'].image,
+      '把宽泛主题变成清晰论点',
+    ],
+    [
+      parsedChineseContent.blog.posts['how-to-write-meeting-minutes'].image,
+      '会议纪要：记录决议与行动',
+    ],
+  ]
+
+  for (const [slug, headline] of englishPosts) {
+    const post = parsedEnglishBlogPosts.find((candidate) => candidate.slug === slug)
+    assert.ok(post, `${slug} exists`)
+    const svg = readFileSync(new URL(`../public/${post.image}`, import.meta.url), 'utf8')
+    assert.ok(svg.includes(headline), `${post.image} displays its headline`)
+  }
+
+  for (const [image, headline] of localizedHeadlines) {
+    const svg = readFileSync(new URL(`../public/${image}`, import.meta.url), 'utf8')
+    assert.ok(svg.includes(headline), `${image} displays its localized headline`)
+  }
+})
+
 test('find-and-replace guide is sourced and has localized author notes', () => {
   const posts = [
     {
