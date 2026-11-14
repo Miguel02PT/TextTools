@@ -3278,6 +3278,94 @@
             "url": "https://asana.com/resources/how-project-status-reports"
           }
         ]
+      },
+      "how-to-write-out-of-office-message": {
+        "modified": "2026-11-14",
+        "image": "blog-images/out-of-office-message.svg",
+        "imageAlt": "Un message d’absence automatique indique les dates, le jour de retour et un contact de remplacement.",
+        "title": "Comment rédiger un message d’absence du bureau (avec des exemples) | TextToools",
+        "description": "Rédigez une réponse d’absence avec des dates claires, un contact de remplacement, des attentes réalistes et moins de détails personnels.",
+        "summary": "Un bon message d’absence indique quand vous ne serez pas disponible, quand vous prévoyez de revenir et qui contacter en cas d’urgence, sans révéler d’informations inutiles.",
+        "sections": [
+          {
+            "heading": "Le rôle d’un message d’absence",
+            "paragraphs": [
+              "Un message d’absence est une courte réponse automatique qui informe vos correspondants pendant que vous ne pouvez pas répondre. Ils doivent savoir que vous êtes indisponible, quand vous pensez revenir et quoi faire si leur demande ne peut pas attendre.",
+              "Il n’est pas nécessaire d’expliquer vos projets personnels ni de répéter toute votre signature. Quelques renseignements utiles sont plus faciles à lire et limitent les informations communiquées à des personnes qui n’en ont pas besoin."
+            ]
+          },
+          {
+            "heading": "Indiquez les dates et un délai réaliste",
+            "paragraphs": [
+              "Précisez la période d’absence ou une date de retour claire. Si vous ne connaissez pas encore la date exacte, indiquez quand vous pensez consulter de nouveau vos messages au lieu de promettre un délai de réponse. Écrivez le mois en toutes lettres si vos destinataires peuvent se trouver dans d’autres régions afin d’éviter toute ambiguïté.",
+              "Si vous ne consulterez vos courriels qu’occasionnellement, dites-le clairement. Ne laissez pas entendre que quelqu’un surveille votre boîte de réception si ce n’est pas prévu. En l’absence de relais, vous pouvez simplement préciser que vous répondrez à votre retour."
+            ]
+          },
+          {
+            "heading": "Ne désignez un contact de remplacement que s’il est disponible",
+            "paragraphs": [
+              "Pour les demandes urgentes, indiquez un collègue, une adresse d’équipe ou un service d’assistance qui a accepté de les traiter. Communiquez uniquement les coordonnées et le type de demandes que cette personne ou équipe a approuvés.",
+              "S’il n’y a personne pour vous remplacer, n’inventez pas de contact. Orientez les correspondants vers un canal d’assistance existant seulement s’il convient à leur demande, ou précisez que vous répondrez aux messages non urgents à votre retour."
+            ]
+          },
+          {
+            "heading": "Restez professionnel et protégez votre vie privée",
+            "paragraphs": [
+              "Une phrase comme « je suis absent du bureau » suffit généralement ; vous n’avez pas à expliquer pourquoi. Évitez les projets de voyage, les coordonnées personnelles, les informations de compte et les détails sensibles dans une réponse automatique qui peut parvenir à des personnes extérieures à votre organisation.",
+              "Si votre messagerie permet de rédiger des réponses différentes pour les personnes internes et externes, utilisez cette option lorsqu’elle permet de communiquer des consignes utiles à vos collègues sans les divulguer à l’extérieur. Vérifiez la politique de votre organisation avant d’inclure des informations confidentielles sur l’équipe ou les clients."
+            ]
+          },
+          {
+            "heading": "Choisissez un objet et un ton explicites",
+            "paragraphs": [
+              "Utilisez un objet qui identifie facilement la réponse automatique, par exemple « Absence : retour le [date] ». Adoptez un ton courtois et direct. Une plaisanterie ou une longue explication peut dérouter une personne qui veut simplement savoir si elle doit contacter quelqu’un d’autre.",
+              "Rédigez le message pour une personne qui ne vous a jamais écrit. Ne supposez pas qu’elle connaît un échange précédent ou les rôles dans votre équipe."
+            ]
+          },
+          {
+            "heading": "Exemples de messages d’absence",
+            "paragraphs": [
+              "Adaptez l’un de ces exemples à vos dates et aux modalités de remplacement réellement prévues. Remplacez chaque champ entre crochets et supprimez toute phrase qui ne correspond pas à votre situation."
+            ],
+            "bullets": [
+              "Standard : « Merci pour votre message. Je suis absent du bureau jusqu’au [date de retour] et vous répondrai à mon retour. »",
+              "Avec relais : « Je suis absent jusqu’au [date]. Pour [type de demande urgente], contactez [nom ou équipe] à [coordonnées approuvées]. Je répondrai aux autres messages à mon retour. »",
+              "Accès limité aux courriels : « Je suis absent jusqu’au [date] et consulterai peut-être mes courriels de temps à autre. Pour une urgence, contactez [nom ou équipe] à [coordonnées approuvées]. »",
+              "Retour non confirmé : « Je suis actuellement absent et pense consulter de nouveau mes messages vers le [date]. Pour [demande urgente], contactez [équipe ou service d’assistance approuvé]. »"
+            ]
+          },
+          {
+            "heading": "Programmez et vérifiez la réponse automatique",
+            "paragraphs": [
+              "Définissez une date ou une heure de début et de fin dans votre messagerie lorsque cette option existe. Vérifiez qui recevra la réponse : certains services permettent de la limiter aux contacts ou de distinguer les collègues des personnes extérieures, et le comportement varie selon le produit et le type de compte.",
+              "Avant votre départ, relisez l’objet, les dates, l’orthographe, le contact de remplacement et la signature. Vérifiez que la programmation est activée et que le message ne promet pas une présence qui n’existe pas. À votre retour, assurez-vous que la réponse automatique a bien pris fin."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je préfère un message d’absence qui répond rapidement à trois questions : quand je reviens, qui peut aider plus tôt et ce qui peut attendre. Si l’un de ces détails est incertain, mieux vaut le préciser que promettre quelque chose que je ne pourrai peut-être pas tenir."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Rédigé par le fondateur de TextToools. Je crée des outils simples dans le navigateur pour les tâches quotidiennes d’écriture et d’organisation."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Envoyer une réponse automatique en cas d’absence",
+            "publisher": "Aide Gmail de Google",
+            "url": "https://support.google.com/mail/answer/25922?hl=en"
+          },
+          {
+            "title": "Configurer les réponses automatiques d’absence dans Outlook",
+            "publisher": "Support Microsoft",
+            "url": "https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook"
+          }
+        ]
       }
     }
   }

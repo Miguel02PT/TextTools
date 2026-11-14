@@ -2652,6 +2652,94 @@
             "url": "https://asana.com/resources/how-project-status-reports"
           }
         ]
+      },
+      "how-to-write-out-of-office-message": {
+        "modified": "2026-11-14",
+        "image": "blog-images/es/out-of-office-message.svg",
+        "imageAlt": "Un mensaje automático de ausencia indica las fechas, el día de regreso y un contacto alternativo.",
+        "title": "Cómo redactar un mensaje de ausencia del trabajo (con ejemplos) | TextToools",
+        "description": "Redacta una respuesta de ausencia con fechas claras, un contacto alternativo, expectativas realistas y menos datos personales.",
+        "summary": "Un buen mensaje de ausencia dice cuándo no estás disponible, cuándo volverás y a quién acudir si algo es urgente, sin compartir información innecesaria.",
+        "sections": [
+          {
+            "heading": "Qué debe conseguir un mensaje de ausencia",
+            "paragraphs": [
+              "Un mensaje de ausencia es una respuesta automática breve que explica qué pueden esperar las personas mientras no puedes responder. El lector debe saber que no estás disponible, cuándo esperas volver y qué hacer si su solicitud no puede esperar.",
+              "No hace falta explicar tus planes personales ni repetir toda la firma del correo. Unos pocos datos útiles son más fáciles de leer y reducen la información que compartes con quien no la necesita."
+            ]
+          },
+          {
+            "heading": "Incluye fechas y expectativas realistas",
+            "paragraphs": [
+              "Indica el periodo de ausencia o una fecha clara de regreso. Si no sabes exactamente cuándo volverás, explica cuándo esperas volver a revisar los mensajes en lugar de prometer una hora de respuesta. Escribe el mes con letras si tus destinatarios pueden estar en otras regiones para evitar confusiones.",
+              "Si solo consultarás el correo de vez en cuando, dilo claramente. No des a entender que alguien vigila tu bandeja de entrada si no es cierto. Si nadie cubrirá tu trabajo, puedes indicar que responderás cuando vuelvas."
+            ]
+          },
+          {
+            "heading": "Indica un contacto alternativo solo si hay cobertura",
+            "paragraphs": [
+              "Para asuntos urgentes, ofrece una persona del equipo, un buzón compartido o un servicio de soporte que haya aceptado atenderlos. Incluye únicamente los datos y el tipo de solicitudes que esa persona o equipo haya aprobado.",
+              "Si no hay nadie de cobertura, no inventes un contacto. Recomienda un canal de soporte existente solo si es adecuado para esa solicitud, o explica que responderás a los mensajes no urgentes al volver."
+            ]
+          },
+          {
+            "heading": "Mantén un tono profesional y protege tu privacidad",
+            "paragraphs": [
+              "Suele bastar con decir «estaré fuera de la oficina»; no tienes que explicar el motivo. Evita compartir planes de viaje, datos personales de contacto, información de cuentas u otros detalles sensibles en una respuesta automática que podría llegar fuera de tu organización.",
+              "Si tu servicio de correo permite redactar respuestas distintas para personas internas y externas, úsalo cuando te ayude a dar instrucciones internas útiles sin revelar datos fuera de la empresa. Consulta las normas de tu organización antes de incluir información confidencial de clientes o del equipo."
+            ]
+          },
+          {
+            "heading": "Elige un asunto y un tono claros",
+            "paragraphs": [
+              "Usa un asunto que permita reconocer la respuesta automática, por ejemplo, «Ausente: vuelvo el [fecha]». Mantén un tono amable y directo. Las bromas o las explicaciones largas pueden confundir a quien solo necesita saber si debe contactar con otra persona.",
+              "Redacta el mensaje para alguien que nunca te haya escrito. No des por sentado que conoce conversaciones anteriores ni las funciones de tu equipo."
+            ]
+          },
+          {
+            "heading": "Ejemplos de mensajes de ausencia",
+            "paragraphs": [
+              "Adapta un ejemplo a tus fechas y a la cobertura real. Sustituye todos los campos entre corchetes y elimina cualquier frase que no sea cierta en tu caso."
+            ],
+            "bullets": [
+              "Estándar: «Gracias por tu mensaje. Estaré fuera de la oficina hasta el [fecha de regreso] y responderé cuando vuelva».",
+              "Con cobertura: «Estaré fuera hasta el [fecha]. Para [tipo de asunto urgente], contacta con [nombre o equipo] en [datos de contacto autorizados]. Responderé a los demás mensajes cuando vuelva».",
+              "Acceso limitado al correo: «Estaré fuera hasta el [fecha] y puede que consulte el correo de forma ocasional. Si es urgente, contacta con [nombre o equipo] en [datos autorizados]».",
+              "Sin fecha de regreso confirmada: «Estoy ausente y espero volver a consultar mis mensajes alrededor del [fecha]. Para [asunto urgente], contacta con [equipo o servicio de soporte autorizado]»."
+            ]
+          },
+          {
+            "heading": "Programa y comprueba la respuesta automática",
+            "paragraphs": [
+              "Configura una fecha u hora de inicio y finalización en tu servicio de correo cuando esté disponible. Comprueba quién recibirá la respuesta: algunos servicios permiten limitarla a tus contactos o distinguir entre compañeros y personas externas, y el funcionamiento depende del producto y del tipo de cuenta.",
+              "Antes de ausentarte, revisa el asunto, las fechas, la ortografía, el contacto alternativo y la firma. Confirma que la programación esté activada y que el mensaje no prometa una cobertura inexistente. Al volver, comprueba que la respuesta automática haya terminado."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Prefiero un mensaje de ausencia que responda rápido a tres preguntas: cuándo vuelvo, quién puede ayudar antes y qué puede esperar. Si desconozco algún dato, es más claro decirlo que prometer algo que quizá no pueda cumplir."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas sencillas en el navegador para tareas cotidianas de escritura y planificación."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Enviar una respuesta automática cuando estás fuera de la oficina",
+            "publisher": "Ayuda de Gmail de Google",
+            "url": "https://support.google.com/mail/answer/25922?hl=en"
+          },
+          {
+            "title": "Cómo configurar respuestas automáticas por ausencia en Outlook",
+            "publisher": "Soporte técnico de Microsoft",
+            "url": "https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook"
+          }
+        ]
       }
     }
   }

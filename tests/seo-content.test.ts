@@ -46,6 +46,9 @@ const meetingMinutesPost = parsedEnglishBlogPosts.find(
 const projectStatusReportPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-project-status-report',
 )
+const outOfOfficeMessagePost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-out-of-office-message',
+)
 const thesisStatementPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-a-thesis-statement',
 )
@@ -207,6 +210,75 @@ test('project status report guide is distinct, actionable, and complete in all l
     parsedSpanishContent.blog.posts['how-to-write-project-status-report'],
     parsedPortugueseContent.blog.posts['how-to-write-project-status-report'],
     parsedChineseContent.blog.posts['how-to-write-project-status-report'],
+  ]) {
+    const svgPath = new URL(`../public/${localizedPost.image}`, import.meta.url)
+    const pngPath = new URL(
+      `../public/${localizedPost.image.replace(/\.svg$/i, '.png')}`,
+      import.meta.url,
+    )
+    assert.ok(existsSync(svgPath), `${localizedPost.image} exists`)
+    assert.ok(existsSync(pngPath), `${localizedPost.image} has a social preview`)
+    const png = readFileSync(pngPath)
+    assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
+    assert.equal(png.readUInt32BE(16), 1200)
+    assert.equal(png.readUInt32BE(20), 630)
+  }
+})
+
+test('out-of-office message guide is distinct, privacy-aware, and complete in all locales', () => {
+  const localizedPosts = [
+    outOfOfficeMessagePost,
+    parsedSpanishContent.blog.posts['how-to-write-out-of-office-message'],
+    parsedPortugueseContent.blog.posts['how-to-write-out-of-office-message'],
+    parsedFrenchContent.blog.posts['how-to-write-out-of-office-message'],
+    parsedChineseContent.blog.posts['how-to-write-out-of-office-message'],
+  ]
+  const sourceUrls = [
+    'https://support.google.com/mail/answer/25922?hl=en',
+    'https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook',
+  ].sort()
+
+  assert.ok(outOfOfficeMessagePost)
+  assert.equal(outOfOfficeMessagePost.published, '2026-11-14')
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'how-to-write-out-of-office-message',
+    ).length,
+    1,
+  )
+  assert.match(outOfOfficeMessagePost.title, /out-of-office message/i)
+  assert.doesNotMatch(
+    outOfOfficeMessagePost.title,
+    /email word count|meeting minutes|project status report/i,
+  )
+  assert.equal(outOfOfficeMessagePost.sections.length, 9)
+  assert.equal(outOfOfficeMessagePost.sections[5].bullets.length, 4)
+  assert.match(outOfOfficeMessagePost.sections[2].paragraphs.join(' '), /if there is no cover, do not invent one/i)
+  assert.match(outOfOfficeMessagePost.sections[3].paragraphs.join(' '), /privacy|sensitive details/i)
+  assert.match(outOfOfficeMessagePost.sections[6].paragraphs.join(' '), /start and end date/i)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, outOfOfficeMessagePost.sections.length)
+    assert.equal(post.sections[5].bullets.length, 4)
+    assert.ok(post.sections.at(-1).heading)
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+  }
+
+  assert.equal(
+    parsedFrenchContent.blog.posts['how-to-write-out-of-office-message'].image,
+    outOfOfficeMessagePost.image,
+  )
+  for (const localizedPost of [
+    outOfOfficeMessagePost,
+    parsedSpanishContent.blog.posts['how-to-write-out-of-office-message'],
+    parsedPortugueseContent.blog.posts['how-to-write-out-of-office-message'],
+    parsedChineseContent.blog.posts['how-to-write-out-of-office-message'],
   ]) {
     const svgPath = new URL(`../public/${localizedPost.image}`, import.meta.url)
     const pngPath = new URL(
@@ -724,6 +796,7 @@ test('recent blog illustrations have prominent localized headlines', () => {
     ['how-to-write-a-thesis-statement', 'Turn a topic into a clear thesis'],
     ['how-to-write-meeting-minutes', 'Meeting minutes: decisions and actions'],
     ['how-to-write-project-status-report', 'Project updates that move work forward'],
+    ['how-to-write-out-of-office-message', 'A helpful reply while you’re away'],
   ]
   const localizedHeadlines = [
     [
@@ -743,6 +816,10 @@ test('recent blog illustrations have prominent localized headlines', () => {
       'Actualizaciones que impulsan el trabajo',
     ],
     [
+      parsedSpanishContent.blog.posts['how-to-write-out-of-office-message'].image,
+      'Una respuesta útil mientras no estás',
+    ],
+    [
       parsedPortugueseContent.blog.posts['how-to-paraphrase-sources'].image,
       'Entenda, reformule e cite',
     ],
@@ -759,6 +836,10 @@ test('recent blog illustrations have prominent localized headlines', () => {
       'Status claro, próximos passos à vista',
     ],
     [
+      parsedPortugueseContent.blog.posts['how-to-write-out-of-office-message'].image,
+      'Uma resposta útil enquanto você está fora',
+    ],
+    [
       parsedChineseContent.blog.posts['how-to-paraphrase-sources'].image,
       '理解原意，改写并注明来源',
     ],
@@ -773,6 +854,10 @@ test('recent blog illustrations have prominent localized headlines', () => {
     [
       parsedChineseContent.blog.posts['how-to-write-project-status-report'].image,
       '让项目进展和下一步一目了然',
+    ],
+    [
+      parsedChineseContent.blog.posts['how-to-write-out-of-office-message'].image,
+      '离开时，也能给出清晰回复',
     ],
   ]
 

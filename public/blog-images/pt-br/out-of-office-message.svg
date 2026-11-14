@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Mensagem de ausência: datas claras e resposta útil</title>
+  <desc id="desc">Uma resposta automática informa a data de retorno, um contato para urgências e quando haverá resposta.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="80" y="66" fill="#69558E" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">MENSAGEM DE AUSÊNCIA</text>
+  <text x="78" y="132" fill="#172033" font-family="Arial, sans-serif" font-size="42" font-weight="700">Uma resposta útil enquanto você está fora</text>
+  <text x="80" y="170" fill="#647084" font-family="Arial, sans-serif" font-size="20">Datas claras. O contato certo. Sem detalhes pessoais extras.</text>
+  <rect x="76" y="204" width="540" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="112" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">RESPOSTA AUTOMÁTICA</text>
+  <rect x="108" y="270" width="476" height="216" rx="18" fill="#F7F5FA"/>
+  <text x="138" y="315" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Obrigado pela mensagem.</text>
+  <text x="138" y="350" fill="#647084" font-family="Arial, sans-serif" font-size="18">Estarei ausente até [data].</text>
+  <rect x="138" y="372" width="414" height="1" fill="#E1DDE7"/>
+  <text x="138" y="410" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">É URGENTE? FALE COM</text>
+  <text x="138" y="447" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">[Pessoa ou equipe] · [contato]</text>
+  <text x="138" y="472" fill="#647084" font-family="Arial, sans-serif" font-size="16">Responderei às demais ao voltar.</text>
+  <rect x="652" y="204" width="472" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="688" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UMA BOA RESPOSTA INCLUI</text>
+  <circle cx="704" cy="300" r="13" fill="#E5F0E7"/>
+  <path d="M698 300L703 305L711 295" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="307" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Quando você volta</text>
+  <circle cx="704" cy="360" r="13" fill="#E5F0E7"/>
+  <path d="M698 360L703 365L711 355" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="367" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Quem pode ajudar antes</text>
+  <circle cx="704" cy="420" r="13" fill="#E5F0E7"/>
+  <path d="M698 420L703 425L711 415" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="427" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">O que pode esperar</text>
+  <rect x="688" y="459" width="392" height="40" rx="20" fill="#F0EEF8"/>
+  <text x="708" y="485" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">COMPARTILHE SÓ O NECESSÁRIO</text>
+  <text x="80" y="578" fill="#647084" font-family="Arial, sans-serif" font-size="20">DATAS / COBERTURA / PRIVACIDADE</text>
+</svg>
