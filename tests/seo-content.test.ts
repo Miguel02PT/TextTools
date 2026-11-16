@@ -605,6 +605,13 @@ test('content security policy permits Cloudflare Web Analytics', () => {
   assert.match(responseHeaders, /connect-src[^;\n]*https:\/\/cloudflareinsights\.com/)
 })
 
+test('fingerprinted assets use long-lived immutable browser caching', () => {
+  assert.match(
+    responseHeaders,
+    /^\/assets\/\*\r?\n\s+Cache-Control: public, max-age=31556952, immutable$/m,
+  )
+})
+
 test('blog SEO metadata emits escaped Open Graph and Twitter image previews', () => {
   const html = createSeoMetadata({
     title: 'A guide',
