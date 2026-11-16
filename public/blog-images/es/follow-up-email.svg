@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Haz seguimiento sin presionar</title>
+  <desc id="desc">Un correo breve retoma un mensaje anterior, formula una petición concreta y deja espacio para responder.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="80" y="66" fill="#69558E" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">CORREO CLARO Y CORDIAL</text>
+  <text x="78" y="132" fill="#172033" font-family="Arial, sans-serif" font-size="46" font-weight="700">Haz seguimiento sin presionar</text>
+  <text x="80" y="170" fill="#647084" font-family="Arial, sans-serif" font-size="20">Una petición clara. Contexto útil. Espacio para responder.</text>
+  <rect x="76" y="204" width="540" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="112" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UN SEGUIMIENTO BREVE</text>
+  <rect x="108" y="270" width="476" height="216" rx="18" fill="#F7F5FA"/>
+  <text x="138" y="310" fill="#647084" font-family="Arial, sans-serif" font-size="17">Asunto: Re: [tema concreto]</text>
+  <text x="138" y="351" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Hola, [nombre]:</text>
+  <text x="138" y="385" fill="#647084" font-family="Arial, sans-serif" font-size="18">Retomo mi mensaje sobre [tema].</text>
+  <text x="138" y="416" fill="#647084" font-family="Arial, sans-serif" font-size="18">¿Podrías [siguiente paso concreto]?</text>
+  <text x="138" y="456" fill="#69558E" font-family="Arial, sans-serif" font-size="18" font-weight="700">Gracias por revisarlo.</text>
+  <rect x="652" y="204" width="472" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="688" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UN RECORDATORIO CUIDADOSO</text>
+  <circle cx="704" cy="310" r="13" fill="#E5F0E7"/>
+  <path d="M698 310L703 315L711 305" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="317" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Una petición concreta</text>
+  <circle cx="704" cy="370" r="13" fill="#E5F0E7"/>
+  <path d="M698 370L703 375L711 365" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="377" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Responde en el mismo hilo</text>
+  <circle cx="704" cy="430" r="13" fill="#E5F0E7"/>
+  <path d="M698 430L703 435L711 425" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="437" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Sabe cuándo parar</text>
+  <rect x="688" y="469" width="392" height="40" rx="20" fill="#F0EEF8"/>
+  <text x="708" y="495" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">CORTESÍA Y ESPACIO PARA DECIR NO</text>
+  <text x="80" y="578" fill="#647084" font-family="Arial, sans-serif" font-size="20">CONTEXTO / PETICIÓN / RESPETO</text>
+</svg>

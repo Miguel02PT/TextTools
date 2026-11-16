@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">礼貌跟进，不给对方压力</title>
+  <desc id="desc">一封简短的跟进邮件提及之前的消息，提出明确请求，并给对方留出回复空间。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="80" y="66" fill="#69558E" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">清晰、礼貌的邮件</text>
+  <text x="78" y="132" fill="#172033" font-family="Arial, sans-serif" font-size="46" font-weight="700">礼貌跟进，不给对方压力</text>
+  <text x="80" y="170" fill="#647084" font-family="Arial, sans-serif" font-size="22">请求明确，背景简洁，给对方留出回复空间。</text>
+  <rect x="76" y="204" width="540" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="112" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">简短的跟进示例</text>
+  <rect x="108" y="270" width="476" height="216" rx="18" fill="#F7F5FA"/>
+  <text x="138" y="310" fill="#647084" font-family="Arial, sans-serif" font-size="19">主题：回复：[具体主题]</text>
+  <text x="138" y="351" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">你好，[姓名]：</text>
+  <text x="138" y="385" fill="#647084" font-family="Arial, sans-serif" font-size="20">我想跟进之前关于[主题]的邮件。</text>
+  <text x="138" y="416" fill="#647084" font-family="Arial, sans-serif" font-size="20">你方便[明确的下一步]吗？</text>
+  <text x="138" y="456" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700">谢谢你抽空查看。</text>
+  <rect x="652" y="204" width="472" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="688" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">得体的邮件提醒</text>
+  <circle cx="704" cy="310" r="13" fill="#E5F0E7"/>
+  <path d="M698 310L703 315L711 305" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="317" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">只提一个明确请求</text>
+  <circle cx="704" cy="370" r="13" fill="#E5F0E7"/>
+  <path d="M698 370L703 375L711 365" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="377" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">在原邮件线程中回复</text>
+  <circle cx="704" cy="430" r="13" fill="#E5F0E7"/>
+  <path d="M698 430L703 435L711 425" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="437" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">知道何时停止跟进</text>
+  <rect x="688" y="469" width="392" height="40" rx="20" fill="#F0EEF8"/>
+  <text x="708" y="495" fill="#69558E" font-family="Arial, sans-serif" font-size="20" font-weight="700">礼貌表达，允许对方拒绝</text>
+  <text x="80" y="578" fill="#647084" font-family="Arial, sans-serif" font-size="22">背景 / 请求 / 尊重</text>
+</svg>

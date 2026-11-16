@@ -2613,5 +2613,95 @@
         "url": "https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook"
       }
     ]
+  },
+  {
+    "slug": "how-to-write-follow-up-email",
+    "published": "2026-11-16",
+    "modified": "2026-11-16",
+    "title": "How to Write a Follow-Up Email After No Response (With Examples) | TextToools",
+    "description": "Write a polite follow-up email with a clear subject, useful context, one specific request, and a respectful stopping point.",
+    "summary": "A good follow-up makes it easy to understand your earlier request and respond, without adding pressure or sending repeated reminders.",
+    "image": "blog-images/follow-up-email.svg",
+    "imageAlt": "A concise follow-up email refers to an earlier message, makes one clear request, and uses a polite closing.",
+    "sections": [
+      {
+        "heading": "When a follow-up email makes sense",
+        "paragraphs": [
+          "A follow-up can help when someone may have missed a message or needs a reminder about a reasonable request. It is not a guarantee of a reply, and silence can also mean the person is busy, unavailable, or not the right contact.",
+          "Consider the urgency, the recipient's workload, and any timeline they already gave you. A routine question may deserve more time than a decision holding up other work. There is no single waiting period that fits every situation; if a deadline is approaching, explain it calmly rather than sending several nudges in quick succession."
+        ]
+      },
+      {
+        "heading": "Keep the original context",
+        "paragraphs": [
+          "When you are continuing the same conversation, reply in the existing email thread so the earlier message is easy to find. Use a specific subject that still describes the request. If the topic has changed, start a new message with a new subject instead of attaching unrelated questions to an old thread.",
+          "If the recipient may not remember you, add a short reminder of who you are and when you first wrote. Include only the context they need to understand the request; do not make them search through a long history to find the point."
+        ]
+      },
+      {
+        "heading": "Make one clear, easy-to-answer request",
+        "paragraphs": [
+          "State why you are writing in the first sentence, then ask for one concrete next step. A focused question, a specific document to review, or a proposed time to talk is easier to answer than “just checking in” without saying what you need.",
+          "If timing matters, give the real date and a brief reason. Make it clear whether the date is a firm deadline or simply helpful. Do not invent urgency, bundle several unrelated requests together, or assume the recipient has already agreed to take action."
+        ]
+      },
+      {
+        "heading": "Use a polite, concise tone",
+        "paragraphs": [
+          "Keep the reminder brief, courteous, and neutral. Assume the first message may have been overlooked rather than accusing the recipient of ignoring you. Thank them for their time, but avoid language that makes them feel guilty or pressured.",
+          "Before sending, remove repeated background, unnecessary apologies, and phrases that sound irritated. If you feel frustrated, pause and reread the message from the other person's perspective before deciding whether email is still the right channel."
+        ]
+      },
+      {
+        "heading": "Follow-up email examples",
+        "paragraphs": [
+          "Adapt these examples to your relationship and the actual request. Replace each bracketed detail and only include a deadline or commitment that is real."
+        ],
+        "bullets": [
+          "General request: “Hi [name], I’m following up on my note about [topic]. Would you be able to [specific next step]? Thanks for taking a look.”",
+          "Approaching deadline: “Hi [name], I’m checking back on [request] because [date] is the deadline for [brief reason]. Could you let me know by [reasonable date] whether [specific question] is possible?”",
+          "After an interview: “Hello [name], thank you again for speaking with me about [role] on [date]. I’m still interested and wanted to ask whether there is an update on the next steps. I appreciate your time.”",
+          "After a first reminder: “Hi [name], I’m checking once more on [specific request]. If you’re not the right person or the timing isn’t workable, no problem—please let me know if there’s a better next step.”"
+        ]
+      },
+      {
+        "heading": "Choose the right timing and channel",
+        "paragraphs": [
+          "Use the response time the recipient gave you if they provided one. Otherwise, allow a reasonable interval for the context and urgency; professional advice varies, so treat suggested waiting periods as guidance rather than a universal rule.",
+          "If the matter is genuinely urgent, a call, agreed work channel, or designated support route may be more appropriate than another email. Use the channel the person or organization has asked you to use, and do not send the same reminder through several channels at once."
+        ]
+      },
+      {
+        "heading": "Know when to stop following up",
+        "paragraphs": [
+          "If a polite reminder and a further reasonable attempt receive no answer, repeated messages are unlikely to help. Reconsider whether the request is clear and proportionate, whether someone else is the correct contact, or whether you should proceed without a response.",
+          "A lack of response is not permission to escalate through unrelated channels or copy extra people to create pressure. For important work, follow the agreed escalation process; otherwise, leave the conversation open and move on."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I prefer a follow-up that makes one small next step clear and leaves room for the other person to say no or suggest a better route. It is more respectful—and usually more useful—than sending another message that only says “checking in.”"
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build straightforward browser tools for everyday writing and planning tasks."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "The Superpower of the Follow-up Email",
+        "publisher": "Council for Advancement and Support of Education (CASE)",
+        "url": "https://www.case.org/resources/superpower-follow-email"
+      },
+      {
+        "title": "E-mail Guidelines for Students",
+        "publisher": "Writing Commons",
+        "url": "https://writingcommons.org/article/e-mail-guidelines-for-students/"
+      }
+    ]
   }
 ]

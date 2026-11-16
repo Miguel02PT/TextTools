@@ -3366,6 +3366,94 @@
             "url": "https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook"
           }
         ]
+      },
+      "how-to-write-follow-up-email": {
+        "modified": "2026-11-16",
+        "image": "blog-images/follow-up-email.svg",
+        "imageAlt": "Un courriel de relance concis rappelle un message précédent, formule une demande précise et se termine poliment.",
+        "title": "Comment rédiger un courriel de relance sans réponse (avec exemples) | TextToools",
+        "description": "Rédigez une relance courtoise avec un objet clair, le contexte utile, une demande précise et une limite respectueuse.",
+        "summary": "Une bonne relance rappelle clairement votre demande et facilite la réponse, sans mettre la pression ni multiplier les rappels.",
+        "sections": [
+          {
+            "heading": "Quand une relance par courriel est-elle utile ?",
+            "paragraphs": [
+              "Une relance peut être utile si votre correspondant n’a peut-être pas vu votre message ou a besoin d’un rappel concernant une demande raisonnable. Elle ne garantit pas de réponse : le silence peut aussi signifier que la personne est occupée, indisponible ou qu’elle n’est pas le bon interlocuteur.",
+              "Tenez compte de l’urgence, de la charge de travail du destinataire et de tout délai qu’il vous a déjà indiqué. Une question courante peut attendre davantage qu’une décision qui bloque d’autres tâches. Il n’existe pas de délai unique adapté à toutes les situations ; si une échéance approche, expliquez-le calmement plutôt que d’envoyer plusieurs rappels rapprochés."
+            ]
+          },
+          {
+            "heading": "Conservez le contexte de l’échange",
+            "paragraphs": [
+              "Si vous poursuivez la même conversation, répondez dans le fil de courriels existant pour que le message précédent soit facile à retrouver. Gardez un objet précis qui décrit toujours la demande. Si le sujet a changé, commencez un nouveau message avec un nouvel objet.",
+              "Si votre correspondant risque de ne pas se souvenir de vous, rappelez brièvement qui vous êtes et quand vous lui avez écrit. N’ajoutez que le contexte nécessaire ; évitez de l’obliger à parcourir un long historique pour comprendre votre demande."
+            ]
+          },
+          {
+            "heading": "Formulez une demande claire et facile à traiter",
+            "paragraphs": [
+              "Expliquez la raison de votre message dès la première phrase, puis demandez une seule prochaine étape concrète. Une question précise, un document à examiner ou une proposition de rendez-vous est plus facile à traiter qu’un simple « je me permets de revenir vers vous » sans expliquer ce dont vous avez besoin.",
+              "Si le calendrier compte, indiquez la date réelle et expliquez brièvement pourquoi. Précisez s’il s’agit d’une échéance ferme ou simplement d’une date utile. N’inventez pas d’urgence, ne regroupez pas des demandes sans rapport et ne supposez pas que votre correspondant a accepté d’agir."
+            ]
+          },
+          {
+            "heading": "Adoptez un ton courtois et concis",
+            "paragraphs": [
+              "Restez bref, poli et neutre. Partez du principe que votre premier message a pu passer inaperçu plutôt que d’accuser votre correspondant de vous ignorer. Remerciez-le pour son temps, sans chercher à le culpabiliser ou à lui mettre la pression.",
+              "Avant l’envoi, retirez les répétitions, les excuses superflues et les formulations qui paraissent agacées. Si vous êtes contrarié, faites une pause et relisez votre message du point de vue du destinataire."
+            ]
+          },
+          {
+            "heading": "Exemples de courriels de relance",
+            "paragraphs": [
+              "Adaptez ces exemples à votre relation et à la demande réelle. Remplacez chaque champ entre crochets et ne mentionnez que des délais ou des engagements réels."
+            ],
+            "bullets": [
+              "Demande générale : « Bonjour [nom], je reviens vers vous au sujet de mon message concernant [sujet]. Pourriez-vous [prochaine étape précise] ? Merci d’y jeter un œil. »",
+              "Échéance proche : « Bonjour [nom], je me permets de vous relancer au sujet de [demande], car le [date] est la date limite pour [brève raison]. Pourriez-vous m’indiquer d’ici le [date raisonnable] si [question précise] est possible ? »",
+              "Après un entretien : « Bonjour [nom], merci encore pour notre échange au sujet du poste de [poste] le [date]. Je suis toujours très intéressé et souhaitais savoir si vous aviez des nouvelles concernant la suite du processus. Merci pour votre temps. »",
+              "Après un premier rappel : « Bonjour [nom], je me permets de revenir une dernière fois au sujet de [demande précise]. Si vous n’êtes pas la bonne personne ou si le moment ne convient pas, aucun problème ; pourriez-vous m’indiquer la meilleure prochaine étape ? »"
+            ]
+          },
+          {
+            "heading": "Choisissez le bon moment et le bon canal",
+            "paragraphs": [
+              "Si votre correspondant vous a indiqué un délai de réponse, respectez-le. Sinon, laissez passer un délai raisonnable selon le contexte et l’urgence. Les conseils professionnels varient : considérez les délais suggérés comme des repères, pas comme une règle universelle.",
+              "Si le sujet est réellement urgent, un appel, le canal de travail convenu ou le service d’assistance prévu peut être plus adapté qu’un nouveau courriel. Utilisez le canal recommandé par la personne ou l’organisation et n’envoyez pas le même rappel par plusieurs moyens à la fois."
+            ]
+          },
+          {
+            "heading": "Sachez quand arrêter les relances",
+            "paragraphs": [
+              "Si un rappel courtois puis une nouvelle tentative raisonnable restent sans réponse, multiplier les messages ne vous aidera probablement pas. Vérifiez si votre demande est claire et proportionnée, si une autre personne est le bon interlocuteur ou si vous pouvez avancer sans réponse.",
+              "L’absence de réponse ne justifie pas de passer par des canaux sans rapport avec le sujet ou de mettre d’autres personnes en copie pour exercer une pression. Pour un enjeu important, suivez le processus d’escalade prévu ; sinon, laissez la conversation ouverte et poursuivez votre travail."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je préfère une relance qui précise une petite prochaine étape et laisse à l’autre personne la possibilité de refuser ou de proposer une meilleure solution. C’est plus respectueux — et généralement plus utile — qu’un nouveau message qui se contente de dire « je me permets de revenir vers vous »."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Rédigé par le fondateur de TextToools. Je crée des outils simples dans le navigateur pour les tâches quotidiennes d’écriture et d’organisation."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Le superpouvoir du courriel de relance",
+            "publisher": "Council for Advancement and Support of Education (CASE)",
+            "url": "https://www.case.org/resources/superpower-follow-email"
+          },
+          {
+            "title": "Conseils pour les courriels des étudiants",
+            "publisher": "Writing Commons",
+            "url": "https://writingcommons.org/article/e-mail-guidelines-for-students/"
+          }
+        ]
       }
     }
   }

@@ -3282,6 +3282,94 @@
             "url": "https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook"
           }
         ]
+      },
+      "how-to-write-follow-up-email": {
+        "modified": "2026-11-16",
+        "image": "blog-images/pt-br/follow-up-email.svg",
+        "imageAlt": "Um e-mail curto de acompanhamento retoma uma mensagem anterior, faz um pedido específico e termina com cordialidade.",
+        "title": "Como escrever um e-mail de acompanhamento quando não respondem (com exemplos) | TextToools",
+        "description": "Escreva um e-mail de acompanhamento educado, com assunto claro, contexto útil, um pedido específico e um limite respeitoso.",
+        "summary": "Um bom acompanhamento facilita entender o pedido anterior e responder, sem pressionar nem enviar lembretes repetidos.",
+        "sections": [
+          {
+            "heading": "Quando faz sentido enviar um acompanhamento",
+            "paragraphs": [
+              "Uma mensagem de acompanhamento pode ajudar quando alguém talvez não tenha visto seu e-mail ou precisa de um lembrete sobre um pedido razoável. Ela não garante uma resposta: o silêncio também pode significar que a pessoa está ocupada, indisponível ou não é o contato certo.",
+              "Considere a urgência, a carga de trabalho da pessoa e qualquer prazo que ela já tenha informado. Uma dúvida rotineira pode esperar mais do que uma decisão que impede outras tarefas. Não existe um prazo único para todas as situações; se uma data limite estiver próxima, explique isso com calma em vez de enviar vários lembretes seguidos."
+            ]
+          },
+          {
+            "heading": "Mantenha o contexto original",
+            "paragraphs": [
+              "Se estiver continuando a mesma conversa, responda na sequência de e-mails existente para que a mensagem anterior seja fácil de encontrar. Use um assunto específico que ainda descreva o pedido. Se o assunto mudou, comece uma nova mensagem com outro título.",
+              "Se a pessoa talvez não se lembre de você, inclua uma breve apresentação e diga quando escreveu pela primeira vez. Informe apenas o contexto necessário, sem obrigá-la a procurar o pedido em um histórico longo."
+            ]
+          },
+          {
+            "heading": "Faça um pedido claro e fácil de responder",
+            "paragraphs": [
+              "Explique o motivo logo na primeira frase e peça um próximo passo concreto. Uma pergunta específica, um documento para revisar ou uma sugestão de horário para conversar é mais fácil de responder do que dizer “só queria saber como está” sem explicar o que você precisa.",
+              "Se o prazo for importante, informe a data real e explique brevemente o motivo. Esclareça se é uma data limite ou apenas uma data conveniente. Não invente urgência, misture pedidos sem relação ou presuma que a pessoa já concordou em agir."
+            ]
+          },
+          {
+            "heading": "Use um tom cordial e conciso",
+            "paragraphs": [
+              "Mantenha o lembrete breve, educado e neutro. Considere que a primeira mensagem pode ter passado despercebida, em vez de acusar a pessoa de ignorá-lo. Agradeça pelo tempo, mas evite fazer com que ela se sinta culpada ou pressionada.",
+              "Antes de enviar, retire o contexto repetido, os pedidos de desculpa desnecessários e qualquer frase que pareça irritada. Se estiver frustrado, espere um pouco e releia a mensagem pelo ponto de vista da outra pessoa."
+            ]
+          },
+          {
+            "heading": "Exemplos de e-mails de acompanhamento",
+            "paragraphs": [
+              "Adapte estes exemplos ao seu relacionamento com a pessoa e ao pedido real. Substitua cada campo entre colchetes e inclua somente prazos ou compromissos verdadeiros."
+            ],
+            "bullets": [
+              "Pedido geral: “Olá, [nome]. Estou retomando meu e-mail sobre [assunto]. Você poderia [próximo passo específico]? Obrigado por verificar.”",
+              "Prazo próximo: “Olá, [nome]. Estou retomando [pedido] porque [data] é o prazo para [motivo breve]. Você poderia me dizer até [data razoável] se é possível [pergunta específica]?”",
+              "Depois de uma entrevista: “Olá, [nome]. Obrigado novamente pela conversa sobre [vaga] em [data]. Continuo interessado e gostaria de saber se há novidades sobre as próximas etapas. Agradeço pelo seu tempo.”",
+              "Após um primeiro lembrete: “Olá, [nome]. Estou consultando mais uma vez sobre [pedido específico]. Se você não for a pessoa certa ou este não for um bom momento, tudo bem — poderia me indicar qual seria o melhor próximo passo?”"
+            ]
+          },
+          {
+            "heading": "Escolha o momento e o canal adequados",
+            "paragraphs": [
+              "Se a pessoa informou quando responderia, respeite esse prazo. Caso contrário, aguarde um intervalo razoável conforme o contexto e a urgência. As recomendações profissionais variam; trate os prazos sugeridos como orientação, não como regra universal.",
+              "Se o assunto for realmente urgente, uma ligação, o canal de trabalho combinado ou um serviço de suporte designado pode ser mais adequado. Use o canal indicado pela pessoa ou organização e não envie o mesmo lembrete por vários meios ao mesmo tempo."
+            ]
+          },
+          {
+            "heading": "Saiba quando parar de insistir",
+            "paragraphs": [
+              "Se um lembrete cordial e uma nova tentativa razoável não receberem resposta, continuar enviando mensagens provavelmente não vai ajudar. Reavalie se o pedido está claro e é proporcional, se outra pessoa é o contato certo ou se você pode seguir em frente sem uma resposta.",
+              "A falta de resposta não é motivo para recorrer a canais sem relação com o assunto nem copiar outras pessoas para pressionar. Em um assunto importante, siga o processo de escalonamento combinado; caso contrário, deixe a conversa aberta e prossiga."
+            ]
+          },
+          {
+            "heading": "Uma nota do fundador",
+            "paragraphs": [
+              "Prefiro um acompanhamento que deixe claro um próximo passo simples e permita que a outra pessoa diga não ou sugira um caminho melhor. É mais respeitoso — e geralmente mais útil — do que enviar outra mensagem dizendo apenas “passando para saber”."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas simples no navegador para tarefas cotidianas de escrita e planejamento."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "O superpoder do e-mail de acompanhamento",
+            "publisher": "Council for Advancement and Support of Education (CASE)",
+            "url": "https://www.case.org/resources/superpower-follow-email"
+          },
+          {
+            "title": "Orientações para e-mails de estudantes",
+            "publisher": "Writing Commons",
+            "url": "https://writingcommons.org/article/e-mail-guidelines-for-students/"
+          }
+        ]
       }
     }
   }

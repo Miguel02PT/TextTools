@@ -55,6 +55,9 @@ const thesisStatementPost = parsedEnglishBlogPosts.find(
 const paraphrasingGuidePost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-paraphrase-sources',
 )
+const followUpEmailPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-follow-up-email',
+)
 const dailyTodoListGuide = englishToolGuides.find(
   (guide: { id: string }) => guide.id === 'daily-todo-list',
 )
@@ -361,6 +364,53 @@ test('paraphrasing guide has a distinct intent and localized citation guidance',
       sourceUrls,
     )
   }
+})
+
+test('follow-up email guide has a distinct intent and complete localized examples', () => {
+  const localizedPosts = [
+    followUpEmailPost,
+    parsedSpanishContent.blog.posts['how-to-write-follow-up-email'],
+    parsedPortugueseContent.blog.posts['how-to-write-follow-up-email'],
+    parsedFrenchContent.blog.posts['how-to-write-follow-up-email'],
+    parsedChineseContent.blog.posts['how-to-write-follow-up-email'],
+  ]
+  const sourceUrls = [
+    'https://www.case.org/resources/superpower-follow-email',
+    'https://writingcommons.org/article/e-mail-guidelines-for-students/',
+  ].sort()
+
+  assert.ok(followUpEmailPost)
+  assert.equal(followUpEmailPost.published, '2026-11-16')
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'how-to-write-follow-up-email',
+    ).length,
+    1,
+  )
+  assert.match(followUpEmailPost.title, /follow-up email/i)
+  assert.doesNotMatch(followUpEmailPost.title, /out of office|word count/i)
+  assert.equal(followUpEmailPost.sections.length, 9)
+  assert.equal(followUpEmailPost.sections[4].bullets.length, 4)
+  assert.match(followUpEmailPost.sections[5].paragraphs.join(' '), /universal rule/i)
+  assert.match(followUpEmailPost.sections[6].heading, /stop following up/i)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, followUpEmailPost.sections.length)
+    assert.equal(post.sections[4].bullets.length, 4)
+    assert.ok(post.sections.at(-1).heading)
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+  }
+
+  assert.equal(
+    parsedFrenchContent.blog.posts['how-to-write-follow-up-email'].image,
+    followUpEmailPost.image,
+  )
 })
 
 test('daily task list download filename prefix is localized in every supported language', () => {

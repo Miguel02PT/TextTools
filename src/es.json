@@ -2740,6 +2740,94 @@
             "url": "https://support.microsoft.com/en-us/outlook/mail/how-to-set-up-out-of-office-automatic-replies-in-outlook"
           }
         ]
+      },
+      "how-to-write-follow-up-email": {
+        "modified": "2026-11-16",
+        "image": "blog-images/es/follow-up-email.svg",
+        "imageAlt": "Un correo de seguimiento breve retoma un mensaje anterior, formula una petición concreta y termina con cortesía.",
+        "title": "Cómo escribir un correo de seguimiento si no te responden (con ejemplos) | TextToools",
+        "description": "Escribe un correo de seguimiento educado con un asunto claro, contexto útil, una petición concreta y un límite respetuoso.",
+        "summary": "Un buen seguimiento facilita entender tu petición anterior y responder, sin presionar ni enviar recordatorios repetidos.",
+        "sections": [
+          {
+            "heading": "Cuándo tiene sentido enviar un seguimiento",
+            "paragraphs": [
+              "Un seguimiento puede servir cuando alguien quizá no ha visto tu mensaje o necesita un recordatorio de una petición razonable. No garantiza una respuesta: el silencio también puede indicar que esa persona está ocupada, no está disponible o no es el contacto adecuado.",
+              "Ten en cuenta la urgencia, la carga de trabajo de la persona y cualquier plazo que ya te haya indicado. Una consulta rutinaria puede esperar más que una decisión que bloquea otras tareas. No existe un plazo de espera único para todas las situaciones; si se acerca una fecha límite, explícalo con calma en lugar de enviar varios recordatorios seguidos."
+            ]
+          },
+          {
+            "heading": "Conserva el contexto original",
+            "paragraphs": [
+              "Si continúas la misma conversación, responde en el hilo de correo existente para que el mensaje anterior sea fácil de encontrar. Usa un asunto específico que siga describiendo la petición. Si el tema ha cambiado, inicia un mensaje nuevo con otro asunto.",
+              "Si la persona quizá no te recuerde, añade una breve presentación y cuándo escribiste por primera vez. Incluye solo el contexto necesario; no le obligues a recorrer un historial largo para averiguar qué necesitas."
+            ]
+          },
+          {
+            "heading": "Haz una petición clara y fácil de responder",
+            "paragraphs": [
+              "Explica el motivo en la primera frase y pide un siguiente paso concreto. Una pregunta específica, un documento para revisar o una propuesta de hora para hablar es más fácil de responder que un «solo quería saber cómo va» sin explicar qué necesitas.",
+              "Si el momento importa, indica la fecha real y el motivo brevemente. Aclara si es un plazo firme o solo una fecha conveniente. No inventes urgencia, mezcles solicitudes distintas ni des por hecho que la otra persona aceptó actuar."
+            ]
+          },
+          {
+            "heading": "Mantén un tono amable y conciso",
+            "paragraphs": [
+              "El recordatorio debe ser breve, cordial y neutral. Da por hecho que el primer mensaje pudo pasar desapercibido, en lugar de acusar a la persona de ignorarte. Agradece su tiempo, pero evita hacerla sentir culpable o presionada.",
+              "Antes de enviarlo, elimina el contexto repetido, las disculpas innecesarias y las frases que suenen irritadas. Si estás frustrado, espera un poco y vuelve a leerlo desde el punto de vista de la otra persona."
+            ]
+          },
+          {
+            "heading": "Ejemplos de correos de seguimiento",
+            "paragraphs": [
+              "Adapta los ejemplos a tu relación con la persona y a la petición real. Sustituye cada campo entre corchetes e incluye solo plazos o compromisos verdaderos."
+            ],
+            "bullets": [
+              "Petición general: «Hola, [nombre]. Te escribo para retomar mi mensaje sobre [tema]. ¿Podrías [siguiente paso concreto]? Gracias por revisarlo».",
+              "Se acerca una fecha límite: «Hola, [nombre]. Vuelvo sobre [petición] porque [fecha] es el plazo para [motivo breve]. ¿Podrías decirme antes del [fecha razonable] si es posible [pregunta concreta]?».",
+              "Después de una entrevista: «Hola, [nombre]. Gracias de nuevo por hablar conmigo sobre [puesto] el [fecha]. Sigo teniendo mucho interés y quería preguntar si hay novedades sobre los próximos pasos. Gracias por tu tiempo».",
+              "Tras un primer recordatorio: «Hola, [nombre]. Te consulto una vez más sobre [petición concreta]. Si no eres la persona indicada o ahora no es buen momento, no pasa nada; ¿podrías indicarme cuál sería el mejor siguiente paso?». "
+            ]
+          },
+          {
+            "heading": "Elige el momento y el canal adecuados",
+            "paragraphs": [
+              "Si la persona te indicó cuándo respondería, respeta ese plazo. Si no, deja un tiempo razonable según el contexto y la urgencia. Los consejos profesionales varían, así que los plazos sugeridos son orientativos, no una regla universal.",
+              "Si el asunto es realmente urgente, quizá convenga más una llamada, el canal de trabajo acordado o el servicio de soporte designado. Usa el canal que haya indicado la persona u organización y no envíes el mismo recordatorio por varios medios a la vez."
+            ]
+          },
+          {
+            "heading": "Cuándo dejar de insistir",
+            "paragraphs": [
+              "Si un recordatorio amable y otro intento razonable no reciben respuesta, seguir escribiendo probablemente no ayudará. Reconsidera si la petición es clara y proporcionada, si otra persona es el contacto adecuado o si puedes avanzar sin respuesta.",
+              "La falta de respuesta no justifica acudir a canales no relacionados ni copiar a más personas para presionar. Si se trata de un asunto importante, sigue el proceso de escalado acordado; si no, deja la conversación abierta y continúa."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Prefiero un seguimiento que deje claro un siguiente paso pequeño y permita a la otra persona decir que no o proponer una vía mejor. Es más respetuoso —y normalmente más útil— que enviar otro mensaje que solo diga «quería saber cómo va»."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas sencillas en el navegador para tareas cotidianas de escritura y planificación."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "El superpoder del correo de seguimiento",
+            "publisher": "Council for Advancement and Support of Education (CASE)",
+            "url": "https://www.case.org/resources/superpower-follow-email"
+          },
+          {
+            "title": "Pautas para el correo electrónico de estudiantes",
+            "publisher": "Writing Commons",
+            "url": "https://writingcommons.org/article/e-mail-guidelines-for-students/"
+          }
+        ]
       }
     }
   }
