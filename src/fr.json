@@ -3454,6 +3454,99 @@
             "url": "https://writingcommons.org/article/e-mail-guidelines-for-students/"
           }
         ]
+      },
+      "how-to-write-a-professional-bio": {
+        "modified": "2026-11-18",
+        "image": "blog-images/professional-bio.svg",
+        "imageAlt": "Une biographie professionnelle présente le rôle, l’expérience pertinente et un moyen clair de prendre contact.",
+        "title": "Comment rédiger une biographie professionnelle (avec exemples) | TextToools",
+        "description": "Rédigez une biographie professionnelle concise pour un profil, un portfolio ou une présentation. Choisissez les bons détails et découvrez des exemples.",
+        "summary": "Une biographie professionnelle utile explique votre activité, son intérêt pour le lecteur et la prochaine étape possible.",
+        "sections": [
+          {
+            "heading": "À quoi sert une biographie professionnelle ?",
+            "paragraphs": [
+              "Une biographie professionnelle est une brève présentation de votre travail, rédigée pour un lecteur et un contexte précis. Elle peut figurer sur un portfolio, une page d’entreprise, le programme d’une conférence ou un profil professionnel. Ce n’est pas tout votre parcours : elle aide le lecteur à comprendre votre activité et son intérêt éventuel pour lui.",
+              "La bonne biographie dépend de son objectif. La présentation d’un intervenant peut mettre en avant un sujet qu’il connaît ; celle d’un portfolio peut aider un client potentiel à comprendre les missions que vous acceptez. Respectez les consignes ou la limite de longueur du site ou de l’organisateur."
+            ]
+          },
+          {
+            "heading": "Commencez par votre public et votre objectif",
+            "paragraphs": [
+              "Avant d’écrire, répondez à deux questions : qui vous lira et que doit comprendre ou faire cette personne ensuite ? Un client potentiel voudra peut-être connaître vos services. Le public d’une conférence peut avoir besoin de votre fonction et du lien avec la séance. Une page d’équipe peut appeler vos responsabilités et votre expérience.",
+              "Choisissez les informations qui servent cet objectif. Vous n’avez pas à citer chaque emploi, diplôme ou centre d’intérêt. Si un détail n’aide pas ce lecteur à comprendre votre travail, gardez-le plutôt pour votre CV ou un profil plus long."
+            ]
+          },
+          {
+            "heading": "Choisissez la première ou la troisième personne",
+            "paragraphs": [
+              "La première personne utilise « je » et paraît souvent directe sur un site personnel ou un portfolio. La troisième personne utilise votre nom ou des pronoms ; elle est fréquente lorsqu’un organisateur ou un employeur vous présente. Aucune voix n’est automatiquement plus professionnelle : les attentes du support et du public comptent davantage.",
+              "Choisissez un point de vue et gardez-le partout. Si un événement demande explicitement une présentation à la troisième personne, fournissez cette version pour éviter à l’hôte de la réécrire."
+            ]
+          },
+          {
+            "heading": "Choisissez des détails qui appuient votre présentation",
+            "paragraphs": [
+              "Une biographie ciblée associe souvent votre fonction actuelle, le sujet ou le type de travail qui vous spécialise et un élément concret qui renforce votre crédibilité. Il peut s’agir d’un projet pertinent, d’une qualification, d’une publication ou d’un résultat, mais ne mentionnez que des affirmations que vous pouvez vérifier et expliquer.",
+              "Cette trame simple peut vous aider :"
+            ],
+            "bullets": [
+              "Fonction : que faites-vous actuellement ?",
+              "Spécialité : quel public, sujet ou type de travail est le plus pertinent ici ?",
+              "Preuve : quelle expérience ou qualification précise appuie cette spécialité ?",
+              "Prochaine étape : si cela convient, où le lecteur peut-il voir votre travail ou vous contacter ?"
+            ]
+          },
+          {
+            "heading": "Organisez les idées clairement",
+            "paragraphs": [
+              "Commencez par votre nom et votre fonction afin que le lecteur sache de qui il s’agit. Ajoutez votre spécialité la plus pertinente, puis appuyez-la par une expérience ou une qualification précise. Terminez par un projet actuel, un lien vers votre portfolio ou une invitation simple si le contexte s’y prête.",
+              "Considérez cette structure comme un repère, pas comme une formule. Un profil court peut tenir en deux phrases ; une présentation plus longue peut apporter du contexte. Respectez la place disponible et n’ajoutez pas de remplissage pour atteindre un nombre de mots arbitraire."
+            ],
+            "example": {
+              "input": "Exemple fictif : Jordan Lee est designer produit et aide de petites équipes de santé à rendre leurs services numériques plus faciles à utiliser. Son travail combine recherche utilisateur, prototypage et vérifications d’accessibilité. Jordan se concentre actuellement sur la simplification de la prise de rendez-vous en ligne. Découvrez quelques projets sur son [portfolio].",
+              "output": "L’exemple présente une fonction, un public pertinent, une méthode, un sujet actuel et une prochaine étape."
+            }
+          },
+          {
+            "heading": "Relisez pour la clarté, l’exactitude et la confidentialité",
+            "paragraphs": [
+              "Relisez votre biographie du point de vue du lecteur. Comprend-il votre activité et l’intérêt des détails ? Remplacez les éloges vagues comme « expert passionné » par une description concrète de votre travail. Supprimez les répétitions, le jargon inexpliqué et les affirmations plus fortes que les faits ne le permettent.",
+              "Vérifiez les noms, fonctions, dates, liens et chiffres. Gardez le même point de vue et respectez la limite du support. Si la plateforme compte les caractères plutôt que les mots, utilisez son compteur ou vérifiez votre texte avec le compteur de mots de TextToools avant de le coller.",
+              "Ne partagez que les informations personnelles que vous acceptez de rendre publiques. Une biographie professionnelle n’a pas besoin d’une adresse personnelle, de coordonnées privées ni d’éléments de vie sans rapport avec son objectif."
+            ]
+          },
+          {
+            "heading": "Gardez votre biographie à jour",
+            "paragraphs": [
+              "Relisez votre biographie lorsque votre fonction, votre spécialité ou vos coordonnées changent, et avant de la réutiliser pour un autre public. Conservez si besoin une version longue, puis adaptez-la aux profils plus courts. Vérifiez que les faits restent cohérents d’une version à l’autre."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je trouve plus facile de rédiger une biographie après avoir décidé ce que le lecteur a besoin de savoir, plutôt que d’essayer de résumer toute ma vie professionnelle. Quelques détails exacts et pertinents sont plus utiles qu’une longue liste de titres."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Rédigé par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car je pense que votre texte ne devrait pas avoir à quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Guide de la biographie professionnelle",
+            "publisher": "Writing Center de Boise State University",
+            "url": "https://www.boisestate.edu/writingcenter/professional-bio-guide/"
+          },
+          {
+            "title": "Biographie professionnelle",
+            "publisher": "MIT Chemical Engineering Communication & Career Lab",
+            "url": "https://mitcommlab.mit.edu/cheme/commkit/professional-bio/"
+          }
+        ]
       }
     }
   }

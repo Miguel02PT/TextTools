@@ -58,6 +58,9 @@ const paraphrasingGuidePost = parsedEnglishBlogPosts.find(
 const followUpEmailPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-follow-up-email',
 )
+const professionalBioPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-a-professional-bio',
+)
 const dailyTodoListGuide = englishToolGuides.find(
   (guide: { id: string }) => guide.id === 'daily-todo-list',
 )
@@ -411,6 +414,56 @@ test('follow-up email guide has a distinct intent and complete localized example
     parsedFrenchContent.blog.posts['how-to-write-follow-up-email'].image,
     followUpEmailPost.image,
   )
+})
+
+test('professional bio guide targets a distinct intent and has localized examples and previews', () => {
+  const localizedPosts = [
+    professionalBioPost,
+    parsedSpanishContent.blog.posts['how-to-write-a-professional-bio'],
+    parsedPortugueseContent.blog.posts['how-to-write-a-professional-bio'],
+    parsedFrenchContent.blog.posts['how-to-write-a-professional-bio'],
+    parsedChineseContent.blog.posts['how-to-write-a-professional-bio'],
+  ]
+  const sourceUrls = [
+    'https://www.boisestate.edu/writingcenter/professional-bio-guide/',
+    'https://mitcommlab.mit.edu/cheme/commkit/professional-bio/',
+  ].sort()
+
+  assert.ok(professionalBioPost)
+  assert.equal(professionalBioPost.published, '2026-11-18')
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'how-to-write-a-professional-bio',
+    ).length,
+    1,
+  )
+  assert.equal(
+    parsedFrenchContent.blog.posts['how-to-write-a-professional-bio'].image,
+    professionalBioPost.image,
+  )
+  assert.match(professionalBioPost.title, /professional bio/i)
+  assert.doesNotMatch(professionalBioPost.title, /follow-up email|word count|thesis statement/i)
+  assert.match(professionalBioPost.sections[4].example.input, /Fictional example/i)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, professionalBioPost.sections.length)
+    assert.ok(post.sections.at(-1).heading)
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+    const svgPath = new URL(`../public/${post.image}`, import.meta.url)
+    const pngPath = new URL(`../public/${post.image.replace(/\.svg$/i, '.png')}`, import.meta.url)
+    assert.ok(existsSync(svgPath), `${post.image} exists`)
+    assert.ok(existsSync(pngPath), `${post.image} has a social preview`)
+    const png = readFileSync(pngPath)
+    assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
+    assert.equal(png.readUInt32BE(16), 1200)
+    assert.equal(png.readUInt32BE(20), 630)
+  }
 })
 
 test('daily task list download filename prefix is localized in every supported language', () => {

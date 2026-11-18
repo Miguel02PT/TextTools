@@ -2828,6 +2828,99 @@
             "url": "https://writingcommons.org/article/e-mail-guidelines-for-students/"
           }
         ]
+      },
+      "how-to-write-a-professional-bio": {
+        "modified": "2026-11-18",
+        "image": "blog-images/es/professional-bio.svg",
+        "imageAlt": "Una biografía profesional presenta el puesto, la experiencia relevante y una forma clara de contactar.",
+        "title": "Cómo escribir una biografía profesional (con ejemplos) | TextToools",
+        "description": "Escribe una biografía profesional concisa para un perfil, portafolio o presentación. Elige datos relevantes, consulta ejemplos y edita con claridad.",
+        "summary": "Una biografía profesional útil explica qué haces, por qué le importa al lector y cuál puede ser el siguiente paso.",
+        "sections": [
+          {
+            "heading": "Qué debe conseguir una biografía profesional",
+            "paragraphs": [
+              "Una biografía profesional es una presentación breve de tu trabajo, escrita para una persona y un contexto concretos. Puedes usarla en un portafolio, una página de empresa, el programa de una conferencia o un perfil profesional. No es todo tu historial laboral: ayuda al lector a entender qué haces y por qué podría interesarle.",
+              "La biografía adecuada depende de su propósito. La presentación de un ponente puede destacar un tema sobre el que puede hablar; la de un portafolio puede ayudar a un posible cliente a entender qué trabajo aceptas. Sigue las instrucciones o el límite de extensión del sitio o de la organización."
+            ]
+          },
+          {
+            "heading": "Empieza por el público y el propósito",
+            "paragraphs": [
+              "Antes de escribir, responde dos preguntas: ¿quién va a leer esto y qué debería entender o hacer después? Un posible cliente quizá necesite saber qué servicios ofreces. El público de una conferencia puede necesitar tu puesto y tu relación con la sesión. En una página de equipo pueden ser importantes tus responsabilidades y experiencia.",
+              "Elige datos que respalden ese propósito. No hace falta incluir todos tus empleos, títulos o intereses personales. Si un dato no ayuda a este lector a entender tu trabajo, quizá encaje mejor en un currículum o perfil más largo."
+            ]
+          },
+          {
+            "heading": "Elige la primera o la tercera persona",
+            "paragraphs": [
+              "La primera persona usa «yo» y suele resultar directa en un sitio personal o portafolio. La tercera persona usa tu nombre o pronombres y es habitual cuando una organización te presentará. Ninguna voz es automáticamente más profesional: importan más las expectativas de la plataforma y el público.",
+              "Elige un punto de vista y mantenlo. Si un evento pide expresamente una presentación en tercera persona, entrega esa versión en vez de dejar que la persona anfitriona tenga que reescribirla."
+            ]
+          },
+          {
+            "heading": "Elige datos que respalden tu presentación",
+            "paragraphs": [
+              "Una biografía enfocada suele combinar tu puesto actual, el trabajo o tema en el que te especializas y un dato concreto que respalde tu credibilidad. Puede ser un proyecto relevante, una titulación, una publicación o un resultado, pero incluye solo afirmaciones que puedas verificar y explicar.",
+              "Este esquema sencillo puede ayudarte a elegir:"
+            ],
+            "bullets": [
+              "Puesto: ¿A qué te dedicas ahora?",
+              "Enfoque: ¿Qué público, tema o tipo de trabajo es más relevante aquí?",
+              "Evidencia: ¿Qué experiencia o credencial concreta respalda ese enfoque?",
+              "Siguiente paso: Si corresponde, ¿dónde puede ver tu trabajo o contactar contigo el lector?"
+            ]
+          },
+          {
+            "heading": "Organiza las ideas con claridad",
+            "paragraphs": [
+              "Empieza por tu nombre y puesto para que el lector sepa de quién trata la biografía. Añade tu enfoque más relevante y respáldalo con una experiencia o credencial concreta. Termina con un proyecto actual, un enlace al portafolio o una invitación sencilla si el contexto lo requiere.",
+              "Es una estructura flexible, no una fórmula. Un perfil breve quizá solo necesite dos frases; una presentación más larga puede añadir contexto. Respeta el espacio disponible y no incluyas relleno solo para alcanzar cierto número de palabras."
+            ],
+            "example": {
+              "input": "Ejemplo ficticio: Jordan Lee es diseñador de productos y ayuda a pequeños equipos sanitarios a crear servicios digitales más fáciles de usar. Su trabajo combina investigación de usuarios, prototipos y revisiones de accesibilidad. Ahora se centra en mejorar la reserva de citas por internet. Consulta algunos proyectos en [enlace al portafolio].",
+              "output": "El ejemplo indica el puesto, un público relevante, el método de trabajo, el enfoque actual y un siguiente paso."
+            }
+          },
+          {
+            "heading": "Edita para ganar claridad, precisión y privacidad",
+            "paragraphs": [
+              "Lee la biografía desde el punto de vista del lector. ¿Entiende qué haces y por qué importan los detalles? Cambia elogios vagos como «experto apasionado» por una descripción concreta de tu trabajo. Elimina las ideas repetidas, la jerga sin explicar y las afirmaciones más contundentes que la evidencia.",
+              "Comprueba nombres, puestos, fechas, enlaces y estadísticas. Mantén el mismo punto de vista y respeta el límite del sitio. Si la plataforma cuenta caracteres en lugar de palabras, usa su propio contador o verifica el texto con el contador de palabras de TextToools antes de pegarlo.",
+              "Comparte solo los datos personales que quieras hacer públicos. Una biografía profesional no necesita una dirección particular, información de contacto privada ni una historia personal ajena a su propósito."
+            ]
+          },
+          {
+            "heading": "Mantén la biografía actualizada",
+            "paragraphs": [
+              "Revisa la biografía cuando cambien tu puesto, enfoque o datos de contacto, y antes de reutilizarla para otro público. Si te sirve, conserva una versión larga y crea otras más breves para perfiles con límites estrictos. Comprueba que los datos sean coherentes en todas ellas."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Me resulta más fácil escribir una biografía después de decidir qué necesita saber el lector, en vez de intentar resumir toda mi vida laboral. Unos pocos datos precisos y relevantes son más útiles que una larga lista de cargos."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque considero que tu texto no debería tener que salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Guía para escribir una biografía profesional",
+            "publisher": "Centro de Escritura de Boise State University",
+            "url": "https://www.boisestate.edu/writingcenter/professional-bio-guide/"
+          },
+          {
+            "title": "Biografía profesional",
+            "publisher": "MIT Chemical Engineering Communication & Career Lab",
+            "url": "https://mitcommlab.mit.edu/cheme/commkit/professional-bio/"
+          }
+        ]
       }
     }
   }

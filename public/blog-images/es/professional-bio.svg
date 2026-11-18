@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cómo escribir una biografía profesional</title>
+  <desc id="desc">Una biografía presenta el puesto, la experiencia relevante, el enfoque actual y un siguiente paso claro.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="80" y="66" fill="#69558E" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ESCRITURA PROFESIONAL CLARA</text>
+  <text x="78" y="132" fill="#172033" font-family="Arial, sans-serif" font-size="42" font-weight="700">Cómo escribir una biografía profesional</text>
+  <text x="80" y="170" fill="#647084" font-family="Arial, sans-serif" font-size="20">Una presentación enfocada, no todo tu historial laboral.</text>
+  <rect x="76" y="204" width="540" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="112" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UN PERFIL BREVE</text>
+  <rect x="108" y="270" width="476" height="216" rx="18" fill="#F7F5FA"/>
+  <circle cx="151" cy="325" r="23" fill="#E8E1F1"/>
+  <circle cx="151" cy="318" r="8" fill="#69558E"/>
+  <path d="M135 340C137 328 165 328 167 340" stroke="#69558E" stroke-width="5" stroke-linecap="round"/>
+  <text x="190" y="318" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Jordan Lee</text>
+  <text x="190" y="347" fill="#647084" font-family="Arial, sans-serif" font-size="17">Diseñador de productos</text>
+  <text x="138" y="393" fill="#172033" font-family="Arial, sans-serif" font-size="17">Ayuda a equipos sanitarios a mejorar</text>
+  <text x="138" y="421" fill="#172033" font-family="Arial, sans-serif" font-size="17">sus experiencias digitales cotidianas.</text>
+  <text x="138" y="462" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">Ver proyectos →</text>
+  <rect x="652" y="204" width="472" height="322" rx="24" fill="#FFFFFF"/>
+  <text x="688" y="250" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">UNA BIOGRAFÍA EFICAZ</text>
+  <circle cx="704" cy="310" r="13" fill="#E5F0E7"/>
+  <path d="M698 310L703 315L711 305" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="317" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Un puesto claro</text>
+  <circle cx="704" cy="370" r="13" fill="#E5F0E7"/>
+  <path d="M698 370L703 375L711 365" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="377" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Experiencia relevante</text>
+  <circle cx="704" cy="430" r="13" fill="#E5F0E7"/>
+  <path d="M698 430L703 435L711 425" stroke="#3C7450" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="732" y="437" fill="#172033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Un paso siguiente</text>
+  <rect x="688" y="469" width="392" height="40" rx="20" fill="#F0EEF8"/>
+  <text x="708" y="495" fill="#69558E" font-family="Arial, sans-serif" font-size="16" font-weight="700">CONCRETA / PRECISA / ACTUAL</text>
+  <text x="80" y="578" fill="#647084" font-family="Arial, sans-serif" font-size="20">PUESTO / EXPERIENCIA / CONTACTO</text>
+</svg>
