@@ -1,5 +1,141 @@
 [
   {
+    "slug": "how-to-write-a-client-proposal",
+    "published": "2026-11-19",
+    "title": "How to Write a Client Proposal: Scope, Timeline, and Price | TextToools",
+    "description": "Write a clear client proposal with a defined problem, deliverables, exclusions, timeline, pricing, and next steps. Includes a practical outline and example.",
+    "summary": "A useful client proposal helps both sides decide whether a specific piece of work is a good fit by making the scope, responsibilities, timing, and price understandable.",
+    "image": "blog-images/client-proposal.svg",
+    "imageAlt": "A client proposal connects the client's need to defined deliverables, a realistic schedule, and clear pricing.",
+    "sections": [
+      {
+        "heading": "What a client proposal is—and what it is not",
+        "paragraphs": [
+          "A client proposal explains a piece of work you are asking a prospective client to approve. It connects the client's need to a recommended approach, concrete deliverables, a schedule, and an estimated or agreed price. Its purpose is not merely to describe how capable you are; it should help the reader decide what they would receive, what they would need to contribute, and what happens next.",
+          "A proposal is not automatically a contract, a complete project plan, or a guaranteed result. The document may become part of a formal agreement, depending on how the parties use it and the rules that apply. State whether it is an estimate, a request for approval, or part of an agreement, and get appropriate legal advice when the work or jurisdiction requires it.",
+          "The format can be short or detailed. A small, well-understood task may need only a concise page. A complex engagement, formal procurement process, or client's request for proposal (RFP) may require specific sections, attachments, pricing tables, or submission rules. Follow the client's instructions first; do not force every project into the same template."
+        ]
+      },
+      {
+        "heading": "Clarify the need before you draft",
+        "paragraphs": [
+          "The fastest way to write the wrong proposal is to start before you understand the request. Ask what problem the client is trying to solve, who is affected, what they have already tried, and why the work matters now. Find out who will review the proposal and who can approve the budget or make decisions.",
+          "Then clarify the practical boundaries. What must be ready, and by when? Is there a launch date, event, existing system, brand guide, approval process, or technical requirement the work must fit? What materials, access, decisions, or subject-matter input will the client provide? Are there accessibility, language, security, or confidentiality requirements?",
+          "Separate what the client told you from what you inferred. If a detail would change the fee, schedule, or recommended approach, ask rather than burying it in an assumption. If the brief is incomplete, a short discovery phase can be the proposal: define its output, duration, fee, and what decision it will enable before promising the larger project."
+        ]
+      },
+      {
+        "heading": "Open with the client's problem and desired outcome",
+        "paragraphs": [
+          "Start with a short summary that lets a busy reader recognize their situation. State the problem in neutral language, describe the outcome they want, and give your recommended approach in a sentence or two. Reuse the client's terminology accurately, but do not claim to know more about their situation than the discovery conversation established.",
+          "Make the outcome observable. “Improve the website” is too broad to guide a decision. A more useful objective might be “deliver a reviewed set of five redesigned service pages that the client's team can publish.” The objective names a result without promising a business effect that depends on factors outside your control, such as a guaranteed sales increase.",
+          "A short proposal summary is a decision aid, not a dramatic sales pitch. Keep the main recommendation visible, move supporting detail into the relevant section, and be honest about unresolved questions. If you present options, say what changes between them and which one you recommend."
+        ]
+      },
+      {
+        "heading": "Define scope through deliverables and boundaries",
+        "paragraphs": [
+          "Describe the output the client will receive, not just the activity you will perform. “Consulting” or “design work” can mean very different things to two people. A deliverable might be a research summary, an editable design file, a fixed number of revised pages, or a tested text draft. Name the format, quantity, and any important acceptance or handoff details when they are known.",
+          "State what is not included when a reasonable client could otherwise expect it. For example, a proposal for a website copy review might exclude writing new pages, development, translation, paid stock images, and post-launch updates. Exclusions are not a way to surprise a client later; they make the initial agreement more useful by identifying where separate approval may be needed.",
+          "List assumptions and dependencies beside the scope. You may be assuming that the client supplies approved source material by a particular date, that one person consolidates feedback, or that work uses an existing content system. Explain how a delay or changed assumption affects the schedule or price. Do not frame the client's responsibilities as fine print.",
+          "For work that may evolve, describe a change process: how a new request is assessed, how its effect on cost and timing is communicated, and when work on it begins. This keeps a proposal flexible without implying that every extra task is included in the original fee."
+        ],
+        "bullets": [
+          "Deliverables: what the client receives, in which format, and in what quantity.",
+          "Included work: the research, drafts, meetings, revisions, or handoff covered by the fee.",
+          "Exclusions: related work that needs a separate estimate or approval.",
+          "Client inputs: materials, decisions, access, and feedback needed to proceed.",
+          "Acceptance: how the client will review the deliverable and report specific issues."
+        ]
+      },
+      {
+        "heading": "Set a schedule with review time built in",
+        "paragraphs": [
+          "Give a realistic sequence rather than one optimistic finish date. Identify the main phases or milestones, the estimated dates or duration, and the decision or input needed at each handoff. For example: kickoff after approval; draft delivery after source materials arrive; review during an agreed feedback window; and final handoff after one consolidated revision round.",
+          "Make the conditions behind the timing visible. If the delivery date depends on receiving content, access, or approval by a certain day, say so. Explain that late input or extra revision rounds may move later milestones. This is clearer than presenting an exact date as if no one else needs to act.",
+          "Specify the feedback process. Who reviews the work? Should comments be consolidated into one document? How many revision rounds are included, and what counts as a revision rather than new scope? Define the response window that keeps the schedule realistic. The exact arrangement depends on the project; avoid presenting an arbitrary number of days as a universal rule."
+        ]
+      },
+      {
+        "heading": "Explain the price so the client can evaluate it",
+        "paragraphs": [
+          "Show what the price covers and how it relates to the proposed scope. Depending on the work, you might quote a fixed project fee, a time-based estimate, or clearly separated phases. If the amount is an estimate rather than a fixed price, label it and explain the assumptions or range. Do not make an estimate look certain by showing more decimal places.",
+          "Break out meaningful costs when doing so helps the client understand the decision: for example, discovery, production, review, or third-party expenses. You do not have to reveal an internal salary calculation or every minute of effort. Explain the basis that matters to the buyer, such as the number of deliverables, rounds of review, or specialist tasks included.",
+          "State whether taxes, travel, licensed materials, hosting, or other expenses are included, excluded, or billed only after approval. If there are payment stages, connect them to dates or deliverables and make the due dates explicit. Payment terms, cancellation, ownership, and other contractual conditions can have legal consequences; agree them clearly and use professional advice where necessary.",
+          "If you offer tiers, make the difference real and easy to compare. A lower-priced option should not quietly remove something the client needs to achieve the stated objective. Identify what each option includes, what it omits, and any effect on timing. A single recommended option is often clearer than several packages created only to make one look artificially attractive."
+        ]
+      },
+      {
+        "heading": "Show relevant experience without overclaiming",
+        "paragraphs": [
+          "Use one or two relevant examples to show that you understand the kind of work, audience, or constraint involved. Explain your contribution accurately and distinguish your work from the work of a team. Get permission before sharing confidential client material or identifying information; a proposal should not disclose someone else's private details to make a sales point.",
+          "Do not pad the document with every qualification or past project. A short proof point connected to the proposed work is easier to assess than a portfolio dump. If you are new to the exact type of engagement, be transparent about what you can demonstrate, how you will reduce uncertainty, and what part of the work you would validate first.",
+          "Avoid guarantees about outcomes that depend on the client's market, implementation, other vendors, or audience behavior. You can describe what you will do, what quality checks you will use, and what evidence you will hand over. Keep a promised result within the parts of the work you can actually control."
+        ]
+      },
+      {
+        "heading": "A practical client proposal outline",
+        "paragraphs": [
+          "Adapt this outline to the client's request instead of treating every heading as mandatory. For a small project, several items may fit in a single page. For an RFP, the required response structure takes priority."
+        ],
+        "bullets": [
+          "Title, client, provider, date, and version.",
+          "Summary: the need, desired outcome, and recommendation.",
+          "Scope: deliverables, included tasks, exclusions, and assumptions.",
+          "Schedule: phases, review points, dependencies, and estimated timing.",
+          "Investment: fee or estimate, included costs, exclusions, and payment schedule.",
+          "Responsibilities: what each side supplies, reviews, or approves.",
+          "Relevant experience: concise and permission-safe evidence.",
+          "Next step: how to ask questions, approve the proposal, or start discovery."
+        ],
+        "example": {
+          "input": "Fictional example — Website copy review for a neighborhood repair shop. Goal: make the existing service information easier to scan on mobile. Deliverables: review of five supplied pages, one annotated document, and one consolidated revision round. Exclusions: writing new pages, development, photography, and translation. Schedule: ten working days after the client supplies approved copy; client feedback is due within three working days to keep the target handoff date. Fee: a fixed project amount of €900, excluding any separately approved photography or taxes that apply. Next step: confirm the five page URLs and approve the written scope.",
+          "output": "The example makes the output, boundary, dependency, feedback window, cost, and next decision visible. It does not imply a guaranteed change in traffic or sales."
+        }
+      },
+      {
+        "heading": "Review the document before you send it",
+        "paragraphs": [
+          "Check the proposal against the original request. Does every requested item have an answer, and does each deliverable connect to the client's stated need? Search for inconsistencies in names, amounts, dates, quantities, revision counts, and inclusions. A mismatch between the summary, price table, and terms can make an otherwise strong proposal hard to trust.",
+          "Read for plain language. Define necessary technical terms, shorten sentences carrying several conditions, and use headings that help a reader find scope, schedule, and cost. A proposal should be easy to scan, but visual polish cannot replace a clear description of what is being offered.",
+          "Verify the version, recipient, links, and attachments. Use a word or character counter only if the client's submission rules impose a limit; do not expand the document to meet an arbitrary length target. If you revise a draft, compare the new version with the previous one so that edits to price or scope are intentional and visible.",
+          "Before sending, remove internal notes, comments, tracked changes, placeholder text, and metadata that should not be shared. Protect client information and use the delivery channel the client has approved. Keep a copy of the exact version you sent."
+        ]
+      },
+      {
+        "heading": "Send it with a clear, low-pressure next step",
+        "paragraphs": [
+          "In the accompanying message, say what the proposal is for, point out any decision or open question that needs attention, and explain how the client can respond. If the document has an expiry date because of a real pricing or availability constraint, state the reason and date clearly instead of adding artificial urgency.",
+          "If you follow up, refer to the specific proposal and ask whether the client has questions or needs a change to the scope. Allow a reasonable interval for their process and avoid repeated reminders through unrelated channels. A proposal is useful even if the answer is no: a clear response helps you decide whether to revise, pause, or close the opportunity."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I prefer a proposal that helps both sides notice a mismatch before work starts. A specific boundary or honest assumption can feel less persuasive than an ambitious promise, but it gives the client a better basis for deciding and makes the working relationship more predictable."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build privacy-respecting text tools because I believe your text should not have to leave your browser."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "8 Ways to Make Your Business Proposal Stand Out",
+        "publisher": "SCORE",
+        "url": "https://www.score.org/articles/8-ways-make-your-business-proposal-stand-out/"
+      },
+      {
+        "title": "Project Proposal: What It Is and How to Write One Guide",
+        "publisher": "Asana",
+        "url": "https://asana.com/resources/project-proposal"
+      }
+    ]
+  },
+  {
     "slug": "how-to-write-a-professional-bio",
     "published": "2026-11-18",
     "title": "How to Write a Professional Bio (With Examples) | TextToools",

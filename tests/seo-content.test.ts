@@ -61,6 +61,9 @@ const followUpEmailPost = parsedEnglishBlogPosts.find(
 const professionalBioPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-a-professional-bio',
 )
+const clientProposalPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-a-client-proposal',
+)
 const dailyTodoListGuide = englishToolGuides.find(
   (guide: { id: string }) => guide.id === 'daily-todo-list',
 )
@@ -463,6 +466,61 @@ test('professional bio guide targets a distinct intent and has localized example
     assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
     assert.equal(png.readUInt32BE(16), 1200)
     assert.equal(png.readUInt32BE(20), 630)
+  }
+})
+
+test('client proposal guide has distinct intent, at least 1,200 words, and complete translations', () => {
+  const localizedPosts = [
+    clientProposalPost,
+    parsedSpanishContent.blog.posts['how-to-write-a-client-proposal'],
+    parsedPortugueseContent.blog.posts['how-to-write-a-client-proposal'],
+    parsedFrenchContent.blog.posts['how-to-write-a-client-proposal'],
+    parsedChineseContent.blog.posts['how-to-write-a-client-proposal'],
+  ]
+  const sourceUrls = [
+    'https://www.score.org/articles/8-ways-make-your-business-proposal-stand-out/',
+    'https://asana.com/resources/project-proposal',
+  ].sort()
+  const articleText = clientProposalPost.sections.flatMap(
+    (section: {
+      paragraphs: string[]
+      bullets?: string[]
+      example?: { input: string; output: string }
+    }) => [
+      ...section.paragraphs,
+      ...(section.bullets ?? []),
+      ...(section.example ? [section.example.input, section.example.output] : []),
+    ],
+  ).join(' ')
+
+  assert.ok(clientProposalPost)
+  assert.equal(clientProposalPost.published, '2026-11-19')
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'how-to-write-a-client-proposal',
+    ).length,
+    1,
+  )
+  assert.ok((articleText.match(/\S+/gu) ?? []).length >= 1200)
+  assert.match(clientProposalPost.title, /client proposal/i)
+  assert.doesNotMatch(clientProposalPost.title, /project status report|meeting minutes|professional bio/i)
+  assert.match(articleText, /assumptions|assumptions/i)
+  assert.match(articleText, /exclusions/i)
+  assert.match(articleText, /fictional example/i)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, clientProposalPost.sections.length)
+    assert.ok(post.sections.every(
+      (section: { heading: string; paragraphs: string[] }) =>
+        section.heading && section.paragraphs.length > 0 && section.paragraphs.every(Boolean),
+    ))
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
   }
 })
 

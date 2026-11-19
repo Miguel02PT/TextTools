@@ -548,6 +548,141 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "how-to-write-a-client-proposal": {
+        "modified": "2026-11-19",
+        "image": "blog-images/es/client-proposal.svg",
+        "imageAlt": "Una propuesta relaciona la necesidad del cliente con entregables definidos, un calendario realista y un precio claro.",
+        "title": "Cómo escribir una propuesta para un cliente: alcance, plazos y precio | TextToools",
+        "description": "Redacta una propuesta clara con problema, entregables, límites, calendario, precio y próximos pasos. Incluye esquema y ejemplo práctico.",
+        "summary": "Una propuesta útil ayuda a ambas partes a decidir si un trabajo concreto encaja al explicar el alcance, las responsabilidades, los plazos y el precio.",
+        "sections": [
+          {
+            "heading": "Qué es una propuesta para un cliente y qué no es",
+            "paragraphs": [
+              "Una propuesta explica un trabajo que quieres que un posible cliente apruebe. Relaciona su necesidad con un enfoque recomendado, entregables concretos, un calendario y un precio estimado o acordado. No se trata solo de demostrar tu capacidad: ayuda a entender qué recibirá el cliente, qué debe aportar y cuál sería el siguiente paso.",
+              "Una propuesta no es automáticamente un contrato, un plan completo del proyecto ni una garantía de resultados. Puede formar parte de un acuerdo formal según cómo la utilicen las partes y las normas aplicables. Indica si es un presupuesto, una solicitud de aprobación o parte de un acuerdo, y busca asesoramiento jurídico adecuado cuando el trabajo o la jurisdicción lo requieran.",
+              "El formato puede ser breve o detallado. Una tarea pequeña y bien definida puede caber en una página; un encargo complejo, una licitación formal o una solicitud de propuesta (RFP) puede exigir secciones, anexos, tablas de precios o instrucciones de entrega específicas. Sigue primero las instrucciones del cliente y no fuerces todos los proyectos a usar la misma plantilla."
+            ]
+          },
+          {
+            "heading": "Aclara la necesidad antes de redactar",
+            "paragraphs": [
+              "La forma más rápida de escribir una propuesta equivocada es empezar sin entender el encargo. Pregunta qué problema quiere resolver el cliente, a quién afecta, qué ha intentado ya y por qué importa ahora. Averigua quién revisará la propuesta y quién puede aprobar el presupuesto o tomar decisiones.",
+              "Después aclara los límites prácticos. ¿Qué debe estar listo y para cuándo? ¿Hay una fecha de lanzamiento, un evento, un sistema existente, una guía de marca, un proceso de aprobación o un requisito técnico que debas respetar? ¿Qué materiales, accesos, decisiones o conocimientos aportará el cliente? ¿Existen requisitos de accesibilidad, idioma, seguridad o confidencialidad?",
+              "Distingue lo que el cliente dijo de lo que tú dedujiste. Si un dato cambia el precio, el calendario o el enfoque, pregunta en lugar de esconderlo en una suposición. Si el encargo está incompleto, puedes proponer una fase breve de exploración: define su resultado, duración, precio y la decisión que permitirá tomar antes de comprometerte con el proyecto completo."
+            ]
+          },
+          {
+            "heading": "Empieza con el problema y el resultado que busca el cliente",
+            "paragraphs": [
+              "Abre con un resumen breve que permita a un lector ocupado reconocer su situación. Explica el problema con neutralidad, el resultado deseado y el enfoque recomendado en una o dos frases. Usa correctamente las palabras del cliente, pero no afirmes saber más de su situación de lo que descubriste.",
+              "Haz que el resultado pueda observarse. «Mejorar el sitio web» es demasiado amplio para orientar una decisión. Un objetivo más útil sería «entregar una colección revisada de cinco páginas de servicios que el equipo del cliente pueda publicar». Así se nombra el resultado sin prometer un efecto comercial que depende de otros factores, como un aumento garantizado de ventas.",
+              "El resumen de la propuesta sirve para decidir, no para escribir un discurso de ventas dramático. Mantén visible la recomendación principal, añade los detalles en su sección y reconoce las preguntas pendientes. Si ofreces opciones, explica qué cambia entre ellas y cuál recomiendas."
+            ]
+          },
+          {
+            "heading": "Define el alcance mediante entregables y límites",
+            "paragraphs": [
+              "Describe lo que recibirá el cliente, no solo las actividades que realizarás. «Asesoría» o «trabajo de diseño» pueden significar cosas distintas para cada persona. Un entregable puede ser un resumen de investigación, un archivo de diseño editable, un número concreto de páginas revisadas o un borrador de texto comprobado. Indica el formato, la cantidad y los detalles importantes de aceptación o entrega cuando los conozcas.",
+              "Aclara qué queda fuera si el cliente razonablemente podría darlo por incluido. Por ejemplo, revisar textos de un sitio podría excluir redactar páginas nuevas, desarrollar el sitio, traducirlo, comprar imágenes y actualizarlo después del lanzamiento. Las exclusiones no sirven para sorprender al cliente más tarde: identifican qué podría requerir aprobación aparte.",
+              "Enumera las suposiciones y dependencias junto al alcance. Puedes suponer que el cliente entregará textos aprobados en cierta fecha, que una persona reunirá los comentarios o que el trabajo utilizará un sistema existente. Explica cómo un retraso o un cambio en esas condiciones afecta al plazo o al precio. No relegues las responsabilidades del cliente a la letra pequeña.",
+              "Si el trabajo puede cambiar, explica cómo se gestionarán los cambios: cómo se evaluará una nueva petición, cómo se comunicarán sus efectos en coste y tiempo, y cuándo empezará. Así la propuesta conserva flexibilidad sin insinuar que todo trabajo adicional está incluido."
+            ],
+            "bullets": [
+              "Entregables: qué recibirá el cliente, en qué formato y en qué cantidad.",
+              "Trabajo incluido: investigación, borradores, reuniones, revisiones y entrega cubiertos.",
+              "Exclusiones: trabajo relacionado que requiere otro presupuesto o aprobación.",
+              "Aportaciones del cliente: materiales, decisiones, accesos y comentarios necesarios.",
+              "Aceptación: cómo revisar el entregable y comunicar problemas concretos."
+            ]
+          },
+          {
+            "heading": "Fija un calendario que reserve tiempo para revisar",
+            "paragraphs": [
+              "Propón una secuencia realista en vez de una única fecha optimista. Indica las fases o hitos, las fechas o duraciones estimadas y la decisión o aportación necesaria en cada entrega. Por ejemplo: inicio tras la aprobación, primer borrador cuando lleguen los materiales, revisión durante un plazo acordado y entrega final después de una ronda consolidada de cambios.",
+              "Explica las condiciones del calendario. Si la fecha final depende de recibir contenido, acceso o aprobación para cierto día, dilo. Aclara que las aportaciones tardías o las rondas adicionales pueden desplazar otros hitos. Es más claro que presentar una fecha exacta como si nadie más tuviera que intervenir.",
+              "Detalla el proceso de comentarios. ¿Quién revisa? ¿Se reunirán las observaciones en un solo documento? ¿Cuántas rondas están incluidas y qué cuenta como cambio de alcance en vez de revisión? Indica el plazo de respuesta necesario para mantener el calendario. El acuerdo dependerá del proyecto: no presentes un número arbitrario de días como regla universal."
+            ]
+          },
+          {
+            "heading": "Explica el precio para que el cliente pueda valorarlo",
+            "paragraphs": [
+              "Muestra qué cubre el precio y cómo se relaciona con el alcance. Según el trabajo, puedes ofrecer un precio fijo, una estimación por horas o fases separadas. Si es una estimación y no un precio cerrado, identifícala y explica sus supuestos o intervalo. No hagas que una estimación parezca segura añadiendo decimales.",
+              "Desglosa los costes importantes si ayuda al cliente a decidir, por ejemplo, exploración, producción, revisión o gastos externos. No tienes que revelar el cálculo interno de cada hora. Explica la base que importa al comprador: cuántos entregables, revisiones o tareas especializadas se incluyen.",
+              "Aclara si los impuestos, desplazamientos, materiales con licencia, alojamiento u otros gastos están incluidos, excluidos o requieren aprobación previa. Si hay pagos por etapas, relaciónalos con fechas o entregables y especifica los vencimientos. Las condiciones de pago, cancelación, propiedad y otras cláusulas pueden tener consecuencias jurídicas; acuerda estos términos con claridad y busca asesoramiento profesional cuando sea necesario.",
+              "Si ofreces varios niveles, haz que la diferencia sea real y fácil de comparar. La opción barata no debería quitar en silencio algo necesario para alcanzar el objetivo. Indica qué incluye y excluye cada opción y cómo afecta al calendario. A menudo es más claro recomendar una opción que crear paquetes para hacer que uno parezca atractivo artificialmente."
+            ]
+          },
+          {
+            "heading": "Demuestra experiencia relevante sin exagerar",
+            "paragraphs": [
+              "Usa uno o dos ejemplos pertinentes para demostrar que entiendes el tipo de trabajo, el público o las limitaciones. Describe con precisión tu aportación y diferencia tu trabajo del del equipo. Pide permiso antes de compartir materiales confidenciales o datos identificativos de clientes; no reveles información privada ajena para vender tu servicio.",
+              "No llenes el documento con todas tus titulaciones y proyectos anteriores. Un ejemplo breve relacionado con el trabajo propuesto se evalúa mejor que un montón de enlaces. Si es tu primer encargo de ese tipo, explica con transparencia qué puedes demostrar, cómo reducirás la incertidumbre y qué parte validarás primero.",
+              "Evita garantizar resultados que dependan del mercado del cliente, la implementación, otros proveedores o la conducta del público. Sí puedes describir lo que harás, los controles de calidad y las evidencias que entregarás. Mantén cada promesa dentro de las partes del trabajo que puedes controlar."
+            ]
+          },
+          {
+            "heading": "Esquema práctico de una propuesta para un cliente",
+            "paragraphs": [
+              "Adapta el esquema a la petición del cliente; no todos los títulos son obligatorios. En un proyecto pequeño, varios elementos pueden caber en una página. Si se trata de una RFP, la estructura de respuesta exigida tiene prioridad."
+            ],
+            "bullets": [
+              "Título, cliente, proveedor, fecha y versión.",
+              "Resumen: necesidad, resultado deseado y recomendación.",
+              "Alcance: entregables, tareas incluidas, exclusiones y supuestos.",
+              "Calendario: fases, revisiones, dependencias y plazos estimados.",
+              "Presupuesto: precio o estimación, costes incluidos y excluidos y calendario de pago.",
+              "Responsabilidades: qué aporta, revisa o aprueba cada parte.",
+              "Experiencia pertinente: pruebas breves y compartidas con permiso.",
+              "Siguiente paso: cómo preguntar, aprobar la propuesta o iniciar la exploración."
+            ],
+            "example": {
+              "input": "Ejemplo ficticio — Revisión del texto de un sitio para un taller local. Objetivo: facilitar la lectura en móviles de la información existente. Entregables: revisión de cinco páginas proporcionadas, un documento con anotaciones y una ronda consolidada de cambios. Excluye nuevas páginas, desarrollo, fotografías y traducción. Plazo: diez días laborables desde que el cliente entregue los textos aprobados; debe enviar comentarios en tres días laborables para mantener la fecha prevista. Precio: tarifa fija de 900 €, sin incluir fotografías aprobadas aparte ni los impuestos aplicables. Siguiente paso: confirmar las cinco direcciones y aprobar el alcance por escrito.",
+              "output": "El ejemplo muestra el resultado, los límites, la dependencia, el plazo para comentarios, el coste y la decisión siguiente. No promete un aumento garantizado de tráfico o ventas."
+            }
+          },
+          {
+            "heading": "Revisa el documento antes de enviarlo",
+            "paragraphs": [
+              "Compara la propuesta con la solicitud original. ¿Responde a cada punto y relaciona cada entregable con la necesidad del cliente? Busca incoherencias entre nombres, importes, fechas, cantidades, revisiones e inclusiones. Una diferencia entre el resumen, la tabla de precios y las condiciones puede reducir la confianza.",
+              "Revisa el lenguaje sencillo. Define los términos técnicos necesarios, acorta las frases con varias condiciones y usa títulos para localizar el alcance, el calendario y el coste. La propuesta debe ser fácil de recorrer, pero un diseño atractivo no sustituye a explicar claramente qué ofreces.",
+              "Comprueba la versión, el destinatario, los enlaces y los anexos. Usa un contador de palabras o caracteres solo si las instrucciones del cliente imponen un límite; no alargues el documento para llegar a una cifra arbitraria. Si corriges un borrador, compara la nueva versión con la anterior para que los cambios en el precio o el alcance sean intencionales y visibles.",
+              "Antes de enviar, quita notas internas, comentarios, cambios registrados, texto provisional y metadatos que no deban compartirse. Protege la información del cliente y usa el canal aprobado. Guarda una copia de la versión exacta que enviaste."
+            ]
+          },
+          {
+            "heading": "Envíala con un siguiente paso claro y sin presionar",
+            "paragraphs": [
+              "En el mensaje de entrega, explica para qué sirve la propuesta, qué decisión o duda requiere atención y cómo puede responder el cliente. Si hay una fecha de caducidad por una limitación real de precio o disponibilidad, explica el motivo y la fecha en vez de crear urgencia artificial.",
+              "Si haces seguimiento, menciona la propuesta concreta y pregunta si hay dudas o si necesita cambiar el alcance. Deja un plazo razonable para que el cliente siga su proceso y evita recordatorios repetidos por canales ajenos. La propuesta también es útil cuando la respuesta es no: te ayuda a decidir si revisar, pausar o cerrar la oportunidad."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Prefiero una propuesta que ayude a ambas partes a detectar un desajuste antes de empezar. Un límite específico o una suposición honesta puede sonar menos persuasivo que una promesa ambiciosa, pero da al cliente una mejor base para decidir y hace más previsible la colaboración."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas de texto que respetan la privacidad porque considero que tu texto no debería tener que salir de tu navegador."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "8 formas de hacer que tu propuesta de negocio destaque",
+            "publisher": "SCORE",
+            "url": "https://www.score.org/articles/8-ways-make-your-business-proposal-stand-out/"
+          },
+          {
+            "title": "Propuesta de proyecto: qué es y cómo redactarla",
+            "publisher": "Asana",
+            "url": "https://asana.com/resources/project-proposal"
+          }
+        ]
+      },
       "how-to-paraphrase-sources": {
         "image": "blog-images/es/paraphrase-sources.svg",
         "imageAlt": "Una idea de una fuente se comprende, se expresa con otras palabras y se acompaña de una cita.",

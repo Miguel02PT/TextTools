@@ -811,6 +811,141 @@
     "description": "Guides pratiques sur le comptage de mots et de caractères, le nettoyage de texte et l'écriture.",
     "intro": "Des guides clairs et pratiques pour comprendre les décomptes, organiser le contenu et mieux travailler avec le texte.",
     "posts": {
+      "how-to-write-a-client-proposal": {
+        "modified": "2026-11-19",
+        "image": "blog-images/client-proposal.svg",
+        "imageAlt": "Une proposition relie le besoin du client à des livrables définis, un calendrier réaliste et un prix clair.",
+        "title": "Comment rédiger une proposition commerciale pour un client : périmètre, délais et prix | TextToools",
+        "description": "Rédigez une proposition claire avec le problème, les livrables, les exclusions, le calendrier, le prix et les prochaines étapes. Avec un plan et un exemple.",
+        "summary": "Une proposition utile aide les deux parties à décider si une mission précise convient en clarifiant son périmètre, les responsabilités, les délais et le prix.",
+        "sections": [
+          {
+            "heading": "Ce qu’est une proposition client — et ce qu’elle n’est pas",
+            "paragraphs": [
+              "Une proposition décrit une mission que vous demandez à un client potentiel d’approuver. Elle relie son besoin à une approche recommandée, des livrables concrets, un calendrier et un prix estimé ou convenu. Il ne s’agit pas seulement de montrer vos compétences : le lecteur doit comprendre ce qu’il recevra, ce qu’il devra fournir et la prochaine étape possible.",
+              "Une proposition n’est pas automatiquement un contrat, un plan de projet complet ou une garantie de résultat. Elle peut faire partie d’un accord formel selon la manière dont les parties l’utilisent et les règles applicables. Précisez s’il s’agit d’un devis, d’une demande d’approbation ou d’une partie d’un accord, et demandez un conseil juridique adapté lorsque la mission ou la juridiction l’exige.",
+              "Le format peut être bref ou détaillé. Une tâche simple et bien définie peut tenir sur une page. Une mission complexe, une procédure formelle ou une demande de proposition (RFP) peut imposer des rubriques, des annexes, un tableau tarifaire ou des modalités d’envoi précises. Suivez d’abord les instructions du client au lieu d’imposer le même modèle à chaque projet."
+            ]
+          },
+          {
+            "heading": "Clarifiez le besoin avant de rédiger",
+            "paragraphs": [
+              "Le moyen le plus rapide de rédiger la mauvaise proposition est de commencer sans comprendre la demande. Demandez quel problème le client veut résoudre, qui est concerné, ce qu’il a déjà essayé et pourquoi cela compte maintenant. Identifiez les personnes qui liront la proposition et celles qui peuvent approuver le budget ou décider.",
+              "Clarifiez ensuite les contraintes pratiques. Qu’est-ce qui doit être prêt, et pour quand ? Y a-t-il une date de lancement, un événement, un système existant, une charte graphique, un processus de validation ou une exigence technique à respecter ? Quels documents, accès, décisions ou avis spécialisés le client fournira-t-il ? Existe-t-il des exigences d’accessibilité, de langue, de sécurité ou de confidentialité ?",
+              "Distinguez ce que le client vous a dit de ce que vous avez déduit. Si un détail peut changer les honoraires, le calendrier ou l’approche, posez la question au lieu de le cacher dans une hypothèse. Si le brief est incomplet, une courte phase de cadrage peut faire l’objet de la proposition : définissez son résultat, sa durée, son prix et la décision qu’elle permettra de prendre avant de promettre le projet complet."
+            ]
+          },
+          {
+            "heading": "Présentez le problème et le résultat recherché par le client",
+            "paragraphs": [
+              "Commencez par un résumé bref qui permet à un lecteur pressé de reconnaître sa situation. Décrivez le problème de façon neutre, le résultat recherché et l’approche recommandée en une ou deux phrases. Reprenez fidèlement les termes du client sans prétendre en savoir plus que ce que la discussion a établi.",
+              "Rendez le résultat observable. « Améliorer le site web » est trop vague pour éclairer une décision. Un objectif plus utile serait « livrer cinq pages de services révisées que l’équipe du client pourra publier ». Il décrit un résultat sans promettre un effet commercial dépendant d’autres facteurs, comme une hausse garantie des ventes.",
+              "Le résumé aide à décider ; ce n’est pas un argumentaire spectaculaire. Faites ressortir la recommandation principale, placez les détails dans les rubriques appropriées et signalez les questions en suspens. Si vous proposez plusieurs options, expliquez leurs différences et indiquez celle que vous conseillez."
+            ]
+          },
+          {
+            "heading": "Définissez le périmètre avec des livrables et des limites",
+            "paragraphs": [
+              "Décrivez ce que le client recevra, pas seulement les activités que vous réaliserez. « Conseil » ou « travail de design » peuvent avoir des sens différents selon les personnes. Un livrable peut être une synthèse de recherche, un fichier de conception modifiable, un nombre défini de pages révisées ou un texte relu. Précisez le format, la quantité et les modalités importantes de validation ou de transfert lorsque vous les connaissez.",
+              "Indiquez ce qui n’est pas compris si un client raisonnable pourrait penser que cela l’est. Par exemple, la relecture du contenu d’un site peut exclure la rédaction de nouvelles pages, le développement, la traduction, les photos de banque d’images et les mises à jour après le lancement. Les exclusions ne servent pas à surprendre le client ensuite : elles montrent ce qui pourrait nécessiter une approbation séparée.",
+              "Précisez les hypothèses et les dépendances à côté du périmètre. Vous pouvez supposer que le client fournira des textes approuvés à une certaine date, qu’une personne centralisera les retours ou que la mission utilisera un système existant. Expliquez l’effet d’un retard ou d’un changement d’hypothèse sur les délais ou le prix. Ne reléguez pas les responsabilités du client en petits caractères.",
+              "Si le besoin peut évoluer, décrivez le processus de changement : comment une nouvelle demande sera évaluée, comment son effet sur le coût et le calendrier sera communiqué et quand le travail commencera. La proposition reste souple sans laisser entendre que toute tâche supplémentaire est comprise dans le prix initial."
+            ],
+            "bullets": [
+              "Livrables : ce que le client recevra, dans quel format et en quelle quantité.",
+              "Travail inclus : recherche, brouillons, réunions, révisions et transfert couverts.",
+              "Exclusions : travaux associés qui nécessitent un devis ou une approbation distincte.",
+              "Contributions du client : documents, décisions, accès et retours nécessaires.",
+              "Validation : comment examiner le livrable et signaler des problèmes précis."
+            ]
+          },
+          {
+            "heading": "Prévoyez un calendrier qui laisse le temps de relire",
+            "paragraphs": [
+              "Proposez une séquence réaliste plutôt qu’une seule date finale optimiste. Indiquez les phases ou les jalons, les dates ou durées estimées et la décision ou la contribution nécessaire à chaque étape. Par exemple : démarrage après approbation, premier brouillon après réception des documents, relecture pendant le délai convenu, puis livraison finale après une série de retours centralisés.",
+              "Rendez visibles les conditions du calendrier. Si la date de livraison dépend de documents, d’un accès ou d’une validation reçus avant un certain jour, dites-le. Expliquez que des retours tardifs ou des tours de révision supplémentaires peuvent décaler les jalons suivants. C’est plus clair que de présenter une date exacte comme si personne d’autre ne devait intervenir.",
+              "Décrivez le processus de retour : qui relit ? Les commentaires seront-ils réunis dans un même document ? Combien de tours sont inclus et qu’est-ce qui constitue un changement de périmètre plutôt qu’une révision ? Précisez le délai de réponse nécessaire pour tenir le calendrier. L’accord dépend du projet ; ne présentez pas un nombre arbitraire de jours comme une règle universelle."
+            ]
+          },
+          {
+            "heading": "Expliquez le prix pour permettre au client de l’évaluer",
+            "paragraphs": [
+              "Montrez ce que le prix couvre et son lien avec le périmètre proposé. Selon la mission, vous pouvez proposer un forfait, une estimation au temps passé ou des phases séparées. Si le montant est estimatif plutôt que fixe, indiquez-le et expliquez les hypothèses ou la fourchette. Des décimales supplémentaires ne rendent pas une estimation plus certaine.",
+              "Détaillez les coûts importants si cela aide à décider : cadrage, production, relecture ou frais de tiers, par exemple. Vous n’avez pas à révéler votre calcul interne pour chaque heure. Expliquez la base pertinente pour l’acheteur, comme le nombre de livrables, de tours de révision ou de tâches spécialisées inclus.",
+              "Précisez si les taxes, déplacements, contenus sous licence, hébergement ou autres frais sont inclus, exclus ou soumis à une approbation préalable. Si le paiement est échelonné, reliez les échéances à des dates ou des livrables et indiquez leur date de règlement. Les modalités de paiement, d’annulation, de propriété et les autres conditions peuvent avoir des conséquences juridiques : convenez-en clairement et demandez un avis professionnel si nécessaire.",
+              "Si vous proposez plusieurs formules, rendez les différences réelles et faciles à comparer. Une option moins chère ne devrait pas supprimer discrètement un élément nécessaire à l’objectif. Indiquez ce que chaque option comprend ou exclut et son effet sur le calendrier. Une seule recommandation est souvent plus claire que des forfaits conçus uniquement pour rendre l’un d’eux artificiellement attractif."
+            ]
+          },
+          {
+            "heading": "Montrez votre expérience sans exagérer",
+            "paragraphs": [
+              "Choisissez un ou deux exemples pertinents pour montrer que vous comprenez le type de mission, le public ou les contraintes. Décrivez précisément votre contribution et distinguez votre travail de celui de l’équipe. Obtenez l’autorisation avant de partager des documents confidentiels ou des éléments qui identifient un client ; ne divulguez pas les informations privées d’autrui pour vendre vos services.",
+              "Ne surchargez pas le document de toutes vos qualifications et de tous vos projets passés. Un exemple concis lié à la mission se juge plus facilement qu’une longue liste de liens. Si vous débutez dans ce type de mission, soyez transparent sur vos preuves, sur votre manière de réduire l’incertitude et sur la partie que vous valideriez en premier.",
+              "Évitez de garantir des résultats qui dépendent du marché du client, de la mise en œuvre, d’autres prestataires ou du comportement du public. Vous pouvez décrire votre travail, vos contrôles qualité et les éléments que vous remettrez. Faites en sorte que chaque promesse porte sur ce que vous maîtrisez réellement."
+            ]
+          },
+          {
+            "heading": "Un plan pratique de proposition client",
+            "paragraphs": [
+              "Adaptez ce plan à la demande du client au lieu de considérer chaque rubrique comme obligatoire. Pour une petite mission, plusieurs éléments peuvent tenir sur une page. Pour un RFP, la structure de réponse imposée reste prioritaire."
+            ],
+            "bullets": [
+              "Titre, client, prestataire, date et version.",
+              "Résumé : besoin, résultat recherché et recommandation.",
+              "Périmètre : livrables, tâches incluses, exclusions et hypothèses.",
+              "Calendrier : phases, relectures, dépendances et délais estimés.",
+              "Budget : prix ou estimation, frais inclus ou exclus et échéancier de paiement.",
+              "Responsabilités : ce que chaque partie fournit, examine ou approuve.",
+              "Expérience pertinente : preuves concises que vous pouvez partager.",
+              "Prochaine étape : poser une question, approuver ou lancer le cadrage."
+            ],
+            "example": {
+              "input": "Exemple fictif — Relecture du contenu du site d’un atelier de réparation de quartier. Objectif : faciliter la lecture sur mobile des informations sur les services existants. Livrables : relecture de cinq pages fournies, un document annoté et un tour de révision regroupé. Hors périmètre : nouvelles pages, développement, photographie et traduction. Calendrier : dix jours ouvrés après réception des textes approuvés ; retours du client sous trois jours ouvrés pour maintenir la date prévue. Prix : forfait de 900 €, hors photos approuvées séparément et taxes applicables. Prochaine étape : confirmer les cinq URL et approuver le périmètre par écrit.",
+              "output": "L’exemple rend visibles le livrable, les limites, la dépendance, le délai de retour, le coût et la prochaine décision. Il ne garantit pas une hausse du trafic ou des ventes."
+            }
+          },
+          {
+            "heading": "Relisez le document avant de l’envoyer",
+            "paragraphs": [
+              "Comparez la proposition à la demande initiale. Chaque point demandé a-t-il une réponse et chaque livrable répond-il au besoin du client ? Repérez les incohérences dans les noms, montants, dates, quantités, tours de révision et éléments inclus. Un décalage entre le résumé, le tableau tarifaire et les conditions peut nuire à la confiance.",
+              "Privilégiez un langage clair. Définissez les termes techniques nécessaires, raccourcissez les phrases avec plusieurs conditions et utilisez des titres pour retrouver le périmètre, le calendrier et le coût. Une proposition doit être facile à parcourir, mais une présentation soignée ne remplace pas une description précise de l’offre.",
+              "Vérifiez la version, le destinataire, les liens et les pièces jointes. Utilisez un compteur de mots ou de caractères uniquement si le client impose une limite ; ne rallongez pas le document pour atteindre un chiffre arbitraire. Si vous révisez un brouillon, comparez les versions pour que les changements de prix ou de périmètre soient intentionnels et visibles.",
+              "Avant l’envoi, retirez les notes internes, commentaires, modifications suivies, textes provisoires et métadonnées à ne pas partager. Protégez les informations du client, utilisez le canal approuvé et conservez une copie de la version exacte envoyée."
+            ]
+          },
+          {
+            "heading": "Envoyez-la avec une prochaine étape claire et sans pression",
+            "paragraphs": [
+              "Dans votre message, précisez l’objet de la proposition, la décision ou la question à examiner et la façon de répondre. Si une date d’expiration reflète une véritable limite de prix ou de disponibilité, donnez clairement le motif et la date au lieu de créer une urgence artificielle.",
+              "Si vous faites une relance, mentionnez la proposition précise et demandez si le client a des questions ou souhaite modifier le périmètre. Laissez-lui un délai raisonnable pour suivre son processus et évitez les rappels répétés sur des canaux sans rapport. Une réponse négative est également utile : elle vous aide à réviser, suspendre ou clore la proposition."
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "Je préfère une proposition qui permet aux deux parties de repérer un décalage avant le début du travail. Une limite précise ou une hypothèse honnête peut sembler moins persuasive qu’une promesse ambitieuse, mais elle donne au client une meilleure base de décision et rend la collaboration plus prévisible."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Rédigé par le fondateur de TextToools. Je crée des outils de texte respectueux de la vie privée, car je pense que votre texte ne devrait pas avoir à quitter votre navigateur."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "8 façons de faire ressortir votre proposition commerciale",
+            "publisher": "SCORE",
+            "url": "https://www.score.org/articles/8-ways-make-your-business-proposal-stand-out/"
+          },
+          {
+            "title": "Proposition de projet : définition et guide de rédaction",
+            "publisher": "Asana",
+            "url": "https://asana.com/resources/project-proposal"
+          }
+        ]
+      },
       "how-to-paraphrase-sources": {
         "image": "blog-images/paraphrase-sources.svg",
         "imageAlt": "Une idée issue d’une source est comprise, reformulée et accompagnée d’une citation.",
