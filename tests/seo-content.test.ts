@@ -933,6 +933,43 @@ test('every translated tool guide has complete Portuguese sections and FAQs', ()
   }
 })
 
+test('JSON formatter explains local processing and is complete in every locale', () => {
+  const guide = englishToolGuides.find(
+    (tool: { id: string }) => tool.id === 'json-formatter',
+  )
+  const localizedGuides = [
+    parsedSpanishContent.tools['json-formatter'],
+    parsedPortugueseContent.tools['json-formatter'],
+    parsedFrenchContent.tools['json-formatter'],
+    parsedChineseContent.tools['json-formatter'],
+  ]
+
+  assert.ok(guide)
+  assert.equal(englishToolGuides.filter((tool: { id: string }) => tool.id === 'json-formatter').length, 1)
+  assert.match(guide.intro, /not uploaded/i)
+  assert.match(
+    guide.sections.flatMap((section: { paragraphs: string[] }) => section.paragraphs).join(' '),
+    /large integer.*not.*rounded/i,
+  )
+  assert.equal(guide.sections.length, 4)
+  assert.equal(guide.faqs.length, 4)
+
+  for (const localizedGuide of localizedGuides) {
+    assert.ok(localizedGuide)
+    assert.ok(localizedGuide.name && localizedGuide.title && localizedGuide.meta)
+    assert.equal(localizedGuide.sections.length, guide.sections.length)
+    assert.equal(localizedGuide.faqs.length, guide.faqs.length)
+    assert.deepEqual(
+      Object.keys(localizedGuide.formatterLabels).sort(),
+      Object.keys(guide.formatterLabels).sort(),
+    )
+    assert.ok(localizedGuide.sections.every(
+      (section: { heading: string; paragraphs: string[] }) =>
+        section.heading && section.paragraphs.length > 0 && section.paragraphs.every(Boolean),
+    ))
+  }
+})
+
 test('Portuguese blog posts include a founder insight and author bio', () => {
   for (const [slug, post] of Object.entries(parsedPortugueseContent.blog.posts)) {
     const authorSection = post.sections.at(-1)

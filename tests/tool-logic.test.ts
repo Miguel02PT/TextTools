@@ -8,6 +8,7 @@ import {
   countGraphemes,
   countSentences,
   countWords,
+  formatJsonText,
   getBlogPageCount,
   getBlogPaginationItems,
   getBlogPagePath,
@@ -71,6 +72,28 @@ test('case converter supports all formats and preserves line separation', () => 
   assert.equal(convertCase('ação rápida', 'camel'), 'açãoRápida')
   assert.equal(convertCase('ação rápida\nsecond line', 'snake'), 'ação_rápida\nsecond_line')
   assert.equal(convertCase('', 'upper'), '')
+})
+
+test('JSON formatter preserves strings and exact number tokens while formatting', () => {
+  const source = '{"id":9007199254740993,"text":"a  b \\"quoted\\"","nested":[true,{"empty":[]}]}'
+  const result = formatJsonText(source, 'pretty')
+
+  assert.equal(result.error, null)
+  assert.equal(
+    result.output,
+    '{\n  "id": 9007199254740993,\n  "text": "a  b \\"quoted\\"",\n  "nested": [\n    true,\n    {\n      "empty": []\n    }\n  ]\n}',
+  )
+  assert.equal(formatJsonText(result.output, 'minify').output, source)
+  assert.equal(formatJsonText('{"x":1}', 'pretty', 4).output, '{\n    "x": 1\n}')
+})
+
+test('JSON formatter reports invalid input and treats empty input separately', () => {
+  const invalid = formatJsonText('{"name":}', 'pretty')
+  assert.equal(invalid.output, '')
+  assert.ok(invalid.error)
+  assert.deepEqual(formatJsonText(' \r\n\t', 'minify'), { output: '', error: null })
+  assert.equal(formatJsonText('[]', 'pretty').output, '[]')
+  assert.equal(formatJsonText('{"line":"one\\ntwo"}', 'pretty').output, '{\n  "line": "one\\ntwo"\n}')
 })
 
 test('text cleaner returns the exact transformed value, including empty results', () => {

@@ -213,6 +213,72 @@
     "Learn how Google handles data.": "Saiba como o Google trata os dados."
   },
   "tools": {
+    "json-formatter": {
+      "name": "Formatador e validador JSON",
+      "description": "Formate, compacte e valide JSON no navegador.",
+      "title": "Formatador JSON online grátis | TextToools",
+      "meta": "Formate, compacte e valide JSON no navegador. Preserve os números originais, escolha recuo de 2 ou 4 espaços e mantenha os dados no dispositivo.",
+      "heading": "Formatador e validador JSON grátis",
+      "intro": "Cole um JSON para formatá-lo, compactá-lo ou verificar se a sintaxe é válida. O processamento ocorre no navegador; o texto não é enviado.",
+      "formatterLabels": {
+        "formatMode": "Modo de formatação",
+        "pretty": "Formatar",
+        "minify": "Compactar",
+        "indentation": "Recuo",
+        "twoSpaces": "2 espaços",
+        "fourSpaces": "4 espaços",
+        "validJson": "JSON válido",
+        "invalidJson": "JSON inválido"
+      },
+      "sections": [
+        {
+          "heading": "Formate ou compacte JSON",
+          "paragraphs": [
+            "Cole um valor JSON para ver o resultado formatado enquanto digita. A formatação legível adiciona quebras de linha e recuos para facilitar a leitura de objetos e listas aninhados. Escolha dois ou quatro espaços. Compactar remove os espaços em branco que ficam fora das strings.",
+            "A ferramenta aceita JSON, não literais de objetos JavaScript. JSON exige aspas duplas nos nomes das propriedades e nas strings e não permite comentários, vírgulas finais, undefined ou funções. Os trechos originais de strings e números são preservados, então um inteiro grande não é arredondado silenciosamente durante a formatação."
+          ]
+        },
+        {
+          "heading": "Valide a sintaxe e corrija o texto de origem",
+          "paragraphs": [
+            "Antes de produzir um resultado, a ferramenta verifica a entrada com o parser JSON do navegador. Um JSON válido mostra uma confirmação e o resultado formatado ou compactado. Uma entrada inválida exibe um erro e não apresenta o texto original como se a operação tivesse funcionado.",
+            "Erros comuns incluem vírgula ou dois-pontos ausentes, colchete sem par, aspas simples, nome de propriedade sem aspas ou vírgula final. Leia o detalhe do parser, corrija o texto e valide novamente. O formatador identifica sintaxe inválida; ele não tenta adivinhar sua intenção nem reparar os dados."
+          ]
+        },
+        {
+          "heading": "Use o resultado com atenção",
+          "paragraphs": [
+            "Copie o resultado ou baixe-o como arquivo JSON e valide-o novamente no aplicativo que vai utilizá-lo. Um documento pode ter sintaxe válida e ainda conter campos, valores, esquemas ou significados incorretos. O formatador verifica a sintaxe JSON, não um contrato de API nem um esquema de configuração.",
+            "Compactar é útil quando um sistema precisa de JSON menor, mas não criptografa os dados nem os torna mais seguros. Mantenha arquivos de origem legíveis no controle de versão quando outras pessoas precisarem revisar alterações e siga as convenções do projeto."
+          ]
+        },
+        {
+          "heading": "Seu JSON permanece no navegador",
+          "paragraphs": [
+            "A formatação e a validação são executadas localmente nesta página. O JSON não é enviado a um servidor do TextToools para processamento, e não é necessário criar uma conta ou instalar nada. A ferramenta não salva a entrada; copie ou baixe o resultado que quiser guardar antes de sair.",
+            "Trate JSON como qualquer outro dado: evite colar informações secretas em dispositivos compartilhados e siga as regras da sua organização. Um formatador no navegador é prático, mas não substitui controles de acesso nem armazenamento seguro."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "O formatador aceita objetos JavaScript ou JSON com comentários?",
+          "answer": "Não. Ele valida JSON padrão. Nomes de propriedades e strings precisam de aspas duplas; comentários, vírgulas finais, funções e undefined não são JSON válido."
+        },
+        {
+          "question": "A formatação pode alterar um número inteiro grande?",
+          "answer": "Não. O formatador preserva o trecho original do número em vez de converter o valor de volta pela representação numérica do JavaScript, evitando arredondar inteiros grandes."
+        },
+        {
+          "question": "Meu JSON é enviado ou salvo?",
+          "answer": "Não. A formatação ocorre no navegador e a entrada não é enviada ao TextToools nem salva por esta ferramenta."
+        },
+        {
+          "question": "Qual é a diferença entre formatar e compactar?",
+          "answer": "Formatar adiciona recuos e quebras de linha para facilitar a leitura. Compactar remove espaços fora das strings para gerar um resultado menor, sem alterar os dados nem o conteúdo das strings."
+        }
+      ]
+    },
     "daily-todo-list": {
       "name": "Lista diária de tarefas",
       "description": "Organize tarefas por data e baixe a lista do dia selecionado.",

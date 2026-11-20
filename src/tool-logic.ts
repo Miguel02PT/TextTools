@@ -1,6 +1,7 @@
 export type Locale = 'en' | 'zh-CN' | 'es' | 'pt-BR' | 'fr'
 export type CaseFormat = 'upper' | 'lower' | 'title' | 'sentence' | 'camel' | 'snake'
 export type SortMode = 'az' | 'za' | 'reverse'
+export type JsonFormatMode = 'pretty' | 'minify'
 export type ToolId =
   | 'word-counter'
   | 'character-counter'
@@ -15,10 +16,126 @@ export type ToolId =
   | 'keyword-density'
   | 'browser-notepad'
   | 'daily-todo-list'
+  | 'json-formatter'
 
 export type TextListStyle = 'bulleted' | 'numbered'
 export type TodoItem = { id: string; text: string; completed: boolean }
 export type TodoLists = Record<string, TodoItem[]>
+
+export function formatJsonText(
+  input: string,
+  mode: JsonFormatMode,
+  indentation: 2 | 4 = 2,
+) {
+  if (!/[^ \t\r\n]/u.test(input)) return { output: '', error: null }
+
+  try {
+    JSON.parse(input)
+  } catch (error) {
+    if (error instanceof SyntaxError) return { output: '', error: error.message }
+    throw error
+  }
+
+  const parts: string[] = []
+  const indent = mode === 'pretty' ? ' '.repeat(indentation) : ''
+  let depth = 0
+  let lastToken = ''
+  let index = 0
+
+  while (index < input.length) {
+    const character = input.charAt(index)
+    if (character === ' ' || character === '\t' || character === '\r' || character === '\n') {
+      index += 1
+      continue
+    }
+
+    if (character === '"') {
+      const start = index
+      index += 1
+      while (index < input.length) {
+        const current = input.charAt(index)
+        index += 1
+        if (current === '\\') {
+          index += 1
+        } else if (current === '"') {
+          break
+        }
+      }
+      parts.push(input.slice(start, index))
+      lastToken = 'string'
+      continue
+    }
+
+    if (character === '{' || character === '[') {
+      if (mode === 'pretty') {
+        let next = index + 1
+        while (
+          input.charAt(next) === ' ' ||
+          input.charAt(next) === '\t' ||
+          input.charAt(next) === '\r' ||
+          input.charAt(next) === '\n'
+        ) {
+          next += 1
+        }
+
+        const closingCharacter = character === '{' ? '}' : ']'
+        if (input.charAt(next) === closingCharacter) {
+          parts.push(character, closingCharacter)
+          index = next + 1
+          lastToken = closingCharacter
+          continue
+        }
+
+        depth += 1
+        parts.push(character, '\n', indent.repeat(depth))
+      } else {
+        parts.push(character)
+      }
+      lastToken = character
+      index += 1
+      continue
+    }
+
+    if (character === '}' || character === ']') {
+      if (mode === 'pretty') {
+        depth -= 1
+        if (lastToken !== (character === '}' ? '{' : '[')) {
+          parts.push('\n', indent.repeat(depth))
+        }
+      }
+      parts.push(character)
+      lastToken = character
+      index += 1
+      continue
+    }
+
+    if (character === ',') {
+      parts.push(mode === 'pretty' ? `,\n${indent.repeat(depth)}` : ',')
+      lastToken = character
+      index += 1
+      continue
+    }
+
+    if (character === ':') {
+      parts.push(mode === 'pretty' ? ': ' : ':')
+      lastToken = character
+      index += 1
+      continue
+    }
+
+    const start = index
+    while (
+      index < input.length &&
+      !' \t\r\n{}[],:"'.includes(input.charAt(index))
+    ) {
+      index += 1
+    }
+    parts.push(input.slice(start, index))
+    lastToken = 'value'
+  }
+
+  return { output: parts.join(''), error: null }
+}
 
 export const BLOG_POSTS_PER_PAGE = 10
 

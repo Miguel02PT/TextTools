@@ -211,6 +211,72 @@
     "Learn how Google handles data.": "Découvrez comment Google traite les données."
   },
   "tools": {
+    "json-formatter": {
+      "name": "Formateur et validateur JSON",
+      "description": "Formatez, minifiez et validez du JSON dans votre navigateur.",
+      "title": "Formateur JSON en ligne gratuit | TextToools",
+      "meta": "Formatez, minifiez et validez du JSON dans votre navigateur. Préservez les nombres, choisissez une indentation de 2 ou 4 espaces et gardez vos données sur votre appareil.",
+      "heading": "Formateur et validateur JSON gratuit",
+      "intro": "Collez du JSON pour le formater, le minifier ou vérifier sa syntaxe. Le traitement s'effectue dans votre navigateur ; le texte n'est pas envoyé.",
+      "formatterLabels": {
+        "formatMode": "Mode de formatage",
+        "pretty": "Formater",
+        "minify": "Minifier",
+        "indentation": "Indentation",
+        "twoSpaces": "2 espaces",
+        "fourSpaces": "4 espaces",
+        "validJson": "JSON valide",
+        "invalidJson": "JSON invalide"
+      },
+      "sections": [
+        {
+          "heading": "Formatez ou minifiez du JSON",
+          "paragraphs": [
+            "Collez une valeur JSON pour voir le résultat formaté au fil de la saisie. Le mode lisible ajoute des retours à la ligne et une indentation qui facilitent l'examen des objets et tableaux imbriqués. Choisissez deux ou quatre espaces. Le mode minifié supprime les espaces situés hors des chaînes.",
+            "L'outil accepte le JSON, et non les littéraux d'objets JavaScript. Le JSON exige des guillemets doubles pour les noms de propriétés et les chaînes ; il n'autorise ni commentaires, ni virgules finales, ni undefined, ni fonctions. Les fragments d'origine des chaînes et des nombres sont conservés : un grand entier n'est donc pas arrondi silencieusement."
+          ]
+        },
+        {
+          "heading": "Validez la syntaxe et corrigez la source",
+          "paragraphs": [
+            "Avant de produire un résultat, l'outil vérifie l'entrée avec l'analyseur JSON du navigateur. Un JSON valide affiche une confirmation et le résultat formaté ou minifié. Une entrée invalide affiche une erreur et le texte d'origine n'est pas présenté comme un résultat réussi.",
+            "Les erreurs courantes comprennent une virgule ou un deux-points manquant, un crochet non apparié, des apostrophes, un nom de propriété sans guillemets ou une virgule finale. Consultez le détail de l'analyseur, corrigez la source et vérifiez à nouveau. Le formateur détecte la syntaxe invalide ; il ne devine pas votre intention et ne répare pas automatiquement les données."
+          ]
+        },
+        {
+          "heading": "Utilisez le résultat avec précaution",
+          "paragraphs": [
+            "Copiez le résultat ou téléchargez-le en fichier JSON, puis validez-le dans l'application qui doit l'utiliser. Un document peut avoir une syntaxe valide tout en contenant des champs, des valeurs, un schéma ou une signification incorrects. Cet outil vérifie la syntaxe JSON, pas un contrat d'API ni un schéma de configuration.",
+            "La minification est utile lorsqu'un système a besoin d'un JSON compact, mais elle ne chiffre pas les données et ne les rend pas plus sûres. Conservez des fichiers source lisibles dans le contrôle de version lorsque les changements doivent être examinés et suivez les conventions du projet."
+          ]
+        },
+        {
+          "heading": "Votre JSON reste dans le navigateur",
+          "paragraphs": [
+            "Le formatage et la validation s'exécutent localement sur cette page. Votre JSON n'est pas envoyé à un serveur TextToools pour traitement ; aucun compte ni aucune installation ne sont nécessaires. L'outil n'enregistre pas l'entrée : copiez ou téléchargez le résultat à conserver avant de quitter la page.",
+            "Traitez le JSON comme toute autre donnée : évitez de coller des secrets sur un appareil partagé et respectez les règles de votre organisation. Un formateur dans le navigateur est pratique, mais ne remplace ni les contrôles d'accès ni le stockage sécurisé."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Ce formateur accepte-t-il les objets JavaScript ou le JSON avec commentaires ?",
+          "answer": "Non. Il valide le JSON standard. Les noms de propriétés et les chaînes doivent utiliser des guillemets doubles ; les commentaires, les virgules finales, les fonctions et undefined ne sont pas du JSON valide."
+        },
+        {
+          "question": "Le formatage peut-il modifier un grand entier ?",
+          "answer": "Non. Le formateur préserve le fragment numérique d'origine au lieu de reconvertir la valeur selon la représentation numérique de JavaScript ; les grands entiers ne sont donc pas arrondis."
+        },
+        {
+          "question": "Mon JSON est-il envoyé ou enregistré ?",
+          "answer": "Non. Le formatage s'effectue dans votre navigateur ; l'entrée n'est pas envoyée à TextToools et n'est pas enregistrée par cet outil."
+        },
+        {
+          "question": "Quelle est la différence entre formater et minifier ?",
+          "answer": "Le formatage ajoute une indentation et des retours à la ligne pour faciliter la lecture. La minification supprime les espaces hors des chaînes pour obtenir un résultat compact, sans modifier les données ni le contenu des chaînes."
+        }
+      ]
+    },
     "daily-todo-list": {
       "name": "Liste quotidienne de tâches",
       "description": "Organisez vos tâches par date et téléchargez la liste du jour choisi.",

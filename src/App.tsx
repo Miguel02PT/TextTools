@@ -4,6 +4,7 @@ import {
   ArrowRight,
   BarChart3,
   BookOpen,
+  Braces,
   CalendarDays,
   Clock3,
   ChevronDown,
@@ -42,6 +43,7 @@ import {
   cleanText,
   computeMetrics,
   convertCase,
+  formatJsonText,
   formatReadingTime,
   generateLoremText,
   getToolOutputContent,
@@ -61,6 +63,7 @@ import {
   resolveRouteKind,
   sortLines,
   type CaseFormat,
+  type JsonFormatMode,
   type Locale,
   type SortMode,
   type TodoItem,
@@ -110,6 +113,16 @@ type ToolGuide = {
     unchanged: string
     tooLarge: string
   }
+  formatterLabels?: {
+    formatMode: string
+    pretty: string
+    minify: string
+    indentation: string
+    twoSpaces: string
+    fourSpaces: string
+    validJson: string
+    invalidJson: string
+  }
   sections: {
     heading: string
     paragraphs: string[]
@@ -124,6 +137,9 @@ type ToolGuide = {
     answer: string
   }[]
 }
+
+const emptyJsonFormatterResult = { output: '', error: null }
+
 type LocalizedToolGuide = Omit<ToolGuide, 'id'> & {
   name: string
   description: string
@@ -275,6 +291,13 @@ const toolList: Tool[] = [
     description: 'Trim, normalize spacing, and tidy messy text.',
     category: 'Text Cleaning',
     icon: Wand2,
+  },
+  {
+    id: 'json-formatter',
+    name: 'JSON Formatter & Validator',
+    description: 'Format, minify, and validate JSON in your browser.',
+    category: 'Text Formatting',
+    icon: Braces,
   },
   {
     id: 'duplicate-lines',
@@ -821,6 +844,8 @@ function App() {
   const [revisedText, setRevisedText] = useState('')
   const [findText, setFindText] = useState('')
   const [replaceText, setReplaceText] = useState('')
+  const [jsonFormatMode, setJsonFormatMode] = useState<JsonFormatMode>('pretty')
+  const [jsonIndentation, setJsonIndentation] = useState<2 | 4>(2)
   const [actionMessage, setActionMessage] = useState('')
   const [matchCase, setMatchCase] = useState(false)
   const [wholeWord, setWholeWord] = useState(false)
@@ -1081,9 +1106,19 @@ function App() {
     () => compareText(text, revisedText),
     [revisedText, text],
   )
+  const jsonFormatterResult = useMemo(
+    () =>
+      activeTool === 'json-formatter'
+        ? formatJsonText(text, jsonFormatMode, jsonIndentation)
+        : emptyJsonFormatterResult,
+    [activeTool, jsonFormatMode, jsonIndentation, text],
+  )
 
   const transformedText = useMemo(() => {
     switch (activeTool) {
+      case 'json-formatter':
+        return jsonFormatterResult.output
+
       case 'text-diff':
         return formatTextDiff(textDiffResult.lines)
 
@@ -1117,6 +1152,7 @@ function App() {
     }
   }, [
     activeTool,
+    jsonFormatterResult,
     textDiffResult,
     caseFormat,
     collapseCleanerSpaces,
@@ -1195,12 +1231,14 @@ function App() {
       const anchor = document.createElement('a')
       anchor.href = url
       anchor.download =
-        activeTool === 'daily-todo-list'
-          ? getTodoDownloadFilename(
-              todoSelectedDate,
-              localeText?.filenamePrefix ?? 'daily task list',
-            )
-          : `${activeToolInfo.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.txt`
+        activeTool === 'json-formatter'
+          ? 'formatted.json'
+          : activeTool === 'daily-todo-list'
+            ? getTodoDownloadFilename(
+                todoSelectedDate,
+                localeText?.filenamePrefix ?? 'daily task list',
+              )
+            : `${activeToolInfo.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.txt`
       document.body.appendChild(anchor)
       anchor.click()
       anchor.remove()
@@ -1232,6 +1270,53 @@ function App() {
 
   const renderControls = () => {
     switch (activeTool) {
+      case 'json-formatter': {
+        const labels = activeToolGuide?.formatterLabels
+        return (
+          <div className="space-y-3">
+            <div
+              role="group"
+              aria-label={labels?.formatMode ?? 'Formatting mode'}
+              className="flex flex-wrap gap-2"
+            >
+              {([
+                ['pretty', labels?.pretty ?? 'Pretty print'],
+                ['minify', labels?.minify ?? 'Minify'],
+              ] as const).map(([mode, label]) => (
+                <button
+                  key={mode}
+                  type="button"
+                  onClick={() => setJsonFormatMode(mode)}
+                  aria-pressed={jsonFormatMode === mode}
+                  className={`rounded-full border px-3 py-2 text-sm font-medium transition ${
+                    jsonFormatMode === mode
+                      ? 'border-slate-900 bg-slate-900 text-white'
+                      : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <label className="flex w-fit items-center gap-2 text-sm font-medium text-slate-700">
+              {labels?.indentation ?? 'Indentation'}
+              <select
+                value={jsonIndentation}
+                onChange={(event) => {
+                  const indentation = Number(event.target.value)
+                  if (indentation === 2 || indentation === 4) setJsonIndentation(indentation)
+                }}
+                disabled={jsonFormatMode === 'minify'}
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 outline-none transition focus:border-slate-400 disabled:bg-slate-100"
+              >
+                <option value={2}>{labels?.twoSpaces ?? '2 spaces'}</option>
+                <option value={4}>{labels?.fourSpaces ?? '4 spaces'}</option>
+              </select>
+            </label>
+          </div>
+        )
+      }
+
       case 'case-converter': {
         const labels: Record<CaseFormat, string> = {
           upper: localeText?.upper ?? 'UPPERCASE',
@@ -1842,7 +1927,9 @@ function App() {
                   onClick={copyText}
                   disabled={
                     (activeTool === 'text-diff' && textDiffResult.error !== null) ||
-                    (activeTool === 'daily-todo-list' && !todoSelectedDate)
+                    (activeTool === 'daily-todo-list' && !todoSelectedDate) ||
+                    (activeTool === 'json-formatter' &&
+                      (jsonFormatterResult.error !== null || !text.trim()))
                   }
                   title={localizedCopy(locale, 'Copy the output content', '复制结果')}
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
@@ -1855,7 +1942,9 @@ function App() {
                   onClick={downloadText}
                   disabled={
                     (activeTool === 'text-diff' && textDiffResult.error !== null) ||
-                    (activeTool === 'daily-todo-list' && !todoSelectedDate)
+                    (activeTool === 'daily-todo-list' && !todoSelectedDate) ||
+                    (activeTool === 'json-formatter' &&
+                      (jsonFormatterResult.error !== null || !text.trim()))
                   }
                   title={localizedCopy(locale, 'Download the output content', '下载结果')}
                   className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
@@ -2210,22 +2299,38 @@ function App() {
                           )}
                         </>
                       )
+                    ) : activeTool === 'json-formatter' && jsonFormatterResult.error ? (
+                      <p role="alert" className="text-rose-700">
+                        {activeToolGuide?.formatterLabels?.invalidJson ?? 'Invalid JSON'}: {jsonFormatterResult.error}
+                      </p>
                     ) : (
-                      <pre
-                        aria-labelledby="tool-output-label"
-                        className="h-full min-h-[208px] whitespace-pre-wrap break-words font-sans"
-                      >
-                        {activeTool === 'text-cleaner' ||
-                        activeTool === 'case-converter' ||
-                        activeTool === 'lorem-ipsum' ||
-                        activeTool === 'find-replace' ||
-                        activeTool === 'text-sorter'
-                          ? transformedText ||
-                            (text
-                              ? (localeText?.emptyResult ?? 'The result is empty.')
-                              : (localeText?.emptyOutput ?? 'Your result will appear here when you enter text.'))
-                          : outputContent || (localeText?.transformedOutput ?? 'Your transformed text will appear here.')}
-                      </pre>
+                      <>
+                        {activeTool === 'json-formatter' && text.trim() ? (
+                          <p role="status" className="mb-3 text-xs font-medium text-emerald-700">
+                            {activeToolGuide?.formatterLabels?.validJson ?? 'Valid JSON'}
+                          </p>
+                        ) : null}
+                        <pre
+                          aria-labelledby="tool-output-label"
+                          className={`h-full min-h-[208px] whitespace-pre-wrap break-words ${
+                            activeTool === 'json-formatter' ? 'font-mono text-xs leading-6' : 'font-sans'
+                          }`}
+                        >
+                          {activeTool === 'json-formatter' && !text.trim()
+                            ? (localeText?.emptyOutput ?? 'Your result will appear here when you enter text.')
+                            : activeTool === 'text-cleaner' ||
+                                activeTool === 'case-converter' ||
+                                activeTool === 'lorem-ipsum' ||
+                                activeTool === 'find-replace' ||
+                                activeTool === 'text-sorter'
+                              ? transformedText ||
+                                (text
+                                  ? (localeText?.emptyResult ?? 'The result is empty.')
+                                  : (localeText?.emptyOutput ?? 'Your result will appear here when you enter text.'))
+                              : outputContent ||
+                                (localeText?.transformedOutput ?? 'Your transformed text will appear here.')}
+                        </pre>
+                      </>
                     )}
                   </div>
                 </div>

@@ -631,5 +631,74 @@
         "answer": "No. They are saved only in local storage in this browser and device profile. Download the list if you need a separate copy."
       }
     ]
+  },
+  {
+    "id": "json-formatter",
+    "title": "Free JSON Formatter & Validator Online | TextToools",
+    "description": "Format, minify, and validate JSON in your browser. Preserve number tokens, choose 2- or 4-space indentation, and keep your data on your device.",
+    "heading": "Free JSON formatter and validator",
+    "intro": "Paste JSON to format it for reading, minify it for compact storage, or check whether its syntax is valid. Processing happens in your browser; your text is not uploaded.",
+    "formatterLabels": {
+      "formatMode": "Formatting mode",
+      "pretty": "Pretty print",
+      "minify": "Minify",
+      "indentation": "Indentation",
+      "twoSpaces": "2 spaces",
+      "fourSpaces": "4 spaces",
+      "validJson": "Valid JSON",
+      "invalidJson": "Invalid JSON"
+    },
+    "sections": [
+      {
+        "heading": "Format or minify JSON",
+        "paragraphs": [
+          "Paste a JSON value to see a formatted result as you type. Pretty print adds line breaks and indentation so nested objects and arrays are easier to inspect. Choose two or four spaces for indentation. Minify removes whitespace outside strings to create a compact representation.",
+          "The formatter accepts JSON, not JavaScript object literals. JSON requires double-quoted property names and strings, and does not allow comments, trailing commas, undefined, or functions. It preserves the original string and number tokens while changing only structural whitespace, so a large integer is not silently rounded during formatting."
+        ],
+        "example": {
+          "input": "{\"name\":\"Ada\",\"active\":true,\"scores\":[8,10]}",
+          "output": "{\n  \"name\": \"Ada\",\n  \"active\": true,\n  \"scores\": [\n    8,\n    10\n  ]\n}"
+        }
+      },
+      {
+        "heading": "Validate syntax and fix errors at the source",
+        "paragraphs": [
+          "The tool checks the input with the browser's JSON parser before producing a result. Valid JSON displays a confirmation and a formatted or minified output. Invalid input shows an error and does not present the original text as if it were a successful result.",
+          "Common issues include a missing comma or colon, an unmatched bracket, single quotes, an unquoted property name, or a trailing comma. Read the parser detail, correct the source, and check again. This formatter identifies invalid syntax; it does not guess what you meant or repair the data automatically."
+        ]
+      },
+      {
+        "heading": "Use the formatted result carefully",
+        "paragraphs": [
+          "Copy the result or download it as a JSON file, then validate it again in the application that will consume it. A syntactically valid document can still have the wrong fields, values, schema, or business meaning. Formatting checks JSON syntax, not an API contract or configuration schema.",
+          "Minification is useful when a system specifically needs compact JSON, but it does not encrypt data or make it safer. Keep readable source files in version control when people need to review changes, and use the exact formatting conventions required by your project."
+        ]
+      },
+      {
+        "heading": "Your JSON stays in your browser",
+        "paragraphs": [
+          "Formatting and validation run locally in this page. Your JSON is not sent to a TextToools server for processing, and no account or installation is required. The input is not saved by this tool; copy or download any result you need before leaving the page.",
+          "Treat JSON as you would any other data: avoid pasting secrets into a shared device, and follow your organization's handling rules. A browser-based formatter is convenient, but it does not replace access controls or secure storage."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this formatter accept JavaScript objects or JSON with comments?",
+        "answer": "No. It validates standard JSON. Property names and strings must use double quotes, and comments, trailing commas, functions, and undefined are not valid JSON."
+      },
+      {
+        "question": "Can formatting change a large integer?",
+        "answer": "No. The formatter preserves the original number token instead of converting the value back through JavaScript's number representation, so large integer text is not rounded."
+      },
+      {
+        "question": "Is my JSON uploaded or saved?",
+        "answer": "No. Formatting runs in your browser and the input is not uploaded to TextToools or saved by this tool."
+      },
+      {
+        "question": "What is the difference between pretty print and minify?",
+        "answer": "Pretty print adds indentation and line breaks for readability. Minify removes whitespace outside strings for a more compact result; the JSON data and string contents are preserved."
+      }
+    ]
   }
 ]

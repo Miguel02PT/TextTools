@@ -93,6 +93,13 @@ test('pre-rendered text-diff route hydrates without React mismatch', async () =>
   await assertPreRenderedRouteHydrates('/tools/text-diff/')
 })
 
+test('pre-rendered JSON formatter route hydrates without React mismatch', async () => {
+  await assertPreRenderedRouteHydrates(
+    '/tools/json-formatter/',
+    /Free JSON formatter and validator/,
+  )
+})
+
 test('pre-rendered route synchronizes the dark theme after hydration', async () => {
   await assertPreRenderedRouteHydrates('/', undefined, true)
 })

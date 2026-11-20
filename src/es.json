@@ -211,6 +211,72 @@
       "Learn how Google handles data.": "Consulta cómo trata los datos Google."
   },
   "tools": {
+    "json-formatter": {
+      "name": "Formateador y validador JSON",
+      "description": "Formatea, minifica y valida JSON en tu navegador.",
+      "title": "Formateador JSON online gratis | TextToools",
+      "meta": "Formatea, minifica y valida JSON desde tu navegador. Conserva los números exactos, elige sangría de 2 o 4 espacios y mantén los datos en tu dispositivo.",
+      "heading": "Formateador y validador JSON gratis",
+      "intro": "Pega JSON para ordenarlo, compactarlo o comprobar si su sintaxis es válida. El procesamiento se hace en tu navegador y el texto no se sube.",
+      "formatterLabels": {
+        "formatMode": "Modo de formato",
+        "pretty": "Formatear",
+        "minify": "Minificar",
+        "indentation": "Sangría",
+        "twoSpaces": "2 espacios",
+        "fourSpaces": "4 espacios",
+        "validJson": "JSON válido",
+        "invalidJson": "JSON no válido"
+      },
+      "sections": [
+        {
+          "heading": "Formatea o minifica JSON",
+          "paragraphs": [
+            "Pega un valor JSON y verás el resultado formateado mientras escribes. El formato legible añade saltos de línea y sangría para facilitar la revisión de objetos y matrices anidados. Elige dos o cuatro espacios. La opción de minificar elimina los espacios en blanco que están fuera de las cadenas.",
+            "La herramienta acepta JSON, no literales de objetos JavaScript. JSON exige comillas dobles en los nombres de propiedades y las cadenas, y no permite comentarios, comas finales, undefined ni funciones. Conserva los fragmentos originales de cadenas y números, por lo que un entero grande no se redondea silenciosamente durante el formato."
+          ]
+        },
+        {
+          "heading": "Valida la sintaxis y corrige el origen del error",
+          "paragraphs": [
+            "Antes de generar un resultado, la herramienta comprueba la entrada con el analizador JSON del navegador. Si el JSON es válido, muestra una confirmación y el resultado formateado o minificado. Si no lo es, muestra un error y no presenta el texto original como si la operación hubiera tenido éxito.",
+            "Entre los errores habituales están una coma o dos puntos que faltan, un corchete sin pareja, comillas simples, un nombre de propiedad sin comillas o una coma final. Consulta el detalle del analizador, corrige el texto de origen y vuelve a comprobarlo. La herramienta detecta sintaxis no válida, pero no adivina la intención ni repara los datos automáticamente."
+          ]
+        },
+        {
+          "heading": "Usa el resultado con cuidado",
+          "paragraphs": [
+            "Copia el resultado o descárgalo como archivo JSON y valida el contenido en la aplicación que vaya a utilizarlo. Un documento puede tener sintaxis válida y aun así incluir campos, valores, esquemas o significados incorrectos. Este formato comprueba la sintaxis JSON, no el contrato de una API ni un esquema de configuración.",
+            "Minificar resulta útil cuando un sistema necesita JSON compacto, pero no cifra los datos ni los vuelve más seguros. Mantén archivos de origen legibles bajo control de versiones cuando otras personas deban revisar los cambios y respeta las convenciones del proyecto."
+          ]
+        },
+        {
+          "heading": "Tus datos JSON permanecen en el navegador",
+          "paragraphs": [
+            "El formato y la validación se ejecutan localmente en esta página. El JSON no se envía a un servidor de TextToools para procesarlo, y no hace falta crear una cuenta ni instalar nada. La herramienta no guarda la entrada; copia o descarga el resultado que quieras conservar antes de salir.",
+            "Trata el JSON como cualquier otro dato: evita pegar secretos en un dispositivo compartido y sigue las normas de tu organización. Un formato en el navegador es práctico, pero no sustituye los controles de acceso ni el almacenamiento seguro."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿El formateador acepta objetos JavaScript o JSON con comentarios?",
+          "answer": "No. Valida JSON estándar. Los nombres de propiedades y las cadenas deben llevar comillas dobles; los comentarios, las comas finales, las funciones y undefined no son JSON válido."
+        },
+        {
+          "question": "¿El formato puede cambiar un número entero grande?",
+          "answer": "No. El formateador conserva el fragmento original del número en vez de convertir el valor de nuevo mediante la representación numérica de JavaScript, así que no redondea los números enteros grandes."
+        },
+        {
+          "question": "¿Se sube o se guarda mi JSON?",
+          "answer": "No. El formato se realiza en tu navegador y la entrada no se sube a TextToools ni se guarda en esta herramienta."
+        },
+        {
+          "question": "¿Qué diferencia hay entre formatear y minificar?",
+          "answer": "Formatear añade sangría y saltos de línea para facilitar la lectura. Minificar elimina los espacios en blanco que están fuera de las cadenas para obtener un resultado compacto, sin cambiar los datos ni el contenido de las cadenas."
+        }
+      ]
+    },
     "daily-todo-list": {
       "name": "Lista diaria de tareas",
       "description": "Organiza tareas por fecha y descarga la lista del día seleccionado.",
