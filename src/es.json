@@ -548,6 +548,142 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "how-to-write-a-meeting-agenda": {
+        "modified": "2026-11-20",
+        "image": "blog-images/es/meeting-agenda.svg",
+        "imageAlt": "Una agenda relaciona un objetivo claro con temas cronometrados, preparación y una decisión.",
+        "title": "Cómo preparar una agenda de reunión eficaz | TextToools",
+        "description": "Prepara una agenda útil con objetivos claros, temas que requieren una decisión, tiempos realistas y notas de preparación. Incluye un ejemplo de 45 minutos.",
+        "summary": "Una agenda útil explica por qué se reúnen las personas, qué requiere cada punto, quién debe prepararse y cómo se utilizará el tiempo.",
+        "sections": [
+          {
+            "heading": "Qué es una agenda de reunión y qué no es",
+            "paragraphs": [
+              "Una agenda es un plan de trabajo breve que ayuda a las personas a prepararse y permite al grupo usar el tiempo de forma deliberada. Indica el resultado que necesita la reunión, los puntos que requieren atención y el contexto suficiente para que todos puedan contribuir. Según la reunión, también puede incluir quién dirige cada punto, el tiempo disponible, la preparación necesaria y la decisión o el seguimiento esperado.",
+              "Una agenda no es solo una lista de temas, una invitación de calendario ni un registro de lo sucedido. «Marketing» ofrece poca orientación. «Elegir los dos conceptos de campaña que se probarán en diciembre» explica para qué sirve la conversación. El acta cumple otra función: registra las decisiones y tareas una vez terminada la reunión. Mantener separados ambos objetivos hace que los dos documentos sean más útiles.",
+              "No toda conversación necesita un documento formal. Una breve puesta al día quizá solo necesite una pregunta compartida y un límite de tiempo. Una reunión de consejo, comité, revisión con un cliente o decisión entre equipos puede requerir una agenda documentada, documentos de apoyo, detalles de accesibilidad o un procedimiento formal. Adapta la estructura a la importancia del asunto y a las reglas del grupo, en lugar de tratar una plantilla como si sirviera para todo."
+            ]
+          },
+          {
+            "heading": "Decide qué debe conseguir la reunión",
+            "paragraphs": [
+              "Escribe el propósito antes de recopilar temas. Pregunta qué debería haber cambiado al terminar: una decisión tomada, un plan acordado, un problema entendido, una recomendación preparada o información compartida. Formula un resultado que los participantes puedan reconocer. «Hablar del lanzamiento» es impreciso; «acordar la fecha de lanzamiento e identificar los obstáculos pendientes» define mejor el trabajo.",
+              "Si no puedes indicar un resultado que mejore gracias a reunir a las personas, plantéate si la reunión es necesaria. Una actualización escrita, un documento compartido o una revisión breve y asíncrona quizá resuelvan una cuestión informativa con menos interrupciones. Si la reunión sigue siendo útil, explica por qué importa hablar en directo: quizá haya que comparar opciones, resolver desacuerdos o tomar una decisión en grupo.",
+              "Distingue el propósito general de los puntos de la agenda. El propósito describe el resultado global; cada punto debe contribuir a él. Si varios temas no tienen relación, pásalos a otro espacio, envíalos como contexto o concierta otra reunión. Una agenda más corta que permita alcanzar el objetivo suele ser mejor que una lista extensa de todo lo que alguien quisiera mencionar."
+            ]
+          },
+          {
+            "heading": "Invita a quienes deben prepararse, contribuir o decidir",
+            "paragraphs": [
+              "Para cada punto propuesto, identifica qué conocimientos se necesitan, quién conducirá la conversación y quién puede decidir o hacer una recomendación. Invita a las personas porque su aportación ayuda al trabajo, no solo porque estén disponibles o asistieran a la reunión anterior. Si la persona que decide no puede asistir, acuerda de antemano si el grupo puede hacer una recomendación, debe aplazar la decisión o cuenta con una persona delegada.",
+              "Explica qué se espera de los asistentes. Alguien puede acudir para compartir una breve actualización, responder preguntas, presentar una opción, cuestionar supuestos o tomar una decisión. Nombrar a una persona responsable y aclarar su papel ayuda a prepararse, pero no significa que solo ella pueda participar. Si alguien solo tiene que leer un informe, enviarlo con una pregunta concreta puede ser mejor que pedirle que asista.",
+              "Ten en cuenta la participación y la accesibilidad desde la planificación. Comprueba el formato, la zona horaria, el enlace o la sala, y comparte materiales que los asistentes puedan utilizar. Cuando haga falta, permite aportaciones escritas antes o después, da tiempo para leer los documentos y no diseñes la agenda para que alguien tenga que improvisar en un idioma o formato que suponga una barrera innecesaria."
+            ]
+          },
+          {
+            "heading": "Convierte los temas generales en puntos que permitan decidir",
+            "paragraphs": [
+              "Un punto útil explica algo más que su tema. Indica qué debe hacer el grupo: debatir un asunto, revisar pruebas, tomar una decisión, aprobar una recomendación o recibir información. En los comités formales, expresiones como «para decidir», «para debatir» o «a título informativo» pueden aclarar la acción solicitada. Sigue siempre la terminología del procedimiento de la organización.",
+              "Añade la pregunta, el contexto o el resultado solicitado que permita actuar. En vez de «Contratación», prueba con «Revisar los dos perfiles finalistas y acordar cuál pasa a la siguiente fase». En vez de «Sitio web», prueba con «Comparar las propuestas para la página de inicio y elegir una para probar con usuarios». No se trata de forzar una decisión cuando falta información, sino de explicar la conversación prevista.",
+              "Si un tema es demasiado amplio para el tiempo disponible, divídelo en una pregunta más pequeña o indica que será una primera revisión. Explica qué pruebas faltan y cuál será el siguiente paso. Que exista un hueco en la agenda no significa que el grupo pueda aprobar una propuesta compleja."
+            ],
+            "bullets": [
+              "Tema: ¿De qué trata el punto?",
+              "Propósito: ¿Es informativo, de debate, consulta o decisión?",
+              "Responsable: ¿Quién lo presenta o centra la conversación?",
+              "Preparación: ¿Qué deben leer, comprobar o traer los asistentes?",
+              "Resultado: ¿Qué decisión, recomendación o seguimiento se espera?"
+            ]
+          },
+          {
+            "heading": "Ordena los puntos para favorecer el resultado",
+            "paragraphs": [
+              "Organiza los puntos según lo que los asistentes necesitan entender y decidir, no solo según cuándo llegó cada solicitud. Empieza por el contexto imprescindible y las tareas pendientes que afecten a la decisión principal. Coloca juntos los temas relacionados y programa una decisión importante cuando todavía estén presentes las personas y la atención necesarias.",
+              "Distingue los asuntos rutinarios de los debates sustanciales. Una actualización breve quizá pueda distribuirse por escrito. Una decisión puede necesitar información previa y un lugar claro en la agenda. Los comités formales pueden tener asuntos obligatorios de apertura, aprobación o confidencialidad; sigue las indicaciones de quien preside y las normas aplicables.",
+              "Da prioridad a lo que debe resolverse en esta reunión. Si se acaba el tiempo, los puntos menos prioritarios solo deberían aplazarse si eso no genera problemas de seguridad, legalidad, servicio o plazos. Marcar prioridades de antemano permite ajustar el orden con criterio, en vez de correr al final o alargar la reunión sin acuerdo."
+            ]
+          },
+          {
+            "heading": "Asigna un tiempo realista a cada punto",
+            "paragraphs": [
+              "Suma el tiempo disponible y asigna bloques realistas. Incluye la apertura, los cambios entre temas, preguntas, una pausa breve si corresponde y un cierre para confirmar decisiones y próximos pasos. Un calendario que ocupa cada minuto en debates no deja margen para una pregunta compleja o un inicio tardío.",
+              "Calcula el tiempo según el trabajo que requiere cada punto, no según la longitud de su título. Una actualización breve puede durar cinco minutos; una decisión que exige contexto, distintas opiniones y un acuerdo claro puede necesitar más. Pregunta a quien la presentará qué debe revisar el grupo y qué resultado se espera. Los tiempos son una ayuda para planificar, no una excusa para interrumpir una conversación necesaria.",
+              "Si la lista no cabe, reduce el número de puntos, limita las preguntas, solicita preparación previa o concierta otra sesión. No soluciones una agenda saturada quitándole tiempo en silencio al último punto. Dejar un pequeño margen y reservar un cierre concreto facilita terminar con una lista clara de decisiones y responsables."
+            ]
+          },
+          {
+            "heading": "Comparte los materiales con una solicitud clara",
+            "paragraphs": [
+              "Envía el material de apoyo con tiempo suficiente para revisarlo. Incluye solo los documentos que ayuden a responder la pregunta de la agenda: un paquete grande de contexto sin indicaciones puede dificultar la preparación. Cuando sea posible, enlaza una fuente actual y accesible en lugar de adjuntar varias copias que puedan quedarse desactualizadas.",
+              "Indica qué se espera del lector con cada elemento. Por ejemplo: «Lee el resumen de opciones de una página e indica cuál cumple mejor los criterios acordados» o «Revisa el texto propuesto y señala errores de hechos antes de la reunión». Identifica a quien prepara el documento, la fecha de entrega y la lectura previa imprescindible. En comités formales, respeta los plazos para entregar y distribuir los documentos.",
+              "No des por sentado que el silencio significa que todos leyeron el material o están de acuerdo. Reserva tiempo para aclarar los datos importantes, plantear desacuerdos y escuchar a quienes no pudieron prepararse. Si un documento fundamental llega tarde, considera si el grupo puede decidir con justicia o si conviene aplazar el punto."
+            ]
+          },
+          {
+            "heading": "Ejemplo práctico de una agenda de equipo de 45 minutos",
+            "paragraphs": [
+              "Este ejemplo ficticio muestra cómo conectar una pregunta con una persona responsable, la preparación y el tiempo. Adapta la estructura a tu grupo; el tema y la duración no son una regla universal."
+            ],
+            "bullets": [
+              "0–3 min — Apertura: confirmar el propósito, el tiempo y los cambios de agenda. Responsable: facilitador.",
+              "3–8 min — Revisar tareas pendientes: identificar qué terminó y qué necesita nueva fecha o responsable. Preparación: lista de tareas. Resultado: próximos pasos confirmados.",
+              "8–18 min — Comparar dos fechas de lanzamiento: debatir la cobertura del equipo y de atención al cliente. Responsable: operaciones. Preparación: leer la comparación de una página. Resultado: elegir fecha o indicar la información pendiente y quién decidirá.",
+              "18–33 min — Decidir qué problemas del lanzamiento deben resolverse primero: revisar impacto y dependencias. Responsable: responsable del proyecto. Preparación: señalar el mayor riesgo antes de la reunión. Resultado: lista priorizada con responsables.",
+              "33–40 min — Resolver un bloqueo entre equipos: aclarar la solicitud y acordar quién coordina la acción siguiente. Resultado: responsable y fecha.",
+              "40–45 min — Confirmar decisiones, tareas y temas aplazados. Responsable: facilitador. Resultado: registro breve para el seguimiento."
+            ],
+            "example": {
+              "input": "Punto: elegir una fecha de lanzamiento. Propósito: decidir. Responsable: operaciones. Preparación: revisar la comparación de cobertura de soporte para las dos fechas. Tiempo: 10 minutos. Resultado: fecha elegida o persona responsable de decidir, dato pendiente concreto y fecha de seguimiento.",
+              "output": "Es más útil que escribir «Lanzamiento». Los asistentes saben qué revisar, quién guía la conversación, cuánto tiempo se prevé y qué hacer si todavía no se puede decidir."
+            }
+          },
+          {
+            "heading": "Envía la agenda en un formato fácil de utilizar",
+            "paragraphs": [
+              "Elige un título descriptivo e incluye la fecha, la hora de inicio y fin con zona horaria cuando corresponda, el lugar o enlace y un contacto para preguntas. Facilita la lectura: usa encabezados, nombres breves para los puntos, enlaces claros y un formato coherente para el tiempo, el responsable, la preparación y el resultado solicitado.",
+              "Usa el canal habitual y avisa con tiempo acorde al propósito y la complejidad de la reunión. Una reunión operativa recurrente puede requerir una agenda sencilla enviada poco antes; una revisión formal quizá exija distribuir documentos con más antelación. El plazo depende de las reglas de la organización y de la preparación solicitada.",
+              "Si la agenda o los documentos contienen información sensible, sigue el proceso de acceso y distribución aprobado. No adjuntes material confidencial a una invitación amplia por defecto. En reuniones formales, confirma si algún punto debe identificarse como público o confidencial y cómo se puede compartir el acta."
+            ]
+          },
+          {
+            "heading": "Utiliza la agenda durante la reunión y aprende de ella",
+            "paragraphs": [
+              "La agenda orienta, pero no impide una pregunta útil. Quien facilita puede recordar el propósito del punto, abrir espacio a distintos criterios y devolver la conversación a la decisión o resultado cuando se desvía. Si un punto requiere más tiempo, pregunta si conviene ampliar la reunión, aplazar otro tema o programar un seguimiento, en vez de exceder el horario sin avisar.",
+              "Si no se llega a resolver un punto, registra qué se sabe, qué sigue pendiente, quién se responsabiliza del siguiente paso y cuándo volverá a tratarse. No lo marques como «decidido» si el grupo solo lo debatió. Después, utiliza el acta o registro de seguimiento para consignar el resultado real: una agenda planificada no demuestra que se haya tomado una decisión.",
+              "Revisa de vez en cuando las agendas recurrentes. ¿Qué puntos nunca generan debate? ¿Qué decisiones llegan sin preparación suficiente? ¿En qué momento se acaba el tiempo? Cuando convenga, pasa las actualizaciones rutinarias a un formato asíncrono, ajusta los tiempos según la experiencia y pide comentarios concretos. El objetivo no es crear un documento perfecto, sino aprovechar el tiempo en tareas que se benefician de la participación del grupo."
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Me resulta más útil una agenda cuando cada punto indica qué tipo de atención requiere. Una etiqueta breve, como «decidir» o «leer antes», puede mejorar la preparación más que añadir otra página de contexto."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools. Creo herramientas sencillas en el navegador para tareas cotidianas de escritura y planificación."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Cómo planificar una agenda eficaz para una reunión",
+            "publisher": "Extensión de la Universidad de Minnesota",
+            "url": "https://extension.umn.edu/community/community-development/leadership-skill-building/planning-an-effective-meeting-agenda"
+          },
+          {
+            "title": "Agendas de comités: planificación, plazos, formato y estructura",
+            "publisher": "Universidad de Loughborough",
+            "url": "https://www.lboro.ac.uk/committees/handbook/11-agendas-planning/"
+          },
+          {
+            "title": "Plantilla gratuita de agenda de reunión",
+            "publisher": "Atlassian",
+            "url": "https://www.atlassian.com/software/confluence/resources/guides/how-to/meeting-agenda"
+          }
+        ]
+      },
       "how-to-write-a-client-proposal": {
         "modified": "2026-11-19",
         "image": "blog-images/es/client-proposal.svg",

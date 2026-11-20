@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">如何制定会议议程</title>
+  <desc id="desc">明确目标、提前准备议题，并安排合理时间。</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="78" y="58" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">会议准备指南</text>
+  <text x="78" y="158" fill="#172033" font-family="Arial, sans-serif" font-size="54" font-weight="700">高效会议</text>
+  <text x="78" y="222" fill="#172033" font-family="Arial, sans-serif" font-size="54" font-weight="700">从清晰计划开始</text>
+  <text x="80" y="272" fill="#647084" font-family="Arial, sans-serif" font-size="23">目标明确 · 提前准备 · 合理利用时间</text>
+  <rect x="76" y="346" width="454" height="166" rx="22" fill="#FFFFFF"/>
+  <text x="108" y="390" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">清晰议程会说明</text>
+  <circle cx="121" cy="431" r="7" fill="#69558E"/>
+  <text x="142" y="438" fill="#172033" font-family="Arial, sans-serif" font-size="19">需要做出什么决定</text>
+  <circle cx="121" cy="472" r="7" fill="#69558E"/>
+  <text x="142" y="479" fill="#172033" font-family="Arial, sans-serif" font-size="19">谁来准备以及预计时长</text>
+  <rect x="604" y="92" width="520" height="448" rx="28" fill="#FFFFFF"/>
+  <rect x="636" y="124" width="456" height="68" rx="17" fill="#E8E1F1"/>
+  <circle cx="672" cy="158" r="14" fill="#69558E"/>
+  <path d="M665 158L670 163L680 152" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="155" fill="#69558E" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">会议目标</text>
+  <text x="700" y="176" fill="#172033" font-family="Arial, sans-serif" font-size="17">确定发布日期</text>
+  <rect x="636" y="208" width="456" height="72" rx="16" fill="#FAF9FB"/>
+  <text x="660" y="237" fill="#69558E" font-family="Arial, sans-serif" font-size="13" font-weight="700">10 分钟</text>
+  <text x="660" y="260" fill="#172033" font-family="Arial, sans-serif" font-size="17">比较两个方案</text>
+  <rect x="636" y="294" width="456" height="72" rx="16" fill="#FAF9FB"/>
+  <text x="660" y="323" fill="#69558E" font-family="Arial, sans-serif" font-size="13" font-weight="700">15 分钟</text>
+  <text x="660" y="346" fill="#172033" font-family="Arial, sans-serif" font-size="17">解决主要障碍</text>
+  <rect x="636" y="380" width="456" height="72" rx="16" fill="#FAF9FB"/>
+  <text x="660" y="409" fill="#69558E" font-family="Arial, sans-serif" font-size="13" font-weight="700">5 分钟</text>
+  <text x="660" y="432" fill="#172033" font-family="Arial, sans-serif" font-size="17">确认负责人和后续行动</text>
+  <rect x="636" y="474" width="124" height="7" rx="3.5" fill="#D9D3E3"/>
+  <rect x="774" y="474" width="95" height="7" rx="3.5" fill="#D9D3E3"/>
+  <text x="78" y="584" fill="#647084" font-family="Arial, sans-serif" font-size="18">目标 / 负责人 / 时间 / 会前准备</text>
+</svg>

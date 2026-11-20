@@ -1,5 +1,142 @@
 [
   {
+    "slug": "how-to-write-a-meeting-agenda",
+    "published": "2026-11-20",
+    "title": "How to Write a Meeting Agenda People Can Prepare For | TextToools",
+    "description": "Plan a useful meeting agenda with a clear outcome, decision-ready topics, realistic time blocks, and preparation notes. Includes a 45-minute example.",
+    "summary": "A useful meeting agenda tells people why they are meeting, what each item needs, who should prepare, and how the group will use its time.",
+    "image": "blog-images/meeting-agenda.svg",
+    "imageAlt": "A meeting agenda connects a clear outcome to timed topics, preparation, and a decision.",
+    "sections": [
+      {
+        "heading": "What a meeting agenda is—and what it is not",
+        "paragraphs": [
+          "A meeting agenda is a short working plan that helps participants prepare and helps a group use its meeting time intentionally. It names the result the meeting needs, the items that need attention, and enough context for people to arrive ready to contribute. Depending on the meeting, it may also show who is leading each item, the time available, the preparation required, and the decision or follow-up expected.",
+          "An agenda is not just a list of subjects, a calendar invitation, or a record of what happened. A title such as “Marketing” gives little direction. “Choose which two campaign concepts to test in December” tells participants what the discussion is for. Meeting minutes serve a different purpose: they record the decisions and actions after the conversation. Keeping those jobs distinct makes both documents more useful.",
+          "Not every conversation needs a formal document. A quick check-in may need only a shared question and a time limit. A board, committee, client review, or cross-team decision may need a documented agenda, supporting papers, accessibility details, or formal procedure. Match the structure to the stakes and the group's rules instead of treating one template as universal."
+        ]
+      },
+      {
+        "heading": "Decide what the meeting needs to accomplish",
+        "paragraphs": [
+          "Write the purpose before you collect topics. Ask what should be different by the end: a decision made, a plan agreed, a problem understood, a recommendation prepared, or information shared. Use an outcome that participants can recognize. “Discuss the launch” is vague; “agree on the launch date and identify the remaining blockers” gives the meeting a clearer job.",
+          "If you cannot name an outcome that benefits from people being together at the same time, reconsider whether a meeting is needed. A written update, shared document, or short asynchronous review may answer an information-only question with less interruption. If a meeting is still useful, explain why live discussion matters: perhaps people need to compare trade-offs, resolve disagreement, or make a decision together.",
+          "Separate the meeting's purpose from its agenda items. The purpose describes the overall result. Each item should contribute to that result. If several proposed topics do not connect to it, move them to another forum, send them as background, or arrange a separate meeting. A shorter agenda that can reach its intended outcome is usually better than a long inventory of everything someone would like to mention."
+        ]
+      },
+      {
+        "heading": "Invite the people who need to prepare, contribute, or decide",
+        "paragraphs": [
+          "For each proposed item, identify whose knowledge is needed, who will guide the discussion, and who has authority to decide or recommend. Invite people because their input serves the work, not simply because they are nearby or were included in the previous meeting. If a decision-maker cannot attend, decide in advance whether the group can make a recommendation, needs to defer the decision, or has an agreed delegate.",
+          "Explain what participants are expected to do. Someone may be attending to share a brief update, answer questions, present an option, challenge assumptions, or make a decision. A named lead and clear role help people prepare; they do not mean that only that person may speak. If someone only needs to read a report, sending it with a specific question may be more considerate than asking them to attend.",
+          "Think about participation and access while planning. Check the meeting format and time zone, provide a working link or room details, and share materials in a form attendees can use. When needed, invite written input before or after the meeting, allow time to read documents, and avoid designing the agenda so that someone must improvise in a language or format that creates an unnecessary barrier."
+        ]
+      },
+      {
+        "heading": "Turn broad topics into decision-ready agenda items",
+        "paragraphs": [
+          "A useful item tells participants more than its subject. State what the group should do with it: discuss an issue, review evidence, make a decision, approve a recommendation, or receive information. For formal committees, terms such as “for decision,” “for discussion,” or “for information” can make the requested action explicit. Follow the wording required by the organization's own procedure.",
+          "Add the question, context, or requested output that will make the item actionable. Instead of “Hiring,” try “Review the two shortlisted role profiles and agree which one to advance.” Instead of “Website,” try “Compare the proposed homepage options and choose one for user testing.” The point is not to force a decision when the group lacks evidence; it is to make the intended conversation clear.",
+          "If a topic is too large to resolve in the allotted meeting, break it into a smaller question or mark the item as an initial review. State what evidence is missing and what the next step will be. An agenda should not imply that a group can approve a complex proposal simply because a time slot exists."
+        ],
+        "bullets": [
+          "Topic: What is the item about?",
+          "Purpose: Is it for information, discussion, advice, or a decision?",
+          "Lead: Who introduces it or keeps the conversation on the question?",
+          "Preparation: What should participants read, check, or bring?",
+          "Output: What decision, recommendation, or follow-up should result?"
+        ]
+      },
+      {
+        "heading": "Choose an order that supports the outcome",
+        "paragraphs": [
+          "Order items by what participants need to understand and decide, not just by when each request arrived. Start with essential context and unresolved actions when they affect the main decision. Put connected topics next to each other, and schedule an important decision while the people and attention it needs are still available.",
+          "Distinguish routine business from substantial discussion. An item that only needs a brief update can sometimes be circulated in writing. An item requiring a decision may need supporting information first and a clear point on the agenda. Formal committees may have required opening, approval, or confidential business; use the chair's guidance and governing rules rather than casually rearranging those items.",
+          "Prioritize what must be handled during this meeting. If time runs out, lower-priority items can be deferred only if doing so will not create a safety, legal, service, or deadline problem. Marking priority in advance gives the chair and participants a reasonable way to adjust rather than rushing the final topic or extending the meeting without agreement."
+        ]
+      },
+      {
+        "heading": "Give each item a realistic time block",
+        "paragraphs": [
+          "Add up the meeting's available time and assign realistic blocks to the items. Include the opening, transitions, questions, a short break when appropriate, and time to confirm decisions and next steps at the end. A schedule that allocates every minute to discussion has no room for a complex question or a late start.",
+          "Estimate time based on the work required, not the number of words in the title. A short update may take five minutes; a decision that needs context, several viewpoints, and a clear agreement may need much longer. Ask the item lead what the group must review and what the item is expected to produce. Treat time estimates as planning aids, not a promise to cut off a necessary discussion.",
+          "If the list does not fit, reduce the number of items, narrow the questions, request preparation in advance, or schedule another session. Do not solve an overcrowded agenda by quietly taking the time from the last item. A small buffer and a deliberately reserved closing period make it easier to finish with a clear account of what was decided and who will do what."
+        ]
+      },
+      {
+        "heading": "Share preparation material with a clear request",
+        "paragraphs": [
+          "Send supporting material early enough for participants to review it. Include only documents that help them answer the agenda question; a large bundle of unmarked background can make preparation harder rather than easier. Where possible, link to one current, accessible source of truth instead of attaching several copies that may drift out of date.",
+          "Tell readers what to do with each item. For example: “Read the one-page options summary and note which option best meets the agreed criteria,” or “Review the proposed wording and flag factual errors before the meeting.” Identify the person preparing the paper, its deadline, and any pre-reading that is essential to the decision. For formal committees, follow their paper-submission and circulation deadlines.",
+          "Do not treat silence as proof that everyone read or agreed with a paper. Leave time to clarify important facts, surface disagreements, and hear from people who could not complete the preparation. If a key document arrives late, consider whether the group can fairly decide or whether the item should be rescheduled."
+        ]
+      },
+      {
+        "heading": "A practical 45-minute team meeting agenda",
+        "paragraphs": [
+          "This fictional example shows how an agenda can connect the question, lead, preparation, and time available. Change the structure to fit your group; do not copy the subject matter or duration as a universal formula."
+        ],
+        "bullets": [
+          "0–3 min — Open: confirm the purpose, time available, and any change to the agenda. Lead: facilitator.",
+          "3–8 min — Review open actions: note what is complete and what needs a new owner or date. Preparation: action list. Output: confirmed next steps.",
+          "8–18 min — Compare two rollout dates: discuss the staffing and customer-support evidence. Lead: operations. Preparation: read the one-page comparison. Output: choose a date or name the missing information and decision owner.",
+          "18–33 min — Decide which launch issues must be resolved first: review impact and dependencies. Lead: project owner. Preparation: flag the top risk before the call. Output: prioritized list with owners.",
+          "33–40 min — Resolve one cross-team blocker: clarify the request and agree who will coordinate the next action. Output: owner and due date.",
+          "40–45 min — Confirm decisions, actions, and deferred topics. Lead: facilitator. Output: a concise follow-up record."
+        ],
+        "example": {
+          "input": "Agenda item: Choose a rollout date. Purpose: make a decision. Lead: operations. Preparation: review the comparison of support coverage for the two dates. Time: 10 minutes. Output: selected date, or a named decision owner and a specific missing fact with a follow-up date.",
+          "output": "This item is more useful than “Rollout.” Participants know what to review, who guides the discussion, how much time is planned, and what counts as a next step if the decision cannot yet be made."
+        }
+      },
+      {
+        "heading": "Send the agenda in a format people can use",
+        "paragraphs": [
+          "Use a descriptive meeting title and include the date, start and end time with time zone when relevant, location or access link, and contact for questions. Keep the document easy to scan: use headings, short item names, readable links, and a consistent format for time, lead, preparation, and requested outcome.",
+          "Use the normal channel and give participants enough notice for the meeting's purpose and complexity. A recurring operational check-in may need a lightweight agenda shared shortly beforehand; a formal review may require earlier circulation and specific supporting papers. The right lead time depends on the organization's rules and the preparation asked of participants.",
+          "If the agenda or papers include sensitive information, follow the organization's approved access and distribution process. Do not attach confidential material to a broad invite by default. For formal meetings, confirm whether items need a public or confidential label and how the record may be shared."
+        ]
+      },
+      {
+        "heading": "Use the agenda during the meeting, then learn from it",
+        "paragraphs": [
+          "The agenda is a guide, not a script that prevents a useful question. The facilitator can remind the group of the item's purpose, make space for different views, and bring discussion back to the decision or output when it drifts. If the conversation needs more time, ask whether the group should extend, defer another item, or schedule a follow-up instead of silently overrunning.",
+          "When an item cannot be resolved, record what is known, what remains open, who owns the next step, and when it will return. Do not label an item “decided” if the group only discussed it. Afterward, use the minutes or follow-up record to capture the actual outcome; the planned agenda is not evidence that a decision occurred.",
+          "Review recurring agendas occasionally. Which items repeatedly generate no discussion? Which decisions arrive without enough preparation? Where does the meeting run out of time? Move routine updates to an asynchronous format when appropriate, adjust time blocks using experience, and ask participants for specific feedback. The aim is not a perfectly formatted document; it is a meeting that uses people's time for work that benefits from their participation."
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I find an agenda most helpful when every item tells me what kind of attention it needs. A short label such as “decision” or “read beforehand” can change the quality of preparation more than adding another page of background."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools. I build straightforward browser tools for everyday writing and planning tasks."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Planning an Effective Meeting Agenda",
+        "publisher": "University of Minnesota Extension",
+        "url": "https://extension.umn.edu/community/community-development/leadership-skill-building/planning-an-effective-meeting-agenda"
+      },
+      {
+        "title": "Committee Agendas: Planning, Timescales, Format and Structure",
+        "publisher": "Loughborough University",
+        "url": "https://www.lboro.ac.uk/committees/handbook/11-agendas-planning/"
+      },
+      {
+        "title": "Free Meeting Agenda Template",
+        "publisher": "Atlassian",
+        "url": "https://www.atlassian.com/software/confluence/resources/guides/how-to/meeting-agenda"
+      }
+    ]
+  },
+  {
     "slug": "how-to-write-a-client-proposal",
     "published": "2026-11-19",
     "title": "How to Write a Client Proposal: Scope, Timeline, and Price | TextToools",

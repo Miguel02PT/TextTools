@@ -43,6 +43,9 @@ const taskPrioritizationPost = parsedEnglishBlogPosts.find(
 const meetingMinutesPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-meeting-minutes',
 )
+const meetingAgendaPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'how-to-write-a-meeting-agenda',
+)
 const projectStatusReportPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-project-status-report',
 )
@@ -158,6 +161,75 @@ test('meeting minutes guide has a distinct intent, usable template, and complete
     const svgPath = new URL(`../public/${post.image}`, import.meta.url)
     const pngPath = new URL(`../public/${post.image.replace(/\.svg$/i, '.png')}`, import.meta.url)
     assert.ok(existsSync(svgPath), `${post.image} exists`)
+    assert.ok(existsSync(pngPath), `${post.image} has a social preview`)
+    const png = readFileSync(pngPath)
+    assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')
+    assert.equal(png.readUInt32BE(16), 1200)
+    assert.equal(png.readUInt32BE(20), 630)
+  }
+})
+
+test('meeting agenda guide focuses on preparation and has complete localized previews', () => {
+  const localizedPosts = [
+    meetingAgendaPost,
+    parsedSpanishContent.blog.posts['how-to-write-a-meeting-agenda'],
+    parsedPortugueseContent.blog.posts['how-to-write-a-meeting-agenda'],
+    parsedFrenchContent.blog.posts['how-to-write-a-meeting-agenda'],
+    parsedChineseContent.blog.posts['how-to-write-a-meeting-agenda'],
+  ]
+  const sourceUrls = [
+    'https://extension.umn.edu/community/community-development/leadership-skill-building/planning-an-effective-meeting-agenda',
+    'https://www.lboro.ac.uk/committees/handbook/11-agendas-planning/',
+    'https://www.atlassian.com/software/confluence/resources/guides/how-to/meeting-agenda',
+  ].sort()
+
+  assert.ok(meetingAgendaPost)
+  assert.ok(meetingMinutesPost)
+  assert.equal(meetingAgendaPost.published, '2026-11-20')
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'how-to-write-a-meeting-agenda',
+    ).length,
+    1,
+  )
+  assert.match(meetingAgendaPost.title, /meeting agenda/i)
+  assert.doesNotMatch(meetingAgendaPost.title, /meeting minutes/i)
+  assert.match(meetingAgendaPost.sections[0].paragraphs.join(' '), /prepare/i)
+  assert.match(meetingMinutesPost.sections[0].paragraphs.join(' '), /record/i)
+
+  const articleText = meetingAgendaPost.sections.flatMap(
+    (section: {
+      paragraphs: string[]
+      bullets?: string[]
+      example?: { input: string; output: string }
+    }) => [
+      ...section.paragraphs,
+      ...(section.bullets ?? []),
+      ...(section.example ? [section.example.input, section.example.output] : []),
+    ],
+  ).join(' ')
+  assert.ok((articleText.match(/\S+/gu) ?? []).length >= 1200)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, meetingAgendaPost.sections.length)
+    assert.ok(post.sections.every(
+      (section: { heading: string; paragraphs: string[] }) =>
+        section.heading && section.paragraphs.length > 0 && section.paragraphs.every(Boolean),
+    ))
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+    const svgPath = new URL(`../public/${post.image}`, import.meta.url)
+    const pngPath = new URL(
+      `../public/${post.image.replace(/\.svg$/i, '.png')}`,
+      import.meta.url,
+    )
+    assert.ok(existsSync(svgPath), `${post.image} exists`)
+    assert.match(readFileSync(svgPath, 'utf8'), /<svg\b/)
     assert.ok(existsSync(pngPath), `${post.image} has a social preview`)
     const png = readFileSync(pngPath)
     assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a')

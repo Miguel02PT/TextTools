@@ -811,6 +811,142 @@
     "description": "Guides pratiques sur le comptage de mots et de caractères, le nettoyage de texte et l'écriture.",
     "intro": "Des guides clairs et pratiques pour comprendre les décomptes, organiser le contenu et mieux travailler avec le texte.",
     "posts": {
+      "how-to-write-a-meeting-agenda": {
+        "modified": "2026-11-20",
+        "image": "blog-images/meeting-agenda.svg",
+        "imageAlt": "Un ordre du jour relie un objectif clair à des sujets minutés, à une préparation et à une décision.",
+        "title": "Comment préparer un ordre du jour de réunion utile | TextToools",
+        "description": "Préparez un ordre du jour utile avec un objectif clair, des sujets à trancher, des durées réalistes et des consignes de préparation. Avec un exemple de 45 minutes.",
+        "summary": "Un ordre du jour utile précise pourquoi les participants se réunissent, ce que demande chaque point, qui doit se préparer et comment le temps sera utilisé.",
+        "sections": [
+          {
+            "heading": "Ce qu'est un ordre du jour — et ce qu'il n'est pas",
+            "paragraphs": [
+              "Un ordre du jour est un plan de travail concis qui aide les participants à se préparer et permet au groupe d'utiliser le temps de façon réfléchie. Il indique le résultat attendu, les sujets qui demandent de l'attention et le contexte nécessaire pour que chacun puisse contribuer. Selon la réunion, il peut aussi préciser qui anime chaque point, le temps prévu, la préparation nécessaire et la décision ou le suivi attendu.",
+              "Ce n'est pas seulement une liste de sujets, une invitation dans un calendrier ou le compte rendu de ce qui s'est passé. « Marketing » donne peu d'indications. « Choisir les deux concepts de campagne à tester en décembre » explique l'objectif de la discussion. Le compte rendu remplit une autre fonction : il consigne les décisions et les actions après la réunion. Distinguer ces deux documents les rend plus utiles.",
+              "Toutes les conversations ne nécessitent pas un document formel. Un bref échange peut se limiter à une question commune et à une durée définie. Une réunion de conseil, de comité, de revue client ou de décision interéquipes peut exiger un ordre du jour documenté, des pièces jointes, des dispositions d'accessibilité ou une procédure formelle. Adaptez la structure à l'importance du sujet et aux règles du groupe, plutôt que d'appliquer un modèle unique partout."
+            ]
+          },
+          {
+            "heading": "Définissez ce que la réunion doit accomplir",
+            "paragraphs": [
+              "Rédigez l'objectif avant de recueillir les sujets. Demandez-vous ce qui devrait être différent à la fin : une décision prise, un plan convenu, un problème compris, une recommandation préparée ou une information partagée. Formulez un résultat que les participants peuvent reconnaître. « Parler du lancement » est vague ; « convenir de la date de lancement et repérer les obstacles restants » précise le travail.",
+              "Si vous ne pouvez pas désigner un résultat qui nécessite de réunir des personnes, demandez-vous si une réunion est vraiment nécessaire. Une mise à jour écrite, un document partagé ou une courte revue asynchrone peuvent transmettre des informations en interrompant moins le travail. Si la réunion reste utile, expliquez pourquoi la discussion en direct est importante : comparer des options, résoudre un désaccord ou prendre une décision ensemble, par exemple.",
+              "Distinguez l'objectif général des points de l'ordre du jour. L'objectif décrit le résultat global ; chaque point doit y contribuer. Si plusieurs sujets n'ont aucun lien avec ce résultat, déplacez-les vers un autre espace, partagez-les comme contexte ou prévoyez une autre réunion. Un ordre du jour plus court qui atteint son objectif vaut souvent mieux qu'une longue liste de tout ce que quelqu'un aimerait aborder."
+            ]
+          },
+          {
+            "heading": "Invitez les personnes qui doivent se préparer, contribuer ou décider",
+            "paragraphs": [
+              "Pour chaque point proposé, identifiez les compétences nécessaires, la personne qui guidera la discussion et celle qui peut décider ou formuler une recommandation. Invitez les participants parce que leur contribution fait avancer le travail, et non uniquement parce qu'ils sont disponibles ou présents à la réunion précédente. Si la personne décisionnaire est absente, convenez à l'avance si le groupe peut recommander une option, doit reporter la décision ou peut s'appuyer sur une personne déléguée.",
+              "Précisez le rôle attendu des participants. Une personne peut venir pour présenter une brève mise à jour, répondre à des questions, exposer une option, remettre des hypothèses en question ou prendre une décision. Nommer un responsable et clarifier son rôle facilite la préparation sans lui réserver toute la conversation. Si une personne doit seulement lire un rapport, l'envoyer avec une question précise peut être préférable à sa présence.",
+              "Pensez à la participation et à l'accessibilité dès la planification. Vérifiez le format, le fuseau horaire, le lien ou la salle, puis partagez des documents utilisables par les participants. Si nécessaire, permettez des contributions écrites avant ou après, prévoyez du temps de lecture et évitez d'obliger quelqu'un à improviser dans une langue ou un format qui crée un obstacle inutile."
+            ]
+          },
+          {
+            "heading": "Transformez les sujets généraux en points qui appellent une décision",
+            "paragraphs": [
+              "Un point utile indique davantage qu'un thème. Précisez ce que le groupe doit faire : discuter d'un sujet, examiner des éléments, prendre une décision, approuver une recommandation ou recevoir une information. Dans les comités formels, des mentions telles que « pour décision », « pour discussion » ou « à titre informatif » peuvent clarifier l'action demandée. Respectez la terminologie prévue par les règles de l'organisation.",
+              "Ajoutez la question, le contexte ou le résultat attendu qui rend le point exploitable. Au lieu de « Recrutement », écrivez « Examiner les deux profils finalistes et décider lequel passe à l'étape suivante ». Au lieu de « Site web », écrivez « Comparer les propositions de page d'accueil et en choisir une à tester auprès des utilisateurs ». Il ne s'agit pas de forcer une décision si les informations manquent, mais d'expliquer la discussion prévue.",
+              "Si le sujet est trop vaste pour le temps disponible, divisez-le en une question plus précise ou indiquez qu'il s'agit d'un premier examen. Expliquez quelles informations manquent et quelle sera la prochaine étape. Prévoir un créneau ne signifie pas que le groupe pourra approuver une proposition complexe."
+            ],
+            "bullets": [
+              "Sujet : de quoi traite le point ?",
+              "Objectif : informer, discuter, consulter ou décider ?",
+              "Responsable : qui présente le sujet ou recentre la discussion ?",
+              "Préparation : que doivent lire, vérifier ou apporter les participants ?",
+              "Résultat : quelle décision, recommandation ou suite est attendue ?"
+            ]
+          },
+          {
+            "heading": "Organisez les points en fonction du résultat recherché",
+            "paragraphs": [
+              "Classez les sujets selon ce que les participants doivent comprendre et décider, et non selon l'ordre d'arrivée des demandes. Commencez par le contexte indispensable et les actions en cours qui influencent la décision principale. Regroupez les sujets liés et placez les décisions importantes à un moment où les personnes nécessaires sont encore présentes et disponibles.",
+              "Distinguez les sujets de routine des discussions de fond. Une brève mise à jour peut être envoyée par écrit. Une décision peut nécessiter des informations préalables et un créneau clairement indiqué. Les comités formels ont parfois des points obligatoires d'ouverture, d'approbation ou de confidentialité : respectez les consignes de la présidence et les règles applicables.",
+              "Donnez la priorité à ce qui doit être réglé pendant cette réunion. Si le temps manque, ne reportez les points moins prioritaires que si cela ne crée pas de problème de sécurité, de conformité, de service ou d'échéance. Définir les priorités à l'avance permet de réorganiser la réunion de façon réfléchie, plutôt que de précipiter le dernier point ou de prolonger la séance sans accord."
+            ]
+          },
+          {
+            "heading": "Prévoyez une durée réaliste pour chaque point",
+            "paragraphs": [
+              "Additionnez le temps disponible et attribuez des créneaux réalistes. Prévoyez l'ouverture, les transitions, les questions, une courte pause si nécessaire et une conclusion pour confirmer les décisions et les prochaines étapes. Un programme rempli de débats jusqu'à la dernière minute ne laisse aucune marge à une question complexe ou à un début tardif.",
+              "Estimez la durée selon le travail requis, et non la longueur du titre. Une mise à jour peut prendre cinq minutes ; une décision qui exige du contexte, plusieurs avis et un accord clair en demandera peut-être davantage. Demandez à la personne responsable ce que le groupe doit examiner et quel résultat est visé. Les durées aident à planifier ; elles ne justifient pas d'interrompre une discussion nécessaire.",
+              "Si la liste ne tient pas, réduisez le nombre de points, limitez les questions, demandez une préparation préalable ou prévoyez une autre séance. Ne résolvez pas un ordre du jour surchargé en retirant discrètement du temps au dernier point. Une petite marge et une conclusion dédiée aident le groupe à repartir avec des décisions et des responsabilités claires."
+            ]
+          },
+          {
+            "heading": "Partagez les documents avec une consigne précise",
+            "paragraphs": [
+              "Envoyez les documents suffisamment tôt pour qu'ils puissent être consultés. Incluez uniquement ceux qui aident à répondre à la question de l'ordre du jour : un dossier volumineux sans indication peut compliquer la préparation. Dans la mesure du possible, créez un lien vers une source unique, à jour et accessible plutôt que d'envoyer plusieurs copies susceptibles de devenir obsolètes.",
+              "Expliquez ce que le lecteur doit faire avec chaque document. Par exemple : « Lisez la synthèse d'une page et indiquez quelle option respecte le mieux les critères convenus » ou « Relisez le texte proposé et signalez les erreurs factuelles avant la réunion ». Indiquez la personne qui prépare le document, la date limite et les lectures indispensables. Pour les comités formels, respectez les échéances de remise et de diffusion des documents.",
+              "Ne supposez pas que le silence signifie que tout le monde a lu le dossier ou est d'accord. Réservez du temps pour clarifier les faits importants, entendre les désaccords et écouter les personnes qui n'ont pas pu se préparer. Si un document essentiel arrive tard, demandez-vous si le groupe peut encore décider équitablement ou s'il vaut mieux reporter le point."
+            ]
+          },
+          {
+            "heading": "Exemple concret d'un ordre du jour d'équipe de 45 minutes",
+            "paragraphs": [
+              "Cet exemple fictif montre comment relier une question à un responsable, à une préparation et à une durée. Adaptez-le à votre groupe : le sujet et la durée ne sont pas des règles universelles."
+            ],
+            "bullets": [
+              "0–3 min — Ouverture : confirmer l'objectif, la durée et les changements éventuels. Responsable : facilitateur.",
+              "3–8 min — Revoir les actions en cours : repérer ce qui est terminé et ce qui nécessite une nouvelle échéance ou un responsable. Préparation : liste des actions. Résultat : prochaines étapes confirmées.",
+              "8–18 min — Comparer deux dates de lancement : examiner la disponibilité des équipes et du service client. Responsable : opérations. Préparation : lire le comparatif d'une page. Résultat : choisir une date ou indiquer l'information manquante et la personne qui décidera.",
+              "18–33 min — Décider quels problèmes de lancement traiter en premier : examiner les impacts et les dépendances. Responsable : chef de projet. Préparation : signaler le risque principal avant la réunion. Résultat : liste priorisée et responsables.",
+              "33–40 min — Résoudre un blocage entre équipes : clarifier la demande et désigner la personne qui coordonnera la suite. Résultat : responsable et échéance.",
+              "40–45 min — Confirmer les décisions, les actions et les sujets reportés. Responsable : facilitateur. Résultat : bref relevé pour le suivi."
+            ],
+            "example": {
+              "input": "Point : choisir une date de lancement. Objectif : décider. Responsable : opérations. Préparation : examiner le comparatif de couverture du support pour les deux dates. Durée : 10 minutes. Résultat : date choisie ou personne chargée de décider, information manquante précise et date de suivi.",
+              "output": "C'est plus utile que d'écrire « Lancement ». Les participants savent quoi examiner, qui guide la discussion, le temps prévu et la marche à suivre si la décision n'est pas encore possible."
+            }
+          },
+          {
+            "heading": "Envoyez l'ordre du jour dans un format facile à utiliser",
+            "paragraphs": [
+              "Choisissez un titre explicite et indiquez la date, les heures de début et de fin avec le fuseau horaire si nécessaire, le lieu ou le lien, ainsi qu'un contact pour les questions. Facilitez la lecture : utilisez des titres, des noms courts, des liens explicites et une présentation cohérente des durées, des responsables, de la préparation et des résultats attendus.",
+              "Utilisez le canal habituel et envoyez le document assez tôt compte tenu de l'objectif et de la complexité. Une réunion opérationnelle récurrente peut se contenter d'un ordre du jour simple envoyé peu avant ; une revue formelle peut nécessiter l'envoi préalable des documents. Le délai dépend des règles de l'organisation et du travail demandé aux participants.",
+              "Si l'ordre du jour ou les documents contiennent des informations sensibles, appliquez la procédure approuvée de partage et de contrôle d'accès. N'ajoutez pas par défaut des documents confidentiels à une invitation largement diffusée. Pour une réunion formelle, vérifiez si certains points doivent être signalés comme publics ou confidentiels et comment le compte rendu pourra être partagé."
+            ]
+          },
+          {
+            "heading": "Utilisez l'ordre du jour pendant la réunion et tirez-en des enseignements",
+            "paragraphs": [
+              "L'ordre du jour donne une direction, sans empêcher une question utile. La personne qui anime peut rappeler le but d'un point, laisser place à différents avis et revenir à la décision ou au résultat lorsque la discussion s'éloigne du sujet. Si un point demande plus de temps, demandez s'il vaut mieux prolonger la réunion, reporter un autre sujet ou prévoir un suivi, au lieu de dépasser l'horaire sans prévenir.",
+              "Si un point ne peut pas être résolu, notez ce qui est établi, ce qui reste à faire, la personne responsable de l'étape suivante et la date de reprise. Ne marquez pas un sujet comme « décidé » si le groupe n'en a fait que discuter. Ensuite, utilisez le compte rendu ou le registre de suivi pour consigner le résultat réel : l'ordre du jour prévu ne prouve pas qu'une décision a été prise.",
+              "Examinez régulièrement les ordres du jour récurrents. Quels points ne donnent jamais lieu à une discussion ? Quelles décisions arrivent sans préparation suffisante ? Quand le temps vient-il à manquer ? Si cela convient, déplacez les mises à jour de routine vers un format asynchrone, ajustez les durées selon l'expérience et demandez des retours précis. Le but n'est pas de produire un document parfait, mais de réserver le temps collectif au travail qui bénéficie réellement de la participation du groupe."
+            ]
+          },
+          {
+            "heading": "Une note du fondateur",
+            "paragraphs": [
+              "Un ordre du jour me semble plus utile lorsque chaque point indique le type d'attention qu'il demande. Une courte mention comme « à décider » ou « à lire avant » peut améliorer la préparation davantage qu'une page de contexte supplémentaire."
+            ]
+          },
+          {
+            "heading": "À propos de l'auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools. Je crée des outils simples dans le navigateur pour les tâches quotidiennes d'écriture et de planification."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Comment planifier un ordre du jour de réunion efficace",
+            "publisher": "University of Minnesota Extension",
+            "url": "https://extension.umn.edu/community/community-development/leadership-skill-building/planning-an-effective-meeting-agenda"
+          },
+          {
+            "title": "Ordres du jour des comités : préparation, délais, format et structure",
+            "publisher": "Université de Loughborough",
+            "url": "https://www.lboro.ac.uk/committees/handbook/11-agendas-planning/"
+          },
+          {
+            "title": "Modèle gratuit d'ordre du jour de réunion",
+            "publisher": "Atlassian",
+            "url": "https://www.atlassian.com/software/confluence/resources/guides/how-to/meeting-agenda"
+          }
+        ]
+      },
       "how-to-write-a-client-proposal": {
         "modified": "2026-11-19",
         "image": "blog-images/client-proposal.svg",

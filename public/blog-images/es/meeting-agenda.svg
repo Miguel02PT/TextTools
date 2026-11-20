@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cómo preparar una agenda de reunión</title>
+  <desc id="desc">Objetivos claros, temas preparados y tiempos definidos.</desc>
+  <rect width="1200" height="630" rx="36" fill="#F4F1F8"/>
+  <circle cx="1095" cy="82" r="152" fill="#E8E1F1"/>
+  <circle cx="86" cy="574" r="150" fill="#EAE5F0"/>
+  <text x="78" y="58" fill="#69558E" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">PREPARACIÓN DE REUNIONES</text>
+  <text x="78" y="158" fill="#172033" font-family="Arial, sans-serif" font-size="43" font-weight="700">Una reunión útil</text>
+  <text x="78" y="222" fill="#172033" font-family="Arial, sans-serif" font-size="43" font-weight="700">empieza con un plan</text>
+  <text x="80" y="272" fill="#647084" font-family="Arial, sans-serif" font-size="23">Objetivos claros. Preparación eficaz.</text>
+  <rect x="76" y="346" width="454" height="166" rx="22" fill="#FFFFFF"/>
+  <text x="108" y="390" fill="#69558E" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">UNA BUENA AGENDA ACLARA</text>
+  <circle cx="121" cy="431" r="7" fill="#69558E"/>
+  <text x="142" y="438" fill="#172033" font-family="Arial, sans-serif" font-size="19">Qué necesita una decisión</text>
+  <circle cx="121" cy="472" r="7" fill="#69558E"/>
+  <text x="142" y="479" fill="#172033" font-family="Arial, sans-serif" font-size="19">Quién se prepara y cuánto</text>
+  <rect x="604" y="92" width="520" height="448" rx="28" fill="#FFFFFF"/>
+  <rect x="636" y="124" width="456" height="68" rx="17" fill="#E8E1F1"/>
+  <circle cx="672" cy="158" r="14" fill="#69558E"/>
+  <path d="M665 158L670 163L680 152" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="155" fill="#69558E" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">OBJETIVO</text>
+  <text x="700" y="176" fill="#172033" font-family="Arial, sans-serif" font-size="17">Elegir una fecha de lanzamiento</text>
+  <rect x="636" y="208" width="456" height="72" rx="16" fill="#FAF9FB"/>
+  <text x="660" y="237" fill="#69558E" font-family="Arial, sans-serif" font-size="13" font-weight="700">10 MIN</text>
+  <text x="660" y="260" fill="#172033" font-family="Arial, sans-serif" font-size="17">Comparar las dos opciones</text>
+  <rect x="636" y="294" width="456" height="72" rx="16" fill="#FAF9FB"/>
+  <text x="660" y="323" fill="#69558E" font-family="Arial, sans-serif" font-size="13" font-weight="700">15 MIN</text>
+  <text x="660" y="346" fill="#172033" font-family="Arial, sans-serif" font-size="17">Resolver el principal bloqueo</text>
+  <rect x="636" y="380" width="456" height="72" rx="16" fill="#FAF9FB"/>
+  <text x="660" y="409" fill="#69558E" font-family="Arial, sans-serif" font-size="13" font-weight="700">5 MIN</text>
+  <text x="660" y="432" fill="#172033" font-family="Arial, sans-serif" font-size="17">Confirmar responsables y pasos</text>
+  <rect x="636" y="474" width="124" height="7" rx="3.5" fill="#D9D3E3"/>
+  <rect x="774" y="474" width="95" height="7" rx="3.5" fill="#D9D3E3"/>
+  <text x="78" y="584" fill="#647084" font-family="Arial, sans-serif" font-size="18">OBJETIVO / RESPONSABLE / TIEMPO</text>
+</svg>

@@ -723,6 +723,142 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "how-to-write-a-meeting-agenda": {
+        "modified": "2026-11-20",
+        "image": "blog-images/pt-br/meeting-agenda.svg",
+        "imageAlt": "Uma pauta conecta um objetivo claro a tópicos com tempo definido, preparação e uma decisão.",
+        "title": "Como preparar uma pauta de reunião que ajude as pessoas | TextToools",
+        "description": "Prepare uma pauta útil com objetivo claro, tópicos que precisam de decisão, tempos realistas e orientações de preparação. Inclui um exemplo de 45 minutos.",
+        "summary": "Uma boa pauta explica por que as pessoas vão se reunir, o que cada item exige, quem deve se preparar e como o tempo será usado.",
+        "sections": [
+          {
+            "heading": "O que é uma pauta de reunião — e o que ela não é",
+            "paragraphs": [
+              "Uma pauta é um plano de trabalho curto que ajuda as pessoas a se prepararem e permite ao grupo usar o tempo da reunião com intenção. Ela indica o resultado necessário, os assuntos que precisam de atenção e o contexto suficiente para que todos possam contribuir. Conforme a reunião, também pode mostrar quem conduz cada item, o tempo disponível, a preparação necessária e a decisão ou o acompanhamento esperado.",
+              "A pauta não é apenas uma lista de assuntos, um convite no calendário ou o registro do que aconteceu. “Marketing” quase não orienta ninguém. “Escolher os dois conceitos de campanha que serão testados em dezembro” explica a finalidade da conversa. A ata tem outra função: registrar decisões e ações depois da reunião. Separar essas tarefas torna os dois documentos mais úteis.",
+              "Nem toda conversa exige um documento formal. Uma conversa rápida pode precisar apenas de uma pergunta comum e um limite de tempo. Uma reunião de conselho, comissão, revisão com cliente ou decisão entre equipes pode exigir pauta documentada, materiais de apoio, detalhes de acessibilidade ou procedimento formal. Adapte a estrutura à importância do assunto e às regras do grupo; um único modelo não serve para todos os casos."
+            ]
+          },
+          {
+            "heading": "Defina o que a reunião precisa alcançar",
+            "paragraphs": [
+              "Escreva o objetivo antes de reunir os assuntos. Pergunte o que deve estar diferente ao final: uma decisão tomada, um plano acordado, um problema compreendido, uma recomendação preparada ou uma informação compartilhada. Escolha um resultado que os participantes consigam reconhecer. “Conversar sobre o lançamento” é vago; “definir a data de lançamento e identificar os impedimentos restantes” dá um propósito mais claro.",
+              "Se você não consegue indicar um resultado que dependa de reunir as pessoas ao mesmo tempo, considere se a reunião é necessária. Uma atualização por escrito, um documento compartilhado ou uma revisão assíncrona podem responder a uma questão informativa com menos interrupções. Se a reunião ainda fizer sentido, explique por que a conversa ao vivo importa: talvez seja preciso comparar alternativas, resolver divergências ou decidir em conjunto.",
+              "Separe o objetivo geral dos itens da pauta. O objetivo descreve o resultado da reunião; cada item deve ajudar a alcançá-lo. Se vários assuntos não tiverem ligação com esse resultado, transfira-os para outro espaço, envie-os como contexto ou marque outra conversa. Uma pauta mais curta que alcance o propósito costuma ser melhor do que uma lista de tudo que alguém gostaria de comentar."
+            ]
+          },
+          {
+            "heading": "Convide quem precisa se preparar, contribuir ou decidir",
+            "paragraphs": [
+              "Para cada item, identifique quais conhecimentos são necessários, quem conduzirá a conversa e quem pode decidir ou recomendar. Convide as pessoas porque sua contribuição ajuda o trabalho, não apenas porque estão disponíveis ou participaram da reunião anterior. Se a pessoa responsável pela decisão não puder comparecer, defina com antecedência se o grupo fará uma recomendação, adiará a decisão ou poderá contar com uma pessoa delegada.",
+              "Explique o que se espera dos participantes. Alguém pode comparecer para apresentar uma atualização breve, responder perguntas, expor uma alternativa, questionar premissas ou decidir. Indicar um responsável e esclarecer seu papel ajuda na preparação, mas não significa que só essa pessoa pode falar. Se alguém só precisa ler um relatório, enviá-lo com uma pergunta específica pode ser mais adequado do que exigir sua presença.",
+              "Considere participação e acessibilidade durante o planejamento. Confira o formato da reunião, o fuso horário, o link ou a sala e compartilhe materiais acessíveis. Quando necessário, aceite contribuições por escrito antes ou depois, reserve tempo para leitura e evite que alguém precise improvisar em um idioma ou formato que crie uma barreira desnecessária."
+            ]
+          },
+          {
+            "heading": "Transforme assuntos amplos em itens que permitam decidir",
+            "paragraphs": [
+              "Um bom item informa mais do que apenas o assunto. Diga o que o grupo deve fazer: discutir um problema, analisar evidências, tomar uma decisão, aprovar uma recomendação ou receber uma informação. Em comissões formais, expressões como “para decisão”, “para discussão” ou “para conhecimento” podem deixar clara a ação solicitada. Siga os termos exigidos pelo procedimento da organização.",
+              "Inclua a pergunta, o contexto ou o resultado necessário para tornar o item prático. Em vez de “Contratação”, escreva “Analisar os dois perfis finalistas e decidir qual avançará”. Em vez de “Site”, use “Comparar as propostas para a página inicial e escolher uma para testar com usuários”. A ideia não é forçar uma decisão sem informações suficientes; é deixar clara a conversa pretendida.",
+              "Se o assunto for amplo demais para o tempo disponível, divida-o em uma pergunta menor ou indique que será uma primeira análise. Explique quais informações faltam e qual será o próximo passo. Reservar um horário na pauta não significa que o grupo conseguirá aprovar uma proposta complexa."
+            ],
+            "bullets": [
+              "Assunto: sobre o que é o item?",
+              "Objetivo: informar, discutir, pedir opiniões ou decidir?",
+              "Responsável: quem apresenta o tema ou mantém o foco?",
+              "Preparação: o que os participantes devem ler, verificar ou trazer?",
+              "Resultado: qual decisão, recomendação ou acompanhamento se espera?"
+            ]
+          },
+          {
+            "heading": "Organize os itens de acordo com o resultado",
+            "paragraphs": [
+              "Ordene os assuntos pelo que as pessoas precisam compreender e decidir, não apenas pela data em que cada pedido chegou. Comece pelo contexto necessário e pelas ações pendentes que afetam a decisão principal. Agrupe temas relacionados e coloque uma decisão importante em um horário em que as pessoas e a atenção necessárias ainda estejam disponíveis.",
+              "Separe assuntos rotineiros de discussões substanciais. Uma atualização rápida pode ser enviada por escrito. Uma decisão talvez precise de informações prévias e de um horário claro na pauta. Comissões formais podem ter itens obrigatórios de abertura, aprovação ou confidencialidade; siga a orientação de quem preside e as regras aplicáveis.",
+              "Priorize o que precisa ser resolvido nesta reunião. Adie itens menos prioritários se o tempo acabar somente quando isso não criar problemas de segurança, legais, de serviço ou de prazo. Definir prioridades com antecedência permite ajustar o plano com critério, em vez de apressar o último assunto ou prolongar a reunião sem acordo."
+            ]
+          },
+          {
+            "heading": "Reserve um tempo realista para cada item",
+            "paragraphs": [
+              "Some o tempo disponível e distribua blocos realistas. Inclua a abertura, as transições, as perguntas, uma pausa quando necessário e alguns minutos no final para confirmar decisões e próximos passos. Uma programação que ocupa cada minuto com discussão não deixa margem para uma pergunta complexa ou um início atrasado.",
+              "Estime o tempo pelo trabalho necessário, não pelo tamanho do título. Uma atualização pode levar cinco minutos; uma decisão que exige contexto, opiniões diferentes e um acordo claro pode precisar de mais tempo. Pergunte à pessoa responsável o que o grupo precisa analisar e o que se espera alcançar. O tempo estimado ajuda no planejamento, mas não é motivo para interromper uma conversa necessária.",
+              "Se a lista não couber, reduza a quantidade de itens, limite as perguntas, solicite preparação prévia ou marque outra sessão. Não resolva uma pauta lotada tirando em silêncio o tempo do último tópico. Uma pequena margem e um encerramento reservado ajudam a terminar com clareza sobre decisões e responsáveis."
+            ]
+          },
+          {
+            "heading": "Compartilhe os materiais com um pedido claro",
+            "paragraphs": [
+              "Envie os materiais de apoio com antecedência suficiente para que os participantes possam analisá-los. Inclua somente documentos que ajudem a responder à pergunta da pauta; um pacote grande de informações sem orientação pode dificultar a preparação. Sempre que possível, use um link para uma fonte única, atualizada e acessível em vez de anexar várias cópias que podem ficar desatualizadas.",
+              "Explique o que fazer com cada material. Por exemplo: “Leia o resumo das opções e indique qual atende melhor aos critérios acordados” ou “Revise o texto proposto e aponte erros factuais antes da reunião”. Identifique quem prepara o documento, o prazo de envio e o que precisa ser lido antes. Em comissões formais, siga os prazos para entregar e distribuir os materiais.",
+              "Não presuma que o silêncio significa que todos leram ou concordaram. Reserve tempo para esclarecer fatos importantes, discutir divergências e ouvir quem não conseguiu se preparar. Se um documento essencial chegar tarde, avalie se o grupo ainda pode decidir com justiça ou se é melhor remarcar o item."
+            ]
+          },
+          {
+            "heading": "Exemplo prático de pauta para uma reunião de equipe de 45 minutos",
+            "paragraphs": [
+              "Este exemplo fictício mostra como relacionar a pergunta, o responsável, a preparação e o tempo. Adapte a estrutura ao grupo; o assunto e a duração não são regras universais."
+            ],
+            "bullets": [
+              "0–3 min — Abertura: confirmar objetivo, tempo disponível e mudanças na pauta. Responsável: facilitador.",
+              "3–8 min — Rever ações pendentes: identificar o que foi concluído e o que precisa de novo prazo ou responsável. Preparação: lista de ações. Resultado: próximos passos confirmados.",
+              "8–18 min — Comparar duas datas de lançamento: avaliar a cobertura da equipe e do atendimento ao cliente. Responsável: operações. Preparação: ler a comparação de uma página. Resultado: escolher uma data ou indicar qual informação falta e quem decidirá.",
+              "18–33 min — Decidir quais problemas do lançamento precisam ser resolvidos primeiro: analisar impacto e dependências. Responsável: líder do projeto. Preparação: apontar o maior risco antes da reunião. Resultado: lista priorizada com responsáveis.",
+              "33–40 min — Resolver um impedimento entre equipes: esclarecer o pedido e definir quem coordenará a próxima ação. Resultado: responsável e prazo.",
+              "40–45 min — Confirmar decisões, ações e assuntos adiados. Responsável: facilitador. Resultado: registro breve para acompanhamento."
+            ],
+            "example": {
+              "input": "Item: escolher uma data de lançamento. Objetivo: decidir. Responsável: operações. Preparação: analisar a comparação da cobertura de suporte nas duas datas. Tempo: 10 minutos. Resultado: data escolhida ou pessoa responsável pela decisão, informação específica que falta e prazo para acompanhamento.",
+              "output": "É mais útil do que escrever apenas “Lançamento”. As pessoas sabem o que analisar, quem conduz a conversa, quanto tempo está previsto e o que fazer caso não seja possível decidir ainda."
+            }
+          },
+          {
+            "heading": "Envie a pauta em um formato fácil de usar",
+            "paragraphs": [
+              "Use um título descritivo e informe a data, os horários de início e fim com o fuso horário quando necessário, o local ou link de acesso e um contato para dúvidas. Facilite a leitura: use títulos, nomes curtos para os itens, links claros e um formato consistente para tempo, responsável, preparação e resultado esperado.",
+              "Use o canal habitual e avise com antecedência compatível com o objetivo e a complexidade da reunião. Uma conversa operacional recorrente talvez só precise de uma pauta simples enviada pouco antes; uma revisão formal pode exigir a distribuição antecipada dos materiais. O prazo adequado depende das regras da organização e da preparação solicitada.",
+              "Se a pauta ou os materiais contiverem informações sensíveis, siga o processo aprovado de acesso e distribuição. Não envie documentos confidenciais para uma lista ampla por padrão. Em reuniões formais, confirme se algum item deve ser identificado como público ou confidencial e como a ata poderá ser compartilhada."
+            ]
+          },
+          {
+            "heading": "Use a pauta durante a reunião e aprenda com ela",
+            "paragraphs": [
+              "A pauta orienta, mas não impede uma pergunta útil. A pessoa facilitadora pode lembrar o propósito do item, abrir espaço para diferentes opiniões e retomar a pergunta ou decisão quando a conversa se dispersar. Se um assunto precisar de mais tempo, pergunte se o grupo deve estender a reunião, adiar outro item ou marcar uma conversa de acompanhamento, em vez de ultrapassar o horário sem avisar.",
+              "Se um item não puder ser resolvido, registre o que já se sabe, o que falta, quem será responsável pela próxima ação e quando o assunto voltará. Não marque como “decidido” algo que foi apenas discutido. Depois, use a ata ou o registro de acompanhamento para anotar o resultado real; a pauta planejada não comprova que uma decisão aconteceu.",
+              "Revise periodicamente as pautas recorrentes. Quais itens não geram conversa? Quais decisões chegam sem preparação suficiente? Em que momento o tempo acaba? Quando fizer sentido, transfira atualizações rotineiras para um formato assíncrono, ajuste os blocos com base na experiência e peça sugestões específicas aos participantes. O objetivo não é criar um documento perfeito, mas usar o tempo em atividades que se beneficiam da participação das pessoas."
+            ]
+          },
+          {
+            "heading": "Uma nota do fundador",
+            "paragraphs": [
+              "Percebi que a pauta fica mais útil quando cada item indica que tipo de atenção exige. Uma indicação curta, como “decidir” ou “ler antes”, pode melhorar a preparação mais do que acrescentar outra página de contexto."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools. Crio ferramentas simples no navegador para tarefas cotidianas de escrita e planejamento."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "Como planejar uma pauta eficaz para reuniões",
+            "publisher": "Extensão da Universidade de Minnesota",
+            "url": "https://extension.umn.edu/community/community-development/leadership-skill-building/planning-an-effective-meeting-agenda"
+          },
+          {
+            "title": "Agendas de comissões: planejamento, prazos, formato e estrutura",
+            "publisher": "Universidade de Loughborough",
+            "url": "https://www.lboro.ac.uk/committees/handbook/11-agendas-planning/"
+          },
+          {
+            "title": "Modelo gratuito de pauta de reunião",
+            "publisher": "Atlassian",
+            "url": "https://www.atlassian.com/software/confluence/resources/guides/how-to/meeting-agenda"
+          }
+        ]
+      },
       "how-to-write-a-client-proposal": {
         "modified": "2026-11-19",
         "image": "blog-images/pt-br/client-proposal.svg",
