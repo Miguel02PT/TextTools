@@ -1,5 +1,128 @@
 [
   {
+    "slug": "instagram-caption-character-limit",
+    "published": "2026-11-20",
+    "title": "Instagram Caption Character Limit: What Counts and How to Fit | TextToools",
+    "description": "Meta's Instagram Graph API documents a 2,200-character caption limit. Learn what counts, why counters may differ, and how to edit a caption without losing its message.",
+    "summary": "Check the documented caption limit, count the whole draft, and make the opening, body, and call to action work together.",
+    "image": "blog-images/instagram-caption-character-limit.svg",
+    "imageAlt": "A draft Instagram caption is checked against the documented 2,200-character API limit.",
+    "sections": [
+      {
+        "heading": "How long can an Instagram caption be?",
+        "paragraphs": [
+          "Meta's Instagram Graph API documentation lists a maximum of 2,200 characters for the caption field used when publishing an image, video, or carousel. The same API reference also documents limits for hashtags and tagged accounts. Those figures describe API publishing; they should not be treated as a guarantee that every Instagram screen, scheduler, account type, or future product behaves identically. Check the composer you will actually use before publishing, especially if a caption is close to the limit.",
+          "The limit is measured in characters, not words. A short caption with a long URL, several mentions, or many line breaks can use more of the available space than it appears to. Conversely, there is no useful universal conversion from characters to words: word length, language, punctuation, and formatting all change the result. Treat 2,200 as a documented ceiling for the API caption field, not as a recommended target for every post.",
+          "For a reader, the more important question is often not how much text can fit, but how much is needed. A caption should give the context that the image or video cannot provide, make the next step clear when one is needed, and avoid filler. Use the limit to prevent cut-off or rejected text, not as a reason to fill every available character."
+        ]
+      },
+      {
+        "heading": "What counts toward the caption?",
+        "paragraphs": [
+          "Count the entire caption field, not only the main paragraph. The words, punctuation, spaces, hashtags, and @mentions all live in that text. Meta's API documentation explicitly allows hashtags and usernames in the caption field, so leave room for them when you plan a draft. If your caption includes line breaks for readability, keep those in the text you check as well.",
+          "A link pasted into a caption is still text in the caption field. Whether a link is clickable or how it is displayed can depend on the surface, but it does not become free space in the character budget. The same goes for a call to action, a disclosure, a location detail, or a short credit: if it appears in the caption, include it in your check.",
+          "Build the final version before counting. Checking a paragraph and then adding tags, a mention, a disclosure, or a last-minute sentence can push the finished caption over the supported limit. If another person will add the final tags or account mentions, agree on who owns that step and leave a buffer for those additions."
+        ],
+        "bullets": [
+          "Main copy, including spaces and punctuation",
+          "Hashtags and @mentions",
+          "Line breaks and blank lines",
+          "Links, disclosures, credits, and calls to action"
+        ]
+      },
+      {
+        "heading": "Why character counters can show different totals",
+        "paragraphs": [
+          "The word “character” can refer to different counting units. A visible symbol such as an accented letter or an emoji may be represented by more than one Unicode code point. Some emoji are made from several code points joined together, even though a reader sees one symbol. Software can count code units, code points, or user-perceived grapheme clusters, and those methods can produce different totals for the same text.",
+          "TextToools' character counter counts grapheme clusters, which are generally closer to the characters a person perceives while reading. Meta's public API reference states a character limit but does not explain its exact handling of every complex Unicode sequence. Therefore, a browser counter is a useful drafting check, not a guarantee that every platform will display the same number for every emoji or combined symbol.",
+          "If your caption contains many emoji, combining marks, or unusual symbols, avoid editing right up to the ceiling. Check the caption in the Instagram composer or publishing tool you will use and follow its validation message. A small buffer is simpler and safer than trying to reverse-engineer how a particular interface counts a complex symbol."
+        ]
+      },
+      {
+        "heading": "Make the opening work before someone expands the caption",
+        "paragraphs": [
+          "A long caption is often collapsed in a feed, so readers may see only its opening before choosing whether to continue. The exact preview can vary by surface, device, and layout; do not build a caption around a fixed number of visible characters. Put the point, question, or useful context early enough that the first lines make sense on their own.",
+          "Start with what the reader needs to know, not a long greeting or a generic announcement. For a tutorial, name the result. For a product update, say what changed. For a story, give a concrete detail that helps the reader understand why it matters. The opening should accurately represent the rest of the caption rather than tease a promise the body does not fulfill.",
+          "Use paragraph breaks to make a longer caption easier to scan on a phone. Keep related ideas together, remove repeated setup, and avoid a wall of text. Formatting helps people navigate the message, but it does not replace clear writing: a short caption with a vague point is still hard to use."
+        ]
+      },
+      {
+        "heading": "Plan a caption around one clear job",
+        "paragraphs": [
+          "Before writing, decide what the caption should do. It may explain information missing from the image, provide context, credit a contributor, invite a useful response, or point to a next step. A caption can do more than one of these, but trying to fit every possible message into one post usually makes the main idea harder to find.",
+          "A simple working structure is: an opening that states the point, a few lines of context or practical detail, and one next step if the reader needs to act. Add a disclosure, credit, or relevant mention where it belongs. This is a planning aid, not a formula that every caption must follow; a photo caption, a Reel description, and an announcement have different jobs.",
+          "Draft for meaning first, then check length. Starting by chasing a character target can encourage clipped phrasing and unnecessary abbreviations. Once the draft says what it needs to say, use the counter to find where editing is actually required. If the caption is comfortably within the limit and reads clearly, there is no benefit in cutting it just to make the number smaller."
+        ]
+      },
+      {
+        "heading": "Trim a caption without losing the useful details",
+        "paragraphs": [
+          "If the draft is too long, remove repeated information before removing context. Delete throat-clearing such as “We are very excited to announce that…” when a direct sentence says the same thing. Replace a series of similar adjectives with the specific fact that supports the message. Shortening should make the idea easier to find, not make the reader guess what happened.",
+          "Look for sentences that perform the same job. If the opening already states the announcement, a later paragraph may not need to repeat it. If two calls to action compete, keep the one that best matches the post. Move secondary details to the image, an accessible linked page, or another post only when the reader can still find the information they need.",
+          "Do not remove essential qualifications, safety information, terms, or disclosures merely to meet a character target. If required information makes the caption too long, use an approved destination for the full details and make the route to that information clear. Follow your organization’s and platform’s policies; a character counter cannot decide whether a message is accurate or compliant."
+        ]
+      },
+      {
+        "heading": "Example: edit for clarity, not just for a lower number",
+        "paragraphs": [
+          "Imagine a small bakery announcing that weekend orders close on Thursday. A first draft might begin with a long expression of excitement, repeat the deadline in several places, and end with two different requests. The important information is simpler: what can be ordered, when orders close, and how to place one.",
+          "A more useful draft could open with “Weekend pastry orders close Thursday at 5 p.m.” It can then name the available collection window, explain where the menu is, and finish with one clear instruction. A mention or a short hashtag can be added if it helps a reader find the right account or topic. The example is illustrative; the bakery should use its real hours and ordering details.",
+          "The edit works because it makes the decision easy for the reader, not because short captions are always better. If the menu, allergy note, or collection instructions require more detail, retain what people need. Check the complete final copy, including tags and line breaks, after the last edit."
+        ],
+        "example": {
+          "input": "A draft that repeats the announcement, adds several generic opening phrases, and ends with multiple competing requests.",
+          "output": "Weekend pastry orders close Thursday at 5 p.m. See the menu, choose a collection time, and send your order through the form in our profile."
+        }
+      },
+      {
+        "heading": "A practical pre-publish character-count workflow",
+        "paragraphs": [
+          "Write the full caption in a draft first. Include the copy, line breaks, hashtags, mentions, links, credits, and any disclosure that will appear in the final post. This gives you a realistic count instead of a partial number that changes as soon as the caption is pasted into the composer.",
+          "Paste the complete text into a character counter and use the result to spot whether you are near the platform's documented limit. If you are close, edit repeated wording, verify that every line is needed, and count again. Keep the final wording in one place so a later copy does not accidentally omit a disclosure or restore a longer version.",
+          "Before publishing, paste the finished caption into the Instagram app or approved publishing tool. Review how the opening appears, confirm that line breaks and mentions survived, and follow any warning or limit shown by that interface. Recount after changing anything. The composer is the final check because platform interfaces and rules can change."
+        ]
+      },
+      {
+        "heading": "A checklist for a caption that fits and reads well",
+        "paragraphs": [
+          "A character limit is a technical boundary, not a writing goal. Use it to catch a practical problem, then judge the caption by whether it is accurate, understandable, and useful to the intended reader. A caption that fits but hides its point is not finished; a caption with a strong message still needs to pass the platform's final validation."
+        ],
+        "bullets": [
+          "Does the first line give readers a clear reason to continue?",
+          "Does every sentence add context, useful detail, or a necessary next step?",
+          "Did you count the final copy with spaces, line breaks, hashtags, and mentions included?",
+          "Is there a buffer instead of an unnecessary last-character squeeze?",
+          "Did you check the final caption in the composer or publishing tool you will use?",
+          "Are required credits, disclosures, and accessibility details still present?"
+        ]
+      },
+      {
+        "heading": "A note from the founder",
+        "paragraphs": [
+          "I built the TextToools character counter for quick checks while editing. For a social caption, I use the number to catch a limit issue, then read the opening and the full message again. The count is useful, but the reader still decides whether the text is clear."
+        ]
+      },
+      {
+        "heading": "About the author",
+        "paragraphs": [
+          "Written by the founder of TextToools, a collection of straightforward browser tools for working with text."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "IG User Media: caption field and publishing limits",
+        "publisher": "Meta for Developers",
+        "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media"
+      },
+      {
+        "title": "Unicode Standard Annex #29: Unicode Text Segmentation",
+        "publisher": "Unicode Consortium",
+        "url": "https://www.unicode.org/reports/tr29/"
+      }
+    ]
+  },
+  {
     "slug": "how-to-write-a-meeting-agenda",
     "published": "2026-11-20",
     "title": "How to Write a Meeting Agenda People Can Prepare For | TextToools",

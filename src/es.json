@@ -614,6 +614,128 @@
     "description": "Guías prácticas sobre recuento de palabras y caracteres, limpieza de texto y escritura.",
     "intro": "Guías claras y prácticas para entender los recuentos, ordenar contenido y trabajar mejor con texto.",
     "posts": {
+      "instagram-caption-character-limit": {
+        "modified": "2026-11-20",
+        "image": "blog-images/es/instagram-caption-character-limit.svg",
+        "imageAlt": "Un borrador de Instagram se comprueba frente al límite de 2.200 caracteres documentado para la API.",
+        "title": "Límite de caracteres en Instagram: cómo ajustar el texto | TextToools",
+        "description": "La API de Instagram de Meta documenta un límite de 2.200 caracteres. Aprende qué cuenta, por qué varían los contadores y cómo editar sin perder el mensaje.",
+        "summary": "Comprueba el límite documentado, cuenta el texto completo y coordina el inicio, el cuerpo y la llamada a la acción.",
+        "sections": [
+          {
+            "heading": "¿Cuántos caracteres puede tener una descripción de Instagram?",
+            "paragraphs": [
+              "La documentación de la API Graph de Instagram de Meta fija en 2.200 caracteres el máximo del campo de descripción para publicar imágenes, vídeos o carruseles. La misma referencia también documenta límites para hashtags y cuentas mencionadas. Son cifras para la publicación mediante API, no una garantía de que todas las pantallas, herramientas o tipos de cuenta se comporten siempre igual. Comprueba el editor que vayas a utilizar, especialmente si estás cerca del límite.",
+              "El límite se expresa en caracteres, no en palabras. Un enlace largo, varias menciones o muchos saltos de línea pueden ocupar más espacio del que parece. No existe una conversión universal a palabras, porque cambian la longitud, el idioma y el formato. Usa 2.200 como el máximo documentado para el campo de la API, no como una meta que haya que alcanzar.",
+              "La pregunta útil no suele ser cuánto texto cabe, sino cuánto hace falta. La descripción debe aportar el contexto que no ofrece la imagen, dejar claro el siguiente paso cuando corresponda y evitar el relleno. El límite ayuda a prevenir errores; no obliga a completar todos los caracteres disponibles."
+            ]
+          },
+          {
+            "heading": "¿Qué cuenta dentro del límite?",
+            "paragraphs": [
+              "Cuenta todo el campo de descripción, no solo el párrafo principal: palabras, puntuación, espacios, hashtags y menciones con @. La documentación de Meta permite incluir hashtags y nombres de usuario en el mismo campo. Si añades saltos de línea para facilitar la lectura, inclúyelos también en el texto que compruebas.",
+              "Un enlace pegado sigue siendo texto dentro de la descripción. Su presentación o si se puede abrir puede depender de la plataforma, pero no queda fuera del presupuesto de caracteres. Lo mismo ocurre con una llamada a la acción, una aclaración, un crédito o una mención: si aparece en la descripción, inclúyelo en el recuento.",
+              "Prepara la versión final antes de contar. Revisar un párrafo y luego añadir etiquetas, menciones o una última frase puede hacer que el texto final supere el límite. Si otra persona añadirá esos elementos, acuerda quién lo hará y reserva espacio."
+            ],
+            "bullets": [
+              "Texto principal, con espacios y puntuación",
+              "Hashtags y menciones con @",
+              "Saltos de línea y líneas en blanco",
+              "Enlaces, aclaraciones, créditos y llamadas a la acción"
+            ]
+          },
+          {
+            "heading": "Por qué los contadores pueden mostrar resultados distintos",
+            "paragraphs": [
+              "La palabra «carácter» puede referirse a distintas unidades. Una letra acentuada o un emoji visible puede estar representado por más de un punto de código Unicode. Algunos emojis combinan varios puntos de código aunque el lector vea un solo símbolo. El software puede contar unidades de código, puntos de código o clústeres de grafemas, y el total puede variar.",
+              "El contador de caracteres de TextToools cuenta clústeres de grafemas, que suelen acercarse más a los caracteres que una persona percibe al leer. La referencia pública de la API de Meta indica un límite, pero no explica cómo trata cada secuencia Unicode compleja. El contador sirve para redactar, pero no garantiza que todas las plataformas muestren el mismo total para cada emoji.",
+              "Si el texto incluye muchos emojis o símbolos combinados, no apures el límite. Comprueba el resultado en el editor de Instagram o en la herramienta de publicación que vayas a usar y sigue sus avisos. Dejar un margen es más sencillo que intentar deducir cómo cuenta cada interfaz."
+            ]
+          },
+          {
+            "heading": "Haz que el inicio funcione antes de desplegar el resto",
+            "paragraphs": [
+              "En el feed, una descripción larga puede aparecer contraída y el lector debe elegir si quiere ampliarla. La vista previa puede variar según la pantalla, el dispositivo y el diseño; no redactes pensando en una cantidad fija de caracteres visibles. Presenta pronto la idea o el contexto para que las primeras líneas tengan sentido por sí solas.",
+              "Empieza por lo que la persona necesita saber, no con un saludo largo o un anuncio genérico. En un tutorial, indica el resultado; en una novedad, explica qué ha cambiado; en una historia, aporta un detalle concreto que justifique seguir leyendo. El inicio debe representar con precisión el contenido, no prometer algo que el resto no cumple.",
+              "Usa párrafos para facilitar la lectura en el móvil. Agrupa ideas relacionadas, elimina introducciones repetidas y evita los bloques densos. El formato ayuda a orientarse, pero no sustituye a una redacción clara."
+            ]
+          },
+          {
+            "heading": "Organiza la descripción en torno a una sola finalidad",
+            "paragraphs": [
+              "Antes de escribir, decide qué debe conseguir el texto: explicar algo que no muestra la imagen, aportar contexto, acreditar a alguien, invitar a una respuesta útil o indicar el siguiente paso. Puede cumplir varias funciones, pero intentar incluir todos los mensajes posibles suele ocultar la idea principal.",
+              "Una estructura sencilla puede empezar con la idea central, añadir algunos datos prácticos y terminar con un siguiente paso si hace falta. Incorpora créditos, aclaraciones o menciones donde sean pertinentes. Es una ayuda para planificar, no una fórmula obligatoria: una foto, un Reel y un anuncio pueden necesitar estructuras diferentes.",
+              "Redacta primero para transmitir el significado y comprueba la longitud después. Perseguir un número desde el principio puede llevar a abreviaturas innecesarias. Cuando el borrador esté claro, utiliza el contador para saber si realmente hace falta editar. Si cabe y se entiende, no hay motivo para acortarlo solo para bajar el total."
+            ]
+          },
+          {
+            "heading": "Recorta sin perder los detalles útiles",
+            "paragraphs": [
+              "Si el texto es demasiado largo, elimina repeticiones antes que contexto. Cambia frases introductorias como «Nos hace muchísima ilusión anunciar que…» por una afirmación directa cuando dicen lo mismo. Sustituye una lista de adjetivos similares por el dato concreto que sustenta el mensaje. El recorte debe facilitar la comprensión, no obligar a adivinar.",
+              "Busca frases que cumplan la misma función. Si el inicio ya explica el anuncio, quizá no haga falta repetirlo más adelante. Si compiten dos llamadas a la acción, conserva la que mejor encaje. Traslada los detalles secundarios a una página accesible o a otra publicación solo si el lector todavía puede encontrar la información necesaria.",
+              "No elimines condiciones esenciales, información de seguridad, términos o avisos obligatorios solo para alcanzar un número. Si la información necesaria no cabe, usa un destino aprobado para los detalles y explica cómo llegar a él. El contador no puede decidir si el texto es exacto o cumple las normas."
+            ]
+          },
+          {
+            "heading": "Ejemplo: edita para aclarar, no solo para reducir el total",
+            "paragraphs": [
+              "Imagina una panadería que anuncia que los pedidos de fin de semana cierran el jueves. Un primer borrador podría empezar con una expresión larga de entusiasmo, repetir varias veces la fecha y terminar con dos peticiones diferentes. La información importante es más sencilla: qué se puede pedir, cuándo termina el plazo y cómo realizar el pedido.",
+              "Una versión más útil podría empezar así: «Los pedidos de pastelería para el fin de semana cierran el jueves a las 17:00». Después puede indicar el horario de recogida, dónde está el menú y una sola instrucción. Se puede añadir una mención o un hashtag si ayuda a encontrar la cuenta o el tema. El ejemplo es ficticio: la panadería debe usar sus horarios y datos reales.",
+              "La edición funciona porque facilita la decisión del lector, no porque las descripciones breves siempre sean mejores. Si el menú, las alergias o la recogida requieren más detalle, conserva lo necesario. Cuenta el texto completo, con etiquetas y saltos de línea, después de la última edición."
+            ],
+            "example": {
+              "input": "Un borrador repite el anuncio, añade varias frases de apertura genéricas y termina con distintas peticiones que compiten entre sí.",
+              "output": "Los pedidos de pastelería para el fin de semana cierran el jueves a las 17:00. Consulta el menú, elige una hora de recogida y envía el pedido mediante el formulario de nuestro perfil."
+            }
+          },
+          {
+            "heading": "Un proceso práctico para revisar antes de publicar",
+            "paragraphs": [
+              "Escribe primero el texto completo e incluye saltos de línea, hashtags, menciones, enlaces, créditos y aclaraciones. Así obtendrás un recuento realista, no una cifra parcial que cambia al pegar el texto en el editor.",
+              "Pega todo en un contador de caracteres y comprueba si te acercas al límite documentado. Si es así, elimina repeticiones, verifica que cada línea sea necesaria y vuelve a contar. Conserva una única versión final para no omitir una aclaración ni restaurar accidentalmente un texto más largo.",
+              "Antes de publicar, pega la versión terminada en Instagram o en la herramienta aprobada. Revisa la vista inicial, confirma que se conservaron los saltos y las menciones y sigue cualquier aviso que muestre esa interfaz. Vuelve a contar después de cada cambio; el editor es la comprobación final porque las reglas pueden cambiar."
+            ]
+          },
+          {
+            "heading": "Lista de comprobación para una descripción clara y dentro del límite",
+            "paragraphs": [
+              "El límite de caracteres es una frontera técnica, no un objetivo de redacción. Úsalo para detectar un problema práctico y luego comprueba si el texto es preciso, comprensible y útil para su público. Una descripción que cabe pero esconde la idea todavía necesita trabajo; un mensaje claro también debe superar la validación final de la plataforma."
+            ],
+            "bullets": [
+              "¿La primera línea da un motivo claro para seguir leyendo?",
+              "¿Cada frase añade contexto, información útil o un siguiente paso necesario?",
+              "¿Contaste la versión final con espacios, saltos, hashtags y menciones?",
+              "¿Dejaste margen en vez de apurar el último carácter?",
+              "¿Comprobaste el texto en el editor que vas a utilizar?",
+              "¿Conservaste los créditos, avisos y detalles de accesibilidad necesarios?"
+            ]
+          },
+          {
+            "heading": "Una nota del fundador",
+            "paragraphs": [
+              "Creé el contador de caracteres de TextToools para hacer comprobaciones rápidas durante la edición. En una descripción para redes, uso el total para detectar un posible problema con el límite y después vuelvo a leer el inicio y el mensaje completo. El número ayuda, pero la claridad depende de quien lo lee."
+            ]
+          },
+          {
+            "heading": "Sobre el autor",
+            "paragraphs": [
+              "Escrito por el fundador de TextToools, un conjunto de herramientas sencillas en el navegador para trabajar con texto."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "IG User Media: campo de descripción y límites de publicación",
+            "publisher": "Meta for Developers",
+            "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media"
+          },
+          {
+            "title": "Unicode Standard Annex #29: segmentación de texto Unicode",
+            "publisher": "Unicode Consortium",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
       "how-to-write-a-meeting-agenda": {
         "modified": "2026-11-20",
         "image": "blog-images/es/meeting-agenda.svg",

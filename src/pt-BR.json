@@ -789,6 +789,128 @@
     "description": "Guias práticos para contar, limpar e trabalhar com textos.",
     "intro": "Guias claros e práticos para ajudar você a contar, organizar e editar textos.",
     "posts": {
+      "instagram-caption-character-limit": {
+        "modified": "2026-11-20",
+        "image": "blog-images/pt-br/instagram-caption-character-limit.svg",
+        "imageAlt": "Um rascunho de legenda do Instagram é comparado ao limite de 2.200 caracteres documentado para a API.",
+        "title": "Limite de caracteres no Instagram: como ajustar a legenda | TextToools",
+        "description": "A API do Instagram da Meta documenta o limite de 2.200 caracteres. Veja o que entra na contagem, por que os resultados variam e como editar sem perder a mensagem.",
+        "summary": "Confira o limite documentado, conte o texto completo e faça a abertura, o corpo e a chamada para ação trabalharem juntos.",
+        "sections": [
+          {
+            "heading": "Qual é o limite de caracteres de uma legenda do Instagram?",
+            "paragraphs": [
+              "A documentação da API Graph do Instagram da Meta informa o máximo de 2.200 caracteres no campo de legenda usado para publicar imagens, vídeos ou carrosséis. A mesma referência também documenta limites para hashtags e contas mencionadas. Esses números são para publicação pela API; não garantem que toda tela, ferramenta ou tipo de conta funcione exatamente da mesma forma. Confira o editor que você realmente vai usar, principalmente se estiver perto do limite.",
+              "O limite é medido em caracteres, não em palavras. Um link longo, várias menções ou muitas quebras de linha podem ocupar mais espaço do que parecem. Não existe conversão universal de caracteres em palavras: idioma, tamanho das palavras e formatação mudam o resultado. Use 2.200 como o teto documentado para o campo da API, não como uma meta a preencher.",
+              "A pergunta mais útil geralmente não é quanto texto cabe, mas quanto é necessário. A legenda deve acrescentar o contexto que a imagem não mostra, deixar o próximo passo claro quando houver um e evitar conteúdo de preenchimento. Use o limite para prevenir erros, não como motivo para ocupar todos os caracteres."
+            ]
+          },
+          {
+            "heading": "O que entra na contagem?",
+            "paragraphs": [
+              "Conte todo o campo da legenda, não apenas o parágrafo principal. Palavras, pontuação, espaços, hashtags e menções com @ fazem parte do texto. A documentação da API da Meta permite hashtags e nomes de usuário nesse mesmo campo. Se usar quebras de linha para facilitar a leitura, inclua-as no texto contado.",
+              "Um link colado ainda é texto na legenda. A forma de exibição e a possibilidade de abrir o link podem depender da plataforma, mas ele não ganha espaço grátis no limite. O mesmo vale para chamada para ação, aviso, crédito ou menção: se aparece na legenda, inclua na verificação.",
+              "Monte a versão final antes de contar. Conferir um parágrafo e depois acrescentar tags, menções ou uma frase de última hora pode deixar o texto final acima do limite. Se outra pessoa fará a inclusão desses itens, combinem quem é responsável e reservem espaço."
+            ],
+            "bullets": [
+              "Texto principal, incluindo espaços e pontuação",
+              "Hashtags e menções com @",
+              "Quebras de linha e linhas em branco",
+              "Links, avisos, créditos e chamadas para ação"
+            ]
+          },
+          {
+            "heading": "Por que os contadores podem mostrar totais diferentes",
+            "paragraphs": [
+              "A palavra “caractere” pode representar unidades diferentes. Uma letra acentuada ou um emoji visível pode ser formado por mais de um ponto de código Unicode. Alguns emojis combinam vários pontos de código, embora o leitor veja um único símbolo. Um programa pode contar unidades de código, pontos de código ou agrupamentos de grafemas, produzindo totais diferentes.",
+              "O contador de caracteres do TextToools conta agrupamentos de grafemas, que normalmente se aproximam dos caracteres percebidos por quem lê. A referência pública da API da Meta informa um limite, mas não explica como todas as sequências Unicode complexas são contadas. Portanto, o contador ajuda a redigir, mas não garante que cada plataforma mostre o mesmo número para todo emoji.",
+              "Se sua legenda tiver muitos emojis ou símbolos combinados, não tente chegar ao limite exato. Confira o texto no compositor do Instagram ou na ferramenta de publicação que você usará e siga os avisos dela. Deixar uma margem é mais simples do que tentar descobrir como cada interface conta um símbolo complexo."
+            ]
+          },
+          {
+            "heading": "Faça a abertura funcionar antes de a legenda ser expandida",
+            "paragraphs": [
+              "Uma legenda longa pode aparecer recolhida no feed, e o leitor decide se quer abri-la. A prévia varia conforme tela, aparelho e layout; não escreva pensando em uma quantidade fixa de caracteres visíveis. Apresente o ponto ou contexto cedo para que as primeiras linhas façam sentido sozinhas.",
+              "Comece pelo que a pessoa precisa saber, não por uma saudação longa ou um anúncio genérico. Em um tutorial, diga o resultado; em uma atualização, explique o que mudou; em uma história, use um detalhe concreto que mostre por que ela importa. A abertura deve representar o restante, sem prometer algo que o texto não entrega.",
+              "Use quebras de parágrafo para facilitar a leitura no celular. Agrupe ideias relacionadas, remova introduções repetidas e evite um bloco extenso. A formatação ajuda a navegar pelo texto, mas não substitui uma escrita clara."
+            ]
+          },
+          {
+            "heading": "Planeje a legenda em torno de uma finalidade clara",
+            "paragraphs": [
+              "Antes de escrever, decida o que a legenda deve fazer: explicar algo que não aparece na imagem, dar contexto, creditar alguém, convidar a uma resposta útil ou indicar o próximo passo. Ela pode cumprir mais de uma função, mas tentar incluir todas as mensagens possíveis costuma esconder a ideia principal.",
+              "Uma estrutura simples pode apresentar o ponto, trazer alguns detalhes práticos e indicar uma ação se necessário. Acrescente crédito, aviso ou menção onde fizer sentido. Isso é um apoio para planejar, não uma fórmula obrigatória: uma foto, um Reel e um anúncio podem pedir textos diferentes.",
+              "Escreva primeiro para transmitir a ideia e só depois confira o tamanho. Começar perseguindo um número pode levar a abreviações e cortes desnecessários. Quando o rascunho estiver claro, use o contador para identificar se alguma edição é necessária. Se couber e estiver fácil de entender, não há benefício em cortar só para diminuir o total."
+            ]
+          },
+          {
+            "heading": "Encurte sem eliminar detalhes importantes",
+            "paragraphs": [
+              "Se o texto passar do limite, remova repetições antes de tirar contexto. Troque introduções como “Estamos muito felizes em anunciar que…” por uma frase direta quando ambas dizem a mesma coisa. Substitua uma sequência de adjetivos parecidos pelo fato que sustenta a mensagem. O corte deve facilitar a compreensão, não deixar o leitor adivinhar.",
+              "Procure frases que fazem o mesmo trabalho. Se a abertura já explica o anúncio, talvez não seja necessário repeti-lo depois. Se duas chamadas para ação competem, mantenha a que melhor combina com a publicação. Mova detalhes secundários para uma página acessível ou outra publicação apenas quando o leitor ainda puder encontrar o que precisa.",
+              "Não remova condições essenciais, informações de segurança, termos ou avisos obrigatórios só para atingir um número. Se as informações necessárias não couberem, use um destino aprovado para os detalhes e explique como acessá-los. O contador não determina se a mensagem está correta ou em conformidade."
+            ]
+          },
+          {
+            "heading": "Exemplo: edite para esclarecer, não apenas para baixar o total",
+            "paragraphs": [
+              "Imagine uma padaria anunciando que os pedidos do fim de semana terminam na quinta-feira. O primeiro rascunho pode começar com uma longa declaração de empolgação, repetir a data várias vezes e terminar com dois pedidos diferentes. A informação principal é mais simples: o que pode ser pedido, quando o prazo termina e como fazer o pedido.",
+              "Uma versão mais útil poderia começar assim: “Os pedidos de doces para o fim de semana terminam quinta-feira às 17h.” Depois, pode informar o horário de retirada, onde está o menu e uma instrução clara. Uma menção ou hashtag pode ser acrescentada se ajudar as pessoas a encontrar a conta ou o assunto. O exemplo é fictício; a padaria deve usar seus horários e informações reais.",
+              "A edição funciona porque facilita a decisão do leitor, não porque legendas curtas sejam sempre melhores. Se o menu, os avisos sobre alergênicos ou as instruções de retirada exigirem detalhes, mantenha o que for necessário. Conte o texto final, incluindo tags e quebras de linha, após a última edição."
+            ],
+            "example": {
+              "input": "Um rascunho repete o anúncio, começa com frases genéricas e termina com várias chamadas para ação concorrentes.",
+              "output": "Os pedidos de doces para o fim de semana terminam quinta-feira às 17h. Veja o menu, escolha um horário de retirada e envie o pedido pelo formulário no nosso perfil."
+            }
+          },
+          {
+            "heading": "Um fluxo prático antes de publicar",
+            "paragraphs": [
+              "Escreva primeiro a legenda completa. Inclua texto, quebras de linha, hashtags, menções, links, créditos e avisos. Assim, você terá uma contagem realista em vez de um número parcial que muda quando o texto é colado no compositor.",
+              "Cole tudo em um contador de caracteres e veja se está perto do limite documentado. Se estiver, elimine repetições, confirme se cada linha é necessária e conte de novo. Mantenha uma única versão final para não esquecer um aviso nem restaurar por engano um texto mais longo.",
+              "Antes de publicar, cole a versão pronta no Instagram ou na ferramenta aprovada. Confira a abertura, confirme que as quebras e menções foram mantidas e siga qualquer aviso exibido pela interface. Conte de novo depois de alterar o texto. O compositor é a verificação final, pois as ferramentas e regras podem mudar."
+            ]
+          },
+          {
+            "heading": "Checklist para uma legenda clara e dentro do limite",
+            "paragraphs": [
+              "O limite de caracteres é uma fronteira técnica, não uma meta de escrita. Use-o para detectar um problema prático e depois avalie se o texto está correto, compreensível e útil para quem vai ler. Uma legenda que cabe, mas esconde o ponto, ainda precisa de edição; uma mensagem clara também precisa passar pela validação final da plataforma."
+            ],
+            "bullets": [
+              "A primeira linha dá um motivo claro para continuar?",
+              "Cada frase acrescenta contexto, informação útil ou um próximo passo necessário?",
+              "Você contou o texto final com espaços, quebras, hashtags e menções?",
+              "Deixou uma margem em vez de tentar usar o último caractere?",
+              "Conferiu a legenda no compositor que realmente vai usar?",
+              "Manteve créditos, avisos e informações de acessibilidade necessários?"
+            ]
+          },
+          {
+            "heading": "Uma nota do fundador",
+            "paragraphs": [
+              "Criei o contador de caracteres do TextToools para conferir rapidamente um texto durante a edição. Em uma legenda, prefiro usar o número para detectar um possível problema com o limite e depois reler a abertura e a mensagem inteira. A contagem ajuda, mas quem decide se o texto está claro é o leitor."
+            ]
+          },
+          {
+            "heading": "Sobre o autor",
+            "paragraphs": [
+              "Escrito pelo fundador do TextToools, um conjunto de ferramentas simples no navegador para trabalhar com textos."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "IG User Media: campo de legenda e limites de publicação",
+            "publisher": "Meta for Developers",
+            "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media"
+          },
+          {
+            "title": "Unicode Standard Annex #29: segmentação de texto Unicode",
+            "publisher": "Unicode Consortium",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
       "how-to-write-a-meeting-agenda": {
         "modified": "2026-11-20",
         "image": "blog-images/pt-br/meeting-agenda.svg",

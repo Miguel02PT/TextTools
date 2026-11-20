@@ -877,6 +877,128 @@
     "description": "Guides pratiques sur le comptage de mots et de caractères, le nettoyage de texte et l'écriture.",
     "intro": "Des guides clairs et pratiques pour comprendre les décomptes, organiser le contenu et mieux travailler avec le texte.",
     "posts": {
+      "instagram-caption-character-limit": {
+        "modified": "2026-11-20",
+        "image": "blog-images/instagram-caption-character-limit.svg",
+        "imageAlt": "Une légende Instagram est vérifiée par rapport à la limite de 2 200 caractères documentée pour l’API.",
+        "title": "Limite de caractères Instagram : ajuster sa légende | TextToools",
+        "description": "L’API Instagram de Meta documente une limite de 2 200 caractères. Découvrez ce qui est compté, pourquoi les compteurs varient et comment éditer sans perdre le message.",
+        "summary": "Vérifiez la limite documentée, comptez le brouillon complet et faites travailler ensemble l’accroche, le texte et l’appel à l’action.",
+        "sections": [
+          {
+            "heading": "Quelle longueur peut avoir une légende Instagram ?",
+            "paragraphs": [
+              "La documentation de l’API Graph Instagram de Meta fixe un maximum de 2 200 caractères pour le champ de légende utilisé lors de la publication d’une image, d’une vidéo ou d’un carrousel. La même référence documente également des limites pour les hashtags et les comptes mentionnés. Ces chiffres concernent la publication par API : ils ne garantissent pas que chaque écran, outil ou type de compte fonctionne toujours de la même façon. Vérifiez le compositeur que vous utiliserez, surtout si votre texte approche la limite.",
+              "La limite porte sur les caractères, pas sur les mots. Un lien long, plusieurs mentions ou de nombreux retours à la ligne peuvent occuper plus d’espace qu’il n’y paraît. Il n’existe pas de conversion universelle en nombre de mots, car la langue, la longueur des mots et la mise en forme changent le résultat. Considérez 2 200 comme le plafond documenté du champ de l’API, pas comme un objectif à remplir.",
+              "La question utile est souvent moins « combien de texte peut-on mettre ? » que « de quelle information le lecteur a-t-il besoin ? ». La légende apporte le contexte absent de l’image, précise la prochaine étape si nécessaire et évite le remplissage. Servez-vous de la limite pour prévenir une erreur, pas pour occuper chaque caractère disponible."
+            ]
+          },
+          {
+            "heading": "Qu’est-ce qui entre dans le décompte ?",
+            "paragraphs": [
+              "Comptez tout le champ de la légende, et pas seulement le paragraphe principal. Les mots, la ponctuation, les espaces, les hashtags et les mentions avec @ en font partie. La documentation de l’API Meta permet d’inclure hashtags et noms d’utilisateur dans ce champ. Si vous ajoutez des retours à la ligne pour faciliter la lecture, gardez-les dans le texte vérifié.",
+              "Un lien collé reste du texte dans la légende. Sa présentation ou son caractère cliquable peut dépendre de l’interface, mais il n’est pas gratuit dans le budget de caractères. Il en va de même pour un appel à l’action, une précision, un crédit ou une mention : si l’élément apparaît dans la légende, incluez-le dans la vérification.",
+              "Préparez la version complète avant de compter. Vérifier un paragraphe puis ajouter des tags, des mentions ou une phrase de dernière minute peut faire dépasser la limite au texte final. Si quelqu’un d’autre ajoute ces éléments, convenez de la personne responsable et gardez une marge."
+            ],
+            "bullets": [
+              "Texte principal, espaces et ponctuation compris",
+              "Hashtags et mentions avec @",
+              "Retours à la ligne et lignes blanches",
+              "Liens, précisions, crédits et appels à l’action"
+            ]
+          },
+          {
+            "heading": "Pourquoi les compteurs peuvent-ils afficher des totaux différents ?",
+            "paragraphs": [
+              "Le mot « caractère » peut désigner plusieurs unités. Une lettre accentuée ou un emoji visible peut être représenté par plusieurs points de code Unicode. Certains emojis associent plusieurs points de code alors que le lecteur ne voit qu’un seul symbole. Un logiciel peut compter des unités de code, des points de code ou des graphèmes perçus par l’utilisateur, ce qui donne des totaux différents.",
+              "Le compteur de caractères TextToools compte les graphèmes, généralement plus proches des caractères perçus à la lecture. La référence publique de l’API Meta indique une limite, mais ne décrit pas le traitement de chaque séquence Unicode complexe. Le compteur est donc utile pour rédiger, sans garantir que toutes les plateformes afficheront le même nombre pour chaque emoji.",
+              "Si votre légende contient beaucoup d’emojis ou de symboles combinés, ne visez pas le dernier caractère disponible. Vérifiez le résultat dans le compositeur Instagram ou l’outil de publication prévu, puis suivez ses avertissements. Garder une marge est plus simple que de tenter de deviner comment une interface compte un symbole complexe."
+            ]
+          },
+          {
+            "heading": "Soignez le début avant que la légende soit développée",
+            "paragraphs": [
+              "Dans un fil, une longue légende peut être repliée et le lecteur doit choisir de l’ouvrir. L’aperçu varie selon l’écran, l’appareil et la mise en page ; ne rédigez pas en fonction d’un nombre fixe de caractères visibles. Présentez rapidement l’idée ou le contexte pour que les premières lignes aient du sens seules.",
+              "Commencez par ce que le lecteur doit savoir, plutôt que par une longue salutation ou une annonce générique. Pour un tutoriel, nommez le résultat ; pour une nouveauté, dites ce qui a changé ; pour un récit, donnez un détail concret qui explique son intérêt. Le début doit représenter fidèlement la suite, sans promettre ce que le texte ne tient pas.",
+              "Utilisez des paragraphes pour faciliter la lecture sur téléphone. Rassemblez les idées liées, supprimez les introductions répétées et évitez les blocs compacts. La mise en forme aide à parcourir le texte, mais ne remplace pas une rédaction claire."
+            ]
+          },
+          {
+            "heading": "Donnez une seule mission claire à la légende",
+            "paragraphs": [
+              "Avant d’écrire, décidez de la fonction du texte : expliquer ce que l’image ne montre pas, donner du contexte, créditer une personne, inviter à une réponse utile ou indiquer la prochaine étape. Une légende peut remplir plusieurs rôles, mais vouloir transmettre tous les messages à la fois masque souvent l’idée principale.",
+              "Une structure simple peut annoncer l’idée, fournir quelques détails pratiques et préciser une action si nécessaire. Ajoutez un crédit, une précision ou une mention à l’endroit approprié. C’est une aide à la préparation, pas une formule obligatoire : une photo, un Reel et une annonce n’ont pas le même objectif.",
+              "Rédigez d’abord pour le sens, puis vérifiez la longueur. Partir à la poursuite d’un nombre peut encourager des abréviations et des coupes inutiles. Une fois le brouillon clair, utilisez le compteur pour voir si une modification est réellement nécessaire. S’il tient et se comprend, le raccourcir uniquement pour obtenir un total plus faible n’apporte rien."
+            ]
+          },
+          {
+            "heading": "Raccourcissez sans supprimer les détails utiles",
+            "paragraphs": [
+              "Si le texte est trop long, supprimez les répétitions avant le contexte. Remplacez « Nous sommes très heureux d’annoncer que… » par une phrase directe quand les deux disent la même chose. Préférez un fait précis à une série d’adjectifs proches. La coupe doit faciliter la compréhension, pas obliger le lecteur à deviner.",
+              "Repérez les phrases qui remplissent la même fonction. Si le début annonce déjà la nouvelle, il n’est peut-être pas utile de la répéter ensuite. Si deux appels à l’action se concurrencent, gardez celui qui correspond le mieux à la publication. Déplacez les détails secondaires vers une page accessible ou une autre publication seulement si le lecteur peut encore trouver l’information nécessaire.",
+              "Ne supprimez pas de conditions essentielles, d’informations de sécurité, de modalités ou de mentions obligatoires pour atteindre un nombre. Si les informations nécessaires ne tiennent pas, renvoyez vers une destination approuvée et expliquez comment la consulter. Un compteur ne peut pas décider si le texte est exact ou conforme."
+            ]
+          },
+          {
+            "heading": "Exemple : éditer pour clarifier, pas seulement pour réduire le total",
+            "paragraphs": [
+              "Imaginons une boulangerie qui annonce que les commandes du week-end ferment jeudi. Un premier brouillon peut commencer par une longue expression d’enthousiasme, répéter la date à plusieurs endroits et finir par deux demandes différentes. L’essentiel est plus simple : ce que l’on peut commander, la date limite et la façon de passer commande.",
+              "Une version plus utile pourrait commencer ainsi : « Les commandes de pâtisseries pour le week-end ferment jeudi à 17 h. » Elle peut ensuite indiquer l’horaire de retrait, où trouver le menu et une seule consigne claire. Une mention ou un hashtag peut aider à retrouver le bon compte ou le bon sujet. Cet exemple est fictif : la boulangerie doit utiliser ses vrais horaires et informations.",
+              "La modification fonctionne parce qu’elle facilite la décision du lecteur, et non parce que les légendes courtes sont toujours meilleures. Si le menu, les allergènes ou les consignes de retrait demandent des précisions, gardez-les. Comptez le texte complet, tags et retours à la ligne compris, après la dernière modification."
+            ],
+            "example": {
+              "input": "Un brouillon répète l’annonce, commence par plusieurs phrases génériques et se termine par des demandes concurrentes.",
+              "output": "Les commandes de pâtisseries pour le week-end ferment jeudi à 17 h. Consultez le menu, choisissez un créneau de retrait et envoyez votre commande avec le formulaire de notre profil."
+            }
+          },
+          {
+            "heading": "Une méthode pratique avant de publier",
+            "paragraphs": [
+              "Rédigez d’abord la légende entière. Incluez le texte, les retours à la ligne, hashtags, mentions, liens, crédits et précisions. Vous obtiendrez ainsi un décompte réaliste plutôt qu’un total partiel qui change au moment de coller le texte dans le compositeur.",
+              "Collez le tout dans un compteur de caractères et vérifiez si vous approchez de la limite documentée. Si c’est le cas, supprimez les répétitions, demandez-vous si chaque ligne est nécessaire et comptez à nouveau. Gardez une version finale unique pour éviter d’oublier une précision ou de rétablir un texte plus long.",
+              "Avant la publication, collez la version finale dans Instagram ou l’outil approuvé. Vérifiez le début, les retours à la ligne et les mentions, puis suivez les avertissements de l’interface. Recomptez après chaque changement. Le compositeur est la vérification finale, car les interfaces et les règles peuvent évoluer."
+            ]
+          },
+          {
+            "heading": "Liste de vérification pour une légende lisible et conforme",
+            "paragraphs": [
+              "Une limite de caractères est une frontière technique, pas un objectif rédactionnel. Utilisez-la pour repérer un problème pratique, puis vérifiez si le texte est exact, compréhensible et utile à son public. Une légende qui tient mais cache son idée n’est pas terminée ; un message clair doit aussi passer la validation finale de la plateforme."
+            ],
+            "bullets": [
+              "La première ligne donne-t-elle une bonne raison de continuer ?",
+              "Chaque phrase ajoute-t-elle du contexte, une information utile ou une prochaine étape nécessaire ?",
+              "Avez-vous compté le texte final, espaces, retours, hashtags et mentions compris ?",
+              "Avez-vous gardé une marge plutôt que de viser le dernier caractère ?",
+              "Avez-vous vérifié la légende dans le compositeur réellement utilisé ?",
+              "Les crédits, précisions et informations d’accessibilité nécessaires sont-ils présents ?"
+            ]
+          },
+          {
+            "heading": "Un mot du fondateur",
+            "paragraphs": [
+              "J’ai créé le compteur de caractères TextToools pour vérifier rapidement un texte pendant sa révision. Pour une légende de réseau social, j’utilise le total pour repérer un éventuel problème de limite, puis je relis le début et le message complet. Le nombre aide, mais c’est le lecteur qui juge la clarté."
+            ]
+          },
+          {
+            "heading": "À propos de l’auteur",
+            "paragraphs": [
+              "Écrit par le fondateur de TextToools, un ensemble d’outils simples dans le navigateur pour travailler avec du texte."
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "IG User Media : champ de légende et limites de publication",
+            "publisher": "Meta for Developers",
+            "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media"
+          },
+          {
+            "title": "Unicode Standard Annex #29 : segmentation du texte Unicode",
+            "publisher": "Unicode Consortium",
+            "url": "https://www.unicode.org/reports/tr29/"
+          }
+        ]
+      },
       "how-to-write-a-meeting-agenda": {
         "modified": "2026-11-20",
         "image": "blog-images/meeting-agenda.svg",

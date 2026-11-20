@@ -67,6 +67,9 @@ const professionalBioPost = parsedEnglishBlogPosts.find(
 const clientProposalPost = parsedEnglishBlogPosts.find(
   (post: { slug: string }) => post.slug === 'how-to-write-a-client-proposal',
 )
+const instagramCaptionPost = parsedEnglishBlogPosts.find(
+  (post: { slug: string }) => post.slug === 'instagram-caption-character-limit',
+)
 const dailyTodoListGuide = englishToolGuides.find(
   (guide: { id: string }) => guide.id === 'daily-todo-list',
 )
@@ -596,6 +599,61 @@ test('client proposal guide has distinct intent, at least 1,200 words, and compl
   }
 })
 
+test('Instagram caption guide has distinct intent, sourced limits, and complete translations', () => {
+  const localizedPosts = [
+    instagramCaptionPost,
+    parsedSpanishContent.blog.posts['instagram-caption-character-limit'],
+    parsedPortugueseContent.blog.posts['instagram-caption-character-limit'],
+    parsedFrenchContent.blog.posts['instagram-caption-character-limit'],
+    parsedChineseContent.blog.posts['instagram-caption-character-limit'],
+  ]
+  const sourceUrls = [
+    'https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media',
+    'https://www.unicode.org/reports/tr29/',
+  ].sort()
+  const articleText = instagramCaptionPost.sections.flatMap(
+    (section: {
+      paragraphs: string[]
+      bullets?: string[]
+      example?: { input: string; output: string }
+    }) => [
+      ...section.paragraphs,
+      ...(section.bullets ?? []),
+      ...(section.example ? [section.example.input, section.example.output] : []),
+    ],
+  ).join(' ')
+
+  assert.ok(instagramCaptionPost)
+  assert.equal(instagramCaptionPost.published, '2026-11-20')
+  assert.equal(
+    parsedEnglishBlogPosts.filter(
+      (post: { slug: string }) => post.slug === 'instagram-caption-character-limit',
+    ).length,
+    1,
+  )
+  assert.ok((articleText.match(/\S+/gu) ?? []).length >= 1200)
+  assert.match(instagramCaptionPost.title, /Instagram caption character limit/i)
+  assert.doesNotMatch(instagramCaptionPost.title, /word count|meeting agenda|client proposal/i)
+  assert.match(articleText, /2,200 characters/i)
+  assert.match(articleText, /API publishing/i)
+  assert.match(articleText, /grapheme clusters/i)
+
+  for (const post of localizedPosts) {
+    assert.ok(post)
+    assert.ok(post.imageAlt)
+    assert.equal(post.sections.length, instagramCaptionPost.sections.length)
+    assert.ok(post.sections.every(
+      (section: { heading: string; paragraphs: string[] }) =>
+        section.heading && section.paragraphs.length > 0 && section.paragraphs.every(Boolean),
+    ))
+    assert.match(post.sections.at(-1).paragraphs.join(' '), /TextToools/)
+    assert.deepEqual(
+      post.sources.map(({ url }: { url: string }) => url).sort(),
+      sourceUrls,
+    )
+  }
+})
+
 test('daily task list download filename prefix is localized in every supported language', () => {
   const prefixes = [
     dailyTodoListGuide.filenamePrefix,
@@ -1074,6 +1132,7 @@ test('recent blog illustrations have prominent localized headlines', () => {
     ['how-to-write-meeting-minutes', 'Meeting minutes: decisions and actions'],
     ['how-to-write-project-status-report', 'Project updates that move work forward'],
     ['how-to-write-out-of-office-message', 'A helpful reply while you’re away'],
+    ['instagram-caption-character-limit', 'Instagram caption limit'],
   ]
   const localizedHeadlines = [
     [
@@ -1097,6 +1156,10 @@ test('recent blog illustrations have prominent localized headlines', () => {
       'Una respuesta útil mientras no estás',
     ],
     [
+      parsedSpanishContent.blog.posts['instagram-caption-character-limit'].image,
+      'Límite de caracteres en Instagram',
+    ],
+    [
       parsedPortugueseContent.blog.posts['how-to-paraphrase-sources'].image,
       'Entenda, reformule e cite',
     ],
@@ -1117,6 +1180,10 @@ test('recent blog illustrations have prominent localized headlines', () => {
       'Uma resposta útil enquanto você está fora',
     ],
     [
+      parsedPortugueseContent.blog.posts['instagram-caption-character-limit'].image,
+      'Limite de caracteres no Instagram',
+    ],
+    [
       parsedChineseContent.blog.posts['how-to-paraphrase-sources'].image,
       '理解原意，改写并注明来源',
     ],
@@ -1135,6 +1202,10 @@ test('recent blog illustrations have prominent localized headlines', () => {
     [
       parsedChineseContent.blog.posts['how-to-write-out-of-office-message'].image,
       '离开时，也能给出清晰回复',
+    ],
+    [
+      parsedChineseContent.blog.posts['instagram-caption-character-limit'].image,
+      'Instagram 文案字符上限',
     ],
   ]
 
