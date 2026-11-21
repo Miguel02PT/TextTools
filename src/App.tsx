@@ -28,10 +28,6 @@ import {
   X,
 } from 'lucide-react'
 import importedToolGuides from './tool-pages.json'
-import importedChinese from './zh-CN.json'
-import importedSpanish from './es.json'
-import importedPortuguese from './pt-BR.json'
-import importedFrench from './fr.json'
 import importedBlogPosts from './blog-posts.json'
 import { getBrowserLocaleSuggestion } from './browser-language'
 import { createGoogleAnalyticsCommand } from './google-analytics'
@@ -167,6 +163,17 @@ type BlogPost = {
   imageAlt: string
   sections: BlogSection[]
   sources?: { title: string; publisher: string; url: string }[]
+}
+export type LocalizedContent = {
+  site: Record<string, string>
+  inline?: Record<string, string>
+  tools: Record<ToolId, LocalizedToolGuide>
+  blog: {
+    title: string
+    description: string
+    intro: string
+    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
+  }
 }
 
 const GA_MEASUREMENT_ID = 'G-CDBK2W6TB0'
@@ -367,49 +374,6 @@ const toolList: Tool[] = [
 const categories = ['All', 'Writing', 'Text Cleaning', 'Text Formatting', 'Text Analysis'] as const
 const currentYear = new Date().getFullYear()
 const toolGuides: ToolGuide[] = importedToolGuides
-const chinese = importedChinese as {
-  site: Record<string, string>
-  tools: Record<ToolId, LocalizedToolGuide>
-  blog: {
-    title: string
-    description: string
-    intro: string
-    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
-  }
-}
-const spanish = importedSpanish as {
-  site: Record<string, string>
-  inline: Record<string, string>
-  tools: Record<ToolId, LocalizedToolGuide>
-  blog: {
-    title: string
-    description: string
-    intro: string
-    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
-  }
-}
-const portuguese = importedPortuguese as {
-  site: Record<string, string>
-  inline: Record<string, string>
-  tools: Record<ToolId, LocalizedToolGuide>
-  blog: {
-    title: string
-    description: string
-    intro: string
-    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
-  }
-}
-const french = importedFrench as {
-  site: Record<string, string>
-  inline: Record<string, string>
-  tools: Record<ToolId, LocalizedToolGuide>
-  blog: {
-    title: string
-    description: string
-    intro: string
-    posts: Record<string, Omit<BlogPost, 'slug' | 'published'>>
-  }
-}
 const blogPosts: BlogPost[] = [...importedBlogPosts].sort((left, right) =>
   right.published.localeCompare(left.published),
 )
@@ -455,16 +419,13 @@ function clampGeneratorCount(value: string) {
   return Math.min(10, Math.max(1, Math.trunc(parsed)))
 }
 
-function getLocaleSite(locale: Locale) {
-  if (locale === 'zh-CN') return chinese.site
-  if (locale === 'es') return spanish.site
-  if (locale === 'pt-BR') return portuguese.site
-  if (locale === 'fr') return french.site
+function getLocaleSite(locale: Locale, localizedContent?: LocalizedContent) {
+  if (locale !== 'en') return localizedContent?.site
   return undefined
 }
 
-function getLocaleOutputLabels(locale: Locale) {
-  const site = getLocaleSite(locale)
+function getLocaleOutputLabels(locale: Locale, localizedContent?: LocalizedContent) {
+  const site = getLocaleSite(locale, localizedContent)
   if (!site) return undefined
 
   const labels: Record<string, string> = {}
@@ -474,11 +435,14 @@ function getLocaleOutputLabels(locale: Locale) {
   return labels
 }
 
-function localizedCopy(locale: Locale, english: string, chineseText: string) {
+function localizedCopy(
+  locale: Locale,
+  english: string,
+  chineseText: string,
+  localizedContent?: LocalizedContent,
+) {
   if (locale === 'zh-CN') return chineseText
-  if (locale === 'es') return spanish.inline[english] ?? english
-  if (locale === 'pt-BR') return portuguese.inline[english] ?? english
-  if (locale === 'fr') return french.inline[english] ?? english
+  if (locale !== 'en') return localizedContent?.inline?.[english] ?? english
   return english
 }
 
@@ -579,14 +543,22 @@ function TurnstileWidget({
   )
 }
 
-function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Locale }) {
+function FeedbackForm({
+  kind,
+  locale,
+  localizedContent,
+}: {
+  kind: 'contact' | 'bug'
+  locale: Locale
+  localizedContent?: LocalizedContent
+}) {
   const [submissionMessage, setSubmissionMessage] = useState('')
   const [turnstileToken, setTurnstileToken] = useState('')
   const [turnstileWidgetVersion, setTurnstileWidgetVersion] = useState(0)
   const formEndpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT
   const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY
   const formEnabled = Boolean(formEndpoint && turnstileSiteKey)
-  const text = getLocaleSite(locale)
+  const text = getLocaleSite(locale, localizedContent)
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -657,7 +629,11 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
           type="text"
           required
           maxLength={200}
-          defaultValue={kind === 'bug' ? localizedCopy(locale, 'Bug report', '问题反馈') : ''}
+          defaultValue={
+            kind === 'bug'
+              ? localizedCopy(locale, 'Bug report', '问题反馈', localizedContent)
+              : ''
+          }
           className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:border-slate-500"
         />
       </label>
@@ -716,7 +692,7 @@ function FeedbackForm({ kind, locale }: { kind: 'contact' | 'bug'; locale: Local
   )
 }
 
-function App() {
+function App({ localizedContent }: { localizedContent?: LocalizedContent }) {
   const basePath = import.meta.env.BASE_URL
   const pathWithinBase = window.location.pathname.startsWith(basePath)
     ? window.location.pathname.slice(basePath.length)
@@ -751,7 +727,9 @@ function App() {
     blogPosts.map((post) => post.slug),
   )
   const isHomePage = relativePath === '' || relativePath === '/'
-  const localeText = getLocaleSite(locale)
+  const localeText = getLocaleSite(locale, localizedContent)
+  const copy = (english: string, chineseText: string) =>
+    localizedCopy(locale, english, chineseText, localizedContent)
   const localizedHref = (path = '') => `${basePath}${localePrefix}${path}`
   const englishLanguageHref = `${basePath}${relativePath}`
   const chineseLanguageHref = `${basePath}zh-cn/${relativePath}`
@@ -769,13 +747,13 @@ function App() {
   const routeTool = toolList.find((tool) => tool.id === routeToolId)
   const activeToolGuide = routeTool
     ? isChineseLocale
-      ? chinese.tools[routeTool.id]
+      ? localizedContent?.tools[routeTool.id]
       : isSpanishLocale
-        ? spanish.tools[routeTool.id]
+        ? localizedContent?.tools[routeTool.id]
         : isFrenchLocale
-          ? french.tools[routeTool.id]
+          ? localizedContent?.tools[routeTool.id]
           : isPortugueseLocale
-            ? portuguese.tools[routeTool.id]
+            ? localizedContent?.tools[routeTool.id]
             : toolGuides.find((guide) => guide.id === routeTool.id)
     : undefined
   const routePageSlug = relativePath.match(/^(faq|about|privacy|terms|contact|report-bug)\/?$/)?.[1]
@@ -793,24 +771,24 @@ function App() {
       ? {
           ...activeBlogPost,
           ...(isChineseLocale
-            ? chinese.blog.posts[activeBlogPost.slug]
+            ? localizedContent?.blog.posts[activeBlogPost.slug]
             : isSpanishLocale
-              ? spanish.blog.posts[activeBlogPost.slug]
+              ? localizedContent?.blog.posts[activeBlogPost.slug]
               : isPortugueseLocale
-                ? portuguese.blog.posts[activeBlogPost.slug]
-                : french.blog.posts[activeBlogPost.slug]),
+                ? localizedContent?.blog.posts[activeBlogPost.slug]
+                : localizedContent?.blog.posts[activeBlogPost.slug]),
         }
       : activeBlogPost
   const localizedBlogPosts = blogPosts.map((post) => ({
     ...post,
     ...(isChineseLocale
-      ? chinese.blog.posts[post.slug]
+      ? localizedContent?.blog.posts[post.slug]
       : isSpanishLocale
-        ? spanish.blog.posts[post.slug]
+        ? localizedContent?.blog.posts[post.slug]
         : isFrenchLocale
-          ? french.blog.posts[post.slug]
+          ? localizedContent?.blog.posts[post.slug]
           : isPortugueseLocale
-            ? portuguese.blog.posts[post.slug]
+            ? localizedContent?.blog.posts[post.slug]
             : undefined),
   }))
   const blogPageStart = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE
@@ -1015,15 +993,7 @@ function App() {
   const filteredTools = useMemo(() => {
     return toolList.filter((tool) => {
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory
-      const localizedTool = isChineseLocale
-        ? chinese.tools[tool.id]
-        : isSpanishLocale
-          ? spanish.tools[tool.id]
-          : isPortugueseLocale
-            ? portuguese.tools[tool.id]
-            : isFrenchLocale
-              ? french.tools[tool.id]
-              : undefined
+      const localizedTool = localizedContent?.tools[tool.id]
       const matchesSearch =
         search.trim().length === 0 ||
         tool.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -1035,10 +1005,7 @@ function App() {
       return matchesCategory && matchesSearch
     })
   }, [
-    isChineseLocale,
-    isFrenchLocale,
-    isPortugueseLocale,
-    isSpanishLocale,
+    localizedContent,
     search,
     selectedCategory,
   ])
@@ -1046,25 +1013,9 @@ function App() {
   const activeToolInfo =
     toolList.find((tool) => tool.id === activeTool) ?? toolList[0]
   const getToolName = (tool: Tool) =>
-    isChineseLocale
-      ? chinese.tools[tool.id].name
-      : isSpanishLocale
-        ? spanish.tools[tool.id].name
-        : isFrenchLocale
-          ? french.tools[tool.id].name
-          : isPortugueseLocale
-            ? portuguese.tools[tool.id].name
-            : tool.name
+    localizedContent?.tools[tool.id].name ?? tool.name
   const getToolDescription = (tool: Tool) =>
-    isChineseLocale
-      ? chinese.tools[tool.id].description
-      : isSpanishLocale
-        ? spanish.tools[tool.id].description
-        : isFrenchLocale
-          ? french.tools[tool.id].description
-          : isPortugueseLocale
-            ? portuguese.tools[tool.id].description
-            : tool.description
+    localizedContent?.tools[tool.id].description ?? tool.description
   const categoryLabel = (category: (typeof categories)[number]) => {
     if (!localeText) return category
     const categoryKeys: Record<(typeof categories)[number], string> = {
@@ -1188,10 +1139,20 @@ function App() {
         metrics,
         readingSpeed,
         locale,
-        getLocaleOutputLabels(locale),
+        getLocaleOutputLabels(locale, localizedContent),
       )
     },
-    [activeTool, locale, localeText, metrics, readingSpeed, todoItemsByDate, todoSelectedDate, transformedText],
+    [
+      activeTool,
+      locale,
+      localeText,
+      localizedContent,
+      metrics,
+      readingSpeed,
+      todoItemsByDate,
+      todoSelectedDate,
+      transformedText,
+    ],
   )
 
   const copyText = async () => {
@@ -1542,13 +1503,13 @@ function App() {
     <div className="min-h-screen bg-[#f7f6fa] text-slate-900">
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
         <nav
-          aria-label={localizedCopy(locale, 'Main navigation', '主导航')}
+          aria-label={copy('Main navigation', '主导航')}
           onMouseLeave={() => setIsToolMenuOpen(false)}
           className="flex w-full items-center gap-4 px-4 py-3 sm:px-6 lg:px-8"
         >
           <a
             href={localizedHref()}
-            aria-label={localizedCopy(locale, 'TextToools home', 'TextToools 首页')}
+            aria-label={copy('TextToools home', 'TextToools 首页')}
             className="flex shrink-0 items-center gap-3"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-sm font-semibold text-white">
@@ -1781,23 +1742,23 @@ function App() {
           <section className="mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 text-center sm:p-10">
             <p className="text-sm font-medium text-slate-500">404</p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">
-              {localizedCopy(locale, 'Page not found', '找不到此页面')}
+              {copy('Page not found', '找不到此页面')}
             </h1>
             <p className="mt-3 text-slate-600">
-              {localizedCopy(locale, 'This address does not exist or may have moved.', '此地址不存在或已移动。')}
+              {copy('This address does not exist or may have moved.', '此地址不存在或已移动。')}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <a
                 href={localizedHref()}
                 className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
               >
-                {localizedCopy(locale, 'Go to homepage', '返回首页')}
+                {copy('Go to homepage', '返回首页')}
               </a>
               <a
                 href={localizedHref('#tools')}
                 className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
               >
-                {localizedCopy(locale, 'Browse tools', '浏览工具')}
+                {copy('Browse tools', '浏览工具')}
               </a>
             </div>
           </section>
@@ -1910,7 +1871,7 @@ function App() {
         {activeToolGuide ? (
         <section
           id="toolbox"
-          aria-label={`${activeToolName} ${localizedCopy(locale, 'tool', '工具')}`}
+          aria-label={`${activeToolName} ${copy('tool', '工具')}`}
           className="scroll-mt-24 py-3"
           onChange={trackToolStart}
           onClick={trackToolStart}
@@ -1931,7 +1892,7 @@ function App() {
                     (activeTool === 'json-formatter' &&
                       (jsonFormatterResult.error !== null || !text.trim()))
                   }
-                  title={localizedCopy(locale, 'Copy the output content', '复制结果')}
+                  title={copy('Copy the output content', '复制结果')}
                   className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Copy className="h-4 w-4" />
@@ -1946,7 +1907,7 @@ function App() {
                     (activeTool === 'json-formatter' &&
                       (jsonFormatterResult.error !== null || !text.trim()))
                   }
-                  title={localizedCopy(locale, 'Download the output content', '下载结果')}
+                  title={copy('Download the output content', '下载结果')}
                   className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Download className="h-4 w-4" />
@@ -2442,7 +2403,7 @@ function App() {
         ) : null}
 
         {activeToolGuide ? (
-          <section aria-label={`${activeToolName} ${localizedCopy(locale, 'guide', '指南')}`} className="space-y-6 py-8">
+          <section aria-label={`${activeToolName} ${copy('guide', '指南')}`} className="space-y-6 py-8">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               {activeToolGuide.sections.map((section) => (
                 <article
@@ -2623,7 +2584,7 @@ function App() {
                     rel="noreferrer"
                     className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                   >
-                    {localizedCopy(locale, 'Learn how Cloudflare Web Analytics handles data.', '了解 Cloudflare Web Analytics 如何处理数据。')}
+                    {copy('Learn how Cloudflare Web Analytics handles data.', '了解 Cloudflare Web Analytics 如何处理数据。')}
                   </a>
                   {' · '}
                   <a
@@ -2632,7 +2593,7 @@ function App() {
                     rel="noreferrer"
                     className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                   >
-                    {localizedCopy(locale, 'Learn how Google handles data.', '了解 Google 如何处理数据。')}
+                    {copy('Learn how Google handles data.', '了解 Google 如何处理数据。')}
                   </a>
                 </p>
               </article>
@@ -2668,6 +2629,7 @@ function App() {
                   key={activeInformationPage.slug}
                   kind={activeInformationPage.slug === 'report-bug' ? 'bug' : 'contact'}
                   locale={locale}
+                  localizedContent={localizedContent}
                 />
               </div>
             ) : null}
@@ -2679,26 +2641,11 @@ function App() {
             <div className="rounded-2xl bg-[#f0eef8] px-5 py-7 sm:px-8">
               <p className="text-sm font-medium text-slate-500">TextToools</p>
               <h1 className="mt-1 text-3xl font-semibold tracking-[-0.05em] text-slate-900 sm:text-4xl">
-                {isChineseLocale
-                  ? chinese.blog.title
-                  : isSpanishLocale
-                    ? spanish.blog.title
-                    : isFrenchLocale
-                      ? french.blog.title
-                      : isPortugueseLocale
-                        ? portuguese.blog.title
-                        : 'TextToools Blog'}
+                {localizedContent?.blog.title ?? 'TextToools Blog'}
               </h1>
               <p className="mt-2 max-w-3xl text-base leading-7 text-slate-600">
-                {locale !== 'en'
-                  ? isChineseLocale
-                    ? chinese.blog.intro
-                    : isSpanishLocale
-                      ? spanish.blog.intro
-                      : isFrenchLocale
-                        ? french.blog.intro
-                        : portuguese.blog.intro
-                  : 'Practical, clear guides to counting, cleaning, and working with text.'}
+                {localizedContent?.blog.intro ??
+                  'Practical, clear guides to counting, cleaning, and working with text.'}
               </p>
               <p className="mt-4 text-sm text-slate-500">{blogSummary}</p>
             </div>
@@ -2721,11 +2668,11 @@ function App() {
                 </a>
                 <div className="flex flex-col justify-center p-5 sm:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-violet-700">
-                    {localizedCopy(locale, 'Featured guide', '精选指南')}
+                    {copy('Featured guide', '精选指南')}
                   </p>
                   <p className="mt-3 text-xs font-medium text-slate-500">
                     {featuredBlogPost.modified
-                      ? `${localizedCopy(locale, 'Updated:', '更新于')} ${featuredBlogPost.modified}`
+                      ? `${copy('Updated:', '更新于')} ${featuredBlogPost.modified}`
                       : `${localeText?.articleDate ?? 'Published:'} ${featuredBlogPost.published}`}
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -2740,7 +2687,7 @@ function App() {
                     href={localizedHref(`blog/${featuredBlogPost.slug}/`)}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 hover:text-slate-950"
                   >
-                    {localizedCopy(locale, 'Read guide', '阅读指南')}
+                    {copy('Read guide', '阅读指南')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </div>
@@ -2749,7 +2696,7 @@ function App() {
             {otherBlogPosts.length > 0 ? (
               <section aria-labelledby="more-guides-heading">
                 <h2 id="more-guides-heading" className="mb-4 text-xl font-semibold tracking-tight text-slate-900">
-                  {localizedCopy(locale, 'More practical guides', '更多实用指南')}
+                  {copy('More practical guides', '更多实用指南')}
                 </h2>
                 <div className="grid gap-5 md:grid-cols-2">
                   {otherBlogPosts.map((post) => (
@@ -2788,7 +2735,7 @@ function App() {
                           href={localizedHref(`blog/${post.slug}/`)}
                           className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-800 hover:text-slate-950"
                         >
-                          {localizedCopy(locale, 'Read guide', '阅读指南')}
+                          {copy('Read guide', '阅读指南')}
                           <ArrowRight className="h-4 w-4" aria-hidden="true" />
                         </a>
                       </div>
@@ -2878,7 +2825,7 @@ function App() {
 
         {activeBlogPost && localizedBlogPost ? (
           <article className="mx-auto max-w-4xl space-y-6">
-            <nav aria-label={localizedCopy(locale, 'Breadcrumb', '面包屑导航')} className="flex flex-wrap items-center gap-2 text-sm text-slate-600">
+            <nav aria-label={copy('Breadcrumb', '面包屑导航')} className="flex flex-wrap items-center gap-2 text-sm text-slate-600">
               <a href={localizedHref()} className="hover:text-slate-900">
                 {localeText?.home ?? 'Home'}
               </a>
@@ -2980,7 +2927,7 @@ function App() {
             {localizedBlogPost.sources?.length ? (
               <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
                 <h2 className="text-xl font-semibold tracking-tight text-slate-900">
-                  {localizedCopy(locale, 'Sources and further reading', '资料来源与延伸阅读')}
+                  {copy('Sources and further reading', '资料来源与延伸阅读')}
                 </h2>
                 <ul className="mt-3 list-inside list-disc space-y-2 text-sm leading-7 text-slate-600">
                   {localizedBlogPost.sources.map((source) => (
@@ -2999,9 +2946,9 @@ function App() {
                 </ul>
               </section>
             ) : null}
-            <nav aria-label={localizedCopy(locale, 'Related tools', '相关工具')} className="rounded-2xl border border-slate-200 bg-white p-5">
+            <nav aria-label={copy('Related tools', '相关工具')} className="rounded-2xl border border-slate-200 bg-white p-5">
               <h2 className="font-semibold text-slate-900">
-                {localizedCopy(locale, 'Use a related text tool', '继续使用文本工具')}
+                {copy('Use a related text tool', '继续使用文本工具')}
               </h2>
               <div className="mt-3 flex flex-wrap gap-3">
                 {(
@@ -3043,7 +2990,7 @@ function App() {
                   href={localizedHref('blog/')}
                   className="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-slate-400"
                 >
-                  {localizedCopy(locale, 'All guides', '所有指南')}
+                  {copy('All guides', '所有指南')}
                 </a>
               </div>
             </nav>
@@ -3183,7 +3130,7 @@ function App() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-2xl">
               <h2 id="analytics-consent-title" className="font-semibold text-slate-900">
-                {localizedCopy(locale, 'Google Analytics choice', 'Google Analytics 选择')}
+                {copy('Google Analytics choice', 'Google Analytics 选择')}
               </h2>
               <p className="mt-1 text-sm leading-6 text-slate-600">
                 {localeText?.analyticsConsentBody ?? 'Cloudflare Web Analytics remains active for aggregate traffic and performance measurement. Google Analytics 4 loads only if you explicitly accept; if you reject or make no choice, no GA4 requests are sent to Google. After acceptance, GA4 records page views, which tool you start using, and copy or download actions, but never the text you enter. Your choice is saved in this browser and can be changed at any time in Privacy settings.'}
@@ -3192,7 +3139,7 @@ function App() {
                   href={localizedHref('privacy/')}
                   className="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 hover:text-slate-900"
                 >
-                  {localizedCopy(locale, 'Privacy policy', '隐私政策')}
+                  {copy('Privacy policy', '隐私政策')}
                 </a>
               </p>
             </div>
@@ -3202,14 +3149,14 @@ function App() {
                 onClick={() => chooseAnalyticsConsent('rejected')}
                 className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
               >
-                {localizedCopy(locale, 'Reject Google Analytics', '拒绝 Google Analytics')}
+                {copy('Reject Google Analytics', '拒绝 Google Analytics')}
               </button>
               <button
                 type="button"
                 onClick={() => chooseAnalyticsConsent('accepted')}
                 className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
               >
-                {localizedCopy(locale, 'Accept Google Analytics', '接受 Google Analytics')}
+                {copy('Accept Google Analytics', '接受 Google Analytics')}
               </button>
               {analyticsConsent !== null ? (
                 <button
@@ -3217,7 +3164,7 @@ function App() {
                   onClick={() => setIsConsentSettingsOpen(false)}
                   className="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
                 >
-                  {localizedCopy(locale, 'Close', '关闭')}
+                  {copy('Close', '关闭')}
                 </button>
               ) : null}
             </div>

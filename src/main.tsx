@@ -1,14 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
+import { loadLocalizedContent } from './locale-data'
 
 const root = document.getElementById('root')!
 
 async function renderApp() {
-  const { default: App } = await import('./App.tsx')
+  const [{ default: App }, localizedContent] = await Promise.all([
+    import('./App.tsx'),
+    loadLocalizedContent(window.location.pathname, import.meta.env.BASE_URL),
+  ])
   const app = (
     <StrictMode>
-      <App />
+      <App localizedContent={localizedContent} />
     </StrictMode>
   )
 

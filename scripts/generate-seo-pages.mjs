@@ -29,6 +29,12 @@ const portuguese = JSON.parse(
 const french = JSON.parse(
   await readFile(path.join(projectRoot, 'src', 'fr.json'), 'utf8'),
 )
+const localizedContentByLocale = {
+  'zh-CN': chinese,
+  es: spanish,
+  'pt-BR': portuguese,
+  fr: french,
+}
 const blogPosts = JSON.parse(
   await readFile(path.join(projectRoot, 'src', 'blog-posts.json'), 'utf8'),
 )
@@ -205,7 +211,9 @@ function createPageHtml({
   }
 
   try {
-    const appHtml = renderToString(createElement(App))
+    const appHtml = renderToString(
+      createElement(App, { localizedContent: localizedContentByLocale[locale] }),
+    )
     const localizedHtml = homepageHtml
       .replace(/<html\s+lang="[^"]*"/, () => `<html lang="${locale}"`)
       .replace(

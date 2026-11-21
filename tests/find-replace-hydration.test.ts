@@ -28,11 +28,15 @@ async function assertPreRenderedRouteHydrates(
 
   try {
     const { default: App } = await vite.ssrLoadModule('/src/App.tsx')
+    const { loadLocalizedContent } = await vite.ssrLoadModule('/src/locale-data.ts')
+    const localizedContent = await loadLocalizedContent(pathname, '/')
     Object.defineProperty(globalThis, 'window', {
       configurable: true,
       value: { location: { pathname } },
     })
-    const html = renderToString(createElement(StrictMode, null, createElement(App)))
+    const html = renderToString(
+      createElement(StrictMode, null, createElement(App, { localizedContent })),
+    )
     if (expectedContent) assert.match(html, expectedContent)
 
     dom = new JSDOM(`<div id="root" data-prerendered="true">${html}</div>`, {
@@ -54,7 +58,7 @@ async function assertPreRenderedRouteHydrates(
     await act(async () => {
       root = hydrateRoot(
         dom!.window.document.getElementById('root')!,
-        createElement(StrictMode, null, createElement(App)),
+        createElement(StrictMode, null, createElement(App, { localizedContent })),
       )
     })
 
