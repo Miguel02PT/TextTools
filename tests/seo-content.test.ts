@@ -850,7 +850,11 @@ test('content security policy permits Cloudflare Web Analytics', () => {
   const themeScriptHash = createHash('sha256').update(inlineThemeScript).digest('base64')
   assert.ok(
     responseHeaders.includes(`'sha256-${themeScriptHash}'`),
-    'CSP allows only the exact inline theme bootstrap',
+    'CSP allows the exact source inline theme bootstrap',
+  )
+  assert.ok(
+    responseHeaders.includes("'sha256-JyHczjbXa0R1PKMKPRlgyxYARRC+jc6332mdjG0n08g='"),
+    'CSP allows the exact Cloudflare-minified theme bootstrap',
   )
   assert.match(responseHeaders, /connect-src[^;\n]*https:\/\/cloudflareinsights\.com/)
 })
