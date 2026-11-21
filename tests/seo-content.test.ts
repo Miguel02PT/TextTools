@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import { existsSync, readFileSync } from 'node:fs'
 import test from 'node:test'
 import {
@@ -18,6 +19,8 @@ const spanishContent = readFileSync(new URL('../src/es.json', import.meta.url), 
 const portugueseContent = readFileSync(new URL('../src/pt-BR.json', import.meta.url), 'utf8')
 const frenchContent = readFileSync(new URL('../src/fr.json', import.meta.url), 'utf8')
 const responseHeaders = readFileSync(new URL('../public/_headers', import.meta.url), 'utf8')
+const appHtml = readFileSync(new URL('../index.html', import.meta.url), 'utf8')
+const inlineThemeScript = appHtml.match(/<script>([\s\S]*?)<\/script>/)?.[1]
 const englishToolGuides = JSON.parse(
   readFileSync(new URL('../src/tool-pages.json', import.meta.url), 'utf8'),
 )
@@ -843,6 +846,12 @@ test('default production URL uses the live custom domain for assets and SEO', ()
 
 test('content security policy permits Cloudflare Web Analytics', () => {
   assert.match(responseHeaders, /script-src[^;\n]*https:\/\/static\.cloudflareinsights\.com/)
+  assert.ok(inlineThemeScript)
+  const themeScriptHash = createHash('sha256').update(inlineThemeScript).digest('base64')
+  assert.ok(
+    responseHeaders.includes(`'sha256-${themeScriptHash}'`),
+    'CSP allows only the exact inline theme bootstrap',
+  )
   assert.match(responseHeaders, /connect-src[^;\n]*https:\/\/cloudflareinsights\.com/)
 })
 
